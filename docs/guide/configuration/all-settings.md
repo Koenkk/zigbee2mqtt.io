@@ -16,32 +16,31 @@ This page contains all currently supported settings in `configuration.yaml`.
 The code blocks show an **example value** for each setting (may be the default or any value derived from the possibilities/examples/boundaries).
 :::
 
-
 ## advanced
 
 Advanced
 
-### log_rotation 
+### log_rotation
 
 ```yaml
 advanced:
     log_rotation: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `true`
 
-### log_console_json 
+### log_console_json
 
 ```yaml
 advanced:
     log_console_json: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### log_symlink_current 
+### log_symlink_current
 
 Create symlink to current logs in the log directory
 
@@ -50,62 +49,63 @@ advanced:
     log_symlink_current: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### log_output 
+### log_output
 
 Output location of the log, leave empty to suppress logging
 
 ```yaml
 advanced:
-    log_output: []
+    log_output: ['console', 'file']
 ```
 
 - Type: `array` of `string`
+- Default: `["console","file"]`
 - Possible array values: `console`, `file`, `syslog`
 
-### log_directory 
+### log_directory
 
 Location of log directory
 
 ```yaml
 advanced:
-    log_directory: "data/log/%TIMESTAMP%"
+    log_directory: 'data/log/%TIMESTAMP%'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Examples:
     - `"data/log/%TIMESTAMP%"`
 
-### log_file 
+### log_file
 
 Log file name, can also contain timestamp
 
 ```yaml
 advanced:
-    log_file: "log.txt"
+    log_file: 'log.log'
 ```
 
-- Type: `string` 
-- Default: `"log.txt"`
+- Type: `string`
+- Default: `"log.log"`
 - Examples:
     - `"zigbee2mqtt_%TIMESTAMP%.log"`
 
-### log_level 
+### log_level
 
 Logging level
 
 ```yaml
 advanced:
-    log_level: "info"
+    log_level: 'info'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"info"`
 - Possible values: `error`, `warning`, `info`, `debug`
 
-### log_namespaced_levels 
+### log_namespaced_levels
 
 Set individual log levels for certain namespaces
 
@@ -114,13 +114,13 @@ advanced:
     log_namespaced_levels: {}
 ```
 
-- Type: `object` 
+- Type: `object`
 - Default: `{}`
 - Examples:
     - `{"z2m:mqtt":"warning"}`
     - `{"zh:ember:uart:ash":"info"}`
 
-### log_debug_to_mqtt_frontend 
+### log_debug_to_mqtt_frontend
 
 Log debug level to MQTT and frontend (may decrease overall performance)
 
@@ -129,25 +129,25 @@ advanced:
     log_debug_to_mqtt_frontend: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### log_debug_namespace_ignore 
+### log_debug_namespace_ignore
 
 Do not log these namespaces (regex-based) for debug level
 
 ```yaml
 advanced:
-    log_debug_namespace_ignore: ""
+    log_debug_namespace_ignore: ''
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `""`
 - Examples:
     - `"^zhc:legacy:fz:(tuya|moes)"`
     - `"^zhc:legacy:fz:(tuya|moes)|^zh:ember:uart:|^zh:controller"`
 
-### log_directories_to_keep 
+### log_directories_to_keep
 
 Number of log directories to keep before deleting the oldest one
 
@@ -156,12 +156,12 @@ advanced:
     log_directories_to_keep: 10
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `10`
 - Minimum: `5`
 - Maximum: `1000`
 
-### channel 
+### channel
 
 Zigbee channel, changing might require re-pairing some devices! (Note: use a ZLL channel: 11, 15, 20, or 25 to avoid problems)
 
@@ -170,7 +170,7 @@ advanced:
     channel: 11
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `11`
 - Minimum: `11`
 - Maximum: `26`
@@ -179,7 +179,7 @@ advanced:
     - `20`
     - `25`
 
-### adapter_concurrent 
+### adapter_concurrent
 
 Adapter concurrency (e.g. 2 for CC2531 or 16 for CC26X2R1) (default: null, uses recommended value)
 
@@ -188,22 +188,22 @@ advanced:
     adapter_concurrent: null
 ```
 
-- Type: `number,null` 
+- Type: `number,null`
 - Minimum: `1`
 - Maximum: `64`
 
-### adapter_delay 
+### adapter_delay
 
 ```yaml
 advanced:
     adapter_delay: null
 ```
 
-- Type: `number,null` 
+- Type: `number,null`
 - Minimum: `0`
 - Maximum: `1000`
 
-### cache_state 
+### cache_state
 
 MQTT message payload will contain all attributes, not only changed ones. Has to be true when integrating via Home Assistant
 
@@ -212,10 +212,10 @@ advanced:
     cache_state: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `true`
 
-### cache_state_persistent 
+### cache_state_persistent
 
 Persist cached state, only used when cache_state: true
 
@@ -224,10 +224,10 @@ advanced:
     cache_state_persistent: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `true`
 
-### cache_state_send_on_startup 
+### cache_state_send_on_startup
 
 Send cached state on startup, only used when cache_state: true
 
@@ -236,23 +236,23 @@ advanced:
     cache_state_send_on_startup: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `true`
 
-### last_seen 
+### last_seen
 
 Add a last_seen attribute to MQTT messages, contains date/time of last Zigbee message
 
 ```yaml
 advanced:
-    last_seen: "disable"
+    last_seen: 'disable'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"disable"`
 - Possible values: `disable`, `ISO_8601`, `ISO_8601_local`, `epoch`
 
-### elapsed 
+### elapsed
 
 Add an elapsed attribute to MQTT messages, contains milliseconds since the previous msg
 
@@ -261,66 +261,67 @@ advanced:
     elapsed: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### timestamp_format 
+### timestamp_format
 
 Log timestamp format
 
 ```yaml
 advanced:
-    timestamp_format: "YYYY-MM-DD HH:mm:ss"
+    timestamp_format: 'YYYY-MM-DD HH:mm:ss'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `"YYYY-MM-DD HH:mm:ss"`
 - Examples:
-    - `"YYYY-MM-DD HH:mm:ss"`
+    - `"YYYY-MM-DD HH:mm:ss.SSS"`
 
-### transmit_power 
+### transmit_power
 
-Transmit power of adapter, only available for Z-Stack (CC253*/CC2652/CC1352) adapters, CC2652 = 5dbm, CC1352 max is = 20dbm (5dbm default)
+Transmit power of adapter, only available for Z-Stack (CC253\*/CC2652/CC1352) adapters, CC2652 = 5dbm, CC1352 max is = 20dbm (5dbm default)
 
 ```yaml
 advanced:
     transmit_power: null
 ```
 
-- Type: `number,null` 
+- Type: `number,null`
 - Minimum: `-128`
 - Maximum: `127`
 
-### output 
+### output
 
 Examples when 'state' of a device is published json: topic: 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}' attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON' attribute_and_json: both json and attribute (see above)
 
 ```yaml
 advanced:
-    output: "attribute_and_json"
+    output: 'json'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `"json"`
 - Possible values: `attribute_and_json`, `attribute`, `json`
-
 
     ### log_syslog
 
     syslog (enabled)
 
-    #### host 
+    #### host
 
 The host running syslogd, defaults to localhost.
 
 ```yaml
 advanced:
     log_syslog:
-        host: "localhost"
+        host: 'localhost'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"localhost"`
 
-#### port 
+#### port
 
 The port on the host that syslog is running on, defaults to syslogd's default port.
 
@@ -330,20 +331,20 @@ advanced:
         port: 514
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `514`
 
-#### protocol 
+#### protocol
 
 The network protocol to log over (e.g. tcp4, udp4, tls4, unix, unix-connect, etc).
 
 ```yaml
 advanced:
     log_syslog:
-        protocol: "udp4"
+        protocol: 'udp4'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"udp4"`
 - Examples:
     - `"udp4"`
@@ -351,87 +352,87 @@ advanced:
     - `"unix"`
     - `"unix-connect"`
 
-#### path 
+#### path
 
 The path to the syslog dgram socket (i.e. /dev/log or /var/run/syslog for OS X).
 
 ```yaml
 advanced:
     log_syslog:
-        path: "/dev/log"
+        path: '/dev/log'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"/dev/log"`
 - Examples:
     - `"/var/run/syslog"`
 
-#### pid 
+#### pid
 
 PID of the process that log messages are coming from (Default process.pid).
 
 ```yaml
 advanced:
     log_syslog:
-        pid: "process.pid"
+        pid: 'process.pid'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"process.pid"`
 
-#### localhost 
+#### localhost
 
 Host to indicate that log messages are coming from (Default: localhost).
 
 ```yaml
 advanced:
     log_syslog:
-        localhost: "localhost"
+        localhost: 'localhost'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"localhost"`
 
-#### type 
+#### type
 
 The type of the syslog protocol to use (Default: BSD, also valid: 5424).
 
 ```yaml
 advanced:
     log_syslog:
-        type: "5424"
+        type: '5424'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"5424"`
 
-#### app_name 
+#### app_name
 
 The name of the application (Default: Zigbee2MQTT).
 
 ```yaml
 advanced:
     log_syslog:
-        app_name: "Zigbee2MQTT"
+        app_name: 'Zigbee2MQTT'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"Zigbee2MQTT"`
 
-#### eol 
+#### eol
 
 The end of line character to be added to the end of the message (Default: Message without modifications).
 
 ```yaml
 advanced:
     log_syslog:
-        eol: "/n"
+        eol: '/n'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"/n"`
 
-### log_syslog 
+### log_syslog
 
 syslog (disabled)
 
@@ -440,20 +441,21 @@ advanced:
     log_syslog: null
 ```
 
-- Type: `null` 
+- Type: `null`
 
-### pan_id 
+### pan_id
 
 Pan ID (string)
 
 ```yaml
 advanced:
-    pan_id: "abc"
+    pan_id: 'abc'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `6754`
 
-### pan_id 
+### pan_id
 
 Pan ID (number)
 
@@ -462,20 +464,22 @@ advanced:
     pan_id: 0
 ```
 
-- Type: `number` 
+- Type: `number`
+- Default: `6754`
 
-### ext_pan_id 
+### ext_pan_id
 
 Extended pan ID (string)
 
 ```yaml
 advanced:
-    ext_pan_id: "abc"
+    ext_pan_id: 'abc'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `[221,221,221,221,221,221,221,221]`
 
-### ext_pan_id 
+### ext_pan_id
 
 Extended pan ID (array)
 
@@ -485,19 +489,21 @@ advanced:
 ```
 
 - Type: `array` of `number`
+- Default: `[221,221,221,221,221,221,221,221]`
 
-### network_key 
+### network_key
 
 Network key(string)
 
 ```yaml
 advanced:
-    network_key: "abc"
+    network_key: 'abc'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `[1,3,5,7,9,11,13,15,0,2,4,6,8,10,12,13]`
 
-### network_key 
+### network_key
 
 Network key(array)
 
@@ -507,13 +513,13 @@ advanced:
 ```
 
 - Type: `array` of `number`
-
+- Default: `[1,3,5,7,9,11,13,15,0,2,4,6,8,10,12,13]`
 
 ## availability
 
 Availability
 
-### enabled 
+### enabled
 
 Enable availability checks
 
@@ -522,15 +528,14 @@ availability:
     enabled: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
-
 
 ### active
 
 Active
 
-#### timeout <span style="color: red">*</span>
+#### timeout <span style="color: red">\*</span>
 
 Time after which an active device will be marked as offline in minutes
 
@@ -540,10 +545,10 @@ availability:
         timeout: 10
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `10`
 
-#### max_jitter 
+#### max_jitter
 
 Maximum jitter (in msec) allowed on timeout to avoid availability pings trying to trigger around the same time
 
@@ -553,11 +558,11 @@ availability:
         max_jitter: 30000
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `30000`
 - Minimum: `1000`
 
-#### backoff 
+#### backoff
 
 Enable timeout backoff on failed availability pings (x1.5, x3, x6, x12...)
 
@@ -567,10 +572,10 @@ availability:
         backoff: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `true`
 
-#### pause_on_backoff_gt 
+#### pause_on_backoff_gt
 
 Pause availability pings when backoff reaches over this limit until a new Zigbee message is received from the device. A value of zero disables pausing.
 
@@ -580,16 +585,15 @@ availability:
         pause_on_backoff_gt: 0
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `0`
 - Minimum: `0`
-
 
 ### passive
 
 Passive
 
-#### timeout <span style="color: red">*</span>
+#### timeout <span style="color: red">\*</span>
 
 Time after which an passive device will be marked as offline in minutes
 
@@ -599,133 +603,131 @@ availability:
         timeout: 1500
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `1500`
-
 
 ## devices
 
-
-
-#### friendly_name <span style="color: red">*</span>
+#### friendly_name <span style="color: red">\*</span>
 
 Used in the MQTT topic of a device. By default this is the device ID
 
 ```yaml
 devices:
-    "0x1234567812345678":
-        friendly_name: "abc"
+    '0x1234567812345678':
+        friendly_name: 'abc'
 ```
 
-- Type: `string` 
+- Type: `string`
 
-#### retain 
+#### retain
 
 Retain MQTT messages of this device
 
 ```yaml
 devices:
-    "0x1234567812345678":
+    '0x1234567812345678':
         retain: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 
-#### disabled 
+#### disabled
 
 Disables the device (excludes device from network scans, availability and group state updates)
 
 ```yaml
 devices:
-    "0x1234567812345678":
+    '0x1234567812345678':
         disabled: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 
-#### retention 
+#### retention
 
 Sets the MQTT Message Expiry in seconds, Make sure to set mqtt.version to 5
 
 ```yaml
 devices:
-    "0x1234567812345678":
+    '0x1234567812345678':
         retention: 0
 ```
 
-- Type: `number` 
+- Type: `number`
 
-#### qos 
+#### qos
 
 QoS level for MQTT messages of this device
 
 ```yaml
 devices:
-    "0x1234567812345678":
-        qos: 0
+    '0x1234567812345678':
+        qos: null
 ```
 
-- Type: `number` 
+- Type: `number`
+- Possible values: `0`, `1`, `2`
 
-#### throttle 
+#### throttle
 
 The minimum time between payloads in seconds. Payloads received whilst the device is being throttled will be discarded
 
 ```yaml
 devices:
-    "0x1234567812345678":
+    '0x1234567812345678':
         throttle: 0
 ```
 
-- Type: `number` 
+- Type: `number`
 
-#### debounce 
+#### debounce
 
 Debounces messages of this device
 
 ```yaml
 devices:
-    "0x1234567812345678":
+    '0x1234567812345678':
         debounce: 0
 ```
 
-- Type: `number` 
+- Type: `number`
 
-#### debounce_ignore 
+#### debounce_ignore
 
 Protects unique payload values of specified payload properties from overriding within debounce time
 
 ```yaml
 devices:
-    "0x1234567812345678":
-        debounce_ignore: "action"
+    '0x1234567812345678':
+        debounce_ignore: 'action'
 ```
 
 - Type: `array` of `string`
 - Examples:
     - `"action"`
 
-#### optimistic 
+#### optimistic
 
 Publish optimistic state after set
 
 ```yaml
 devices:
-    "0x1234567812345678":
+    '0x1234567812345678':
         optimistic: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `true`
 
-#### filtered_attributes 
+#### filtered_attributes
 
 Filter attributes with regex from published payload.
 
 ```yaml
 devices:
-    "0x1234567812345678":
-        filtered_attributes: "^temperature$"
+    '0x1234567812345678':
+        filtered_attributes: '^temperature$'
 ```
 
 - Type: `array` of `string`
@@ -734,28 +736,28 @@ devices:
     - `"^battery$"`
     - `"^action$"`
 
-#### filtered_cache 
+#### filtered_cache
 
 Filter attributes with regex from being added to the cache, this prevents the attribute from being in the published payload when the value didn't change.
 
 ```yaml
 devices:
-    "0x1234567812345678":
-        filtered_cache: "^input_actions$"
+    '0x1234567812345678':
+        filtered_cache: '^input_actions$'
 ```
 
 - Type: `array` of `string`
 - Examples:
     - `"^input_actions$"`
 
-#### filtered_optimistic 
+#### filtered_optimistic
 
 Filter attributes with regex from optimistic publish payload when calling /set. (This has no effect if optimistic is set to false).
 
 ```yaml
 devices:
-    "0x1234567812345678":
-        filtered_optimistic: "^color_(mode|temp)$"
+    '0x1234567812345678':
+        filtered_optimistic: '^color_(mode|temp)$'
 ```
 
 - Type: `array` of `string`
@@ -763,42 +765,40 @@ devices:
     - `"^color_(mode|temp)$"`
     - `"color"`
 
-#### icon 
+#### icon
 
 The user-defined device icon for the frontend. It can be a full URL link to an image (e.g. https://SOME.SITE/MODEL123.jpg) or a path to a local file inside the `device_icons` directory (e.g. device_icons/MODEL123.png).
 
 ```yaml
 devices:
-    "0x1234567812345678":
-        icon: "abc"
+    '0x1234567812345678':
+        icon: 'abc'
 ```
 
-- Type: `string` 
-
+- Type: `string`
 
 #### homeassistant
 
 Home Assistant
 
-##### name 
+##### name
 
 Name of the device in Home Assistant
 
 ```yaml
 devices:
-    "0x1234567812345678":
+    '0x1234567812345678':
         homeassistant:
-            name: "abc"
+            name: 'abc'
 ```
 
-- Type: `string` 
-
+- Type: `string`
 
 ## frontend
 
 Frontend
 
-### enabled 
+### enabled
 
 Enable frontend
 
@@ -807,23 +807,23 @@ frontend:
     enabled: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### package 
+### package
 
 Package used for the frontend
 
 ```yaml
 frontend:
-    package: "zigbee2mqtt-frontend"
+    package: 'zigbee2mqtt-frontend'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"zigbee2mqtt-frontend"`
 - Possible values: `zigbee2mqtt-frontend`, `zigbee2mqtt-windfront`
 
-### port 
+### port
 
 Frontend binding port. Ignored when using a unix domain socket
 
@@ -832,10 +832,10 @@ frontend:
     port: 8080
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `8080`
 
-### host 
+### host
 
 Frontend binding host. Binds to a unix socket when an absolute path is given instead.
 
@@ -844,13 +844,13 @@ frontend:
     host: null
 ```
 
-- Type: `string,null` 
+- Type: `string,null`
 - Examples:
     - `"127.0.0.1"`
     - `"::1"`
     - `"/run/zigbee2mqtt/zigbee2mqtt.sock"`
 
-### auth_token 
+### auth_token
 
 Enables authentication, disabled by default
 
@@ -859,9 +859,9 @@ frontend:
     auth_token: null
 ```
 
-- Type: `string,null` 
+- Type: `string,null`
 
-### url 
+### url
 
 URL on which the frontend can be reached, currently only used for the Home Assistant device configuration page
 
@@ -870,9 +870,9 @@ frontend:
     url: null
 ```
 
-- Type: `string,null` 
+- Type: `string,null`
 
-### ssl_cert 
+### ssl_cert
 
 SSL Certificate file path for exposing HTTPS. The sibling property 'ssl_key' must be set for HTTPS to be activated.
 
@@ -881,9 +881,9 @@ frontend:
     ssl_cert: null
 ```
 
-- Type: `string,null` 
+- Type: `string,null`
 
-### ssl_key 
+### ssl_key
 
 SSL key file path for exposing HTTPS. The sibling property 'ssl_cert' must be set for HTTPS to be activated.
 
@@ -892,23 +892,23 @@ frontend:
     ssl_key: null
 ```
 
-- Type: `string,null` 
+- Type: `string,null`
 
-### base_url 
+### base_url
 
 Base URL for the frontend. If hosted under a subpath, e.g. 'http://localhost:8080/z2m', set this to '/z2m'
 
 ```yaml
 frontend:
-    base_url: "/"
+    base_url: '/'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"/"`
 
-### notification_filter 
+### notification_filter
 
-Hide frontend notifications matching specified regex strings. Example: 'z2m: Failed to ping.*'
+Hide frontend notifications matching specified regex strings. Example: 'z2m: Failed to ping.\*'
 
 ```yaml
 frontend:
@@ -917,7 +917,7 @@ frontend:
 
 - Type: `array` of `string`
 
-### disable_ui_serving 
+### disable_ui_serving
 
 If true, the frontend UI is not served, only the WebSocket is maintained by Zigbee2MQTT (you are required to serve a standalone UI yourself as needed).
 
@@ -926,24 +926,21 @@ frontend:
     disable_ui_serving: null
 ```
 
-- Type: `boolean,null` 
-
+- Type: `boolean,null`
 
 ## groups
 
-
-
-#### friendly_name <span style="color: red">*</span>
+#### friendly_name <span style="color: red">\*</span>
 
 ```yaml
 groups:
     1:
-        friendly_name: "abc"
+        friendly_name: 'abc'
 ```
 
-- Type: `string` 
+- Type: `string`
 
-#### retain 
+#### retain
 
 ```yaml
 groups:
@@ -951,9 +948,9 @@ groups:
         retain: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 
-#### optimistic 
+#### optimistic
 
 ```yaml
 groups:
@@ -961,33 +958,36 @@ groups:
         optimistic: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 
-#### qos 
+#### qos
 
-```yaml
-groups:
-    1:
-        qos: 0
-```
-
-- Type: `number` 
-
-#### off_state 
-
-Control when to publish state OFF or CLOSE for a group. 'all_members_off': only publish state OFF/CLOSE when all group members are in state OFF/CLOSE,  'last_member_state': publish state OFF whenever one of its members changes to OFF
+QoS level for MQTT messages of this group
 
 ```yaml
 groups:
     1:
-        off_state: "auto"
+        qos: null
 ```
 
-- Type: `string` 
-- Default: `"auto"`
+- Type: `number`
+- Possible values: `0`, `1`, `2`
+
+#### off_state
+
+Control when to publish state OFF or CLOSE for a group. 'all_members_off': only publish state OFF/CLOSE when all group members are in state OFF/CLOSE, 'last_member_state': publish state OFF whenever one of its members changes to OFF
+
+```yaml
+groups:
+    1:
+        off_state: 'all_members_off'
+```
+
+- Type: `string`
+- Default: `"all_members_off"`
 - Possible values: `all_members_off`, `last_member_state`
 
-#### filtered_attributes 
+#### filtered_attributes
 
 ```yaml
 groups:
@@ -997,12 +997,11 @@ groups:
 
 - Type: `array` of `string`
 
-
 ## health
 
 Health
 
-### interval 
+### interval
 
 Interval between checks in minutes
 
@@ -1011,10 +1010,10 @@ health:
     interval: 10
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `10`
 
-### reset_on_check 
+### reset_on_check
 
 If true, will reset stats every time the health check is executed (only applicable to stats that can be reset).
 
@@ -1023,15 +1022,14 @@ health:
     reset_on_check: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
-
 
 ## homeassistant
 
 Home Assistant integration
 
-### enabled 
+### enabled
 
 Enable Home Assistant integration
 
@@ -1040,36 +1038,36 @@ homeassistant:
     enabled: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### discovery_topic 
+### discovery_topic
 
 Home Assistant discovery topic
 
 ```yaml
 homeassistant:
-    discovery_topic: "homeassistant"
+    discovery_topic: 'homeassistant'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"homeassistant"`
 - Examples:
     - `"homeassistant"`
 
-### status_topic 
+### status_topic
 
 ```yaml
 homeassistant:
-    status_topic: "homeassistant/status"
+    status_topic: 'homeassistant/status'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"homeassistant/status"`
 - Examples:
     - `"homeassistant/status"`
 
-### legacy_action_sensor 
+### legacy_action_sensor
 
 Home Assistant legacy actions sensor, when enabled a action sensor will be discoverd and an empty `action` will be send after every published action.
 
@@ -1078,10 +1076,10 @@ homeassistant:
     legacy_action_sensor: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### experimental_event_entities 
+### experimental_event_entities
 
 Home Assistant experimental event entities, when enabled Zigbee2MQTT will add event entities for exposed actions. The events and attributes are currently deemed experimental and subject to change.
 
@@ -1090,168 +1088,159 @@ homeassistant:
     experimental_event_entities: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
-
 
 ## map_options
 
 Networkmap
 
-
 ### graphviz
-
-
-
 
 #### colors
 
-
-
-
 ##### fill
 
-
-
-###### enddevice 
+###### enddevice
 
 ```yaml
 map_options:
     graphviz:
         colors:
             fill:
-                enddevice: "abc"
+                enddevice: '#fff8ce'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `"#fff8ce"`
 
-###### coordinator 
+###### coordinator
 
 ```yaml
 map_options:
     graphviz:
         colors:
             fill:
-                coordinator: "abc"
+                coordinator: '#e04e5d'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `"#e04e5d"`
 
-###### router 
+###### router
 
 ```yaml
 map_options:
     graphviz:
         colors:
             fill:
-                router: "abc"
+                router: '#4ea3e0'
 ```
 
-- Type: `string` 
-
+- Type: `string`
+- Default: `"#4ea3e0"`
 
 ##### font
 
-
-
-###### enddevice 
+###### enddevice
 
 ```yaml
 map_options:
     graphviz:
         colors:
             font:
-                enddevice: "abc"
+                enddevice: '#000000'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `"#000000"`
 
-###### coordinator 
+###### coordinator
 
 ```yaml
 map_options:
     graphviz:
         colors:
             font:
-                coordinator: "abc"
+                coordinator: '#ffffff'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `"#ffffff"`
 
-###### router 
+###### router
 
 ```yaml
 map_options:
     graphviz:
         colors:
             font:
-                router: "abc"
+                router: '#ffffff'
 ```
 
-- Type: `string` 
-
+- Type: `string`
+- Default: `"#ffffff"`
 
 ##### line
 
-
-
-###### active 
+###### active
 
 ```yaml
 map_options:
     graphviz:
         colors:
             line:
-                active: "abc"
+                active: '#009900'
 ```
 
-- Type: `string` 
+- Type: `string`
+- Default: `"#009900"`
 
-###### inactive 
+###### inactive
 
 ```yaml
 map_options:
     graphviz:
         colors:
             line:
-                inactive: "abc"
+                inactive: '#994444'
 ```
 
-- Type: `string` 
-
+- Type: `string`
+- Default: `"#994444"`
 
 ## mqtt
 
 MQTT
 
-### base_topic 
+### base_topic
 
 MQTT base topic for Zigbee2MQTT MQTT messages
 
 ```yaml
 mqtt:
-    base_topic: "zigbee2mqtt"
+    base_topic: 'zigbee2mqtt'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Default: `"zigbee2mqtt"`
 - Examples:
     - `"zigbee2mqtt"`
 
-### server <span style="color: red">*</span>
+### server <span style="color: red">\*</span>
 
 MQTT server URL (use mqtts:// for SSL/TLS connection)
 
 ```yaml
 mqtt:
-    server: "mqtt://localhost:1883"
+    server: 'mqtt://localhost:1883'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Examples:
     - `"mqtt://localhost:1883"`
 
-### keepalive 
+### keepalive
 
 MQTT keepalive in second
 
@@ -1260,88 +1249,88 @@ mqtt:
     keepalive: 60
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `60`
 
-### ca 
+### ca
 
 Absolute path to SSL/TLS certificate of CA used to sign server and client certificates
 
 ```yaml
 mqtt:
-    ca: "/etc/ssl/mqtt-ca.crt"
+    ca: '/etc/ssl/mqtt-ca.crt'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Examples:
     - `"/etc/ssl/mqtt-ca.crt"`
 
-### key 
+### key
 
 Absolute path to SSL/TLS key for client-authentication
 
 ```yaml
 mqtt:
-    key: "/etc/ssl/mqtt-client.key"
+    key: '/etc/ssl/mqtt-client.key'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Examples:
     - `"/etc/ssl/mqtt-client.key"`
 
-### cert 
+### cert
 
 Absolute path to SSL/TLS certificate for client-authentication
 
 ```yaml
 mqtt:
-    cert: "/etc/ssl/mqtt-client.crt"
+    cert: '/etc/ssl/mqtt-client.crt'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Examples:
     - `"/etc/ssl/mqtt-client.crt"`
 
-### user 
+### user
 
 MQTT server authentication user
 
 ```yaml
 mqtt:
-    user: "johnnysilverhand"
+    user: 'johnnysilverhand'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Examples:
     - `"johnnysilverhand"`
 
-### password 
+### password
 
 MQTT server authentication password
 
 ```yaml
 mqtt:
-    password: "ILOVEPELMENI"
+    password: 'ILOVEPELMENI'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Examples:
     - `"ILOVEPELMENI"`
 
-### client_id 
+### client_id
 
 MQTT client ID
 
 ```yaml
 mqtt:
-    client_id: "MY_CLIENT_ID"
+    client_id: 'MY_CLIENT_ID'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Examples:
     - `"MY_CLIENT_ID"`
 
-### reject_unauthorized 
+### reject_unauthorized
 
 Disable self-signed SSL certificate
 
@@ -1350,10 +1339,10 @@ mqtt:
     reject_unauthorized: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `true`
 
-### include_device_information 
+### include_device_information
 
 Include device information to mqtt messages
 
@@ -1362,10 +1351,10 @@ mqtt:
     include_device_information: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### version 
+### version
 
 MQTT protocol version
 
@@ -1374,12 +1363,12 @@ mqtt:
     version: 4
 ```
 
-- Type: `number,null` 
+- Type: `number,null`
 - Default: `4`
 - Examples:
     - `5`
 
-### force_disable_retain 
+### force_disable_retain
 
 Disable retain for all send messages. ONLY enable if your MQTT broker doesn't support retained message (e.g. AWS IoT core, Azure IoT Hub, Google Cloud IoT core, IBM Watson IoT Platform). Enabling will break the Home Assistant integration
 
@@ -1388,10 +1377,10 @@ mqtt:
     force_disable_retain: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### maximum_packet_size 
+### maximum_packet_size
 
 Specifies the maximum allowed packet length (in bytes) that the server can send to Zigbee2MQTT. NOTE: The same value exists in your MQTT broker but for the length the client can send to it instead.
 
@@ -1400,17 +1389,16 @@ mqtt:
     maximum_packet_size: 1048576
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `1048576`
 - Minimum: `20`
 - Maximum: `268435456`
-
 
 ## ota
 
 OTA updates
 
-### update_check_interval 
+### update_check_interval
 
 Your device may request a check for a new firmware update. This value determines how frequently third party servers may actually be contacted to look for firmware updates. The value is set in minutes, and the default is 1 day.
 
@@ -1419,10 +1407,10 @@ ota:
     update_check_interval: 1440
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `1440`
 
-### disable_automatic_update_check 
+### disable_automatic_update_check
 
 Zigbee devices may request a firmware update, and do so frequently, causing Zigbee2MQTT to reach out to third party servers. If you disable these device initiated checks, you can still initiate a firmware update check manually.
 
@@ -1431,10 +1419,10 @@ ota:
     disable_automatic_update_check: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### zigbee_ota_override_index_location 
+### zigbee_ota_override_index_location
 
 Location of override OTA index file
 
@@ -1443,11 +1431,11 @@ ota:
     zigbee_ota_override_index_location: null
 ```
 
-- Type: `string,null` 
+- Type: `string,null`
 - Examples:
     - `"index.json"`
 
-### image_block_response_delay 
+### image_block_response_delay
 
 Limits the rate of requests (in milliseconds) during OTA updates to reduce network congestion. You can increase this value if your network appears unstable during OTA.
 
@@ -1456,11 +1444,11 @@ ota:
     image_block_response_delay: 250
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `250`
 - Minimum: `50`
 
-### default_maximum_data_size 
+### default_maximum_data_size
 
 The size of file chunks sent during an update (in bytes). Note: This value may get ignored for manufacturers that require specific values.
 
@@ -1469,17 +1457,16 @@ ota:
     default_maximum_data_size: 50
 ```
 
-- Type: `number` 
+- Type: `number`
 - Default: `50`
 - Minimum: `10`
 - Maximum: `100`
-
 
 ## serial
 
 Serial
 
-### port 
+### port
 
 Location of the adapter. To autodetect the port, set null
 
@@ -1488,11 +1475,11 @@ serial:
     port: null
 ```
 
-- Type: `string,null` 
+- Type: `string,null`
 - Examples:
     - `"/dev/ttyACM0"`
 
-### disable_led 
+### disable_led
 
 Disable LED of the adapter if supported
 
@@ -1501,37 +1488,40 @@ serial:
     disable_led: false
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 - Default: `false`
 
-### adapter 
+### adapter
 
 Adapter type, not needed unless you are experiencing problems
 
 ```yaml
 serial:
-    adapter: "deconz"
+    adapter: 'deconz'
 ```
 
-- Type: `string` 
+- Type: `string`
 - Possible values: `deconz`, `zstack`, `zigate`, `ezsp`, `ember`, `zboss`, `zoh`
 
-### baudrate 
+### baudrate
 
-Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600
+Baud rate speed for the serial port. This must match what the firmware on your adapter supports (most commonly 115200).
 
 ```yaml
 serial:
-    baudrate: 38400
+    baudrate: 115200
 ```
 
-- Type: `number` 
+- Type: `number`
 - Examples:
-    - `38400`
-    - `57600`
     - `115200`
+    - `921600`
+    - `460800`
+    - `230400`
+    - `57600`
+    - `38400`
 
-### rtscts 
+### rtscts
 
 RTS / CTS Hardware Flow Control for serial port
 
@@ -1540,9 +1530,9 @@ serial:
     rtscts: true
 ```
 
-- Type: `boolean` 
+- Type: `boolean`
 
-## blocklist 
+## blocklist
 
 Block devices from the network (by ieeeAddr)
 
@@ -1552,7 +1542,7 @@ blocklist: []
 
 - Type: `array` of `string`
 
-## device_options 
+## device_options
 
 Options that are applied to all devices
 
@@ -1560,9 +1550,9 @@ Options that are applied to all devices
 device_options: {}
 ```
 
-- Type: `object` 
+- Type: `object`
 
-## passlist 
+## passlist
 
 Allow only certain devices to join the network (by ieeeAddr). Note that all devices not on the passlist will be removed from the network!
 
@@ -1571,4 +1561,3 @@ passlist: []
 ```
 
 - Type: `array` of `string`
-
