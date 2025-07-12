@@ -1,7 +1,6 @@
 import {navbar} from './navbar';
 import {sidebar} from './sidebar';
 import * as path from 'path';
-import {PageOptions} from '@vuepress/core';
 import {defaultTheme} from '@vuepress/theme-default';
 import webpackBundler from '@vuepress/bundler-webpack';
 import * as DefinePlugin from 'webpack/lib/DefinePlugin.js';
@@ -165,7 +164,7 @@ const conf = defineUserConfig({
         }),
         {
             name: 'extendsPageOptions',
-            extendsPageOptions: (pageOpts: PageOptions) => {
+            extendsPageOptions: (pageOpts) => {
                 pageOpts.frontmatter = pageOpts.frontmatter ?? {};
                 const frontmatter = pageOpts.frontmatter;
                 // Add content-page css class
@@ -178,7 +177,7 @@ const conf = defineUserConfig({
 });
 
 if (isDevelop) {
-    conf.head.push(['meta', {name: 'robots', content: 'noindex'}]);
+    conf.head!.push(['meta', {name: 'robots', content: 'noindex'}]);
 }
 
 export default conf;
