@@ -212,7 +212,7 @@ pageClass: settings-page
 <!-- ATTENTION: This file is auto-generated through docgen, do not edit! -->
 <!-- !!!! -->
 
-# All Settings
+# All settings
 
 This page contains all currently supported settings in \`configuration.yaml\`.
 
