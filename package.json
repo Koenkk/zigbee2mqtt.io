@@ -14,7 +14,8 @@
         "prepare-missing-device-images": "ts-node docgen/missing_device_images.ts prepare",
         "pretty:write": "prettier --write .",
         "pretty:check": "prettier --check .",
-        "test": "ts-node docgen/tests/index.ts"
+        "test": "ts-node docgen/tests/index.ts",
+        "prepare": "husky"
     },
     "author": "",
     "license": "ISC",
@@ -36,6 +37,7 @@
         "cross-env": "7.0.3",
         "easyimage": "3.1.1",
         "glob": "11.0.3",
+        "husky": "9.1.7",
         "image-size": "2.0.2",
         "prettier": "3.6.2",
         "pug": "3.0.3",
