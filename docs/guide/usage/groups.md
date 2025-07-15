@@ -11,11 +11,11 @@ Groups are much more efficient than controlling devices separately as it signifi
 
 ## Creating a group
 
-Groups can be created via the frontend (easiest), [MQTT](./mqtt_topics_and_messages.md#zigbee2mqttbridgerequestgroupadd) or by adding them to the `configuration.yaml` as shown below.
+Groups can be created via the frontend (easiest), or [MQTT](./mqtt_topics_and_messages.md#zigbee2mqttbridgerequestgroupadd).
 
 ## Configuration
 
-Add the following to your `configuration.yaml`.
+The following is a reflection of the state in yaml, it cannot be added to `configuration.yaml`:
 
 ```yaml
 groups:
