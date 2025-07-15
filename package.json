@@ -25,14 +25,14 @@
         "quasar": "2.18.1"
     },
     "devDependencies": {
-        "@types/node": "24.0.10",
+        "@types/node": "24.0.13",
         "@vuepress/bundler-webpack": "2.0.0-rc.24",
         "@vuepress/client": "2.0.0-rc.24",
-        "@vuepress/plugin-docsearch": "2.0.0-rc.110",
-        "@vuepress/plugin-google-analytics": "2.0.0-rc.107",
-        "@vuepress/plugin-register-components": "2.0.0-rc.110",
-        "@vuepress/plugin-sitemap": "2.0.0-rc.110",
-        "@vuepress/theme-default": "2.0.0-rc.110",
+        "@vuepress/plugin-docsearch": "2.0.0-rc.112",
+        "@vuepress/plugin-google-analytics": "2.0.0-rc.112",
+        "@vuepress/plugin-register-components": "2.0.0-rc.112",
+        "@vuepress/plugin-sitemap": "2.0.0-rc.112",
+        "@vuepress/theme-default": "2.0.0-rc.112",
         "async-g-i-s": "1.5.5",
         "cross-env": "7.0.3",
         "easyimage": "3.1.1",
@@ -49,7 +49,7 @@
         "typescript": "5.8.3",
         "vue": "3.5.17",
         "vuepress": "2.0.0-rc.24",
-        "webpack": "5.99.9",
+        "webpack": "5.100.1",
         "zigbee-herdsman-converters": "23.69.0"
     },
     "pnpm": {
