@@ -116,6 +116,11 @@ const displayProperty = (
         }
     }
 
+    // @ts-expect-error custom
+    if (property.requiresRestart) {
+        str += `\r\n- <span style="color: red">Restart required to be effective</span>`;
+    }
+
     return str + '\r\n';
 };
 

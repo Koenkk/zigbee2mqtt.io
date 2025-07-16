@@ -29,6 +29,7 @@ advanced:
 
 - Type: `boolean`
 - Default: `true`
+- <span style="color: red">Restart required to be effective</span>
 
 ### log_console_json
 
@@ -39,6 +40,7 @@ advanced:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### log_symlink_current
 
@@ -51,6 +53,7 @@ advanced:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### log_output
 
@@ -64,6 +67,7 @@ advanced:
 - Type: `array` of `string`
 - Default: `["console","file"]`
 - Possible array values: `console`, `file`, `syslog`
+- <span style="color: red">Restart required to be effective</span>
 
 ### log_directory
 
@@ -77,6 +81,7 @@ advanced:
 - Type: `string`
 - Examples:
     - `"data/log/%TIMESTAMP%"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### log_file
 
@@ -91,6 +96,7 @@ advanced:
 - Default: `"log.log"`
 - Examples:
     - `"zigbee2mqtt_%TIMESTAMP%.log"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### log_level
 
@@ -131,6 +137,7 @@ advanced:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### log_debug_namespace_ignore
 
@@ -178,6 +185,7 @@ advanced:
     - `15`
     - `20`
     - `25`
+- <span style="color: red">Restart required to be effective</span>
 
 ### adapter_concurrent
 
@@ -191,6 +199,7 @@ advanced:
 - Type: `number,null`
 - Minimum: `1`
 - Maximum: `64`
+- <span style="color: red">Restart required to be effective</span>
 
 ### adapter_delay
 
@@ -202,6 +211,7 @@ advanced:
 - Type: `number,null`
 - Minimum: `0`
 - Maximum: `1000`
+- <span style="color: red">Restart required to be effective</span>
 
 ### cache_state
 
@@ -277,6 +287,7 @@ advanced:
 - Default: `"YYYY-MM-DD HH:mm:ss"`
 - Examples:
     - `"YYYY-MM-DD HH:mm:ss.SSS"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### transmit_power
 
@@ -290,6 +301,7 @@ advanced:
 - Type: `number,null`
 - Minimum: `-128`
 - Maximum: `127`
+- <span style="color: red">Restart required to be effective</span>
 
 ### output
 
@@ -530,6 +542,7 @@ availability:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### active
 
@@ -547,6 +560,7 @@ availability:
 
 - Type: `number`
 - Default: `10`
+- <span style="color: red">Restart required to be effective</span>
 
 #### max_jitter
 
@@ -605,6 +619,7 @@ availability:
 
 - Type: `number`
 - Default: `1500`
+- <span style="color: red">Restart required to be effective</span>
 
 ## devices
 
@@ -643,6 +658,7 @@ devices:
 ```
 
 - Type: `boolean`
+- <span style="color: red">Restart required to be effective</span>
 
 #### retention
 
@@ -680,6 +696,7 @@ devices:
 ```
 
 - Type: `number`
+- <span style="color: red">Restart required to be effective</span>
 
 #### debounce
 
@@ -692,6 +709,7 @@ devices:
 ```
 
 - Type: `number`
+- <span style="color: red">Restart required to be effective</span>
 
 #### debounce_ignore
 
@@ -809,6 +827,7 @@ frontend:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### package
 
@@ -822,6 +841,7 @@ frontend:
 - Type: `string`
 - Default: `"zigbee2mqtt-frontend"`
 - Possible values: `zigbee2mqtt-frontend`, `zigbee2mqtt-windfront`
+- <span style="color: red">Restart required to be effective</span>
 
 ### port
 
@@ -834,6 +854,7 @@ frontend:
 
 - Type: `number`
 - Default: `8080`
+- <span style="color: red">Restart required to be effective</span>
 
 ### host
 
@@ -849,6 +870,7 @@ frontend:
     - `"127.0.0.1"`
     - `"::1"`
     - `"/run/zigbee2mqtt/zigbee2mqtt.sock"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### auth_token
 
@@ -860,6 +882,7 @@ frontend:
 ```
 
 - Type: `string,null`
+- <span style="color: red">Restart required to be effective</span>
 
 ### url
 
@@ -871,6 +894,7 @@ frontend:
 ```
 
 - Type: `string,null`
+- <span style="color: red">Restart required to be effective</span>
 
 ### ssl_cert
 
@@ -882,6 +906,7 @@ frontend:
 ```
 
 - Type: `string,null`
+- <span style="color: red">Restart required to be effective</span>
 
 ### ssl_key
 
@@ -893,6 +918,7 @@ frontend:
 ```
 
 - Type: `string,null`
+- <span style="color: red">Restart required to be effective</span>
 
 ### base_url
 
@@ -905,6 +931,7 @@ frontend:
 
 - Type: `string`
 - Default: `"/"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### notification_filter
 
@@ -927,6 +954,7 @@ frontend:
 ```
 
 - Type: `boolean,null`
+- <span style="color: red">Restart required to be effective</span>
 
 ## groups
 
@@ -986,6 +1014,7 @@ groups:
 - Type: `string`
 - Default: `"all_members_off"`
 - Possible values: `all_members_off`, `last_member_state`
+- <span style="color: red">Restart required to be effective</span>
 
 #### filtered_attributes
 
@@ -1012,6 +1041,7 @@ health:
 
 - Type: `number`
 - Default: `10`
+- <span style="color: red">Restart required to be effective</span>
 
 ### reset_on_check
 
@@ -1040,6 +1070,7 @@ homeassistant:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### discovery_topic
 
@@ -1054,6 +1085,7 @@ homeassistant:
 - Default: `"homeassistant"`
 - Examples:
     - `"homeassistant"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### status_topic
 
@@ -1066,6 +1098,7 @@ homeassistant:
 - Default: `"homeassistant/status"`
 - Examples:
     - `"homeassistant/status"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### legacy_action_sensor
 
@@ -1226,6 +1259,7 @@ mqtt:
 - Default: `"zigbee2mqtt"`
 - Examples:
     - `"zigbee2mqtt"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### server <span style="color: red">\*</span>
 
@@ -1239,6 +1273,7 @@ mqtt:
 - Type: `string`
 - Examples:
     - `"mqtt://localhost:1883"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### keepalive
 
@@ -1251,6 +1286,7 @@ mqtt:
 
 - Type: `number`
 - Default: `60`
+- <span style="color: red">Restart required to be effective</span>
 
 ### ca
 
@@ -1264,6 +1300,7 @@ mqtt:
 - Type: `string`
 - Examples:
     - `"/etc/ssl/mqtt-ca.crt"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### key
 
@@ -1277,6 +1314,7 @@ mqtt:
 - Type: `string`
 - Examples:
     - `"/etc/ssl/mqtt-client.key"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### cert
 
@@ -1290,6 +1328,7 @@ mqtt:
 - Type: `string`
 - Examples:
     - `"/etc/ssl/mqtt-client.crt"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### user
 
@@ -1303,6 +1342,7 @@ mqtt:
 - Type: `string`
 - Examples:
     - `"johnnysilverhand"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### password
 
@@ -1316,6 +1356,7 @@ mqtt:
 - Type: `string`
 - Examples:
     - `"ILOVEPELMENI"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### client_id
 
@@ -1329,6 +1370,7 @@ mqtt:
 - Type: `string`
 - Examples:
     - `"MY_CLIENT_ID"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### reject_unauthorized
 
@@ -1341,6 +1383,7 @@ mqtt:
 
 - Type: `boolean`
 - Default: `true`
+- <span style="color: red">Restart required to be effective</span>
 
 ### include_device_information
 
@@ -1367,6 +1410,7 @@ mqtt:
 - Default: `4`
 - Examples:
     - `5`
+- <span style="color: red">Restart required to be effective</span>
 
 ### force_disable_retain
 
@@ -1379,6 +1423,7 @@ mqtt:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### maximum_packet_size
 
@@ -1393,6 +1438,7 @@ mqtt:
 - Default: `1048576`
 - Minimum: `20`
 - Maximum: `268435456`
+- <span style="color: red">Restart required to be effective</span>
 
 ## ota
 
@@ -1434,6 +1480,7 @@ ota:
 - Type: `string,null`
 - Examples:
     - `"index.json"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### image_block_response_delay
 
@@ -1447,6 +1494,7 @@ ota:
 - Type: `number`
 - Default: `250`
 - Minimum: `50`
+- <span style="color: red">Restart required to be effective</span>
 
 ### default_maximum_data_size
 
@@ -1461,6 +1509,7 @@ ota:
 - Default: `50`
 - Minimum: `10`
 - Maximum: `100`
+- <span style="color: red">Restart required to be effective</span>
 
 ## serial
 
@@ -1478,6 +1527,7 @@ serial:
 - Type: `string,null`
 - Examples:
     - `"/dev/ttyACM0"`
+- <span style="color: red">Restart required to be effective</span>
 
 ### disable_led
 
@@ -1490,6 +1540,7 @@ serial:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### adapter
 
@@ -1502,6 +1553,7 @@ serial:
 
 - Type: `string`
 - Possible values: `deconz`, `zstack`, `zigate`, `ezsp`, `ember`, `zboss`, `zoh`
+- <span style="color: red">Restart required to be effective</span>
 
 ### baudrate
 
@@ -1520,6 +1572,7 @@ serial:
     - `230400`
     - `57600`
     - `38400`
+- <span style="color: red">Restart required to be effective</span>
 
 ### rtscts
 
@@ -1531,6 +1584,7 @@ serial:
 ```
 
 - Type: `boolean`
+- <span style="color: red">Restart required to be effective</span>
 
 ## blocklist
 
@@ -1541,6 +1595,7 @@ blocklist: []
 ```
 
 - Type: `array` of `string`
+- <span style="color: red">Restart required to be effective</span>
 
 ## device_options
 
@@ -1561,3 +1616,4 @@ passlist: []
 ```
 
 - Type: `array` of `string`
+- <span style="color: red">Restart required to be effective</span>
