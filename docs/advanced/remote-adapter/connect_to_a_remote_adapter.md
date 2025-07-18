@@ -90,3 +90,17 @@ serial:
 ```
 
 Done! Now you can start Zigbee2MQTT.
+
+
+# Alternately use MQTT native networking features
+
+1. Install Zigbee2MQTT on your computer or VM with the adapter connected.
+2. Send your data to a MQTT server, on that computer or elsewhere on your LAN or WAN. Edit the /opt/zigbee2mqtt/data/configuration.yaml 
+```
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://192.168.1.20:1883
+  user: mqtt_username
+  password: secure_password
+```
+3. (Re)Start Zigbee2MQTT and read your data from your MQTT server 
