@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.24" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <script>if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { window.document.querySelector('html').classList.add('dark');} </script><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" color="#ffc135" href="/safari-pinned-tab.svg"><meta name="msapplication-TileColor" content="#ffc135"><meta name="theme-color" content="#ffc135"><title>Zigbee2MQTT</title><meta name="description" content="Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges">
+    <link rel="stylesheet" href="/assets/css/styles.a10ebfd5.css">
+    <link rel="preload" href="/assets/js/runtime~app.a1e11d12.js" as="script"><link rel="preload" href="/assets/css/styles.a10ebfd5.css" as="style"><link rel="preload" href="/assets/js/96096.b9f6b85d.js" as="script"><link rel="preload" href="/assets/js/app.3f460b11.js" as="script">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-472019be><main class="page" data-v-472019be><div vp-content data-v-472019be><h1 data-v-472019be>404</h1><blockquote data-v-472019be>There&#39;s nothing here.</blockquote><a class="route-link" href="/" data-v-472019be>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script src="/assets/js/runtime~app.a1e11d12.js" defer></script><script src="/assets/js/96096.b9f6b85d.js" defer></script><script src="/assets/js/app.3f460b11.js" defer></script>
+  </body>
+</html>
