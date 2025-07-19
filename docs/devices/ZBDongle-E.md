@@ -45,7 +45,7 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
       * arch based OS: `sudo usermod -a -G uucp $USER`
   * log in and out so that group membership comes into effect (You can check by running `id`)
 * Third, plug in the device. You must operate on the naked logic board while it is plugged in. This is a lot easier if you use a **USB extension cable**.
-* Forth, to enter the Bootloader Mode, you have to
+* Fourth, to enter the Bootloader Mode, you have to
   * Plug the device in
   * Connect to the device with the serial software (for serial connection parameters, see guide)
       
