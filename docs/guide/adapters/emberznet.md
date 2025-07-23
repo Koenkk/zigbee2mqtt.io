@@ -38,7 +38,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
 
-## Recommended
+## Hardware
 
 Each category is ordered by chip, newer series first.
 
@@ -292,7 +292,7 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 <img src="../../images/seeed-studio-xiao-mg24.jpg" width="200" />
 :::
 
-## Not recommended
+### Not recommended
 
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 
