@@ -24,7 +24,14 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-Warning: This device is shipped with Thread/Matter firmware. A smartphone, the Aqara Home app and an Aqara account is required for flashing the Zigbee firmware. The color of the indicator ring shows the wireless standard: blue flashing means Thread/Matter pairing, while Zigbee pairing is shown by a purple flashing indicator ring.
+### Warning: Zigbee firmware flashing required
+This device is shipped with Thread/Matter firmware. A smartphone, the Aqara Home app and an Aqara account is required for flashing the Zigbee firmware. The color of the indicator ring shows the wireless standard: blue flashing means Thread/Matter pairing, while Zigbee pairing is shown by a purple flashing indicator ring.
+
+### Resetting:
+A double-click on the dimmer knob immediately followed by a 5-second long-press will reset the device and put it back into pairing mode. Make sure the gap between the double click and the long press does not exceed 3 seconds. The indicator light will flash blue when the reset was successful.
+
+### Network connection lost
+When the indicator ring flashes red, the device indicates a loss of network connection. Ensure the coordinator is up and running, and signal range to the coordinator or the next Zigbee router is good enough.
 <!-- Notes END: Do not edit below this line -->
 
 
