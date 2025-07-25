@@ -32,7 +32,7 @@ When updating using OTA, please be aware of the requirement to physically turn t
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md). Please be aware of the requirement to physically turn the amp wheel on the device to complete the update!
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
