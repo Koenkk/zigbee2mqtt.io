@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QADZ2  |
 | Vendor  | [QA](/supported-devices/#v=QA)  |
 | Description | Dimmer 2 channel |
-| Exposes | power_on_behavior, switch_type, light (state, brightness) |
+| Exposes | power_on_behavior, switch_type, light (state, brightness, min_brightness, max_brightness) |
 | Picture | ![QA QADZ2](https://www.zigbee2mqtt.io/images/devices/QADZ2.png) |
 
 
@@ -54,7 +54,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `toggle`, `state`, `momentary`.
 
 ### Light (l1 endpoint)
-This light supports the following features: `state`, `brightness`.
+This light supports the following features: `state`, `brightness`, `min_brightness`, `max_brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l1": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l1": ""}`.
 
