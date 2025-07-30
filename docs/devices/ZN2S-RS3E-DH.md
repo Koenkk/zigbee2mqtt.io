@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZN2S-RS3E-DH  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | 3 gang dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, backlight_mode |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, light_type, backlight_mode |
 | Picture | ![Zemismart ZN2S-RS3E-DH](https://www.zigbee2mqtt.io/images/devices/ZN2S-RS3E-DH.png) |
 
 
@@ -46,6 +46,27 @@ This light supports the following features: `state`, `brightness`, `min_brightne
 This light supports the following features: `state`, `brightness`, `min_brightness`, `max_brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l3": "ON"}`, `{"state_l3": "OFF"}` or `{"state_l3": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l3": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l3": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l3": ""}`.
+
+### Light type (enum, l1 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l1": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
+
+### Light type (enum, l2 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l2` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l2": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
+
+### Light type (enum, l3 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l3` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l3": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
 
 ### Countdown (numeric, l1 endpoint)
 Countdown to turn device off after a certain time.
