@@ -8,8 +8,6 @@ concurrency:
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
-        env:
-            NODE_OPTIONS: '--max-old-space-size=16384'
         steps:
             - name: Checkout
               uses: actions/checkout@v4
