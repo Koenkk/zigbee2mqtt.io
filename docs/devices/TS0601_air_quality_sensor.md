@@ -27,7 +27,6 @@ pageClass: device-page
 * This device exposes a CO2 value, but [does not contain a CO2 sensor](https://community.home-assistant.io/t/blitzwolf-bw-ar01-air-quality-meter/338396). The CO2 value seems to be calculated from the VOC value and is completely wrong when compared to a real CO2 sensor.
 
 * This device sends multiple value updates per second and poses a significant load for the Zigbee network.
-
 <!-- Notes END: Do not edit below this line -->
 
 

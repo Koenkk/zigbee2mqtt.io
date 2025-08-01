@@ -97,8 +97,8 @@ importers:
         specifier: 5.101.0
         version: 5.101.0
       zigbee-herdsman-converters:
-        specifier: 23.72.1
-        version: 23.72.1
+        specifier: 24.11.0
+        version: 24.11.0
 
 packages:
 
@@ -3533,15 +3533,15 @@ packages:
     resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
     engines: {node: '>=6'}
 
-  zigbee-herdsman-converters@23.72.1:
-    resolution: {integrity: sha512-rXDXk9URZgt8rv77GKyrvgzNwCHM0Mk5rvKenDy7/4Pj6unqY8CWq7/HPbG30dfrJT9PDJZlF9MWcwfUnh8UsA==}
+  zigbee-herdsman-converters@24.11.0:
+    resolution: {integrity: sha512-95qnZCZjScc/ET3zO/nkzis3QbfPRYg2IMCjoeOwxNCvRczVHEP9ptj1Fj1vK0s1kgTpyB1gSdYAfeYyxa+zcw==}
 
-  zigbee-herdsman@4.4.1:
-    resolution: {integrity: sha512-7B2+klBM6HC2APOe8wlu807+cguWMuHOucmUYRj39/cqGaGOAxtNEQPkGOQsftohl52oEnbl7yGFF53G1wX3dg==}
+  zigbee-herdsman@5.0.4:
+    resolution: {integrity: sha512-WeopbhVlIUyQZm2lm6hh+R35FJ9WZbJ8bKoQiQXoS9Myu3oJRrQFQPPqCnDSzG1djfPparVXTetgadImm2Ytgg==}
 
-  zigbee-on-host@0.1.12:
-    resolution: {integrity: sha512-ZhYaDIZpQlgSKzcrfoJgQ85UYk26nzRILFBF2n9GUpiyBFrKOQ5zSqLCQW8XroiD9ndFPDiiKzunmsty20GyfQ==}
-    engines: {node: '>=20.17.0'}
+  zigbee-on-host@0.1.13:
+    resolution: {integrity: sha512-mL7s9ic7J85YI7wOG1/QlbRYE3haFzIHqgnM2+xLmjj8CazjhmGjop9TCfuY2JXyDI9ss7bNCLxuI9n6M+TXug==}
+    engines: {node: ^20.19.0 || >=22.12.0}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -7277,16 +7277,16 @@ snapshots:
 
   yn@3.1.1: {}
 
-  zigbee-herdsman-converters@23.72.1:
+  zigbee-herdsman-converters@24.11.0:
     dependencies:
       buffer-crc32: 1.0.0
       iconv-lite: 0.6.3
       semver: 7.7.2
-      zigbee-herdsman: 4.4.1
+      zigbee-herdsman: 5.0.4
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-herdsman@4.4.1:
+  zigbee-herdsman@5.0.4:
     dependencies:
       '@serialport/bindings-cpp': 13.0.1
       '@serialport/parser-delimiter': 13.0.0
@@ -7296,10 +7296,10 @@ snapshots:
       fast-deep-equal: 3.1.3
       mixin-deep: 2.0.1
       slip: 1.0.2
-      zigbee-on-host: 0.1.12
+      zigbee-on-host: 0.1.13
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-on-host@0.1.12: {}
+  zigbee-on-host@0.1.13: {}
 
   zwitch@2.0.4: {}

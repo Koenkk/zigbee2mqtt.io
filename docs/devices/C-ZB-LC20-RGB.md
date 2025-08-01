@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | C-ZB-LC20-RGB  |
 | Vendor  | [Candeo](/supported-devices/#v=Candeo)  |
 | Description | Smart LED controller (RGB mode) |
-| Exposes | light (state, brightness, color_xy, color_hs, level_config), effect, power_on_behavior, identify |
+| Exposes | light (state, brightness, color_xy, color_hs, level_config), power_on_behavior, identify |
 | Picture | ![Candeo C-ZB-LC20-RGB](https://www.zigbee2mqtt.io/images/devices/C-ZB-LC20-RGB.png) |
 
 
@@ -86,13 +86,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
