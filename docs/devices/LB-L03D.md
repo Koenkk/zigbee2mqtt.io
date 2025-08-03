@@ -13,3 +13,8 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1 EU (no neutral, double rocker) |
 | Exposes | state, brightness, color temp, color temp starup, color (X/Y) |
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
