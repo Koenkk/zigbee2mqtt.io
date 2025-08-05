@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | THS317-ET  |
 | Vendor  | [OWON](/supported-devices/#v=OWON)  |
 | Description | Temperature sensor |
-| Exposes | battery, temperature |
+| Exposes | battery, voltage, temperature |
 | Picture | ![OWON THS317-ET](https://www.zigbee2mqtt.io/images/devices/THS317-ET.png) |
 
 
@@ -45,6 +45,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Temperature (numeric)
 Measured temperature value.

@@ -23,8 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+### Notes on OTA updates
 
-
+When updating using OTA, please be aware of the requirement to physically turn the amp wheel on the device to complete the update! Please see the [official update instructions](https://doc.clickup.com/9004130215/p/h/8cb07x7-30795/12688a97b1dfa55).
 <!-- Notes END: Do not edit below this line -->
 
 

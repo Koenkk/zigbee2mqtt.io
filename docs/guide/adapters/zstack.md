@@ -9,9 +9,9 @@ serial:
 
 Other supported settings are: `disable_led`, `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
-### Firmware flashing (CC2652/CC1352)
+### Firmware flashing
 
-Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the BSL (bootloader) mode.
+Adapters can be flashed by putting them in the BSL (bootloader) mode.
 See the "Vendor flashing instructions" of your adapter below on how to do this.
 Once you've successfully put your adapter into BSL mode, use any of the tools below to flash it.
 
@@ -31,7 +31,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
 
 <img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" height=300 />
 
-## Recommended (CC2652/CC1352)
+## Hardware
 
 ### USB
 
@@ -514,9 +514,7 @@ These devices have two serial devices built in. Make sure you put the right seri
 <img src="../../images/LP-CC1352P7.jpg" width="200" />
 :::
 
-## Not recommended (CC2530/CC2531/CC2538)
-
-### USB
+### Not recommended
 
 ::: details Texas Instruments CC2531
 
@@ -532,8 +530,6 @@ USB connected Zigbee adapter with PCB antenna
 
 <img src="../../images/cc2531.jpg" width="200" />
 :::
-
-### Serial
 
 ::: details Vision CC2538+CC2592 Dongle(VS203)
 
@@ -572,8 +568,6 @@ Serial connected adapter with CC2592 RF Amplifier
 <img src="../../images/cc2538.jpg" width="200" />
 :::
 
-### Network
-
 ::: details XGG gateway
 
 An open source zigbee gateway powered by ESP8266 and CC2538+CC2592PA (XGG 38PZ2MGateway) or CC2530 (XGG 30Z2MGateway)  
@@ -583,8 +577,6 @@ Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firm
 
 <img src="../../images/CC2652P-Z2M.jpg" width="200" />
 :::
-
-### Custom
 
 ::: details Texas Instruments CC2538 HAT
 

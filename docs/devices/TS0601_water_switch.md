@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_water_switch  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Dual water valve |
-| Exposes | valve_status, switch (state), countdown, valve_duration, battery, voltage |
+| Exposes | valve_status, switch (state), countdown, valve_duration, battery |
 | Picture | ![Tuya TS0601_water_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_water_switch.png) |
 
 
@@ -88,10 +88,4 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Voltage (numeric)
-Voltage of the battery in millivolts.
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mV`.
 
