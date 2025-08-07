@@ -23,7 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+## Notes
+This device uses the converter and configuration for [Tuya TS0601_pir](https://www.zigbee2mqtt.io/devices/TS0601_pir.html). Despite being a whitelabel of this device, the COZIGPMS/_TZE200_ghynnvos variant does **not** provide a data-point for battery state. The below statement that battery state can be reported within 24 hours is not correct, this device simply does not provide it.
 
 <!-- Notes END: Do not edit below this line -->
 
