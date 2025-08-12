@@ -241,10 +241,10 @@ script:
         alias: Zigbee2MQTT Rename
         icon: 'mdi:pencil'
         sequence:
-            service: mqtt.publish
-            data_template:
+          - action: mqtt.publish
+            data:
                 topic: zigbee2mqtt/bridge/request/device/rename
-                payload_template: >-
+                payload: >-
                     {
                       "from": "{{ states('input_select.zigbee2mqtt_old_name_select') }}",
                       "to": "{{ states('input_text.zigbee2mqtt_new_name') }}"
@@ -253,13 +253,13 @@ script:
         alias: Zigbee2MQTT Remove
         icon: 'mdi:trash-can'
         sequence:
-            service: mqtt.publish
-            data_template:
+          - action: mqtt.publish
+            data:
                 topic: zigbee2mqtt/bridge/request/device/remove
-                payload_template: >-
+                payload: >-
                     {
                       "id": "{{ states('input_select.zigbee2mqtt_remove_select') }}",
-                      "force": {{ is_state('input_boolean.zigbee2mqtt_force_remove', 'on') }}
+                      "force": {{ 'true' if is_state('input_boolean.zigbee2mqtt_force_remove', 'on') else 'false' }}
                     }
 
 automation:
