@@ -311,7 +311,7 @@ automation:
                          {%- set ns.entities = ns.entities + names %}
                        {%- endif %}
                      {%- endfor %}
-                     {{ ns.entities}}
+                     {{ ns.entities | unique | sort | list}}
             target:
                 entity_id:
                     - input_select.zigbee2mqtt_old_name_select
