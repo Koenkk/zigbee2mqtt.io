@@ -26,7 +26,7 @@
     },
     "devDependencies": {
         "@types/json-schema": "^7.0.15",
-        "@types/node": "24.2.0",
+        "@types/node": "24.2.1",
         "@vuepress/bundler-webpack": "2.0.0-rc.24",
         "@vuepress/client": "2.0.0-rc.24",
         "@vuepress/plugin-docsearch": "2.0.0-rc.112",
