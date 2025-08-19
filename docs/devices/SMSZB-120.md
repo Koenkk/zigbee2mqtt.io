@@ -18,13 +18,16 @@ pageClass: device-page
 | Model | SMSZB-120  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Smoke detector with siren |
-| Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, reliability, fault, linkquality |
+| Exposes | smoke, battery_low, test, max_duration, alarm, reliability, fault, temperature, battery, voltage |
 | Picture | ![Develco SMSZB-120](https://www.zigbee2mqtt.io/images/devices/SMSZB-120.png) |
 | White-label | Frient 94430, Cavius 2103 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+### Factory resetting
+To factory reset the device, press and hold the only button until the red light starts blinking continuously. The device will reset and become available for pairing again.
+
 The technical manual from Develco states that SMSZB-120 scans Zigbee channels 11-24 when searching for a network to join.
 
 ### Warning usage
@@ -71,19 +74,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
 ### Smoke (binary)
 Indicates whether the device detected smoke.
 Value can be found in the published state on the `smoke` property.
@@ -129,10 +119,25 @@ Value can be found in the published state on the `fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` fault is ON, if `false` OFF.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
 

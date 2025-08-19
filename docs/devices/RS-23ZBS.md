@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RS-23ZBS  |
 | Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Temperature & humidity sensor |
-| Exposes | temperature, humidity, linkquality |
+| Exposes | temperature, humidity |
 | Picture | ![Climax RS-23ZBS](https://www.zigbee2mqtt.io/images/devices/RS-23ZBS.png) |
 
 
@@ -54,11 +54,4 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

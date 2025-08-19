@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZiPulses  |
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZiPulses |
-| Exposes | battery, voltage, temperature, multiplier, divisor, unitOfMeasure, energy, linkquality |
+| Exposes | battery, voltage, temperature, multiplier, divisor, unitOfMeasure, energy |
 | Picture | ![LiXee ZiPulses](https://www.zigbee2mqtt.io/images/devices/ZiPulses.png) |
 
 
@@ -86,11 +86,4 @@ The possible values are: `kWh`, `m3`, `ft3`, `ccf`, `US gl`, `IMP gl`, `BTUs`, `
 ### Energy (numeric)
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

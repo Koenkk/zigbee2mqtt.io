@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CTM_MBD_Dim  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | MBD Dim, motion detector with dimmer |
-| Exposes | light (state, brightness), illuminance, illuminance_lux, occupancy, device_enabled, ballast_minimum_level, ballast_maximum_level, ballast_power_on_level, linkquality |
+| Exposes | light (state, brightness), occupancy, device_enabled, ballast_minimum_level, ballast_maximum_level, ballast_power_on_level, illuminance |
 | Picture | ![CTM Lyng CTM_MBD_Dim](https://www.zigbee2mqtt.io/images/devices/CTM_MBD_Dim.png) |
 
 
@@ -34,9 +34,9 @@ pageClass: device-page
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 * `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
 
 ## Exposes
@@ -45,17 +45,6 @@ pageClass: device-page
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-
-### Illuminance (numeric)
-Raw measured illuminance.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
 
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
@@ -91,10 +80,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_power_on_level": NEW_VALUE}`.
 The minimal value is `10` and the maximum value is `97`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZTH01/ZTH02  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, voltage, linkquality |
+| Exposes | battery, temperature, humidity, voltage |
 | Picture | ![Tuya ZTH01/ZTH02](https://www.zigbee2mqtt.io/images/devices/ZTH01-ZTH02.png) |
 
 
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -67,11 +70,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS130F_dual  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Dual curtain/blind module |
-| Exposes | moving, calibration_time, cover (state, position), calibration, motor_reversal, linkquality |
+| Exposes | moving, calibration_time, cover (state, position), calibration, motor_reversal |
 | Picture | ![Lonsonho TS130F_dual](https://www.zigbee2mqtt.io/images/devices/TS130F_dual.png) |
 
 
@@ -64,13 +64,17 @@ The possible values are: `UP`, `STOP`, `DOWN`.
 ### Calibration time (numeric, left endpoint)
 Calibration time.
 Value can be found in the published state on the `calibration_time_left` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_left": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_left": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `500`.
 The unit of this value is `s`.
 
 ### Calibration time (numeric, right endpoint)
 Calibration time.
 Value can be found in the published state on the `calibration_time_right` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_right": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_right": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `500`.
 The unit of this value is `s`.
 
 ### Cover (left endpoint)
@@ -108,11 +112,4 @@ Value can be found in the published state on the `motor_reversal_right` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal_right": NEW_VALUE}`.
 If value equals `ON` motor reversal is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

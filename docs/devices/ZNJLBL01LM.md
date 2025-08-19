@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNJLBL01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Roller shade driver E1 |
-| Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, motor_speed, linkquality |
+| Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, motor_speed |
 | Picture | ![Aqara ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.png) |
 | White-label | Aqara RSD-M01 |
 
@@ -41,7 +41,7 @@ The fully open position can be set by setting the shade to the desired position 
 The fully closed position can be set by setting the shade to the desired position and then pressing the down button 5 times in succession. If successful the light turns blue and flashes 3 times.
 
 ### Change button directions
-If the up and down buttons are working in the oppsite direction of how your blinds opreate, they can be swapped by pressing the reset button 3 times. If successful the light turns solid blue for 1 second.
+If the up and down buttons are working in the opposite direction of how your blinds operate, they can be swapped by pressing the reset button 3 times. If successful the light turns solid blue for 1 second.
 
 ### Adapter firmware
 In order for this device to work (fully), at least the following firmware is required on your adapter:
@@ -113,11 +113,4 @@ Value can be found in the published state on the `motor_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_speed": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_speed": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

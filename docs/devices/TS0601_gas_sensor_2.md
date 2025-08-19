@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_gas_sensor_2  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Gas sensor |
-| Exposes | gas, gas_value, self_test, self_test_result, silence, alarm_ringtone, alarm_time, preheat, linkquality |
+| Exposes | gas, gas_value, self_test, self_test_result, silence, alarm_ringtone, alarm_time, preheat |
 | Picture | ![Tuya TS0601_gas_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor_2.png) |
 
 
@@ -84,11 +84,4 @@ Indicates sensor preheat is active.
 Value can be found in the published state on the `preheat` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` preheat is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

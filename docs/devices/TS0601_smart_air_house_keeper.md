@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_smart_air_house_keeper  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart air house keeper |
-| Exposes | temperature, humidity, co2, voc, formaldehyd, pm25, linkquality |
+| Exposes | temperature, humidity, co2, voc, formaldehyd, pm25 |
 | Picture | ![Tuya TS0601_smart_air_house_keeper](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.png) |
 
 
@@ -73,7 +73,7 @@ The unit of this value is `ppm`.
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
+The unit of this value is `ppb`.
 
 ### Formaldehyd (numeric)
 The measured formaldehyd value.
@@ -87,11 +87,4 @@ Value can be found in the published state on the `pm25` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `999`.
 The unit of this value is `µg/m³`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCGQ15LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Motion sensor E1 |
-| Exposes | occupancy, illuminance_lux, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count, linkquality |
+| Exposes | occupancy, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count |
 | Picture | ![Aqara RTCGQ15LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ15LM.png) |
 
 
@@ -34,8 +34,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -54,14 +52,8 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
-
 ### Illuminance (numeric)
-Measured illuminance in lux.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -97,11 +89,4 @@ The unit of this value is `mV`.
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

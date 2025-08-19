@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_plug_2  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart plug (without power monitoring) |
-| Exposes | switch (state), power_outage_memory, indicator_mode, lock (state), linkquality |
+| Exposes | switch (state), power_outage_memory, indicator_mode, child_lock |
 | Picture | ![Tuya TS011F_plug_2](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_2.png) |
 
 
@@ -47,8 +47,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power outage memory (enum)
@@ -65,15 +65,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `off/on`, `on/off`, `on`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 

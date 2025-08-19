@@ -9,11 +9,11 @@ You can define blocked devices as well as a list of devices allowed joining the 
 ```yaml
 # Optional: Block devices from the network (by ieeeAddr) (default: empty)
 blocklist:
-  - '0x000b57fffec6a5b2'
+    - '0x000b57fffec6a5b2'
 
 # Optional: Allow only certain devices to join the network (by ieeeAddr)
 # Note that all devices not on the passlist will be removed from the network!
 # (default: empty)
 passlist:
-  - '0x000b57fffec6a5b3'
+    - '0x000b57fffec6a5b3'
 ```

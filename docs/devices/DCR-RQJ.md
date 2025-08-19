@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DCR-RQJ  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Carbon monoxide sensor gas leak detector |
-| Exposes | gas, gas_value, carbon_monoxide, co, linkquality |
+| Exposes | gas, gas_value, carbon_monoxide, co |
 | Picture | ![Tuya DCR-RQJ](https://www.zigbee2mqtt.io/images/devices/DCR-RQJ.png) |
 
 
@@ -60,11 +60,4 @@ The measured CO (carbon monoxide) value.
 Value can be found in the published state on the `co` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

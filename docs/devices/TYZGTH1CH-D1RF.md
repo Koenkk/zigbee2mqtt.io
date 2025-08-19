@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TYZGTH1CH-D1RF  |
 | Vendor  | [Mumubiz](/supported-devices/#v=Mumubiz)  |
 | Description | Smart switch with temperature/humidity sensor |
-| Exposes | switch (state), power_outage_memory, lock (state), temperature, humidity, temperature_calibration, humidity_calibration, temperature_sensitivity, humidity_sensitivity, manual_mode, auto_settings, linkquality |
+| Exposes | switch (state), power_outage_memory, child_lock, temperature, humidity, temperature_calibration, humidity_calibration, temperature_sensitivity, humidity_sensitivity, manual_mode, auto_settings |
 | Picture | ![Mumubiz TYZGTH1CH-D1RF](https://www.zigbee2mqtt.io/images/devices/TYZGTH1CH-D1RF.png) |
 
 
@@ -52,8 +52,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power outage memory (enum)
@@ -63,10 +63,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -113,24 +115,18 @@ The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `%`.
 
 ### Manual mode (binary)
-Manual mode or automatic.
+Manual mode, ON = auto settings disabled, OFF = auto settings enabled.
 Value can be found in the published state on the `manual_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_mode": NEW_VALUE}`.
 If value equals `ON` manual mode is ON, if `OFF` OFF.
 
 ### Auto settings (composite)
+Automatically switch ON/OFF, make sure manual mode is turned OFF otherwise auto settings are not applied..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_settings": {"enabled": VALUE, "temp_greater_then": VALUE, "temp_greater_value": VALUE, "temp_lower_then": VALUE, "temp_lower_value": VALUE}}`
-- `enabled` (enum): Enable auto settings allowed values: `on`, `off`, `none`
-- `temp_greater_then` (enum): Greater action allowed values: `on`, `off`, `none`
-- `temp_greater_value` (numeric): Temperature greater than value min value is -20, max value is 80, unit is *C
-- `temp_lower_then` (enum): Lower action allowed values: `on`, `off`, `none`
-- `temp_lower_value` (numeric): Temperature lower than value min value is -20, max value is 80, unit is *C
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+- `enabled` (binary): Enable auto settings allowed values: `true` or `false`
+- `temp_greater_then` (enum): Greater action allowed values: `ON`, `OFF`
+- `temp_greater_value` (numeric): Temperature greater than value min value is -20, max value is 80, unit is °C
+- `temp_lower_then` (enum): Lower action allowed values: `ON`, `OFF`
+- `temp_lower_value` (numeric): Temperature lower than value min value is -20, max value is 80, unit is °C
 

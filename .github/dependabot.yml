@@ -1,6 +1,19 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
+    - package-ecosystem: npm
+      versioning-strategy: increase
+      directory: /
+      schedule:
+          interval: weekly
+      ignore:
+          # Updated with the monthly z2m release
+          - dependency-name: zigbee-herdsman-converters
+          # Don't upgrade zhc and sass (because of nasty deprecation warnings which can't be fixed due to Quasar)
+          - dependency-name: sass
+      groups:
+          all:
+              applies-to: version-updates
+              patterns:
+                  - '*'
+      commit-message:
+          prefix: fix(ignore)

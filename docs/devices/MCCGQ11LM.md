@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Door and window sensor |
-| Exposes | battery, contact, device_temperature, voltage, power_outage_count, trigger_count, linkquality |
+| Exposes | battery, contact, device_temperature, voltage, power_outage_count, trigger_count |
 | Picture | ![Aqara MCCGQ11LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.png) |
 
 
@@ -32,6 +32,9 @@ Uses a CR1632 battery
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join.  
 If this doesn't work, after starting the pairing process with the long press, keep short pressing the button approximately once a second until the interview process is finished.
+
+In some cases where users are using a CC2531 USB stick (see https://github.com/Koenkk/zigbee2mqtt/issues/839) performing a shutdown of Zigbee2MQTT, removing and reinserting the USB stick, then restarting Zigbee2MQTT has proven successful for pairing via the above method when it has not been working.
+Switching to the ember adapter after [upgrading the stick firmware](https://darkxst.github.io/silabs-firmware-builder/) might solve this pairing issue.
 
 
 ### Troubleshooting: device stops sending messages/disconnects from network
@@ -100,11 +103,4 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Indicates how many times the sensor was triggered (since last scheduled report).
 Value can be found in the published state on the `trigger_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_miniPWS  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Mini plant wattering sensor |
-| Exposes | soil_moisture, battery, voltage, report_delay, linkquality |
+| Exposes | soil_moisture, battery, voltage, report_delay |
 | Picture | ![EFEKTA EFEKTA_miniPWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.png) |
 
 
@@ -72,11 +72,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `180`.
 The unit of this value is `min`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

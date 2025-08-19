@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CTP-R01  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Cube T1 Pro |
-| Exposes | battery, voltage, power_outage_count, operation_mode, side, action_from_side, action_angle, action, linkquality |
+| Exposes | battery, voltage, power_outage_count, operation_mode, side, action_from_side, action_angle, action |
 | Picture | ![Aqara CTP-R01](https://www.zigbee2mqtt.io/images/devices/CTP-R01.png) |
 | White-label | Aqara MFCZQ12LM |
 
@@ -83,11 +83,6 @@ There are two ways to toggle between scene mode and action mode:
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 
 ## Exposes
 
@@ -139,11 +134,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `shake`, `throw`, `tap`, `slide`, `flip180`, `flip90`, `hold`, `side_up`, `rotate_left`, `rotate_right`, `1_min_inactivity`, `flip_to_side`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLDJ12LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Curtain controller B1 |
-| Exposes | cover (state, position), battery, running, motor_state, power_outage_count, linkquality |
+| Exposes | cover (state, position), battery, running, motor_state, power_outage_count |
 | Picture | ![Aqara ZNCLDJ12LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ12LM.png) |
 
 
@@ -125,11 +125,4 @@ The possible values are: `closing`, `opening`, `stopped`.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

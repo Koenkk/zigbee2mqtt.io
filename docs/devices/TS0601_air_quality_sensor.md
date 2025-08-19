@@ -18,13 +18,15 @@ pageClass: device-page
 | Model | TS0601_air_quality_sensor  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Air quality sensor |
-| Exposes | temperature, humidity, co2, voc, formaldehyd, linkquality |
+| Exposes | temperature, humidity, co2, voc, formaldehyd |
 | Picture | ![Tuya TS0601_air_quality_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_air_quality_sensor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+* This device exposes a CO2 value, but [does not contain a CO2 sensor](https://community.home-assistant.io/t/blitzwolf-bw-ar01-air-quality-meter/338396). The CO2 value seems to be calculated from the VOC value and is completely wrong when compared to a real CO2 sensor.
 
-
+* This device sends multiple value updates per second and poses a significant load for the Zigbee network.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -71,18 +73,11 @@ The unit of this value is `ppm`.
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
+The unit of this value is `ppb`.
 
 ### Formaldehyd (numeric)
 The measured formaldehyd value.
 Value can be found in the published state on the `formaldehyd` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mg/m³`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The unit of this value is `µg/m³`.
 

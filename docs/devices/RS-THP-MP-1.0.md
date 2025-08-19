@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RS-THP-MP-1.0  |
 | Vendor  | [Keen Home](/supported-devices/#v=Keen%20Home)  |
 | Description | Temperature Sensor |
-| Exposes | battery, temperature, humidity, pressure, voltage, linkquality |
+| Exposes | battery, temperature, humidity, pressure, voltage |
 | Picture | ![Keen Home RS-THP-MP-1.0](https://www.zigbee2mqtt.io/images/devices/RS-THP-MP-1.0.png) |
 
 
@@ -77,11 +77,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

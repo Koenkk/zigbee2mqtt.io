@@ -2,71 +2,71 @@ name: Update Algolia-Search index
 
 # Only trigger, when the build workflow succeeded on branch master
 on:
-  workflow_run:
-    workflows: [ "Build ⚙ and Deploy 🚀" ]
-    branches: [ master ]
-    types: [ completed ]
+    workflow_run:
+        workflows: ['Build and Deploy']
+        branches: [master]
+        types: [completed]
 
 concurrency:
-  group: algolia-update
-  cancel-in-progress: true
+    group: algolia-update
+    cancel-in-progress: true
 
 jobs:
-  update-algolia-index:
-    runs-on: ubuntu-latest
-    steps:
-        # Try to workaround time gap between newly gh-pages deployment is available (cache cleared?)
-      - name: Wait for deployment is published
-        run: |
-          CNT=1
-          echo Waiting for deployment ${GITHUB_SHA:0:7} is published
-          sleep 60
-          while ! curl -sS https://www.zigbee2mqtt.io/build.txt | grep -qF ${GITHUB_SHA:0:7} ; do
-            CNT=$((CNT+1))
-            sleep 1
-            if [ $CNT -gt 300 ]; then
-              >&2 echo "build.txt does not match current commit"
-              >&2 curl -sS https://www.zigbee2mqtt.io/build.txt
-              exit 1
-            fi
-          done
+    update-algolia-index:
+        runs-on: ubuntu-latest
+        steps:
+            # Try to workaround time gap between newly gh-pages deployment is available (cache cleared?)
+            - name: Wait for deployment is published
+              run: |
+                  CNT=1
+                  echo Waiting for deployment ${GITHUB_SHA:0:7} is published
+                  sleep 60
+                  while ! curl -sS https://www.zigbee2mqtt.io/build.txt | grep -qF ${GITHUB_SHA:0:7} ; do
+                    CNT=$((CNT+1))
+                    sleep 1
+                    if [ $CNT -gt 300 ]; then
+                      >&2 echo "build.txt does not match current commit"
+                      >&2 curl -sS https://www.zigbee2mqtt.io/build.txt
+                      exit 1
+                    fi
+                  done
 
-      - name: Create algolia scraper config
-        run: |
-          cat << EOF > algolia.json
-          {
-            "index_name": "zigbee2mqtt.io",
-            "sitemap_urls": ["https://www.zigbee2mqtt.io/sitemap.xml"],
-            "stop_urls": [],
-            "selectors": {
-              "lvl0": {
-                "selector": "header .router-link-active",
-                "global": true,
-                "default_value": "Miscellaneous"
-              },
-              "lvl1": ".content-page h1, .device-page h1",
-              "lvl2": ".content-page h2, .device-page h1 + table tbody tr:nth-child(3) td:nth-child(2)",
-              "lvl3": ".content-page h3",
-              "lvl4": ".content-page h4",
-              "lvl5": ".content-page h5",
-              "text": ".content-page p, .content-page li, .content-page code, .content-page td",
-              "lang": {
-                "selector": "/html/@lang",
-                "type": "xpath",
-                "global": true
-              }
-            },
-            "custom_settings": {
-              "attributesForFaceting": ["lang"]
-            }
-          }
-          EOF
+            - name: Create algolia scraper config
+              run: |
+                  cat << EOF > algolia.json
+                  {
+                    "index_name": "zigbee2mqtt.io",
+                    "sitemap_urls": ["https://www.zigbee2mqtt.io/sitemap.xml"],
+                    "stop_urls": [],
+                    "selectors": {
+                      "lvl0": {
+                        "selector": "header .router-link-active",
+                        "global": true,
+                        "default_value": "Miscellaneous"
+                      },
+                      "lvl1": ".content-page h1, .device-page h1",
+                      "lvl2": ".content-page h2, .device-page h1 + table tbody tr:nth-child(3) td:nth-child(2)",
+                      "lvl3": ".content-page h3",
+                      "lvl4": ".content-page h4",
+                      "lvl5": ".content-page h5",
+                      "text": ".content-page p, .content-page li, .content-page code, .content-page td",
+                      "lang": {
+                        "selector": "/html/@lang",
+                        "type": "xpath",
+                        "global": true
+                      }
+                    },
+                    "custom_settings": {
+                      "attributesForFaceting": ["lang"]
+                    }
+                  }
+                  EOF
 
-      - run: curl -sSL https://www.zigbee2mqtt.io/build.txt
+            - run: curl -sSL https://www.zigbee2mqtt.io/build.txt
 
-      - name: Update algolia docsearch
-        uses: psi-4ward/algolia-docsearch-action@master
-        with:
-          algolia_application_id: K1BM3QYQ34
-          algolia_api_key: ${{ secrets.ALGOLIA_INDEX_APIKEY }}
-          file: 'algolia.json'
+            - name: Update algolia docsearch
+              uses: psi-4ward/algolia-docsearch-action@master
+              with:
+                  algolia_application_id: K1BM3QYQ34
+                  algolia_api_key: ${{ secrets.ALGOLIA_INDEX_APIKEY }}
+                  file: 'algolia.json'

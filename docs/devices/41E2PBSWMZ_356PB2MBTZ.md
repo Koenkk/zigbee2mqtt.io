@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 41E2PBSWMZ/356PB2MBTZ  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser 40/300-Series module switch 2AX |
-| Exposes | switch (state), indicator_mode, linkquality |
+| Exposes | switch (state), indicator_mode |
 | Picture | ![Schneider Electric 41E2PBSWMZ/356PB2MBTZ](https://www.zigbee2mqtt.io/images/devices/41E2PBSWMZ-356PB2MBTZ.png) |
 
 
@@ -56,8 +56,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Indicator mode (enum, smart endpoint)
@@ -66,11 +66,4 @@ Value can be found in the published state on the `indicator_mode_smart` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode_smart": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode_smart": NEW_VALUE}`.
 The possible values are: `reverse_with_load`, `consistent_with_load`, `always_off`, `always_on`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

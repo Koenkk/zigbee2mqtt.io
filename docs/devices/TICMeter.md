@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TICMeter  |
 | Vendor  | [GammaTroniques](/supported-devices/#v=GammaTroniques)  |
 | Description | TICMeter pour Linky |
-| Exposes | linkquality |
+| Exposes |  |
 | Picture | ![GammaTroniques TICMeter](https://www.zigbee2mqtt.io/images/devices/TICMeter.png) |
 
 
@@ -52,10 +52,5 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+
 

@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HEIMAN-M1 control via MQTT"
-description: "Integrate your HEIMAN HEIMAN-M1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HEIMAN-M1 control via MQTT"
+description: "Integrate your Heiman HEIMAN-M1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HEIMAN-M1
+# Heiman HEIMAN-M1
 
 |     |     |
 |-----|-----|
 | Model | HEIMAN-M1  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Door sensor |
-| Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HEIMAN-M1](https://www.zigbee2mqtt.io/images/devices/HEIMAN-M1.png) |
+| Exposes | contact, battery_low, tamper |
+| Picture | ![Heiman HEIMAN-M1](https://www.zigbee2mqtt.io/images/devices/HEIMAN-M1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,11 +49,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

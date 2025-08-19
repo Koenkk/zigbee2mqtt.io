@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TI0001-illuminance  |
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee digital illuminance and sound sensor |
-| Exposes | noise_detected, illuminance, linkquality |
+| Exposes | noise_detected, illuminance, noise_level |
 | Picture | ![Livolo TI0001-illuminance](https://www.zigbee2mqtt.io/images/devices/TI0001-illuminance.png) |
 
 
@@ -47,7 +47,6 @@ If you decided to create a new network, you should specify another 'pan_id'.
 advanced:
   pan_id: 6756
 ```
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -67,16 +66,15 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` noise detected is ON, if `false` OFF.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Noise level (enum)
+Detected noise level.
+Value can be found in the published state on the `noise_level` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `silent`, `normal`, `lively`, `noisy`.
 

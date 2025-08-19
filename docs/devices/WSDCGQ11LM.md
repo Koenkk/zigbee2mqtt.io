@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WSDCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, pressure, voltage, linkquality |
+| Exposes | battery, temperature, humidity, pressure, voltage |
 | Picture | ![Aqara WSDCGQ11LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ11LM.png) |
 
 
@@ -29,8 +29,8 @@ pageClass: device-page
 Uses a CR2032 battery
 
 ### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+Press and hold the reset button on the device for +- 5 seconds (when the blue blinks, immediately release the button for pairing to start).
+After this, the device will automatically join. If this doesn't work, try with a single short button press.
 
 ![WSDCGQ11LM pairing](../images/pairing/WSDCGQ11LM_pairing.jpg)
 
@@ -98,11 +98,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

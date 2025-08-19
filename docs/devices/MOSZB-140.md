@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MOSZB-140  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor |
-| Exposes | occupancy, temperature, tamper, battery_low, battery, linkquality, illuminance_lux, illuminance |
+| Exposes | occupancy, occupancy_timeout, tamper, battery_low, led_control, temperature, illuminance, battery, voltage |
 | Picture | ![Develco MOSZB-140](https://www.zigbee2mqtt.io/images/devices/MOSZB-140.png) |
 
 
@@ -39,9 +39,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
 
 ## Exposes
@@ -52,11 +52,12 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
+### Occupancy timeout (numeric)
+Value can be found in the published state on the `occupancy_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `65535`.
+The unit of this value is `s`.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.
@@ -70,30 +71,39 @@ Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
+### Led control (enum)
+Control LED indicator usage..
+Value can be found in the published state on the `led_control` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_control": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_control": NEW_VALUE}`.
+The possible values are: `off`, `fault_only`, `motion_only`, `both`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
-
-### Illuminance lux (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_lux": ""}`.
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
 It's not possible to write (`/set`) this value.
-The unit of this value is `lx`.
+The unit of this value is `°C`.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
 

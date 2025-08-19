@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_vibration_sensor  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart vibration sensor |
-| Exposes | contact, battery, vibration, linkquality |
+| Exposes | contact, battery, vibration |
 | Picture | ![Tuya TS0601_vibration_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_vibration_sensor.png) |
 
 
@@ -50,11 +50,4 @@ Indicates whether the device detected vibration.
 Value can be found in the published state on the `vibration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` vibration is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

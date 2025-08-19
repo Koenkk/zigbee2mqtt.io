@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | UFO-R4Z  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Universal smart IR remote control |
-| Exposes | switch (state), learned_ir_code, ir_code_to_send, linkquality |
+| Exposes | learn_ir_code, learned_ir_code, ir_code_to_send |
 | Picture | ![Tuya UFO-R4Z](https://www.zigbee2mqtt.io/images/devices/UFO-R4Z.png) |
 
 
@@ -32,10 +32,12 @@ pageClass: device-page
 
 ## Exposes
 
-### Switch 
-The current state of this switch is in the published state under the `learn_ir_code` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": "ON"}`, `{"learn_ir_code": "OFF"}` or `{"learn_ir_code": "undefined"}`.
+### Learn ir code (binary)
+Turn on to learn new IR code.
+Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": NEW_VALUE}`.
+If value equals `ON` learn ir code is ON, if `OFF` OFF.
 
 ### Learned ir code (text)
 The IR code learned by device.
@@ -47,11 +49,4 @@ The IR code to send by device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_code_to_send": NEW_VALUE}`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
