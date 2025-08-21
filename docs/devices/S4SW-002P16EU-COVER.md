@@ -1,6 +1,6 @@
 ---
-title: "Shelly 2PM control via MQTT"
-description: "Integrate your Shelly 2PM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Shelly S4SW-002P16EU-COVER control via MQTT"
+description: "Integrate your Shelly S4SW-002P16EU-COVER via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-08-01T15:19:08
 pageClass: device-page
 ---
@@ -11,19 +11,33 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Shelly 2PM
+# Shelly S4SW-002P16EU-COVER
 
 |     |     |
 |-----|-----|
-| Model | 2PM  |
+| Model | S4SW-002P16EU-COVER  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
-| Description | 2PM Gen4 |
+| Description | 2PM Gen4 (Cover Mode) |
 | Exposes | cover (state, position) |
-| Picture | ![Shelly 2PM](https://www.zigbee2mqtt.io/images/devices/2PM.png) |
+| Picture | ![Shelly S4SW-002P16EU-COVER](https://www.zigbee2mqtt.io/images/devices/2PM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+### Device Modes
+The Shelly 2PM Gen4 device operates in two different modes that appear as separate devices in Zigbee2MQTT:
+
+- **Cover Mode** (`S4SW-002P16EU-COVER`) - This device supports window covering controls with lift and tilt functionality
+- **Switch Mode** (`S4SW-002P16EU-SWITCH`) - Provides dual switch functionality with power monitoring
+
+The device mode is automatically detected based on the endpoint configuration. No manual configuration is required.
+
+### Cover Mode Features
+When operating in cover mode, this device provides:
+- Window covering controls (lift and tilt)
+- Position feedback
+- State reporting (OPEN/CLOSE)
 
 Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
 <!-- Notes END: Do not edit below this line -->
@@ -45,4 +59,5 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
 
