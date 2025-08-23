@@ -47,6 +47,6 @@ Currently tested on nRF52840 Dongle, Nice!Nano v2 (nRF52840) and ESP32-C6/H2 dev
 
 - [Experimental ESP32-C6 firmware](https://github.com/andryblack/esp-coordinator)
 
-  More recent build with stability fixes [Experimental ESP32-C6 firmware](https://github.com/diepeterpan/esp-coordinator)
+  More recent build with stability fixes [Updated ESP32-C6 firmware](https://github.com/diepeterpan/esp-coordinator)
 
 <img src="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/_images/esp32-c6-devkitc-1-isometric_v1.2.png" width="200" />
