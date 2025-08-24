@@ -14,4 +14,3 @@ over TCP using a WIFI or Ethernet network. See the [list of supported Zigbee Ada
 
 Currently there are plenty of [supported Zigbee Devices](../supported-devices/) with a rising trend.
 If your device is not supported yet check out [how to support new devices](../advanced/support-new-devices/01_support_new_devices.md) and contribute to Zigbee2MQTT.
-

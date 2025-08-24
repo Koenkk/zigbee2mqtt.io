@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LLKZMK11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Dual relay module |
-| Exposes | power, energy, device_temperature, voltage, current, switch (state), power_outage_count, power_outage_memory, interlock, linkquality |
+| Exposes | power, energy, device_temperature, voltage, current, switch (state), power_outage_count, power_outage_memory, interlock |
 | Picture | ![Aqara LLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK11LM.png) |
 
 
@@ -30,7 +30,7 @@ pageClass: device-page
 This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
 
 ### Binding
-The device allows zigbee [binding](../guide/usage/binding.html) for each individual channel.
+The device allows zigbee [binding](../guide/usage/binding.html) and can be bound to, meaning it can be be controlled by other devices supporting output clusters. For example this remote [IKEA E2001/E2002](https://www.zigbee2mqtt.io/devices/E2001_E2002.html) could be used to control this device.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -102,8 +102,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Switch (l2 endpoint)
@@ -113,8 +113,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power outage count (numeric)
@@ -135,11 +135,4 @@ Value can be found in the published state on the `interlock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interlock": NEW_VALUE}`.
 If value equals `true` interlock is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

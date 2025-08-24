@@ -1,6 +1,6 @@
 ---
-title: "TuYa SA12IZL control via MQTT"
-description: "Integrate your TuYa SA12IZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SA12IZL control via MQTT"
+description: "Integrate your Tuya SA12IZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-30T20:52:51
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SA12IZL
+# Tuya SA12IZL
 
 |     |     |
 |-----|-----|
 | Model | SA12IZL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart smoke alarm |
-| Exposes | battery, smoke, battery_level, alarm, silence_siren, linkquality |
-| Picture | ![TuYa SA12IZL](https://www.zigbee2mqtt.io/images/devices/SA12IZL.png) |
+| Exposes | battery, smoke, battery_level, alarm, silence_siren |
+| Picture | ![Tuya SA12IZL](https://www.zigbee2mqtt.io/images/devices/SA12IZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -64,11 +64,4 @@ Value can be found in the published state on the `silence_siren` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence_siren": NEW_VALUE}`.
 If value equals `true` silence siren is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | YSR-MINI-01_dimmer  |
 | Vendor  | [YSRSAI](/supported-devices/#v=YSRSAI)  |
 | Description | Zigbee LED controller (Dimmer) |
-| Exposes | light (state, brightness), effect, do_not_disturb, linkquality |
+| Exposes | light (state, brightness), effect, do_not_disturb |
 | Picture | ![YSRSAI YSR-MINI-01_dimmer](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-01_dimmer.png) |
 
 
@@ -50,8 +50,8 @@ This light supports the following features: `state`, `brightness`.
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
-Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
@@ -67,7 +67,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -88,11 +88,4 @@ Value can be found in the published state on the `do_not_disturb` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
 If value equals `true` do not disturb is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

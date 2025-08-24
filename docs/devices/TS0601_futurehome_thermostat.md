@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_futurehome_thermostat  |
 | Vendor  | [Futurehome](/supported-devices/#v=Futurehome)  |
 | Description | Thermostat |
-| Exposes | climate (system_mode, preset, local_temperature, local_temperature_calibration, running_state, current_heating_setpoint), sensor, local_temperature_floor, lock (state), switch (state), hysteresis, max_temperature_protection, linkquality |
+| Exposes | climate (system_mode, preset, local_temperature, local_temperature_calibration, running_state, current_heating_setpoint), sensor, local_temperature_floor, child_lock, switch (state), hysteresis, max_temperature_protection |
 | Picture | ![Futurehome TS0601_futurehome_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_futurehome_thermostat.png) |
 
 
@@ -56,10 +56,12 @@ Value can be found in the published state on the `local_temperature_floor` prope
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
@@ -81,11 +83,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature_protection": NEW_VALUE}`.
 The minimal value is `20` and the maximum value is `95`.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

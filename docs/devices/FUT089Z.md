@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | FUT089Z  |
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | RGB+CCT Remote |
-| Exposes | battery, voltage, action, linkquality |
+| Exposes | battery, voltage, action |
 | Picture | ![MiBoxer FUT089Z](https://www.zigbee2mqtt.io/images/devices/FUT089Z.png) |
 
 
@@ -174,12 +174,5 @@ The unit of this value is `mV`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `brightness_move_to_level`, `color_temperature_move`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `on`, `off`, `brightness_move_to_level`, `color_temperature_move`, `move_to_hue_and_saturation`, `tuya_switch_scene`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZSS-JM-GWM-C-MS  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart door and window sensor |
-| Exposes | contact, battery_low, battery, voltage, tamper, linkquality |
+| Exposes | contact, battery, voltage, tamper, battery_low |
 | Picture | ![Moes ZSS-JM-GWM-C-MS](https://www.zigbee2mqtt.io/images/devices/ZSS-JM-GWM-C-MS.png) |
 
 
@@ -37,12 +37,6 @@ Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
@@ -63,10 +57,9 @@ Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Battery low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+If value equals `true` battery low is ON, if `false` OFF.
 

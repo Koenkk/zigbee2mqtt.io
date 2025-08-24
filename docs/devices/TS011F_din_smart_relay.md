@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_din_smart_relay control via MQTT"
-description: "Integrate your TuYa TS011F_din_smart_relay via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_din_smart_relay control via MQTT"
+description: "Integrate your Tuya TS011F_din_smart_relay via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_din_smart_relay
+# Tuya TS011F_din_smart_relay
 
 |     |     |
 |-----|-----|
 | Model | TS011F_din_smart_relay  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Din smart relay (with power monitoring) |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
-| Picture | ![TuYa TS011F_din_smart_relay](https://www.zigbee2mqtt.io/images/devices/TS011F_din_smart_relay.png) |
+| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode |
+| Picture | ![Tuya TS011F_din_smart_relay](https://www.zigbee2mqtt.io/images/devices/TS011F_din_smart_relay.png) |
 | White-label | MatSee Plus ATMS1602Z |
 
 
@@ -64,8 +64,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power (numeric)
@@ -105,11 +105,4 @@ Value can be found in the published state on the `indicator_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `on_off`, `off_on`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

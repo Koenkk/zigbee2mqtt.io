@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZWT198/ZWT100-BH control via MQTT"
-description: "Integrate your TuYa ZWT198/ZWT100-BH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZWT198/ZWT100-BH control via MQTT"
+description: "Integrate your Tuya ZWT198/ZWT100-BH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-01-31T20:08:00
 pageClass: device-page
 ---
@@ -11,20 +11,23 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZWT198/ZWT100-BH
+# Tuya ZWT198/ZWT100-BH
 
 |     |     |
 |-----|-----|
 | Model | ZWT198/ZWT100-BH  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Avatto wall thermostat |
-| Exposes | factory_reset, lock (state), sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), frost_protection, max_temperature_limit, deadzone_temperature, backlight_mode, working_day, schedule_weekday, schedule_holiday, linkquality |
-| Picture | ![TuYa ZWT198/ZWT100-BH](https://www.zigbee2mqtt.io/images/devices/ZWT198-ZWT100-BH.png) |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Description | Wall thermostat |
+| Exposes | factory_reset, child_lock, sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), frost_protection, max_temperature_limit, deadzone_temperature, backlight_mode, working_day, schedule_weekday, schedule_holiday |
+| Picture | ![Tuya ZWT198/ZWT100-BH](https://www.zigbee2mqtt.io/images/devices/ZWT198-ZWT100-BH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+When the thermostat is on, long press the temperature up button for 5 seconds. Now the WiFi-like icon starts flashing indicating readiness for pairing the device.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -39,10 +42,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
 If value equals `ON` factory reset is ON, if `OFF` OFF.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Sensor (enum)
 Select temperature sensor to use.
@@ -81,7 +86,7 @@ The delta between local_temperature (5<t<35)and current_heating_setpoint to trig
 Value can be found in the published state on the `deadzone_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deadzone_temperature": NEW_VALUE}`.
-The minimal value is `0.5` and the maximum value is `10`.
+The minimal value is `0.1` and the maximum value is `10`.
 The unit of this value is `°C`.
 Besides the numeric values the following values are accepted: `default`.
 
@@ -110,11 +115,4 @@ Holidays (2 times `hh:mm/cc.c°C)`.
 Value can be found in the published state on the `schedule_holiday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_holiday": NEW_VALUE}`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

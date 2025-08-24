@@ -1,6 +1,6 @@
 ---
-title: "TuYa TM-YKQ004 control via MQTT"
-description: "Integrate your TuYa TM-YKQ004 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TM-YKQ004 control via MQTT"
+description: "Integrate your Tuya TM-YKQ004 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-01T18:54:40
 pageClass: device-page
 ---
@@ -11,20 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TM-YKQ004
+# Tuya TM-YKQ004
 
 |     |     |
 |-----|-----|
 | Model | TM-YKQ004  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee 4 button remote - 12 scene |
-| Exposes | battery, action, linkquality |
-| Picture | ![TuYa TM-YKQ004](https://www.zigbee2mqtt.io/images/devices/TM-YKQ004.png) |
+| Exposes | battery, action |
+| Picture | ![Tuya TM-YKQ004](https://www.zigbee2mqtt.io/images/devices/TM-YKQ004.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Reset/Re-pairing
+Long press any key for about 10 seconds until the indicator light starts to flash.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -44,11 +46,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `1_single`, `1_double`, `1_hold`, `2_single`, `2_double`, `2_hold`, `3_single`, `3_double`, `3_hold`, `4_single`, `4_double`, `4_hold`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

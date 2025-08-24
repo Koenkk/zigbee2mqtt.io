@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | V3-BTZB/V3-BTZBE  |
 | Vendor  | [Danalock](/supported-devices/#v=Danalock)  |
 | Description | BT/ZB smartlock |
-| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
+| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user |
 | Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.png) |
 
 
@@ -27,7 +27,7 @@ pageClass: device-page
 
 
 ### Pairing
-If pairing failed, try the followings:
+If pairing failed, try the following:
 - Pairing it closer to the coordinator
 - Connecting the CC2531 via an USB extension cable (to avoid interference)
 - Replacing the batteries of the danalock.
@@ -93,11 +93,4 @@ The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 ID of user that triggered the action on the lock.
 Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

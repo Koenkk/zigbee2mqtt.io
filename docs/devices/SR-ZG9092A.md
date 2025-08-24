@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9092A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Touch thermostat |
-| Exposes | outdoor_temperature, climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), away_mode, child_lock, power, current, voltage, energy, lcd_brightness, button_vibration_level, floor_sensor_type, sensor, powerup_status, floor_sensor_calibration, dry_time, mode_after_dry, temperature_display, window_open_check, hysterersis, display_auto_off_enabled, alarm_airtemp_overvalue, linkquality |
+| Exposes | outdoor_temperature, climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), away_mode, child_lock, power, current, voltage, energy, lcd_brightness, button_vibration_level, floor_sensor_type, sensor, powerup_status, floor_sensor_calibration, dry_time, mode_after_dry, temperature_display, window_open_check, hysterersis, display_auto_off_enabled, alarm_airtemp_overvalue |
 | Picture | ![Sunricher SR-ZG9092A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9092A.png) |
 
 
@@ -200,11 +200,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_airtemp_overvalue": NEW_VALUE}`.
 The minimal value is `20` and the maximum value is `60`.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

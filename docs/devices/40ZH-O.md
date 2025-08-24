@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 40ZH-O  |
 | Vendor  | [Aubess](/supported-devices/#v=Aubess)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, battery, sensitivity, keep_time, linkquality |
+| Exposes | occupancy, battery_low, battery, sensitivity, keep_time |
 | Picture | ![Aubess 40ZH-O](https://www.zigbee2mqtt.io/images/devices/40ZH-O.png) |
 
 
@@ -75,11 +75,4 @@ Value can be found in the published state on the `keep_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keep_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keep_time": NEW_VALUE}`.
 The possible values are: `30`, `60`, `120`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

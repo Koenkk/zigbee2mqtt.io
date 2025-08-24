@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS3AQ control via MQTT"
-description: "Integrate your HEIMAN HS3AQ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS3AQ control via MQTT"
+description: "Integrate your Heiman HS3AQ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-01T15:06:58
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS3AQ
+# Heiman HS3AQ
 
 |     |     |
 |-----|-----|
 | Model | HS3AQ  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart air quality monitor |
-| Exposes | co2, battery, humidity, temperature, linkquality |
-| Picture | ![HEIMAN HS3AQ](https://www.zigbee2mqtt.io/images/devices/HS3AQ.png) |
+| Exposes | co2, battery, humidity, temperature |
+| Picture | ![Heiman HS3AQ](https://www.zigbee2mqtt.io/images/devices/HS3AQ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -70,11 +70,4 @@ Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

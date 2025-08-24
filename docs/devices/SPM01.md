@@ -1,6 +1,6 @@
 ---
-title: "TuYa SPM01 control via MQTT"
-description: "Integrate your TuYa SPM01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SPM01 control via MQTT"
+description: "Integrate your Tuya SPM01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-12-26T18:38:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SPM01
+# Tuya SPM01
 
 |     |     |
 |-----|-----|
 | Model | SPM01  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 1P+N system |
-| Exposes | voltage, power, current, energy, produced_energy, linkquality |
-| Picture | ![TuYa SPM01](https://www.zigbee2mqtt.io/images/devices/SPM01.png) |
+| Exposes | voltage, power, current, energy, produced_energy |
+| Picture | ![Tuya SPM01](https://www.zigbee2mqtt.io/images/devices/SPM01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -80,11 +83,4 @@ Total reverse active energy.
 Value can be found in the published state on the `produced_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

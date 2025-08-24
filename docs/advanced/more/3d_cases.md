@@ -2,38 +2,46 @@
 sidebar: auto
 ---
 
-
 # 3D cases
 
 ## Texas Instruments launchpad
+
 - Case designs for [TI LAUNCHXL boards for CC1352P1, CC1352P-2 and CC2652R][thingiverse-c1352p1-cc1352p-2-cc2652r-launchxl]
 
 ## CC2530
- - Case design for a [CC2530 Zigbee minimal case][thingiverse-cc2530-case]
+
+- Case design for a [CC2530 Zigbee minimal case][thingiverse-cc2530-case]
 
 ## CC2531
- - Case design for a [CC2531 Zigbee dongle][thingiverse-rpi-cc2531-dongle]
+
+- Case design for a [CC2531 Zigbee dongle][thingiverse-rpi-cc2531-dongle]
 
 ## CC2531 with external antenna
- - Case design for a [CC2531 Zigbee dongle with external antenna][thingiverse-rpi-cc2531-dongle-external-antenna]
- - Case design with buttons for a [CC2531 Zigbee dongle with external antenna][thingiverse-rpi-cc2531-dongle-with-buttons]
+
+- Case design for a [CC2531 Zigbee dongle with external antenna][thingiverse-rpi-cc2531-dongle-external-antenna]
+- Case design with buttons for a [CC2531 Zigbee dongle with external antenna][thingiverse-rpi-cc2531-dongle-with-buttons]
 
 ## Electrolama zig-a-zig-ah! (zzh!)
- - Case design with button for a [Electrolama zig-a-zig-ah! (zzh!)][thingiverse-CC2652R-zzh-case]
+
+- Case design with button for a [Electrolama zig-a-zig-ah! (zzh!)][thingiverse-CC2652R-zzh-case]
 
 ## Slaesh's CC2652RB stick
- - Case design for a [Slaesh's CC2652RB stick][thingiverse-CC2652RB-slaesh-case]
+
+- Case design for a [Slaesh's CC2652RB stick][thingiverse-CC2652RB-slaesh-case]
 
 ## CC2530 + CC2591
+
 - Case design for a [minimal case compatible with the CC2530 + CC2591 combination][thingiverse-cc2530-cc2591-case]
 - Case design with PSU and C7 socket for a [CC2530 + CC2591 + PSU + C7 socket][thingiverse-cc2530-cc2591-case-psu-c7]
 - Case design with PSU HLK-PM03 for a [CC2530 + CC2591 + HLK-PM03][thingiverse-cc2530-cc2591-case-hlk-pm03]
 
 ## Raspberry Pi Zero
- - Blog post about a [round case for the Raspberry Pi Zero by Jens Willmer][jwillmer-blog-post]. The files can also be found on [Thingiverse][thingiverse-jwillmer-design].
- - [Minimal Pi Zero Case by Jens Willmer][thingiverse-jwillmer-design2]
+
+- Blog post about a [round case for the Raspberry Pi Zero by Jens Willmer][jwillmer-blog-post]. The files can also be found on [Thingiverse][thingiverse-jwillmer-design].
+- [Minimal Pi Zero Case by Jens Willmer][thingiverse-jwillmer-design2]
 
 ## Alternatives
+
 A lot of different case designs can be found via the [Thingiverse search][thingiverse-search-rpi]
 
 [jwillmer-blog-post]: https://jwillmer.de/blog/tools/raspberry-pi-zero-cc2531-case

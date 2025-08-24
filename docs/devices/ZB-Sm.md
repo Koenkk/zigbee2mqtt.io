@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZB-Sm control via MQTT"
-description: "Integrate your TuYa ZB-Sm via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZB-Sm control via MQTT"
+description: "Integrate your Tuya ZB-Sm via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-07-01T08:15:09
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZB-Sm
+# Tuya ZB-Sm
 
 |     |     |
 |-----|-----|
 | Model | ZB-Sm  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Tubular motor |
-| Exposes | cover (state, position), goto_positon, motor_state, active_power, cycle_count, cycle_time, top_limit, bottom_limit, favorite_position, reverse_direction, motor_type, report, linkquality |
-| Picture | ![TuYa ZB-Sm](https://www.zigbee2mqtt.io/images/devices/ZB-Sm.png) |
+| Exposes | cover (state, position), goto_positon, motor_state, active_power, cycle_count, cycle_time, top_limit, bottom_limit, favorite_position, reverse_direction, motor_type, report |
+| Picture | ![Tuya ZB-Sm](https://www.zigbee2mqtt.io/images/devices/ZB-Sm.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -103,11 +103,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report": NEW_VALUE}`.
 The possible values are: ``.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

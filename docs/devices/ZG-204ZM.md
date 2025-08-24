@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZG-204ZM control via MQTT"
-description: "Integrate your TuYa ZG-204ZM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZG-204ZM control via MQTT"
+description: "Integrate your Tuya ZG-204ZM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-03-31T18:43:56
 pageClass: device-page
 ---
@@ -11,20 +11,27 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZG-204ZM
+# Tuya ZG-204ZM
 
 |     |     |
 |-----|-----|
 | Model | ZG-204ZM  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | PIR 24Ghz human presence sensor |
-| Exposes | presence, motion_state, illuminance_lux, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, motion_detection_mode, motion_detection_sensitivity, linkquality |
-| Picture | ![TuYa ZG-204ZM](https://www.zigbee2mqtt.io/images/devices/ZG-204ZM.png) |
+| Exposes | presence, motion_state, illuminance, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, motion_detection_mode, motion_detection_sensitivity |
+| Picture | ![Tuya ZG-204ZM](https://www.zigbee2mqtt.io/images/devices/ZG-204ZM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+The manufacturer provides a good [technical in-depth document](https://doc.szalarm.com/zg-205Z/en/) that explains
+what the various settings mean, good default values for those, a recommended method for trimming these values and 
+various other considerations (like installation position) to get good results.
 
+There seem to be multiple versions of this device which visually look the same. 
+Devices which are detected as `Zigbee Model=TS0601, Zigbee Manufacturer=_TZE200_kb5noeto` are known to get stuck in "presence detected" state. See this [review](https://smarthomescene.com/reviews/zigbee-battery-powered-presence-sensor-zg-204zm-review/) for more user experiences.
+One of the suggestions is to remove residual solder-flux from the PCB and/or to resolder some components.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -32,7 +39,7 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -49,9 +56,9 @@ Value can be found in the published state on the `motion_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `none`, `large`, `small`, `static`.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
@@ -98,7 +105,7 @@ Motion detection mode (Firmware version>=0122052017).
 Value can be found in the published state on the `motion_detection_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": NEW_VALUE}`.
-The possible values are: `Only PIR`, `PIR+Dadar`, `Only Dadar`.
+The possible values are: `only_pir`, `pir_and_radar`, `only_radar`.
 
 ### Motion detection sensitivity (numeric)
 Motion detection sensitivity (Firmware version>=0122052017).
@@ -107,11 +114,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `x`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

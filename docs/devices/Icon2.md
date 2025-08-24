@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Icon2  |
 | Vendor  | [Danfoss](/supported-devices/#v=Danfoss)  |
 | Description | Icon2 Main Controller, Room Thermostat or Sensor |
-| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, room_floor_sensor_mode, floor_min_setpoint, floor_max_setpoint, temperature, humidity, system_status_code, system_status_water, multimaster_role, linkquality |
+| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, room_floor_sensor_mode, floor_min_setpoint, floor_max_setpoint, schedule_type_used, icon2_pre_heat, icon2_pre_heat_status, temperature, humidity, system_status_code, heat_supply_request, system_status_water, multimaster_role, icon_application, icon_forced_heating_cooling |
 | Picture | ![Danfoss Icon2](https://www.zigbee2mqtt.io/images/devices/Icon2.png) |
 
 
@@ -117,6 +117,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Schedule type used (enum, 1 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_1": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 1 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_1": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 1 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_1": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
 ### Temperature (numeric, 1 endpoint)
 Floor temperature.
 Value can be found in the published state on the `temperature_1` property.
@@ -202,6 +223,27 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_2": NEW_VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
+
+### Schedule type used (enum, 2 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_2": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 2 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_2": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 2 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_2": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
 
 ### Temperature (numeric, 2 endpoint)
 Floor temperature.
@@ -289,6 +331,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Schedule type used (enum, 3 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_3": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 3 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_3": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 3 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_3": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
 ### Temperature (numeric, 3 endpoint)
 Floor temperature.
 Value can be found in the published state on the `temperature_3` property.
@@ -374,6 +437,27 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_4": NEW_VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
+
+### Schedule type used (enum, 4 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_4` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_4": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 4 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_4` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_4": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 4 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_4` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_4": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
 
 ### Temperature (numeric, 4 endpoint)
 Floor temperature.
@@ -461,6 +545,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Schedule type used (enum, 5 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_5` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_5": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 5 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_5` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_5": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 5 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_5` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_5": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
 ### Temperature (numeric, 5 endpoint)
 Floor temperature.
 Value can be found in the published state on the `temperature_5` property.
@@ -546,6 +651,27 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_6": NEW_VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
+
+### Schedule type used (enum, 6 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_6` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_6": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 6 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_6` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_6": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 6 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_6` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_6": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
 
 ### Temperature (numeric, 6 endpoint)
 Floor temperature.
@@ -633,6 +759,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Schedule type used (enum, 7 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_7` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_7": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 7 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_7` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_7": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 7 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_7` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_7": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
 ### Temperature (numeric, 7 endpoint)
 Floor temperature.
 Value can be found in the published state on the `temperature_7` property.
@@ -718,6 +865,27 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_8": NEW_VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
+
+### Schedule type used (enum, 8 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_8` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_8": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 8 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_8` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_8": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 8 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_8` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_8": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
 
 ### Temperature (numeric, 8 endpoint)
 Floor temperature.
@@ -805,6 +973,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Schedule type used (enum, 9 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_9` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_9": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 9 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_9` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_9": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 9 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_9` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_9": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
 ### Temperature (numeric, 9 endpoint)
 Floor temperature.
 Value can be found in the published state on the `temperature_9` property.
@@ -890,6 +1079,27 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_10": NEW_VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
+
+### Schedule type used (enum, 10 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_10` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_10": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 10 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_10` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_10": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 10 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_10` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_10": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
 
 ### Temperature (numeric, 10 endpoint)
 Floor temperature.
@@ -977,6 +1187,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Schedule type used (enum, 11 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_11` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_11": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 11 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_11` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_11": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 11 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_11` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_11": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
 ### Temperature (numeric, 11 endpoint)
 Floor temperature.
 Value can be found in the published state on the `temperature_11` property.
@@ -1062,6 +1293,27 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_12": NEW_VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
+
+### Schedule type used (enum, 12 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_12` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_12": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 12 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_12` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_12": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 12 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_12` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_12": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
 
 ### Temperature (numeric, 12 endpoint)
 Floor temperature.
@@ -1149,6 +1401,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Schedule type used (enum, 13 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_13` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_13": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 13 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_13` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_13": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 13 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_13` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_13": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
 ### Temperature (numeric, 13 endpoint)
 Floor temperature.
 Value can be found in the published state on the `temperature_13` property.
@@ -1234,6 +1507,27 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_14": NEW_VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
+
+### Schedule type used (enum, 14 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_14` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_14": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 14 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_14` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_14": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 14 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_14` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_14": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
 
 ### Temperature (numeric, 14 endpoint)
 Floor temperature.
@@ -1321,6 +1615,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Schedule type used (enum, 15 endpoint)
+Danfoss schedule mode.
+Value can be found in the published state on the `schedule_type_used_15` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_type_used_15": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `regular_schedule_selected`, `vacation_schedule_selected`.
+
+### Icon2 pre heat (enum, 15 endpoint)
+Danfoss pre heat control.
+Value can be found in the published state on the `icon2_pre_heat_15` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_15": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
+### Icon2 pre heat status (enum, 15 endpoint)
+Danfoss pre heat status.
+Value can be found in the published state on the `icon2_pre_heat_status_15` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon2_pre_heat_status_15": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `disable`, `enable`.
+
 ### Temperature (numeric, 15 endpoint)
 Floor temperature.
 Value can be found in the published state on the `temperature_15` property.
@@ -1342,6 +1657,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_expansion_board`, `missing_radio_module`, `missing_command_module`, `missing_master_rail`, `missing_slave_rail_no_1`, `missing_slave_rail_no_2`, `pt1000_input_short_circuit`, `pt1000_input_open_circuit`, `error_on_one_or_more_output`.
 
+### Heat supply request (enum, 232 endpoint)
+Danfoss heat supply request.
+Value can be found in the published state on the `heat_supply_request_232` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"heat_supply_request_232": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `none`, `heat_supply_request`.
+
 ### System status water (enum, 232 endpoint)
 Main Controller Water Status.
 Value can be found in the published state on the `system_status_water_232` property.
@@ -1356,10 +1678,17 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The possible values are: `invalid_unused`, `master`, `slave_1`, `slave_2`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Icon application (enum, 232 endpoint)
+Main Controller application.
+Value can be found in the published state on the `icon_application_232` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon_application_232": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`.
+
+### Icon forced heating cooling (enum, 232 endpoint)
+Main Controller application.
+Value can be found in the published state on the `icon_forced_heating_cooling_232` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon_forced_heating_cooling_232": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `force_heating`, `force_cooling`, `none`.
 

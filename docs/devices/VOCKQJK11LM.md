@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VOCKQJK11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | TVOC air quality monitor |
-| Exposes | device_temperature, battery, voltage, air_quality, voc, temperature, humidity, display_unit, linkquality |
+| Exposes | device_temperature, battery, voltage, air_quality, voc, temperature, humidity, display_unit |
 | Picture | ![Aqara VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.png) |
 | White-label | Aqara AAQS-S01 |
 
@@ -115,11 +115,4 @@ Value can be found in the published state on the `display_unit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_unit": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_unit": NEW_VALUE}`.
 The possible values are: `mgm3_celsius`, `ppb_celsius`, `mgm3_fahrenheit`, `ppb_fahrenheit`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

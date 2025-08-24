@@ -17,14 +17,14 @@ pageClass: device-page
 |-----|-----|
 | Model | LYWSD03MMC-z  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Temp & RH Monitor Lite (pvxx/ZigbeeTLc) |
-| Exposes | temperature, humidity, display, temperature_display_mode, comfort_display, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, temperature_calibration, humidity_calibration, measurement_interval, battery, linkquality |
+| Description | Temperature and Humidity Monitor (pvxx/ZigbeeTLc) |
+| Exposes | temperature, humidity, enable_display, temperature_display_mode, comfort_smiley, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, temperature_calibration, humidity_calibration, measurement_interval, battery, voltage |
 | Picture | ![Xiaomi LYWSD03MMC-z](https://www.zigbee2mqtt.io/images/devices/LYWSD03MMC-z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+Go [here (pvvx github)](https://github.com/pvvx/ATC_MiThermometer) for the firmware file & instructions on how to flash
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -60,12 +60,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### Display (binary)
+### Enable display (binary)
 Whether to enable the device display..
-Value can be found in the published state on the `display` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display": NEW_VALUE}`.
-If value equals `on` display is ON, if `off` OFF.
+Value can be found in the published state on the `enable_display` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_display": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_display": NEW_VALUE}`.
+If value equals `true` enable display is ON, if `false` OFF.
 
 ### Temperature display mode (enum)
 The unit of the temperature displayed on the device screen..
@@ -74,15 +74,15 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_mode": NEW_VALUE}`.
 The possible values are: `celsius`, `fahrenheit`.
 
-### Comfort display (binary)
+### Comfort smiley (binary)
 Whether to show a comfort indicator on the device screen..
-Value can be found in the published state on the `comfort_display` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_display": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_display": NEW_VALUE}`.
-If value equals `show` comfort display is ON, if `hide` OFF.
+Value can be found in the published state on the `comfort_smiley` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_smiley": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_smiley": NEW_VALUE}`.
+If value equals `true` comfort smiley is ON, if `false` OFF.
 
 ### Comfort temperature min (numeric)
-Comfort parameters/Temperature minimum, in 0.01°C steps, default 20.00°C..
+Minimum temperature that is considered comfortable (default 20.00°C)..
 Value can be found in the published state on the `comfort_temperature_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_min": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_min": NEW_VALUE}`.
@@ -90,7 +90,7 @@ The minimal value is `-50` and the maximum value is `120`.
 The unit of this value is `°C`.
 
 ### Comfort temperature max (numeric)
-Comfort parameters/Temperature maximum, in 0.01°C steps, default 25.00°C..
+Maximum temperature that is considered comfortable (default 25.00°C)..
 Value can be found in the published state on the `comfort_temperature_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_max": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_max": NEW_VALUE}`.
@@ -98,23 +98,23 @@ The minimal value is `-50` and the maximum value is `120`.
 The unit of this value is `°C`.
 
 ### Comfort humidity min (numeric)
-Comfort parameters/Humidity minimum, in 1% steps, default 40.00%.
+Minimum relative humidity that is considered comfortable (default 40.00%).
 Value can be found in the published state on the `comfort_humidity_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_min": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_min": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `9999`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Comfort humidity max (numeric)
-Comfort parameters/Humidity maximum, in 1% steps, default 60.00%..
+Maximum relative humidity that is considered comfortable (default 60.00%)..
 Value can be found in the published state on the `comfort_humidity_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_max": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_max": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `9999`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Temperature calibration (numeric)
-Temperature calibration, in 0.01° steps, default 0 °C..
+Offset to add/subtract to the reported temperature (default 0°C)..
 Value can be found in the published state on the `temperature_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
@@ -122,7 +122,7 @@ The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
 ### Humidity calibration (numeric)
-Humidity calibration, in 0.01% steps, default 0%..
+Offset to add/subtract to the reported relative humidity (default 0%)..
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
@@ -130,11 +130,11 @@ The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
 ### Measurement interval (numeric)
-Measurement interval, default 10 seconds..
+Configure sensor measurement interval (default 10 seconds)..
 Value can be found in the published state on the `measurement_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"measurement_interval": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_interval": NEW_VALUE}`.
-The minimal value is `3` and the maximum value is `255`.
+The minimal value is `3` and the maximum value is `30`.
 The unit of this value is `s`.
 
 ### Battery (numeric)
@@ -145,10 +145,10 @@ It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
 

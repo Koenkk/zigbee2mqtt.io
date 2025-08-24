@@ -1,6 +1,6 @@
 ---
-title: "TuYa SPM01V2 control via MQTT"
-description: "Integrate your TuYa SPM01V2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SPM01V2 control via MQTT"
+description: "Integrate your Tuya SPM01V2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-12-26T18:38:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SPM01V2
+# Tuya SPM01V2
 
 |     |     |
 |-----|-----|
 | Model | SPM01V2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 1P+N system |
-| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency, linkquality |
-| Picture | ![TuYa SPM01V2](https://www.zigbee2mqtt.io/images/devices/SPM01V2.png) |
+| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency, data_report_duration |
+| Picture | ![Tuya SPM01V2](https://www.zigbee2mqtt.io/images/devices/SPM01V2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -47,6 +47,10 @@ pageClass: device-page
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -93,10 +97,10 @@ Value can be found in the published state on the `ac_frequency` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hz`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Data report duration (numeric)
+WARNING: You must update device firmware to V3.1.3 before changing this setting! Use Tuya gateway/app to update firmware. Data report duration set (Threshold value range 5~3600 seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"data_report_duration": NEW_VALUE}`.
+The minimal value is `30` and the maximum value is `3600`.
 

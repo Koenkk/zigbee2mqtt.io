@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ01LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Mi door and window sensor |
-| Exposes | battery, contact, voltage, power_outage_count, linkquality |
+| Exposes | battery, contact, voltage, power_outage_count |
 | Picture | ![Xiaomi MCCGQ01LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ01LM.png) |
 | White-label | Xiaomi YTC4039GL, Xiaomi YTC4005CN, Xiaomi YTC4015CN, Xiaomi ZHTZ02LM |
 
@@ -71,11 +71,4 @@ The unit of this value is `mV`.
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

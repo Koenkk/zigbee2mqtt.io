@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BHI-US  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Universal Switch II |
-| Exposes | battery_low, voltage, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, linkquality |
+| Exposes | battery_low, voltage, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, action |
 | Picture | ![Bosch BHI-US](https://www.zigbee2mqtt.io/images/devices/BHI-US.png) |
 
 
@@ -35,11 +35,11 @@ To reset the device to factory settings, remove one of the batteries. While pres
 ### LED Configuration
 The blinking pattern and color of the device LED can be configured individually for each button short/long press and for the confirmation indication.
 
-The configuration is an 18-byte hex string as follows:
+The configuration is an 9-byte hex string as follows:
 
-* RGB color (6 bytes), e.g. `22bbff` for light blue
-* Position (2 bytes), `01` = upper half, `02` = lower half, `00` = both
-* Light Pattern (fade-in duration, light on duration, fade-out duration, light off duration; 2 bytes each, e.g. `010f0102` for fast fade-in and fade-out (`01`), long light on duration `0f`, and a short pause in between `02`.
+* RGB color (3 bytes), e.g. `22bbff` for light blue
+* Position (1 bytes), `01` = upper half, `02` = lower half, `00` = both
+* Light Pattern (fade-in duration, light on duration, fade-out duration, light off duration; 1 bytes each, e.g. `010f0102` for fast fade-in and fade-out (`01`), long light on duration `0f`, and a short pause in between `02`.
 * Number of repetitions, e.g. `01` for single execution, `05` for flashing 5 times
 
 Examples:
@@ -49,9 +49,6 @@ Examples:
 * Default amber light on long press:`ff4200000502050001`
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -167,10 +164,9 @@ Value can be found in the published state on the `config_led_bottom_right_longpr
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_bottom_right_longpress": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_right_longpress": NEW_VALUE}`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `button_top_left_release`, `button_top_right_release`, `button_bottom_left_release`, `button_bottom_right_release`, `button_top_left_longpress`, `button_top_right_longpress`, `button_bottom_left_longpress`, `button_bottom_right_longpress`, `button_top_left_longpress_release`, `button_top_right_longpress_release`, `button_bottom_left_longpress_release`, `button_bottom_right_longpress_release`.
 

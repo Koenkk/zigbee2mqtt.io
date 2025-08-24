@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HA-ZSM-MW2  |
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | S-Mitter MultiWhite2 smart remote control |
-| Exposes | action_group, battery, action, linkquality |
+| Exposes | action_group, battery, action |
 | Picture | ![Halemeier HA-ZSM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZSM-MW2.png) |
 
 
@@ -60,11 +60,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `recall_*`, `on`, `off`, `color_temperature_step_up`, `color_temperature_step_down`, `brightness_step_up`, `brightness_step_down`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

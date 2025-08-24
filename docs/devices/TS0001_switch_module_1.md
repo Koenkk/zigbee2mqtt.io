@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0001_switch_module_1 control via MQTT"
-description: "Integrate your TuYa TS0001_switch_module_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0001_switch_module_1 control via MQTT"
+description: "Integrate your Tuya TS0001_switch_module_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-02-29T20:20:58
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0001_switch_module_1
+# Tuya TS0001_switch_module_1
 
 |     |     |
 |-----|-----|
 | Model | TS0001_switch_module_1  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 gang switch module |
-| Exposes | switch (state), countdown, power_on_behavior, backlight_mode, indicator_mode, linkquality |
-| Picture | ![TuYa TS0001_switch_module_1](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_module_1.png) |
+| Exposes | switch (state), countdown, power_on_behavior, backlight_mode, indicator_mode |
+| Picture | ![Tuya TS0001_switch_module_1](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_module_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,7 +51,7 @@ The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
@@ -70,11 +70,4 @@ Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `off/on`, `on/off`, `on`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

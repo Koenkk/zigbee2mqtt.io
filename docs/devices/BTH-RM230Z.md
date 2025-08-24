@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BTH-RM230Z  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Room thermostat II 230V |
-| Exposes | climate (local_temperature, occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature_calibration, system_mode, running_state), humidity, operating_mode, window_detection, boost_heating, child_lock, display_ontime, display_brightness, linkquality |
+| Exposes | climate (local_temperature, occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature_calibration, system_mode, running_state), humidity, operating_mode, window_detection, boost_heating, child_lock, display_ontime, display_brightness |
 | Picture | ![Bosch BTH-RM230Z](https://www.zigbee2mqtt.io/images/devices/BTH-RM230Z.png) |
 
 
@@ -27,6 +27,9 @@ pageClass: device-page
 To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the back of the cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -99,11 +102,4 @@ Value can be found in the published state on the `display_brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_brightness": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

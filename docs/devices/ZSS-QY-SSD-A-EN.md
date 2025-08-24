@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZSS-QY-SSD-A-EN control via MQTT"
-description: "Integrate your TuYa ZSS-QY-SSD-A-EN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZSS-QY-SSD-A-EN control via MQTT"
+description: "Integrate your Tuya ZSS-QY-SSD-A-EN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-27T19:46:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZSS-QY-SSD-A-EN
+# Tuya ZSS-QY-SSD-A-EN
 
 |     |     |
 |-----|-----|
 | Model | ZSS-QY-SSD-A-EN  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart smoke alarm |
-| Exposes | smoke, fault_alarm, battery_state, battery, silence, self_test, smoke_concentration, linkquality |
-| Picture | ![TuYa ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.png) |
+| Exposes | smoke, fault_alarm, battery_state, battery, silence, self_test, smoke_concentration |
+| Picture | ![Tuya ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -76,11 +76,4 @@ Parts per million of smoke detected.
 Value can be found in the published state on the `smoke_concentration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

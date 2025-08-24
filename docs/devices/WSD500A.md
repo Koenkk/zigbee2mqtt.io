@@ -1,6 +1,6 @@
 ---
-title: "TuYa WSD500A control via MQTT"
-description: "Integrate your TuYa WSD500A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya WSD500A control via MQTT"
+description: "Integrate your Tuya WSD500A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-31T16:51:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa WSD500A
+# Tuya WSD500A
 
 |     |     |
 |-----|-----|
 | Model | WSD500A  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity sensor |
-| Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![TuYa WSD500A](https://www.zigbee2mqtt.io/images/devices/WSD500A.png) |
+| Exposes | battery, temperature, humidity, voltage |
+| Picture | ![Tuya WSD500A](https://www.zigbee2mqtt.io/images/devices/WSD500A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -73,11 +73,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
