@@ -57,11 +57,11 @@ The features, links and general design in each package will vary.
 
 ###### zigbee2mqtt-frontend
 
-The original frontend.
+The original frontend (legacy).
 ![Frontend](../../images/frontend.png)
 Details: [https://github.com/nurikk/zigbee2mqtt-frontend](https://github.com/nurikk/zigbee2mqtt-frontend)
 
-###### Experimental: zigbee2mqtt-windfront
+###### zigbee2mqtt-windfront
 
 A remake of the original frontend with new code, new design, new features...
 ![WindFront](../../images/windfront.png)
