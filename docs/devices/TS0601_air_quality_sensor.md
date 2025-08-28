@@ -27,7 +27,6 @@ pageClass: device-page
 * This device exposes a CO2 value, but [does not contain a CO2 sensor](https://community.home-assistant.io/t/blitzwolf-bw-ar01-air-quality-meter/338396). The CO2 value seems to be calculated from the VOC value and is completely wrong when compared to a real CO2 sensor.
 
 * This device sends multiple value updates per second and poses a significant load for the Zigbee network.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -74,11 +73,11 @@ The unit of this value is `ppm`.
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
+The unit of this value is `ppb`.
 
 ### Formaldehyd (numeric)
 The measured formaldehyd value.
 Value can be found in the published state on the `formaldehyd` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mg/m³`.
+The unit of this value is `µg/m³`.
 

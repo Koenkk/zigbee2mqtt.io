@@ -33,6 +33,7 @@ export const sidebar: SidebarOptions = {
                 '/guide/configuration/homeassistant.md',
                 '/guide/configuration/more-config-options.md',
                 '/guide/configuration/configuration-update.md',
+                '/guide/configuration/all-settings.md',
             ],
         },
         {
