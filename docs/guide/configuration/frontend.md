@@ -55,18 +55,21 @@ You can change the package used for frontend (requires a restart of Zigbee2MQTT)
 The features, links and general design in each package will vary.
 :::
 
-###### zigbee2mqtt-frontend
+##### zigbee2mqtt-frontend
 
 The original frontend (legacy).
 ![Frontend](../../images/frontend.png)
 Details: [https://github.com/nurikk/zigbee2mqtt-frontend](https://github.com/nurikk/zigbee2mqtt-frontend)
 
-###### zigbee2mqtt-windfront
+##### zigbee2mqtt-windfront
 
 A remake of the original frontend with new code, new design, new features...
 ![WindFront](../../images/windfront.png)
 Details: [https://github.com/Nerivec/zigbee2mqtt-windfront](https://github.com/Nerivec/zigbee2mqtt-windfront)
+
 Feedback can be provided in [#27564](https://github.com/Koenkk/zigbee2mqtt/discussions/27564).
+
+Can also be used as standalone (with support for multiple Zigbee2MQTT instances), see: [https://github.com/Nerivec/zigbee2mqtt-windfront/wiki#standalone-serving-with-multi-zigbee2mqtt-support](https://github.com/Nerivec/zigbee2mqtt-windfront/wiki#standalone-serving-with-multi-zigbee2mqtt-support)
 
 ## Nginx proxy configuration
 
