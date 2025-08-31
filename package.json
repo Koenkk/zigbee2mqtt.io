@@ -21,7 +21,7 @@
     "license": "ISC",
     "dependencies": {
         "@quasar/extras": "1.17.0",
-        "core-js": "3.45.0",
+        "core-js": "3.45.1",
         "quasar": "2.18.2"
     },
     "devDependencies": {
@@ -48,7 +48,7 @@
         "throat": "6.0.2",
         "ts-node": "10.9.2",
         "typescript": "5.9.2",
-        "vue": "3.5.18",
+        "vue": "3.5.20",
         "vuepress": "2.0.0-rc.24",
         "webpack": "5.101.3",
         "zigbee-herdsman-converters": "24.11.0"
