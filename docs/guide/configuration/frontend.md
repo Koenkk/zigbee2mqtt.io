@@ -67,7 +67,7 @@ A remake of the original frontend with new code, new design, new features...
 ![WindFront](../../images/windfront.png)
 Details: [https://github.com/Nerivec/zigbee2mqtt-windfront](https://github.com/Nerivec/zigbee2mqtt-windfront)
 
-Feedback can be provided in [#27564](https://github.com/Koenkk/zigbee2mqtt/discussions/27564).
+Feedback can be provided in [#28442](https://github.com/Koenkk/zigbee2mqtt/discussions/28442).
 
 Can also be used as standalone (with support for multiple Zigbee2MQTT instances), see: [https://github.com/Nerivec/zigbee2mqtt-windfront/wiki#standalone-serving-with-multi-zigbee2mqtt-support](https://github.com/Nerivec/zigbee2mqtt-windfront/wiki#standalone-serving-with-multi-zigbee2mqtt-support)
 
