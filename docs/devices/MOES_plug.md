@@ -1,7 +1,7 @@
 ---
-title: "Moes MOES_plug control via MQTT"
-description: "Integrate your Moes MOES_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-06-01T08:16:21
+title: "Moes Moes_plug control via MQTT"
+description: "Integrate your Moes Moes_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-09-01T18:20:17
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Moes MOES_plug
+# Moes Moes_plug
 
 |     |     |
 |-----|-----|
-| Model | MOES_plug  |
+| Model | Moes_plug  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
-| Picture | ![Moes MOES_plug](https://www.zigbee2mqtt.io/images/devices/MOES_plug.png) |
+| Picture | ![Moes Moes_plug](https://www.zigbee2mqtt.io/images/devices/Moes_plug.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
