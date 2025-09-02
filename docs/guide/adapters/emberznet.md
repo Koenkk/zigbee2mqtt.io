@@ -52,9 +52,7 @@ With external antenna(+3 dBi). Only supports software flow control (make sure no
 
 - [Product Page](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
 - [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
-- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-pmg24/hardware-specification-dongle-pmg24/)
 - [Buy](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
-
 
 <img src="../../images/dongle-pmg24-device.jpg" width="200" />
 
