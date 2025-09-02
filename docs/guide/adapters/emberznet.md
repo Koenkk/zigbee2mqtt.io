@@ -48,12 +48,13 @@ Each category is ordered by chip, newer series first.
 
 Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
 
-With external antenna(+3 dBi). Only supports software flow control (make sure not to set `rtscts: true`).
+With external antenna. Only supports software flow control (make sure not to set `rtscts: true`).
 
 - [Product Page](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
 - [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - [Buy](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
 
+<img src="../../images/dongle-pmg24-device.jpg" width="200" />
 
 :::
 
