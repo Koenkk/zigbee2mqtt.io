@@ -473,11 +473,13 @@ Pan ID (number)
 
 ```yaml
 advanced:
-    pan_id: 0
+    pan_id: 1
 ```
 
 - Type: `number`
 - Default: `6754`
+- Minimum: `1`
+- Maximum: `65534`
 
 ### ext_pan_id
 
@@ -560,6 +562,7 @@ availability:
 
 - Type: `number`
 - Default: `10`
+- Minimum: `1`
 - <span style="color: red">Restart required to be effective</span>
 
 #### max_jitter
@@ -619,6 +622,7 @@ availability:
 
 - Type: `number`
 - Default: `1500`
+- Minimum: `1`
 - <span style="color: red">Restart required to be effective</span>
 
 ## devices
@@ -1041,6 +1045,7 @@ health:
 
 - Type: `number`
 - Default: `10`
+- Minimum: `1`
 - <span style="color: red">Restart required to be effective</span>
 
 ### reset_on_check
@@ -1455,6 +1460,7 @@ ota:
 
 - Type: `number`
 - Default: `1440`
+- Minimum: `1`
 
 ### disable_automatic_update_check
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS110E_1gang_1  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 channel dimmer |
-| Exposes | power_on_behavior, switch_type, min_brightness, max_brightness, light (state, brightness), effect |
+| Exposes | power_on_behavior, switch_type, min_brightness, max_brightness, light (state, brightness) |
 | Picture | ![Tuya TS110E_1gang_1](https://www.zigbee2mqtt.io/images/devices/TS110E_1gang_1.png) |
 
 
@@ -98,11 +98,4 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
