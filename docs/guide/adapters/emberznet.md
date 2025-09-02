@@ -44,14 +44,16 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 Each category is ordered by chip, newer series first.
 
 ### USB
+
 ::: details SONOFF Dongle-PMG24
 
 Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
 
-With external antenna. Only supports software flow control (make sure not to set `rtscts: true`).
+With external antenna(+3 dBi). Only supports software flow control (make sure not to set `rtscts: true`).
 
 - [Product Page](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
 - [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-pmg24/hardware-specification-dongle-pmg24/)
 - [Buy](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
 
 <img src="../../images/dongle-pmg24-device.jpg" width="200" />
