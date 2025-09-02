@@ -97,8 +97,8 @@ importers:
         specifier: 5.101.3
         version: 5.101.3
       zigbee-herdsman-converters:
-        specifier: 24.11.0
-        version: 24.11.0
+        specifier: 25.14.0
+        version: 25.14.0
 
 packages:
 
@@ -1979,6 +1979,10 @@ packages:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
 
+  iconv-lite@0.7.0:
+    resolution: {integrity: sha512-cf6L2Ds3h57VVmkZe+Pn+5APsT7FpqJtEhhieDCvrE2MK5Qk9MyffgQyuxQTm6BChfeZNtcOLHp9IcWRVcIcBQ==}
+    engines: {node: '>=0.10.0'}
+
   icss-utils@5.1.0:
     resolution: {integrity: sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==}
     engines: {node: ^10 || ^12 || >= 14}
@@ -3542,11 +3546,11 @@ packages:
     resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
     engines: {node: '>=6'}
 
-  zigbee-herdsman-converters@24.11.0:
-    resolution: {integrity: sha512-95qnZCZjScc/ET3zO/nkzis3QbfPRYg2IMCjoeOwxNCvRczVHEP9ptj1Fj1vK0s1kgTpyB1gSdYAfeYyxa+zcw==}
+  zigbee-herdsman-converters@25.14.0:
+    resolution: {integrity: sha512-Tn/DnOKqzVJfkJMyw9rKM28UI6P/cMILWUmYcsbBpvjqGr36R/hgqE/MkLLTvlDN+0EYBrB3KZm/MOgMP2+iFw==}
 
-  zigbee-herdsman@5.0.4:
-    resolution: {integrity: sha512-WeopbhVlIUyQZm2lm6hh+R35FJ9WZbJ8bKoQiQXoS9Myu3oJRrQFQPPqCnDSzG1djfPparVXTetgadImm2Ytgg==}
+  zigbee-herdsman@6.0.3:
+    resolution: {integrity: sha512-IrgweuAeDAgy17HbTb7FDmOa9KuCs09mwDGuqtWdMtvOPeArrrkX5XgYaQxNIEVRlHvG9ZRxyCbRW/slslhDjw==}
 
   zigbee-on-host@0.1.13:
     resolution: {integrity: sha512-mL7s9ic7J85YI7wOG1/QlbRYE3haFzIHqgnM2+xLmjj8CazjhmGjop9TCfuY2JXyDI9ss7bNCLxuI9n6M+TXug==}
@@ -5754,6 +5758,10 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
+  iconv-lite@0.7.0:
+    dependencies:
+      safer-buffer: 2.1.2
+
   icss-utils@5.1.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -7295,16 +7303,16 @@ snapshots:
 
   yn@3.1.1: {}
 
-  zigbee-herdsman-converters@24.11.0:
+  zigbee-herdsman-converters@25.14.0:
     dependencies:
       buffer-crc32: 1.0.0
-      iconv-lite: 0.6.3
+      iconv-lite: 0.7.0
       semver: 7.7.2
-      zigbee-herdsman: 5.0.4
+      zigbee-herdsman: 6.0.3
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-herdsman@5.0.4:
+  zigbee-herdsman@6.0.3:
     dependencies:
       '@serialport/bindings-cpp': 13.0.1
       '@serialport/parser-delimiter': 13.0.0

@@ -37,8 +37,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds, set to -1 to disable. The value must be a number with a minimum value of `-1`
-
 * `linky_mode`: Counter with TIC in mode standard or historique. May require restart (default: auto). The value must be one of `auto`, `historique`, `standard`
 
 * `energy_phase`: Power with single or three phase. May require restart (default: auto). The value must be one of `auto`, `single_phase`, `three_phase`
@@ -52,6 +50,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `measurement_poll_chunk`: During the poll, request multiple exposes to the Zlinky at once for reducing Zigbee network overload. Too much request at once could exceed device limit. Requires Z2M restart. Default: 4. The value must be a number with a minimum value of `1`
 
 * `tic_command_whitelist`: List of TIC commands to be exposed (separated by comma). Reconfigure device after change. Default: all. The value must be textual.
+
+* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds, set to -1 to disable. The value must be a number with a minimum value of `-1`
 
 
 ## Exposes

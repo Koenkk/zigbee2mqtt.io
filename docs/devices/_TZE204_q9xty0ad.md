@@ -1,7 +1,7 @@
 ---
-title: "Shelly 2PM control via MQTT"
-description: "Integrate your Shelly 2PM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-08-01T15:19:08
+title: "Tuya _TZE204_q9xty0ad control via MQTT"
+description: "Integrate your Tuya _TZE204_q9xty0ad via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-09-01T18:20:17
 pageClass: device-page
 ---
 
@@ -11,21 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Shelly 2PM
+# Tuya _TZE204_q9xty0ad
 
 |     |     |
 |-----|-----|
-| Model | 2PM  |
-| Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
-| Description | 2PM Gen4 |
-| Exposes | cover (state, position) |
-| Picture | ![Shelly 2PM](https://www.zigbee2mqtt.io/images/devices/2PM.png) |
+| Model | _TZE204_q9xty0ad  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Description | Ayvolt Blinds |
+| Exposes | cover (state, position), motor_direction |
+| Picture | ![Tuya _TZE204_q9xty0ad](https://www.zigbee2mqtt.io/images/devices/_TZE204_q9xty0ad.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
-Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
+
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -35,8 +34,6 @@ Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/sh
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
-* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
-
 
 ## Exposes
 
@@ -45,4 +42,11 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Motor direction (enum)
+Motor direction.
+Value can be found in the published state on the `motor_direction` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+The possible values are: `normal`, `reversed`.
 
