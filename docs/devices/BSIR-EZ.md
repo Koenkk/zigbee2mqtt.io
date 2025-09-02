@@ -25,6 +25,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 You will need to add the install code from the back of the unit in order to pair the siren. If you do not complete this step the interview will fail and the unit will be shown as unsupported. On the back of the siren is a QR code and a 36 digit code that is called "Install code" - do NOT use this 36 digit code. Instead, scan the QR code with your phone and this will return a 91 long code. Use this code by going to Z2M GUI, Settings, Tools, "Add Install Code".
+Check DIP switchers factory settings and set switch number 8 (factory default is ON) to OFF - "Legacy" (Operation without Bosch Smart Home controller).
 <!-- Notes END: Do not edit below this line -->
 
 
