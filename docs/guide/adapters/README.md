@@ -7,10 +7,20 @@ next: ../installation/
 
 All officially supported adapters are listed on this page. Note that before an adapter can be used with Zigbee2MQTT it has to be flashed with a coordinator firmware (some adapters come preflashed).
 
+## Recommended
+
 - [zStack based (Texas Instruments)](./zstack.md)
 - [EmberZNet based (Silicon Labs)](./emberznet.md)
 - [deCONZ based (Dresden Elektronik)](./deconz.md)
+
+## Not recommended
+
+### Not maintained
+
 - [ZiGate based](./zigate.md)
+
+### Experimental
+
 - [ZBOSS based (Nordic Semiconductor)](./zboss.md)
 
 ::: tip TIP

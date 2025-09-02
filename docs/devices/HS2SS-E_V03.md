@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2SS-E_V03 control via MQTT"
-description: "Integrate your HEIMAN HS2SS-E_V03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2SS-E_V03 control via MQTT"
+description: "Integrate your Heiman HS2SS-E_V03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2SS-E_V03
+# Heiman HS2SS-E_V03
 
 |     |     |
 |-----|-----|
 | Model | HS2SS-E_V03  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart doorbell button |
 | Exposes | battery, action, battery_low, tamper |
-| Picture | ![HEIMAN HS2SS-E_V03](https://www.zigbee2mqtt.io/images/devices/HS2SS-E_V03.png) |
+| Picture | ![Heiman HS2SS-E_V03](https://www.zigbee2mqtt.io/images/devices/HS2SS-E_V03.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

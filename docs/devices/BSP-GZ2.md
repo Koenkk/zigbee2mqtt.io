@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSP-GZ2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Plug compact UK |
-| Exposes | switch (state), power_on_behavior, power, energy |
+| Exposes | switch (state), power_on_behavior, power, energy, reset_energy_reading |
 | Picture | ![Bosch BSP-GZ2](https://www.zigbee2mqtt.io/images/devices/BSP-GZ2.png) |
 
 
@@ -79,4 +79,11 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Reset energy reading (enum)
+Triggers the reset of the energy reading to 0 kWh..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_energy_reading": NEW_VALUE}`.
+The possible values are: `reset`.
 

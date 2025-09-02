@@ -35,7 +35,7 @@ Not all Zigbee devices can do this translation, currently the only devices known
 Green Power devices don't support binding and are not included in network scans.
 
 ### Pairing
-Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+Before starting a pairing attempt, please carefully read this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
 
 The pairing may be done via NFC or the physical buttons. The use of NFC is highly recommended in order to ease the paring process and as the direct commisioning mode is disabled by default.
 
@@ -70,7 +70,15 @@ Then, press the selected button contact shortly (< 7s) to select radio channel 1
 
 Once the device is paired you need to confirm the channel. To do this, press any button other than the one used previously.
 
-For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 3.6.2.1](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf).
+For more information's, please refer to the [EnOcean PTM 215ZE manual chapter 3.6.2.1](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf).
+
+## Home Assistant
+In the Home Assistant community forum, you may find some nice Automation Blueprints that works well with this device:
+
+@chris-1243
+https://community.home-assistant.io/t/zigbee2mqtt-ptm215z-ze-and-ptm216z/873595
+
+It adds functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
 <!-- Notes END: Do not edit below this line -->
 
 

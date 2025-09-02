@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN PIR_TPV12 control via MQTT"
-description: "Integrate your HEIMAN PIR_TPV12 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman PIR_TPV12 control via MQTT"
+description: "Integrate your Heiman PIR_TPV12 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-03-31T18:43:56
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN PIR_TPV12
+# Heiman PIR_TPV12
 
 |     |     |
 |-----|-----|
 | Model | PIR_TPV12  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Motion sensor |
 | Exposes | battery, voltage, occupancy, tamper, battery_low |
-| Picture | ![HEIMAN PIR_TPV12](https://www.zigbee2mqtt.io/images/devices/PIR_TPV12.png) |
+| Picture | ![Heiman PIR_TPV12](https://www.zigbee2mqtt.io/images/devices/PIR_TPV12.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

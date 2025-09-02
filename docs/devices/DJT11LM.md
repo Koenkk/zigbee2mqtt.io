@@ -81,9 +81,9 @@ The calibration offsets (`x_calibration`, `y_calibration`, `z_calibration`) are 
 - The offsets will *not* change what Home Assistant (or other software) sees if you are directly reading those raw properties.  
 - If you want to work with the "corrected" or "calibrated" values in another system (e.g., Home Assistant), you would need to create a [template sensor](https://www.home-assistant.io/integrations/template/) or otherwise apply the offsets yourself.  
 - Seeing the same raw numbers after setting offsets does **not** mean calibration isn't working—it's simply that the sensor output itself is never altered by the offsets.
-
-
 <!-- Notes END: Do not edit below this line -->
+
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*

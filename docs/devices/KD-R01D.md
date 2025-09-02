@@ -18,13 +18,20 @@ pageClass: device-page
 | Model | KD-R01D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Dimmer switch H2 EU |
-| Exposes | power, energy, voltage, current, led_indicator, flip_indicator_light, power_on_behavior, light (state, brightness), effect, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, operation_mode, sensitivity, phase, min_brightness, max_brightness, action |
+| Exposes | power, energy, voltage, current, led_indicator, flip_indicator_light, power_on_behavior, light (state, brightness), effect, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, operation_mode, multi_click, sensitivity, phase, min_brightness, max_brightness, action |
 | Picture | ![Aqara KD-R01D](https://www.zigbee2mqtt.io/images/devices/KD-R01D.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+### Warning: Zigbee firmware flashing required
+This device is shipped with Thread/Matter firmware. A smartphone, the Aqara Home app and an Aqara account is required for flashing the Zigbee firmware. The color of the indicator ring shows the wireless standard: blue flashing means Thread/Matter pairing, while Zigbee pairing is shown by a purple flashing indicator ring.
 
+### Resetting:
+A double-click on the dimmer knob immediately followed by a 5-second long-press will reset the device and put it back into pairing mode. Make sure the gap between the double click and the long press does not exceed 3 seconds. The indicator light will flash blue when the reset was successful.
 
+### Network connection lost
+When the indicator ring flashes red, the device indicates a loss of network connection. Ensure the coordinator is up and running, and signal range to the coordinator or the next Zigbee router is good enough.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -108,6 +115,12 @@ This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
@@ -121,7 +134,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -179,6 +192,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `decoupled`, `control_relay`.
 
+### Multi click (binary)
+Enable multi-click mode for the switch, otherwise single click.
+Value can be found in the published state on the `multi_click` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click": NEW_VALUE}`.
+If value equals `true` multi click is ON, if `false` OFF.
+
 ### Sensitivity (enum)
 Rotation sensitivity.
 Value can be found in the published state on the `sensitivity` property.
@@ -213,5 +233,5 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `start_rotating`, `rotation`, `stop_rotating`, `single`.
+The possible values are: `start_rotating`, `rotation`, `stop_rotating`, `hold`, `single`, `double`, `release`.
 

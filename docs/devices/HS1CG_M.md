@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1CG_M control via MQTT"
-description: "Integrate your HEIMAN HS1CG_M via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1CG_M control via MQTT"
+description: "Integrate your Heiman HS1CG_M via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-11-09T18:37:38Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1CG_M
+# Heiman HS1CG_M
 
 |     |     |
 |-----|-----|
 | Model | HS1CG_M  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper |
-| Picture | ![HEIMAN HS1CG_M](https://www.zigbee2mqtt.io/images/devices/HS1CG_M.png) |
+| Picture | ![Heiman HS1CG_M](https://www.zigbee2mqtt.io/images/devices/HS1CG_M.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

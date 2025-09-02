@@ -1,6 +1,6 @@
 ---
-title: "Zemismart M515EGBZTN control via MQTT"
-description: "Integrate your Zemismart M515EGBZTN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Quoya M515EGBZTN control via MQTT"
+description: "Integrate your Quoya M515EGBZTN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Zemismart M515EGBZTN
+# Quoya M515EGBZTN
 
 |     |     |
 |-----|-----|
 | Model | M515EGBZTN  |
-| Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
-| Description | Roller shade driver |
+| Vendor  | [Quoya](/supported-devices/#v=Quoya)  |
+| Description | Zigbee roller blind |
 | Exposes | cover (state, position), motor_direction, border |
-| Picture | ![Zemismart M515EGBZTN](https://www.zigbee2mqtt.io/images/devices/M515EGBZTN.png) |
+| Picture | ![Quoya M515EGBZTN](https://www.zigbee2mqtt.io/images/devices/M515EGBZTN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,14 +44,16 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Motor direction (enum)
+Motor direction.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
 The possible values are: `forward`, `back`.
 
 ### Border (enum)
+Limit setting.
 Value can be found in the published state on the `border` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": NEW_VALUE}`.
-The possible values are: `up`, `down`, `down_delete`.
+The possible values are: `up`, `down`, `up_delete`, `down_delete`, `remove_top_bottom`.
 

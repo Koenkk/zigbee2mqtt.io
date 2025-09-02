@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Pushbutton transmitter module |
 | Exposes | action |
 | Picture | ![EnOcean PTM 215Z](https://www.zigbee2mqtt.io/images/devices/PTM-215Z.png) |
-| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED-Trading 9125, Feller 4120.2.S.FMI.61, Namron 4512727 |
+| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, Sunricher SR-ZG2833PAC, LED-Trading 9125, Feller 4120.2.S.FMI.61, Namron 4512727 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,7 +35,7 @@ Not all Zigbee devices can do this translation. The devices known to do this are
 Green Power devices don't support binding and are not included in network scans.
 
 ### Pairing
-Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**. Additionally, it's important to know which channel your Zigbee network is using (the default is 11). You can find this in the Zigbee2MQTT frontend under `Settings > Advanced`, or [learn more about changing the channel](https://www.zigbee2mqtt.io/guide/configuration/zigbee-network.html#changing-the-zigbee-channel).
 
 This device has 4 buttons:
 
@@ -48,7 +48,7 @@ This device has 4 buttons:
 
 In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
 
-To pair it, hold the corresponding button for that channel for 7 seconds or more.
+To pair it, hold the corresponding button for the channel of your network for 7 seconds or more.
 
 Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
 
@@ -62,8 +62,15 @@ Alternatively, you should be able to reset the switch with the following pattern
 Note: Please make sure the module is positioned the right way up.
 
 ## Home Assistant
-The user, vandalon, over at the Home Assistant community forum has made a nice Automation Blueprint that works well with this device: https://community.home-assistant.io/t/zigbee2mqtt-enocean-ptm-215z-friends-of-hue-switch/429770
-It adds functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
+In the Home Assistant community forum, you may find some nice Automation Blueprints that works well with this device:
+
+@vandalon
+https://community.home-assistant.io/t/zigbee2mqtt-enocean-ptm-215z-friends-of-hue-switch/429770
+
+@chris-1243
+https://community.home-assistant.io/t/zigbee2mqtt-ptm215z-ze-and-ptm216z/873595
+
+They add functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
 <!-- Notes END: Do not edit below this line -->
 
 

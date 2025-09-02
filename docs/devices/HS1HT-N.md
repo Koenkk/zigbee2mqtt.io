@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1HT-N control via MQTT"
-description: "Integrate your HEIMAN HS1HT-N via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1HT-N control via MQTT"
+description: "Integrate your Heiman HS1HT-N via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1HT-N
+# Heiman HS1HT-N
 
 |     |     |
 |-----|-----|
 | Model | HS1HT-N  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart temperature & humidity Sensor |
 | Exposes | temperature, humidity, battery |
-| Picture | ![HEIMAN HS1HT-N](https://www.zigbee2mqtt.io/images/devices/HS1HT-N.png) |
+| Picture | ![Heiman HS1HT-N](https://www.zigbee2mqtt.io/images/devices/HS1HT-N.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

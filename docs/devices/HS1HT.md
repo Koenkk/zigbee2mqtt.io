@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1HT control via MQTT"
-description: "Integrate your HEIMAN HS1HT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1HT control via MQTT"
+description: "Integrate your Heiman HS1HT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1HT
+# Heiman HS1HT
 
 |     |     |
 |-----|-----|
 | Model | HS1HT  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart temperature & humidity Sensor |
 | Exposes | battery, temperature, humidity |
-| Picture | ![HEIMAN HS1HT](https://www.zigbee2mqtt.io/images/devices/HS1HT.png) |
+| Picture | ![Heiman HS1HT](https://www.zigbee2mqtt.io/images/devices/HS1HT.png) |
 | White-label | Ferguson TH-T_V14 |
 
 

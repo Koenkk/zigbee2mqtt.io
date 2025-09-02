@@ -86,7 +86,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `9`.
 
 ### Entry distance indentation (numeric)
-Indent the distance inward based on the dectection distance.
+Indent the distance inward based on the detection distance.
 Value can be found in the published state on the `entry_distance_indentation` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"entry_distance_indentation": NEW_VALUE}`.
