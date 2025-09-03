@@ -72,7 +72,7 @@ An alternative firmware version can be installed by creating a custom my_index.j
         "manufacturerCode": 4417,
         "imageType": 54179,
         "sha512": "97ea8413e8ab662f2bebf3b013b3030754cbc2c0744b91b14741fff17a2d8d99e7088aa22a3b6e43b3595ccd65433f96d32516fc057fddcc13a816c921af8c97",
-        "url": "https://github.com/Koenkk/zigbee-OTA/raw/master/images/Telink/1654157434-oem_zg_tl8258_plug_OTA_1.0.13.bin"
+        "url": "https://github.com/Koenkk/zigbee-OTA/raw/master/not-in-manifest-images/Telink/1654157434-oem_zg_tl8258_plug_OTA_1.0.13.bin"
     }
 ]
 ```
