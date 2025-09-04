@@ -46,11 +46,11 @@ In 2022, BlitzWolf started to sell BW-SHP13 that identify as ```_TZ3000_amdymr7l
 
 ### Reset energy
 
-To reset `Sum of consumed energy`, use the Dev console and execute:  
-`Endpoint`: `1`   
-`Cluster`: `0x00`  
-`Command`: `0`  
-`Payload`: (don't change this)  
+To reset `Sum of consumed energy`, use the Dev console and execute:
+`Endpoint`: `1`
+`Cluster`: `0x00` (`genBasic`)
+`Command`: `0` (`resetFactDefault`)
+`Payload`: (don't change this)
 
 Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
 
