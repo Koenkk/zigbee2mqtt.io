@@ -23,8 +23,7 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+The pairing requires 19 steps, here's how to enter pairing mode: https://imgbox.com/LxxyRYiD
 <!-- Notes END: Do not edit below this line -->
 
 
