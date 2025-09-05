@@ -23,7 +23,24 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+### Device Modes
+The Shelly 2PM Gen4 device operates in two different modes that appear as separate devices in Zigbee2MQTT:
 
+- **Cover Mode** [(`S4SW-002P16EU-COVER`)](/devices/S4SW-002P16EU-COVER.html) - Supports window covering controls with lift and tilt functionality with power monitoring
+- **Switch Mode** [(`S4SW-002P16EU-SWITCH`)](/devices/S4SW-002P16EU-SWITCH.html) - This device provides dual switch functionality with power monitoring
+
+The device mode is automatically detected based on the endpoint configuration. 
+
+For now, changing modes is only possible through Shelly WebUI.
+
+### Switch Mode Features
+When operating in switch mode, this device provides:
+- Dual on/off switches (l1 and l2 endpoints)
+- Power monitoring for both switches
+- Energy consumption tracking
+- Voltage and current measurements
+
+Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
 
 <!-- Notes END: Do not edit below this line -->
 
