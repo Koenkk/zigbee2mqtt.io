@@ -51,7 +51,7 @@
         "vue": "3.5.20",
         "vuepress": "2.0.0-rc.24",
         "webpack": "5.101.3",
-        "zigbee-herdsman-converters": "24.11.0"
+        "zigbee-herdsman-converters": "25.14.0"
     },
     "pnpm": {
         "onlyBuiltDependencies": [

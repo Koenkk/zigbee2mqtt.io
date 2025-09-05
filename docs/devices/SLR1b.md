@@ -63,7 +63,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
    "occupied_heating_setpoint":20 // Replace with desired temperature. Between 5 and 32 C
 }
 ```
-Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `65535` which means `undefined` (indefinite).
+Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `null` which means `undefined` (indefinite).
 
 This will also stop any native boosts that are currently active.
 
@@ -118,7 +118,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `true` temperature setpoint hold is ON, if `false` OFF.
 
 ### Temperature setpoint hold duration (numeric)
-Period in minutes for which the setpoint hold will be active. 65535 = attribute not used. 0 to 360 to match the remote display.
+Period in minutes for which the setpoint hold will be active. null = attribute not used. 0 to 360 to match the remote display.
 Value can be found in the published state on the `temperature_setpoint_hold_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_setpoint_hold_duration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setpoint_hold_duration": NEW_VALUE}`.
