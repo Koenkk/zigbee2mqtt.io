@@ -31,7 +31,9 @@ pageClass: device-page
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
-
+## Notes
+### Battery
+This device uses a CR2450 battery.
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
