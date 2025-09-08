@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | amina S  |
 | Vendor  | [Amina Distribution AS](/supported-devices/#v=Amina%20Distribution%20AS)  |
 | Description | Amina S EV Charger |
-| Exposes | ev_status, alarms, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, ev_connected, charging, derated, alarm_active, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, current_neutral, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
+| Exposes | ev_status, alarms, ev_connected, charging, derated, alarm_active, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, current_neutral, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
 | Picture | ![Amina Distribution AS amina S](https://www.zigbee2mqtt.io/images/devices/amina-S.png) |
 
 
@@ -95,6 +95,30 @@ It's not possible to write (`/set`) this value.
 List of active alarms.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarms": ["welded_relay", "wrong_voltage_balance", "rdc_dd_dc_leakage", "rdc_dd_ac_leakage", "high_temperature", "overvoltage", "undervoltage", "overcurrent", "car_communication_error", "charger_processing_error", "critical_overcurrent", "critical_powerloss", "unknown_alarm_bit_12", "unknown_alarm_bit_13", "unknown_alarm_bit_14", "unknown_alarm_bit_15"]}`
 
+### Ev connected (binary)
+An EV is connected to the charger.
+Value can be found in the published state on the `ev_connected` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` ev connected is ON, if `false` OFF.
+
+### Charging (binary)
+Power is being delivered to the EV.
+Value can be found in the published state on the `charging` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` charging is ON, if `false` OFF.
+
+### Derated (binary)
+Charging derated due to high temperature.
+Value can be found in the published state on the `derated` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` derated is ON, if `false` OFF.
+
+### Alarm active (binary)
+An active alarm is present.
+Value can be found in the published state on the `alarm_active` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` alarm active is ON, if `false` OFF.
+
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
@@ -134,30 +158,6 @@ Value can be found in the published state on the `last_session_energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"last_session_energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Ev connected (binary)
-An EV is connected to the charger.
-Value can be found in the published state on the `ev_connected` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` ev connected is ON, if `false` OFF.
-
-### Charging (binary)
-Power is being delivered to the EV.
-Value can be found in the published state on the `charging` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` charging is ON, if `false` OFF.
-
-### Derated (binary)
-Charging derated due to high temperature.
-Value can be found in the published state on the `derated` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` derated is ON, if `false` OFF.
-
-### Alarm active (binary)
-An active alarm is present.
-Value can be found in the published state on the `alarm_active` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` alarm active is ON, if `false` OFF.
 
 ### Power (numeric)
 Instantaneous measured power.
