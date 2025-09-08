@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_AQ_Smart_Monitor  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | EFEKTA CO2 & VOC Index Smart Monitor, rgb indicator, can control the relay, binding |
-| Exposes | co2, temperature, humidity, voc_index, reading_interval, light_indicator, light_indicator_level, set_altitude, temperature_offset, humidity_offset, automatic_calibrations, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_co2_gas, invert_logic_co2_gas, high_co2_gas, low_co2_gas, enable_voc, invert_logic_voc, high_voc, low_voc |
+| Exposes | co2, temperature, humidity, voc_index, reading_interval, light_indicator, light_indicator_level, set_altitude, temperature_offset, humidity_offset, automatic_calibrations, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_co2_gas, high_co2_gas, low_co2_gas, enable_voc, high_voc, low_voc |
 | Picture | ![EFEKTA EFEKTA_AQ_Smart_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_AQ_Smart_Monitor.png) |
 
 
@@ -152,13 +152,6 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_co2_gas": NEW_VALUE}`.
 If value equals `ON` enable co2 gas is ON, if `OFF` OFF.
 
-### Invert logic co2 gas (binary)
-Enable invert logic CO2 Gas Control.
-Value can be found in the published state on the `invert_logic_co2_gas` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_logic_co2_gas": NEW_VALUE}`.
-If value equals `ON` invert logic co2 gas is ON, if `OFF` OFF.
-
 ### High co2 gas (numeric)
 Setting High CO2 Gas Border.
 Value can be found in the published state on the `high_co2_gas` property.
@@ -181,13 +174,6 @@ Value can be found in the published state on the `enable_voc` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_voc": NEW_VALUE}`.
 If value equals `ON` enable voc is ON, if `OFF` OFF.
-
-### Invert logic voc (binary)
-Enable invert logic VOC Control.
-Value can be found in the published state on the `invert_logic_voc` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_logic_voc": NEW_VALUE}`.
-If value equals `ON` invert logic voc is ON, if `OFF` OFF.
 
 ### High voc (numeric)
 Setting High VOC Border.

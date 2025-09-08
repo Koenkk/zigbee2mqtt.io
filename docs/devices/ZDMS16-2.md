@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZDMS16-2  |
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
-| Description | Zigbee 2 channels Dimmer |
+| Description | Zigbee Module 2 channels Dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, switch_type, power_on_behavior |
 | Picture | ![AVATTO ZDMS16-2](https://www.zigbee2mqtt.io/images/devices/ZDMS16-2.png) |
 

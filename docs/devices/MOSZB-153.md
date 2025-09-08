@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MOSZB-153  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor 2 pet |
-| Exposes | temperature, illuminance, battery, voltage, occupancy |
+| Exposes | occupancy_timeout, led_control, temperature, illuminance, battery, voltage, occupancy |
 | Picture | ![Develco MOSZB-153](https://www.zigbee2mqtt.io/images/devices/MOSZB-153.png) |
 | White-label | Frient MOSZB-153 |
 
@@ -46,6 +46,20 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 
 ## Exposes
+
+### Occupancy timeout (numeric)
+Value can be found in the published state on the `occupancy_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `65535`.
+The unit of this value is `s`.
+
+### Led control (enum)
+Control LED indicator usage..
+Value can be found in the published state on the `led_control` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_control": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_control": NEW_VALUE}`.
+The possible values are: `off`, `fault_only`, `motion_only`, `both`.
 
 ### Temperature (numeric)
 Measured temperature value.

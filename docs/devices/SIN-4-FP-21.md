@@ -23,8 +23,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+### Pairing
 
+When power is turned ON for the first time, the relay switch Led will blink orange, looking to join a Zigbee network.
+If the relay switch has correctly joined the network, the Led becomes green.
+If the relay switch hasn't joined a network within 15 minutes, the Led becomes orange. Do a brief press on the relay switch button and start again.
 
+To remove the module from its network, perform a Module reset:
+1. Press more than 5 seconds on the module's button. The Led blinks orange.
+2. Press the button again (short press) to validate the reset. If the reset is successful, the Led flashes red and green alternately, then flashes orange.
+3. The module has returned to its original configuration and is ready to join a new Zigbee network.
 <!-- Notes END: Do not edit below this line -->
 
 
