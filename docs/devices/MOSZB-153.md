@@ -24,8 +24,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Reset Instructions
+1. Remove the sensor from its bracket or open the casing.
+2. Ensure batteries are correctly inserted.
+3. Press and hold the round menu button located inside the device.
+4. Watch the LED indicators: It will flash once, then twice, and finally flash several times in rapid succession.
+5. At the point when the LED is flashing several times in succession, release the button.
+6. The LED will then emit one long flash, indicating that the reset is successful and complete.
 <!-- Notes END: Do not edit below this line -->
 
 
