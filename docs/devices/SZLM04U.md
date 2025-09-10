@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SZLM04U  |
 | Vendor  | [Lincukoo](/supported-devices/#v=Lincukoo)  |
 | Description | Motion and brightness sensor |
-| Exposes | occupancy, illuminance, battery, usb_power |
+| Exposes | occupancy, illuminance, battery, usb_power, switch, fading_time |
 | Picture | ![Lincukoo SZLM04U](https://www.zigbee2mqtt.io/images/devices/SZLM04U.png) |
 
 
@@ -61,4 +61,18 @@ check usb power plug in or not.
 Value can be found in the published state on the `usb_power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `ON` usb power is ON, if `OFF` OFF.
+
+### Switch (binary)
+enable or disable the sensor.
+Value can be found in the published state on the `switch` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `ON` switch is ON, if `OFF` OFF.
+
+### Fading time (numeric)
+Fading time.
+Value can be found in the published state on the `fading_time` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `300`.
+The unit of this value is `s`.
 
