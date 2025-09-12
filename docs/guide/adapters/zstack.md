@@ -51,6 +51,8 @@ USB connected adapter with external antenna based on CC2652R chip
 
 USB connected adapter with external antenna based on CC2652RB chip
 
+**Warning:** There have been [reports](https://github.com/Koenkk/zigbee2mqtt/discussions/6702) of very slow delivery times and lack of communication.
+
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20250321/CC2652RB_coordinator_20250321.zip)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_router_20250403/CC2652RB_router_20250403.zip)
 - [Vendor flashing instructions](https://slae.sh/projects/cc2652/#flashing)
