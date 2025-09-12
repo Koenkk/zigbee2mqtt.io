@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Espressif](/supported-devices/#v=Espressif)  |
 | Description | Espressif Zigbee Range Extender |
 | Exposes | identify |
-| Picture | ![](https://www.zigbee2mqtt.io/images/devices/muselab-nanoesp32-c6-n8.png) |
+| Picture | ![](https://www.zigbee2mqtt.io/images/devices/Espressif-ZigbeeRangeExtender.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
