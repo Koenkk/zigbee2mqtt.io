@@ -170,7 +170,6 @@ serial:
 
 :::
 
-
 ### Network (TCP)
 
 ::: details TubeZB EFR32 MGM24 POE
@@ -289,7 +288,6 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
   Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr3-zigbee-and-thread-adapter),
 
 :::
-
 
 ### Hub
 
