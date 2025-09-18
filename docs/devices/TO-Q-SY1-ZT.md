@@ -23,8 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+It functions as an end-device instead of a router.
 
-
+### Pairing
+Press and hold the on/off button for around 8 seconds, until the LED starts blinking.
 <!-- Notes END: Do not edit below this line -->
 
 

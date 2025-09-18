@@ -23,8 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+# Notes
+## Pairing
 
-
+Cycle on and off five times (on-off-on-off-on-off-on-off-on-off-on). 
+Wait a few moments until the light starts blinking. The device is ready for pairing.
 <!-- Notes END: Do not edit below this line -->
 
 
