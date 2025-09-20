@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HM1RC-2-E control via MQTT"
-description: "Integrate your HEIMAN HM1RC-2-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HM1RC-2-E control via MQTT"
+description: "Integrate your Heiman HM1RC-2-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-02-03T17:47:43Z
 pageClass: device-page
 ---
@@ -11,19 +11,23 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HM1RC-2-E
+# Heiman HM1RC-2-E
 
 |     |     |
 |-----|-----|
 | Model | HM1RC-2-E  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart remote controller |
 | Exposes | battery, action |
-| Picture | ![HEIMAN HM1RC-2-E](https://www.zigbee2mqtt.io/images/devices/HM1RC-2-E.png) |
+| Picture | ![Heiman HM1RC-2-E](https://www.zigbee2mqtt.io/images/devices/HM1RC-2-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+At the top of the device there is a small hole, insert a thin needle and hold it for around five seconds.
+Green LED should start flashing, and the pairing process will begin.
 
 <!-- Notes END: Do not edit below this line -->
 

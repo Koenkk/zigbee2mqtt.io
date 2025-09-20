@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_eFlora_Pro  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Plant Wattering Sensor with e-ink display 2.13 |
-| Exposes | soil_moisture, battery, voltage, battery_low, temperature, humidity, illuminance, reading_interval, tx_radio_power, invert, fastmode, lower_level, upper_level, temperature_compensation |
+| Exposes | soil_moisture, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, invert, fastmode, lower_level, upper_level, temperature_compensation |
 | Picture | ![EFEKTA EFEKTA_eFlora_Pro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlora_Pro.png) |
 
 
@@ -96,20 +96,20 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
+### Lux factor (numeric)
+Lux factor.
+Value can be found in the published state on the `lux_factor` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_factor": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `10`.
+
 ### Reading interval (numeric)
-Setting the time in minutes, by default 5 minutes.
+Setting the time in minutes, by default 3 minutes.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `360`.
-The unit of this value is `sec`.
-
-### Tx radio power (enum)
-Set TX Radio Power, dbm.
-Value can be found in the published state on the `tx_radio_power` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
-The possible values are: `4dbm`, `19dbm`.
+The unit of this value is `min`.
 
 ### Invert (enum)
 Invert display color.

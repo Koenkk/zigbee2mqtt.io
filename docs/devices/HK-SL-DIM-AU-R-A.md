@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HK-SL-DIM-AU-R-A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | ZigBee knob smart dimmer |
-| Exposes | identify, power, voltage, current, energy, light (state, brightness), effect, power_on_behavior |
+| Exposes | identify, power, voltage, current, energy, light (state, brightness), effect, power_on_behavior, external_switch_type |
 | Picture | ![Sunricher HK-SL-DIM-AU-R-A](https://www.zigbee2mqtt.io/images/devices/HK-SL-DIM-AU-R-A.png) |
 
 
@@ -116,7 +116,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -137,4 +137,10 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### External switch type (enum)
+Value can be found in the published state on the `external_switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": NEW_VALUE}`.
+The possible values are: `push_button`, `normal_on_off`, `three_way`.
 

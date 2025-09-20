@@ -60,27 +60,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Temperature threshold (numeric)
-High temperature threshold.
-Value can be found in the published state on the `temperature_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_threshold": NEW_VALUE}`.
-The minimal value is `40` and the maximum value is `100`.
-The unit of this value is `°C`.
-
-### Temperature breaker (binary)
-High temperature breaker.
-Value can be found in the published state on the `temperature_breaker` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_breaker": NEW_VALUE}`.
-If value equals `ON` temperature breaker is ON, if `OFF` OFF.
-
 ### Power threshold (numeric)
 High power threshold.
 Value can be found in the published state on the `power_threshold` property.

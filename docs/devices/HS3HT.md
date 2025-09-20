@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS3HT control via MQTT"
-description: "Integrate your HEIMAN HS3HT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS3HT control via MQTT"
+description: "Integrate your Heiman HS3HT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS3HT
+# Heiman HS3HT
 
 |     |     |
 |-----|-----|
 | Model | HS3HT  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Temperature & humidity sensor with display |
 | Exposes | battery, temperature, humidity |
-| Picture | ![HEIMAN HS3HT](https://www.zigbee2mqtt.io/images/devices/HS3HT.png) |
+| Picture | ![Heiman HS3HT](https://www.zigbee2mqtt.io/images/devices/HS3HT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

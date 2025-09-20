@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | zFlora_Pro  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Plant watering sensor zFlora_Pro |
-| Exposes | identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, illuminance, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_offset, temperature_compensation |
+| Exposes | identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_offset, temperature_compensation |
 | Picture | ![EFEKTA zFlora_Pro](https://www.zigbee2mqtt.io/images/devices/zFlora_Pro.png) |
 
 
@@ -105,13 +105,20 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
+### Lux factor (numeric)
+Lux factor.
+Value can be found in the published state on the `lux_factor` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_factor": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `10`.
+
 ### Reading interval (numeric)
 Setting the time in minutes, by default 3 minutes.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `360`.
-The unit of this value is `sec`.
+The unit of this value is `min`.
 
 ### Smart sleep (binary)
 Enable Smart Sleep, short wakeup every 7 seconds.
