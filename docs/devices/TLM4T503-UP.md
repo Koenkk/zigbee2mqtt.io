@@ -1,7 +1,7 @@
 ---
-title: "YOKIS TLM2-UP control via MQTT"
-description: "Integrate your YOKIS TLM2-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-12-29T16:26:41
+title: "YOKIS TLM4T503-UP control via MQTT"
+description: "Integrate your YOKIS TLM4T503-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 
 pageClass: device-page
 ---
 
@@ -11,21 +11,21 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# YOKIS TLM2-UP
+# YOKIS TLM4T503-UP
 
 |     |     |
 |-----|-----|
-| Model | TLM2-UP  |
+| Model | TLM4T503-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
-| Description | Wall-mounted 2-button transmitter |
+| Description | Wall-mounted 4-button transmitter (503 format) |
 | Exposes | identify, temperature, battery_low, current_value, min_measured_value, max_measured_value, offset, samplingPeriod, samplingNumber, deltaTemp, minimalSendingPeriod, maximalSendingPeriod, action |
-| Picture | ![YOKIS TLM2-UP](https://www.zigbee2mqtt.io/images/devices/TLM2-UP.png) |
+| Picture | ![YOKIS TLM4T503-UP](https://www.zigbee2mqtt.io/images/devices/TLM4T503-UP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-- [CSA product page: TLM2-UP](https://csa-iot.org/csa_product/tlm2-up/)
+- [CSA product page: TLM4T503-UP](https://csa-iot.org/csa_product/tlm4t503-up/)
 <!-- Notes END: Do not edit below this line -->
 
 
