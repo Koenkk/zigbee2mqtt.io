@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | SR-ZG2819S-DIM  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
-| Description | ZigBee dim remote |
+| Description | Zigbee dim remote |
 | Exposes | identify, battery, action |
 | Picture | ![Sunricher SR-ZG2819S-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZG2819S-DIM.png) |
 

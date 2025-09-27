@@ -25,12 +25,13 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [https://github.com/darkxst/silabs-firmware-builder/releases](https://github.com/darkxst/silabs-firmware-builder/releases)
     - [@NabuCasa](https://github.com/NabuCasa) / Home Assistant devices: [https://github.com/NabuCasa/silabs-firmware-builder/releases](https://github.com/NabuCasa/silabs-firmware-builder/releases)
     - [@TubesZB](https://github.com/tube0013) devices: [https://github.com/tube0013/tube_gateways/](https://github.com/tube0013/tube_gateways/)
-    - _**Experimental**_ multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
+    - Multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
         - Router firmware also available
 - Web-based
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
     - For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
+    - For SONOFF Dongle: [SONOFF Dongle Flasher](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - Command-line based:
     - Multi-devices by [@NabuCasa](https://github.com/NabuCasa) using Python: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
@@ -38,11 +39,26 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
 
-## Recommended
+## Hardware
 
 Each category is ordered by chip, newer series first.
 
 ### USB
+
+::: details SONOFF Dongle-PMG24
+
+Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
+
+With external antenna(+3 dBi). Only supports software flow control (make sure not to set `rtscts: true`).
+
+- [Product Page](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-pmg24/hardware-specification-dongle-pmg24/)
+- [Buy](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
+
+<img src="../../images/dongle-pmg24-device.jpg" width="200" />
+
+:::
 
 ::: details SMLIGHT SLZB-07mg24
 
@@ -173,6 +189,33 @@ Note: can also be powered via USB (with a special case) and used with a simple E
 
 ### Hybrid (USB + Network)
 
+::: details SONOFF Dongle-M
+
+Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
+
+The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two external antennas, supports PoE power supply, has a built-in web console(http://Dongle-M.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB.
+
+- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
+- [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+
+<img src="../../images/Dongle-M_600_600.jpg" width="200" />
+
+:::
+
+::: details SMLIGHT SLZB-06mg26
+
+Chip: [efr32mg26b420f3200im48](https://www.silabs.com/wireless/zigbee/efr32mg26-series-2-socs/device.efr32mg26b420f3200im48?tab=specs)
+
+With external antenna.
+
+- [Product page](https://smlight.tech/product/slzb-06mg26/)
+
+<img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
+
+:::
+
 ::: details SMLIGHT SLZB-06mg24
 
 Chip: [efr32mg24a020f1024im40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a020f1024im40?tab=specs)
@@ -280,7 +323,7 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 <img src="../../images/seeed-studio-xiao-mg24.jpg" width="200" />
 :::
 
-## Not recommended
+### Not recommended
 
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 
