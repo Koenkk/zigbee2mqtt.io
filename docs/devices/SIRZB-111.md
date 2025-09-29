@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIRZB-111  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Customizable siren |
-| Exposes | battery_low, test, warning, squawk, max_duration, alarm, temperature, battery, voltage |
+| Exposes | battery_low, test, warning, squawk, max_duration, alarm, battery, voltage |
 | Picture | ![Develco SIRZB-111](https://www.zigbee2mqtt.io/images/devices/SIRZB-111.png) |
 
 
@@ -28,9 +28,6 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 
 ## Exposes
