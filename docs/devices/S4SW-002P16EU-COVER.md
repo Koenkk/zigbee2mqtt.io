@@ -23,7 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ### Device Modes
 The Shelly 2PM Gen4 device operates in two different modes that appear as separate devices in Zigbee2MQTT:
 
@@ -41,7 +40,6 @@ When operating in cover mode, this device provides:
 - State reporting (OPEN/CLOSE)
 
 Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
-
 <!-- Notes END: Do not edit below this line -->
 
 
