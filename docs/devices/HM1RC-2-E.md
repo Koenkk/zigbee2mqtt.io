@@ -28,7 +28,6 @@ pageClass: device-page
 ### Pairing
 At the top of the device there is a small hole, insert a thin needle and hold it for around five seconds.
 Green LED should start flashing, and the pairing process will begin.
-
 <!-- Notes END: Do not edit below this line -->
 
 

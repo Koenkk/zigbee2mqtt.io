@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSEN-C2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Door/window contact II |
-| Exposes | contact, battery, battery_low, action |
+| Exposes | contact, break_function_enabled, break_function_timeout, break_function_state, battery, battery_low, action |
 | Picture | ![Bosch BSEN-C2](https://www.zigbee2mqtt.io/images/devices/BSEN-C2.png) |
 
 
@@ -37,6 +37,9 @@ To factory reset the device remove the batteries. While pressing and holding the
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 
 ## Exposes
@@ -46,6 +49,29 @@ Indicates whether the device is opened or closed.
 Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
+
+### Break function (binary)
+Activate the break function by pressing the operating button on the door/window contact twice. This means that the device temporarily stops reading the sensors..
+Value can be found in the published state on the `break_function_enabled` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"break_function_enabled": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"break_function_enabled": NEW_VALUE}`.
+If value equals `ON` break function is ON, if `OFF` OFF.
+
+### Automatic time limit for breaks (numeric)
+Here you can define how long the break function is activated for the door/window contact. Once the time limit has expired, the break ends automatically. The LED on the device will flash orange as long as the break is activated when this setting is being used..
+Value can be found in the published state on the `break_function_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"break_function_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"break_function_timeout": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `15`.
+The unit of this value is `minutes`.
+Besides the numeric values the following values are accepted: `disable`.
+
+### Break function state (enum)
+Indicates whether the device is in break mode or not.
+Value can be found in the published state on the `break_function_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"break_function_state": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `break_active`, `idle`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -65,5 +91,5 @@ If value equals `true` battery low is ON, if `false` OFF.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `none`, `single`, `long`.
+The possible values are: `long_press`, `single_press`, `none`.
 

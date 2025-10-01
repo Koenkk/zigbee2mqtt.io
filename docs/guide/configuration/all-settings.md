@@ -811,10 +811,10 @@ Name of the device in Home Assistant
 devices:
     '0x1234567812345678':
         homeassistant:
-            name: 'abc'
+            name: null
 ```
 
-- Type: `string`
+- Type: `string,null`
 
 ## frontend
 
@@ -839,12 +839,12 @@ Package used for the frontend
 
 ```yaml
 frontend:
-    package: 'zigbee2mqtt-frontend'
+    package: 'zigbee2mqtt-windfront'
 ```
 
 - Type: `string`
-- Default: `"zigbee2mqtt-frontend"`
-- Possible values: `zigbee2mqtt-frontend`, `zigbee2mqtt-windfront`
+- Default: `"zigbee2mqtt-windfront"`
+- Possible values: `zigbee2mqtt-windfront`, `zigbee2mqtt-frontend`
 - <span style="color: red">Restart required to be effective</span>
 
 ### port

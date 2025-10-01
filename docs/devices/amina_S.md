@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | amina S  |
 | Vendor  | [Amina Distribution AS](/supported-devices/#v=Amina%20Distribution%20AS)  |
 | Description | Amina S EV Charger |
-| Exposes | ev_status, alarms, ev_connected, charging, derated, alarm_active, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, current_neutral, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
+| Exposes | ev_status, alarms, ev_connected, charging, derated, alarm_active, charge_limit_with_on_off, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, current_neutral, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
 | Picture | ![Amina Distribution AS amina S](https://www.zigbee2mqtt.io/images/devices/amina-S.png) |
 
 
@@ -118,6 +118,14 @@ An active alarm is present.
 Value can be found in the published state on the `alarm_active` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` alarm active is ON, if `false` OFF.
+
+### Charge limit with on off (numeric)
+Sets the maximum charge amperage and turns charging on/off..
+Value can be found in the published state on the `charge_limit_with_on_off` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charge_limit_with_on_off": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charge_limit_with_on_off": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `32`.
+The unit of this value is `A`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).

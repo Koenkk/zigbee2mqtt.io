@@ -15,15 +15,14 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model | GL-SPI-206P |
+| Model | GL-SPI-206P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
-| Description | Tuya SPI Pixel Controller RGBCCT/RGBW/RGB |
-| Exposes | light (state, brightness) |
+| Description | SPI pixel controller RGBCCT/RGBW/RGB |
+| Exposes | light (state, color_hs), brightness, color_temp, scene, music_mode, music_sensitivity, countdown, do_not_disturb, light_bead_sequence, chip_type, lightpixel_number_set, work_mode |
 | Picture | ![Gledopto GL-SPI-206P](https://www.zigbee2mqtt.io/images/devices/GL-SPI-206P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 # Button Functions
 
 **Opt:**
@@ -59,49 +58,90 @@ pageClass: device-page
 **Flashing:** Not Connected to Network
 
 **Steady On:** Connected to Network
-
 <!-- Notes END: Do not edit below this line -->
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
-
-* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`.
+This light supports the following features: `state`, `color_hs`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
-- `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+- `color_hs`: To control the hue/saturation (color) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color": {"hue": HUE, "saturation": SATURATION}}` (e.g. `{"color":{"hue":360,"saturation":100}}`). To read the hue/saturation send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color":{"hue":"","saturation":""}}`. Alternatively it is possible to set the hue/saturation via:
+  - HSB space (hue, saturation, brightness): `{"color": {"h": H, "s": S, "b": B}}` e.g. `{"color":{"h":360,"s":100,"b":100}}` or `{"color": {"hsb": "H,S,B"}}` e.g. `{"color":{"hsb":"360,100,100"}}`
+  - HSV space (hue, saturation, value):`{"color": {"h": H, "s": S, "v": V}}` e.g. `{"color":{"h":360,"s":100,"v":100}}` or `{"color": {"hsv": "H,S,V"}}` e.g. `{"color":{"hsv":"360,100,100"}}`
+  - HSL space (hue, saturation, lightness)`{"color": {"h": H, "s": S, "l": L}}` e.g. `{"color":{"h":360,"s":100,"l":100}}` or `{"color": {"hsl": "H,S,L"}}` e.g. `{"color":{"hsl":"360,100,100"}}`
 
-#### Transition
-For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
-Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
-
-#### Moving/stepping
-Instead of setting a value (e.g. brightness) directly it is also possible to:
-- move: this will automatically move the value over time, to stop send value `stop` or `0`.
-- step: this will increment/decrement the current value by the given one.
-
-The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
-To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
-
-**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-```js
-{
-  "brightness_move": -40, // Starts moving brightness down at 40 units per second
-  "brightness_move": 0, // Stop moving brightness
-  "brightness_step": 40 // Increases brightness by 40
-}
-````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
+### Brightness (numeric)
+Value can be found in the published state on the `brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `1000`.
+
+### Color temp (numeric)
+Color temperature (0=warm, 1000=cold).
+Value can be found in the published state on the `color_temp` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `1000`.
+
+### Scene (enum)
+Scenes selection.
+Value can be found in the published state on the `scene` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene": NEW_VALUE}`.
+The possible values are: `ice_land_blue`, `glacier_express`, `sea_of_clouds`, `fireworks_at_sea`, `firefly_night`, `grass_land`, `northern_lights`, `late_autumn`, `game`, `holiday`, `party`, `trend`, `meditation`, `dating`, `valentines_day`, `neon_world`.
+
+### Music mode (enum)
+Local music.
+Value can be found in the published state on the `music_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"music_mode": NEW_VALUE}`.
+The possible values are: `rock`, `jazz`, `classic`, `rolling`, `energy`, `spectrum`.
+
+### Music sensitivity (numeric)
+Music rhythm sensitivity (1-100).
+Value can be found in the published state on the `music_sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"music_sensitivity": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+
+### Countdown (numeric)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
+
+### Do not disturb (binary)
+Value can be found in the published state on the `do_not_disturb` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
+If value equals `ON` do not disturb is ON, if `OFF` OFF.
+
+### Light bead sequence (enum)
+Value can be found in the published state on the `light_bead_sequence` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_bead_sequence": NEW_VALUE}`.
+The possible values are: `RGB`, `RBG`, `GRB`, `GBR`, `BRG`, `BGR`, `RGBW`, `RBGW`, `GRBW`, `GBRW`, `BRGW`, `BGRW`, `WRGB`, `WRBG`, `WGRB`, `WGBR`, `WBRG`, `WBGR`.
+
+### Chip type (enum)
+Value can be found in the published state on the `chip_type` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"chip_type": NEW_VALUE}`.
+The possible values are: `WS2801`, `LPD6803`, `LPD8803`, `WS2811`, `TM1814B`, `TM1934A`, `SK6812`, `SK9822`, `UCS8904B`, `WS2805`.
+
+### Lightpixel number set (numeric)
+Value can be found in the published state on the `lightpixel_number_set` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lightpixel_number_set": NEW_VALUE}`.
+The minimal value is `10` and the maximum value is `1000`.
+
+### Work mode (enum)
+Value can be found in the published state on the `work_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_mode": NEW_VALUE}`.
+The possible values are: `white`, `colour`, `scene`, `music`.
 
