@@ -15,6 +15,7 @@
         "pretty:write": "prettier --write .",
         "pretty:check": "prettier --check .",
         "test": "ts-node docgen/tests/index.ts",
+        "optimize": "ts-node --project docgen/tsconfig.json scripts/optimize-images.ts",
         "prepare": "husky"
     },
     "author": "",
@@ -40,6 +41,9 @@
         "glob": "11.0.3",
         "husky": "9.1.7",
         "image-size": "2.0.2",
+        "imagemin": "9.0.1",
+        "imagemin-mozjpeg": "10.0.0",
+        "imagemin-pngquant": "10.0.0",
         "prettier": "3.6.2",
         "pug": "3.0.3",
         "pug-plain-loader": "1.1.0",
