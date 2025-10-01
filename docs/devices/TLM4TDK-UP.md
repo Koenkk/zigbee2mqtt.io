@@ -1,7 +1,7 @@
 ---
 title: "YOKIS TLM4TDK-UP control via MQTT"
 description: "Integrate your YOKIS TLM4TDK-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-09-30T19:35:14
 pageClass: device-page
 ---
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9101SAC-HP-SWITCH-2CH  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee 2 channels switch |
-| Exposes | switch (state), power_on_behavior, power, voltage, current, energy, identify, action |
+| Exposes | switch (state), power_on_behavior, power, voltage, current, energy, identify, external_switch_type, action |
 | Picture | ![Sunricher SR-ZG9101SAC-HP-SWITCH-2CH](https://www.zigbee2mqtt.io/images/devices/SR-ZG9101SAC-HP-SWITCH-2CH.png) |
 | White-label | LED-Trading UP-SA-9127D |
 
@@ -126,6 +126,12 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
+
+### External switch type (enum)
+Value can be found in the published state on the `external_switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": NEW_VALUE}`.
+The possible values are: `push_button`, `normal_on_off`, `three_way`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

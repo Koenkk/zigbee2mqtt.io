@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
 | Picture | ![Tuya TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.png) |
-| White-label | LELLKI TS011F_plug, Neo NAS-WR01B, BlitzWolf BW-SHP15, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11, Aubess TS011F_plug_1 |
+| White-label | LELLKI TS011F_plug, BlitzWolf BW-SHP15, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11, Aubess TS011F_plug_1 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -46,11 +46,11 @@ In 2022, BlitzWolf started to sell BW-SHP13 that identify as ```_TZ3000_amdymr7l
 
 ### Reset energy
 
-To reset `Sum of consumed energy`, use the Dev console and execute:  
-`Endpoint`: `1`   
-`Cluster`: `0x00`  
-`Command`: `0`  
-`Payload`: (don't change this)  
+To reset `Sum of consumed energy`, use the Dev console and execute:
+`Endpoint`: `1`
+`Cluster`: `0x00` (`genBasic`)
+`Command`: `0` (`resetFactDefault`)
+`Payload`: (don't change this)
 
 Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
 
