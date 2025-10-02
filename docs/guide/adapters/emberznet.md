@@ -303,6 +303,20 @@ SLZB-MR4 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 
 :::
 
+::: details SMLIGHT SLZB-MR1U MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter with USB-to-Ethernet passthrough
+
+SLZB-MR1U is a multi-radio smart home adapter based on CC2652P7, EFR32MG21, and ESP32, supporting Zigbee 3.0, Matter-over-Thread, and optional USB-based radios (e.g., Z-Wave or 433Mhz or Lora) via USB-to-TCP passthrough. It connects over Ethernet (with PoE), Wi-Fi, or USB-C, and ad user can configure USB power and role detection. SLZB-MR1U is fully compatible with Home Assistant and Zigbee2MQTT, and powered by SLZB-OS with web UI, OTA firmware updates, VPN, HA integration, IPv6, Ethernet-to-Wi-Fi bridge, and more.
+
+|                                    Product picture                                     |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
+| :------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SLZB-MR1U/slzb-mr1u-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+
+- [Product page](https://smlight.tech/global/slzbmr1u)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr1u-adapteruk), [Aliexpress 1 - Worldwide](https://www.aliexpress.com/item/1005009188482044.html), [Aliexpress 2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
+  Local fast delivery: [ES](https://www.domoticalia.es/en/1991-smlight-slzb-mr1u-adaptador-usb-ethernet-poe-zigbee-y-thread-cc2652p-efr32mg21-.html), [FR+EU](https://www.domadoo.fr/en/smart-home-products/8370-smlight-usb-ethernet-poe-zigbee-and-thread-adapter-cc2652p-efr32mg21-slzb-mr1u.html), [PL](https://pcblab.io/adapter-slzb-mr1u-zigbee-thread-cc2652p-efr32mg21-poe-usb-wifi-esp32-lan.html), [CH](https://www.swiss-domotique.ch/en/smarthome-hub/smlight-slzb-mr1u-modular-zigbee-thread-usb-coordinator-over-ethernet), [FI](https://verkkokauppa.nurkantakaa.fi/tuote/smlight-slzb-mr1u), [UK](https://zigbeesmart.com/products/zigbee-lan-poe-coordinator-smlight-slzb-mr1u), [US](https://cloudfree.shop/product/smlight-slzb-mr1u),
+
+:::
+
 ### Hub
 
 ::: details Nabu Casa Home Assistant Yellow
