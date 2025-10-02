@@ -1,7 +1,7 @@
 ---
 title: "Moes Moes_plug control via MQTT"
 description: "Integrate your Moes Moes_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-09-01T18:20:17
+addedAt: 2025-09-30T19:37:28
 pageClass: device-page
 ---
 
