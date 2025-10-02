@@ -298,7 +298,7 @@ SLZB-MR4 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 | <img src="../../images/adapters/SMLIGHT/SLZB-MR4/slzb-mr4-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
 
 - [Product page](https://smlight.tech/global/slzbmr4)
-- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr4-adapteruk), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html ), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr4-adapteruk), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
   Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr4-zigbee-and-thread-adapter), [FR](https://www.domadoo.fr/en/smart-home-products/8369-smlight-usb-ethernet-poe-zigbee-and-thread-adapter-cc2674p10-efr32mg26-slzb-mr4.html), [UK](https://zigbeesmart.com/products/smlight-slzb-mr4-dual-radio-zigbee-thread-ethernet-coordinator),
 
 :::
