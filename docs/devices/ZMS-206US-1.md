@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZMS-206US-1  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Smart screen switch 1 gang |
-| Exposes | backlight_mode, switch (state), backlight_brightness, child_lock, switch_color_on, switch_color_off, indicator_status, delay_off_schedule, name, relay_status, countdown |
+| Exposes | backlight_mode, switch (state), backlight_brightness, child_lock, radar_config, switch_color_on, switch_color_off, indicator_status, delay_off_schedule, name, relay_status, countdown |
 | Picture | ![Zemismart ZMS-206US-1](https://www.zigbee2mqtt.io/images/devices/ZMS-206US-1.png) |
 
 
@@ -58,6 +58,13 @@ Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
+
+### Radar config (enum)
+Radar Config.
+Value can be found in the published state on the `radar_config` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_config": NEW_VALUE}`.
+The possible values are: `none`, `10s`, `20s`, `30s`, `45s`, `60s`.
 
 ### Switch color on (enum)
 Switch lightcolor when on.

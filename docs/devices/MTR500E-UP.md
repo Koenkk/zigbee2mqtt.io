@@ -132,10 +132,7 @@ The minimal value is `0` and the maximum value is `4233600`.
 The unit of this value is `s`.
 
 ### Operating mode (enum)
-Indicates the operating mode: 
-        - 0x00 -> Timer 
-        - 0x01 -> Staircase
-        - 0x02 -> Pulse.
+Indicates the operating mode.
 Value can be found in the published state on the `operating_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
@@ -206,11 +203,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `4233600`.
 
 ### State after blink (enum)
-Indicate which state must be apply after a blink sequence:
-        - 0x00 -> State before blinking
-        - 0x01 -> OFF
-        - 0x02 -> ON
-        - 0x03 -> Infinite blinking.
+Indicate which state must be apply after a blink sequence.
 Value can be found in the published state on the `state_after_blink` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_after_blink": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_after_blink": NEW_VALUE}`.
@@ -278,21 +271,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `relaunch_ble_advert`.
 
 ### Input mode (enum)
-Indicate how the input should be handle:
-        - 0 -> Unknown
-        - 1 -> Push button
-        - 2 -> Switch
-        - 3 -> Relay
-        - 4 -> FP_IN.
+Indicate how the input should be handled.
 Value can be found in the published state on the `input_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_mode": NEW_VALUE}`.
 The possible values are: `unknown`, `push_button`, `switch`, `relay`, `fp_in`.
 
 ### Contact mode (enum)
-Indicate the contact nature of the entry:
-        - 0 -> NC
-        - 1 -> NO.
+Indicate the contact nature of the entry.
 Value can be found in the published state on the `contact_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"contact_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"contact_mode": NEW_VALUE}`.

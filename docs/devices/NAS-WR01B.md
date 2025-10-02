@@ -1,7 +1,7 @@
 ---
-title: "BSEED FK86ZEUSK1W control via MQTT"
-description: "Integrate your BSEED FK86ZEUSK1W via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-09-01T18:20:17
+title: "NEO NAS-WR01B control via MQTT"
+description: "Integrate your NEO NAS-WR01B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-09-30T19:37:28
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# BSEED FK86ZEUSK1W
+# NEO NAS-WR01B
 
 |     |     |
 |-----|-----|
-| Model | FK86ZEUSK1W  |
-| Vendor  | [BSEED](/supported-devices/#v=BSEED)  |
-| Description | Wall-mounted electrical socket |
+| Model | NAS-WR01B  |
+| Vendor  | [NEO](/supported-devices/#v=NEO)  |
+| Description | Smart plug (with electrical measurements) |
 | Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
-| Picture | ![BSEED FK86ZEUSK1W](https://www.zigbee2mqtt.io/images/devices/FK86ZEUSK1W.png) |
+| Picture | ![NEO NAS-WR01B](https://www.zigbee2mqtt.io/images/devices/NAS-WR01B.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

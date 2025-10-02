@@ -1,7 +1,7 @@
 ---
 title: "YOKIS MFP-UP control via MQTT"
 description: "Integrate your YOKIS MFP-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-09-30T19:35:14
 pageClass: device-page
 ---
 
@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MFP-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Remote module for pilot wire heating system |
-| Exposes | identify, power, current, energy, power_failure_mode, actual_order, order_timer, pre_order_timer, timer_unit, led_mode, pilot_wire_relay_mode, order_scrolling_mode, order_number_supported, fallback_order, pilotwire_setOrder, pilotwire_toggleOrder, reset_to_factory_settings, relaunch_ble_advert |
+| Exposes | identify, power, current, energy, power_failure_mode, actual_order, order_timer, pre_order_timer, timer_unit, led_mode, pilot_wire_relay_mode, order_scrolling_mode, order_number_supported, fallback_order, pilotwire_set_order, pilotwire_toggle_order, reset_to_factory_settings, relaunch_ble_advert |
 | Picture | ![YOKIS MFP-UP](https://www.zigbee2mqtt.io/images/devices/MFP-UP.png) |
 
 
@@ -85,15 +85,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `last_state`, `off`, `on`, `blink`.
 
 ### Actual order (enum)
-Represent the actual order used by the device:
-- 0x00 -> Stop
-- 0x01 -> Frost-off
-- 0x02 -> Eco (default)
-- 0x03 -> Confort-2
-- 0x04 -> Confort-1
-- 0x05 -> Confort
-- 0xF0 -> ShortCut error
-- 0xF1 -> Temperature error.
+Represent the actual order used by the device.
 Value can be found in the published state on the `actual_order` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"actual_order": ""}`.
 It's not possible to write (`/set`) this value.
@@ -114,9 +106,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `4294967295`.
 
 ### Timer unit (enum)
-Represent the actual unit used for local command configuration :
-- 0x00 -> Second (default)
-- 0x01 -> Minutes.
+Represent the actual unit used for local command configuration.
 Value can be found in the published state on the `timer_unit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"timer_unit": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer_unit": NEW_VALUE}`.
@@ -159,31 +149,25 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `four_orders`, `six_orders`.
 
 ### Fallback order (enum)
-Represent the fallback order used by the device after the end of an order timer is reached
-- 0x00 -> Stop
-- 0x01 -> Frost-off
-- 0x02 -> Eco (default)
-- 0x03 -> Confort-2
-- 0x04 -> Confort-1
-- 0x05 -> Confor.
+Represent the fallback order used by the device after the end of an order timer is reached.
 Value can be found in the published state on the `fallback_order` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fallback_order": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fallback_order": NEW_VALUE}`.
 The possible values are: `stop`, `frost_off`, `eco`, `confort_2`, `confort_1`, `confort`.
 
-### Pilotwire setOrder (enum)
+### Pilotwire set order (enum)
 Set the device in the specified order..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilotwire_setOrder": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilotwire_set_order": NEW_VALUE}`.
 The possible values are: `stop`, `frost_off`, `eco`, `confort_2`, `confort_1`, `confort`.
 
-### Pilotwire toggleOrder (enum)
+### Pilotwire toggle order (enum)
 Toggle between order by respecting the scrolling order.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilotwire_toggleOrder": NEW_VALUE}`.
-The possible values are: `pilotwire_toggleOrder`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilotwire_toggle_order": NEW_VALUE}`.
+The possible values are: `pilotwire_toggle_order`.
 
 ### Reset to factory settings (enum)
 Reset setting depending on RESET ACTION value.
