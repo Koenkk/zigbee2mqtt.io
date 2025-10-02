@@ -289,6 +289,20 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 
 :::
 
+::: details SMLIGHT SLZB-MR4 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
+
+SLZB-MR4 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32MG26 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
+
+|                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
+| :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SLZB-MR4/slzb-mr4-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+
+- [Product page](https://smlight.tech/global/slzbmr4)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr4-adapteruk), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html ), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
+  Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr4-zigbee-and-thread-adapter), [FR](https://www.domadoo.fr/en/smart-home-products/8369-smlight-usb-ethernet-poe-zigbee-and-thread-adapter-cc2674p10-efr32mg26-slzb-mr4.html), [UK](https://zigbeesmart.com/products/smlight-slzb-mr4-dual-radio-zigbee-thread-ethernet-coordinator),
+
+:::
+
 ### Hub
 
 ::: details Nabu Casa Home Assistant Yellow
