@@ -74,4 +74,4 @@ The following steps have to be followed:
 
 ## Done!
 
-Now plug the CC2530 into a power outlet where it will automatically join your Zigbee network. (don't forget to set `permit_join: true` to enable joining of new devices). Enjoy your extended Zigbee network range! :smile:
+Now plug the CC2530 into a power outlet where it will automatically join your Zigbee network. (don't forget to enable joining of new devices). Enjoy your extended Zigbee network range! :smile:
