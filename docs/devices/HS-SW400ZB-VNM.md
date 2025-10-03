@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | HS-SW400ZB-VNM  |
 | Vendor  | [VSmart](/supported-devices/#v=VSmart)  |
-| Description | VSmart Wall Switch 4 Gang |
-| Exposes | switch (state), ledIndicatorColorOn, ledIndicatorColorOff, vibrationIntensity, timePeriods, morningLedIntensity, eveningLedIntensity, nightLedIntensity, ledBrightnessLevels |
+| Description | Wall switch 4 gang |
+| Exposes | switch (state), led_indicator_color_on, led_indicator_color_off, vibration_intensity, time_periods, morning_led_intensity, evening_led_intensity, night_led_intensity, led_brightness_levels |
 | Picture | ![HS-SW400ZB-VNM](https://www.zigbee2mqtt.io/images/devices/HS-SW400ZB-VNM.png) |
 
 
