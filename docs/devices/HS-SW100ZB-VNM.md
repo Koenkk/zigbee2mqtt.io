@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | HS-SW100ZB-VNM  |
 | Vendor  | [VSmart](/supported-devices/#v=VSmart)  |
-| Description | VSmart Wall Switch 1 Gang |
-| Exposes | switch (state), ledIndicatorColorOn, ledIndicatorColorOff, vibrationIntensity, timePeriods, morningLedIntensity, eveningLedIntensity, nightLedIntensity, ledBrightnessLevels |
+| Description | Wall switch 1 gang |
+| Exposes | switch (state), led_indicator_color_on, led_indicator_color_off, vibration_intensity, time_periods, morning_led_intensity, evening_led_intensity, night_led_intensity, led_brightness_levels |
 | Picture | ![HS-SW100ZB-VNM](https://www.zigbee2mqtt.io/images/devices/HS-SW100ZB-VNM.png) |
 
 
@@ -38,20 +38,30 @@ To reset the device, press and hold the button for 10 seconds until the LED indi
 - Maximum load: 10A resistive, 6A inductive
 
 ### LED Indicator Features
-- **ledIndicatorColorOn**: Set LED color when switch is ON (hex format: #RRGGBB)
-- **ledIndicatorColorOff**: Set LED color when switch is OFF (hex format: #RRGGBB)
-- **morningLedIntensity**: LED intensity for morning period (0-100%)
-- **eveningLedIntensity**: LED intensity for evening period (0-100%)
-- **nightLedIntensity**: LED intensity for night period (0-100%)
-- **ledBrightnessLevels**: Configure low/medium/high brightness levels
+- **led_indicator_color_on**: Set LED color when switch is ON (hex format: #RRGGBB, e.g., #ff0000 for red)
+- **led_indicator_color_off**: Set LED color when switch is OFF (hex format: #RRGGBB, e.g., #ffffff for white)
+- **morning_led_intensity**: LED intensity for morning period (0-100%)
+- **evening_led_intensity**: LED intensity for evening period (0-100%)
+- **night_led_intensity**: LED intensity for night period (0-100%)
+- **led_brightness_levels**: Configure low/medium/high brightness levels
 
 ### Vibration Feedback
-- **vibrationIntensity**: Button vibration intensity (0-100%)
+- **vibration_intensity**: Button vibration intensity (0-100%)
 - Provides tactile feedback when button is pressed
 
 ### Time Period Settings
-- **timePeriods**: Configure morning, evening, and night periods
+- **time_periods**: Configure morning, evening, and night periods
+- **morning_start_hour**: Morning period start hour (0-23)
+- **evening_start_hour**: Evening period start hour (0-23)
+- **night_start_hour**: Night period start hour (0-23)
 - Morning must start before evening, evening must start before night
 - LED behavior changes based on time periods
+
+### LED Brightness Levels
+- **led_brightness_levels**: Configure brightness levels for different intensity settings
+- **low_brightness_percent**: Low brightness level percentage (0-100%)
+- **medium_brightness_percent**: Medium brightness level percentage (0-100%)
+- **high_brightness_percent**: High brightness level percentage (0-100%)
+- Low must be lower than medium, Medium must be lower than high
 
 <!-- Notes END: Do not edit below this line -->

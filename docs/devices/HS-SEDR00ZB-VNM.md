@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HS-SEDR00ZB-VNM  |
 | Vendor  | [VSmart](/supported-devices/#v=VSmart)  |
-| Description | VSmart Door/Window Sensor |
+| Description | Door/window sensor |
 | Exposes | contact, battery, tamper, battery_low |
 | Picture | ![HS-SEDR00ZB-VNM](https://www.zigbee2mqtt.io/images/devices/HS-SEDR00ZB-VNM.png) |
 

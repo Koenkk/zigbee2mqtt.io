@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HS-SEOC00ZB-VNM  |
 | Vendor  | [VSmart](/supported-devices/#v=VSmart)  |
-| Description | VSmart Occupancy Sensor |
+| Description | Occupancy sensor |
 | Exposes | occupancy, battery |
 | Picture | ![HS-SEOC00ZB-VNM](https://www.zigbee2mqtt.io/images/devices/HS-SEOC00ZB-VNM.png) |
 
