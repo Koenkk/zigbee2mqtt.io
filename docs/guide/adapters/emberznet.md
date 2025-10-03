@@ -291,7 +291,7 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 
 ### Hub
 
-::: details SMLIGHT SMHUB (Essential/Professional variants) - an enterprise-grade smart hub that runs Zigbee2MQTT on board
+::: details SMLIGHT SMHUB (Essential/Professional variants)
 
 SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Professional variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Professional variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
 
