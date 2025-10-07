@@ -64,19 +64,19 @@ Common locations:
 - Restart Zigbee2MQTT
 - Check the logs to verify the converter was loaded:
 
-  **Success:**
+    **Success:**
 
-  ```
-  [YYYY-MM-DD HH:MM:SS] info: z2m: Loaded external converter 'your_device.mjs'.
-  ```
+    ```
+    [YYYY-MM-DD HH:MM:SS] info: z2m: Loaded external converter 'your_device.mjs'.
+    ```
 
-  **Error (not loaded):**
+    **Error (not loaded):**
 
-  ```
-  [YYYY-MM-DD HH:MM:SS] error: z2m: Invalid external extension 'your_device.mjs' was ignored and renamed to prevent interference with Zigbee2MQTT. (Unexpected end of input)
-  ```
+    ```
+    [YYYY-MM-DD HH:MM:SS] error: z2m: Invalid external extension 'your_device.mjs' was ignored and renamed to prevent interference with Zigbee2MQTT. (Unexpected end of input)
+    ```
 
-  If you see an error, check your file syntax (missing brackets, commas, etc.).
+    If you see an error, check your file syntax (missing brackets, commas, etc.).
 
 - Check the device's **About** tab - it should show `Supported: external`
 - Test all features (on/off, readings, etc.)
@@ -96,18 +96,18 @@ If some features are missing or not working, you need to extend the definition. 
 Example:
 
 ```js
-import * as m from "zigbee-herdsman-converters/lib/modernExtend";
+import * as m from 'zigbee-herdsman-converters/lib/modernExtend';
 
 export default {
-  zigbeeModel: ["PLUG-01"],
-  model: "PLUG-01",
-  vendor: "Vendor",
-  description: "Smart plug",
-  extend: [
-    m.onOff(),
-    m.electricityMeter(),
-    m.temperature(), // Add missing features
-  ],
+    zigbeeModel: ['PLUG-01'],
+    model: 'PLUG-01',
+    vendor: 'Vendor',
+    description: 'Smart plug',
+    extend: [
+        m.onOff(),
+        m.electricityMeter(),
+        m.temperature(), // Add missing features
+    ],
 };
 ```
 
@@ -128,11 +128,11 @@ Zigbee2MQTT:debug  2025-10-07T12:24:22: No converter available for 'WSDCGQ01LM' 
 You may need to add specific [fromZigbee converters](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/fromZigbee.ts):
 
 ```js
-import fz from "zigbee-herdsman-converters/converters/fromZigbee";
+import fz from 'zigbee-herdsman-converters/converters/fromZigbee';
 
 export default {
-  // ... other properties
-  fromZigbee: [fz.temperature, fz.humidity],
+    // ... other properties
+    fromZigbee: [fz.temperature, fz.humidity],
 };
 ```
 
@@ -149,10 +149,10 @@ Once your device is working, add a picture for the documentation:
 - Fork the [zigbee2mqtt.io repository](https://github.com/Koenkk/zigbee2mqtt.io) on GitHub
 - Create a new branch (e.g., `add-device-YOUR_MODEL`)
 - Add your device picture to `public/images/devices/`:
-  - Filename: Must match the `zigbeeModel` from your definition (e.g., `PLUG-01.png`)
-  - Format: `.png`
-  - Size: 512x512 pixels
-  - Background: transparent
+    - Filename: Must match the `zigbeeModel` from your definition (e.g., `PLUG-01.png`)
+    - Format: `.png`
+    - Size: 512x512 pixels
+    - Background: transparent
 - Commit your changes
 
 ### 4.2. Optional: Add Device Notes
