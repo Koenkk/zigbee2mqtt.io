@@ -1,96 +1,191 @@
-# Support new devices
+# Support New Devices
 
-This page will guide you through the process of adding support for new devices through a temporary [external converter](../../advanced/more/external_converters.md).
+This guide will walk you through adding support for new devices using [external converters](../../advanced/more/external_converters.md).
 
-In case you require any help feel free to open a [discussion](https://github.com/Koenkk/zigbee2mqtt/discussions).
+## Prerequisites
 
-**Before** starting, first check if your device is not already supported in the Zigbee2MQTT dev branch! This can be done by checking the [changelog](https://gist.github.com/Koenkk/bfd4c3d1725a2cccacc11d6ba51008ba#new-supported-devices) of the dev branch. Also set the Zigbee2MQTT `log_level` to `debug` for easier debugging.
-
-## Instructions
-
-### 1. Pairing the device with Zigbee2MQTT
-
-The first step is to pair the device with Zigbee2MQTT. It should be possible to pair your unsupported device out of the box because Zigbee2MQTT can pair with any Zigbee device. You need to find out how to bring your device into pairing mode, most of the time via a factory reset.
-
-Once you successfully paired the device you will see something like this in the logs:
-
-```
-Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
-Zigbee2MQTT:warn  2019-11-09T12:19:56: Device '0x00158d0001dc126a' with Zigbee model 'lumi.sens' and manufacturer name 'some_name' is NOT supported, please follow https://www.zigbee2mqtt.io/how-tos/support_new_devices.html
-```
+Before you begin:
+- Check if your device is already supported in the [dev branch changelog](https://gist.github.com/Koenkk/bfd4c3d1725a2cccacc11d6ba51008ba#new-supported-devices)
+- Set `log_level: debug` in your Zigbee2MQTT configuration
+- Ensure joining is enabled on your network
+- Have access to the Zigbee2MQTT web interface
 
 ::: tip
-Make sure that joining is enabled, otherwise new devices cannot join the network.
+If you need help, open a [discussion](https://github.com/Koenkk/zigbee2mqtt/discussions) on GitHub.
 :::
 
-### 2. Creating the external definition
+## Step 1: Pair the Device
 
-When pairing an unsupported device with Zigbee2MQTT, it will attempt to discover features supported by this device. To check what has already been discovered, navigate to the `Exposes` tab of the device in frontend. See if the exposed features work by checking if values are reported and/or states are controllable (in case of e.g. a light).
-Note that feature discovery is still WIP, not all features may be discovered, some may not be discoverable at all due to a non-standard implementation on the device (commonly the case for Tuya devices).
+Zigbee2MQTT can pair with any Zigbee device, even if not yet supported. Put your device into pairing mode (usually via factory reset).
 
-Next generate the external definition by navigating to the `Dev console` tab of the device and press `Generate external definition`.
+Once successfully paired, you will see:
+
+```
+Zigbee2MQTT:info  2025-10-07T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
+Zigbee2MQTT:warn  2025-10-07T12:19:56: Device '0x00158d0001dc126a' with Zigbee model 'lumi.sens' and manufacturer name 'LUMI' is NOT supported, please follow https://www.zigbee2mqtt.io/how-tos/support_new_devices.html
+```
+
+The device will now appear in your web interface.
+
+## Step 2: Generate and Test the External Definition
+
+### 2.1. Generate the Definition
+
+* Navigate to your device in the web interface
+* Go to the **Exposes** tab to see auto-discovered features
+* Go to the **Dev console** tab
+* Click **Generate external definition**
+* Copy the generated code
 
 <img src="../../images/generate_external_definition.gif" height="300"/>
 
-By default, the external definition will map exposed Zigbee clusters to features according to the Zigbee ZCL specification. Of course, if the device does not conform to the specification, it may not work properly or at all.
-If all features work and all expected features are present, you are lucky and can skip to step 3.
-If not, you will have to extend the external definition.
+### 2.2. Create the External Converters Directory
 
-::: tip
-Depending on the device, it may be possible to extend the definition using other modern extends.
-This is the recommended process as it is generally easier.
-:::
+The `external_converters` directory does not exist by default:
 
-### 2.1. Extending the generated external definition
+```bash
+# Navigate to your Zigbee2MQTT data directory
+cd /path/to/zigbee2mqtt/data
 
-To extend the generated external definition, you can either save the code in a file manually, and restart Zigbee2MQTT, or you can use the MQTT API to load the converter at runtime. See [external converters](../../advanced/more/external_converters.md) for more details.
-
-Add and/or configure the appropriate modern extends for the device (see previous link).
-
-::: tip
-The `Clusters` tab of the device, in frontend, lists supported clusters for further analysis.
-:::
-
-Once done, trigger actions on the device.
-
-If your device is not reporting anything, it could be that this device requires additional configuration. This can be done by adding a `configure:` section. _It may help to look at similar [devices](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/devices)._
-
-::: tip
-If your device is advertised as Tuya compatible or reports anything with `manuSpecificTuya`, additional instructions for adding your device can be found [here](./02_support_new_tuya_devices.md).
-:::
-
-If you still see messages like below after adding and configuring all appropriate modern extends, you may need to add specific converters that modern extends do not provide. Existing converters can probably be reused, those can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/fromZigbee.ts).
-
-```
-Zigbee2MQTT:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' with cluster 'msTemperatureMeasurement' and type 'attributeReport' and data '{"measuredValue":2512}'
+# Create the directory
+mkdir -p external_converters
 ```
 
-For the above message, you would use the already existing `fz.temperature` converter:
+Common locations:
+- **Docker**: `/app/data/external_converters`
+- **Standalone**: `./data/external_converters`
+- **Home Assistant OS (HAOS)**: `/config/zigbee2mqtt/external_converters`
+
+### 2.3. Save and Test
+
+* Save the code in `external_converters/your_device.mjs` (use `.mjs` extension)
+* Restart Zigbee2MQTT
+* Check the logs to verify the converter was loaded:
+
+  **Success:**
+  ```
+  [YYYY-MM-DD HH:MM:SS] info: z2m: Loaded external converter 'your_device.mjs'.
+  ```
+
+  **Error (not loaded):**
+  ```
+  [YYYY-MM-DD HH:MM:SS] error: z2m: Invalid external extension 'your_device.mjs' was ignored and renamed to prevent interference with Zigbee2MQTT. (Unexpected end of input)
+  ```
+
+  If you see an error, check your file syntax (missing brackets, commas, etc.).
+
+* Check the device's **About** tab - it should show `Supported: external`
+* Test all features (on/off, readings, etc.)
+
+::: tip
+Feature discovery is still WIP. Some features may not be discovered, especially on non-standard devices (common with Tuya devices).
+:::
+
+If all features work, skip to Step 4. Otherwise, continue to Step 3.
+
+## Step 3: Extend the Definition (If Needed)
+
+If some features are missing or not working, you need to extend the definition. Edit your `.mjs` file and add the appropriate [modern extends](../../advanced/more/external_converters.md).
+
+### 3.1. Add Missing Modern Extends
+
+Example:
 
 ```js
-    fromZigbee: [fz.temperature],
+import * as m from 'zigbee-herdsman-converters/lib/modernExtend';
+
+export default {
+    zigbeeModel: ['PLUG-01'],
+    model: 'PLUG-01',
+    vendor: 'Vendor',
+    description: 'Smart plug',
+    extend: [
+        m.onOff(),
+        m.electricityMeter(),
+        m.temperature(),  // Add missing features
+    ],
+};
 ```
 
-_Note: This converter would actually be covered by the appropriate modern extend (`temperature()`), it is just given as an example. See [more examples](../../advanced/more/external_converters.md#more-examples)._
+Restart Zigbee2MQTT and test the new features.
 
-Repeat this last step until your device no longer produces log messages like `No converter available for 'WSDCGQ01LM' with cluster...`
+### 3.2. Handle Special Cases
 
-If none of the existing converters fit, you can add custom ones, an example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.mjs).
+**Tuya devices**: If your device reports `manuSpecificTuya` in the logs, follow the [Tuya-specific guide](./02_support_new_tuya_devices.md).
 
-### 3. Add device picture to zigbee2mqtt.io documentation
+**Non-reporting devices**: If the device doesn't report values, add a `configure:` section. Check similar [device definitions](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/devices) for examples.
 
-To make sure a picture is available for this device on the supported devices page and in the frontend:
+**Custom converters**: If you see messages like:
 
-1. Clone [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io)
-2. Add a device picture (`.png`, 512x512, transparent background) in `public/images/devices`.
-    - _If necessary, use the [Adobe Express Remove Background tool](https://new.express.adobe.com/tools/remove-background) to make the background transparent._
-3. **_Optional:_** Add a markdown file for your device to `docs/devices`, use the `model` property of your definition as the filename. Most of the contents of this file will be auto-generated through docgen but you can add your own notes in a notes section. Do not use h1 or h2 heading within "## Notes"-Section.
-    > > \<!-- Notes BEGIN --><br> >> \## Notes<br>
-    > > ...<br> >> \<!-- Notes END -->
-4. Create a Pull Request for [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io).
+```
+Zigbee2MQTT:debug  2025-10-07T12:24:22: No converter available for 'WSDCGQ01LM' with cluster 'msTemperatureMeasurement' and type 'attributeReport' and data '{"measuredValue":2512}'
+```
 
-Upon the next release of Zigbee2MQTT, the documentation will be updated and your device file will be linked in `../../supported-devices.md` automatically.
+You may need to add specific [fromZigbee converters](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/fromZigbee.ts):
 
-### 4. Done!
+```js
+import fz from 'zigbee-herdsman-converters/converters/fromZigbee';
 
-Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT. This can be done by adding the definition to the [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) of your device. :smiley:
+export default {
+    // ... other properties
+    fromZigbee: [fz.temperature, fz.humidity],
+};
+```
+
+::: tip
+Check the **Clusters** tab in the web interface to see supported clusters. You can also use the MQTT API to reload converters without restarting.
+:::
+
+## Step 4: Add Device Picture
+
+Once your device is working, add a picture for the documentation:
+
+### 4.1. Prepare the Image
+
+* Fork the [zigbee2mqtt.io repository](https://github.com/Koenkk/zigbee2mqtt.io) on GitHub
+* Create a new branch (e.g., `add-device-YOUR_MODEL`)
+* Add your device picture to `public/images/devices/`:
+  * Filename: Must match the `zigbeeModel` from your definition (e.g., `PLUG-01.png`)
+  * Format: `.png`
+  * Size: 512x512 pixels
+  * Background: transparent
+* Commit your changes
+
+### 4.2. Optional: Add Device Notes
+
+Create `docs/devices/YOUR_MODEL.md` (use your device's `model` property):
+
+```markdown
+<!-- Notes BEGIN -->
+## Notes
+
+Your custom notes here (no h1/h2 headings).
+
+<!-- Notes END -->
+```
+
+Most content is auto-generated. Only add this file if you have specific notes.
+
+### 4.3. Submit
+
+Create a pull request to [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io) from your fork. Your device will appear in the documentation on the next Zigbee2MQTT release.
+
+::: tip
+Use the [Adobe Express Remove Background tool](https://new.express.adobe.com/tools/remove-background) to make the background transparent.
+:::
+
+## Step 5: Add Device Definition
+
+Once your device is fully working, submit it for official support:
+
+* Fork [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) on GitHub
+* Create a new branch (e.g., `add-device-YOUR_MODEL`)
+* Add your definition to the appropriate [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) in `src/devices/`
+* Commit your changes
+* Create a pull request from your fork
+
+Your device will be supported out of the box in the next Zigbee2MQTT release!
+
+::: tip
+Test your device thoroughly before submitting. Make sure all features work and no error messages appear in the logs.
+:::
