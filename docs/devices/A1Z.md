@@ -33,7 +33,7 @@ If the indicator light does not flash rapidly, press the button for 5 to 7 secon
 
 There are two ways to reset the device data. Both will reset to factory settings, which means any changed state (led state, restore state, etc.) will be reset to the default value.
 
-Once done, next time the plug gets polled, the following state and data will be reset:
+Once done, next time the plug gets polled, the following states and data will be reset:
 
 - `Power Outage Memory`
 - `Sum of consumed energy`
