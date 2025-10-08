@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 2CT  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Bidirectional energy meter with 80A current clamp |
-| Exposes | ac_frequency, voltage, power_a, power_b, current_a, current_b, power_factor_a, power_factor_b, energy_a, energy_b, update_frequency, timestamp_a, timestamp_b, calibration_ac_frequency, calibration_voltage, calibration_power_a, calibration_current_a, calibration_power_b, calibration_current_b |
+| Exposes | ac_frequency, voltage, power, power_a, power_b, current_a, current_b, power_factor_a, power_factor_b, energy_a, energy_b, update_frequency, timestamp_a, timestamp_b, calibration_ac_frequency, calibration_voltage, calibration_power_a, calibration_current_a, calibration_power_b, calibration_current_b |
 | Picture | ![Tuya 2CT](https://www.zigbee2mqtt.io/images/devices/2CT.png) |
 
 
@@ -34,9 +34,15 @@ pageClass: device-page
 
 * `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -52,6 +58,12 @@ Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
+
+### Power (numeric)
+Instantaneous measured power.
+Value can be found in the published state on the `power` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `W`.
 
 ### Power a (numeric)
 Instantaneous measured power (phase A).

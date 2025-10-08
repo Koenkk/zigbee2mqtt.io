@@ -23,8 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+### Pairing
+Power switch on, press any button 6 times and hold it down on the 6th.  Keep holding until the lights flash to indicate it's in pairing mode
 <!-- Notes END: Do not edit below this line -->
 
 

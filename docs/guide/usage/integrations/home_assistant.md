@@ -68,7 +68,7 @@ automation:
 
 Note: `event` entity is **experimental** and may **break** in the future.
 
-This method work by responding to the state change of an [`event` entity](https://www.home-assistant.io/integrations/event). The specific event can be targetted via the `event_type` attribute. Until the implementation becomes finalized, the event types and additional attributes are subject to change and you have to enable `event` entities explicitely by setting `homeassistant: {experimental_event_entities: true}` (see [Configuration](../../configuration/homeassistant.md) for more info).
+This method work by responding to the state change of an [`event` entity](https://www.home-assistant.io/integrations/event). The specific event can be targeted via the `event_type` attribute. Until the implementation becomes finalized, the event types and additional attributes are subject to change and you have to enable `event` entities explicitly by setting `homeassistant: {experimental_event_entities: true}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
 ```yaml
 automation:
@@ -241,26 +241,26 @@ script:
         alias: Zigbee2MQTT Rename
         icon: 'mdi:pencil'
         sequence:
-            service: mqtt.publish
-            data_template:
-                topic: zigbee2mqtt/bridge/request/device/rename
-                payload_template: >-
-                    {
-                      "from": "{{ states('input_select.zigbee2mqtt_old_name_select') }}",
-                      "to": "{{ states('input_text.zigbee2mqtt_new_name') }}"
-                    }
+            - action: mqtt.publish
+              data:
+                  topic: zigbee2mqtt/bridge/request/device/rename
+                  payload: >-
+                      {
+                        "from": "{{ states('input_select.zigbee2mqtt_old_name_select') }}",
+                        "to": "{{ states('input_text.zigbee2mqtt_new_name') }}"
+                      }
     zigbee2mqtt_remove:
         alias: Zigbee2MQTT Remove
         icon: 'mdi:trash-can'
         sequence:
-            service: mqtt.publish
-            data_template:
-                topic: zigbee2mqtt/bridge/request/device/remove
-                payload_template: >-
-                    {
-                      "id": "{{ states('input_select.zigbee2mqtt_remove_select') }}",
-                      "force": {{ is_state('input_boolean.zigbee2mqtt_force_remove', 'on') }}
-                    }
+            - action: mqtt.publish
+              data:
+                  topic: zigbee2mqtt/bridge/request/device/remove
+                  payload: >-
+                      {
+                        "id": "{{ states('input_select.zigbee2mqtt_remove_select') }}",
+                        "force": {{ 'true' if is_state('input_boolean.zigbee2mqtt_force_remove', 'on') else 'false' }}
+                      }
 
 automation:
     - id: 'zigbee2mqtt_create_notification_on_successful_interview'
@@ -311,7 +311,7 @@ automation:
                          {%- set ns.entities = ns.entities + names %}
                        {%- endif %}
                      {%- endfor %}
-                     {{ ns.entities}}
+                     {{ ns.entities | unique | sort | list}}
             target:
                 entity_id:
                     - input_select.zigbee2mqtt_old_name_select

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNXNKG02LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart rotary knob H1 (wireless) |
-| Exposes | operation_mode, battery, voltage, action_rotation_button_state, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, sensitivity, action |
+| Exposes | operation_mode, battery, voltage, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, sensitivity, action |
 | Picture | ![Aqara ZNXNKG02LM](https://www.zigbee2mqtt.io/images/devices/ZNXNKG02LM.png) |
 
 
@@ -37,7 +37,7 @@ If you're having problems pairing, try keeping the device alive (press the butto
 ## Exposes
 
 ### Operation mode (enum)
-Command mode is usefull for binding. Event mode is usefull for processing..
+Command mode is useful for binding. Event mode is useful for processing..
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
@@ -55,12 +55,6 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Action rotation button state (enum)
-Button state during rotation.
-Value can be found in the published state on the `action_rotation_button_state` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `released`, `pressed`.
 
 ### Action rotation angle (numeric)
 Rotation angle.
@@ -91,6 +85,12 @@ Rotation time.
 Value can be found in the published state on the `action_rotation_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ms`.
+
+### Action rotation button state (enum)
+Button state during rotation.
+Value can be found in the published state on the `action_rotation_button_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `released`, `pressed`.
 
 ### Sensitivity (enum)
 Rotation sensitivity.

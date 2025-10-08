@@ -23,8 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Pairing
+In power on state, press and hold the '^' key (bottom right key) for 5-8 seconds, the Wi-Fi icon flashes on the thermostat display, and the thermostat enters pairing state.
 <!-- Notes END: Do not edit below this line -->
 
 

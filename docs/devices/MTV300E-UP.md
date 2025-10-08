@@ -45,6 +45,12 @@ This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
@@ -58,7 +64,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -144,10 +150,7 @@ The minimal value is `0` and the maximum value is `4233600`.
 The unit of this value is `s`.
 
 ### Operating mode (enum)
-Indicates the operating mode: 
-        - 0x00 -> Timer 
-        - 0x01 -> Staircase
-        - 0x02 -> Pulse.
+Indicates the operating mode.
 Value can be found in the published state on the `operating_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
@@ -218,18 +221,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `4233600`.
 
 ### State after blink (enum)
-Indicate which state must be apply after a blink sequence:
-        - 0x00 -> State before blinking
-        - 0x01 -> OFF
-        - 0x02 -> ON
-        - 0x03 -> Infinite blinking.
+Indicate which state must be apply after a blink sequence.
 Value can be found in the published state on the `state_after_blink` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_after_blink": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_after_blink": NEW_VALUE}`.
 The possible values are: `previous`, `off`, `on`, `infinite`.
 
 ### Enable nc command (binary)
-Define the output relay as Normaly close.
+Define the output relay as Normally close.
 Value can be found in the published state on the `enable_nc_command` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_nc_command": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_nc_command": NEW_VALUE}`.
@@ -261,7 +260,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"blin
 - `do_periodic_cycle` (binary): If set to true the blinking will be “infinite” allowed values: `true` or `false`
 
 ### Deaf blink command (composite)
-Start a deaf sequene on a device only if the attribute “eDeaf” is set to Enable.
+Start a deaf sequence on a device only if the attribute “eDeaf” is set to Enable.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deaf_blink_prop": {"blink_amount": VALUE, "blink_on_time": VALUE, "sequence_amount": VALUE, "sequence_of_blinks": VALUE}}`
 - `blink_amount` (numeric): If defined will force the number of blink to be done during one sequence (only for this order) if not the device will use its own value 
 - `blink_on_time` (numeric): If defined will force the blink’s “on time” (only for this order) if not the device will use its own value 
@@ -499,21 +498,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `relaunch_ble_advert`.
 
 ### Input mode (enum)
-Indicate how the input should be handle:
-        - 0 -> Unknow
-        - 1 -> Push button
-        - 2 -> Switch
-        - 3 -> Relay
-        - 4 -> FP_IN.
+Indicate how the input should be handled.
 Value can be found in the published state on the `input_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_mode": NEW_VALUE}`.
 The possible values are: `unknown`, `push_button`, `switch`, `relay`, `fp_in`.
 
 ### Contact mode (enum)
-Indicate the contact nature of the entry:
-        - 0 -> NC
-        - 1 -> NO.
+Indicate the contact nature of the entry.
 Value can be found in the published state on the `contact_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"contact_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"contact_mode": NEW_VALUE}`.

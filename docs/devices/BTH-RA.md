@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BTH-RA  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Radiator thermostat II |
-| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, pi_heating_demand, running_state), battery, operating_mode, window_detection, boost_heating, remote_temperature, setpoint_change_source, child_lock, display_ontime, display_brightness, display_orientation, displayed_temperature, valve_adapt_status, valve_adapt_process |
+| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state), pi_heating_demand, battery, operating_mode, window_detection, boost_heating, remote_temperature, setpoint_change_source, child_lock, display_ontime, display_brightness, display_orientation, displayed_temperature, valve_adapt_status, valve_adapt_process |
 | Picture | ![Bosch BTH-RA](https://www.zigbee2mqtt.io/images/devices/BTH-RA.png) |
 
 
@@ -26,8 +26,20 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
-To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then put the device into pairing mode, by reseating a battery. The device is in pairing mode, when the display shows ">o<". Don't press the button on the valve, before pairing is completed. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined. The valve should still show ">o<" on its display. Now you can press the button on the valve to initiate valve adaption. If you have variant with Matter (Smart radiator thermostat II [+M]), QR code is for Matter only. You can construct Install code from the IEEE Address and Install code (it is next to QR code): Bosch prefix (40 characters), IEEE Address (16), DLK, Install code (36). Example of Install code: `RB01SG0D83101826480080000000000000000000XXXXXXXXXXXXXXXXDLKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+To pair this device you have to install the device via its installation code. Since this TRV comes in two different flavors (Zigbee only vs. Zigbee and Matter), the pairing process slightly differs between the two.
 
+#### Pairing Zigbee Only TRV (Non-Matter variant)
+The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then put the device into pairing mode, by reseating a battery. The device is in pairing mode, when the display shows ">o<". Don't press the button on the valve, before pairing is completed. Now proceed to section "Zigbee2MQTT Install Code" below.
+
+#### Pairing Zigbee and Matter TRV (`Smart radiator thermostat II [+M]`)
+In case you are trying to pair the variant with Matter-support, the QR code is for Matter only. You can construct Install code from the IEEE Address and Install code (it is next to QR code): Bosch prefix (40 characters), IEEE Address (16), DLK, Install code (36). Example of Install code: `RB01SG0D83101826480080000000000000000000XXXXXXXXXXXXXXXXDLKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+The device also needs to be in Zigbee-pairing mode. After resetting it, it will indicate its pairing mode by LED-flash:
+- Blue flashing: Matter pairing Mode
+- Orange flashing: Zigbee pairing Mode
+To leave Matter pairing Mode and enter Zigbee pairing mode, hold the main button for 3 seconds after Factory reset. The display should confirm with a "Z" that you switched to Zigbee paring Mode. Now proceed to section "Zigbee2MQTT Install Code" below.
+
+### Enter Install Code in Zigbee2MQTT
+In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the Install Code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined. The valve should still show ">o<" on its display. Now you can press the button on the valve to initiate valve adaption.
 
 ### Factory resetting
 To factory reset the device remove one of the batteries. While pressing and holding the device's main button on the front, insert the battery back. As soon as the device's LED is starting to blink orange while showing "RES", release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart into the calibration process and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
@@ -50,13 +62,20 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Climate 
-This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`, `system_mode`, `pi_heating_demand`, `running_state`.
+This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
-- `pi_heating_demand`: Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pi_heating_demand": VALUE}` where `VALUE` is the % between `0` and `100`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pi_heating_demand": ""}`.
 - `local_temperature`: Temperature used by the heating algorithm. This is the temperature measured on the device (by default) or the remote temperature (if set within the last 30 min). (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
+
+### PI heating demand (numeric)
+Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open.
+Value can be found in the published state on the `pi_heating_demand` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pi_heating_demand": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pi_heating_demand": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Battery (numeric)
 Remaining battery in %.

@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Wall switch module |
 | Exposes | switch (state), countdown, power_on_behavior, switch_type |
 | Picture | ![Tuya WHD02](https://www.zigbee2mqtt.io/images/devices/WHD02.png) |
-| White-label | Tuya iHSW02, Aubess TMZ02 |
+| White-label | Tuya iHSW02 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,10 +1,6 @@
 # EmberZNet adapters (Silicon Labs)
 
-Currently supported firmware version: 7.4.x, 8.0.x
-
-::: warning ATTENTION
-Use of 8.0.0 and 8.0.1 is not recommended due to firmware issues that have been resolved in 8.0.2.
-:::
+Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
@@ -20,16 +16,6 @@ serial:
 Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
 ::: tip TIP
-If you are experiencing issues with your adapter and it has hardware flow control support (check list below), try to flash a [firmware with hardware flow control disabled](https://github.com/darkxst/silabs-firmware-builder/tree/ember-nohw/firmware_builds/) and use the following setting instead:
-
-```yaml
-serial:
-    rtscts: false
-```
-
-:::
-
-::: tip TIP
 The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zigbee2mqtt/discussions/21462](https://github.com/Koenkk/zigbee2mqtt/discussions/21462)
 :::
 
@@ -39,12 +25,13 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [https://github.com/darkxst/silabs-firmware-builder/releases](https://github.com/darkxst/silabs-firmware-builder/releases)
     - [@NabuCasa](https://github.com/NabuCasa) / Home Assistant devices: [https://github.com/NabuCasa/silabs-firmware-builder/releases](https://github.com/NabuCasa/silabs-firmware-builder/releases)
     - [@TubesZB](https://github.com/tube0013) devices: [https://github.com/tube0013/tube_gateways/](https://github.com/tube0013/tube_gateways/)
-    - _**Experimental**_ multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
+    - Multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
         - Router firmware also available
 - Web-based
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
     - For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
+    - For SONOFF Dongle: [SONOFF Dongle Flasher](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - Command-line based:
     - Multi-devices by [@NabuCasa](https://github.com/NabuCasa) using Python: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
@@ -52,11 +39,26 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
 
-## Recommended
+## Hardware
 
 Each category is ordered by chip, newer series first.
 
 ### USB
+
+::: details SONOFF Dongle-PMG24
+
+Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
+
+With external antenna(+3 dBi). Only supports software flow control (make sure not to set `rtscts: true`).
+
+- [Product Page](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-pmg24/hardware-specification-dongle-pmg24/)
+- [Buy](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
+
+<img src="../../images/dongle-pmg24-device.jpg" width="200" />
+
+:::
 
 ::: details SMLIGHT SLZB-07mg24
 
@@ -187,6 +189,33 @@ Note: can also be powered via USB (with a special case) and used with a simple E
 
 ### Hybrid (USB + Network)
 
+::: details SONOFF Dongle-M
+
+Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
+
+The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two external antennas, supports PoE power supply, has a built-in web console(http://Dongle-M.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB.
+
+- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
+- [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+
+<img src="../../images/Dongle-M_600_600.jpg" width="200" />
+
+:::
+
+::: details SMLIGHT SLZB-06mg26
+
+Chip: [efr32mg26b420f3200im48](https://www.silabs.com/wireless/zigbee/efr32mg26-series-2-socs/device.efr32mg26b420f3200im48?tab=specs)
+
+With external antenna.
+
+- [Product page](https://smlight.tech/product/slzb-06mg26/)
+
+<img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
+
+:::
+
 ::: details SMLIGHT SLZB-06mg24
 
 Chip: [efr32mg24a020f1024im40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a020f1024im40?tab=specs)
@@ -216,7 +245,65 @@ Not suitable for WiFi or other high latency connections.**
 
 :::
 
+::: details SMLIGHT SLZB-MR1 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
+
+SLZB-MR1 is a compact multi-radio smart home adapter featuring CC2652P7, EFR32MG21 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
+
+|                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
+| :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+
+- [Product page](https://smlight.tech/product/slzb-mr1/)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr1-multiradio-coordinator), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html).  
+  Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr1-zigbee-and-thread-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [CZ](https://www.homebrainz.shop/de/p/smlight-slzb-mr1?srsltid=AfmBOorf9TiY1ZBQD7a7hUwDemKbCFsH_dv8ru9uDCT5yoq19AlyHy6z), [FR+EU](https://www.domadoo.fr/de/smart-home-produkte/7773-smlight-slzb-mr1-usb-ethernet-poe-zigbee-thread-matter-adapter.html), [BE](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [DE](https://mediarath.de/en/products/smlight-slzb-mr1-zigbee-thread-multiradio-cc2652p7-efr32mg21-lan-poe-usb-wifi-adapter), [NL](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [PL](https://pcblab.io/koordynator-slzb-mr1-multiradio-zigbee-thread.html), [SE](https://www.lohelectronics.se/hemautomation/zigbee/controllers-1473/smlight-slzb-mr1-zigbee-3-0-lan-gateway-med-poe-och-z2m), [CH](https://www.swiss-domotique.ch/en/gateways-antennas/2752-smlight-slzb-06-adaptateur-zigbee-ethernet-poe-usb-wifi-2.html), [FI](https://verkkokauppa.nurkantakaa.fi/tuote/smlight-slzb-mr1/), [UK](https://zigbeesmart.com/de-de/products/zigbee-lan-poe-coordinator-smlight-slzb-mr1-multiradio), [US](https://cloudfree.shop/product/smlight-slzb-mr1-zigbee-thread/),
+
+:::
+
+::: details SMLIGHT SLZB-MR2 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
+
+Chips: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs), and [C2674P10](https://www.ti.com/product/CC2674P10)
+
+SLZB-MR2 is a compact multi-radio smart home adapter featuring CC2652P, EFR32MG21, and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
+
+|                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
+| :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+
+- [Product page](https://smlight.tech/product/slzb-mr2/)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr2-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).
+  Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr2-zigbee-and-thread-adapter),
+
+:::
+
+::: details SMLIGHT SLZB-MR3 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
+
+SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32MG24 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
+
+|                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
+| :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+
+- [Product page](https://smlight.tech/product/slzb-mr3/)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr3-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
+  Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr3-zigbee-and-thread-adapter),
+
+:::
+
 ### Hub
+
+::: details SMLIGHT SMHUB (Essential/Professional variants)
+
+SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Professional variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Professional variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
+
+|                               Product picture                               |                            Interface screenshot                            |                                               Youtube videoreview                                               |
+| :-------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SMHUB/smhub_21.jpg" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB/smhub-os.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/SMHUB/smhub-youtube.jpg" width="200" />](https://youtu.be/xQsIt4yYxdw) |
+
+- [Product page](https://smlight.tech/global/smhub)
+- [Manual](https://smlight.tech/support/manuals/books/smhub)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/smhub-professional), [Aliexpress-1 - Worldwide](https://aliexpress.com/item/1005009942560775.html), [Aliexpress-2 - Worldwide](https://aliexpress.com/item/1005009942491630.html).
+
+:::
 
 ::: details Nabu Casa Home Assistant Yellow
 
@@ -250,7 +337,7 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 <img src="../../images/seeed-studio-xiao-mg24.jpg" width="200" />
 :::
 
-## Not recommended
+### Not recommended
 
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 

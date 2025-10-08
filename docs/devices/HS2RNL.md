@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2RNL control via MQTT"
-description: "Integrate your HEIMAN HS2RNL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2RNL control via MQTT"
+description: "Integrate your Heiman HS2RNL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-03-30T17:14:36
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2RNL
+# Heiman HS2RNL
 
 |     |     |
 |-----|-----|
 | Model | HS2RNL  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart repeater & night light |
 | Exposes | switch (state), battery |
-| Picture | ![HEIMAN HS2RNL](https://www.zigbee2mqtt.io/images/devices/HS2RNL.png) |
+| Picture | ![Heiman HS2RNL](https://www.zigbee2mqtt.io/images/devices/HS2RNL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

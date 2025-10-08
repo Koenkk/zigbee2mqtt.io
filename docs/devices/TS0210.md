@@ -57,7 +57,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` vibration is ON, if `false` OFF.
 
 ### Sensitivity (numeric)
-Sensitivty of the sensor (0 = highest sensitivity, 50 = lowest sensitivity). Press button on the device right before changing this.
+Sensitivity of the sensor (0 = highest sensitivity, 50 = lowest sensitivity). Press button on the device right before changing this.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.

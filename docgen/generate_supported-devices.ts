@@ -46,7 +46,7 @@ export default async function generate_supportedDevices() {
             if (d.exposes == null) throw new Error('Exposes null');
             const exposes = Array.from(
                 new Set(
-                    (typeof d.exposes === 'function' ? d.exposes(undefined, undefined) : d.exposes)
+                    (typeof d.exposes === 'function' ? d.exposes({isDummyDevice: true}, {}) : d.exposes)
                         .map((e) => (e.name ? e.name : e.type))
                         .filter((e) => e !== 'linkquality' && e !== 'effect'),
                 ),

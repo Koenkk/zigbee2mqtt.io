@@ -31,6 +31,9 @@ In case the sensor gets stuck and stops reporting (correct) data, you can try to
   2. Restart Zigbee2MQTT.
   3. Re-pair the device.
 
+Zigbee2MQTT version v2.3.0 introduced firmware version v2.3.0 which seems to improve data reporting. \
+To update your device, short press the pairing button once and use the web interface to start the firmware update.
+
 ### Battery
 Uses a CR2450 battery
 
@@ -41,6 +44,9 @@ Long press the pairing button for five seconds. The signal indicator on the disp
 Double click the pairing button to toggle the display between Celsius and Fahrenheit. This does not change the unit of the measured temperature value.
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -116,7 +122,7 @@ The unit of the temperature displayed on the device screen. Note: wake up the de
 Value can be found in the published state on the `temperature_units` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_units": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_units": NEW_VALUE}`.
-The possible values are: `Celsius`, `Fahrenheit`.
+The possible values are: `celsius`, `fahrenheit`.
 
 ### Temperature calibration (numeric)
 Offset to add/subtract to the reported temperature.

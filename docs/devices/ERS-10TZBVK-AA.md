@@ -45,7 +45,7 @@ Device can be set in two modes : COMMAND and EVENT (Current Mode is published on
 | Rotate Right | brightness_step_up|
 | Single Click | toggle|
 | Push+Hold > 3s | hue_move|
-| Release | hue_Stop|
+| Release | hue_stop|
 | Push+Hold and Rotate Left | color_temperature_step_down|
 | Push+Hold and Rotate Right | color_temperature_step_up|
 

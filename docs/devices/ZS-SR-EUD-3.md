@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZS-SR-EUD-3  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Star ring smart dimmer switch 3 gangs |
-| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, backlight_mode |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode |
 | Picture | ![Moes ZS-SR-EUD-3](https://www.zigbee2mqtt.io/images/devices/ZS-SR-EUD-3.png) |
 
 
@@ -70,6 +70,27 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l3": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
+
+### Light type (enum, l1 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l1": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
+
+### Light type (enum, l2 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l2` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l2": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
+
+### Light type (enum, l3 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l3` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l3": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.

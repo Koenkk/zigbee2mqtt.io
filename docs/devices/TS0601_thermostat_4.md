@@ -54,11 +54,11 @@ If value equals `true` battery low is ON, if `false` OFF.
 
 ### Climate 
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `preset`, `system_mode`, `local_temperature_calibration`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `45`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `schedule`, `holiday`, `manual`, `comfort`, `eco`. Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
-- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-3` and the maximum value is `3` with a step size of `1`.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-12` and the maximum value is `12` with a step size of `1`.
 
 ### Schedule monday (text)
 Schedule for monday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
@@ -107,7 +107,7 @@ Holiday temperature.
 Value can be found in the published state on the `holiday_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holiday_temperature": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `30`.
+The minimal value is `5` and the maximum value is `45`.
 The unit of this value is `°C`.
 
 ### Comfort temperature (numeric)
@@ -115,7 +115,7 @@ Comfort temperature.
 Value can be found in the published state on the `comfort_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `30`.
+The minimal value is `5` and the maximum value is `45`.
 The unit of this value is `°C`.
 
 ### Eco temperature (numeric)
@@ -123,7 +123,7 @@ Eco temperature.
 Value can be found in the published state on the `eco_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_temperature": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `30`.
+The minimal value is `5` and the maximum value is `45`.
 The unit of this value is `°C`.
 
 ### Scale protection (binary)

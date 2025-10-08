@@ -18,13 +18,14 @@ pageClass: device-page
 | Model | amina S  |
 | Vendor  | [Amina Distribution AS](/supported-devices/#v=Amina%20Distribution%20AS)  |
 | Description | Amina S EV Charger |
-| Exposes | ev_status, alarms, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, ev_connected, charging, derated, alarm_active, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
+| Exposes | ev_status, alarms, ev_connected, charging, derated, alarm_active, charge_limit_with_on_off, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, current_neutral, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
 | Picture | ![Amina Distribution AS amina S](https://www.zigbee2mqtt.io/images/devices/amina-S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+### Notes on OTA updates
 
-
+When updating using OTA, please be aware of the requirement to physically turn the amp wheel on the device to complete the update! Please see the [official update instructions](https://doc.clickup.com/9004130215/p/h/8cb07x7-30795/12688a97b1dfa55).
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -48,6 +49,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `power_phase_b_calibration`: Calibrates the power_phase_b value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -73,6 +76,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `current_phase_c_precision`: Number of digits after decimal point for current_phase_c, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
+* `current_neutral_calibration`: Calibrates the current_neutral value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_neutral_precision`: Number of digits after decimal point for current_neutral, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
@@ -87,6 +94,38 @@ It's not possible to write (`/set`) this value.
 ### Alarms (list)
 List of active alarms.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarms": ["welded_relay", "wrong_voltage_balance", "rdc_dd_dc_leakage", "rdc_dd_ac_leakage", "high_temperature", "overvoltage", "undervoltage", "overcurrent", "car_communication_error", "charger_processing_error", "critical_overcurrent", "critical_powerloss", "unknown_alarm_bit_12", "unknown_alarm_bit_13", "unknown_alarm_bit_14", "unknown_alarm_bit_15"]}`
+
+### Ev connected (binary)
+An EV is connected to the charger.
+Value can be found in the published state on the `ev_connected` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` ev connected is ON, if `false` OFF.
+
+### Charging (binary)
+Power is being delivered to the EV.
+Value can be found in the published state on the `charging` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` charging is ON, if `false` OFF.
+
+### Derated (binary)
+Charging derated due to high temperature.
+Value can be found in the published state on the `derated` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` derated is ON, if `false` OFF.
+
+### Alarm active (binary)
+An active alarm is present.
+Value can be found in the published state on the `alarm_active` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` alarm active is ON, if `false` OFF.
+
+### Charge limit with on off (numeric)
+Sets the maximum charge amperage and turns charging on/off..
+Value can be found in the published state on the `charge_limit_with_on_off` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charge_limit_with_on_off": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charge_limit_with_on_off": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `32`.
+The unit of this value is `A`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
@@ -127,30 +166,6 @@ Value can be found in the published state on the `last_session_energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"last_session_energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Ev connected (binary)
-An EV is connected to the charger.
-Value can be found in the published state on the `ev_connected` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` ev connected is ON, if `false` OFF.
-
-### Charging (binary)
-Power is being delivered to the EV.
-Value can be found in the published state on the `charging` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` charging is ON, if `false` OFF.
-
-### Derated (binary)
-Charging derated due to high temperature.
-Value can be found in the published state on the `derated` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` derated is ON, if `false` OFF.
-
-### Alarm active (binary)
-An active alarm is present.
-Value can be found in the published state on the `alarm_active` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` alarm active is ON, if `false` OFF.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -219,6 +234,13 @@ The unit of this value is `A`.
 Instantaneous measured electrical current on phase C.
 Value can be found in the published state on the `current_phase_c` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_phase_c": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `A`.
+
+### Current neutral (numeric)
+Instantaneous measured electrical current on neutral.
+Value can be found in the published state on the `current_neutral` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_neutral": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 

@@ -55,14 +55,15 @@ The following Zigbee routers have already been confirmed to support (at least so
 | Zigbee Router                                                                       | GP Proxy | GP Sink | Unicast |
 | :---------------------------------------------------------------------------------- | :------: | :-----: | :-----: |
 | [Custom devices (DiY) TI Router](../../devices/ti.router.md)                        |    Y     |    N    |    Y    |
-| [IKEA E1603/E1702/E1708](../../devices/E1603_E1702_E1708.md)                        |    Y     |    N    |    Y    |
-| [IKEA E2204](../../devices/E2204.md)                                                |    Y     |    Y    |    Y    |
+| [IKEA E160x/E170x/E190x](../../devices/E160x_E170x_E190x.md)                        |    Y     |    N    |    Y    |
+| [IKEA E22x4](../../devices/E22x4.md)                                                |    Y     |    Y    |    Y    |
 | [IKEA ICPSHC24-10EU-IL-2](../../devices/ICPSHC24-10EU-IL-1_ICPSHC24-10EU-IL-2.md)²  |    Y     |    Y    |    Y    |
 | [IKEA L2112](../../devices/L2112.md)                                                |    Y     |    y    |    Y    |
 | [IKEA LED2101G4](../../devices/LED2101G4.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2103G5](../../devices/LED2103G5.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2109G6](../../devices/LED2109G6.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2107C4](../../devices/LED2107C4.md)                                        |    Y     |    N    |    Y    |
+| [IKEA LED2110R3](../../devices/LED2110R3.md)                                        |    Y     |    Y    |    Y    |
 | [Innr RB 249 T](../../devices/RB_249_T.md)                                          |    Y     |    N    |    Y    |
 | [Innr RB 286 C](../../devices/RB_286_C.md)                                          |    Y     |    N    |    Y    |
 | [Philips 1742930P7](../../devices/1742930P7.md)                                     |    Y     |    N    |    Y    |
@@ -82,6 +83,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [Philips 929001953301](../../devices/929001953301.md)                               |    Y     |    N    |    Y    |
 | [Philips 8718696548738](../../devices/8718696548738.md)                             |    Y     |    Y    |   Nⁱ    |
 | [Philips 8719514491106](../../devices/8719514491106.md)                             |    Y     |    N    |    Y    |
+| [Silabs series 2 router](../../devices/Silabs_series_2_router.md)                   |    Y     |    N    |    Y    |
 | [Sonoff ZBDongle-E](../../devices/ZBDongle-E.md)                                    |    Y     |    N    |    Y    |
 | [Sunricher R-ZG9040A-ZG9041A-D](../../devices/SR-ZG9040A_ZG9041A-D.md)              |    Y     |    Y    |    Y    |
 | [Sunricher SR-ZG9101SAC-HP-SWITCH-2CH](../../devices/SR-ZG9101SAC-HP-SWITCH-2CH.md) |    Y     |    Y    |    Y    |
@@ -114,7 +116,7 @@ The Network and Transport layers are where the routing, security and transport b
 
 ### The application layer
 
-Zigbee is more than just a networking technology; it defines a bunch of standard applications that run on the network. These applications are defined in the Zigbee Cluster Library specification (see [Zigbee Cluster Library Specification v7](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/07-5123-08-Zigbee-Cluster-Library.pdf)). Each ‘cluster’ defines one type of application communication. Each cluster type has its own integer ID, and comes in two flavours; client and server. There are clusters for low-level information gathering - getting the device model number, listing the endpoints and the clusters each endpoint implements (each endpoint can implement multiple clusters). There are clusters for simple network setup purposes, such as the Identify cluster which allows someone to ask a device to identify itself, e.g. a light asked to identify itself might start pulsing. There are clusters for on/off light control, where a light might implement the on/off server cluster and a switch might implement the on/off client cluster. There are clusters for configuration that allow a controller to configure devices in various ways.
+Zigbee is more than just a networking technology; it defines a bunch of standard applications that run on the network. These applications are defined in the [Zigbee Cluster Library specification](https://github.com/Koenkk/zigbee-herdsman/wiki/References#csa-zigbee-alliance-spec). Each ‘cluster’ defines one type of application communication. Each cluster type has its own integer ID, and comes in two flavours; client and server. There are clusters for low-level information gathering - getting the device model number, listing the endpoints and the clusters each endpoint implements (each endpoint can implement multiple clusters). There are clusters for simple network setup purposes, such as the Identify cluster which allows someone to ask a device to identify itself, e.g. a light asked to identify itself might start pulsing. There are clusters for on/off light control, where a light might implement the on/off server cluster and a switch might implement the on/off client cluster. There are clusters for configuration that allow a controller to configure devices in various ways.
 
 As noted above, each cluster comes in two flavours; client and server. Generally the server is the endpoint that is running more frequently, and the client chooses to connect to the server. In many cases this isn’t clear-cut when considering the cluster functionality, so the spec decides pretty much arbitrarily.
 

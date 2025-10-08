@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNXNKG01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart rotary knob H1 (with neutral) |
-| Exposes | switch (state), device_temperature, power_outage_count, power_outage_memory, operation_mode, action_rotation_button_state, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, energy, voltage, current, power, action |
+| Exposes | switch (state), device_temperature, power_outage_count, power_outage_memory, operation_mode, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, energy, voltage, current, power, action |
 | Picture | ![Aqara ZNXNKG01LM](https://www.zigbee2mqtt.io/images/devices/ZNXNKG01LM.png) |
 
 
@@ -110,17 +110,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Operation mode (enum)
-Command mode is usefull for binding. Event mode is usefull for processing..
+Command mode is useful for binding. Event mode is useful for processing..
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `event`, `command`.
-
-### Action rotation button state (enum)
-Button state during rotation.
-Value can be found in the published state on the `action_rotation_button_state` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `released`, `pressed`.
 
 ### Action rotation angle (numeric)
 Rotation angle.
@@ -151,6 +145,12 @@ Rotation time.
 Value can be found in the published state on the `action_rotation_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ms`.
+
+### Action rotation button state (enum)
+Button state during rotation.
+Value can be found in the published state on the `action_rotation_button_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `released`, `pressed`.
 
 ### Energy (numeric)
 Sum of consumed energy.

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | LKWSZ211  |
 | Vendor  | [Linkoze](/supported-devices/#v=Linkoze)  |
-| Description | Wireless switch (2-key) |
+| Description | Scene remote with 2 keys |
 | Exposes | battery, action |
 | Picture | ![Linkoze LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.png) |
 
