@@ -123,3 +123,18 @@ When contacting a manufacturer of Tuya compatible device DO NOT ask for Zigbee p
 ### 7. BONUS 2: Further reading
 
 You can read more about how the device communicates with Tuya Zigbee radio module [here](https://developer.tuya.com/en/docs/iot/device-development/access-mode-mcu/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty)
+
+## Fixing Tuya device detection
+
+In case your device is fully working but it has the wrong picture and/or description the detection can be fixed easily:
+
+1. First determine the `Model` of this device (not the `Zigbee model`!) by going to the device -> about page in the Zigbee2MQTT frontend.
+1. Find the definition of this device in one of the [definition files](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) based on the `Model` from step 1, e.g. [`tuya.ts`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/devices/tuya.ts).
+1. Click on the Edit icon
+1. Add the `whiteLabel` to the definition ([example](https://github.com/Koenkk/zigbee-herdsman-converters/blob/bfcd02de893edba24879d4b08e467f9ddd98cc2d/src/devices/tuya.ts#L5174)). The format is `tuya.whitelabel("VENDOR", "MODEL", "DESCRIPTION", ["MANUFACTURER_NAME"])`
+    - `VENDOR`: The vendor of the device, if you don't know use `Tuya` here.
+    - `MODEL`: The model number written on the device or product page
+    - `DESCRIPTION`: A description of the device
+    - `MANUFACTURER_NAME`: Can be retrieved from the frontend -> device -> about page -> below _Zigbee Model_, e.g. `_TZ3000_cphmq0q7` or `_TZE200_eegnwoyw`.
+1. Commit changes and create a pull request
+1. Submit a picture for the docs ([guide](./01_support_new_devices.md#3-add-device-picture-to-zigbee2mqttio-documentation))
