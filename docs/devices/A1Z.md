@@ -31,22 +31,24 @@ If the indicator light does not flash rapidly, press the button for 5 to 7 secon
 
 ### Reset energy
 
-There are two ways to reset that data
+There are two ways to reset the device data. Both will reset to factory settings, which means any changed state (led state, restore state, etc.) will be reset to the default value.
+
+Once done, next time the plug gets polled, all saved state and data, including `Sum of consumed energy`, will be reset.
 
 #### Dev console
 
-To reset `Sum of consumed energy`, use the Dev console and execute:
+To reset, use the Dev console and execute:
 `Endpoint`: `1`
 `Cluster`: `0x00` (`genBasic`)
 `Command`: `0` (`resetFactDefault`)
 `Payload`: (don't change this)
 
-Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
-<!-- Notes END: Do not edit below this line -->
 
 #### JSON payload
 
-The same effect can be acheived by sending the following json payload to the device : `json::{"reset":""}`
+The same effect can be achieved by sending the following json payload to the device : `json::{"reset":""}`
+
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
