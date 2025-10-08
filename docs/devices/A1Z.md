@@ -29,11 +29,15 @@ pageClass: device-page
 
 If the indicator light does not flash rapidly, press the button for 5 to 7 seconds to reset the smart plug parameters to factory settings.
 
-### Reset energy
+### Reset
 
 There are two ways to reset the device data. Both will reset to factory settings, which means any changed state (led state, restore state, etc.) will be reset to the default value.
 
-Once done, next time the plug gets polled, all saved state and data, including `Sum of consumed energy`, will be reset.
+Once done, next time the plug gets polled, the following state and data will be reset:
+
+- `Power Outage Memory`
+- `Sum of consumed energy`
+- `Indicator Mode`
 
 #### Dev console
 
