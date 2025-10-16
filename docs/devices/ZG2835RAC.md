@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG2835RAC  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
-| Description | ZigBee knob smart dimmer |
+| Description | Zigbee knob smart dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy |
 | Picture | ![Sunricher ZG2835RAC](https://www.zigbee2mqtt.io/images/devices/ZG2835RAC.png) |
 | White-label | YPHIX 50208695, Samotech SM311 |
