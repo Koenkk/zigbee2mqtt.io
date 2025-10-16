@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HK-SL-DIM-AU-R-A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
-| Description | ZigBee knob smart dimmer |
+| Description | Zigbee knob smart dimmer |
 | Exposes | identify, power, voltage, current, energy, light (state, brightness), effect, power_on_behavior, external_switch_type |
 | Picture | ![Sunricher HK-SL-DIM-AU-R-A](https://www.zigbee2mqtt.io/images/devices/HK-SL-DIM-AU-R-A.png) |
 
