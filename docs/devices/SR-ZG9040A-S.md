@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | SR-ZG9040A-S  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
-| Description | ZigBee AC phase-cut dimmer single-line |
+| Description | Zigbee AC phase-cut dimmer single-line |
 | Exposes | light (state, brightness), effect, power_on_behavior |
 | Picture | ![Sunricher SR-ZG9040A-S](https://www.zigbee2mqtt.io/images/devices/SR-ZG9040A-S.png) |
 

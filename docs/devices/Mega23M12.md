@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | Mega23M12  |
 | Vendor  | [Dresden Elektronik](/supported-devices/#v=Dresden%20Elektronik)  |
-| Description | ZigBee Light Link wireless electronic ballast |
+| Description | Zigbee Light Link wireless electronic ballast |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior |
 | Picture | ![Dresden Elektronik Mega23M12](https://www.zigbee2mqtt.io/images/devices/Mega23M12.png) |
 

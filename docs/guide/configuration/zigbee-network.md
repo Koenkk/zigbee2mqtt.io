@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 ```yaml
 advanced:
-    # Optional: ZigBee pan ID (default: shown below)
+    # Optional: Zigbee pan ID (default: shown below)
     # Setting pan_id: GENERATE will make Zigbee2MQTT generate a new panID on next startup
     pan_id: 0x1a62
     # Optional: Zigbee extended pan ID, GENERATE will make Zigbee2MQTT generate a new extended panID on next startup (default: shown below)

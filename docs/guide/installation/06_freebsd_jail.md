@@ -69,10 +69,6 @@ Zigbee2MQTT:info  2019-11-09T13:04:01: Starting zigbee-herdsman...
 Zigbee2MQTT:info  2019-11-09T13:04:03: zigbee-herdsman started
 Zigbee2MQTT:info  2019-11-09T13:04:03: Coordinator firmware version: '{"type":"zStack30x","meta":{"transportrev":2,"product":2,"majorrel":2,"minorrel":7,"maintrel":2,"revision":20190425}}'
 Zigbee2MQTT:info  2019-11-09T13:04:03: Currently 0 devices are joined:
-Zigbee2MQTT:warn  2019-11-09T13:04:03: `permit_join` set to  `true` in configuration.yaml.
-Zigbee2MQTT:warn  2019-11-09T13:04:03: Allowing new devices to join.
-Zigbee2MQTT:warn  2019-11-09T13:04:03: Set `permit_join` to `false` once you joined all devices.
-Zigbee2MQTT:info  2019-11-09T13:04:03: Zigbee: allowing new devices to join.
 Zigbee2MQTT:info  2019-11-09T13:04:03: Connecting to MQTT server at mqtt://localhost
 Zigbee2MQTT:info  2019-11-09T13:04:03: Connected to MQTT server
 ```

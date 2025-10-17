@@ -279,11 +279,11 @@ If all the onboard adapters are in use and you need to add another network adapt
 
 ## Error: regular crashes with timeout errors or failure to start after the serial port is opened
 
-These errors may occur when the serial communication between the ZigBee dongle and Zigbee2MQTT unexpectedly stops working.
+These errors may occur when the serial communication between the Zigbee dongle and Zigbee2MQTT unexpectedly stops working.
 
 Possible reasons that may cause this error:
 
-1. The hardware connection between the host computer and the ZigBee dongle is unreliable.
+1. The hardware connection between the host computer and the Zigbee dongle is unreliable.
    In the following example a cheap USB cable causing unreliable connection is compared with a good USB cable:
    ![good-vs-bad-usb-cable](../../images/good-vs-bad-usb-cable.jpg)
    With such cheap cable it is enough to touch the cable to cause USB disconnections.

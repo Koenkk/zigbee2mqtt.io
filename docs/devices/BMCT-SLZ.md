@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BMCT-SLZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Light/shutter control unit II |
-| Exposes | device_mode, power, energy |
+| Exposes | device_mode, power, energy, reset_energy_meters |
 | Picture | ![Bosch BMCT-SLZ](https://www.zigbee2mqtt.io/images/devices/BMCT-SLZ.png) |
 
 
@@ -83,4 +83,11 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Reset energy meters (enum)
+Triggers the reset of all energy meters on the device to 0 kWh.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_energy_meters": NEW_VALUE}`.
+The possible values are: `reset`.
 
