@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HLC821-Z-SC  |
 | Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
-| Description | ZigBee AC phase-cut dimmer |
+| Description | Zigbee AC phase-cut dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior |
 | Picture | ![Shenzhen Homa HLC821-Z-SC](https://www.zigbee2mqtt.io/images/devices/HLC821-Z-SC.png) |
 
