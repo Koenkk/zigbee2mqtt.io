@@ -33,7 +33,7 @@ div.configurator
 import {defineComponent, ref, SetupContext, watch} from 'vue';
 
 /**
- * Very basic algorithm to get farthest away from the WiFi channel while remaining on "preferred" ZigBee channels (11, 15, 20, 25)
+ * Very basic algorithm to get farthest away from the WiFi channel while remaining on "preferred" Zigbee channels (11, 15, 20, 25)
  */
 function bestZigbeeChannel(wifiChannel: number) {
     if (wifiChannel >= 11) {

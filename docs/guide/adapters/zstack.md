@@ -309,7 +309,7 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
 
 :::
 
-::: details ZigStar UZG-01 - Universal ZigBee Gateway
+::: details ZigStar UZG-01 - Universal Zigbee Gateway
 
 Open source PoE af Coordinator with external antenna on CC2652P
 
@@ -356,15 +356,15 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
 
 ::: details cod.m Zigbee Coordinator CC2652P7 (CZC-1.0)
 
-cod.m ZigBee Coordinator (CZC) - Network (LAN/Wi-Fi) with Power over Ethernet (optional) or USB-C.
+cod.m Zigbee Coordinator (CZC) - Network (LAN/Wi-Fi) with Power over Ethernet (optional) or USB-C.
 
 Features:
 
 - CC2652P7 Texas Instruments multiprotocol 2.4GHz radio module
-- ZigBee 3.x, Z-Stack firmware (Koenkk)
+- Zigbee 3.x, Z-Stack firmware (Koenkk)
 - LAN, WLAN or USB mode PoE (802.3af) or USB-C power, <1W power consumption
 - ESP32 open source firmware ([cod.m UZG Fork](https://github.com/codm/czc-firmware/releases))
-- ZigBee firmware update via network and in future via web interface
+- Zigbee firmware update via network and in future via web interface
 - ESP32 firmware update via web interface or USB-C (Auto-BSL)
 - [3D-printed housing (CC-BY-NC-SA)](https://www.printables.com/de/model/857864-codm-zigbee-coordinator-cases-czc-10)
 - Made in Germany, CE, RoHS, WEEE
@@ -440,7 +440,7 @@ SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbe
 
 ::: details JetHome JetHub D1+
 
-Controller with ZigBee module onboard with external antenna.
+Controller with Zigbee module onboard with external antenna.
 
 JetHub D1+ is DIN-rail home automation controller with Ubuntu/Debian OS and a lot of peripherals.
 

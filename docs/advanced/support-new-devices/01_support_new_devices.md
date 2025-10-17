@@ -41,7 +41,7 @@ Depending on the device, it may be possible to extend the definition using other
 This is the recommended process as it is generally easier.
 :::
 
-### 2.1. Extending the generated external definition
+### 3. Extending the generated external definition
 
 To extend the generated external definition, you can either save the code in a file manually, and restart Zigbee2MQTT, or you can use the MQTT API to load the converter at runtime. See [external converters](../../advanced/more/external_converters.md) for more details.
 
@@ -77,7 +77,17 @@ Repeat this last step until your device no longer produces log messages like `No
 
 If none of the existing converters fit, you can add custom ones, an example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.mjs).
 
-### 3. Add device picture to zigbee2mqtt.io documentation
+### 4. Create a pull request
+
+To contribute your new device definition to Zigbee2MQTT such that it will be supported out-of-the-box in the next release, follow these steps:
+
+1. Identify the correct [devices file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) in the zigbee-herdsman-converters repository where your device belongs (usually by brand or vendor).
+1. Click on the file and use the edit (pencil) icon to open it for editing directly on GitHub.
+1. Add your device definition to the file, following the structure and patterns used for similar devices.
+1. Press **Commit changes** -> **Propose changes** -> **Create pull request**.
+1. Fill in the PR template and press **Create pull request**.
+
+### 5. Add device picture to zigbee2mqtt.io documentation
 
 To make sure a picture is available for this device on the supported devices page and in the frontend.
 
@@ -89,10 +99,10 @@ First start by creating a photo you want to provide for the device. Ensure:
   _If necessary, use the [Adobe Express Remove Background tool](https://new.express.adobe.com/tools/remove-background) to make the background transparent._
 - Filename: unique filename (for instance: `ZY-M100-24GV3.png`)
 
-The easiest way to provide the picture for the device is by uploading it using the GitHub web features:
+The easiest way to provide the picture for the device is by uploading it using the GitHub web editor:
 
-1. Navigate with webbrowser to the [zigbee2mqtt.io GitHub repository](https://github.com/Koenkk/zigbee2mqtt.io).
-2. Create your fork of the code repository. Or update your existing fork by choosing to "Sync fork".
+1. Navigate with your browser to the [zigbee2mqtt.io repository](https://github.com/Koenkk/zigbee2mqtt.io).
+2. Create your fork of the code repository. Or update your existing fork by choosing to **Sync fork**.
 
   <img width="268" height="58" alt="fork repository" src="https://github.com/user-attachments/assets/b66e3826-9344-41d3-a406-528b2420705c" />
 
@@ -100,7 +110,7 @@ The easiest way to provide the picture for the device is by uploading it using t
 
   <img width="370" height="52" alt="public/images/devices" src="https://github.com/user-attachments/assets/128d5431-db17-4154-99b8-c1d423443c93" />
 
-4. Choose to upload the image using the "Add file" button and "Upload file".
+4. Choose to upload the image using the **Add file** button and **Upload file**.
 
   <img width="289" height="122" alt="upload file" src="https://github.com/user-attachments/assets/941ce038-1855-4175-9352-1adf56239367" />
 
@@ -108,21 +118,21 @@ The easiest way to provide the picture for the device is by uploading it using t
 
   <img width="685" height="332" alt="new branch" src="https://github.com/user-attachments/assets/0fa3b04e-76a8-432c-a95a-289ca2287f51" />
 
-6. On the next screen you should skip creating a local Pull Request by choosing "Pull requests" from the menu at the top.
+6. On the next screen you should skip creating a local Pull Request by choosing **Pull requests** from the menu at the top.
 
   <img width="248" height="63" alt="Pull Requests" src="https://github.com/user-attachments/assets/6c10900d-00be-4c09-afac-a238e34e934d" />
 
-7. Choose "New pull request".
+7. Choose **New pull request**.
 
   <img width="746" height="109" alt="New pull request" src="https://github.com/user-attachments/assets/2c8379a5-c45c-4c17-975e-797d9a7218cf" />
 
 8. Select the feature-branch with changes you want to provide to the [zigbee2mqtt.io GitHub repository](https://github.com/Koenkk/zigbee2mqtt.io).
 
-    The "Create pull request" button should appear afterwards.
+    The **Create pull request** button should appear afterwards.
 
       <img width="943" height="264" alt="image" src="https://github.com/user-attachments/assets/e2cd762f-1e85-491b-bd92-9d2f2b82ce64" />
 
-9. Provide information for the PR and choose the "Create pull request" button.
+9. Provide information for the PR and choose the **Create pull request** button.
 
   <img width="990" height="629" alt="image" src="https://github.com/user-attachments/assets/4656cdc6-cea5-49cf-8e29-49a0f7b6be07" />
 
@@ -132,11 +142,3 @@ Do not use `h1` or `h2` headings within the `## Notes`-Section.
 
 > > \<!-- Notes BEGIN --><br> >> \## Notes<br>
 > > ...<br> >> \<!-- Notes END -->
-
-### 4. Done!
-
-Upon the next release of [Zigbee2MQTT](https://www.zigbee2mqtt.io/), the [documentation](https://www.zigbee2mqtt.io/supported-devices/) will be updated and your device file will be linked in `../../supported-devices.md` automatically.
-
-Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT.
-
-This can be done by adding the definition to the [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) of your device. :smiley:
