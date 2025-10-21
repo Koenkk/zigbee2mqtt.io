@@ -37,10 +37,14 @@ const definition = {
     model: 'TS0601_new',
     vendor: 'Tuya',
     description: 'Fill in a description of the device here',
-    fromZigbee: [tuya.fz.datapoints],
-    toZigbee: [tuya.tz.datapoints],
-    onEvent: tuya.onEventSetTime, // Add this if you are getting no converter for 'commandMcuSyncTime'
-    configure: tuya.configureMagicPacket,
+    extend: [
+        tuya.modernExtend.tuyaBase({
+            dp: true,
+            // Enable this line in case the device has a clock, if time is incorrect with
+            // `1970`, try with `2000`.
+            // timeStart: "1970",
+        }),
+    ],
     exposes: [
         // Here you should put all functionality that your device exposes
     ],
