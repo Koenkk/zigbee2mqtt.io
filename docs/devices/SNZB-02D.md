@@ -26,13 +26,15 @@ pageClass: device-page
 ## Notes
 
 ### Troubleshooting
-In case the sensor gets stuck and stops reporting (correct) data, you can try to restore it by following these steps:
-  1. Force remove the device via the frontend.
-  2. Restart Zigbee2MQTT.
-  3. Re-pair the device.
+* In case the sensor gets stuck and stops reporting (correct) data, you can try to restore it by following these steps:
+    1. Force remove the device via the frontend.
+    2. Restart Zigbee2MQTT.
+    3. Re-pair the device.
 
-Zigbee2MQTT version v2.3.0 introduced firmware version v2.3.0 which seems to improve data reporting. \
-To update your device, short press the pairing button once and use the web interface to start the firmware update.
+  Zigbee2MQTT version v2.3.0 introduced firmware version v2.3.0 which seems to improve data reporting. \
+  To update your device, short press the pairing button once and use the web interface to start the firmware update.
+
+* In case the sensor does not pair with the coordinator, just remove the battery for 10 seconds.
 
 ### Battery
 Uses a CR2450 battery
