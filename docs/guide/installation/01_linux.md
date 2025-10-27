@@ -14,6 +14,7 @@ These instructions explain how to run Zigbee2MQTT on Linux.
 For the sake of simplicity this guide assumes running on a Raspberry Pi 4, but it should work on any Linux machine.
 
 Therefore the user `pi` is used the following examples, but the user may differ between distributions e.g. `openhabian` should be used on Openhabian.
+If you are using a linux container (proxmox), user will be 'root'.
 
 ::: tip TIP
 Before starting make sure you have an MQTT broker installed on your system.
@@ -132,6 +133,10 @@ WantedBy=multi-user.target
 > If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/node index.js` with `ExecStart=/usr/local/bin/node index.js`.
 
 :::
+
+::: tip USER
+
+> If you are using a linux container  (proxmox lxc) edit above with USER=root.
 
 ::: tip
 
