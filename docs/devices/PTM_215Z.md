@@ -62,7 +62,7 @@ Alternatively, you should be able to reset the switch with the following pattern
 Note: Please make sure the module is positioned the right way up.
 
 ### Disabling commissioning
-Whenever a radio channel is selected in accordance to the above paragraph, PTM 215Z devices will issue a “Join” request. This Join request will be sent as broadcast (destination ID 0xFFFF) on the selected channel.
+Whenever a radio channel is selected in accordance to the above paragraph, PTM 215Z devices will issue a “Join” request if a button is hold more than 7 seconds (long press). This Join request will be sent as broadcast (destination ID 0xFFFF) on the selected channel.
 
 Commissioning can be disabled by pressing buttons A0, A1 and B1 at the same time for at least 7 seconds (long press).
 
