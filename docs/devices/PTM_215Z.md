@@ -52,7 +52,7 @@ To pair it, hold the corresponding button for the channel of your network for 7 
 
 Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
 
-In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
+In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds (long press).
 
 Alternatively, you should be able to reset the switch with the following pattern:
 1. Press top left (A0)
@@ -60,6 +60,11 @@ Alternatively, you should be able to reset the switch with the following pattern
 3. press top right (B0) and bottom left (A1) at the same time 
 4. press top left (A0)
 Note: Please make sure the module is positioned the right way up.
+
+### Disabling commissioning
+Whenever a radio channel is selected in accordance to the above paragraph, PTM 215Z devices will issue a “Join” request. This Join request will be sent as broadcast (destination ID 0xFFFF) on the selected channel.
+
+Commissioning can be disabled by pressing buttons A0, A1 and B1 at the same time for at least 7 seconds (long press).
 
 ## Home Assistant
 In the Home Assistant community forum, you may find some nice Automation Blueprints that works well with this device:
