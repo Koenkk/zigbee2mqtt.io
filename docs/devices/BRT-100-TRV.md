@@ -127,7 +127,11 @@ This climate device supports the following features: `local_temperature`, `curre
 PROGRAMMING MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature. You can set up to 4 stages of temperature every for WEEKDAY ➀➁➂➃➄,  SATURDAY ➅ and SUNDAY ➆..
 Value can be found in the published state on the `programming_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"programming_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"programming_mode": <w_1>  <w_2>  <w_3>  <w_4>  <sat_1>  <sat_2>  <sat_3>  <sat_4>  <sun_1>  <sun_2>  <sun_3>  <sun_4>}`.
+where <w_n> ist the nth schedule for weekdays, <sat_n> for saturdays, <sun_n> for sundays.
+The schedules take the form hh:mm/dd°C where hh is the hour, mm the minute, and dd the temperature.
+example schedule payload:
+{"programming_mode": "00:00/16°C  17:00/20°C  23:59/16°C  23:59/16°C  00:00/16°C  09:00/20°C  23:59/16°C  23:59/16°C  00:00/16°C  09:00/20°C  23:59/16°C  23:59/16°C"}'
 
 ### Boost heating (binary)
 Boost Heating: press and hold "+" for 3 seconds, the device will enter the boost heating mode, and the ▷╵◁ will flash. The countdown will be displayed in the APP.
