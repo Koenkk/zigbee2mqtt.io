@@ -309,7 +309,7 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
 
 :::
 
-::: details ZigStar UZG-01 - Universal ZigBee Gateway
+::: details ZigStar UZG-01 - Universal Zigbee Gateway
 
 Open source PoE af Coordinator with external antenna on CC2652P
 
@@ -356,15 +356,15 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
 
 ::: details cod.m Zigbee Coordinator CC2652P7 (CZC-1.0)
 
-cod.m ZigBee Coordinator (CZC) - Network (LAN/Wi-Fi) with Power over Ethernet (optional) or USB-C.
+cod.m Zigbee Coordinator (CZC) - Network (LAN/Wi-Fi) with Power over Ethernet (optional) or USB-C.
 
 Features:
 
 - CC2652P7 Texas Instruments multiprotocol 2.4GHz radio module
-- ZigBee 3.x, Z-Stack firmware (Koenkk)
+- Zigbee 3.x, Z-Stack firmware (Koenkk)
 - LAN, WLAN or USB mode PoE (802.3af) or USB-C power, <1W power consumption
 - ESP32 open source firmware ([cod.m UZG Fork](https://github.com/codm/czc-firmware/releases))
-- ZigBee firmware update via network and in future via web interface
+- Zigbee firmware update via network and in future via web interface
 - ESP32 firmware update via web interface or USB-C (Auto-BSL)
 - [3D-printed housing (CC-BY-NC-SA)](https://www.printables.com/de/model/857864-codm-zigbee-coordinator-cases-czc-10)
 - Made in Germany, CE, RoHS, WEEE
@@ -424,9 +424,23 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 
 ### Hub
 
+::: details SMLIGHT SMHUB (Essential/Professional variants)
+
+SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Professional variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Professional variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
+
+|                               Product picture                               |                            Interface screenshot                            |                                               Youtube videoreview                                               |
+| :-------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SMHUB/smhub_21.jpg" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB/smhub-os.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/SMHUB/smhub-youtube.jpg" width="200" />](https://youtu.be/xQsIt4yYxdw) |
+
+- [Product page](https://smlight.tech/global/smhub)
+- [Manual](https://smlight.tech/support/manuals/books/smhub)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/smhub-professional), [Aliexpress-1 - Worldwide](https://aliexpress.com/item/1005009942560775.html), [Aliexpress-2 - Worldwide](https://aliexpress.com/item/1005009942491630.html).
+
+:::
+
 ::: details JetHome JetHub D1+
 
-Controller with ZigBee module onboard with external antenna.
+Controller with Zigbee module onboard with external antenna.
 
 JetHub D1+ is DIN-rail home automation controller with Ubuntu/Debian OS and a lot of peripherals.
 

@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | BMCT-RZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
-| Description | Relay, potential free |
-| Exposes | switch (state) |
+| Description | Relay (potential free) |
+| Exposes | switch (state), actuator_type |
 | Picture | ![Bosch BMCT-RZ](https://www.zigbee2mqtt.io/images/devices/BMCT-RZ.png) |
 
 
@@ -44,6 +44,9 @@ In this mode, the device behaves like a button. The circuit is briefly closed an
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -63,4 +66,11 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Actuator type (enum)
+Select the appropriate actuator type so that the connected device can be controlled correctly..
+Value can be found in the published state on the `actuator_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"actuator_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"actuator_type": NEW_VALUE}`.
+The possible values are: `normally_closed`, `normally_open`.
 

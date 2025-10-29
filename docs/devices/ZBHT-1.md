@@ -55,7 +55,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
 2. Humidity monitoring - Works
 3. Battery monitoring - untested.
  * In theory the device LED will flash ONCE if the voltage falls below 2.4V
- * In theory the device will send a low-power report to the ZigBee network if the voltage falls below 2.4V - no other battery reporting.
+ * In theory the device will send a low-power report to the Zigbee network if the voltage falls below 2.4V - no other battery reporting.
 <!-- Notes END: Do not edit below this line -->
 
 
