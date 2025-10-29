@@ -48,3 +48,13 @@ Supports: CC2652, CC1352, CC2538
 1. Fill the old coordinator ieee address into "Secondary Address" -> "IEEE 802.15.4 MAC address" (first `0x` can be skipped)
 1. Press "Write"
 1. Reflash the firmware on your stick - in the right corner under Secondary MAC check "Retain secondary IEEE" (this is important, otherwise the coordinator will not use the new ieee address)
+
+## Universal Silicon Labs Flasher
+
+Supports: EFR32-based coordinators
+
+1. [Install](https://github.com/NabuCasa/universal-silabs-flasher) the tool
+2. Plug in your adapter
+3. Run `universal-silabs-flasher --device /dev/ttyACM0 write-ieee --ieee 0011223344556677`
+    - Replace `/dev/ttyACM0` with the path to your new adapter
+    - Replace `0011223344556677` with your coordinator's IEEE address. Note that there is no hex prefix (0x)

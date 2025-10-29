@@ -41,7 +41,6 @@ When operating in switch mode, this device provides:
 - Voltage and current measurements
 
 Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
-
 <!-- Notes END: Do not edit below this line -->
 
 

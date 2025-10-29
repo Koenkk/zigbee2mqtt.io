@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | A9Z  |
 | Vendor  | [Nous](/supported-devices/#v=Nous)  |
-| Description | Smart ZigBee Socket |
+| Description | Smart Zigbee Socket |
 | Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
 | Picture | ![Nous A9Z](https://www.zigbee2mqtt.io/images/devices/A9Z.png) |
 

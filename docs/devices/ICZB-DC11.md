@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ICZB-DC11  |
 | Vendor  | [iCasa](/supported-devices/#v=iCasa)  |
-| Description | ZigBee 12-36V DC LED dimmer |
+| Description | Zigbee 12-36V DC LED dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior |
 | Picture | ![iCasa ICZB-DC11](https://www.zigbee2mqtt.io/images/devices/ICZB-DC11.png) |
 
