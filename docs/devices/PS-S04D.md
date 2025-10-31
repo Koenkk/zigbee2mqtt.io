@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PS-S04D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Presence sensor FP300 |
-| Exposes | power_outage_count, motion_sensitivity, battery, voltage, presence, pir_detection, presence_detection_options, absence_delay_timer, pir_detection_interval, illuminance, humidity, temperature, spatial_learning, restart_device, identify, temp_&_humidity_sampling, temp_&_humidity_sampling_period, temp_reporting_interval, temp_reporting_threshold, temp_reporting_mode, humidity_reporting_interval, humidity_reporting_threshold, humidity_report_mode, light_sampling, light_sampling_period, light_reporting_interval, light_reporting_threshold, light_report_mode, track_target_distance, target_distance, detection_range, detection_range_composite, led_disabled_night, schedule_start_time, schedule_end_time |
+| Exposes | power_outage_count, motion_sensitivity, battery, voltage, presence, pir_detection, presence_detection_options, ai_interference_source_selfidentification, ai_sensitivity_adaptive, absence_delay_timer, pir_detection_interval, illuminance, humidity, temperature, spatial_learning, restart_device, identify, temp_&_humidity_sampling, temp_&_humidity_sampling_period, temp_reporting_interval, temp_reporting_threshold, temp_reporting_mode, humidity_reporting_interval, humidity_reporting_threshold, humidity_report_mode, light_sampling, light_sampling_period, light_reporting_interval, light_reporting_threshold, light_report_mode, track_target_distance, target_distance, detection_range, detection_range_composite, led_disabled_night, schedule_start_time, schedule_end_time |
 | Picture | ![Aqara PS-S04D](https://www.zigbee2mqtt.io/images/devices/PS-S04D.png) |
 
 
@@ -97,6 +97,20 @@ Value can be found in the published state on the `presence_detection_options` pr
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"presence_detection_options": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_detection_options": NEW_VALUE}`.
 The possible values are: `both`, `mmwave`, `pir`.
+
+### Ai interference source selfidentification (binary)
+AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources.
+Value can be found in the published state on the `ai_interference_source_selfidentification` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ai_interference_source_selfidentification": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_interference_source_selfidentification": NEW_VALUE}`.
+If value equals `ON` ai interference source selfidentification is ON, if `OFF` OFF.
+
+### Ai sensitivity adaptive (binary)
+Adaptive sensitivity switch function..
+Value can be found in the published state on the `ai_sensitivity_adaptive` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ai_sensitivity_adaptive": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_sensitivity_adaptive": NEW_VALUE}`.
+If value equals `ON` ai sensitivity adaptive is ON, if `OFF` OFF.
 
 ### Absence delay timer (numeric)
 Value for delay before the device reports absence when no presence is detected.

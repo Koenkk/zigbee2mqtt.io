@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | EMIZB-151  |
 | Vendor  | [Frient](/supported-devices/#v=Frient)  |
-| Description | HAN P1 power-meter sensor |
-| Exposes | power, voltage, current, energy, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, current_neutral |
+| Description | Electricity Meter Interface 2 P1 |
+| Exposes | power, voltage, current, energy, energy_tier_1, energy_tier_2, produced_energy_tier_1, produced_energy_tier_2, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, current_neutral |
 | Picture | ![Frient EMIZB-151](https://www.zigbee2mqtt.io/images/devices/EMIZB-151.png) |
 
 
@@ -110,6 +110,34 @@ The unit of this value is `A`.
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Energy tier 1 (numeric)
+Energy consumed in tariff 1 (peak/high) - OBIS 1.8.1.
+Value can be found in the published state on the `energy_tier_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_tier_1": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Energy tier 2 (numeric)
+Energy consumed in tariff 2 (off-peak/low) - OBIS 1.8.2.
+Value can be found in the published state on the `energy_tier_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_tier_2": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Produced energy tier 1 (numeric)
+Energy produced in tariff 1 (peak/high) - OBIS 2.8.1.
+Value can be found in the published state on the `produced_energy_tier_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"produced_energy_tier_1": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Produced energy tier 2 (numeric)
+Energy produced in tariff 2 (off-peak/low) - OBIS 2.8.2.
+Value can be found in the published state on the `produced_energy_tier_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"produced_energy_tier_2": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 

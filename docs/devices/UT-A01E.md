@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | UT-A01E  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Floor heating thermostat W500 |
-| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, preset, state, humidity, sensor_source, ntc_sensor_type, window_detection, power_outage_memory, child_lock, hysteresis, identify |
+| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, preset, state, humidity, sensor, ntc_sensor_type, window_detection, power_outage_memory, child_lock, hysteresis, identify |
 | Picture | ![Aqara UT-A01E](https://www.zigbee2mqtt.io/images/devices/UT-A01E.png) |
 
 
@@ -102,12 +102,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### Sensor source (enum)
+### Sensor (enum)
 Temperature sensor source.
-Value can be found in the published state on the `sensor_source` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_source": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_source": NEW_VALUE}`.
-The possible values are: `internal`, `ntc`.
+Value can be found in the published state on the `sensor` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
+The possible values are: `internal`, `external`, `ntc`.
 
 ### Ntc sensor type (enum)
 NTC sensor type (k - KOhm).

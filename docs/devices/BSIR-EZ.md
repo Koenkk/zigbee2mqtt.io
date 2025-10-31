@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSIR-EZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Outdoor siren |
-| Exposes | device_state, trigger_alarm, stop_alarm, external_trigger, tamper, power_outage, battery, battery_low, alarm_mode, siren_volume, siren_duration, light_duration, siren_delay, light_delay, primary_power_source, current_power_source, solar_panel_voltage |
+| Exposes | device_state, trigger_alarm, stop_alarm, external_trigger, tamper, power_outage, alarm_mode, siren_volume, siren_duration, light_duration, siren_delay, light_delay, primary_power_source, current_power_source, solar_panel_voltage, battery, battery_low |
 | Picture | ![Bosch BSIR-EZ](https://www.zigbee2mqtt.io/images/devices/BSIR-EZ.png) |
 
 
@@ -79,20 +79,6 @@ Indicates the configured primary power source experiences a power outage. This o
 Value can be found in the published state on the `power_outage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `outage_detected` power outage state is ON, if `power_ok` OFF.
-
-### Battery (numeric)
-Remaining battery in %.
-Value can be found in the published state on the `battery` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
-It's not possible to write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
-### Battery low (binary)
-Empty battery indicator.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
 
 ### Alarm mode (enum)
 Select if you only want a visual warning, an acoustic warning or both.
@@ -159,4 +145,18 @@ Current voltage level received from the integrated solar panel.
 Value can be found in the published state on the `solar_panel_voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `volt`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Battery low (binary)
+Empty battery indicator.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
 

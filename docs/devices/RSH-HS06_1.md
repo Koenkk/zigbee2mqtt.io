@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RSH-HS06_1  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity sensor |
-| Exposes | battery, temperature, humidity, voltage |
+| Exposes | temperature, humidity, voltage, battery |
 | Picture | ![Tuya RSH-HS06_1](https://www.zigbee2mqtt.io/images/devices/RSH-HS06_1.png) |
 
 
@@ -43,13 +43,6 @@ pageClass: device-page
 
 ## Exposes
 
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
@@ -67,4 +60,12 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 

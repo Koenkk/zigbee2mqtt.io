@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0001_switch_module  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 gang switch module |
-| Exposes | switch (state), countdown, power_on_behavior, switch_type |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode |
 | Picture | ![Tuya TS0001_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_module.png) |
 | White-label | OXT SWTZ21, Moes ZM-104-M |
 
@@ -73,4 +73,11 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `toggle`, `state`, `momentary`.
+
+### Indicator mode (enum)
+LED indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `off`, `off/on`, `on/off`, `on`.
 

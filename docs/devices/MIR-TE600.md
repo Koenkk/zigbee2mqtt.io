@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | MIR-TE600  |
 | Vendor  | [MultIR](/supported-devices/#v=MultIR)  |
-| Description | temperature sensor |
+| Description | Temperature sensor |
 | Exposes | battery, temperature, humidity |
 | Picture | ![MultIR MIR-TE600](https://www.zigbee2mqtt.io/images/devices/MIR-TE600.png) |
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_plug_1  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart plug (with power monitoring) |
-| Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
+| Exposes | switch (state), countdown, power_outage_memory, power, current, voltage, energy, child_lock |
 | Picture | ![Tuya TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.png) |
 | White-label | LELLKI TS011F_plug, BlitzWolf BW-SHP15, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11, Aubess TS011F_plug_1 |
 
@@ -126,13 +126,6 @@ Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
-
-### Indicator mode (enum)
-LED indicator mode.
-Value can be found in the published state on the `indicator_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-The possible values are: `off`, `off/on`, `on/off`, `on`.
 
 ### Power (numeric)
 Instantaneous measured power.

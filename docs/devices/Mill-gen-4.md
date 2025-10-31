@@ -28,12 +28,6 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-## Pairing
-1. Press ☮ to enter the menu.
-2. Use the + and - buttons to navigate to “C2b” on the display.
-3. Press ☮ to activate Zigbee. The Wi-Fi light will blink green, indicating the device is ready to pair.
-4. If no pairing occurs within 60 seconds, Zigbee will automatically turn off.
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*

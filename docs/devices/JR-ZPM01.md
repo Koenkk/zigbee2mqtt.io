@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JR-ZPM01  |
 | Vendor  | [Girier](/supported-devices/#v=Girier)  |
 | Description | Smart Plug |
-| Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
+| Exposes | switch (state), countdown, power_outage_memory, power, current, voltage, energy, child_lock |
 | Picture | ![Girier JR-ZPM01](https://www.zigbee2mqtt.io/images/devices/JR-ZPM01.png) |
 
 

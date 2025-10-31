@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | _TZE204_3regm3h6  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart thermostat for electric radiator with pilot wire |
-| Exposes | state, child_lock, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset), mode, comfort_temperature, eco_temperature, antifrost_temperature, temperature_sensibility, antifrost, window_detection, window, power, voltage, current, energy, energy_today, energy_yesterday, device_mode_type |
+| Exposes | state, child_lock, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset), mode, radiators_without_integrated_regulation, comfort_temperature, eco_temperature, antifrost_temperature, temperature_sensibility, antifrost, window_detection, window, power, voltage, current, energy, energy_today, energy_yesterday, device_mode_type |
 | Picture | ![Tuya _TZE204_3regm3h6](https://www.zigbee2mqtt.io/images/devices/_TZE204_3regm3h6.png) |
 
 
@@ -78,6 +78,13 @@ Current running mode.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `comfort`, `eco`, `antifrost`, `off`, `comfort_1`, `comfort_2`, `program`, `manual`.
+
+### Radiators without integrated regulation (binary)
+Enable this for radiator without integrated regulation. OFF if Comfort, Eco and Antifrost temperatures can be defined on the radiator. ON if the radiator has no integrated regulation (i.e define temperatures on the thermostat)..
+Value can be found in the published state on the `radiators_without_integrated_regulation` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radiators_without_integrated_regulation": NEW_VALUE}`.
+If value equals `ON` radiators without integrated regulation is ON, if `OFF` OFF.
 
 ### Comfort temperature (numeric)
 Set comfort temperature.

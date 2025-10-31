@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | FP1E  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Presence sensor |
-| Exposes | device_temperature, power_outage_count, motion_sensitivity, presence, movement, target_distance, detection_range, spatial_learning, restart_device, identify |
+| Exposes | device_temperature, power_outage_count, motion_sensitivity, presence, movement, target_distance, detection_range, spatial_learning, restart_device, identify, ai_interference_source_selfidentification, ai_sensitivity_adaptive |
 | Picture | ![Aqara FP1E](https://www.zigbee2mqtt.io/images/devices/FP1E.png) |
 
 
@@ -112,4 +112,18 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
+
+### Ai interference source selfidentification (binary)
+AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources.
+Value can be found in the published state on the `ai_interference_source_selfidentification` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ai_interference_source_selfidentification": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_interference_source_selfidentification": NEW_VALUE}`.
+If value equals `ON` ai interference source selfidentification is ON, if `OFF` OFF.
+
+### Ai sensitivity adaptive (binary)
+Adaptive sensitivity switch function..
+Value can be found in the published state on the `ai_sensitivity_adaptive` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ai_sensitivity_adaptive": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_sensitivity_adaptive": NEW_VALUE}`.
+If value equals `ON` ai sensitivity adaptive is ON, if `OFF` OFF.
 

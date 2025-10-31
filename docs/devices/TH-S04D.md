@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TH-S04D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Climate Sensor W100 |
-| Exposes | temperature, humidity, sensor, external_temperature, external_humidity, display_off, high_temperature, low_temperature, high_humidity, low_humidity, sampling, period, temp_report_mode, temp_period, temp_threshold, humi_report_mode, humi_period, humi_threshold, identify, action |
+| Exposes | data, mode, temperature, humidity, sensor, external_temperature, external_humidity, display_off, high_temperature, low_temperature, high_humidity, low_humidity, sampling, period, temp_report_mode, temp_period, temp_threshold, humi_report_mode, humi_period, humi_threshold, identify, action |
 | Picture | ![Aqara TH-S04D](https://www.zigbee2mqtt.io/images/devices/TH-S04D.png) |
 
 
@@ -53,6 +53,18 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 
 ## Exposes
+
+### Data (text)
+Timestamp+Most Recent PMTSD Values Sent by W100.
+Value can be found in the published state on the `data` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Mode (binary)
+On: Enable thermostat mode. Buttons send encrypted payloads and middle line is enabled. Off: Disable thermostat mode. Buttons send actions and middle line is disabled..
+Value can be found in the published state on the `mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+If value equals `ON` mode is ON, if `OFF` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -202,5 +214,5 @@ The possible values are: `identify`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_plus`, `hold_center`, `hold_minus`, `single_plus`, `single_center`, `single_minus`, `double_plus`, `double_center`, `double_minus`, `release_plus`, `release_center`, `release_minus`.
+The possible values are: `data_request`, `hold_plus`, `hold_center`, `hold_minus`, `single_plus`, `single_center`, `single_minus`, `double_plus`, `double_center`, `double_minus`, `release_plus`, `release_center`, `release_minus`.
 

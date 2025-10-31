@@ -219,5 +219,5 @@ The possible values are: `quick_mode`, `anti_flicker_mode`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_top`, `single_center`, `single_bottom`, `slider_single`, `slider_double`, `slider_hold`, `slider_up`, `slider_down`.
+The possible values are: `hold_top`, `hold_center`, `hold_bottom`, `single_top`, `single_center`, `single_bottom`, `double_top`, `double_center`, `double_bottom`, `release_top`, `release_center`, `release_bottom`, `slider_single`, `slider_double`, `slider_hold`, `slider_up`, `slider_down`.
 
