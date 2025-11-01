@@ -26,13 +26,13 @@ pageClass: device-page
 ## Notes
 
 ### Description
-Wiren Board WB-MSW v.3 — hybrid digital sensor of motion, temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+Wiren Board WB-MSW v.3 — hybrid digital sensor of motion, temperature, humidity, illuminance, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
 
 ### Switch endpoints
-The device allways exposes 3 on/off endpoints named `l1`, `l2` and `l3`. Frist two of them only work if illuminannce + IR blaster addon is installed. Their finctuons as follows:
+The device always exposes 3 on/off endpoints named `l1`, `l2` and `l3`. First two of them only work if illuminance + IR blaster addon is installed. Their functions are as follows:
 - `l1` – controls blinking red led
 - `l2` – controls blinking green led
-- `l3` – controlls buzzer
+- `l3` – controls buzzer
 
 Warning, the installed buzzer is very loud.
 

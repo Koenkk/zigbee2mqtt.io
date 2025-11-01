@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_cover_6  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Cover motor |
-| Exposes | work_state, cover (state, position), battery, opening_mode, motor_direction, set_upper_limit, factory_reset |
+| Exposes | work_state, cover (state, position), battery, illuminance, opening_mode, motor_direction, set_upper_limit, factory_reset |
 | Picture | ![Tuya TS0601_cover_6](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_6.png) |
 
 
@@ -28,6 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -47,6 +52,12 @@ Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Opening mode (enum)

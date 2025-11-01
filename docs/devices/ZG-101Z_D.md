@@ -20,7 +20,6 @@ pageClass: device-page
 | Description | Smart knob |
 | Exposes | operation_mode, battery, action |
 | Picture | ![Tuya ZG-101Z/D](https://www.zigbee2mqtt.io/images/devices/ZG-101Z-D.png) |
-| White-label | COOLO ZG-101ZD |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

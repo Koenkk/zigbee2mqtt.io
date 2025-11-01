@@ -8,10 +8,11 @@ const access = {
 };
 
 export function generateExpose(definition) {
+    const manufacturerName = definition.whiteLabelFingerprint?.[0].manufacturerName;
     return `
 ## Exposes
 
-${(typeof definition.exposes === 'function' ? definition.exposes() : definition.exposes).map((e) => getExposeDocs(e, definition)).join('\n\n')}
+${(typeof definition.exposes === 'function' ? definition.exposes({isDummyDevice: true, manufacturerName}, {}) : definition.exposes).map((e) => getExposeDocs(e, definition)).join('\n\n')}
 `;
 }
 
@@ -280,7 +281,14 @@ function getExposeDocs(expose, definition) {
             }
             if (colorTemp) {
                 lines.push(`  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second`);
+                lines.push(`  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second`);
                 lines.push(`  "color_temp_move": "stop", // Stop moving color temperature`);
+                lines.push(`  "color_temp_move": "release", // Stop moving color temperature`);
+                lines.push(`  "color_temp_move": 0, // Stop moving color temperature`);
+                lines.push(`  "color_temp_move": "up", // Move to warmer color temperature at default rate`);
+                lines.push(`  "color_temp_move": 1, // Move to warmer color temperature at default rate`);
+                lines.push(`  "color_temp_move": "down", // Move to cooler color temperature at default rate`);
+                lines.push(`  "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints`);
                 lines.push(`  "color_temp_step": 99, // Increase color temperature by 99`);
             }
             if (colorHS) {

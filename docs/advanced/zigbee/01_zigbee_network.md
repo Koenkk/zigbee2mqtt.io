@@ -32,7 +32,7 @@ _Examples: [CC2531 USB sniffer flashed with the coordinator firmware](https://gi
 Zigbee2MQTT logs the device type of your devices on startup, e.g.:
 
 ```
-2018-5-28 20:39:46 INFO 0x00158d00018255df (0x00158d00018255df): ZNCZ02LM - Xiaomi Mi power plug ZigBee (Router)
+2018-5-28 20:39:46 INFO 0x00158d00018255df (0x00158d00018255df): ZNCZ02LM - Xiaomi Mi power plug Zigbee (Router)
 2018-5-28 20:39:46 INFO 0x00158d0001b79111 (0x00158d0001b79111): WSDCGQ01LM - Xiaomi MiJia temperature & humidity sensor (EndDevice)
 ```
 
