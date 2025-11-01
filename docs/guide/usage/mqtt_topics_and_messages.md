@@ -149,9 +149,23 @@ Example payload:
     "permit_join_end": 1733666394, // Epoch time when permit join will end, `undefined` if permit join is disabled.
     "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
     "config_schema": {...}, // Will contain the JSON schema of the config
-    "restart_required": false // Indicates whether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
+    "restart_required": false, // Indicates whether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
+    "os": {
+        "version": "Linux - 0.0.1 - x64", // OS version
+        "node_version": "v1.2.3", // Node.js version
+        "cpus": "Intel Core i7-9999 (x1)", // CPU types + cores
+        "memory_mb": 10, // Total amount of system memory in MB
+    },
+    "mqtt": {
+        "server": "mqtt://localhost:1883", // MQTT server
+        "version": 5, // MQTT protocol version
+    }
 }
 ```
+
+## zigbee2mqtt/bridge/health
+
+See [Health](./health.md).
 
 ## zigbee2mqtt/bridge/state
 
@@ -181,18 +195,18 @@ Example payload:
         "disabled": false,
         "friendly_name":"my_plug",
         "description":"this plug is in the kitchen",
-        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic"],"output":[]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic"],"output":[],"scenes":[]}}},
         "definition":{
+            "source":"native", // native, generated or external
             "model":"ZNCZ02LM",
             "vendor":"Xiaomi",
-            "description":"Mi power plug ZigBee",
+            "description":"Mi power plug Zigbee",
             "options": [...], // see exposes/options below
             "exposes": [...]  // see exposes/options below
         },
         "power_source":"Mains (single phase)",
         "date_code":"02-28-2017",
         "model_id":"lumi.plug",
-        "scenes": [{"id": 3, "name": "Chill scene"}],
         // Can be: PENDING, IN_PROGRESS, SUCCESSFUL or FAILED
         "interview_state": "SUCCESSFUL",
         // `interviewing` and `interview_completed` are deprecated, use `interview_state`.
@@ -206,8 +220,9 @@ Example payload:
         "supported":true,
         "disabled": false,
         "friendly_name":"my_bulb",
-        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic","genLevelCtrl"],"output":["genOta"]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic","genLevelCtrl"],"output":["genOta"],"scenes": []}}},
         "definition":{
+            "source":"native",
             "model":"LED1624G9",
             "vendor":"IKEA",
             "description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white",
@@ -217,7 +232,6 @@ Example payload:
         "power_source":"Mains (single phase)",
         "software_build_id":"1.3.009",
         "model_id":"TRADFRI bulb E27 CWS opal 600lm",
-        "scenes": [],
         "date_code":"20180410",
         "interview_state": "SUCCESSFUL",
         "interviewing":false,
@@ -235,7 +249,9 @@ Example payload:
             "configured_reportings":[
               {"cluster":"genOnOff","attribute":"onOff","maximum_report_interval":10,"minimum_report_interval":1,"reportable_change":1}
             ],
-            "clusters":{"input":["genBasic","msIlluminanceMeasurement"],"output":["genOnOff"]}
+            "clusters":{"input":["genBasic","msIlluminanceMeasurement"],"output":["genOnOff"]},
+            "scenes": [{"id": 3, "name": "Chill scene"}],
+            "name": "left"
           }
         },
         "network_address":22160,
@@ -246,7 +262,6 @@ Example payload:
         "power_source":"Battery",
         "date_code":"04-28-2019",
         "model_id":null,
-        "scenes": [],
         "interview_state": "SUCCESSFUL",
         "interviewing":false,
         "interview_completed":true
@@ -257,12 +272,11 @@ Example payload:
         "network_address":0,
         "supported":false,
         "disabled": false,
-        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":[],"output":[]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":[],"output":[]},"scenes": []}},
         "friendly_name":"Coordinator",
         "definition":null,
         "power_source":null,
         "date_code":null,
-        "scenes": [],
         "model_id":null,
         "interview_state": "SUCCESSFUL",
         "interviewing":false,
@@ -348,9 +362,9 @@ See [External converters](../../advanced/more/external_converters.md).
 
 This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2MQTT will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` is `error` it will also contain an `error` property containing a description of the error.
 
-Example: when publishing `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true}` Zigbee2MQTT will respond to `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok"}`. In case this request failed the response will be `{"data":{}, "error": "Failed to connect to adapter","status":"error"}`.
+Example: when publishing `zigbee2mqtt/bridge/request/permit_join` with payload `{"time": 254}` Zigbee2MQTT will respond to `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"time":254},"status":"ok"}`. In case this request failed the response will be `{"data":{}, "error": "Invalid payload","status":"error"}`.
 
-Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2MQTT will include it in the response. Example: `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok","transaction":23}`.
+Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2MQTT will include it in the response. Example: `zigbee2mqtt/bridge/request/permit_join` with payload `{"time": 254, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"time":254},"status":"ok","transaction":23}`.
 
 For requests where a device is involved you can select a specific endpoint by adding `/ENDPOINT_ID` where `ENDPOINT_ID` is the endpoint number (e.g `1`, `2`) or the endpoint name (e.g. `left`, `l1`). By default the first endpoint is taken. Example of a `zigbee2mqtt/bridge/request/device/bind` payload: `{"from": "my_remote/left", "to": "my_bulb"}`.
 
@@ -536,7 +550,7 @@ By setting up reporting for the bulb it will send notifications to Zigbee2MQTT a
 
 It is a good practice to keep a balance between staying updated with relevant information and conserving energy, especially in the case of battery-powered devices.
 
-Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/wiki/References#csa-zigbee-alliance-spec) for more information. Example payload is `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
+Refer to the Configure Reporting Command in the [Zigbee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/wiki/References#csa-zigbee-alliance-spec) for more information. Example payload is `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
 
 Parameters
 

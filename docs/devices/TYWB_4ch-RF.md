@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press and hold any of the manual switch buttons for 8 seconds to initiate pairing mode.
 <!-- Notes END: Do not edit below this line -->
 
 

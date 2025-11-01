@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | XVV-Mega23M12  |
 | Vendor  | [Dresden Elektronik](/supported-devices/#v=Dresden%20Elektronik)  |
-| Description | ZigBee Light Link wireless electronic ballast color temperature |
+| Description | Zigbee Light Link wireless electronic ballast color temperature |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior |
 | Picture | ![Dresden Elektronik XVV-Mega23M12](https://www.zigbee2mqtt.io/images/devices/XVV-Mega23M12.png) |
 
@@ -73,7 +73,14 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
   "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second
   "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_move": "release", // Stop moving color temperature
+  "color_temp_move": 0, // Stop moving color temperature
+  "color_temp_move": "up", // Move to warmer color temperature at default rate
+  "color_temp_move": 1, // Move to warmer color temperature at default rate
+  "color_temp_move": "down", // Move to cooler color temperature at default rate
+  "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````

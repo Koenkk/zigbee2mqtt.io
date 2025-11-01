@@ -56,7 +56,7 @@ metadata:
     namespace: flux-system
 spec:
     interval: 10m
-    url: https://charts.zigbee2mqtt.io/index
+    url: https://charts.zigbee2mqtt.io
 ```
 
 Then create a Helm release:

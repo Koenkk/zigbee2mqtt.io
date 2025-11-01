@@ -27,6 +27,6 @@ To factory reset a device through Touchlink bring the device close (< 10 cm) to 
 
 Zigbee2MQTT will now start scanning, this can take up to 1 minute and during this scan **your network cannot be used**. After some time the device will identify itself (e.g. a bulb will start to blink).
 
-Now that your device has been factory reset, it will automatically join Zigbee2MQTT (make sure that joining is enabled through `permit_join: true`). If it doesn't, try powering the bulb off and on 1 time.
+Now that your device has been factory reset, it will automatically join Zigbee2MQTT (make sure that joining is enabled). If it doesn't, try powering the bulb off and on 1 time.
 
 In case you want to factory reset a specific device (which can be found through a scan, see above) request the factory reset with the following payload: `{"ieee_address": "0x12345678", "channel": 12}`.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9030A-MW  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee compatible ceiling mount occupancy sensor |
-| Exposes | model, light_pwm_frequency, brightness_curve, start_up_on_off, motion_sensor_light_duration, motion_sensor_light_sensitivity, motion_sensor_working_mode, motion_sensor_sensing_distance, motion_sensor_microwave_switch, motion_sensor_onoff_broadcast, motion_sensor_light_state, motion_sensor_in_pwm_brightness, motion_sensor_in_pwm_output, motion_sensor_leave_pwm_output, motion_sensor_leave_delay, motion_sensor_pwm_output_after_delay, linear_error_ratio_coefficient_of_lux_measurement, fixed_deviation_of_lux_measurement, light (state, brightness), effect, power_on_behavior, occupancy, illuminance, action |
+| Exposes | model, light_pwm_frequency, brightness_curve, start_up_on_off, motion_sensor_light_duration, motion_sensor_light_sensitivity, motion_sensor_working_mode, motion_sensor_sensing_distance, motion_sensor_microwave_switch, motion_sensor_onoff_broadcast, motion_sensor_light_state, motion_sensor_in_pwm_brightness, motion_sensor_in_pwm_output, motion_sensor_leave_pwm_output, motion_sensor_leave_delay, motion_sensor_pwm_output_after_delay, linearity_error_ratio_lux, fixed_deviation_lux, light (state, brightness), effect, power_on_behavior, occupancy, illuminance, action |
 | Picture | ![Sunricher SR-ZG9030A-MW](https://www.zigbee2mqtt.io/images/devices/SR-ZG9030A-MW.png) |
 
 
@@ -169,18 +169,18 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Linear error ratio coefficient of lux measurement (numeric)
-Linear error ratio coefficient of LUX measurement (100‰-10000‰, default: 1000‰).
-Value can be found in the published state on the `linear_error_ratio_coefficient_of_lux_measurement` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linear_error_ratio_coefficient_of_lux_measurement": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linear_error_ratio_coefficient_of_lux_measurement": NEW_VALUE}`.
+### Linearity error ratio lux (numeric)
+Linearity error ratio coefficient for LUX measurement. 1000 means 1000‰ (default). Increasing this value magnifies the LUX measurement linearly, decreasing minifies it. For example, 1001 means 1.001x, 500 means 0.5x..
+Value can be found in the published state on the `linearity_error_ratio_lux` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linearity_error_ratio_lux": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linearity_error_ratio_lux": NEW_VALUE}`.
 The minimal value is `100` and the maximum value is `10000`.
 
-### Fixed deviation of lux measurement (numeric)
-Fixed deviation of LUX measurement (-100~100, default: 0).
-Value can be found in the published state on the `fixed_deviation_of_lux_measurement` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fixed_deviation_of_lux_measurement": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fixed_deviation_of_lux_measurement": NEW_VALUE}`.
+### Fixed deviation lux (numeric)
+Fixed deviation of LUX measurement. Signed 2-byte integer. Positive value increases, negative value decreases the measured LUX. For example, 100 means +100 LUX, -100 means -100 LUX..
+Value can be found in the published state on the `fixed_deviation_lux` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fixed_deviation_lux": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fixed_deviation_lux": NEW_VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 
 ### Light 

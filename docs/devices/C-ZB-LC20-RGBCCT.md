@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | C-ZB-LC20-RGBCCT  |
 | Vendor  | [Candeo](/supported-devices/#v=Candeo)  |
 | Description | Smart LED controller (RGBCCT mode) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs, level_config), effect, power_on_behavior, identify |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs, level_config), power_on_behavior, identify |
 | Picture | ![Candeo C-ZB-LC20-RGBCCT](https://www.zigbee2mqtt.io/images/devices/C-ZB-LC20-RGBCCT.png) |
 
 
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -83,7 +86,14 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
   "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second
   "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_move": "release", // Stop moving color temperature
+  "color_temp_move": 0, // Stop moving color temperature
+  "color_temp_move": "up", // Move to warmer color temperature at default rate
+  "color_temp_move": 1, // Move to warmer color temperature at default rate
+  "color_temp_move": "down", // Move to cooler color temperature at default rate
+  "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints
   "color_temp_step": 99, // Increase color temperature by 99
   "hue_move": 40, // Starts moving hue up at 40 units per second, will endlessly loop (allowed value range: -255 till 255)
   "hue_step": -90, // Decrease hue by 90 (allowed value range: -255 till 255)
@@ -91,13 +101,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.

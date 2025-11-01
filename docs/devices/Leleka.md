@@ -35,7 +35,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `last_boot_update`: Interval for request boot datetime from device. (default 60 seconds). The value must be a number with a minimum value of `10`
+* `last_boot_update_poll_interval`: Interval for request boot datetime from device. (default 60 seconds). The value must be a number with a minimum value of `10`
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
