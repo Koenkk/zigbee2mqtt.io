@@ -69,7 +69,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 ### Countdown (numeric)
 Countdown to turn device off after a certain time.
 Value can be found in the published state on the `countdown` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.

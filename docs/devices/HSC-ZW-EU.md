@@ -61,14 +61,6 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Countdown (numeric)
-Countdown to turn device off after a certain time.
-Value can be found in the published state on the `countdown` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `43200`.
-The unit of this value is `s`.
-
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.

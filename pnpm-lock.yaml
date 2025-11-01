@@ -97,8 +97,8 @@ importers:
         specifier: 5.102.1
         version: 5.102.1
       zigbee-herdsman-converters:
-        specifier: 25.58.0
-        version: 25.58.0
+        specifier: 25.59.0
+        version: 25.59.0
 
 packages:
 
@@ -3796,8 +3796,8 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@25.58.0:
-    resolution: {integrity: sha512-idJAG6bccl2s7Ak/wXpUTYKh8RcVWYrX8givqNL0SXRp26u13VKRjAaJP6F8AxdVGjvPI7jrM85Hu17BHt2DVg==}
+  zigbee-herdsman-converters@25.59.0:
+    resolution: {integrity: sha512-Pw0L88hLQgv1vxv3uTFKbPDaMd75zuNWIcM0Y8+F0uKDZt8K8djEiBK74RlWYmHcrvBfzeRM61Jw/991/TShcw==}
     engines: {node: '>=20.15.0'}
 
   zigbee-herdsman@6.3.2:
@@ -7740,7 +7740,7 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  zigbee-herdsman-converters@25.58.0:
+  zigbee-herdsman-converters@25.59.0:
     dependencies:
       iconv-lite: 0.7.0
       semver: 7.7.3
