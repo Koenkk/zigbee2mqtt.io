@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | MIR-WA100  |
 | Vendor  | [MultIR](/supported-devices/#v=MultIR)  |
-| Description | Water leakage |
+| Description | Water leakage sensor |
 | Exposes | battery, water_leak, battery_low |
 | Picture | ![MultIR MIR-WA100](https://www.zigbee2mqtt.io/images/devices/MIR-WA100.png) |
 

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | MIR-MC100  |
 | Vendor  | [MultIR](/supported-devices/#v=MultIR)  |
-| Description | Doors sensor |
+| Description | Door sensor |
 | Exposes | battery, contact, tamper, battery_low |
 | Picture | ![MultIR MIR-MC100](https://www.zigbee2mqtt.io/images/devices/MIR-MC100.png) |
 

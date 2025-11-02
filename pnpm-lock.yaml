@@ -97,8 +97,8 @@ importers:
         specifier: 5.102.1
         version: 5.102.1
       zigbee-herdsman-converters:
-        specifier: 25.35.1
-        version: 25.35.1
+        specifier: 25.59.0
+        version: 25.59.0
 
 packages:
 
@@ -243,6 +243,9 @@ packages:
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
+
+  '@date-fns/tz@1.4.1':
+    resolution: {integrity: sha512-P5LUNhtbj6YfI3iJjw5EL9eUAG6OitD0W3fWQcpQjDRc/QIsL0tRNuO1PcDvPccWL1fSTXXdE1ds+l95DV/OFA==}
 
   '@docsearch/css@4.2.0':
     resolution: {integrity: sha512-65KU9Fw5fGsPPPlgIghonMcndyx1bszzrDQYLfierN+Ha29yotMHzVS94bPkZS6On9LS8dE4qmW4P/fGjtCf/g==}
@@ -1397,10 +1400,6 @@ packages:
     resolution: {integrity: sha512-lAUU+02RFBuCKQPj/P6NgjlbCnLBMp4UtgTx7vNHd3XSIJF87s9a5rA3aH2yw3GS9DqZAUbOtZdCCiZeVRqt0w==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
-
-  buffer-crc32@1.0.0:
-    resolution: {integrity: sha512-Db1SbgBS/fg/392AblrMJk97KggmvYhr4pB5ZIMTWtaivCPMWLkmb7m21cJvpvgK+J3nsU2CmmixNBZx4vFj/w==}
-    engines: {node: '>=8.0.0'}
 
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
@@ -3251,6 +3250,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.3:
+    resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   send@0.19.0:
     resolution: {integrity: sha512-dW41u5VfLXu8SJh5bwRmyYUbAoSB3c9uQh6L8h/KtsFREPWpbX1lrljJo186Jc4nmci/sGUZ9a0a0J2zgfq2hw==}
     engines: {node: '>= 0.8.0'}
@@ -3792,11 +3796,12 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@25.35.1:
-    resolution: {integrity: sha512-w0Eh4RUtM1XUlrr1AhMOZ0NRcIIfYCD1qlBPnVb5RqmNz8uLGIwHDjXSjhzXk4YfWx9NbR78X1PjT5KRTwYoMg==}
+  zigbee-herdsman-converters@25.59.0:
+    resolution: {integrity: sha512-Pw0L88hLQgv1vxv3uTFKbPDaMd75zuNWIcM0Y8+F0uKDZt8K8djEiBK74RlWYmHcrvBfzeRM61Jw/991/TShcw==}
+    engines: {node: '>=20.15.0'}
 
-  zigbee-herdsman@6.1.5:
-    resolution: {integrity: sha512-1tph0ep8sPrfVaTkipGJ8Dw7l3Y3QgRRcV+SOPAcbkbpXRib4CKH2MAN35imXiLqwwkVupxkEQ0z52DqQP/I3Q==}
+  zigbee-herdsman@6.3.2:
+    resolution: {integrity: sha512-35qPU1KoADQrgIol/pWulVKRj8jFpuogtPWjisHSlss3dvzlj5yg5wBdw9/qpcDxNShtKMtj1K28io5KMmRsAw==}
 
   zigbee-on-host@0.1.13:
     resolution: {integrity: sha512-mL7s9ic7J85YI7wOG1/QlbRYE3haFzIHqgnM2+xLmjj8CazjhmGjop9TCfuY2JXyDI9ss7bNCLxuI9n6M+TXug==}
@@ -3984,6 +3989,8 @@ snapshots:
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
+
+  '@date-fns/tz@1.4.1': {}
 
   '@docsearch/css@4.2.0': {}
 
@@ -5260,8 +5267,6 @@ snapshots:
       electron-to-chromium: 1.5.237
       node-releases: 2.0.25
       update-browserslist-db: 1.1.3(browserslist@4.26.3)
-
-  buffer-crc32@1.0.0: {}
 
   buffer-from@1.1.2: {}
 
@@ -7121,6 +7126,8 @@ snapshots:
 
   semver@7.7.2: {}
 
+  semver@7.7.3: {}
+
   send@0.19.0:
     dependencies:
       debug: 2.6.9
@@ -7733,17 +7740,17 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  zigbee-herdsman-converters@25.35.1:
+  zigbee-herdsman-converters@25.59.0:
     dependencies:
-      buffer-crc32: 1.0.0
       iconv-lite: 0.7.0
-      semver: 7.7.2
-      zigbee-herdsman: 6.1.5
+      semver: 7.7.3
+      zigbee-herdsman: 6.3.2
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-herdsman@6.1.5:
+  zigbee-herdsman@6.3.2:
     dependencies:
+      '@date-fns/tz': 1.4.1
       '@serialport/bindings-cpp': 13.0.1
       '@serialport/parser-delimiter': 13.0.0
       '@serialport/stream': 13.0.0

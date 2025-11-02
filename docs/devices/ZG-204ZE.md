@@ -1,6 +1,6 @@
 ---
 title: "HOBEIAN ZG-204ZE control via MQTT"
-description: "Integrate your HOBEIAN ZG-204ZV via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+description: "Integrate your HOBEIAN ZG-204ZE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-05-07T18:17:42
 pageClass: device-page
 ---
@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG-204ZE  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
-| Description | Millimeter wave motion detection |
-| Exposes | presence, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, motion_detection_sensitivity |
-| Picture | ![HOBEIAN ZG-204ZV](https://www.zigbee2mqtt.io/images/devices/ZG-204ZE.png) |
+| Description | 10G mw motion detection |
+| Exposes | presence, battery, fading_time, indicator, motion_detection_sensitivity |
+| Picture | ![HOBEIAN ZG-204ZE](https://www.zigbee2mqtt.io/images/devices/ZG-204ZE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,19 +38,6 @@ or set values (i.e. `sensitivity` or `keep_time`) will only work when the sensor
 <!-- Notes END: Do not edit below this line -->
 
 
-
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
-
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
-
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -82,14 +69,6 @@ Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
-
-### Illuminance interval (numeric)
-Light sensing sampling(refresh and update only while active).
-Value can be found in the published state on the `illuminance_interval` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `720`.
-The unit of this value is `minutes`.
 
 ### Motion detection sensitivity (numeric)
 The larger the value, the more sensitive it is (refresh and update only while active).

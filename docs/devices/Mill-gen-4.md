@@ -28,19 +28,13 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-## Pairing
-1. Press ☮ to enter the menu.
-2. Use the + and - buttons to navigate to “C2b” on the display.
-3. Press ☮ to activate Zigbee. The Wi-Fi light will blink green, indicating the device is ready to pair.
-4. If no pairing occurs within 60 seconds, Zigbee will automatically turn off.
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
-* `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
