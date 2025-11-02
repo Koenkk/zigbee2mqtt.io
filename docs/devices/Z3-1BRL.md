@@ -55,7 +55,6 @@ If you suspect your dial is using a different group ID, you can find it by follo
 6. Enter `{"groupcount": 0, "grouplist": []}` for the `Payload` and click `Execute`.
 7. In the debug logs, you will see a line with `commandGetMembershipRsp` and the array of group IDs as `grouplist`, in decimal format.
 8. You can now turn off debug logging and restart Zigbee2MQTT.
-
 <!-- Notes END: Do not edit below this line -->
 
 

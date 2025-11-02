@@ -231,21 +231,21 @@ The remote supports Touchlink. It is unclear how the Touchlink configuration int
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `zone_1_group_id`: Group ID for zone 1 (default: 101). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_1_group_id`: Group ID for zone 1 (default: 101). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_2_group_id`: Group ID for zone 2 (default: 102). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_2_group_id`: Group ID for zone 2 (default: 102). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_3_group_id`: Group ID for zone 3 (default: 103). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_3_group_id`: Group ID for zone 3 (default: 103). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_4_group_id`: Group ID for zone 4 (default: 104). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_4_group_id`: Group ID for zone 4 (default: 104). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_5_group_id`: Group ID for zone 5 (default: 105). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_5_group_id`: Group ID for zone 5 (default: 105). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_6_group_id`: Group ID for zone 6 (default: 106). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_6_group_id`: Group ID for zone 6 (default: 106). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_7_group_id`: Group ID for zone 7 (default: 107). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_7_group_id`: Group ID for zone 7 (default: 107). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_8_group_id`: Group ID for zone 8 (default: 108). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_8_group_id`: Group ID for zone 8 (default: 108). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
 * `expose_values`: Expose additional numeric values for action properties (hue, saturation, level, etc.). The value must be `true` or `false`
 

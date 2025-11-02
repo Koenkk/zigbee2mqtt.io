@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BTH-RM230Z  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Room thermostat II 230V |
-| Exposes | climate (local_temperature, occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature_calibration, system_mode, running_state), humidity, operating_mode, window_detection, boost_heating, child_lock, display_ontime, display_brightness |
+| Exposes | switch (state), custom_system_mode, operating_mode, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, occupied_cooling_setpoint, system_mode, running_state), setpoint_change_source, humidity, heater_type, valve_type, cable_sensor_mode, cable_sensor_temperature, window_open_mode, boost_heating, child_lock, display_brightness, display_switch_on_duration, activity_led, error_state |
 | Picture | ![Bosch BTH-RM230Z](https://www.zigbee2mqtt.io/images/devices/BTH-RM230Z.png) |
 
 
@@ -37,21 +37,55 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
 
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Available system modes (enum)
+Select if the thermostat is connected to a heating or a cooling device.
+Value can be found in the published state on the `custom_system_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"custom_system_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_system_mode": NEW_VALUE}`.
+The possible values are: `heat`, `cool`.
+
+### Operating mode (enum)
+Bosch-specific operating mode. This is being used as mode on the exposed thermostat when using Home Assistant..
+Value can be found in the published state on the `operating_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
+The possible values are: `schedule`, `manual`, `pause`.
+
 ### Climate 
-This climate device supports the following features: `local_temperature`, `occupied_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature_calibration`, `system_mode`, `running_state`.
-- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `4.5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
-- `occupied_cooling_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_cooling_setpoint": VALUE}` where `VALUE` is the °C between `4.5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_cooling_setpoint": ""}`.
+This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`, `occupied_cooling_setpoint`, `system_mode`, `running_state`.
+- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
+- `occupied_cooling_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_cooling_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_cooling_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
+
+### Setpoint change source (enum)
+Source of the current setpoint temperature.
+Value can be found in the published state on the `setpoint_change_source` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"setpoint_change_source": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `manual`, `schedule`, `externally`.
 
 ### Humidity (numeric)
 Measured relative humidity.
@@ -60,46 +94,81 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### Operating mode (enum)
-Bosch-specific operating mode (overrides system mode).
-Value can be found in the published state on the `operating_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
-The possible values are: `schedule`, `manual`, `pause`.
+### Heater type (enum)
+Select the connected heater type or 'manual_control' if you like to activate the relay manually when necessary.
+Value can be found in the published state on the `heater_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"heater_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heater_type": NEW_VALUE}`.
+The possible values are: `underfloor_heating`, `radiator`, `central_heating`, `manual_control`.
 
-### Window detection (binary)
-Enable/disable window open (Lo.) mode.
-Value can be found in the published state on the `window_detection` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
-If value equals `ON` window detection is ON, if `OFF` OFF.
+### Valve type (enum)
+Select the connected valve type.
+Value can be found in the published state on the `valve_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_type": NEW_VALUE}`.
+The possible values are: `normally_closed`, `normally_open`.
 
-### Boost heating (binary)
-Activate boost heating (5 min. on TRV).
+### Cable sensor mode (enum)
+Select a configuration for the sensor connection. If you select "with_regulation", the measured temperature on the cable sensor is used by the heating/cooling algorithm instead of the local temperature..
+Value can be found in the published state on the `cable_sensor_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cable_sensor_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cable_sensor_mode": NEW_VALUE}`.
+The possible values are: `not_used`, `cable_sensor_without_regulation`, `cable_sensor_with_regulation`.
+
+### Cable sensor temperature (numeric)
+Measured temperature value on the cable sensor (if enabled).
+Value can be found in the published state on the `cable_sensor_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cable_sensor_temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Window open mode (binary)
+Activates the window open mode, where the thermostat disables any heating/cooling to prevent unnecessary energy consumption. Please keep in mind that the device itself does not detect any open windows!.
+Value can be found in the published state on the `window_open_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_open_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_mode": NEW_VALUE}`.
+If value equals `ON` window open mode is ON, if `OFF` OFF.
+
+### Activate boost heating (binary)
+Activate boost heating (opens TRV for 5 minutes).
 Value can be found in the published state on the `boost_heating` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"boost_heating": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating": NEW_VALUE}`.
-If value equals `ON` boost heating is ON, if `OFF` OFF.
+If value equals `ON` activate boost heating is ON, if `OFF` OFF.
 
 ### Child lock (binary)
-Enables/disables physical input on the device.
+Enables/disables physical input on the thermostat.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
-
-### Display ontime (numeric)
-Sets the display on-time.
-Value can be found in the published state on the `display_ontime` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_ontime": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_ontime": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `30`.
-The unit of this value is `s`.
 
 ### Display brightness (numeric)
 Sets brightness of the display.
 Value can be found in the published state on the `display_brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_brightness": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Display switch-on duration (numeric)
+Sets the time before the display is automatically switched off.
+Value can be found in the published state on the `display_switch_on_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_switch_on_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_switch_on_duration": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `30`.
+The unit of this value is `s`.
+
+### Activity LED state (enum)
+Determines the state of the little dot on the display next to the heating/cooling symbol.
+Value can be found in the published state on the `activity_led` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"activity_led": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activity_led": NEW_VALUE}`.
+The possible values are: `off`, `auto`, `on`.
+
+### Error state (text)
+Indicates whether the device encounters any errors or not.
+Value can be found in the published state on the `error_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"error_state": ""}`.
+It's not possible to write (`/set`) this value.
 

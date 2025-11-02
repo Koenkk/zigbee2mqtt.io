@@ -47,7 +47,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `translation`: Language: Default French. The value must be one of `FRANCAIS`, `ENGLISH`
 
-* `refresh_rate`: Refresh rate for static values (those with refresh buttons). Default: 120 s. The value must be a number with a minimum value of `60` and with a with a maximum value of `3600`
+* `refresh_rate`: Refresh rate for static values (those with refresh buttons). Default: 120 s. The value must be a number with a minimum value of `60` and with a maximum value of `3600`
 
 
 ## Exposes

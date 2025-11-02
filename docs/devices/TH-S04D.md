@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TH-S04D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Climate Sensor W100 |
-| Exposes | temperature, humidity, sensor, external_temperature, external_humidity, display_off, high_temperature, low_temperature, high_humidity, low_humidity, sampling, period, temp_report_mode, temp_period, temp_threshold, humi_report_mode, humi_period, humi_threshold, identify, action |
+| Exposes | data, mode, temperature, humidity, sensor, external_temperature, external_humidity, display_off, high_temperature, low_temperature, high_humidity, low_humidity, sampling, period, temp_report_mode, temp_period, temp_threshold, humi_report_mode, humi_period, humi_threshold, identify, action |
 | Picture | ![Aqara TH-S04D](https://www.zigbee2mqtt.io/images/devices/TH-S04D.png) |
 
 
@@ -43,16 +43,28 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
+
+### Data (text)
+Timestamp+Most Recent PMTSD Values Sent by W100.
+Value can be found in the published state on the `data` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Mode (binary)
+On: Enable thermostat mode. Buttons send encrypted payloads and middle line is enabled. Off: Disable thermostat mode. Buttons send actions and middle line is disabled..
+Value can be found in the published state on the `mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+If value equals `ON` mode is ON, if `OFF` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -202,5 +214,5 @@ The possible values are: `identify`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_plus`, `hold_center`, `hold_minus`, `single_plus`, `single_center`, `single_minus`, `double_plus`, `double_center`, `double_minus`, `release_plus`, `release_center`, `release_minus`.
+The possible values are: `data_request`, `hold_plus`, `hold_center`, `hold_minus`, `single_plus`, `single_center`, `single_minus`, `double_plus`, `double_center`, `double_minus`, `release_plus`, `release_center`, `release_minus`.
 
