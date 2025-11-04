@@ -22,6 +22,17 @@ You can find details on the Docker command [here](https://github.com/git-develop
 
 ## Method without Docker
 
+## With uvx
+
+[uv](https://docs.astral.sh/uv/) provides `uvx`, a command that invokes tools without installing them. It is lightning fast.
+
+```bash
+uvx --from git+https://github.com/JelmerT/cc2538-bsl --with intelhex \
+    cc2538-bsl -p /dev/ttyACM0 -ewv CC1352P2_CC2652P_launchpad_coordinator_20230507.hex
+```
+
+This command includes installing the intelhex dependency. Add `--bootloader-sonoff-usb` as required.
+
 ### Prepare your system (debian based)
 
 1. Install python and python-pip.
