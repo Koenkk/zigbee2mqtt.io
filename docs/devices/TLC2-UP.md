@@ -23,12 +23,38 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Pairing
+Press a button on the transmitter 5 times quickly.
+
 ## Notes
-
 - [CSA product page](https://csa-iot.org/csa_product/tlc2-up/)
+- Set the desired button to "Radio bus" mode (see configuration options)
+- Set the desired button to Roller shutters mode (see configuration options) 
+
+## Configuration Options
+To configure a transmitter, you must first enter the configuration menu.
+To do this, quickly press any button on the transmitter 10 times: the transmitter's LED will start flashing rapidly.
+While the LED is flashing, press the button you want to configure as many times as necessary.
+
+
+| Number of actuations | Possible settings |
+|-----|-----|
+|  | *Button function* | 
+| 1 | Switch on/off or start open/stop/close |
+| 2 | Switch on memory or intermediate position |
+| 3 | Switch on or start open/stop |
+| 4 | Switch off or shut close/stop |
+| | *Radio modes* |
+| 5 | Direct mode |
+| 6 | “Radio bus” mode |
+|  | *Affected products on the radio bus* |
+| 10 | Lighting (factory settings) |
+| 11 | Roller shutters |
+|  | *Copying or deleting the connections of a button or the entire transmitter* |
+| 15 | Restoration of the factory configuration of a button |
+| 24 | Restoration of the access point. Delete all access points to the radio bus |
+| 25 | Restore the factory settings of the remote control |
 <!-- Notes END: Do not edit below this line -->
-
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
