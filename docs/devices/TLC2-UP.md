@@ -29,7 +29,7 @@ Press a button on the transmitter 5 times quickly.
 ## Notes
 - [CSA product page](https://csa-iot.org/csa_product/tlc2-up/)
 - In "direct mode", the signal is only sent to the paired device and does not appear in zigbee2mqtt. To set the desired button to "radio bus" mode, see configuration options below.
-- The "lightning mode" is switching lights or lights AND roller shutters on the bus. When this sends an signal in radio bus mode, it does so to ALL lights in the Zigbee network. However, no other device responds to open, close. To set the desired button to "roller shutter" mode, see configuration options below.
+- The "lightning mode" is switching lights or lights AND roller shutters on the bus. When this sends a signal in radio bus mode, it does so to ALL lights in the Zigbee network. However, no other device responds to open, close. To set the desired button to "roller shutter" mode, see configuration options below.
 
 ## Configuration Options
 To configure a transmitter, you must first enter the configuration menu.
