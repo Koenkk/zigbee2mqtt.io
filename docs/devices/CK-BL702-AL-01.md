@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | CK-BL702-AL-01  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Zigbee LED bulb |
+| Description | GU-10 5W 350lm Zigbee RGBCCW LED bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
-| Picture | ![Tuya CK-BL702-AL-01](https://www.zigbee2mqtt.io/images/devices/CK-BL702-AL-01.png) |
+| Picture | ![Tuya CK-BL702-AL-01](https://www.zigbee2mqtt.io/images/devices/THE_PICTURE_SHOULD_BE_FOR_GU10_LED_BULB   eg. https://ae-pic-a1.aliexpress-media.com/kf/Ad59df940687743f595559f41d4ceb9558.jpg_960x960q75.jpg_.avif) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
