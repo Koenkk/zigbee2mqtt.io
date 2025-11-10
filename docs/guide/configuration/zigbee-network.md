@@ -23,7 +23,7 @@ advanced:
 ```
 
 ::: tip
-Set `network_key: GENERATE` to let Zigbee2MQTT generate a new random key on the first start. The `configuration.yml` gets updated with the new key. Changing the network_key requires repairing of all devices.
+Set `network_key: GENERATE` to let Zigbee2MQTT generate a new random key on the first start. The `configuration.yml` gets updated with the new key. Changing the network_key requires re-pairing of all devices.
 :::
 
 ::: tip
