@@ -39,8 +39,8 @@ The remote reports three sensor values by default:
 - `Linkquality` (lqi)
 
 The remote features seven numbered pairs of on/off buttons, with each pair controlling a distinct zone. Additionally, there is an eighth button group at the top, comprising dedicated `ON` and `OFF` buttons for zone 8.
-Each zone corresponds to a specific ZigBee group. By default, Zone 1 maps to ZigBee group 101, Zone 2 to 102, and so on.
-Note that when using multiple MiBoxer FUT089Z remotes, they will all control the same ZigBee groups (101-108) by default.
+Each zone corresponds to a specific Zigbee group. By default, Zone 1 maps to Zigbee group 101, Zone 2 to 102, and so on.
+Note that when using multiple MiBoxer FUT089Z remotes, they will all control the same Zigbee groups (101-108) by default.
 
 On each button press or slider touch, the device sends one or two consecutive actions and a corresponding group ID. The group ID is published along with the device state as `action_group`:
 
@@ -199,12 +199,12 @@ action:
 mode: restart
 ```
 
-#### Direct Control via ZigBee Groups
+#### Direct Control via Zigbee Groups
 
-Alternatively, or in addition to the approach described above, you can also directly control ZigBee lights etc. with this remote.
+Alternatively, or in addition to the approach described above, you can also directly control Zigbee lights etc. with this remote.
 
 To directly control lights or smartplugs without going through MQTT (and Home Assistant or whatever), 
-- first create a ZigBee group with the correct ID (10X), 
+- first create a Zigbee group with the correct ID (10X), 
 - name it like you wish,
 - then add the devices you intend to control to that group (pay attention to use the right termination point).
   Very important: do NOT add the remote itself to the group.
@@ -219,7 +219,7 @@ It looks like a perfect emergency backup.
 ### Technical Notes
 
 - The saturation / color temperature slider control exhibits behavior which is not yet fully understood. The slider alternates between sending saturation and color temperature values based on an internal state of the device. You can force "saturation mode" by pressing any `R`, `G`, `B` button or touching the color wheel, while pressing the `W` button forces "color temperature mode". When pressing any on/off button, the slider reverts to its default behavior (either saturation or color temperature mode). The mechanism for changing this default behavior remains unknown.  
-- As with most battery-powered devices, this remote does not continuously listen for ZigBee commands after its initial configuration. When sending commands to the device (such as Leave, Configure, or group ID changes), you should press any button afterward to ensure the command is received.
+- As with most battery-powered devices, this remote does not continuously listen for Zigbee commands after its initial configuration. When sending commands to the device (such as Leave, Configure, or group ID changes), you should press any button afterward to ensure the command is received.
 - The remote does not support light output cluster binding or manual group joining (it relies solely on its internal zone/group mapping).
 
 ### Touchlink
@@ -231,21 +231,21 @@ The remote supports Touchlink. It is unclear how the Touchlink configuration int
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `zone_1_group_id`: Group ID for zone 1 (default: 101). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_1_group_id`: Group ID for zone 1 (default: 101). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_2_group_id`: Group ID for zone 2 (default: 102). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_2_group_id`: Group ID for zone 2 (default: 102). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_3_group_id`: Group ID for zone 3 (default: 103). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_3_group_id`: Group ID for zone 3 (default: 103). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_4_group_id`: Group ID for zone 4 (default: 104). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_4_group_id`: Group ID for zone 4 (default: 104). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_5_group_id`: Group ID for zone 5 (default: 105). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_5_group_id`: Group ID for zone 5 (default: 105). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_6_group_id`: Group ID for zone 6 (default: 106). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_6_group_id`: Group ID for zone 6 (default: 106). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_7_group_id`: Group ID for zone 7 (default: 107). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_7_group_id`: Group ID for zone 7 (default: 107). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
-* `zone_8_group_id`: Group ID for zone 8 (default: 108). The value must be a number with a minimum value of `1` and with a with a maximum value of `65535`
+* `zone_8_group_id`: Group ID for zone 8 (default: 108). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
 
 * `expose_values`: Expose additional numeric values for action properties (hue, saturation, level, etc.). The value must be `true` or `false`
 

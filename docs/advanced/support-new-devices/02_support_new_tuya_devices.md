@@ -37,10 +37,14 @@ const definition = {
     model: 'TS0601_new',
     vendor: 'Tuya',
     description: 'Fill in a description of the device here',
-    fromZigbee: [tuya.fz.datapoints],
-    toZigbee: [tuya.tz.datapoints],
-    onEvent: tuya.onEventSetTime, // Add this if you are getting no converter for 'commandMcuSyncTime'
-    configure: tuya.configureMagicPacket,
+    extend: [
+        tuya.modernExtend.tuyaBase({
+            dp: true,
+            // Enable this line in case the device has a clock, if time is incorrect with
+            // `1970`, try with `2000`.
+            // timeStart: "1970",
+        }),
+    ],
     exposes: [
         // Here you should put all functionality that your device exposes
     ],
@@ -116,11 +120,15 @@ The values in the mapped datapoint are as follows:
 
 Repeat this for all datapoints.
 
-### 6. BONUS: Contacting the manufacturer
+### 6. Create a pull request
+
+To contribute your new device definition to Zigbee2MQTT such that it will be supported out-of-the-box in the next release, follow these steps: [Create a pull request](./01_support_new_devices.md#4-create-a-pull-request).
+
+### 7. BONUS: Contacting the manufacturer
 
 When contacting a manufacturer of Tuya compatible device DO NOT ask for Zigbee protocol of the device, they usually have no idea how the Tuya radio that they bought communicates over Zigbee. Instead ask for the UART protocol for their device, this should give you a better cooperation. You can also ask them about DPIDs and data formats for their functions.
 
-### 7. BONUS 2: Further reading
+### 8. BONUS 2: Further reading
 
 You can read more about how the device communicates with Tuya Zigbee radio module [here](https://developer.tuya.com/en/docs/iot/device-development/access-mode-mcu/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty)
 
@@ -136,5 +144,5 @@ In case your device is fully working but it has the wrong picture and/or descrip
     - `MODEL`: The model number written on the device or product page
     - `DESCRIPTION`: A description of the device
     - `MANUFACTURER_NAME`: Can be retrieved from the frontend -> device -> about page -> below _Zigbee Model_, e.g. `_TZ3000_cphmq0q7` or `_TZE200_eegnwoyw`.
-1. Commit changes and create a pull request
-1. Submit a picture for the docs ([guide](./01_support_new_devices.md#3-add-device-picture-to-zigbee2mqttio-documentation))
+1. Commit changes and [Create a pull request](./01_support_new_devices.md#4-create-a-pull-request)
+1. Submit a picture for the docs ([guide](./01_support_new_devices.md#5-add-device-picture-to-zigbee2mqttio-documentation))

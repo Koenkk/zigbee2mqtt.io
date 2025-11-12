@@ -39,7 +39,7 @@ You can find details on various customizations for Wireshark in the ZSmart Syste
 
 ### Adding the Trust Center link key
 
-Add the Trust Center link key by going to to `Edit > Preferences > Protocols > ZigBee`.
+Add the Trust Center link key by going to to `Edit > Preferences > Protocols > Zigbee`.
 
 Set `Security Level` to `AES-128 Encryption, 32-bit Integrity Protection`.
 
@@ -64,11 +64,11 @@ If you changed your `network_key` (used `GENERATE`), you need to convert it to t
     You can paste your `network_key` below to convert it. Note: The conversion is done locally; your key never leaves your browser.
     <NetworkKeyConverter/>
 
-3. If you don't want to translate the numbers, the network encryption key is also exposed when a device joins the network. Pair a new device to the network (or re-pair an existing one) and grab the message where the Info is _Device Announcement...._. Open the message and expand _ZigBee Network Layer Data_ -> _ZigBee Security Header_.
+3. If you don't want to translate the numbers, the network encryption key is also exposed when a device joins the network. Pair a new device to the network (or re-pair an existing one) and grab the message where the Info is _Device Announcement...._. Open the message and expand _Zigbee Network Layer Data_ -> _Zigbee Security Header_.
 
     ![Wireshark network key](../../images/wireshark_network_key.png)
 
-Copy the key value, as shown above and go to `Edit > Preferences > Protocols > ZigBee > Pre-configured keys > Edit` and add the key with Byte Order `Normal`.
+Copy the key value, as shown above and go to `Edit > Preferences > Protocols > Zigbee > Pre-configured keys > Edit` and add the key with Byte Order `Normal`.
 
 Now Wireshark is able to decrypt the messages. When e.g. turning on a light you will see a message similar to:
 

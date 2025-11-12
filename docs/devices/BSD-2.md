@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSD-2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Smoke alarm II |
-| Exposes | smoke, test, alarm_smoke, alarm_burglar, battery, sensitivity, broadcast_alarm |
+| Exposes | smoke, smoke_alarm_silenced, button_pushed, manual_smoke_alarm, manual_burglar_alarm, broadcast_alarms, test_mode, test_mode_timeout, battery, battery_low |
 | Picture | ![Bosch BSD-2](https://www.zigbee2mqtt.io/images/devices/BSD-2.png) |
 
 
@@ -44,25 +44,53 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Test (binary)
-Indicates whether the device is currently performing a test.
-Value can be found in the published state on the `test` property.
+### Smoke alarm silenced (binary)
+Indicates whether an smoke alarm was silenced on the device itself for 10 minutes. Please keep in mind that the smoke detection is being disabled during that time period as well..
+Value can be found in the published state on the `smoke_alarm_silenced` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` test is ON, if `false` OFF.
+If value equals `true` smoke alarm silenced is ON, if `false` OFF.
 
-### Alarm smoke (binary)
-Toggle the smoke alarm siren.
-Value can be found in the published state on the `alarm_smoke` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_smoke": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_smoke": NEW_VALUE}`.
-If value equals `true` alarm smoke is ON, if `false` OFF.
+### Button pushed (binary)
+Indicates whether the button on the device is being pushed for at least 3 seconds (e.g., to trigger a test alarm or silence a smoke alarm).
+Value can be found in the published state on the `button_pushed` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` button pushed is ON, if `false` OFF.
 
-### Alarm burglar (binary)
-Toggle the burglar alarm siren.
-Value can be found in the published state on the `alarm_burglar` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_burglar": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_burglar": NEW_VALUE}`.
-If value equals `true` alarm burglar is ON, if `false` OFF.
+### Manual smoke alarm (binary)
+Indicates whether the smoke alarm siren is being manually activated on the device.
+Value can be found in the published state on the `manual_smoke_alarm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_smoke_alarm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_smoke_alarm": NEW_VALUE}`.
+If value equals `ON` manual smoke alarm is ON, if `OFF` OFF.
+
+### Manual burglar alarm (binary)
+Indicates whether the burglar alarm siren is being manually activated on the device.
+Value can be found in the published state on the `manual_burglar_alarm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_burglar_alarm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_burglar_alarm": NEW_VALUE}`.
+If value equals `ON` manual burglar alarm is ON, if `OFF` OFF.
+
+### Broadcast alarms (binary)
+Broadcast manual alarm state changes to all BSD-2 devices on the network. Please keep in mind that a detected smoke alarm is not being transmitted automatically to other devices. To achieve that, you must set up an automation, e.g., in Home Assistant..
+Value can be found in the published state on the `broadcast_alarms` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"broadcast_alarms": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"broadcast_alarms": NEW_VALUE}`.
+If value equals `ON` broadcast alarms is ON, if `OFF` OFF.
+
+### Test mode (binary)
+Check the function of the smoke alarm. Pay attention to the alarm sound and the flashing of the alarm LED. Please keep in mind that it can take up to 10 seconds for the test mode to be activated..
+Value can be found in the published state on the `test_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"test_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode": NEW_VALUE}`.
+If value equals `ON` test mode is ON, if `OFF` OFF.
+
+### Test mode timeout (numeric)
+Determines how long the test mode should be activated. The default length is 5 seconds..
+Value can be found in the published state on the `test_mode_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"test_mode_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode_timeout": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+The unit of this value is `seconds`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -72,17 +100,9 @@ It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Sensitivity (enum)
-Sensitivity of the smoke detector.
-Value can be found in the published state on the `sensitivity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
-The possible values are: `low`, `medium`, `high`.
-
-### Broadcast alarm (enum)
-Set siren state of all BSD-2 via broadcast.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"broadcast_alarm": NEW_VALUE}`.
-The possible values are: `smoke_off`, `smoke_on`, `burglar_off`, `burglar_on`.
+### Battery low (binary)
+Empty battery indicator.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
 

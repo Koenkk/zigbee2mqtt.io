@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-204ZM control via MQTT"
-description: "Integrate your Tuya ZG-204ZM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-204ZK control via MQTT"
+description: "Integrate your HOBEIAN ZG-204ZK via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-03-31T18:43:56
 pageClass: device-page
 ---
@@ -11,14 +11,14 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-204ZK
+# HOBEIAN ZG-204ZK
 
 |     |     |
 |-----|-----|
 | Model | ZG-204ZK  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
-| Description | PIR 24Ghz human presence sensor |
-| Exposes | presence, motion_state, illuminance, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, motion_detection_mode, motion_detection_sensitivity |
+| Description | 24Ghz human presence sensor |
+| Exposes | presence, battery, fading_time, static_detection_distance, static_detection_sensitivity, motion_detection_sensitivity, indicator |
 | Picture | ![HOBEIAN ZG-204ZK](https://www.zigbee2mqtt.io/images/devices/ZG-204ZK.png) |
 
 
@@ -36,11 +36,6 @@ One of the suggestions is to remove residual solder-flux from the PCB and/or to 
 
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
@@ -49,13 +44,6 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
-
-
-### Illuminance (numeric)
-Measured illuminance.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
@@ -77,7 +65,7 @@ Static detection distance.
 Value can be found in the published state on the `static_detection_distance` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_distance": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
+The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `m`.
 
 ### Static detection sensitivity (numeric)
@@ -88,14 +76,6 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `x`.
 
-### Indicator (binary)
-LED indicator mode.
-Value can be found in the published state on the `indicator` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
-If value equals `ON` indicator is ON, if `OFF` OFF.
-
-
 ### Motion detection sensitivity (numeric)
 Motion detection sensitivity (Firmware version>=0122052017).
 Value can be found in the published state on the `motion_detection_sensitivity` property.
@@ -103,4 +83,11 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `x`.
+
+### Indicator (binary)
+LED indicator mode.
+Value can be found in the published state on the `indicator` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+If value equals `ON` indicator is ON, if `OFF` OFF.
 

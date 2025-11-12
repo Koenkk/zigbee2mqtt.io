@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | MIR-IL100  |
 | Vendor  | [MultIR](/supported-devices/#v=MultIR)  |
-| Description | Pir leakage |
-| Exposes | battery, occupancy, tamper, battery_low |
+| Description | PIR sensor |
+| Exposes | battery, occupancy, tamper, battery_low, sensitivity |
 | Picture | ![MultIR MIR-IL100](https://www.zigbee2mqtt.io/images/devices/MIR-IL100.png) |
 
 
@@ -57,4 +57,11 @@ Indicates whether the battery of the device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
+
+### Sensitivity (enum)
+Sensitivity of the pir detector.
+Value can be found in the published state on the `sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
 
