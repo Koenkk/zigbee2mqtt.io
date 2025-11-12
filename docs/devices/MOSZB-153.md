@@ -24,8 +24,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Reset Instructions
+1. Remove the sensor from its bracket or open the casing.
+2. Ensure batteries are correctly inserted.
+3. Press and hold the round menu button located inside the device.
+4. Watch the LED indicators: It will flash once, then twice, and finally flash several times in rapid succession.
+5. At the point when the LED is flashing several times in succession, release the button.
+6. The LED will then emit one long flash, indicating that the reset is successful and complete.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -38,7 +45,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 

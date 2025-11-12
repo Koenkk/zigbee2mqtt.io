@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E8334RWMZB  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser AvatarOn 4K Freelocate |
-| Exposes | indicator_luminance_level, indicator_color |
+| Exposes | indicator_luminance_level, indicator_color, action |
 | Picture | ![Schneider Electric E8334RWMZB](https://www.zigbee2mqtt.io/images/devices/E8334RWMZB.png) |
 
 
@@ -45,4 +45,10 @@ Value can be found in the published state on the `indicator_color` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_color": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_color": NEW_VALUE}`.
 The possible values are: `white`, `blue`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `key1`, `key2`, `key3`, `key4`.
 

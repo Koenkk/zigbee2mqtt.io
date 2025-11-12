@@ -24,6 +24,13 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/slacky1965/tuya_thermostat_zrd)
+
+## Pairing Procedure
+1. Press the **green leaf** button to power on the device.  
+2. Press the **green leaf** button again to switch the device to **standby mode**.  
+3. Press and hold the **Down (double arrow)** button for approximately **8 seconds**, until the **wireless icon** begins flashing on the display.  
+
+The flashing wireless icon indicates that the device is now in **pairing mode** and ready to be connected to a network or controller.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -33,7 +33,7 @@ After resetting the bulb will automatically connect.
 #### Reset button
 Press and hold the reset button on the adaptor for 10 seconds.
 
-Also see the [VIDEO: Demo on Pairing Nue ZigBee Downlight with Philips Hue Bridge](https://www.youtube.com/watch?v=Z2U6mJSmA34).
+Also see the [VIDEO: Demo on Pairing Nue Zigbee Downlight with Philips Hue Bridge](https://www.youtube.com/watch?v=Z2U6mJSmA34).
 
 #### Power cycling the device
 Turn on and off the for 9 times. The light will blink twice on the 9th time.
