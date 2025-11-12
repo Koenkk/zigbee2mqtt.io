@@ -27,7 +27,8 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
+## Notes
+The Device only provides an estimated CO2 value (aka eCO2) based on the two Sensors inside KQM6600TA (A chinese TVOC sensor) and the DHT20.
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
