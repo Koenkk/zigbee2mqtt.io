@@ -3,7 +3,7 @@ addedAt: 2025-11-10T00:00:00Z
 pageClass: device-page
 ---
 
-<!-- Notes BEGIN -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Pairing
@@ -13,6 +13,7 @@ pageClass: device-page
 
 ### Factory Rest
 - Long press motor button for 12 seconds, motor jogbs 3 times restoring to factory settings
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 
