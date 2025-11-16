@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [iHseno](/supported-devices/#v=iHseno)  |
 | Description | Human presence sensor |
 | Exposes | presence, battery, pir_sensitivity, pir_time |
-| Picture | ![iHseno iHsenso_TS0601_human_presence](https://www.zigbee2mqtt.io/images/devices/iHsenso_TS0601_human_presence.png) |
+| Picture | ![iHseno iHsenso_TS0601_human_presence](https://www.zigbee2mqtt.io/images/devices/TS0601_human_presence.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
