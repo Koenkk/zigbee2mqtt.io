@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 3RWS18BZ  |
 | Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Water sensor |
-| Exposes | water_leak, battery_low, battery, voltage |
+| Exposes | water_leak, battery_low, battery, voltage, siren_on_off, siren_minutes |
 | Picture | ![Third Reality 3RWS18BZ](https://www.zigbee2mqtt.io/images/devices/3RWS18BZ.png) |
 
 
@@ -59,4 +59,20 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Siren on off (numeric)
+Siren on/off.
+Value can be found in the published state on the `siren_on_off` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_on_off": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_on_off": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `1`.
+The unit of this value is `on/off`.
+
+### Siren minutes (numeric)
+Siren duration.
+Value can be found in the published state on the `siren_minutes` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_minutes": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_minutes": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `600`.
+The unit of this value is `min`.
 

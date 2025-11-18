@@ -276,7 +276,7 @@ advanced:
 
 ### timestamp_format
 
-Log timestamp format
+Log timestamp format (see https://github.com/taylorhakes/fecha?tab=readme-ov-file#formatting-tokens for all supported tokens)
 
 ```yaml
 advanced:

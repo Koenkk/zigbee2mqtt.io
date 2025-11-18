@@ -21,6 +21,7 @@ pageClass: device-page
 | Exposes | child_lock, programming_operation_mode, sensor, deadzone_temperature, max_heat_setpoint_limit, climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, running_state, schedule), schedule_monday, schedule_saturday, schedule_sunday |
 | Picture | ![Slacky-DIY THERM_SLACKY_DIY_R01](https://www.zigbee2mqtt.io/images/devices/THERM_SLACKY_DIY_R01.png) |
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/slacky1965/tuya_thermostat_zrd)
 
