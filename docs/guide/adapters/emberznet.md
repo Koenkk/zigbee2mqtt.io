@@ -29,7 +29,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
         - Router firmware also available
 - Web-based
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
-    - For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
+    - For ZBT-1/ZBT-2 by [@NabuCasa](https://github.com/NabuCasa): [ZBT Flasher](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
     - For SONOFF Dongle: [SONOFF Dongle Flasher](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - Command-line based:
@@ -131,7 +131,7 @@ serial:
 
 :::
 
-::: details Nabu Casa Home Assistant SkyConnect
+::: details Home Assistant Connect ZBT-1
 
 Chip: [efr32mg21a020f512im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f512im32?tab=specs)
 
@@ -142,10 +142,10 @@ serial:
     rtscts: true
 ```
 
-- [Product page](https://www.home-assistant.io/skyconnect)
-- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
-- [Flashing](https://skyconnect.home-assistant.io/)
-- [Buy](https://www.home-assistant.io/skyconnect)
+- [Product page](https://www.home-assistant.io/connectzbt1)
+- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware-builder/releases)
+- [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
+- [Buy](https://www.home-assistant.io/connectzbt1)
 
 <img src="../../images/skyconnect_isometric.jpg" width="200" />
 
@@ -306,7 +306,7 @@ serial:
 
 - [Product page](https://www.home-assistant.io/yellow)
 - [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
-- [Flashing](https://skyconnect.home-assistant.io/)
+- [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
 - [Buy](https://www.home-assistant.io/yellow)
 
 <img src="../../images/yellow.jpg" width="200" />
