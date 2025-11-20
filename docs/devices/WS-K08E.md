@@ -175,5 +175,5 @@ If value equals `true` multi click is ON, if `false` OFF.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_left`, `hold_left_down`, `hold_right`, `hold_right_down`, `single_left`, `single_left_down`, `single_right`, `single_right_down`, `double_left`, `double_left_down`, `double_right`, `double_right_down`, `release_left`, `release_left_down`, `release_right`, `release_right_down`.
+The possible values are: `hold_left`, `hold_left_down`, `hold_right`, `hold_right_down`, `single_left`, `single_left_down`, `single_right`, `single_right_down`, `double_left_down`, `double_right_down`, `release_left_down`, `release_right_down`.
 
