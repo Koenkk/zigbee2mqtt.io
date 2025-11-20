@@ -16,6 +16,7 @@ advanced:
     log_namespaced_levels:
         z2m:mqtt: warning
     # Optional: log timestamp format (default: shown below)
+    # See https://github.com/taylorhakes/fecha?tab=readme-ov-file#formatting-tokens for all supported tokens.
     timestamp_format: 'YYYY-MM-DD HH:mm:ss'
     # Optional: Location of log directory (default: shown below)
     log_directory: data/log/%TIMESTAMP%

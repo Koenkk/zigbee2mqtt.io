@@ -1,6 +1,6 @@
 ---
-title: "Neo NAS-PS09B2 control via MQTT"
-description: "Integrate your Neo NAS-PS09B2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "NEO NAS-PS09B2 control via MQTT"
+description: "Integrate your NEO NAS-PS09B2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-03-31T19:12:51
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Neo NAS-PS09B2
+# NEO NAS-PS09B2
 
 |     |     |
 |-----|-----|
 | Model | NAS-PS09B2  |
-| Vendor  | [Neo](/supported-devices/#v=Neo)  |
+| Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Human presence sensor |
 | Exposes | occupancy, human_motion_state, departure_delay, radar_range, radar_sensitivity, presence_sensitivity, dis_current |
-| Picture | ![Neo NAS-PS09B2](https://www.zigbee2mqtt.io/images/devices/NAS-PS09B2.png) |
+| Picture | ![NEO NAS-PS09B2](https://www.zigbee2mqtt.io/images/devices/NAS-PS09B2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
