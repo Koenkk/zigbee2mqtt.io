@@ -29,7 +29,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
         - Router firmware also available
 - Web-based
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
-    - For ZBT-1/ZBT-2 by [@NabuCasa](https://github.com/NabuCasa): [ZBT Flasher](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
+    - For ZBT-1/ZBT-2 by [@NabuCasa](https://github.com/NabuCasa): [ZBT Flasher](https://toolbox.openhomefoundation.org/)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
     - For SONOFF Dongle: [SONOFF Dongle Flasher](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - Command-line based:
