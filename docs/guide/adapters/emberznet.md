@@ -29,7 +29,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
         - Router firmware also available
 - Web-based
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
-    - For ZBT-1/ZBT-2 by [@NabuCasa](https://github.com/NabuCasa): [ZBT Flasher](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
+    - For ZBT-1/ZBT-2 by [@NabuCasa](https://github.com/NabuCasa): [ZBT Flasher](https://toolbox.openhomefoundation.org/)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
     - For SONOFF Dongle: [SONOFF Dongle Flasher](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - Command-line based:
@@ -44,6 +44,27 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 Each category is ordered by chip, newer series first.
 
 ### USB
+
+::: details Home Assistant Connect ZBT-2
+
+Chip: [EFR32MG24A420F1536IM40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.EFR32MG24A420F1536IM40?tab=specs)
+
+With external antenna and hardware flow control support. Make sure to set the baudrate to 460800.
+
+```yaml
+serial:
+    baudrate: 460800
+    rtscts: true
+```
+
+- [Product page](https://www.home-assistant.io/connect/zbt-2)
+- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware-builder/releases)
+- [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-2)
+- [Buy](https://www.home-assistant.io/connect/zbt-2)
+
+<img src="../../images/zbt2.jpg" width="200" />
+
+:::
 
 ::: details SONOFF Dongle-PMG24
 
