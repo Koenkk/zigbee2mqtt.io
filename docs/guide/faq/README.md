@@ -77,7 +77,7 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 
-Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
+Details about your network are stored in both the coordinator and files under the `data` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
 
 ## What does and does not require re-pairing of all devices?
 
