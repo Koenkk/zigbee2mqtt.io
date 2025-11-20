@@ -45,6 +45,27 @@ Each category is ordered by chip, newer series first.
 
 ### USB
 
+::: details Home Assistant Connect ZBT-2
+
+Chip: [EFR32MG24A420F1536IM40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.EFR32MG24A420F1536IM40?tab=specs)
+
+With external antenna and hardware flow control support. Make sure to set the baudrate to 460800.
+
+```yaml
+serial:
+    baudrate: 460800
+    rtscts: true
+```
+
+- [Product page](https://www.home-assistant.io/connect/zbt-2)
+- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware-builder/releases)
+- [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-2)
+- [Buy](https://www.home-assistant.io/connect/zbt-2)
+
+<img src="../../images/zbt2.jpg" width="200" />
+
+:::
+
 ::: details SONOFF Dongle-PMG24
 
 Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
