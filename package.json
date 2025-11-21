@@ -22,11 +22,11 @@
     "dependencies": {
         "@quasar/extras": "1.17.0",
         "core-js": "3.46.0",
-        "quasar": "2.18.5"
+        "quasar": "2.18.6"
     },
     "devDependencies": {
         "@types/json-schema": "^7.0.15",
-        "@types/node": "24.10.0",
+        "@types/node": "24.10.1",
         "@vuepress/bundler-webpack": "2.0.0-rc.26",
         "@vuepress/client": "2.0.0-rc.26",
         "@vuepress/plugin-docsearch": "2.0.0-rc.118",
@@ -37,13 +37,13 @@
         "async-g-i-s": "1.5.5",
         "cross-env": "10.1.0",
         "easyimage": "3.1.1",
-        "glob": "11.0.3",
+        "glob": "11.1.0",
         "husky": "9.1.7",
         "image-size": "2.0.2",
         "prettier": "3.6.2",
         "pug": "3.0.3",
         "pug-plain-loader": "1.1.0",
-        "sass": "1.93.3",
+        "sass": "1.94.0",
         "sass-loader": "16.0.6",
         "throat": "6.0.2",
         "ts-node": "10.9.2",
