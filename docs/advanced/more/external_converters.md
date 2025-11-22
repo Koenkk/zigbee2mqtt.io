@@ -8,7 +8,7 @@ Zigbee2MQTT uses [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-h
 
 External converters provide a way to test support for new devices, they work identically to internal converters.
 
-External converters are stored in `data/external_converters` folder and have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
+External converters are stored in `external_converters` folder (as a subfolder of the zigbee2mqtt folder). They have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
 
 :::tip TIP
 Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just delete the external converter.
@@ -20,7 +20,7 @@ The easiest way to develop is by using the [external converter development envir
 
 Example:
 
-File: `data/external_converters/my-first-converter.mjs`
+File: `external_converters/my-first-converter.mjs`
 
 ```js
 import {temperature, humidity, battery} from 'zigbee-herdsman-converters/lib/modernExtend';
@@ -78,8 +78,8 @@ When Zigbee2MQTT starts it publishes `zigbee2mqtt/bridge/converters` with payloa
 
 ## Save converter
 
-To save a converter at runtime, send a message to `zigbee2mqtt/bridge/request/converter/save` with payload `{"name": "my-first-converter.js", "code": <HERE COMES YOUR CONVERTER CODE>}`. The code will be saved in `data/external_converters/` in the file with the given name.
+To save a converter at runtime, send a message to `zigbee2mqtt/bridge/request/converter/save` with payload `{"name": "my-first-converter.js", "code": <HERE COMES YOUR CONVERTER CODE>}`. The code will be saved in `external_converters` in the file with the given name.
 
 ## Remove converter
 
-To remove a converter at runtime, send a message to `zigbee2mqtt/bridge/request/converter/remove` with payload `{"name": "my-first-converter.js"}`. The file will be deleted from `data/external_converters/`.
+To remove a converter at runtime, send a message to `zigbee2mqtt/bridge/request/converter/remove` with payload `{"name": "my-first-converter.js"}`. The file will be deleted from `external_converters`.
