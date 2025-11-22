@@ -542,7 +542,13 @@ See [Binding](./binding.md).
 
 See [Binding](./binding.md).
 
-#### zigbee2mqtt/bridge/request/device/configure_reporting
+#### zigbee2mqtt/bridge/request/device/binds/clear
+
+See [Binding](./binding.md).
+
+#### zigbee2mqtt/bridge/request/device/reporting/configure
+
+_Alias: `zigbee2mqtt/bridge/request/device/configure_reporting` (deprecated)_
 
 Allows to send a Zigbee configure reporting command to a device. Zigbee devices often have attributes that can report changes in their state, such as temperature, humidity, battery level, etc. Attribute reporting allows these devices to automatically send updates when there is a change in the values of these attributes.
 One example is when you change brightness of a bulb with its remote instead of Zigbee2MQTT, the state becomes out of sync.
@@ -575,6 +581,21 @@ Notes:
 - If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
 - The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
 - To specify options, e.g. the manufacturerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
+
+#### zigbee2mqtt/bridge/request/device/reporting/read
+
+Allows to read the reporting configuration registered on a device.
+Attributes must of course be reportable, an error status will be returned for any attribute in the request that is not.
+
+Example payloads:
+
+- For one attribute: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"}]}`
+- For multiple attributes: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"},{"attribute":"currentFrequency"}]}`
+- For manufacturer-specific attribute: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"}], "manufacturerCode": 0x1234}`
+
+::: tip
+Reading reporting config will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, reporting config in Zigbee2MQTT should reflect the actual reporting config on the device.
+:::
 
 ### Group
 
@@ -629,3 +650,32 @@ See [Touchlink](./touchlink.md).
 #### zigbee2mqtt/bridge/request/touchlink/identify
 
 See [Touchlink](./touchlink.md).
+
+### Action
+
+#### zigbee2mqtt/bridge/request/action
+
+Allows to call specific pre-defined actions, usually manufacturer-specific.
+All action names are published in `zigbee2mqtt/bridge/definitions` under `actions`.
+
+::: tip
+Specific up-to-date actions/parameters can be observed directly in the source code [https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts)
+:::
+
+##### Action: `hue_factory_reset`
+
+Allows to reset Hue devices via a manufacturer-specific Touchlink request.
+
+Parameters:
+
+- `extended_pan_id` - Hex string in `0x{id}` format - the extended PAN ID of the network the device(s) should try to join after reset. E.g. `0xa1b2c3d4e5f60123`
+- `serial_numbers` - Array of numbers - the serial numbers of the device(s) to reset. E.g. `[123456, 987654]`
+
+##### Action: `raw`
+
+::: warning
+This allows sending requests that could negatively impact or even break your network. Use with caution!
+:::
+
+Special action that allows to send entirely custom payloads. The given payload is analyzed to chose the proper method of sending (ZCL, ZDO, etc.).
+See link above for parameters details (beyond the scope of this documentation).
