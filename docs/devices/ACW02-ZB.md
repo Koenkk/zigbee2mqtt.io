@@ -1,11 +1,11 @@
 <!-- Notes BEGIN -->
 >> ## Notes
-## Description
+### Description
 Adds support for ACW02 HVAC Thermostat - a custom DIY Zigbee device based on ESP32-C6.
 
 ACW02-ZB is an open-source Zigbee-enabled HVAC controller for the Airton series and compatible units (to replace ACW02 WiFi module).
 
-## Device Details
+### Device Details
 - **Model:** ACW02-ZB
 - **Vendor:** Custom devices (DiY)
 - **Zigbee Model ID:** acw02-z
@@ -13,7 +13,7 @@ ACW02-ZB is an open-source Zigbee-enabled HVAC controller for the Airton series 
 - **Device Type:** Router
 - **Chip:** ESP32-C6 with ESP-Zigbee SDK 5.5.1
 
-## Features
+### Features
 - **Climate Control:**
   - Temperature setpoint: 16-31°C (single setpoint for both heating/cooling)
   - Local temperature reading
