@@ -1,0 +1,30 @@
+/*!
+ * vue-router v4.6.3
+ * (c) 2025 Eduardo San Martin Morote
+ * @license MIT
+ */
+
+/*! medium-zoom 1.1.0 | MIT License | https://github.com/francoischalifour/medium-zoom */
+
+/**
+ * NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
+ * @license MIT
+ */
+
+/**
+* @vue/reactivity v3.5.24
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
+
+/**
+* @vue/runtime-dom v3.5.24
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
+
+/**
+* @vue/shared v3.5.24
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
