@@ -51,4 +51,5 @@ ACW02-ZB is an open-source Zigbee-enabled HVAC controller for the Airton series 
 
 ### Configuration Options
 - `acw02_poll_interval`: Polling interval for unreportable attributes (default: 60s, set to -1 to disable)
->> <!-- Notes END -->
+>>
+<!-- Notes END -->
