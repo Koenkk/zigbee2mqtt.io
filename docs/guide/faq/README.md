@@ -65,7 +65,7 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
 1. First make sure you are running the latest version of Zigbee2MQTT
 1. Stop Zigbee2MQTT
 1. Determine whether migrating [requires re-pairing of your devices](#what-does-and-does-not-require-re-pairing-of-all-devices)
-    - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db`
+    - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db` (if running as a Home Assistant addon, `data/` is renamed `zigbee2mqtt/`)
     - If re-pairing is **not** required: [copy the ieee address of the old adapter into the new one](../adapters/flashing/copy_ieeaddr.html)
 1. Update the `serial` -> `port` in your `configuration.yaml`
 1. Start Zigbee2MQTT
@@ -77,7 +77,8 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 
-Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
+Details about your network are stored in both the coordinator and files under the `data/` directory (if running as a Home Assistant addon, `data/` is renamed `zigbee2mqtt/`).
+To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
 
 ## What does and does not require re-pairing of all devices?
 
