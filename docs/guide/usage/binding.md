@@ -56,6 +56,18 @@ To do this execute the following steps:
 3. Bind the remote to the group by sending the following MQTT message.
     - `zigbee2mqtt/bridge/request/device/bind` with payload `{"from": "my_remote", "to": "my_group"}`
 
+### Clearing bindings
+
+Using `zigbee2mqtt/bridge/request/device/binds/clear`, bindings can be all or selectively cleared.
+
+To clear all bindings, just send the topic with the payload e.g. `{"target": "my_device"}`.
+
+To selectively clear bindings by IEEE address, send the topic with the payload e.g. `{"target": "my_deivce", "ieeeList": ["0xa1a2a3a4a5a6a7a8", "0xb1b2b3b4b5b6b7b8"]}`.
+
+::: tip
+Clearing bindings will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, bindings in Zigbee2MQTT should reflect actual bindings on the device.
+:::
+
 ## Devices
 
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
