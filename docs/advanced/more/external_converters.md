@@ -8,7 +8,7 @@ Zigbee2MQTT uses [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-h
 
 External converters provide a way to test support for new devices, they work identically to internal converters.
 
-External converters are stored in `external_converters` folder (as a subfolder of the zigbee2mqtt folder). They have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
+External converters are stored in the `external_converters` folder (at the same level in the file system as the Zigbee2MQTT configuration.yaml file). They have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
 
 :::tip TIP
 Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just delete the external converter.
@@ -75,6 +75,10 @@ import {presets, access} from 'zigbee-herdsman-converters/lib/exposes';
 ## Converters list
 
 When Zigbee2MQTT starts it publishes `zigbee2mqtt/bridge/converters` with payload `[{"name": "my-first-converter.js": "code": <HERE COMES YOUR CONVERTER CODE>}]` containing all the converters loaded from the file system. The same message is also published when a converter changes at runtime (from one of the below actions), with the appropriately updated payload.
+
+:::tip TIP
+Via the Zigbee2MQTT front end in Home Assistant, you can add or update external converters via Settings > Dev console > External converters.
+:::
 
 ## Save converter
 
