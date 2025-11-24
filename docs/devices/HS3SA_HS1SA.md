@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS3SA/HS1SA control via MQTT"
-description: "Integrate your HEIMAN HS3SA/HS1SA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS3SA/HS1SA control via MQTT"
+description: "Integrate your Heiman HS3SA/HS1SA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS3SA/HS1SA
+# Heiman HS3SA/HS1SA
 
 |     |     |
 |-----|-----|
 | Model | HS3SA/HS1SA  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smoke detector |
-| Exposes | smoke, battery_low, battery, test, linkquality |
-| Picture | ![HEIMAN HS3SA/HS1SA](https://www.zigbee2mqtt.io/images/devices/HS3SA-HS1SA.png) |
+| Exposes | smoke, battery_low, battery, test |
+| Picture | ![Heiman HS3SA/HS1SA](https://www.zigbee2mqtt.io/images/devices/HS3SA-HS1SA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -56,11 +56,4 @@ Indicates whether the device is being tested.
 Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

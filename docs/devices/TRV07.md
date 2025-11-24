@@ -1,6 +1,6 @@
 ---
-title: "Avatto TRV07 control via MQTT"
-description: "Integrate your Avatto TRV07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "AVATTO TRV07 control via MQTT"
+description: "Integrate your AVATTO TRV07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-10-01T19:01:34
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Avatto TRV07
+# AVATTO TRV07
 
 |     |     |
 |-----|-----|
 | Model | TRV07  |
-| Vendor  | [Avatto](/supported-devices/#v=Avatto)  |
+| Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
 | Description | Thermostatic radiator valve |
-| Exposes | battery, child_lock, max_temperature, min_temperature, position, switch (state), window, alarm_switch, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, system_mode, running_state), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, boost_heating, boost_time, linkquality |
-| Picture | ![Avatto TRV07](https://www.zigbee2mqtt.io/images/devices/TRV07.png) |
+| Exposes | battery, child_lock, max_temperature, min_temperature, position, switch (state), window, alarm_switch, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, system_mode, running_state), screen_orientation, display_brightness, mode, switch_deviation_eco, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, boost_heating, boost_time |
+| Picture | ![AVATTO TRV07](https://www.zigbee2mqtt.io/images/devices/TRV07.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -94,50 +94,79 @@ This climate device supports the following features: `local_temperature`, `curre
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-30` and the maximum value is `30` with a step size of `0.1`.
 
+### Screen orientation (enum)
+How do you look at the display (up and down supported only).
+Value can be found in the published state on the `screen_orientation` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_orientation": NEW_VALUE}`.
+The possible values are: `up`, `down`.
+
+### Display brightness (enum)
+How strong the LED diplay is light up (high is default).
+Value can be found in the published state on the `display_brightness` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": NEW_VALUE}`.
+The possible values are: `high`, `middle`, `low`.
+
+### Mode (enum)
+Hysteresis - comfort > switches off/on exactly at reached temperature with valve smooth from 0 to 100%, eco > 0.5 degrees above or below, valve either 0 or 100%.
+Value can be found in the published state on the `mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+The possible values are: `comfort`, `eco`.
+
+### Switch deviation eco (numeric)
+Switch deviation (energy-saving mode only).
+Value can be found in the published state on the `switch_deviation_eco` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_deviation_eco": NEW_VALUE}`.
+The minimal value is `0.5` and the maximum value is `5`.
+The unit of this value is `°C`.
+
 ### Schedule monday (text)
-Schedule for monday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for monday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_monday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_monday": NEW_VALUE}`.
 
 ### Schedule tuesday (text)
-Schedule for tuesday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for tuesday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_tuesday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_tuesday": NEW_VALUE}`.
 
 ### Schedule wednesday (text)
-Schedule for wednesday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for wednesday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_wednesday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_wednesday": NEW_VALUE}`.
 
 ### Schedule thursday (text)
-Schedule for thursday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for thursday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_thursday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_thursday": NEW_VALUE}`.
 
 ### Schedule friday (text)
-Schedule for friday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for friday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_friday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_friday": NEW_VALUE}`.
 
 ### Schedule saturday (text)
-Schedule for saturday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for saturday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_saturday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_saturday": NEW_VALUE}`.
 
 ### Schedule sunday (text)
-Schedule for sunday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for sunday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_sunday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_sunday": NEW_VALUE}`.
 
 ### Boost heating (binary)
-Boost Heating: press and hold "+" for 3 seconds, the device will enter the boost heating mode, and the ▷╵◁ will flash. The countdown will be displayed in the APP.
+Boost Heating: press and hold  for 3 seconds, the device will enter the boost heating mode, and the ▷╵◁ will flash. The countdown will be displayed in the APP.
 Value can be found in the published state on the `boost_heating` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating": NEW_VALUE}`.
@@ -150,11 +179,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_time": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `min`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

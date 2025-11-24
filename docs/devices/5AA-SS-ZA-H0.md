@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 5AA-SS-ZA-H0  |
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | Motion sensor |
-| Exposes | occupancy, illuminance, linkquality |
+| Exposes | occupancy, illuminance |
 | Picture | ![Leedarson 5AA-SS-ZA-H0](https://www.zigbee2mqtt.io/images/devices/5AA-SS-ZA-H0.png) |
 
 
@@ -34,7 +34,9 @@ pageClass: device-page
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
+
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
 
 ## Exposes
@@ -48,13 +50,7 @@ If value equals `true` occupancy is ON, if `false` OFF.
 ### Illuminance (numeric)
 Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `lx`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

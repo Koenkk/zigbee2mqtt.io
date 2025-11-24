@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZP1-EN  |
 | Vendor  | [IMOU](/supported-devices/#v=IMOU)  |
 | Description | Zigbee ZP1 PIR motion sensor |
-| Exposes | battery, occupancy, tamper, battery_low, linkquality |
+| Exposes | battery, occupancy, tamper, battery_low |
 | Picture | ![IMOU ZP1-EN](https://www.zigbee2mqtt.io/images/devices/ZP1-EN.png) |
 
 
@@ -62,11 +62,4 @@ Indicates whether the battery of the device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

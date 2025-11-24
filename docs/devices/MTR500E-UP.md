@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MTR500E-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Remote power switch with timer 500W |
-| Exposes | switch (state), identify, power_failure_mode, prev_state, on_timer, enable_pre_on_delay, pre_on_delay, enable_pre_off_delay, pre_off_delay, pulse_duration, time_type, long_on_duration, operating_mode, enable_stop_announce, stop_announce_time, enable_deaf, deaf_blink_amount, deaf_blink_time, enable_blink, blink_amount, blink_on_time, blink_off_time, state_after_blink, enable_nc_command, move_to_position_command, pulse_command, blink_command, deaf_blink_command, long_on_command, reset_to_factory_settings, relaunch_ble_advert, input_mode, contact_mode, last_local_command_state, last_bp_connect_state, send_press, send_release, select_input_mode, enable_short_press, enable_long_press, long_press_duration, time_between_press, enable_R12M_long_press, enable_local_config_lock, linkquality |
+| Exposes | switch (state), identify, power_failure_mode, prev_state, on_timer, enable_pre_on_delay, pre_on_delay, enable_pre_off_delay, pre_off_delay, pulse_duration, time_type, long_on_duration, operating_mode, enable_stop_announce, stop_announce_time, enable_deaf, deaf_blink_amount, deaf_blink_time, enable_blink, blink_amount, blink_on_time, blink_off_time, state_after_blink, enable_nc_command, move_to_position_command, pulse_command, blink_command, deaf_blink_command, long_on_command, reset_to_factory_settings, relaunch_ble_advert, input_mode, contact_mode, last_local_command_state, last_bp_connect_state, send_press, send_release, select_input_mode, enable_short_press, enable_long_press, long_press_duration, time_between_press, enable_R12M_long_press, enable_local_config_lock |
 | Picture | ![YOKIS MTR500E-UP](https://www.zigbee2mqtt.io/images/devices/MTR500E-UP.png) |
 
 
@@ -35,7 +35,7 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -46,12 +46,6 @@ pageClass: device-page
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
-
-#### On with timed off
-When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
-Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Identify (enum)
 Initiate device identification.
@@ -138,10 +132,7 @@ The minimal value is `0` and the maximum value is `4233600`.
 The unit of this value is `s`.
 
 ### Operating mode (enum)
-Indicates the operating mode: 
-        - 0x00 -> Timer 
-        - 0x01 -> Staircase
-        - 0x02 -> Pulse.
+Indicates the operating mode.
 Value can be found in the published state on the `operating_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
@@ -212,18 +203,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `4233600`.
 
 ### State after blink (enum)
-Indicate which state must be apply after a blink sequence:
-        - 0x00 -> State before blinking
-        - 0x01 -> OFF
-        - 0x02 -> ON
-        - 0x03 -> Infinite blinking.
+Indicate which state must be apply after a blink sequence.
 Value can be found in the published state on the `state_after_blink` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_after_blink": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_after_blink": NEW_VALUE}`.
 The possible values are: `previous`, `off`, `on`, `infinite`.
 
 ### Enable nc command (binary)
-Define the output relay as Normaly close.
+Define the output relay as Normally close.
 Value can be found in the published state on the `enable_nc_command` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_nc_command": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_nc_command": NEW_VALUE}`.
@@ -255,7 +242,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"blin
 - `do_periodic_cycle` (binary): If set to true the blinking will be “infinite” allowed values: `true` or `false`
 
 ### Deaf blink command (composite)
-Start a deaf sequene on a device only if the attribute “eDeaf” is set to Enable.
+Start a deaf sequence on a device only if the attribute “eDeaf” is set to Enable.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deaf_blink_prop": {"blink_amount": VALUE, "blink_on_time": VALUE, "sequence_amount": VALUE, "sequence_of_blinks": VALUE}}`
 - `blink_amount` (numeric): If defined will force the number of blink to be done during one sequence (only for this order) if not the device will use its own value 
 - `blink_on_time` (numeric): If defined will force the blink’s “on time” (only for this order) if not the device will use its own value 
@@ -284,21 +271,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `relaunch_ble_advert`.
 
 ### Input mode (enum)
-Indicate how the input should be handle:
-        - 0 -> Unknow
-        - 1 -> Push button
-        - 2 -> Switch
-        - 3 -> Relay
-        - 4 -> FP_IN.
+Indicate how the input should be handled.
 Value can be found in the published state on the `input_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_mode": NEW_VALUE}`.
 The possible values are: `unknown`, `push_button`, `switch`, `relay`, `fp_in`.
 
 ### Contact mode (enum)
-Indicate the contact nature of the entry:
-        - 0 -> NC
-        - 1 -> NO.
+Indicate the contact nature of the entry.
 Value can be found in the published state on the `contact_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"contact_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"contact_mode": NEW_VALUE}`.
@@ -382,11 +362,4 @@ Value can be found in the published state on the `enable_local_config_lock` prop
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_local_config_lock": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_local_config_lock": NEW_VALUE}`.
 If value equals `ON` enable local config lock is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

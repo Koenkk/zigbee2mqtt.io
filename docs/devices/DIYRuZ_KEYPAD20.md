@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DIYRuZ_KEYPAD20  |
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | DiY 20 button keypad |
-| Exposes | battery, linkquality |
+| Exposes | battery |
 | Picture | ![DIYRuZ DIYRuZ_KEYPAD20](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_KEYPAD20.png) |
 
 
@@ -38,11 +38,4 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TICMeter  |
 | Vendor  | [GammaTroniques](/supported-devices/#v=GammaTroniques)  |
 | Description | TICMeter pour Linky |
-| Exposes | linkquality |
+| Exposes |  |
 | Picture | ![GammaTroniques TICMeter](https://www.zigbee2mqtt.io/images/devices/TICMeter.png) |
 
 
@@ -35,8 +35,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `refresh_rate`: Refresh rate for static values (those with refresh buttons). Default: 120 s. The value must be a number with a minimum value of `60` and with a with a maximum value of `3600`
-
 * `tic_mode`: Linky TIC communication mode. Defaults to AUTO mode. To be used in case of problem. The value must be one of `HISTORIQUE`, `STANDARD`, `AUTO`
 
 * `contract_type`: Current electricity contract on Linky. Defaults to AUTO mode. Displays the correct entities. To be used in case of problem. The value must be one of `AUTO`, `BASE`, `HCHP`, `EJP`, `TEMPO`, `PRODUCTEUR`
@@ -49,13 +47,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `translation`: Language: Default French. The value must be one of `FRANCAIS`, `ENGLISH`
 
+* `refresh_rate`: Refresh rate for static values (those with refresh buttons). Default: 120 s. The value must be a number with a minimum value of `60` and with a maximum value of `3600`
+
 
 ## Exposes
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+
 

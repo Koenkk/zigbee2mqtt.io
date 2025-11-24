@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Icon  |
 | Vendor  | [Danfoss](/supported-devices/#v=Danfoss)  |
 | Description | Icon Main Controller with Zigbee Module, Room Thermostat |
-| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), abs_min_heat_setpoint_limit, abs_max_heat_setpoint_limit, min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, room_floor_sensor_mode, floor_min_setpoint, floor_max_setpoint, temperature, system_status_code, system_status_water, multimaster_role, linkquality |
+| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), abs_min_heat_setpoint_limit, abs_max_heat_setpoint_limit, min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, room_floor_sensor_mode, floor_min_setpoint, floor_max_setpoint, temperature, system_status_code, system_status_water, multimaster_role |
 | Picture | ![Danfoss Icon](https://www.zigbee2mqtt.io/images/devices/Icon.png) |
 
 
@@ -34,7 +34,7 @@ pageClass: device-page
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
@@ -1426,11 +1426,4 @@ Value can be found in the published state on the `multimaster_role_l16` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multimaster_role_l16": ""}`.
 It's not possible to write (`/set`) this value.
 The possible values are: `invalid_unused`, `master`, `slave_1`, `slave_2`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MTG075-ZB-RL  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2.4G/5.8G human presence sensor with relay |
-| Exposes | presence, illuminance, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, sensor, linkquality |
+| Exposes | presence, illuminance, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, sensor |
 | Picture | ![Tuya MTG075-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG075-ZB-RL.png) |
 
 
@@ -86,7 +86,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `9`.
 
 ### Entry distance indentation (numeric)
-Indent the distance inward based on the dectection distance.
+Indent the distance inward based on the detection distance.
 Value can be found in the published state on the `entry_distance_indentation` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"entry_distance_indentation": NEW_VALUE}`.
@@ -152,11 +152,4 @@ Value can be found in the published state on the `sensor` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `on`, `off`, `occupied`, `unoccupied`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

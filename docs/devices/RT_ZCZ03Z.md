@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RT_ZCZ03Z  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Human presence sensor 24G |
-| Exposes | illuminance, presence, detection_distance_max, detection_distance_min, target_distance, fading_time, presence_sensitivity, indicator, linkquality |
+| Exposes | illuminance, presence, detection_distance_max, detection_distance_min, target_distance, fading_time, presence_sensitivity, indicator |
 | Picture | ![Tuya RT_ZCZ03Z](https://www.zigbee2mqtt.io/images/devices/RT_ZCZ03Z.png) |
 
 
@@ -92,11 +92,4 @@ Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

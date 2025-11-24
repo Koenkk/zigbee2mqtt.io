@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | _TZE200_i48qyn9s  |
 | Vendor  | [Essentials](/supported-devices/#v=Essentials)  |
 | Description | Thermostat Zigbee smart home |
-| Exposes | battery, battery_low, child_lock, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode), comfort_temperature, eco_temperature, open_window_temperature, window_open, detect_window_time_minute, away_setting, linkquality |
+| Exposes | battery, battery_low, child_lock, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode), comfort_temperature, eco_temperature, open_window_temperature, window_open, detect_window_time_minute, away_setting |
 | Picture | ![Essentials _TZE200_i48qyn9s](https://www.zigbee2mqtt.io/images/devices/_TZE200_i48qyn9s.png) |
 
 
@@ -108,11 +108,4 @@ The unit of this value is `min`.
 - `day` (numeric): Start away day unit is day
 - `hour` (numeric): Start away hours unit is hour
 - `minute` (numeric): Start away minutes unit is min
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

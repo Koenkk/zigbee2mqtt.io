@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 3RSP019BZ  |
 | Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Zigbee / BLE smart plug |
-| Exposes | switch (state), power_on_behavior, linkquality |
+| Exposes | switch (state), power_on_behavior |
 | Picture | ![Third Reality 3RSP019BZ](https://www.zigbee2mqtt.io/images/devices/3RSP019BZ.png) |
 
 
@@ -28,14 +28,14 @@ pageClass: device-page
 ### Switch between BLE and Zigbee mode
 
 Plug comes out of the box in BLE mode (Green LED). To use with zigbee2mqtt you need to change to zigbee mode (Red LED):
-#### BLE → ZigBee
+#### BLE → Zigbee
 1. Press the button and hold, then insert the Smart Plug into an outlet until the green light
 is ON.
 2. Release the button, then press the button immediately. LED light will flash in red,
-indicating that your Smart Plug is in ZigBee mode now.
+indicating that your Smart Plug is in Zigbee mode now.
 
 If you want to restore to BLE to work with most Echo devices: 
-#### ZigBee → BLE
+#### Zigbee → BLE
 1. Press the button and hold, then insert the Smart Plug into an outlet until the red light is
 ON.
 2. Release the button, then press the button immediately. LED light will alternately flash in
@@ -77,11 +77,4 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,15 +18,20 @@ pageClass: device-page
 | Model | ZBMINIR2  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart switch |
-| Exposes | switch (state), power_on_behavior, network_indicator, turbo_mode, delayed_power_on_state, delayed_power_on_time, detach_relay_mode, external_trigger_mode, inching_control_set, action, linkquality |
+| Exposes | switch (state), power_on_behavior, network_indicator, turbo_mode, delayed_power_on_state, delayed_power_on_time, detach_relay_mode, external_trigger_mode, inching_control_set, action |
 | Picture | ![SONOFF ZBMINIR2](https://www.zigbee2mqtt.io/images/devices/ZBMINIR2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Re-pair / starting pairing mode again
-Quickly press rocker switch 10 times.
+### Pairing
+There are two different options to reset the device and enter pairing mode:
+
+* button: Press and hold the device button for 5 seconds.
+* switch: Toggle an connected external switch 10 times consecutively. This is especially useful when there is no direct physical access to the button.
+
+The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -115,11 +120,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `toggle`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

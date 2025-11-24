@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_dimmer_4  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang smart dimmer module |
-| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, linkquality |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior |
 | Picture | ![Tuya TS0601_dimmer_4](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_4.png) |
 
 
@@ -77,11 +77,4 @@ Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

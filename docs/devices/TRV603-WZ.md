@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TRV603-WZ  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Thermostatic radiator valve. |
-| Exposes | battery, child_lock, switch (state), window, mode, holiday_mode, heating_stop, climate (local_temperature, current_heating_setpoint, local_temperature_calibration), comfort_temperature, eco_temperature, screen_orientation, frost_protection, boost_heating, boost_time, fault_code, linkquality |
+| Exposes | battery, child_lock, switch (state), window, mode, holiday_mode, heating_stop, climate (local_temperature, current_heating_setpoint, local_temperature_calibration), comfort_temperature, eco_temperature, screen_orientation, frost_protection, boost_heating, boost_time, fault_code |
 | Picture | ![Tuya TRV603-WZ](https://www.zigbee2mqtt.io/images/devices/TRV603-WZ.png) |
 
 
@@ -130,11 +130,4 @@ The unit of this value is `min`.
 Raw fault code.
 Value can be found in the published state on the `fault_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

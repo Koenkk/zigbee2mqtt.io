@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0001_fingerbot_1  |
 | Vendor  | [Adaprox](/supported-devices/#v=Adaprox)  |
 | Description | Zigbee fingerbot plus |
-| Exposes | switch (state), battery, mode, lower, upper, delay, reverse, touch, linkquality |
+| Exposes | switch (state), battery, mode, lower, upper, delay, reverse, touch |
 | Picture | ![Adaprox TS0001_fingerbot_1](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot_1.png) |
 
 
@@ -99,11 +99,4 @@ Value can be found in the published state on the `touch` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"touch": NEW_VALUE}`.
 If value equals `ON` touch is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

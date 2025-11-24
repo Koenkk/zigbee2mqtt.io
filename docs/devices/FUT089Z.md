@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | FUT089Z  |
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | RGB+CCT Remote |
-| Exposes | battery, voltage, action, linkquality |
+| Exposes | battery, voltage, action |
 | Picture | ![MiBoxer FUT089Z](https://www.zigbee2mqtt.io/images/devices/FUT089Z.png) |
 
 
@@ -27,52 +27,146 @@ pageClass: device-page
 
 ### Pairing
 To pair the device:
-- Allow Zigbee2MQTT pairing
-- Press the Master ON and OFF buttons simultaneously until the central red LED flashes quickly.
+- Permit joining in Zigbee2MQTT
+- Press and hold the Master ON and OFF buttons simultaneously until the central red LED begins flashing rapidly
 
-### Exposing the controls
-By default, the controls of the remote are not exposed. This is due to the non-standard way the remote communicates.
 
-In order to expose the controls, you need to:
-- Open `Zigbee2MQTT` (the web interface)
-- Go to the `Extensions` tab
-- Click the `+`-button to add a new extension file
-- Enter a name for the extension file, e.g.: `miboxer-fut089z-controls-exposer.js`
-- Copy the contents of this file [controls-exposer.js](https://github.com/Koenkk/zigbee2mqtt-user-extensions/blob/main/stable/miboxer-fut089z/controls-exposer.js) (if it doesn't exist use this one instead: [controls-exposer.js](https://github.com/Koenkk/zigbee2mqtt-user-extensions/blob/main/unstable/miboxer-fut089z/controls-exposer.js)) and paste it into the extension file you just created
-- Click the `Save` button
+### Device Behavior
 
-The controls of all your MiBoxer FUT089Z remotes are now properly exposed via MQTT and automatically show up in Home Assistant. (If you don't use Home Assistant, you probably have to subscribe to the appropriate MQTT topics. You'll find them in the extension code.)
-
-Each MiBoxer FUT089Z remote shows up as a separate device in Home Assistant.  
-By default they will report 3 sensors 
+The remote reports three sensor values by default:
 - `Battery` (%)
 - `Voltage` (mV)
 - `Linkquality` (lqi)
 
-The extension adds 3 more sensors:
-- `Brightness` (%)
-- `Color Temperature` (mireds)
-- `Color` (not implemented yet)
+The remote features seven numbered pairs of on/off buttons, with each pair controlling a distinct zone. Additionally, there is an eighth button group at the top, comprising dedicated `ON` and `OFF` buttons for zone 8.
+Each zone corresponds to a specific Zigbee group. By default, Zone 1 maps to Zigbee group 101, Zone 2 to 102, and so on.
+Note that when using multiple MiBoxer FUT089Z remotes, they will all control the same Zigbee groups (101-108) by default.
 
-As well as on trigger for each button:
-- button_group_1_on
-- button_group_1_off
+On each button press or slider touch, the device sends one or two consecutive actions and a corresponding group ID. The group ID is published along with the device state as `action_group`:
+
+| Button / Slider | Action | Group ID  |
+|-----------------|--------|-----------|
+| Button 1-7 `I`  | `on`   | 101 - 107 |
+| Button 1-7 `O`  | `off`  | 101 - 107 |
+| `R`, `G`, `B` | `move_to_hue_and_saturation`, followed by `brightness_move_to_level`  | Group ID of the last on/off button that was pressed |
+| `W` | `color_temperature_move`, followed by `brightness_move_to_level` |Group ID of the last on/off button that was pressed |
+| `ON` | `on` | 108 |
+| `OFF` | `off` |108  |
+| Color Wheel |`move_to_hue_and_saturation`, followed by `brightness_move_to_level` | 
+| Brightness Slider   | `brightness_move_to_level` | Group ID of the last on/off button that was pressed |
+| Color Temperature / Saturation Slider  | Either `move_to_hue_and_saturation` or `color_temperature_move` (depending on an internal state of the device), followed by  `brightness_move_to_level`. The `move_to_hue_and_saturation` state can be forced by touching the color wheel or by pressing one of the R, G, B buttons first.  `color_temperature_move` can be forced by pressing the W button first. | Group ID of the last on/off button that was pressed |
+|`10S` / `30S Delay OFF` |`off` after a delay of 10 / 30 seconds | Group ID of the last on/off button that was pressed |
+
+### Device Configuration
+
+#### Exposing Control Values 
+
+By default, the hue/saturation/level values from the remote's controls are not exposed. To make these controls visible, enable the device-specific `expose_values` option.
+
+This option exposes four additional values representing the most recently requested settings:
+- `level`: brightness level
+- `color_temperature`: color temperature
+- `hue`: color hue
+- `saturation`: color saturation
+
+_(Note: If these exposed values don't appear immediately, a restart of Zigbee2MQTT may be necessary for the changes to take effect)_
+
+#### Zone-aware Actions
+The device sends identical `on` / `off` / `move_to_hue_and_saturation` / `brightness_move_to_level` / `color_temperature_move` actions across all zones by default, with the zone's group ID only accessible in the device state. To enable sending of distinct actions for each zone, activate the device-specific `zone_actions` option.
+
+When enabled, each action includes its corresponding zone ID:
+- `on_zone_1`, `on_zone_2`, ...
+- `off_zone_1`, `off_zone_2`, ...
+- `move_to_hue_and_saturation_zone_1`, `move_to_hue_and_saturation_zone_2`, ...
 - ...
-- button_group_8_on
-- button_group_8_off
 
-Example automation using a button:
+#### Changing Group IDs
+
+The remote is configured to use group IDs 101-107 for the seven on/off button pairs and group ID 108 for the master `ON`/`OFF` buttons by default. As a result, all FUT089Z devices on your network will control the same lights unless configured otherwise.
+To customize this behavior or resolve conflicts with existing group IDs, you can override the default assignments by configuring the device-specific `zone_[0-8]_group_id` option with your preferred ID.
+
+To apply the new group ID settings to the device, press any button after making the changes.
+
+### Controlling Lights and Switches
+
+#### Home Assistant Automations
+
+By default, it is neither possible to use Home Assistant `device` triggers nor `state` triggers. This is due to the non-standard way the remote communicates. However, it is possible to use an `mqtt` trigger to react on any message from the device, parse the payload and decide what to do inside Home Assistant. 
+
+Below is an example with full functionality to control `kitchen_light` with button 4 of `MiBoxerRemote1`: 
 
 ``` YAML
-alias: MiBoxerRemote1_Button_Group_8_On
+triggers:
+  - topic: zigbee2mqtt/MiBoxerRemote1
+    trigger: mqtt
+conditions: []
+actions:
+  - variables:
+      mylight: light.kitchen_light
+      group: 104
+  - if:
+      - condition: template
+        value_template: "{{ trigger.payload_json.action_group | int(0) == group | int(0) }}"
+    then:
+      - if:
+          - condition: template
+            value_template: "{{ trigger.payload_json.action.startswith('move_to_hue_and_saturation') }}"
+        then:
+          - action: light.turn_on
+            data:
+              hs_color:
+                - "{{ trigger.payload_json.action_hue*360/254 }}"
+                - "{{ (trigger.payload_json.action_saturation-170)/84*100 }}"
+            target:
+              entity_id: "{{ mylight }}"
+      - if:
+          - condition: template
+            value_template: "{{ trigger.payload_json.action.startswith('brightness_move_to_level') }}"
+        then:
+          - action: light.turn_on
+            data:
+              brightness: "{{ trigger.payload_json.action_level }}"
+            target:
+              entity_id: "{{ mylight }}"
+      - if:
+          - condition: template
+            value_template: "{{ trigger.payload_json.action.startswith('color_temperature_move') }}"
+        then:
+          - action: light.turn_on
+            data:
+              color_temp: "{{ trigger.payload_json.action_color_temperature }}"
+            target:
+              entity_id: "{{ mylight }}"
+      - if:
+          - condition: template
+            value_template: "{{ trigger.payload_json.action.startswith('on') }}"
+        then:
+          - action: light.turn_on
+            target:
+              entity_id: "{{ mylight }}"
+      - if:
+          - condition: template
+            value_template: "{{ trigger.payload_json.action.startswith('off') }}"
+        then:
+          - action: light.turn_off
+            target:
+              entity_id: "{{ mylight }}"
+mode: single
+```
+
+If you enable both the `expose_values` and `zone_actions` options, you can also use `device` and `state` triggers for your automations (which you can easily create automatically by going to the Device in Home Assistant and adding an Automation from there):
+
+On/off button:
+
+``` YAML
+alias: MiBoxerRemote1_Button_Zone_8_On
 description: ""
-trigger:
-  - platform: device
+triggers:
+  - trigger: device
     domain: mqtt
     device_id: 37c0de12e46bb817b3ed5dcae834feee
-    type: button_short_press
-    subtype: button_group_8_on
-    discovery_id: 0x003c84fffeb6a253_zone_8_button_on
+    type: action
+    subtype: on_zone_8
 condition: []
 action:
   - service: light.turn_on
@@ -81,22 +175,23 @@ action:
       device_id: 0887f3aa92fa71265fcb5f1d7021c2a7
 mode: restart
 ```
-(You can easily create them automatically by going to the Device in Home Assistant and adding an Automation from there.)
+Brightness slider:  
 
-Example automation using the brightness slider:  
-(If you create such an Automation automatically through the Device's page in Home Assistant, it will create a buggy `platform: device` automation, please use `platform: state` instead as shown blow.)
 ``` YAML
 alias: MiBoxerRemote1_BrightnessSlider
 description: ""
-trigger:
-  - platform: state
-    entity_id:
-      - sensor.none_brightness
+triggers:
+  - trigger: device
+    domain: mqtt
+    device_id: 37c0de12e46bb817b3ed5dcae834feee
+    type: action
+    subtype: brightness_move_to_level_zone_3
 condition: []
 action:
   - service: light.turn_on
     data:
-      brightness_pct: "{{ trigger.to_state.state }}"
+      brightness: |
+        {{ states("sensor.miboxerremote1_level") }}
       transition: 0.2
     target:
       device_id: 8984f2bd0c64baa8badb3fe895f7dd95
@@ -104,23 +199,12 @@ action:
 mode: restart
 ```
 
+#### Direct Control via Zigbee Groups
 
-
-Bugs:
-- The Color Wheel control is currently not supported. (Problem is that the remote sends the last brightness value instead of the selected color value. Fixing probably requires reverse engineering th proprietary protocol. )
-- The R, G, B and W buttons have the exact same issue as the color wheel.
-- The Color Temperature Slider control doesn't work reliably. Sometimes it just sends the last brightness value (those messages are filtered out by the extension to avoid complications) and sometimes it just works. 
-
-If you think you can help fixing the buggy controls, your best bet is probably to start [in this issue](https://github.com/Koenkk/zigbee2mqtt/issues/10708) where the initial reverse engineering efforts have been documented.
-
-### Directly controlling ZigBee devices
-Alternatively, or in addition to the approach mentioned above, you can also directly control ZigBee lights etc. with this remote.
-The remote has 7 groups of on/off buttons, each button group controlling a different zone. In addition to that, the remote has an eighth button group consisting of the upper dedicated `ON` and `OFF` buttons corresponding to another zone.
-Each zone is mapped to a different ZigBee group, which are currently hardcoded: Zone 1 is mapped to ZigBee group 101, Zone 2 to 102 and so forth...
-This means that if you have multiple MiBoxer FUT089T remotes, they all control the same ZigBee groups (101-108). 
+Alternatively, or in addition to the approach described above, you can also directly control Zigbee lights etc. with this remote.
 
 To directly control lights or smartplugs without going through MQTT (and Home Assistant or whatever), 
-- first create a ZigBee group with the correct ID (10X), 
+- first create a Zigbee group with the correct ID (10X), 
 - name it like you wish,
 - then add the devices you intend to control to that group (pay attention to use the right termination point).
   Very important: do NOT add the remote itself to the group.
@@ -132,11 +216,11 @@ The beauty of this approach is that the remote will work even with Zigbee2MQTT d
 It looks like a perfect emergency backup.
 
 
-### Quirks
-Like most of battery powered devices, the remote does not respond to any ZigBee commands sent after initial configuration without taking out the battery and putting it back in.
-To send any command to it (like a Leave or configure command), take out the battery, send the command and quickly put it back in.
+### Technical Notes
 
-It does also not support binding its light output clusters or manually joining it to a group.
+- The saturation / color temperature slider control exhibits behavior which is not yet fully understood. The slider alternates between sending saturation and color temperature values based on an internal state of the device. You can force "saturation mode" by pressing any `R`, `G`, `B` button or touching the color wheel, while pressing the `W` button forces "color temperature mode". When pressing any on/off button, the slider reverts to its default behavior (either saturation or color temperature mode). The mechanism for changing this default behavior remains unknown.  
+- As with most battery-powered devices, this remote does not continuously listen for Zigbee commands after its initial configuration. When sending commands to the device (such as Leave, Configure, or group ID changes), you should press any button afterward to ensure the command is received.
+- The remote does not support light output cluster binding or manual group joining (it relies solely on its internal zone/group mapping).
 
 ### Touchlink
 The remote supports Touchlink. It is unclear how the Touchlink configuration interacts with the regular group configuration so if you intend to use Touchlink it would probably best not to pair it to a network.
@@ -147,12 +231,25 @@ The remote supports Touchlink. It is unclear how the Touchlink configuration int
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
-```yaml
-simulated_brightness:
-  delta: 20 # delta per interval, default = 20
-  interval: 200 # interval in milliseconds, default = 200
-```
+* `zone_1_group_id`: Group ID for zone 1 (default: 101). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
+
+* `zone_2_group_id`: Group ID for zone 2 (default: 102). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
+
+* `zone_3_group_id`: Group ID for zone 3 (default: 103). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
+
+* `zone_4_group_id`: Group ID for zone 4 (default: 104). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
+
+* `zone_5_group_id`: Group ID for zone 5 (default: 105). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
+
+* `zone_6_group_id`: Group ID for zone 6 (default: 106). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
+
+* `zone_7_group_id`: Group ID for zone 7 (default: 107). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
+
+* `zone_8_group_id`: Group ID for zone 8 (default: 108). The value must be a number with a minimum value of `1` and with a maximum value of `65535`
+
+* `expose_values`: Expose additional numeric values for action properties (hue, saturation, level, etc.). The value must be `true` or `false`
+
+* `zone_actions`: Publish zone-specific actions with zone IDs (e.g., on_zone_1, off_zone_2). The value must be `true` or `false`
 
 
 ## Exposes
@@ -174,12 +271,5 @@ The unit of this value is `mV`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `brightness_move_to_level`, `color_temperature_move`, `move_to_hue_and_saturation`, `tuya_switch_scene`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `on`, `off`, `brightness_move_to_level`, `color_temperature_move`, `move_to_hue_and_saturation`.
 

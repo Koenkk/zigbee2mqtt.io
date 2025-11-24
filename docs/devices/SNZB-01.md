@@ -1,6 +1,6 @@
 ---
-title: "eWeLink SNZB-01 control via MQTT"
-description: "Integrate your eWeLink SNZB-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "SONOFF SNZB-01 control via MQTT"
+description: "Integrate your SONOFF SNZB-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-07-10T21:02:58Z
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# eWeLink SNZB-01
+# SONOFF SNZB-01
 
 |     |     |
 |-----|-----|
 | Model | SNZB-01  |
-| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Wireless button |
-| Exposes | battery, voltage, action, linkquality |
-| Picture | ![eWeLink SNZB-01](https://www.zigbee2mqtt.io/images/devices/SNZB-01.png) |
+| Exposes | battery, voltage, action |
+| Picture | ![SONOFF SNZB-01](https://www.zigbee2mqtt.io/images/devices/SNZB-01.png) |
+| White-label | eWeLink RHK07 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -56,11 +57,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `long`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

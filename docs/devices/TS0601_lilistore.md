@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_lilistore  |
 | Vendor  | [Lilistore](/supported-devices/#v=Lilistore)  |
 | Description | Cover motor |
-| Exposes | cover (state, position), reverse_direction, motor_fault, linkquality |
+| Exposes | cover (state, position), reverse_direction, motor_fault, upper_stroke_limit, middle_stroke_limit, lower_stroke_limit, motor_working_mode |
 | Picture | ![Lilistore TS0601_lilistore](https://www.zigbee2mqtt.io/images/devices/TS0601_lilistore.png) |
 
 
@@ -56,10 +56,31 @@ Value can be found in the published state on the `motor_fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` motor fault is ON, if `false` OFF.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Upper stroke limit (enum)
+Set or Reset the upper stroke limit.
+Value can be found in the published state on the `upper_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
+
+### Middle stroke limit (enum)
+Set or Reset the middle stroke limit.
+Value can be found in the published state on the `middle_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"middle_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
+
+### Lower stroke limit (enum)
+Set or Reset the lower stroke limit.
+Value can be found in the published state on the `lower_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lower_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
+
+### Motor working mode (enum)
+Motor operating mode.
+Value can be found in the published state on the `motor_working_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_working_mode": NEW_VALUE}`.
+The possible values are: `continuous`, `intermittently`.
 

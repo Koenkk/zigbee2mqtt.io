@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WNAL50/WNRL50  |
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Smart dimmer switch with Netatmo |
-| Exposes | ballast_minimum_level, ballast_maximum_level, device_mode, led_in_dark, led_if_on, light (state, brightness), effect, power_on_behavior, linkquality |
+| Exposes | ballast_minimum_level, ballast_maximum_level, device_mode, led_in_dark, led_if_on, light (state, brightness), effect, power_on_behavior |
 | Picture | ![Legrand WNAL50/WNRL50](https://www.zigbee2mqtt.io/images/devices/WNAL50-WNRL50.png) |
 
 
@@ -108,7 +108,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -129,11 +129,4 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

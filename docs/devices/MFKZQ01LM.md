@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MFKZQ01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Cube |
-| Exposes | battery, voltage, action_angle, device_temperature, power_outage_count, action_from_side, action_side, action_to_side, side, action, linkquality |
+| Exposes | battery, voltage, action_angle, device_temperature, power_outage_count, action_from_side, action_side, action_to_side, side, action |
 | Picture | ![Aqara MFKZQ01LM](https://www.zigbee2mqtt.io/images/devices/MFKZQ01LM.png) |
 | White-label | Xiaomi MFKZQ01LM |
 
@@ -105,11 +105,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `shake`, `throw`, `wakeup`, `fall`, `tap`, `slide`, `flip180`, `flip90`, `rotate_left`, `rotate_right`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

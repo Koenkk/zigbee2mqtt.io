@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | FC80GCS  |
 | Vendor  | [BTicino](/supported-devices/#v=BTicino)  |
 | Description | DIN power consumption module |
-| Exposes | power, power_apparent, power_alarm_active, power_alarm, linkquality |
+| Exposes | power, power_apparent, power_alarm_active, power_alarm |
 | Picture | ![BTicino FC80GCS](https://www.zigbee2mqtt.io/images/devices/FC80GCS.png) |
 
 
@@ -37,7 +37,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `identity_effect`: Defines the identification effect to simplify the device identification. Example:
 ```yaml
@@ -73,11 +73,4 @@ Value can be found in the published state on the `power_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_alarm": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_alarm": NEW_VALUE}`.
 If value equals `true` power alarm is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

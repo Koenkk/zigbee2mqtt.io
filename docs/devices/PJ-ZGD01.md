@@ -1,6 +1,6 @@
 ---
-title: "Tuya PJ-ZGD01 control via MQTT"
-description: "Integrate your Tuya PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "MatSee Plus PJ-ZGD01 control via MQTT"
+description: "Integrate your MatSee Plus PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -11,16 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya PJ-ZGD01
+# MatSee Plus PJ-ZGD01
 
 |     |     |
 |-----|-----|
 | Model | PJ-ZGD01  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [MatSee Plus](/supported-devices/#v=MatSee%20Plus)  |
 | Description | Garage door opener |
-| Exposes | trigger, countdown, garage_door_contact, run_time, open_alarm_time, status, linkquality |
-| Picture | ![Tuya PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
-| White-label | MatSee Plus PJ-ZGD01 |
+| Exposes | trigger, countdown, garage_door_contact, run_time, open_alarm_time, status |
+| Picture | ![MatSee Plus PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -71,15 +70,8 @@ The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
 ### Status (enum)
-Indicates run time alarm, door open alarm or noraml status, will not retunr to normal until door is triggered again.
+Indicates run time alarm, door open alarm or normal status, will not return to normal until door is triggered again.
 Value can be found in the published state on the `status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `Open Time Alarm`, `Run Time Alarm`, `Normal`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

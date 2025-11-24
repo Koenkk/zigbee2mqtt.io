@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZHEMI101  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Energy meter |
-| Exposes | power, energy, battery_low, pulse_configuration, interface_mode, current_summation, check_meter, linkquality |
+| Exposes | power, energy, battery_low, pulse_configuration, interface_mode, current_summation, check_meter |
 | Picture | ![Develco ZHEMI101](https://www.zigbee2mqtt.io/images/devices/ZHEMI101.png) |
 
 
@@ -34,11 +34,11 @@ pageClass: device-page
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -87,11 +87,4 @@ Is true if communication problem with meter is experienced.
 Value can be found in the published state on the `check_meter` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` check meter is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZLinky_TIC  |
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZLinky |
-| Exposes | EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXN, SINSTS, SMAXN-1, SMAXN2, SMAXN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXN2-1, SMAXN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3, linkquality |
+| Exposes | EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXSN, SINSTS, SMAXSN-1, SMAXSN2, SMAXSN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXSN2-1, SMAXSN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3 |
 | Picture | ![LiXee ZLinky_TIC](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.png) |
 
 
@@ -37,8 +37,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds, set to -1 to disable. The value must be a number with a minimum value of `-1`
-
 * `linky_mode`: Counter with TIC in mode standard or historique. May require restart (default: auto). The value must be one of `auto`, `historique`, `standard`
 
 * `energy_phase`: Power with single or three phase. May require restart (default: auto). The value must be one of `auto`, `single_phase`, `three_phase`
@@ -47,11 +45,13 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `tarif`: Overrides the automatic current tarif. This option will exclude unnecessary attributes. Open a issue to support more of them. Default: auto. The value must be one of `Historique - BASE`, `Historique - HCHP`, `Historique - EJP`, `Historique - BBR`, `Standard - Sem WE Lundi`, `Standard - Sem WE Mercredi`, `Standard - Sem WE Vendredi`, `Standard - BASE`, `Standard - Heure Pleine Heure Creuse`, `Standard - Heures Super Creuses`, `Standard - TEMPO`, `Standard - ZEN Flex`, `auto`
 
-* `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `measurement_poll_chunk`: During the poll, request multiple exposes to the Zlinky at once for reducing Zigbee network overload. Too much request at once could exceed device limit. Requires Z2M restart. Default: 1. The value must be a number with a minimum value of `1`
+* `measurement_poll_chunk`: Number of attributes requested from the ZLinky in each poll to reduce Zigbee network load. Requesting too many at once may exceed the device's limit and cause read errors. Requires Z2M restart. Default: 4. The value must be a number with a minimum value of `1`
 
-* `tic_command_whitelist`: List of TIC commands to be exposed (separated by comma). Reconfigure device after change. Default: all. The value must be textual.
+* `tic_command_whitelist`: Comma-separated list of TIC commands to expose. Requires Z2M restart. Default: all. The value must be textual.
+
+* `measurement_poll_interval`: Some attributes do not support reporting and are polled instead. The default poll interval for these is 600 seconds. Set to -1 to disable polling. Polled attributes are those marked as read-only at https://github.com/fairecasoimeme/Zlinky_TIC/. The value must be a number with a minimum value of `-1`
 
 
 ## Exposes
@@ -352,7 +352,7 @@ Stop mobile point 3.
 Value can be found in the published state on the `stop_mobile_point3` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### SMAXN (numeric)
+### SMAXSN (numeric)
 Apparent power delivered peak.
 Value can be found in the published state on the `active_power_max` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -364,19 +364,19 @@ Value can be found in the published state on the `apparent_power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `VA`.
 
-### SMAXN-1 (numeric)
+### SMAXSN-1 (numeric)
 Apparent power max. draw-off n-1.
 Value can be found in the published state on the `drawn_v_a_max_n1` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `VA`.
 
-### SMAXN2 (numeric)
+### SMAXSN2 (numeric)
 Apparent power delivered peak (phase 2).
 Value can be found in the published state on the `active_power_max_ph_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `VA`.
 
-### SMAXN3 (numeric)
+### SMAXSN3 (numeric)
 Apparent power delivered peak (phase 3).
 Value can be found in the published state on the `active_power_max_ph_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -436,13 +436,13 @@ Value can be found in the published state on the `rms_voltage_ph_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### SMAXN2-1 (numeric)
+### SMAXSN2-1 (numeric)
 Apparent power max. draw-off n-1 (phase 2).
 Value can be found in the published state on the `drawn_v_a_max_n1_p2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `VA`.
 
-### SMAXN3-1 (numeric)
+### SMAXSN3-1 (numeric)
 Apparent power max. draw-off n-1 (phase 3).
 Value can be found in the published state on the `drawn_v_a_max_n1_p3` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -520,11 +520,4 @@ Over Current Warning (phase 3).
 Value can be found in the published state on the `warn_d_i_r3` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1CG-E_3.0 control via MQTT"
-description: "Integrate your HEIMAN HS1CG-E_3.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1CG-E_3.0 control via MQTT"
+description: "Integrate your Heiman HS1CG-E_3.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-12-01T19:02:25Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1CG-E_3.0
+# Heiman HS1CG-E_3.0
 
 |     |     |
 |-----|-----|
 | Model | HS1CG-E_3.0  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Combustible gas sensor |
-| Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS1CG-E_3.0](https://www.zigbee2mqtt.io/images/devices/HS1CG-E_3.0.png) |
+| Exposes | gas, battery_low, tamper |
+| Picture | ![Heiman HS1CG-E_3.0](https://www.zigbee2mqtt.io/images/devices/HS1CG-E_3.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,11 +49,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

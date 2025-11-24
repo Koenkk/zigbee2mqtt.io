@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9030A-MW  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee compatible ceiling mount occupancy sensor |
-| Exposes | model, light_pwm_frequency, brightness_curve, start_up_on_off, motion_sensor_light_duration, motion_sensor_light_sensitivity, motion_sensor_working_mode, motion_sensor_sensing_distance, motion_sensor_microwave_switch, motion_sensor_onoff_broadcast, motion_sensor_light_state, motion_sensor_in_pwm_brightness, motion_sensor_in_pwm_output, motion_sensor_leave_pwm_output, motion_sensor_leave_delay, motion_sensor_pwm_output_after_delay, linear_error_ratio_coefficient_of_lux_measurement, fixed_deviation_of_lux_measurement, light (state, brightness), effect, power_on_behavior, occupancy, illuminance, action, linkquality |
+| Exposes | model, light_pwm_frequency, brightness_curve, start_up_on_off, motion_sensor_light_duration, motion_sensor_light_sensitivity, motion_sensor_working_mode, motion_sensor_sensing_distance, motion_sensor_microwave_switch, motion_sensor_onoff_broadcast, motion_sensor_light_state, motion_sensor_in_pwm_brightness, motion_sensor_in_pwm_output, motion_sensor_leave_pwm_output, motion_sensor_leave_delay, motion_sensor_pwm_output_after_delay, linearity_error_ratio_lux, fixed_deviation_lux, light (state, brightness), effect, power_on_behavior, occupancy, illuminance, action |
 | Picture | ![Sunricher SR-ZG9030A-MW](https://www.zigbee2mqtt.io/images/devices/SR-ZG9030A-MW.png) |
 
 
@@ -38,7 +38,9 @@ pageClass: device-page
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
+
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
 * `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
 ```yaml
@@ -167,18 +169,18 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Linear error ratio coefficient of lux measurement (numeric)
-Linear error ratio coefficient of LUX measurement (100‰-10000‰, default: 1000‰).
-Value can be found in the published state on the `linear_error_ratio_coefficient_of_lux_measurement` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linear_error_ratio_coefficient_of_lux_measurement": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linear_error_ratio_coefficient_of_lux_measurement": NEW_VALUE}`.
+### Linearity error ratio lux (numeric)
+Linearity error ratio coefficient for LUX measurement. 1000 means 1000‰ (default). Increasing this value magnifies the LUX measurement linearly, decreasing minifies it. For example, 1001 means 1.001x, 500 means 0.5x..
+Value can be found in the published state on the `linearity_error_ratio_lux` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linearity_error_ratio_lux": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linearity_error_ratio_lux": NEW_VALUE}`.
 The minimal value is `100` and the maximum value is `10000`.
 
-### Fixed deviation of lux measurement (numeric)
-Fixed deviation of LUX measurement (-100~100, default: 0).
-Value can be found in the published state on the `fixed_deviation_of_lux_measurement` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fixed_deviation_of_lux_measurement": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fixed_deviation_of_lux_measurement": NEW_VALUE}`.
+### Fixed deviation lux (numeric)
+Fixed deviation of LUX measurement. Signed 2-byte integer. Positive value increases, negative value decreases the measured LUX. For example, 100 means +100 LUX, -100 means -100 LUX..
+Value can be found in the published state on the `fixed_deviation_lux` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fixed_deviation_lux": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fixed_deviation_lux": NEW_VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 
 ### Light 
@@ -205,7 +207,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -227,10 +229,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
-### Occupancy (binary)
+### Occupancy (binary, 2 endpoint)
 Indicates whether the device detected occupancy.
-Value can be found in the published state on the `occupancy` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy": ""}`.
+Value can be found in the published state on the `occupancy_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_2": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
@@ -246,11 +248,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `toggle`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SLR1b  |
 | Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Heating thermostat |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, linkquality |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration |
 | Picture | ![Hive SLR1b](https://www.zigbee2mqtt.io/images/devices/SLR1b.png) |
 
 
@@ -63,7 +63,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
    "occupied_heating_setpoint":20 // Replace with desired temperature. Between 5 and 32 C
 }
 ```
-Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `65535` which means `undefined` (indefinite).
+Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `null` which means `undefined` (indefinite).
 
 This will also stop any native boosts that are currently active.
 
@@ -118,16 +118,9 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `true` temperature setpoint hold is ON, if `false` OFF.
 
 ### Temperature setpoint hold duration (numeric)
-Period in minutes for which the setpoint hold will be active. 65535 = attribute not used. 0 to 360 to match the remote display.
+Period in minutes for which the setpoint hold will be active. null = attribute not used. 0 to 360 to match the remote display.
 Value can be found in the published state on the `temperature_setpoint_hold_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_setpoint_hold_duration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setpoint_hold_duration": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

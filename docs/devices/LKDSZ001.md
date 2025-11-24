@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LKDSZ001  |
 | Vendor  | [Linkoze](/supported-devices/#v=Linkoze)  |
 | Description | Door sensor with scene switch |
-| Exposes | action, contact, battery_low, tamper, battery, voltage, linkquality |
+| Exposes | contact, battery_low, tamper, battery, voltage, action |
 | Picture | ![Linkoze LKDSZ001](https://www.zigbee2mqtt.io/images/devices/LKDSZ001.png) |
 
 
@@ -31,12 +31,6 @@ pageClass: device-page
 
 
 ## Exposes
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `hold`.
 
 ### Contact (binary)
 Indicates if the contact is closed (= true) or open (= false).
@@ -69,10 +63,9 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `single`, `double`, `hold`.
 

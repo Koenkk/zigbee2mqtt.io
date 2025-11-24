@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Y1_IN  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart human presence sensor 24G |
-| Exposes | presence, illuminance, keep_sensitivity, trigger_sensitivity, fading_time, target_distance, linkquality |
+| Exposes | presence, illuminance, keep_sensitivity, trigger_sensitivity, fading_time, target_distance |
 | Picture | ![Tuya Y1_IN](https://www.zigbee2mqtt.io/images/devices/Y1_IN.png) |
 
 
@@ -76,11 +76,4 @@ Distance to target.
 Value can be found in the published state on the `target_distance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `m`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

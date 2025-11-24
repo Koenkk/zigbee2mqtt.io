@@ -24,16 +24,14 @@ Enter the following commands inside the jail's shell:
 
 ```bash
 # Install Node.js and required dependencies:
-# - It is recommended to install Node 20 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
+# - It is recommended to install Node 22 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
 # - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # - Selecting `npm` also installs `node`.
-pkg install npm git gmake gcc
-npm install -g pnpm
+pkg install git gmake gcc
+corepack enable
 
-# Verify that the correct nodejs and pnpm (automatically installed with nodejs)
-# version has been installed
-node --version  # Should output V18.x, V20.x, V21.X
-pnpm --version  # Should output 9.X
+# Verify that the correct Node.js version has been installed
+node --version  # Should output V20.x, V22.X
 
 # Create installation folder (/usr/local prefix is used for software not part of the base system)
 mkdir -p /usr/local/opt/zigbee2mqtt
@@ -43,26 +41,10 @@ cd /usr/local/opt/zigbee2mqtt
 git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git .
 
 # Install dependencies
-pnpm i --frozen-lockfile
+pnpm install --frozen-lockfile
 
 # Build Zigbee2MQTT
 pnpm run build
-```
-
-## Configuring
-
-Configuration is the same as on [Linux](01_linux.md#configuring).
-
-Note that the `configuration.yaml` is at a different location:
-
-```
-/usr/local/opt/zigbee2mqtt/data/configuration.yaml
-```
-
-Also note that if you need `nano` for editing the configuration, you'll have to install it first:
-
-```sh
-pkg install nano
 ```
 
 ## Starting Zigbee2MQTT
@@ -74,7 +56,11 @@ cd /usr/local/opt/zigbee2mqtt
 pnpm start
 ```
 
-When started successfully, you will see something like:
+On first start, Zigbee2MQTT will start the onboarding on port 8080.
+Navigate to this board and configure accordingly.
+More information about [onboarding](../getting-started/README.md#onboarding).
+
+Once the onboarding is completed, you will see something like:
 
 ```bash
 Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
@@ -83,10 +69,6 @@ Zigbee2MQTT:info  2019-11-09T13:04:01: Starting zigbee-herdsman...
 Zigbee2MQTT:info  2019-11-09T13:04:03: zigbee-herdsman started
 Zigbee2MQTT:info  2019-11-09T13:04:03: Coordinator firmware version: '{"type":"zStack30x","meta":{"transportrev":2,"product":2,"majorrel":2,"minorrel":7,"maintrel":2,"revision":20190425}}'
 Zigbee2MQTT:info  2019-11-09T13:04:03: Currently 0 devices are joined:
-Zigbee2MQTT:warn  2019-11-09T13:04:03: `permit_join` set to  `true` in configuration.yaml.
-Zigbee2MQTT:warn  2019-11-09T13:04:03: Allowing new devices to join.
-Zigbee2MQTT:warn  2019-11-09T13:04:03: Set `permit_join` to `false` once you joined all devices.
-Zigbee2MQTT:info  2019-11-09T13:04:03: Zigbee: allowing new devices to join.
 Zigbee2MQTT:info  2019-11-09T13:04:03: Connecting to MQTT server at mqtt://localhost
 Zigbee2MQTT:info  2019-11-09T13:04:03: Connected to MQTT server
 ```

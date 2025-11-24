@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ME201WZ  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Water level sensor |
-| Exposes | liquid_level_percent, liquid_depth, liquid_state, max_set, mini_set, installation_height, liquid_depth_max, linkquality |
+| Exposes | liquid_level_percent, liquid_depth, liquid_state, max_set, mini_set, installation_height, liquid_depth_max |
 | Picture | ![Tuya ME201WZ](https://www.zigbee2mqtt.io/images/devices/ME201WZ.png) |
 
 
@@ -81,11 +81,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"liquid_depth_max": NEW_VALUE}`.
 The minimal value is `0.1` and the maximum value is `4`.
 The unit of this value is `m`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

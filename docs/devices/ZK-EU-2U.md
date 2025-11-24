@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZK-EU-2U  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee 3.0 dual USB wireless socket plug |
-| Exposes | switch (state), power_on_behavior, linkquality |
+| Exposes | switch (state), power_on_behavior |
 | Picture | ![Moes ZK-EU-2U](https://www.zigbee2mqtt.io/images/devices/ZK-EU-2U.png) |
 
 
@@ -75,11 +75,4 @@ Value can be found in the published state on the `power_on_behavior_l2` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

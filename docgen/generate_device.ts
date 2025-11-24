@@ -16,7 +16,7 @@ export function resolveDeviceFile(model) {
 export default async function generateDevice(device) {
     const deviceFile = resolveDeviceFile(device.model);
     const image = await getImage(device, imageBaseDir, imageBaseUrl);
-    const exposes = typeof device.exposes === 'function' ? device.exposes() : device.exposes;
+    const exposes = typeof device.exposes === 'function' ? device.exposes({isDummyDevice: true}, {}) : device.exposes;
     const exposesDescription = Array.from(new Set(exposes.map((e) => e.name ?? `${e.type} (${e.features.map((f) => f.name).join(', ')})`))).join(
         ', ',
     );
@@ -72,7 +72,7 @@ ${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendo
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ${notes || '\n'}
 <!-- Notes END: Do not edit below this line -->
-${getNotes(device)}
+${getNotes(device, exposes)}
 ${
     device.ota
         ? `

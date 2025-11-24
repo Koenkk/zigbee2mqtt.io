@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MIR-HE200-TY  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Human presence sensor with fall function |
-| Exposes | illuminance, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, tumble_switch, fall_sensitivity, tumble_alarm_time, fall_down_status, static_dwell_alarm, linkquality |
+| Exposes | illuminance, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, tumble_switch, fall_sensitivity, tumble_alarm_time, fall_down_status, static_dwell_alarm |
 | Picture | ![Tuya MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.png) |
 
 
@@ -115,11 +115,4 @@ The possible values are: `none`, `maybe_fall`, `fall`.
 Static dwell alarm.
 Value can be found in the published state on the `static_dwell_alarm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

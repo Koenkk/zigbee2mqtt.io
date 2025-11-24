@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM25-EAZ  |
 | Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | AK Curtain |
-| Exposes | battery, voltage, cover (state, position), motor_direction, motor_mode, motor_clb_position, motor_clb_position_result, linkquality |
+| Exposes | battery, voltage, cover (state, position), motor_direction, motor_mode, motor_clb_position, motor_clb_position_result |
 | Picture | ![eWeLink ZM25-EAZ](https://www.zigbee2mqtt.io/images/devices/ZM25-EAZ.png) |
 
 
@@ -88,11 +88,4 @@ The possible values are: `open`, `close`, `other`, `clear`.
 Motor Calibration Result.
 Value can be found in the published state on the `motor_clb_position_result` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIN-4-FP-21_EQU  |
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | Equation pilot wire heating module |
-| Exposes | switch (state), power, energy, pilot_wire_mode, linkquality |
+| Exposes | switch (state), power, energy, pilot_wire_mode |
 | Picture | ![ADEO SIN-4-FP-21_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-FP-21_EQU.png) |
 
 
@@ -37,11 +37,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -77,11 +77,4 @@ Value can be found in the published state on the `pilot_wire_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pilot_wire_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilot_wire_mode": NEW_VALUE}`.
 The possible values are: `comfort`, `eco`, `frost_protection`, `off`, `comfort_-1`, `comfort_-2`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

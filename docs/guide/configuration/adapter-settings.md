@@ -22,6 +22,8 @@ First determine the port of your adapter:
     lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00 -> ../../ttyACM0
     ```
 
+    - If it's still not connecting, make sure your adapter is in USB mode. Some adapters, eg. the [ZigStar](https://xzg.xyzroe.cc/hardware/) run in network mode by default, and won't communicate over USB until put into USB mode.
+
 - For network adapters you need to find the IP address of your adapter through router/switch web-interface. Make sure that the adapter has been assigned a static IP address!
     - Alternatively, in case your adapter supports mDNS, see the mDNS docs below.
 
@@ -66,9 +68,13 @@ serial:
     # port: mdns://czc
     # Optional: disable LED of the adapter if supported (default: false)
     disable_led: false
+    # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
+    baudrate: 115200
+    # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
+    rtscts: false
 ```
 
-## Advanced configuration.
+## Advanced configuration
 
 ```yaml
 advanced:
@@ -80,12 +86,6 @@ advanced:
     # by firmware (for example to migrate heat, or by using an unsupported firmware).
     # For the CC2652R(B) this is 5 dBm, CC2652P/CC1352P-2 20 dBm.
     transmit_power: 5
-    # Optional: disable LED of the adapter if supported (default: false)
-    disable_led: false
-    # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
-    baudrate: 115200
-    # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
-    rtscts: false
     # Optional: Set the adapter delay, only used for Conbee/Raspbee adapters (default 0).
     # In case you are having issues try `200`.
     # For more information see https://github.com/Koenkk/zigbee2mqtt/issues/4884

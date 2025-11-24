@@ -57,7 +57,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 Want to migrate from e.g. a CC2530/CC2531 to a more powerful adapter (e.g. CC2652/CC1352)? Then follow these instructions below:
 
 ::: warning
-Migration from one adapter to another requires backup and restore support which is so far only implemented for the `zstack` (Texas Instrument) and `ember` adapters. Backup and restore is **not supported** for any other adapters (`conbee`, `ezsp`, `zboss` and `zigate`).
+Migration from one adapter to another requires backup and restore support which is so far only implemented for the `zstack` (Texas Instrument) and `ember` adapters. Backup and restore is **not supported** for any other adapters (`conbee`, `ezsp`, `zboss` and `zigate`). However you might have success using [this method](https://github.com/Koenkk/zigbee2mqtt/discussions/26716).
 
 Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pairing **might not** be required, however results might vary as this is not officially supported. After switching, check if all devices are working and re-pair the ones that are not. In case pairing new devices is not working, re-pair some routers close to the coordinator while only permitting joining via the coordinator. Pairing should then work via routers that have been re-paired.
 :::
@@ -65,7 +65,7 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
 1. First make sure you are running the latest version of Zigbee2MQTT
 1. Stop Zigbee2MQTT
 1. Determine whether migrating [requires re-pairing of your devices](#what-does-and-does-not-require-re-pairing-of-all-devices)
-    - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db`
+    - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db` (if running as a Home Assistant addon, `data/` is renamed `zigbee2mqtt/`)
     - If re-pairing is **not** required: [copy the ieee address of the old adapter into the new one](../adapters/flashing/copy_ieeaddr.html)
 1. Update the `serial` -> `port` in your `configuration.yaml`
 1. Start Zigbee2MQTT
@@ -77,7 +77,8 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 
-Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
+Details about your network are stored in both the coordinator and files under the `data/` directory (if running as a Home Assistant addon, `data/` is renamed `zigbee2mqtt/`).
+To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
 
 ## What does and does not require re-pairing of all devices?
 
@@ -165,9 +166,11 @@ If after some uptime Zigbee2MQTT crashes with errors like: `SRSP - AF - dataRequ
 - Make sure you are using the latest firmware on your adapter, see the [adapter page](../adapters/README.md) for a link to the latest firmware.
 - If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected directly to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
 - Disable the USB autosuspend feature, if `cat /sys/module/usbcore/parameters/autosuspend` returns `1` or `2` it is enabled; to disable execute:
+
     ```bash
     sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
     update-grub
     systemctl reboot
     ```
+
     - On a Raspberry Pi, you will need to instead edit `/boot/cmdline.txt` and add `usbcore.autosuspend=-1` to the end of the line.

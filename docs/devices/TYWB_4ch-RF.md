@@ -18,13 +18,15 @@ pageClass: device-page
 | Model | TYWB 4ch-RF  |
 | Vendor  | [MHCOZY](/supported-devices/#v=MHCOZY)  |
 | Description | 4 channel relay |
-| Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode |
 | Picture | ![MHCOZY TYWB 4ch-RF](https://www.zigbee2mqtt.io/images/devices/TYWB-4ch-RF.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press and hold any of the manual switch buttons for 8 seconds to initiate pairing mode.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -115,11 +117,4 @@ Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

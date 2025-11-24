@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZB-DoorSensor-D0007  |
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN wireless smart door window sensor |
-| Exposes | battery, contact, tamper, battery_low, linkquality |
+| Exposes | battery, contact, tamper, battery_low |
 | Picture | ![ADEO ZB-DoorSensor-D0007](https://www.zigbee2mqtt.io/images/devices/ZB-DoorSensor-D0007.png) |
 
 
@@ -57,11 +57,4 @@ Indicates whether the battery of the device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

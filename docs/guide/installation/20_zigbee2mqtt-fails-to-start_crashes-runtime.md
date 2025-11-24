@@ -114,7 +114,18 @@ Reboot your device and now your user should have access to the device.
 This error occurs when another program is already using (and thus locking) the adapter. You can find out which via the
 following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your adapter port).
 
-## Raspberry Pi users: use a good power supply
+## Raspberry Pi users
+
+## Raspberry Pi OS
+
+Make sure that you are using at least Raspberry Pi OS 11.
+To figure out which version you are running execute:
+
+```bash
+cat /etc/issue.net
+```
+
+## Use a good power supply
 
 A bad power supply can make your system and its USB devices unstable. Make sure to use a good power supply.
 
@@ -158,6 +169,12 @@ support zigbee but bluetooth. This can be verified by looking at the chip.
 
 ModemManager, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing
 ModemManager through `sudo apt-get purge modemmanager`.
+
+## Make sure your computer has enough resources available
+
+Serial communication may experience instability if your computer is low on resources.
+If your CPU and memory consistently operate at full capacity, it might suggest a shortage of resources.
+For instance, using the Zigee2MQTT addon in Home Assistant on a Raspberry Pi 3 can lead to resource exhaustion.
 
 ## hciuart is running
 
@@ -223,13 +240,50 @@ This happens when you edit one or more of the `pan_id`, `network_key` or `ext_pa
 ext_pan_id: [0x39,0xaf,0x4d,0x83,0xh2,0xdc,0xb3,0x89]
 ```
 
+## Zigbee adapters over the network: use robust and reliable network adapters on Zigbee2MQTT server
+
+If you have a WiFi or ethernet-connected Zigbee adapter, Zigbee2MQTT is communicating with the Zigbee adapter over the LAN through serial-over-IP protocol.
+
+The use of USB-WiFi or USB-ethernet adapters on the Zigbee2MQTT server is discouraged because despite the apparent equivalence to the onboard adapters in terms of specifications, they are designed in small enclosures, often not well ventilated and tend to overheat.  
+These adapters are known to stall or stop working in case of high loads or overheating, causing errors like:
+
+```
+[2024-06-24 03:37:22] error: zh:ember:uart:ash: Received ERROR from NCP while connecting, with code=ERROR_EXCEEDED_MAXIMUM_ACK_TIMEOUT_COUNT.
+[2024-06-24 03:37:22] error: zh:ember:uart:ash: ASH disconnected | NCP status: ASH_NCP_FATAL_ERROR
+[2024-06-24 03:37:22] error: zh:ember:uart:ash: Error while parsing received frame, status=ASH_NCP_FATAL_ERROR.
+```
+
+where a timeout occurred on the serial-over-IP protocol, or:
+
+```
+[2024-06-24 03:37:24] warning: zh:ember:uart:ash: Frame(s) in progress cancelled in [1ac1020b0a527e]
+[2024-06-24 03:37:24] error: zh:ember:uart:ash: Received unexpected reset from NCP, with reason=RESET_SOFTWARE.
+[2024-06-24 03:37:24] error: zh:ember:uart:ash: ASH disconnected: ASH_ERROR_NCP_RESET | NCP status: ASH_NCP_FATAL_ERROR
+[2024-06-24 03:37:24] error: zh:ember:uart:ash: Error while parsing received frame, status=HOST_FATAL_ERROR.
+[2024-06-24 03:37:24] error: zh:ember: !!! NCP FATAL ERROR reason=HOST_FATAL_ERROR. ATTEMPTING RESET... !!!
+```
+
+which shows a communication out of sync between host and NCP but also, and this is a clear hint of network problems:
+
+```
+[2024-06-24 03:38:05] error: z2m:mqtt: Not connected to MQTT server!
+[2024-06-24 03:38:05] error: z2m:mqtt: Cannot send message: topic: 'zigbee2mqtt/bridge/state', payload: '{"state":"offline"}
+[2024-06-24 03:38:05] info: z2m:mqtt: Disconnecting from MQTT server
+```
+
+where Zigbee2MQTT could not connect to the MQTT server over the LAN.
+
+The best setup for this situation is to use the ethernet port embedded into the Zigbee2MQTT server motherboard which guarantees reliability of communications in all load conditions.  
+As a second choice you can use the onboard WiFi adapter which should as well be designed for reliability, but also consider the stability of your WiFi network.  
+If all the onboard adapters are in use and you need to add another network adapter, the best choice is to install an internal network card on the PCIe bus, with proper cooling design.
+
 ## Error: regular crashes with timeout errors or failure to start after the serial port is opened
 
-These errors may occur when the serial communication between the ZigBee dongle and Zigbee2MQTT unexpectedly stops working.
+These errors may occur when the serial communication between the Zigbee dongle and Zigbee2MQTT unexpectedly stops working.
 
 Possible reasons that may cause this error:
 
-1. The hardware connection between the host computer and the ZigBee dongle is unreliable.
+1. The hardware connection between the host computer and the Zigbee dongle is unreliable.
    In the following example a cheap USB cable causing unreliable connection is compared with a good USB cable:
    ![good-vs-bad-usb-cable](../../images/good-vs-bad-usb-cable.jpg)
    With such cheap cable it is enough to touch the cable to cause USB disconnections.
@@ -239,9 +293,9 @@ Possible reasons that may cause this error:
    If these error appear, we can do something to reduce the complexity of the setup, improve stability and help investigating the usb connection with the host.
    Instead of passing through to the VM the full USB device we passthrough the serial device.
    The VM configuration changes from
-   host-(USB passtrough)->VM->USB-serial->serial(for Zigbee2MQTT configuration)
+   host-(USB passthrough)->VM->USB-serial->serial(for Zigbee2MQTT configuration)
    to
-   host-(serial passtrough)->VM->serial(for Zigbee2MQTT configuration)
+   host-(serial passthrough)->VM->serial(for Zigbee2MQTT configuration)
 
 As an example, this is the procedure to passthrough the serial device to a Proxmox Home Assistant OS installation:
 

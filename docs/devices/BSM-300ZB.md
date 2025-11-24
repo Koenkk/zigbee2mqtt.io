@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSM-300ZB  |
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS remote control |
-| Exposes | battery, voltage, action, linkquality |
+| Exposes | battery, voltage, action |
 | Picture | ![ShinaSystem BSM-300ZB](https://www.zigbee2mqtt.io/images/devices/BSM-300ZB.png) |
 
 
@@ -53,11 +53,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `long`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

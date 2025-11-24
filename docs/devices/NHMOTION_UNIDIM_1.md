@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NHMOTION/UNIDIM/1  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Motion sensor with dimmer |
-| Exposes | light (state, brightness, level_config), ballast_minimum_level, ballast_maximum_level, illuminance, occupancy, occupancy_timeout, occupancy_sensitivity, ambience_light_threshold, dimmer_mode, linkquality |
+| Exposes | light (state, brightness, level_config), ballast_minimum_level, ballast_maximum_level, illuminance, occupancy, occupancy_timeout, occupancy_sensitivity, ambience_light_threshold, dimmer_mode |
 | Picture | ![Schneider Electric NHMOTION/UNIDIM/1](https://www.zigbee2mqtt.io/images/devices/NHMOTION-UNIDIM-1.png) |
 | White-label | ELKO EKO06984, ELKO EKO06985, ELKO EKO06986 |
 
@@ -47,7 +47,9 @@ Short press (less than 0.5 seconds) the dimmer button 3 times, then press the di
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
+
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
 
 
 ## Exposes
@@ -76,7 +78,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -141,11 +143,4 @@ Value can be found in the published state on the `dimmer_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimmer_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_mode": NEW_VALUE}`.
 The possible values are: `Auto`, `RL-LED`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

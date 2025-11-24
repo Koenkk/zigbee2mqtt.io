@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZBHT-1  |
 | Vendor  | [Smartenit](/supported-devices/#v=Smartenit)  |
 | Description | Temperature & humidity sensor  |
-| Exposes | battery, temperature, humidity, linkquality |
+| Exposes | battery, temperature, humidity |
 | Picture | ![Smartenit ZBHT-1](https://www.zigbee2mqtt.io/images/devices/ZBHT-1.png) |
 
 
@@ -55,7 +55,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
 2. Humidity monitoring - Works
 3. Battery monitoring - untested.
  * In theory the device LED will flash ONCE if the voltage falls below 2.4V
- * In theory the device will send a low-power report to the ZigBee network if the voltage falls below 2.4V - no other battery reporting.
+ * In theory the device will send a low-power report to the Zigbee network if the voltage falls below 2.4V - no other battery reporting.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -65,11 +65,11 @@ If the device is asleep (which is most of the time) and you need it to be awake 
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -92,11 +92,4 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

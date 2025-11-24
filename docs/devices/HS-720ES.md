@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS-720ES control via MQTT"
-description: "Integrate your HEIMAN HS-720ES via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS-720ES control via MQTT"
+description: "Integrate your Heiman HS-720ES via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-10-31T20:36:06
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS-720ES
+# Heiman HS-720ES
 
 |     |     |
 |-----|-----|
 | Model | HS-720ES  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Carbon monoxide alarm |
-| Exposes | carbon_monoxide, co, self_test_result, battery, silence, linkquality |
-| Picture | ![HEIMAN HS-720ES](https://www.zigbee2mqtt.io/images/devices/HS-720ES.png) |
+| Exposes | carbon_monoxide, co, self_test_result, battery, silence |
+| Picture | ![Heiman HS-720ES](https://www.zigbee2mqtt.io/images/devices/HS-720ES.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -68,11 +68,4 @@ Value can be found in the published state on the `silence` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
 If value equals `true` silence is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

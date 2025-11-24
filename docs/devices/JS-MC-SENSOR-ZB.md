@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JS-MC-SENSOR-ZB  |
 | Vendor  | [JAVIS](/supported-devices/#v=JAVIS)  |
 | Description | Microwave sensor |
-| Exposes | occupancy, illuminance, led_enable, keep_time, sensitivity, illuminance_calibration, linkquality |
+| Exposes | occupancy, illuminance, led_enable, keep_time, sensitivity, illuminance_calibration |
 | Picture | ![JAVIS JS-MC-SENSOR-ZB](https://www.zigbee2mqtt.io/images/devices/JS-MC-SENSOR-ZB.png) |
 
 
@@ -75,11 +75,4 @@ Value can be found in the published state on the `illuminance_calibration` prope
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": NEW_VALUE}`.
 The minimal value is `-10000` and the maximum value is `10000`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

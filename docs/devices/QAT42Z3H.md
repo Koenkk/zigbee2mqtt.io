@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QAT42Z3H  |
 | Vendor  | [QA](/supported-devices/#v=QA)  |
 | Description | 3 channel wall switch |
-| Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode |
 | Picture | ![QA QAT42Z3H](https://www.zigbee2mqtt.io/images/devices/QAT42Z3H.png) |
 
 
@@ -83,11 +83,4 @@ Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCGQ15LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Motion sensor E1 |
-| Exposes | occupancy, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count, linkquality |
+| Exposes | occupancy, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count |
 | Picture | ![Aqara RTCGQ15LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ15LM.png) |
 
 
@@ -41,7 +41,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default is "detection_interval" + 2 seconds). The value must be equal to or greater than "detection_interval", and it can also be a fraction. The value must be a number with a minimum value of `0`
 
-* `no_occupancy_since`: Sends a message the last time occupancy (occupancy: true) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `no_occupancy_since`: Sends a message the last time occupancy (occupancy: true) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
 
 
 ## Exposes
@@ -89,11 +89,4 @@ The unit of this value is `mV`.
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

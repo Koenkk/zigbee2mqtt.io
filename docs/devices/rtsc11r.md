@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | rtsc11r  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 5.8G human presence sensor with relay |
-| Exposes | presence, illuminance, detection_delay, detection_distance, sensitivity, keep_time, minimum_range, maximum_range, linkquality |
+| Exposes | presence, illuminance, detection_delay, detection_distance, sensitivity, keep_time, minimum_range, maximum_range |
 | Picture | ![Tuya rtsc11r](https://www.zigbee2mqtt.io/images/devices/rtsc11r.png) |
 
 
@@ -94,11 +94,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximum_range": NEW_VALUE}`.
 The minimal value is `50` and the maximum value is `1000`.
 The unit of this value is `m`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

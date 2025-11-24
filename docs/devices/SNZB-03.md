@@ -1,6 +1,6 @@
 ---
-title: "eWeLink SNZB-03 control via MQTT"
-description: "Integrate your eWeLink SNZB-03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "SONOFF SNZB-03 control via MQTT"
+description: "Integrate your SONOFF SNZB-03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-07-10T21:02:28Z
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# eWeLink SNZB-03
+# SONOFF SNZB-03
 
 |     |     |
 |-----|-----|
 | Model | SNZB-03  |
-| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Motion sensor |
-| Exposes | battery, voltage, occupancy, battery_low, linkquality |
-| Picture | ![eWeLink SNZB-03](https://www.zigbee2mqtt.io/images/devices/SNZB-03.png) |
+| Exposes | battery, voltage, occupancy, battery_low |
+| Picture | ![SONOFF SNZB-03](https://www.zigbee2mqtt.io/images/devices/SNZB-03.png) |
+| White-label | eWeLink RHK09, eWeLink SQ510A |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -61,11 +62,4 @@ Indicates whether the battery of the device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

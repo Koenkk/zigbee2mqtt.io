@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MS-108ZR  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee + RF curtain switch module |
-| Exposes | cover (state, position), calibration_time, moving, motor_reversal, linkquality |
+| Exposes | cover (state, position), calibration_time, moving, motor_reversal |
 | Picture | ![Moes MS-108ZR](https://www.zigbee2mqtt.io/images/devices/MS-108ZR.png) |
 
 
@@ -52,7 +52,8 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Value can be found in the published state on the `calibration_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `500`.
+The unit of this value is `s`.
 
 ### Moving (enum)
 Value can be found in the published state on the `moving` property.
@@ -64,11 +65,4 @@ Value can be found in the published state on the `motor_reversal` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
 If value equals `ON` motor reversal is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
