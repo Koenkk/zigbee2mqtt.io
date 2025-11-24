@@ -155,6 +155,7 @@ Enable these modules using
 ```
 
 ## Advanced: changing frontend port
+
 The default Dockerfile uses `EXPOSE 8080`. While this cannot be changed at runtime, it mainly serves as a documentation hint.
 
 To run the frontend on a different port (e.g., `9090`), you must first update the port in your `configuration.yaml` and then publish the new port when running the container.
