@@ -5,6 +5,8 @@ Adds support for ACW02 HVAC Thermostat - a custom DIY Zigbee device based on ESP
 
 ACW02-ZB is an open-source Zigbee-enabled HVAC controller for the Airton series and compatible units (to replace ACW02 WiFi module).
 
+👉 [View the repository on GitHub](https://github.com/Fabiancrg/acw02_zb)
+
 ### Device Details
 - **Model:** ACW02-ZB
 - **Vendor:** Custom devices (DiY)
