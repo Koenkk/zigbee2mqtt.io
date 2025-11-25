@@ -591,7 +591,7 @@ Example payloads:
 
 - For one attribute: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"}]}`
 - For multiple attributes: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"},{"attribute":"currentFrequency"}]}`
-- For manufacturer-specific attribute: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"}], "manufacturerCode": 0x1234}`
+- For manufacturer-specific attribute: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"}], "manufacturer_code": 0x1234}`
 
 ::: tip
 Reading reporting config will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, reporting config in Zigbee2MQTT should reflect the actual reporting config on the device.

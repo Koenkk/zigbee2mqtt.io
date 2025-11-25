@@ -62,7 +62,7 @@ Using `zigbee2mqtt/bridge/request/device/binds/clear`, bindings can be all or se
 
 To clear all bindings, just send the topic with the payload e.g. `{"target": "my_device"}`.
 
-To selectively clear bindings by IEEE address, send the topic with the payload e.g. `{"target": "my_deivce", "ieeeList": ["0xa1a2a3a4a5a6a7a8", "0xb1b2b3b4b5b6b7b8"]}`.
+To selectively clear bindings by IEEE address, send the topic with the payload e.g. `{"target": "my_deivce", "ieee_list": ["0xa1a2a3a4a5a6a7a8", "0xb1b2b3b4b5b6b7b8"]}`.
 
 ::: tip
 Clearing bindings will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, bindings in Zigbee2MQTT should reflect actual bindings on the device.
