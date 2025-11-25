@@ -69,7 +69,7 @@ Using the dedicated action allows to reset Hue devices via a manufacturer-specif
 Use the topic \`zigbee2mqtt/bridge/request/action\` with the following parameters:
 
 - \`extended_pan_id\` - Hex string in \`0x{id}\` format - the extended PAN ID of the network the device(s) should try to join after reset. E.g. \`0xa1b2c3d4e5f60123\`
-- \`serial_numbers\` - Array of numbers - the serial numbers of the device(s) to reset. E.g. \`[123456, 987654]\`
+- \`serial_numbers\` - Array of numbers in hex (\`0x\`) or decimal format - the serial numbers of the device(s) to reset. E.g. \`[0x3A745C, 123456]\`. Unless otherwise specified, the serial numbers of the back of Hue devices is to be appended with \`0x\` so it is processed as hexadecimal, else it should be converted to decimal. E.g. \`3A745C\` should be sent as \`0x3A745C\` OR \`3830876\`.
 
 ## Power-on behavior
 This device allows you to set the power-on behavior. Note that this requires at least November/December '18 firmware update of the device.
