@@ -62,6 +62,15 @@ by pressing and holding the reset button on the bottom of the remote (next to th
 
 ${definition.description.toLowerCase().includes(' go') ? hueGo : ''}
 
+### Touchlink reset by serial numbers
+
+Using the dedicated action allows to reset Hue devices via a manufacturer-specific Touchlink request.
+
+Use the topic \`zigbee2mqtt/bridge/request/action\` with the following parameters:
+
+- \`extended_pan_id\` - Hex string in \`0x{id}\` format - the extended PAN ID of the network the device(s) should try to join after reset. E.g. \`0xa1b2c3d4e5f60123\`
+- \`serial_numbers\` - Array of numbers - the serial numbers of the device(s) to reset. E.g. \`[123456, 987654]\`
+
 ## Power-on behavior
 This device allows you to set the power-on behavior. Note that this requires at least November/December '18 firmware update of the device.
 Send a MQTT command to [\`zigbee2mqtt/FRIENDLY_NAME/set\`](../guide/usage/mqtt_topics_and_messages.md#zigbee2mqtt-friendly-name-set) with the following payload.

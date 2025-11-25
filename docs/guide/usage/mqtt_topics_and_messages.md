@@ -662,15 +662,6 @@ All action names are published in `zigbee2mqtt/bridge/definitions` under `action
 Specific up-to-date actions/parameters can be observed directly in the source code [https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts)
 :::
 
-##### Action: `hue_factory_reset`
-
-Allows to reset Hue devices via a manufacturer-specific Touchlink request.
-
-Parameters:
-
-- `extended_pan_id` - Hex string in `0x{id}` format - the extended PAN ID of the network the device(s) should try to join after reset. E.g. `0xa1b2c3d4e5f60123`
-- `serial_numbers` - Array of numbers - the serial numbers of the device(s) to reset. E.g. `[123456, 987654]`
-
 ##### Action: `raw`
 
 ::: warning
