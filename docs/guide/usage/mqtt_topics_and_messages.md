@@ -658,6 +658,14 @@ See [Touchlink](./touchlink.md).
 Allows to call specific pre-defined actions, usually manufacturer-specific.
 All action names are published in `zigbee2mqtt/bridge/definitions` under `actions`.
 
+The payload for this topic takes the following form (refer to specific actions docs for what `params` should contain):
+
+`{"action":"<action_name>","params":{/* action-specific parameters here */}}`
+
+E.g.:
+
+`{"action":"just_an_example","params":{"abcd": 1, "zyx": "my_device"}}`
+
 ::: tip
 Specific up-to-date actions/parameters can be observed directly in the source code [https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts)
 :::
