@@ -573,6 +573,10 @@ The Minimum Reporting Change is like telling your device to speak up only when s
 If you set a minimum reporting change of 1 degree for a temperature sensor, it means the sensor won't bother you with updates unless the temperature changes by at least 1 degree.
 It's a way to filter out minor fluctuations and focus on important changes in the environment.
 
+::: tip NOTE
+Support for `reportable_change` depends on the type of the attribute. For e.g. a `measure`-type attribute would likely support it, but a `enum`-type attribute would not. If supplied and not supported, it is ignored.
+:::
+
 To disable reporting set the `maximum_report_interval` to `65535`.
 
 Notes:
