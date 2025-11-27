@@ -153,3 +153,43 @@ Enable these modules using
 
 
 ```
+
+## Advanced: changing frontend port
+
+The default Dockerfile uses `EXPOSE 8080`. While this cannot be changed at runtime, it mainly serves as a documentation hint.
+
+To run the frontend on a different port (e.g., `9090`), you must first update the port in your `configuration.yaml` and then publish the new port when running the container.
+
+**Method 1: Direct Port Publishing**
+
+This is the simplest approach.
+
+1.  In your `configuration.yaml`, set the port:
+
+    ```yaml
+    frontend:
+        port: 9090
+    ```
+
+2.  Run the container, publishing the new port and mounting your data directory:
+    ```bash
+    docker run \
+      -p 9090:9090 \
+      -v ./data:/app/data \
+      koenkk/zigbee2mqtt
+    ```
+
+**Method 2: Using a Reverse Proxy (e.g., Traefik)**
+
+If you use a reverse proxy, you don't need to publish the port directly. Instead, use labels to tell the proxy which port the service is running on internally.
+
+1.  Set the port in `configuration.yaml` (as shown in Method 1).
+
+2.  Run the container with Traefik labels:
+    ```bash
+    docker run \
+      -v ./data:/app/data \
+      -l "traefik.enable=true" \
+      -l "traefik.http.services.zigbee2mqtt.loadbalancer.server.port=9090" \
+      koenkk/zigbee2mqtt
+    ```
