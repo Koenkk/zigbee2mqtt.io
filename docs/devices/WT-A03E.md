@@ -23,8 +23,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+The thermostat needs to be flashed with the correct firmware before it can be used with Zigbee. This works without using a proprietary hub, but requires a iOS/Android device with Bluetooth and an Aqara account.
+
+1. Download the Aqara app, sign in and proceed to adding a new device.
+2. Put the thermostat into pairing mode by pressing and holding the center button for 10 seconds until the display starts flashing. The device should now show up in the app.
+3. Select the thermostat in the app and when prompted, choose Zigbee as the connection method. The app will then flash the correct firmware.
+4. Once the flashing process is complete, the thermostat will start pairing using Zigbee.
 <!-- Notes END: Do not edit below this line -->
 
 
