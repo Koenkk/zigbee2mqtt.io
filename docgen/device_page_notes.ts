@@ -34,6 +34,26 @@ Verification: [GitHub PR Comment](https://github.com/Koenkk/zigbee2mqtt.io/pull/
 ### Touchlink factory reset
 See [Touchlink](../guide/usage/touchlink.md)
 
+### Touchlink reset by serial numbers
+
+Using the dedicated action allows to reset Philips Hue devices via the serial number written on the device.
+This can be done by going to the Zigbee2QMQTT frontend -> Touchlink -> Philips Hue reset.
+
+Alternatively, you can also use MQTT directly, topic: \`zigbee2mqtt/bridge/request/action\` payload:
+
+\`\`\`json
+{
+  "action": "philips_hue_factory_reset",
+  "params": {
+    "serial_numbers": ["3A745C", "806C52"],
+    "extended_pan_id": "0xa1b2c3d4e5f60123"
+  }
+}
+\`\`\`
+
+- \`serial_numbers\`: The "Serial No." of the device(s) to reset (enter exactly as what is printed on the device).
+- \`extended_pan_id\`: (Optional) The extended PAN ID of the network the device(s) should try to join after reset. If not provided, the current network's extended PAN ID will be used.
+
 ### Hue bridge
 When the light is still connected to the Hue bridge, you can simply factory reset the light
 by removing it from the bridge via the Hue app. Orphaned lights (configured to connect to a non-existing Zigbee network) can be adopted by a Hue bridge by entering the 6 character serial number in the Philips Hue app.
