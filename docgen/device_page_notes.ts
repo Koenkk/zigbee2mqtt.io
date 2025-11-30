@@ -45,17 +45,14 @@ Alternatively, you can also use MQTT directly, topic: \`zigbee2mqtt/bridge/reque
 {
   "action": "philips_hue_factory_reset",
   "params": {
-    // Array of numbers in hex (\`0x\`) or decimal format - the serial numbers of the device(s) to reset.
-    // E.g. \`[0x3A745C, 123456]\`. Unless otherwise specified, the serial numbers of the back of Hue devices
-    // is to be appended with \`0x\` so it is processed as hexadecimal, else it should be converted to decimal.
-    // E.g. \`3A745C\` should be sent as \`0x3A745C\` OR \`3830876\`.
-    "serial_numbers": ["0x3A745C", "0x3830876"],
-    // Hex string in \`0x{id}\` format - the extended PAN ID of the network the device(s) should try to join after reset. E.g. \`0xa1b2c3d4e5f60123\`
-    // This field is optional. If not provided, the current network's extended PAN ID will be used.
+    "serial_numbers": ["3A745C", "806C52"],
     "extended_pan_id": "0xa1b2c3d4e5f60123"
   }
 }
 \`\`\`
+
+- \`serial_numbers\`: The "Serial No." of the device(s) to reset (enter exactly as what is printed on the device).
+- \`extended_pan_id\`: (Optional) The extended PAN ID of the network the device(s) should try to join after reset. If not provided, the current network's extended PAN ID will be used.
 
 ### Hue bridge
 When the light is still connected to the Hue bridge, you can simply factory reset the light
