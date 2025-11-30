@@ -23,8 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+- Click the button on the motor 3 times to add or remove from zigbee network.
+- The device will enter pairing mode (LED blinks orange).
+- When device is paired, led will turn solid green, then turn off.
 
+### Factory Rest
+- Long press motor button for 12 seconds, motor jogbs 3 times restoring to factory settings.
 <!-- Notes END: Do not edit below this line -->
 
 
