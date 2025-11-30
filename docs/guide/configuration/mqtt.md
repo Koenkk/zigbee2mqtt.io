@@ -12,6 +12,7 @@ Zigbee2MQTT requires a MQTT-Server connection to operate.
 # Required: MQTT settings
 mqtt:
     # Required: MQTT server URL (use mqtts:// for SSL/TLS connection)
+    # Note: Use hostname 'core-mosquitto' or 'homeassistant' when using Z2M as an addon inside Home Assistant and when using Mosquito Home assistant addon as MQTT broker
     server: 'mqtt://localhost:1883'
     # Optional: MQTT base topic for Zigbee2MQTT MQTT messages (default: zigbee2mqtt)
     base_topic: zigbee2mqtt
