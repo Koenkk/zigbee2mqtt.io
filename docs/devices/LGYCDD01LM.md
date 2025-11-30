@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LGYCDD01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light strip T1 |
-| Exposes | light (state, brightness, color_temp, color_xy), power_on_behavior, length, min_brightness, max_brightness, audio, audio_sensitivity, audio_effect, preset, speed |
+| Exposes | light (state, brightness, color_temp, color_xy), power_on_behavior, length, audio, audio_sensitivity, audio_effect, preset, speed, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration |
 | Picture | ![Aqara LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.png) |
 | White-label | Aqara RLS-K01D |
 
@@ -107,22 +107,6 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `m`.
 
-### Min brightness (numeric)
-Minimum brightness level.
-Value can be found in the published state on the `min_brightness` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_brightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `99`.
-The unit of this value is `%`.
-
-### Max brightness (numeric)
-Maximum brightness level.
-Value can be found in the published state on the `max_brightness` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_brightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `100`.
-The unit of this value is `%`.
-
 ### Audio (binary)
 Enabling audio.
 Value can be found in the published state on the `audio` property.
@@ -157,4 +141,36 @@ Value can be found in the published state on the `speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"speed": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"speed": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
+
+### Dimming range minimum (numeric)
+Minimum allowed dimming value.
+Value can be found in the published state on the `dimming_range_minimum` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_range_minimum": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_minimum": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `99`.
+The unit of this value is `%`.
+
+### Dimming range maximum (numeric)
+Maximum allowed dimming value.
+Value can be found in the published state on the `dimming_range_maximum` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_range_maximum": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_maximum": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Off on duration (numeric)
+Duration for light to gradually brighten when turning on.
+Value can be found in the published state on the `off_on_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"off_on_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_on_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `s`.
+
+### On off duration (numeric)
+Duration for light to gradually dim when turning off.
+Value can be found in the published state on the `on_off_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"on_off_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_off_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `s`.
 

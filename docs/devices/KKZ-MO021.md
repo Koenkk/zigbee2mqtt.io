@@ -1,7 +1,7 @@
 ---
-title: "HOBEIAN illuminance sensor via MQTT"
-description: "Integrate your HOBEIAN illuminance sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-11-28T10:54:36
+title: "Hej KKZ-MO021 control via MQTT"
+description: "Integrate your Hej KKZ-MO021 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-11-30T20:32:43
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HOBEIAN illuminance sensor
+# Hej KKZ-MO021
 
 |     |     |
 |-----|-----|
-| Model | ZG-106Z  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Illuminance sensor |
-| Exposes | illuminance, battery |
-| Picture | ![HOBEIAN illuminance sensor ZG-106Z](https://www.zigbee2mqtt.io/images/devices/ZG-106Z.png) |
+| Model | KKZ-MO021  |
+| Vendor  | [Hej](/supported-devices/#v=Hej)  |
+| Description | PIR sensor |
+| Exposes | battery, occupancy |
+| Picture | ![Hej KKZ-MO021](https://www.zigbee2mqtt.io/images/devices/KKZ-MO021.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,20 +29,19 @@ pageClass: device-page
 
 
 
-## Options
-
 
 ## Exposes
 
-### Illuminance (numeric)
-Measured illuminance.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
 

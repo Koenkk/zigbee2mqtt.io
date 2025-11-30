@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EMIZB-151  |
 | Vendor  | [Frient](/supported-devices/#v=Frient)  |
 | Description | Electricity Meter Interface 2 P1 |
-| Exposes | power, voltage, current, energy, energy_tier_1, energy_tier_2, produced_energy_tier_1, produced_energy_tier_2, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, current_neutral |
+| Exposes | power, voltage, current, energy, produced_energy, energy_tier_1, energy_tier_2, produced_energy_tier_1, produced_energy_tier_2, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c |
 | Picture | ![Frient EMIZB-151](https://www.zigbee2mqtt.io/images/devices/EMIZB-151.png) |
 
 
@@ -78,10 +78,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `current_phase_c_precision`: Number of digits after decimal point for current_phase_c, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `current_neutral_calibration`: Calibrates the current_neutral value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `current_neutral_precision`: Number of digits after decimal point for current_neutral, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
-
 
 ## Exposes
 
@@ -110,6 +106,13 @@ The unit of this value is `A`.
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Produced energy (numeric)
+Sum of produced energy.
+Value can be found in the published state on the `produced_energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"produced_energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
@@ -180,13 +183,6 @@ The unit of this value is `A`.
 Instantaneous measured electrical current on phase C.
 Value can be found in the published state on the `current_phase_c` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_phase_c": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `A`.
-
-### Current neutral (numeric)
-Instantaneous measured electrical current on neutral.
-Value can be found in the published state on the `current_neutral` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_neutral": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 

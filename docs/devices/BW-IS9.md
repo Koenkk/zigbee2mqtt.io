@@ -1,7 +1,7 @@
 ---
-title: "MultIR MIR-IL100 control via MQTT"
-description: "Integrate your MultIR MIR-IL100 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-09-30T19:37:28
+title: "BlitzWolf BW-IS9 control via MQTT"
+description: "Integrate your BlitzWolf BW-IS9 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-11-30T20:32:43
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# MultIR MIR-IL100
+# BlitzWolf BW-IS9
 
 |     |     |
 |-----|-----|
-| Model | MIR-IL100  |
-| Vendor  | [MultIR](/supported-devices/#v=MultIR)  |
-| Description | PIR sensor |
-| Exposes | battery, occupancy, tamper, battery_low, sensitivity |
-| Picture | ![MultIR MIR-IL100](https://www.zigbee2mqtt.io/images/devices/MIR-IL100.png) |
+| Model | BW-IS9  |
+| Vendor  | [BlitzWolf](/supported-devices/#v=BlitzWolf)  |
+| Description | ZigBee Water Leak Sensor |
+| Exposes | battery, water_leak_alarm_1, water_leak_alarm_2, tamper, battery_low |
+| Picture | ![BlitzWolf BW-IS9](https://www.zigbee2mqtt.io/images/devices/BW-IS9.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -40,11 +40,17 @@ It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Occupancy (binary)
-Indicates whether the device detected occupancy.
-Value can be found in the published state on the `occupancy` property.
+### Water leak alarm 1 (binary)
+Indicates whether the device detected a water leak (alarm_1).
+Value can be found in the published state on the `water_leak_alarm_1` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy is ON, if `false` OFF.
+If value equals `true` water leak alarm 1 is ON, if `false` OFF.
+
+### Water leak alarm 2 (binary)
+Indicates whether the device detected a water leak (alarm_2).
+Value can be found in the published state on the `water_leak_alarm_2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` water leak alarm 2 is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.
@@ -57,11 +63,4 @@ Indicates whether the battery of the device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
-
-### Sensitivity (enum)
-Sensitivity of the pir detector.
-Value can be found in the published state on the `sensitivity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
-The possible values are: `low`, `medium`, `high`.
 

@@ -1,7 +1,7 @@
 ---
-title: "Tuya ZYXH control via MQTT"
-description: "Integrate your Tuya ZYXH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-09-01T12:36:44
+title: "ZYXH ZYXH_switch_24 control via MQTT"
+description: "Integrate your ZYXH ZYXH_switch_24 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-11-30T20:32:44
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZYXH
+# ZYXH ZYXH_switch_24
 
 |     |     |
 |-----|-----|
-| Model | ZYXH  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Model | ZYXH_switch_24  |
+| Vendor  | [ZYXH](/supported-devices/#v=ZYXH)  |
 | Description | 24 gang switch |
 | Exposes | switch (state) |
-| Picture | ![Tuya ZYXH](https://www.zigbee2mqtt.io/images/devices/ZYXH.png) |
+| Picture | ![ZYXH ZYXH_switch_24](https://www.zigbee2mqtt.io/images/devices/ZYXH_switch_24.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

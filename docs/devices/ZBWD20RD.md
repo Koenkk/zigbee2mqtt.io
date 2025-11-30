@@ -26,7 +26,6 @@ pageClass: device-page
 ## Notes
 The inputs of the device are only for toggle switches and do not work with momentary buttons. Therfore only switching the light on and off is possible with the input. Dimming is only available by zigbee commands.
 For details: https://github.com/Koenkk/zigbee2mqtt/issues/27364
-
 <!-- Notes END: Do not edit below this line -->
 
 

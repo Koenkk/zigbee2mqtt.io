@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BTH-RA  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Radiator thermostat II |
-| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state, pi_heating_demand), setpoint_change_source, operating_mode, window_open_mode, boost_heating, remote_temperature, child_lock, display_brightness, display_switch_on_duration, display_orientation, displayed_temperature, valve_adapt_status, automatic_valve_adapt, valve_adapt_process, error_state, battery, battery_low |
+| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state, pi_heating_demand), setpoint_change_source, operating_mode, window_detection, boost_heating, remote_temperature, child_lock, display_brightness, display_switch_on_duration, display_orientation, displayed_temperature, valve_adapt_status, automatic_valve_adapt, valve_adapt_process, error_state, battery, battery_low |
 | Picture | ![Bosch BTH-RA](https://www.zigbee2mqtt.io/images/devices/BTH-RA.png) |
 
 
@@ -78,18 +78,18 @@ It's not possible to write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Operating mode (enum)
-Bosch-specific operating mode. This is being used as mode on the exposed thermostat when using Home Assistant..
+Bosch-specific operating mode.
 Value can be found in the published state on the `operating_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
 The possible values are: `schedule`, `manual`, `pause`.
 
-### Window open mode (binary)
+### Window detection (binary)
 Activates the window open mode, where the thermostat disables any heating/cooling to prevent unnecessary energy consumption. Please keep in mind that the device itself does not detect any open windows!.
-Value can be found in the published state on the `window_open_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_open_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_mode": NEW_VALUE}`.
-If value equals `ON` window open mode is ON, if `OFF` OFF.
+Value can be found in the published state on the `window_detection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
+If value equals `ON` window detection is ON, if `OFF` OFF.
 
 ### Activate boost heating (binary)
 Activate boost heating (opens TRV for 5 minutes).

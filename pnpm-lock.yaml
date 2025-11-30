@@ -97,8 +97,8 @@ importers:
         specifier: 5.103.0
         version: 5.103.0
       zigbee-herdsman-converters:
-        specifier: 25.59.0
-        version: 25.59.0
+        specifier: 25.79.0
+        version: 25.79.0
 
 packages:
 
@@ -1669,9 +1669,9 @@ packages:
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
-  debounce@2.2.0:
-    resolution: {integrity: sha512-Xks6RUDLZFdz8LIdR6q0MTH44k7FikOmnh5xkSjMig6ch45afc8sjTjRQf3P6ax8dMgcQrYO/AR2RGWURrruqw==}
-    engines: {node: '>=18'}
+  debounce@3.0.0:
+    resolution: {integrity: sha512-64byRbF0/AirwbuHqB3/ZpMG9/nckDa6ZA0yd6UnaQNwbbemCOwvz2sL5sjXLHhZHADyiwLm0M5qMhltUUx+TA==}
+    engines: {node: '>=20'}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -3731,15 +3731,15 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@25.59.0:
-    resolution: {integrity: sha512-Pw0L88hLQgv1vxv3uTFKbPDaMd75zuNWIcM0Y8+F0uKDZt8K8djEiBK74RlWYmHcrvBfzeRM61Jw/991/TShcw==}
+  zigbee-herdsman-converters@25.79.0:
+    resolution: {integrity: sha512-j7EaILjOqcFDbj127qB37PESErppZDSFo+mNDZkhyK7FvpT5vHAMpFRO5TImmIlkTQIhD+SJNTQhCklxYRcPpQ==}
     engines: {node: '>=20.15.0'}
 
-  zigbee-herdsman@6.3.2:
-    resolution: {integrity: sha512-35qPU1KoADQrgIol/pWulVKRj8jFpuogtPWjisHSlss3dvzlj5yg5wBdw9/qpcDxNShtKMtj1K28io5KMmRsAw==}
+  zigbee-herdsman@7.0.1:
+    resolution: {integrity: sha512-XHfngXqc0G9cUN/YXivbhdNKX2NapxQ38F+ZWboF0VGJ6ZkiMNpGTO9Wnq6DpveBKHpcYJFlMbenDF5IxEW4qQ==}
 
-  zigbee-on-host@0.1.13:
-    resolution: {integrity: sha512-mL7s9ic7J85YI7wOG1/QlbRYE3haFzIHqgnM2+xLmjj8CazjhmGjop9TCfuY2JXyDI9ss7bNCLxuI9n6M+TXug==}
+  zigbee-on-host@0.2.3:
+    resolution: {integrity: sha512-QHw2ojTDBu2AIjXB73Af143RsdfvUKx5YClAs0MFRxnZCpd5bOBCPFaqBP//wwAbgt9D83RK+mryNcIP88dsKQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
 
   zod@4.1.12:
@@ -5498,7 +5498,7 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  debounce@2.2.0: {}
+  debounce@3.0.0: {}
 
   debug@2.6.9:
     dependencies:
@@ -7594,30 +7594,30 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  zigbee-herdsman-converters@25.59.0:
+  zigbee-herdsman-converters@25.79.0:
     dependencies:
       iconv-lite: 0.7.0
       semver: 7.7.3
-      zigbee-herdsman: 6.3.2
+      zigbee-herdsman: 7.0.1
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-herdsman@6.3.2:
+  zigbee-herdsman@7.0.1:
     dependencies:
       '@date-fns/tz': 1.4.1
       '@serialport/bindings-cpp': 13.0.1
       '@serialport/parser-delimiter': 13.0.0
       '@serialport/stream': 13.0.0
       bonjour-service: 1.3.0
-      debounce: 2.2.0
+      debounce: 3.0.0
       fast-deep-equal: 3.1.3
       mixin-deep: 2.0.1
       slip: 1.0.2
-      zigbee-on-host: 0.1.13
+      zigbee-on-host: 0.2.3
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-on-host@0.1.13: {}
+  zigbee-on-host@0.2.3: {}
 
   zod@4.1.12: {}
 

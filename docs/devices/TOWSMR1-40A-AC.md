@@ -1,7 +1,7 @@
 ---
-title: "Tongou TOSA1 control via MQTT"
-description: "Integrate your Tongou TOSA1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-09-01T18:20:17
+title: "Tongou TOWSMR1-40A-AC control via MQTT"
+description: "Integrate your Tongou TOWSMR1-40A-AC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-11-30T20:32:44
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tongou TOSA1
+# Tongou TOWSMR1-40A-AC
 
 |     |     |
 |-----|-----|
-| Model | TOSA1  |
+| Model | TOWSMR1-40A-AC  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Single-phase multifunction RCBO (DIN Module) |
-| Exposes | switch (state), temperature, current, power, voltage, energy, leakage_current, event, over_current_setting, over_current_threshold, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, leakage_setting, leakage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, auto_reclosing, restore_default, overcurrent_recloser, leakage_recloser, overpower_recloser |
-| Picture | ![Tongou TOSA1](https://www.zigbee2mqtt.io/images/devices/TOSA1.png) |
+| Exposes | switch (state), temperature, current, power, voltage, energy, event, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, auto_reclosing, restore_default, overcurrent_recloser, leakage_recloser, overpower_recloser |
+| Picture | ![Tongou TOWSMR1-40A-AC](https://www.zigbee2mqtt.io/images/devices/TOWSMR1-40A-AC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -90,32 +90,11 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Leakage current (numeric)
-Current leakage.
-Value can be found in the published state on the `leakage_current` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mA`.
-
 ### Event (enum)
 Last event of the device.
 Value can be found in the published state on the `event` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `normal`, `over_current_trip`, `over_power_trip`, `high_temp_trip`, `over_voltage_trip`, `under_voltage_trip`, `over_current_alarm`, `over_power_alarm`, `high_temp_alarm`, `over_voltage_alarm`, `under_voltage_alarm`, `remote_on`, `remote_off`, `manual_on`, `manual_off`, `leakage_trip`, `leakage_alarm`, `restore_default`, `automatic_closing`, `electricity_shortage`, `electricity_shortage_alarm`, `timing_switch_On`, `timing_switch_off`.
-
-### Over current setting (enum)
-Over current setting.
-Value can be found in the published state on the `over_current_setting` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_setting": NEW_VALUE}`.
-The possible values are: `Ignore`, `Alarm`, `Trip`.
-
-### Over current threshold (numeric)
-Setup the value on the device.
-Value can be found in the published state on the `over_current_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `40`.
-The unit of this value is `A`.
 
 ### Over voltage setting (enum)
 Over voltage setting.
@@ -147,21 +126,6 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `145` and the maximum value is `220`.
 The unit of this value is `V`.
 
-### Leakage setting (enum)
-Leakage setting.
-Value can be found in the published state on the `leakage_setting` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_setting": NEW_VALUE}`.
-The possible values are: `Ignore`, `Alarm`, `Trip`.
-
-### Leakage threshold (numeric)
-Setup value on the device.
-Value can be found in the published state on the `leakage_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_threshold": NEW_VALUE}`.
-The minimal value is `30` and the maximum value is `100`.
-The unit of this value is `mA`.
-
 ### Temperature setting (enum)
 Temperature setting.
 Value can be found in the published state on the `temperature_setting` property.
@@ -189,7 +153,7 @@ Setup value on the device.
 Value can be found in the published state on the `over_power_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_threshold": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `25000`.
+The minimal value is `5` and the maximum value is `25000`.
 The unit of this value is `W`.
 
 ### Auto reclosing (binary)
@@ -226,4 +190,40 @@ Value can be found in the published state on the `overpower_recloser` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overpower_recloser": NEW_VALUE}`.
 If value equals `ON` overpower Recloser is ON, if `OFF` OFF.
+
+### Leakage current (numeric)
+Current leakage.
+Value can be found in the published state on the `leakage_current` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mA`.
+
+### Over current setting (enum)
+Over current setting.
+Value can be found in the published state on the `over_current_setting` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_setting": NEW_VALUE}`.
+The possible values are: `Ignore`, `Alarm`, `Trip`.
+
+### Over current threshold (numeric)
+Setup the value on the device.
+Value can be found in the published state on the `over_current_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `40`.
+The unit of this value is `A`.
+
+### Leakage setting (enum)
+Leakage setting.
+Value can be found in the published state on the `leakage_setting` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_setting": NEW_VALUE}`.
+The possible values are: `Ignore`, `Alarm`, `Trip`.
+
+### Leakage threshold (numeric)
+Setup value on the device.
+Value can be found in the published state on the `leakage_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_threshold": NEW_VALUE}`.
+The minimal value is `30` and the maximum value is `100`.
+The unit of this value is `mA`.
 

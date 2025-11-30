@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CL-L02D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Ceiling light T1M |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy, color_hs), power_on_behaviour |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy, color_hs), power_on_behaviour, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration |
 | Picture | ![Aqara CL-L02D](https://www.zigbee2mqtt.io/images/devices/CL-L02D.png) |
 
 
@@ -163,4 +163,36 @@ Value can be found in the published state on the `power_on_behaviour` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behaviour": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behaviour": NEW_VALUE}`.
 The possible values are: `on`, `previous`, `off`.
+
+### Dimming range minimum (numeric)
+Minimum allowed dimming value.
+Value can be found in the published state on the `dimming_range_minimum` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_range_minimum": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_minimum": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `99`.
+The unit of this value is `%`.
+
+### Dimming range maximum (numeric)
+Maximum allowed dimming value.
+Value can be found in the published state on the `dimming_range_maximum` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_range_maximum": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_maximum": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Off on duration (numeric)
+Duration for light to gradually brighten when turning on.
+Value can be found in the published state on the `off_on_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"off_on_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_on_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `s`.
+
+### On off duration (numeric)
+Duration for light to gradually dim when turning off.
+Value can be found in the published state on the `on_off_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"on_off_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_off_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `s`.
 

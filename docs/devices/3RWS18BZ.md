@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 3RWS18BZ  |
 | Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Water sensor |
-| Exposes | water_leak, battery_low, battery, voltage, siren_on_off, siren_minutes |
+| Exposes | water_leak, battery_low, battery, water_leak_buzzer, water_leak_buzzer_alarm_mode |
 | Picture | ![Third Reality 3RWS18BZ](https://www.zigbee2mqtt.io/images/devices/3RWS18BZ.png) |
 
 
@@ -42,37 +42,31 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` water leak is ON, if `false` OFF.
 
 ### Battery low (binary)
-Indicates if the battery of this device is almost empty.
+Indicates whether the battery of the device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Voltage (numeric)
-Voltage of the battery in millivolts.
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mV`.
+### Water leak buzzer (binary)
+Turns the water-leak detection buzzer on or off..
+Value can be found in the published state on the `water_leak_buzzer` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"water_leak_buzzer": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_leak_buzzer": NEW_VALUE}`.
+If value equals `ON` water leak buzzer is ON, if `OFF` OFF.
 
-### Siren on off (numeric)
-Siren on/off.
-Value can be found in the published state on the `siren_on_off` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_on_off": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_on_off": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `1`.
-The unit of this value is `on/off`.
-
-### Siren minutes (numeric)
-Siren duration.
-Value can be found in the published state on the `siren_minutes` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_minutes": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_minutes": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `600`.
+### Water leak buzzer alarm mode (numeric)
+Sets the buzzers beeping mode for water-leak alerts.(0 = continuous;values = beeping duration (minutes).).
+Value can be found in the published state on the `water_leak_buzzer_alarm_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"water_leak_buzzer_alarm_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_leak_buzzer_alarm_mode": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `min`.
 
