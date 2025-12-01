@@ -1,7 +1,7 @@
 ---
-title: "HOBEIAN ZG-204ZH control via MQTT"
-description: "Integrate your HOBEIAN ZG-204ZH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-08-01T15:19:08
+title: "HOBEIAN ZG-204ZQ control via MQTT"
+description: "Integrate your HOBEIAN ZG-204ZQ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-12-01T20:18:17
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HOBEIAN ZG-204ZH
+# HOBEIAN ZG-204ZQ
 
 |     |     |
 |-----|-----|
-| Model | ZG-204ZH  |
+| Model | ZG-204ZQ  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
-| Description | PIR 24Ghz human presence sensor |
-| Exposes | presence, motion_state, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, static_detection_distance, static_detection_sensitivity, motion_detection_mode, motion_detection_sensitivity |
-| Picture | ![HOBEIAN ZG-204ZH](https://www.zigbee2mqtt.io/images/devices/ZG-204ZH.png) |
+| Description | PIR temperature&humidity sensor |
+| Exposes | presence, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval |
+| Picture | ![HOBEIAN ZG-204ZQ](https://www.zigbee2mqtt.io/images/devices/ZG-204ZQ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -50,12 +50,6 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
-
-### Motion state (enum)
-Motion state.
-Value can be found in the published state on the `motion_state` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `none`, `large`, `small`, `static`.
 
 ### Illuminance (numeric)
 Measured illuminance.
@@ -127,35 +121,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `720`.
 The unit of this value is `minutes`.
-
-### Static detection distance (numeric)
-Static detection distance.
-Value can be found in the published state on the `static_detection_distance` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_distance": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `5`.
-The unit of this value is `m`.
-
-### Static detection sensitivity (numeric)
-Static detection sensitivity.
-Value can be found in the published state on the `static_detection_sensitivity` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
-
-### Motion detection mode (enum)
-Motion detection mode.
-Value can be found in the published state on the `motion_detection_mode` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": NEW_VALUE}`.
-The possible values are: `pir_and_radar`, `pir_or_radar`, `only_radar`.
-
-### Motion detection sensitivity (numeric)
-Radar Motion detection sensitivity.
-Value can be found in the published state on the `motion_detection_sensitivity` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 

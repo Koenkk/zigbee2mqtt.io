@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-302ZL  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Motion sensing switch |
-| Exposes | presence, switch1, switch2, switch3, sensitivity, backlight, trigger_hold, power_outage_memory, auto_on, auto_off, trigger_switch |
+| Exposes | presence, switch_1, switch_2, switch_3, sensitivity, backlight, trigger_hold, power_outage_memory, auto_on, auto_off |
 | Picture | ![HOBEIAN ZG-302ZL](https://www.zigbee2mqtt.io/images/devices/ZG-302ZL.png) |
 
 
@@ -38,26 +38,26 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Switch1 (binary)
-Switch1.
-Value can be found in the published state on the `switch1` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1": NEW_VALUE}`.
-If value equals `ON` switch1 is ON, if `OFF` OFF.
-
-### Switch2 (binary)
+### Switch 1 (binary)
 Switch2.
-Value can be found in the published state on the `switch2` property.
+Value can be found in the published state on the `switch_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2": NEW_VALUE}`.
-If value equals `ON` switch2 is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1": NEW_VALUE}`.
+If value equals `ON` switch 1 is ON, if `OFF` OFF.
 
-### Switch3 (binary)
-Switch3.
-Value can be found in the published state on the `switch3` property.
+### Switch 2 (binary)
+Switch2.
+Value can be found in the published state on the `switch_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3": NEW_VALUE}`.
-If value equals `ON` switch3 is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2": NEW_VALUE}`.
+If value equals `ON` switch 2 is ON, if `OFF` OFF.
+
+### Switch 3 (binary)
+Switch3.
+Value can be found in the published state on the `switch_3` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3": NEW_VALUE}`.
+If value equals `ON` switch 3 is ON, if `OFF` OFF.
 
 ### Sensitivity (numeric)
 detection sensitivity.
@@ -90,23 +90,16 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `on`, `off`, `restore`.
 
 ### Auto on (enum)
-Someone turn on the light.
+When somebody passes in front of their sensors, the lights turn.
 Value can be found in the published state on the `auto_on` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_on": NEW_VALUE}`.
-The possible values are: `off`, `all`, `ch1`, `ch2`, `ch3`, `ch1_2`, `ch2_3`, `ch1_3`.
+The possible values are: `off`, `all`, `ch1`, `ch2`, `ch3`, `ch1_and_ch2`, `ch2_and_ch3`, `ch1_and_ch3`.
 
 ### Auto off (enum)
 No one turns off the lights.
 Value can be found in the published state on the `auto_off` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": NEW_VALUE}`.
-The possible values are: `off`, `all`, `ch1`, `ch2`, `ch3`, `ch1_2`, `ch2_3`, `ch1_3`.
-
-### Trigger switch (enum)
-Switch state reversal.
-Value can be found in the published state on the `trigger_switch` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_switch": NEW_VALUE}`.
-The possible values are: `ch1`, `ch2`, `ch3`.
+The possible values are: `off`, `all`, `ch1`, `ch2`, `ch3`, `ch1_and_ch2`, `ch2_and_ch3`, `ch1_and_ch3`.
 

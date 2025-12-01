@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-204ZK  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | 24Ghz human presence sensor |
-| Exposes | presence, battery, fading_time, static_detection_distance, static_detection_sensitivity, motion_detection_sensitivity, indicator |
+| Exposes | presence, illuminance, battery, fading_time, static_detection_distance, static_detection_sensitivity, motion_detection_sensitivity, indicator |
 | Picture | ![HOBEIAN ZG-204ZK](https://www.zigbee2mqtt.io/images/devices/ZG-204ZK.png) |
 
 
@@ -36,6 +36,11 @@ One of the suggestions is to remove residual solder-flux from the PCB and/or to 
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -44,6 +49,12 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
+
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
