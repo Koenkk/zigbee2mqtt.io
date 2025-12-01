@@ -51,7 +51,7 @@ Alternatively, you can also use MQTT directly, topic: \`zigbee2mqtt/bridge/reque
 }
 \`\`\`
 
-- \`serial_numbers\`: The "Serial No." of the device(s) to reset (enter exactly as what is printed on the device).
+- \`serial_numbers\`: A list of "Serial No." of the device(s) to reset (enter exactly as what is printed on the device).
 - \`extended_pan_id\`: (Optional) The extended PAN ID of the network the device(s) should try to join after reset. If not provided, the current network's extended PAN ID will be used.
 
 ### Hue bridge
