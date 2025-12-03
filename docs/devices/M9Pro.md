@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | M9Pro  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Smart 4 gang switch, curtain, smart light or scene. 1x thermosat control |
+| Description | Smart 4 gang switch, curtain, smart light or scene. 1x thermostat control |
 | Exposes | switch (state), mode, name, scene_name, dimmer_name, dimmer_switch, curtain_name, curtain_switch, power_on_behavior, show_weather, backlight, show_screen, thermostat, thermostat_name, scene_switch, temperature_1, condition_1, action |
 | Picture | ![Tuya M9Pro](https://www.zigbee2mqtt.io/images/devices/M9Pro.png) |
 
