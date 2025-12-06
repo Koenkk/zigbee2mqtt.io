@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WT-A03E  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Radiator thermostat W600 |
-| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, calibrate, calibrated, state, valve_detection, display_flip, helper, window_detection, child_lock, away_preset_temperature, identify |
+| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, calibrate, calibrated, state, valve_detection, display_flip, helper, window_detection, child_lock, away_preset_temperature, position, identify |
 | Picture | ![Aqara WT-A03E](https://www.zigbee2mqtt.io/images/devices/WT-A03E.png) |
 
 
@@ -146,6 +146,14 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_preset_temperature": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
+
+### Position (numeric)
+Position of the valve, 100% is fully open.
+Value can be found in the published state on the `position` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"position": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Identify (enum)
 Initiate device identification.

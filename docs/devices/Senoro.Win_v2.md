@@ -1,7 +1,7 @@
 ---
-title: "Tuya TZE284_6teua268 control via MQTT"
-description: "Integrate your Tuya TZE284_6teua268 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-10-31T19:12:27
+title: "Senoro Senoro.Win v2 control via MQTT"
+description: "Integrate your Senoro Senoro.Win v2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-12-06T20:11:28
 pageClass: device-page
 ---
 
@@ -11,16 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TZE284_6teua268
+# Senoro Senoro.Win v2
 
 |     |     |
 |-----|-----|
-| Model | TZE284_6teua268  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Model | Senoro.Win v2  |
+| Vendor  | [Senoro](/supported-devices/#v=Senoro)  |
 | Description | Window sensor with 3-state opening (DP101), optional alarm, battery |
 | Exposes | opening_state, alarm_state, setup_mode, alarm_siren, alarm_siren_duration, vibration, vibration_limit, vibration_siren, vibration_siren_duration, close_signal, transmission_power, magnetic_status, battery |
-| Picture | ![Tuya TZE284_6teua268](https://www.zigbee2mqtt.io/images/devices/TZE284_6teua268.png) |
-| White-label | Senoro Senoro.Win v2 |
+| Picture | ![Senoro Senoro.Win v2](https://www.zigbee2mqtt.io/images/devices/Senoro.Win-v2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

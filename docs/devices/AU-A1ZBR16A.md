@@ -1,7 +1,7 @@
 ---
-title: "LEDVANCE 4099854295256 control via MQTT"
-description: "Integrate your LEDVANCE 4099854295256 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-10-31T19:12:27
+title: "Aurora Lighting AU-A1ZBR16A control via MQTT"
+description: "Integrate your Aurora Lighting AU-A1ZBR16A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-12-06T20:06:13
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# LEDVANCE 4099854295256
+# Aurora Lighting AU-A1ZBR16A
 
 |     |     |
 |-----|-----|
-| Model | 4099854295256  |
-| Vendor  | [LEDVANCE](/supported-devices/#v=LEDVANCE)  |
-| Description | SMART+ indoor plug EU with energy meter - black |
-| Exposes | switch (state), power_on_behavior, power, voltage, current, energy |
-| Picture | ![LEDVANCE 4099854295256](https://www.zigbee2mqtt.io/images/devices/4099854295256.png) |
+| Model | AU-A1ZBR16A  |
+| Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
+| Description | Aurora Smart Inline Relay |
+| Exposes | switch (state), power, voltage, current, energy |
+| Picture | ![Aurora Lighting AU-A1ZBR16A](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBR16A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,9 +27,6 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -66,13 +63,6 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
-
-### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Power (numeric)
 Instantaneous measured power.

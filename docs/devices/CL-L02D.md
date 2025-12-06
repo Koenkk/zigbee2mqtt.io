@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CL-L02D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Ceiling light T1M |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy, color_hs), power_on_behaviour, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy, color_hs), power_on_behavior, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration |
 | Picture | ![Aqara CL-L02D](https://www.zigbee2mqtt.io/images/devices/CL-L02D.png) |
 
 
@@ -157,11 +157,11 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
-### Power on behaviour (enum)
+### Power on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behaviour` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behaviour": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behaviour": NEW_VALUE}`.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `on`, `previous`, `off`.
 
 ### Dimming range minimum (numeric)
