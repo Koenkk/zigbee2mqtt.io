@@ -68,7 +68,7 @@ for (const definition of baseDefinitions) {
             const {vendor, model, description} = whiteLabel;
             allDefinitionsTemp.push({
                 ...resolvedDefinition,
-                vendor,
+                vendor: vendor ?? definition.vendor,
                 model,
                 description: description || resolvedDefinition.description,
                 whiteLabel: undefined,
