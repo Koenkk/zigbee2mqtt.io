@@ -16,12 +16,14 @@
 **Browser-based flashing — no software installation required.**
 
 #### Requirements:
-   1. Web Serial compatible browser (Chrome, Edge, or any Chromium-based browser)
-   2. ESP8266 or ESP32 board
-   3. CC2530/CC2531 module or USB stick
-   4. 5 Dupont wires + downloader cable for CC2531
+
+1. Web Serial compatible browser (Chrome, Edge, or any Chromium-based browser)
+2. ESP8266 or ESP32 board
+3. CC2530/CC2531 module or USB stick
+4. 5 Dupont wires + downloader cable for CC2531
 
 #### Features:
+
 - Flash `.hex` and `.bin` firmware files
 - Backup current firmware to local file
 - Works on Windows, Linux, and macOS

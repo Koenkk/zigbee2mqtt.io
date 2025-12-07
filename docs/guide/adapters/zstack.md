@@ -17,13 +17,13 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
 
 - UI tools
     - [XZG Multi-Tool](https://mt.xyzroe.cc/)
-      - Browser-based solution — no software installation needed.
-      - Select and flash firmware from built-in dropdown list.
-      - Detect chip revision, installed version and backup current firmware.
-      - NVRAM operations: read / write / erase.
-      - Remote devices: access serial, USB, and TCP devices via provided `bridge` (executables, Docker, or HA add-on).
-    - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc) 
-      - Allows for flashing your adapter from the browser, eliminating the need for any software installation.
+        - Browser-based solution — no software installation needed.
+        - Select and flash firmware from built-in dropdown list.
+        - Detect chip revision, installed version and backup current firmware.
+        - NVRAM operations: read / write / erase.
+        - Remote devices: access serial, USB, and TCP devices via provided `bridge` (executables, Docker, or HA add-on).
+    - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc)
+        - Allows for flashing your adapter from the browser, eliminating the need for any software installation.
     - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
     - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool) (_outdated, no more support_)
 - CLI tools (multi platform Python based command line tools)
@@ -31,7 +31,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
     - [llama-bsl](https://github.com/electrolama/llama-bsl) (fork of cc2538-bsl with added features)
 - Home Assistant addon
     - [XZG Multi-Tool](https://mt.xyzroe.cc/)
-      - Bridge add-on for full interaction with remote serial, USB, and TCP devices.
+        - Bridge add-on for full interaction with remote serial, USB, and TCP devices.
     - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
     - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
 
