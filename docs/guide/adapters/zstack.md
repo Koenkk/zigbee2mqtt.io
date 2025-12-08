@@ -25,7 +25,6 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
     - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc)
         - Allows for flashing your adapter from the browser, eliminating the need for any software installation.
     - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
-    - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool) (_outdated, no more support_)
 - CLI tools (multi platform Python based command line tools)
     - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
     - [llama-bsl](https://github.com/electrolama/llama-bsl) (fork of cc2538-bsl with added features)
