@@ -26,7 +26,22 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the button at the top for about 5 seconds. The device will then go into pairing mode. It should then be connected to Zigbee2MQTT
+Press and hold the reset button for 5 seconds to put device into pairing mode.
+
+### Binding
+
+This button can **not** directly control individual devices or groups (v2.2.0).
+- Pairing inside the network is successful by [binding](../guide/usage/binding.md) the `OnOff` cluster, but clicks perform no action.
+- Pairing outside the network through [Touchlink](../guide/usage/touchlink.md) is not supported.
+
+### Action mapping
+
+| Real Action  | Z2M Action | Bind Action |
+|-------------:|------------|-------------|
+| Single press | single     | nothing     |
+| Double press | double     | nothing     |
+| Long press   | long       | nothing     |
+
 <!-- Notes END: Do not edit below this line -->
 
 
