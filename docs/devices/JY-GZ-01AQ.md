@@ -26,6 +26,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### 🚨 Version issue v21 🚨
+There is currently an issue with the version v21 for this device. In this version, when the device goes off (because of real smoke), the device only buzzers ONE time and then mutes itself (which you can manually unmute again). This version has been pulled back from the OTA repository (so you can't update currently the device with Z2M) and if you have this version installed, make sure that you test your device. **You can't downgrade, as the device blocks any downgrades**. If you installed this version and have this issue, then you got currently bad luck.
+
+#### Workaround
+To make sure, that you get alarmed, when smoke gets detected, you can create an automation in Homeassistant which manually unmutes the device when it goes off. **Note: This workaround REQUIRES that Z2M and Homeassistant are up and working!** Currently, there is no offline workaround.
+
+[Link to the GitHub issue](https://github.com/Koenkk/zigbee-OTA/issues/938)
+
 ### Partially unsupported adapter
 The adapter ConBee III (until FW v26550900, as of 09. Dec 2025) has an issue, where the states of the device doesn't get automatically updated (for example when the alarm goes off). This means, you need to manually refresh the data (polling) with the reload-buttons inside the device-page in Z2M.
 
