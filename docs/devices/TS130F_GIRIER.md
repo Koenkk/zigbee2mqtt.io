@@ -23,8 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+## Calibration
+Press the open button on the switch, wait until the curtains are completely open.
+Press the pause/stop button on the switch.
+Put the device into calibration mode via software.
+Press the close button on the switch, wait until curtains are fully closed.
+Press the pause/stop button on the switch.
+Disable the calibration mode.
 <!-- Notes END: Do not edit below this line -->
 
 
