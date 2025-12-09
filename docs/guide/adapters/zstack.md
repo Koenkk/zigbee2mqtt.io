@@ -15,15 +15,16 @@ Adapters can be flashed by putting them in the BSL (bootloader) mode.
 See the "Vendor flashing instructions" of your adapter below on how to do this.
 Once you've successfully put your adapter into BSL mode, use any of the tools below to flash it.
 
-- UI tools
+- Browser based (easiest, recommended)
     - [XZG Multi-Tool](https://mt.xyzroe.cc/)
-        - Browser-based solution — no software installation needed.
         - Select and flash firmware from built-in dropdown list.
         - Detect chip revision, installed version and backup current firmware.
         - NVRAM operations: read / write / erase.
+        - Read / write IEEE address.
         - Remote devices: access serial, USB, and TCP devices via provided `bridge` (executables, Docker, or HA add-on).
     - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc)
-        - Allows for flashing your adapter from the browser, eliminating the need for any software installation.
+        - Recommended for SLZB adapters, can also flash other adapters
+- UI tools
     - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
 - CLI tools (multi platform Python based command line tools)
     - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
