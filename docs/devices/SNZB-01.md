@@ -30,6 +30,21 @@ pageClass: device-page
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode.
 The reset button can be found by removing the back cover.
+
+### Binding
+
+This button can directly control individual devices and/or groups. 
+- Pairing inside the network is possible by [binding](../guide/usage/binding.md) the `OnOff` cluster.  
+- Pairing outside the network through [Touchlink](../guide/usage/touchlink.md) is not supported.
+
+### Action mapping
+
+| Real Action  | Z2M Action | Bind Action |
+|-------------:|------------|-------------|
+| Single press | single     | toggle      |
+| Double press | double     | on          |
+| Long press   | long       | off         |
+
 <!-- Notes END: Do not edit below this line -->
 
 
