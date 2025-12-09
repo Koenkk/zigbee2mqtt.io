@@ -300,6 +300,19 @@ Not suitable for WiFi or other high latency connections.**
 
 ### Hub
 
+::: details SMLIGHT SMHUB Nano Mg24
+
+SMHUB Nano Mg24 is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates SL SoC EFR32MG24 SoC, with Ethernet+POE, Wi-Fi, Bluetooth and USB connectivity. Hardware features include SD card, eMMC, button and 4 service LEDs. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
+
+|                                            Product picture                                            |                                       Interface1 screenshot 1                                        |                                        Interface screenshot 2                                        |
+| :---------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_2.jpg" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_4.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_3.jpg" width="200" /> |
+
+- [Product page](https://smlight.tech/global/smhub-nano-mg24)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/smhub-nano), [Aliexpress-1 - Worldwide](https://a.aliexpress.com/_EwWCdYC), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010395706341.html).
+
+:::
+
 ::: details SMLIGHT SMHUB (Essential/Professional variants)
 
 SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Professional variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Professional variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
