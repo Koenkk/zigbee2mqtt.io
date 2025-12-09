@@ -300,7 +300,7 @@ Not suitable for WiFi or other high latency connections.**
 
 ### Hub
 
-::: details SMLIGHT SMHUB Nano Mg24 (Linux-based hub with Zigbee2MQTT pre-installed)
+::: details SMLIGHT SMHUB Nano Mg24
 
 SMHUB Nano Mg24 is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates SL SoC EFR32MG24 SoC, with Ethernet+POE, Wi-Fi, Bluetooth and USB connectivity. Hardware features include SD card, eMMC, button and 4 service LEDs. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
 
