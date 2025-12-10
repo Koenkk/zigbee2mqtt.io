@@ -23,24 +23,34 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
 ## Notes
 
+### Battery
+Uses 1 x CR2477
+
+**This device *sleeps* to preserve energy when it's not actively used.**  
+When sleeping, it will not respond to any Z2M commands.  
+Press its button to keep it awake and allow interactions.
+
 ### Pairing
-Press and hold the reset button for 5 seconds to put device into pairing mode.
+**Press and hold the reset button for 5s** to put device into pairing mode.  
+The reset button can be found by removing the back cover.
 
 ### Binding
 
 This button can **not** directly control individual devices or groups (v2.2.0).
-- Pairing inside the network is successful by [binding](../guide/usage/binding.md) the `OnOff` cluster, but clicks perform no action.
-- Pairing outside the network through [Touchlink](../guide/usage/touchlink.md) is not supported.
+
+- Pairing inside the network is successful by [binding](../guide/usage/binding.md) the `OnOff` cluster, but **clicks perform no action.**
+- Pairing outside the network through [Touchlink](../guide/usage/touchlink.md) is **not** supported.
 
 ### Action mapping
 
-| Real Action  | Z2M Action | Bind Action |
-|-------------:|------------|-------------|
+|  Real Action | Z2M Action | Bind Action |
+| -----------: | ---------- | ----------- |
 | Single press | single     | nothing     |
 | Double press | double     | nothing     |
-| Long press   | long       | nothing     |
+|   Long press | long       | nothing     |
 
 <!-- Notes END: Do not edit below this line -->
 
