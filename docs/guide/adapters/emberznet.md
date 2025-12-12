@@ -361,6 +361,13 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 
 ### Not recommended
 
+::: details Sonoff Dongle-M (A.K.A Max)
+
+"Core" firmware issues as of 2025-12-12.
+Several undesired behaviors consistently reported by users.
+
+:::
+
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 
 Low-resources hardware.
