@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MAI-ZTM20C  |
 | Vendor  | [Profalux](/supported-devices/#v=Profalux)  |
 | Description | Cover remote |
-| Exposes | battery, voltage |
+| Exposes | battery, voltage, action |
 | Picture | ![Profalux MAI-ZTM20C](https://www.zigbee2mqtt.io/images/devices/MAI-ZTM20C.png) |
 
 
@@ -50,4 +50,10 @@ Value can be found in the published state on the `voltage` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `up`, `down`, `stop`.
 

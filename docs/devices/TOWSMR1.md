@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TOWSMR1  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Single-phase multifunction RCBO (DIN Module) |
-| Exposes | switch (state), temperature, current, power, voltage, energy, leakage_current, event, over_current_setting, over_current_threshold, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, leakage_setting, leakage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, auto_reclosing, restore_default, overcurrent_recloser, leakage_recloser, overpower_recloser |
+| Exposes | switch (state), temperature, current, power, voltage, energy, event, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, auto_reclosing, restore_default, overcurrent_recloser, leakage_recloser, overpower_recloser |
 | Picture | ![Tongou TOWSMR1](https://www.zigbee2mqtt.io/images/devices/TOWSMR1.png) |
 
 
@@ -34,23 +34,23 @@ pageClass: device-page
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -90,32 +90,11 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Leakage current (numeric)
-Current leakage.
-Value can be found in the published state on the `leakage_current` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mA`.
-
 ### Event (enum)
 Last event of the device.
 Value can be found in the published state on the `event` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `normal`, `over_current_trip`, `over_power_trip`, `high_temp_trip`, `over_voltage_trip`, `under_voltage_trip`, `over_current_alarm`, `over_power_alarm`, `high_temp_alarm`, `over_voltage_alarm`, `under_voltage_alarm`, `remote_on`, `remote_off`, `manual_on`, `manual_off`, `leakage_trip`, `leakage_alarm`, `restore_default`, `automatic_closing`, `electricity_shortage`, `electricity_shortage_alarm`, `timing_switch_On`, `timing_switch_off`.
-
-### Over current setting (enum)
-Over current setting.
-Value can be found in the published state on the `over_current_setting` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_setting": NEW_VALUE}`.
-The possible values are: `Ignore`, `Alarm`, `Trip`.
-
-### Over current threshold (numeric)
-Setup the value on the device.
-Value can be found in the published state on the `over_current_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `40`.
-The unit of this value is `A`.
 
 ### Over voltage setting (enum)
 Over voltage setting.
@@ -147,21 +126,6 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `145` and the maximum value is `220`.
 The unit of this value is `V`.
 
-### Leakage setting (enum)
-Leakage setting.
-Value can be found in the published state on the `leakage_setting` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_setting": NEW_VALUE}`.
-The possible values are: `Ignore`, `Alarm`, `Trip`.
-
-### Leakage threshold (numeric)
-Setup value on the device.
-Value can be found in the published state on the `leakage_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_threshold": NEW_VALUE}`.
-The minimal value is `30` and the maximum value is `100`.
-The unit of this value is `mA`.
-
 ### Temperature setting (enum)
 Temperature setting.
 Value can be found in the published state on the `temperature_setting` property.
@@ -189,7 +153,7 @@ Setup value on the device.
 Value can be found in the published state on the `over_power_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_threshold": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `25000`.
+The minimal value is `5` and the maximum value is `25000`.
 The unit of this value is `W`.
 
 ### Auto reclosing (binary)

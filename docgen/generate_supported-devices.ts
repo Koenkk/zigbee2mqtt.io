@@ -23,7 +23,7 @@ export default async function generate_supportedDevices() {
                 const whiteLabelDefinition = {
                     ...definition,
                     model: whiteLabel.model,
-                    vendor: whiteLabel.vendor,
+                    vendor: whiteLabel.vendor ?? definition.vendor,
                     description: whiteLabel.description ?? definition.description,
                     isWhiteLabel: true,
                     whiteLabelOf: definition,
