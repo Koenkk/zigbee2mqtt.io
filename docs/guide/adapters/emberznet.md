@@ -28,6 +28,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
         - Router firmware also available
 - Web-based
+    - Multi-devices: [XZG Multi-tool](https://mt.xyzroe.cc/)
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
     - For ZBT-1/ZBT-2 by [@NabuCasa](https://github.com/NabuCasa): [ZBT Flasher](https://toolbox.openhomefoundation.org/)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
