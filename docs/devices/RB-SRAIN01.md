@@ -41,19 +41,19 @@ pageClass: device-page
 Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
+The unit of this value is `mV`.
 
 ### Illuminance average 20min (numeric)
 Illuminance average for the last 20 minutes.
 Value can be found in the published state on the `illuminance_average_20min` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
+The unit of this value is `mV`.
 
 ### Illuminance maximum today (numeric)
 Illuminance maximum for the last 24 hours.
 Value can be found in the published state on the `illuminance_maximum_today` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
+The unit of this value is `mV`.
 
 ### Cleaning reminder (binary)
 Cleaning reminder.
