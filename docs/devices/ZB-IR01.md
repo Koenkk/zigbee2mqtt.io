@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZB-IR01  |
 | Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
-| Description | This is an infrared remote control equipped with a local code library,supporting devices such as air conditioners, televisions, projectors, and more. |
+| Description | Infrared remote control equipped with local code library, |
 | Exposes | last_received_command, send_command |
 | Picture | ![easyiot ZB-IR01](https://www.zigbee2mqtt.io/images/devices/ZB-IR01.png) |
 

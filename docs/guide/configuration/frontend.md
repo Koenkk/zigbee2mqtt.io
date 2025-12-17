@@ -55,18 +55,21 @@ You can change the package used for frontend (requires a restart of Zigbee2MQTT)
 The features, links and general design in each package will vary.
 :::
 
-###### zigbee2mqtt-frontend
-
-The original frontend.
-![Frontend](../../images/frontend.png)
-Details: [https://github.com/nurikk/zigbee2mqtt-frontend](https://github.com/nurikk/zigbee2mqtt-frontend)
-
-###### Experimental: zigbee2mqtt-windfront
+##### zigbee2mqtt-windfront
 
 A remake of the original frontend with new code, new design, new features...
 ![WindFront](../../images/windfront.png)
 Details: [https://github.com/Nerivec/zigbee2mqtt-windfront](https://github.com/Nerivec/zigbee2mqtt-windfront)
-Feedback can be provided in [#27564](https://github.com/Koenkk/zigbee2mqtt/discussions/27564).
+
+Feedback can be provided in [#28442](https://github.com/Koenkk/zigbee2mqtt/discussions/28442).
+
+Can also be used as standalone (with support for multiple Zigbee2MQTT instances), see: [https://github.com/Nerivec/zigbee2mqtt-windfront/wiki#standalone-serving-with-multi-zigbee2mqtt-support](https://github.com/Nerivec/zigbee2mqtt-windfront/wiki#standalone-serving-with-multi-zigbee2mqtt-support)
+
+##### zigbee2mqtt-frontend
+
+The original frontend (legacy).
+![Frontend](../../images/frontend.png)
+Details: [https://github.com/nurikk/zigbee2mqtt-frontend](https://github.com/nurikk/zigbee2mqtt-frontend)
 
 ## Nginx proxy configuration
 
@@ -150,3 +153,43 @@ Enable these modules using
 
 
 ```
+
+## Advanced: changing frontend port
+
+The default Dockerfile uses `EXPOSE 8080`. While this cannot be changed at runtime, it mainly serves as a documentation hint.
+
+To run the frontend on a different port (e.g., `9090`), you must first update the port in your `configuration.yaml` and then publish the new port when running the container.
+
+**Method 1: Direct Port Publishing**
+
+This is the simplest approach.
+
+1.  In your `configuration.yaml`, set the port:
+
+    ```yaml
+    frontend:
+        port: 9090
+    ```
+
+2.  Run the container, publishing the new port and mounting your data directory:
+    ```bash
+    docker run \
+      -p 9090:9090 \
+      -v ./data:/app/data \
+      koenkk/zigbee2mqtt
+    ```
+
+**Method 2: Using a Reverse Proxy (e.g., Traefik)**
+
+If you use a reverse proxy, you don't need to publish the port directly. Instead, use labels to tell the proxy which port the service is running on internally.
+
+1.  Set the port in `configuration.yaml` (as shown in Method 1).
+
+2.  Run the container with Traefik labels:
+    ```bash
+    docker run \
+      -v ./data:/app/data \
+      -l "traefik.enable=true" \
+      -l "traefik.http.services.zigbee2mqtt.loadbalancer.server.port=9090" \
+      koenkk/zigbee2mqtt
+    ```

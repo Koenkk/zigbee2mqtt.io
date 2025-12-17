@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_knob_dimmer_switch  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Dimmer knob with two lights |
-| Exposes | switch (state), light (state, brightness, color_temp, color_temp_startup), adjustment_mode |
+| Exposes | switch (state), switch_mode, light (state, brightness, color_temp, color_temp_startup), adjustment_mode, power_on_behavior, mode, group_id, action |
 | Picture | ![Tuya TS0601_knob_dimmer_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_knob_dimmer_switch.png) |
 
 
@@ -32,6 +32,11 @@ pageClass: device-page
 
 ## Exposes
 
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
 ### Switch (l1 endpoint)
 The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
@@ -41,6 +46,20 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
+
+### Switch mode (enum, l1 endpoint)
+Sets the mode of the switch to act as a switch or as a scene.
+Value can be found in the published state on the `switch_mode_l1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l1": NEW_VALUE}`.
+The possible values are: `switch`, `scene`.
+
+### Switch mode (enum, l2 endpoint)
+Sets the mode of the switch to act as a switch or as a scene.
+Value can be found in the published state on the `switch_mode_l2` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l2": NEW_VALUE}`.
+The possible values are: `switch`, `scene`.
 
 ### Light 
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
@@ -52,7 +71,34 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
 ### Adjustment mode (enum)
 Adjustment mode.
 Value can be found in the published state on the `adjustment_mode` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"adjustment_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"adjustment_mode": NEW_VALUE}`.
 The possible values are: `brightness`, `color_temp`.
+
+### Power on behavior (enum)
+Power on behavior state.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `previous`.
+
+### Mode (enum)
+Mode.
+Value can be found in the published state on the `mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+The possible values are: `knob`, `scene`.
+
+### Group id (numeric)
+Group ID to bind to..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10000`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `button_1`, `button_2`.
 

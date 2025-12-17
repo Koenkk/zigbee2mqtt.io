@@ -3,7 +3,7 @@
 
 # Flashing the CC2531 USB stick
 
-The firmware can be flashed with multiple devices. The easiest but most expensive option is with the _CC Debugger_ from Texas Instruments, which is described on this page. However, you can also use a _Raspberry Pi_ or a MCU like the _Arduino Uno_ or the cheap _ESP8266_ with four dupont cables and optionally a downloader cable. Information about these methods can be found here: [Alternative firmware flashing methods](./alternative_flashing_methods.md).
+The firmware can be flashed with multiple devices. The easiest but most expensive option is with the _CC Debugger_ from Texas Instruments or a chinese clone _SmartRF04EB_, which is described on this page. However, you can also use a _Raspberry Pi_ or a MCU like the _Arduino Uno_ or the cheap _ESP8266_/_ESP32_ with four dupont cables and optionally a downloader cable. More information about alternative flashing methods can be found here: [Alternative firmware flashing methods](./alternative_flashing_methods.md). When using Arduino/ESP8266/ESP32, you can use the simple browser-based method with XZG Multi-Tool, as described in the Web based solution section below.
 
 **NOTE 1**: In case you are already running a Zigbee network: reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../../faq/README.md#what-does-and-does-not-require-repairing-of-all-devices)
 
@@ -17,8 +17,37 @@ The following additional hardware is required in order to flash the CC2531:
 
 | Name                    | Price              | Picture                                                          |
 | ----------------------- | ------------------ | ---------------------------------------------------------------- |
-| CC debugger             | +-9$ on AliExpress | ![CC debugger](../../../images/cc_debugger.jpg)                  |
+| CC Debugger             | +-9$ on AliExpress | ![CC Debugger](../../../images/cc_debugger.jpg)                  |
 | CC2531 downloader cable | +-2$ on AliExpress | ![Downloader cable CC2531](../../../images/downloader_cable.png) |
+
+or you can use almost any Arduino, ESP8266 or ESP32 board as alternative for CC Debugger, when using XZG Multi-tool.
+
+## Web based solution
+
+### Using a CC Debugger (works on any desktop OS and Android)
+
+1. No software installation required on your host device (Windows users need WinUSB driver)
+2. Requirements: WebUSB-compatible browser (Chrome, Edge, or Chromium-based)
+3. Connect `CC Debugger --> CC2531 downloader cable --> CC2531 USB stick`
+4. Connect **BOTH** the `CC2531 USB stick` and the `CC Debugger` to your device via USB
+5. If the CC Debugger LED is RED, press the Reset button. The LED should turn GREEN
+6. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip)
+7. Open [XZG Multi-tool](https://mt.xyzroe.cc/), click `Connect Debugger` and flash the firmware (`.hex` or `.bin` file)
+
+[**Full instruction →**](https://github.com/xyzroe/XZG-MT/blob/main/docs/how-to/cc_debuger.md)
+
+### Using Arduino/ESP8266/ESP32 (works on any desktop OS)
+
+1. No software installation required on your PC
+2. Requirements: Web Serial API-compatible browser (Chrome, Edge, or Chromium-based)
+3. Flash your Arduino/ESP8266/ESP32 board with CCLoader firmware (can be done using [XZG Multi-tool](https://mt.xyzroe.cc/))
+   _For pinout information on how to connect the board to the CC2530, click the info button after selecting the firmware in the cloud FWs list. A popup will display the required connections._
+4. Connect `CCLoader (Arduino/ESP) --> CC2531 downloader cable --> CC2531 USB stick`
+5. Connect **BOTH** the `CC2531 USB stick` and the `CCLoader board` to your PC via USB
+6. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip)
+7. Open [XZG Multi-tool](https://mt.xyzroe.cc/), click `Connect Loader` and flash the firmware (`.hex` or `.bin` file)
+
+[**Full instruction →**](https://github.com/xyzroe/XZG-MT/blob/main/docs/how-to/cc_loader.md)
 
 ## Windows
 
@@ -27,10 +56,13 @@ The following additional hardware is required in order to flash the CC2531:
 3. Connect `CC debugger --> Downloader cable CC2531 --> CC2531 USB sniffer`.
 4. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
 5. If the light on the CC debugger is RED press set reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not use [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
-   ![How to connect](../../../images/connected.jpg)
+
+    ![How to connect](../../../images/connected.jpg)
+
 6. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip)
 7. Start SmartRF Flash Programmer, setup as shown below and press `Perform actions`. Make sure to select the `.hex` file, not the `.bin` file!
-   ![SmartRF Flash Programmer](../../../images/smartrf.png)
+
+    ![SmartRF Flash Programmer](../../../images/smartrf.png)
 
 ## Linux or MacOS
 
@@ -90,7 +122,9 @@ make
 3. Connect `CC debugger --> Downloader cable CC2531 --> CC2531 USB sniffer`.
 4. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
 5. If the light on the CC debugger is RED, press the Reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not, try to reboot and retry or follow the [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
-   ![How to connect](../../../images/connected.jpg)
+
+    ![How to connect](../../../images/connected.jpg)
+
 6. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip).
 7. Flash your firmware:
 
