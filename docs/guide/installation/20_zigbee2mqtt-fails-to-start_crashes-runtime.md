@@ -337,4 +337,7 @@ Several Open Source projects offer alternative Tuya OTA update firmware (be sure
 
 - [https://github.com/romasku/tuya-zigbee-switch](https://github.com/romasku/tuya-zigbee-switch)
 - [https://github.com/pvvx/ZigbeeTLc](https://github.com/pvvx/ZigbeeTLc)
-  :::
+- [https://github.com/Andrik45719/ZY-M100](https://github.com/Andrik45719/ZY-M100)
+- [https://github.com/slacky1965](https://github.com/slacky1965)
+
+:::
