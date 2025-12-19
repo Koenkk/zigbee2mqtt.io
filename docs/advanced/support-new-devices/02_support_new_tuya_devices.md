@@ -52,9 +52,6 @@ const definition = {
         // All datapoints go in here
         tuyaDatapoints: [],
     },
-    extend: [
-        // A preferred new way of extending functionality.
-    ],
 };
 
 module.exports = definition;
