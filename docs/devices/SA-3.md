@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SA-3  |
 | Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | Safira smart light switch - 3 gang |
-| Exposes | switch (state), power_outage_memory, switch_type, backlight_mode, indicator_mode |
+| Exposes | switch (state), power_outage_memory, switch_type, backlight_mode, indicator_mode, inching_control_set |
 | Picture | ![Nova Digital SA-3](https://www.zigbee2mqtt.io/images/devices/SA-3.png) |
 
 
@@ -97,4 +97,14 @@ Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `off/on`, `on/off`, `on`.
+
+### Inching control set (composite)
+Device Inching function Settings. The device will automatically turn off after each turn on for a specified period of time..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control_1": VALUE, "inching_time_1": VALUE, "inching_control_2": VALUE, "inching_time_2": VALUE, "inching_control_3": VALUE, "inching_time_3": VALUE}}`
+- `inching_control` (binary): Enable/disable inching function for endpoint 1. allowed values: `ENABLE` or `DISABLE`
+- `inching_time` (numeric): Delay time for executing a inching action for endpoint 1. min value is 1, max value is 65535, unit is seconds
+- `inching_control` (binary): Enable/disable inching function for endpoint 2. allowed values: `ENABLE` or `DISABLE`
+- `inching_time` (numeric): Delay time for executing a inching action for endpoint 2. min value is 1, max value is 65535, unit is seconds
+- `inching_control` (binary): Enable/disable inching function for endpoint 3. allowed values: `ENABLE` or `DISABLE`
+- `inching_time` (numeric): Delay time for executing a inching action for endpoint 3. min value is 1, max value is 65535, unit is seconds
 

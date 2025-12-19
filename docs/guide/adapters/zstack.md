@@ -15,19 +15,27 @@ Adapters can be flashed by putting them in the BSL (bootloader) mode.
 See the "Vendor flashing instructions" of your adapter below on how to do this.
 Once you've successfully put your adapter into BSL mode, use any of the tools below to flash it.
 
+- Browser based (easiest, recommended)
+    - [XZG Multi-Tool](https://mt.xyzroe.cc/)
+        - Select and flash firmware from built-in dropdown list.
+        - Detect chip revision, installed version and backup current firmware.
+        - NVRAM operations: read / write / erase.
+        - Read / write IEEE address.
+        - Remote devices: access serial, USB, and TCP devices via provided `bridge` (executables, Docker, or HA add-on).
+    - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc)
+        - Recommended for SLZB adapters, can also flash other adapters
 - UI tools
-    - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc) (**recommended**)
-        - Allows for flashing your adapter from the browser, eliminating the need for any software installation.
     - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
-    - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
 - CLI tools (multi platform Python based command line tools)
     - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
     - [llama-bsl](https://github.com/electrolama/llama-bsl) (fork of cc2538-bsl with added features)
 - Home Assistant addon
+    - [XZG Multi-Tool](https://github.com/xyzroe/XZG-MT)
+        - Bridge add-on for full interaction with remote serial, USB, and TCP devices.
     - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
     - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
 
-- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
+- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the web-interface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
 
 <img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" height=300 />
 

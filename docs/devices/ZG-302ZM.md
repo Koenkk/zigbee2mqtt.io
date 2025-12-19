@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-302ZM  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Motion sensing switch |
-| Exposes | presence, switch1, switch2, switch3, sensitivity, backlight, trigger_hold, power_outage_memory, auto_on, auto_off, trigger_switch |
+| Exposes | presence, switch1, switch2, switch3, distance, sensitivity, backlight, trigger_hold, power_outage_memory, auto_on, auto_off, trigger_switch |
 | Picture | ![HOBEIAN ZG-302ZM](https://www.zigbee2mqtt.io/images/devices/ZG-302ZM.png) |
 
 
@@ -58,6 +58,14 @@ Value can be found in the published state on the `switch3` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3": NEW_VALUE}`.
 If value equals `ON` switch3 is ON, if `OFF` OFF.
+
+### Distance (numeric)
+detection distance.
+Value can be found in the published state on the `distance` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"distance": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `6`.
+The unit of this value is `m`.
 
 ### Sensitivity (numeric)
 detection sensitivity.
