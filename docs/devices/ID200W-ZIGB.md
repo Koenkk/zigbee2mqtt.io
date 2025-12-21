@@ -23,12 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
-<!-- Notes END: Do not edit below this line -->
-
 ## Pairing
 Turn on the light (press the rotary knob briefly). Press the rotary knob twice briefly. Now hold down the rotary knob until the light starts flashing.
+<!-- Notes END: Do not edit below this line -->
+
 
 ## Exposes
 
