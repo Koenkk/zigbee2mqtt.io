@@ -24,26 +24,36 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
 ## Notes
 
+Binding information is confirmed by [sniffing](../advanced/zigbee/04_sniff_zigbee_traffic.md).
+
+### Battery
+Uses 1 x CR2450
+
+**This device *sleeps* to preserve energy when it's not actively used.**  
+When sleeping, it will not respond to any Z2M commands.  
+Press its button to keep it awake and allow interactions.
 
 ### Pairing
-Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode.
+**Long press reset button for 5s** until the LED indicator flashes three times, which means the device has entered pairing mode.  
 The reset button can be found by removing the back cover.
 
 ### Binding
 
-This button can directly control individual devices and/or groups. 
+**This button can directly control individual devices and/or groups.**
+
 - Pairing inside the network is possible by [binding](../guide/usage/binding.md) the `OnOff` cluster.  
-- Pairing outside the network through [Touchlink](../guide/usage/touchlink.md) is not supported.
+- Pairing outside the network through [Touchlink](../guide/usage/touchlink.md) is **not** supported.
 
 ### Action mapping
 
-| Real Action  | Z2M Action | Bind Action |
-|-------------:|------------|-------------|
-| Single press | single     | toggle      |
-| Double press | double     | on          |
-| Long press   | long       | off         |
+|                                     Real Action | Z2M Action | Bind Action |
+| ----------------------------------------------: | ---------- | ----------- |
+| Single press <br> *press + release + wait 0.6s* | single     | *Toggle*    |
+|     Double press <br> *press + release + press* | double     | *On*        |
+|               Long press <br> *press + hold 2s* | long       | *Off*       |
 
 <!-- Notes END: Do not edit below this line -->
 
