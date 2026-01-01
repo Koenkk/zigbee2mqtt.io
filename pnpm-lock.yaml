@@ -97,8 +97,8 @@ importers:
         specifier: 5.104.1
         version: 5.104.1
       zigbee-herdsman-converters:
-        specifier: 25.83.1
-        version: 25.83.1
+        specifier: 25.98.0
+        version: 25.98.0
 
 packages:
 
@@ -2199,8 +2199,8 @@ packages:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
 
-  iconv-lite@0.7.0:
-    resolution: {integrity: sha512-cf6L2Ds3h57VVmkZe+Pn+5APsT7FpqJtEhhieDCvrE2MK5Qk9MyffgQyuxQTm6BChfeZNtcOLHp9IcWRVcIcBQ==}
+  iconv-lite@0.7.1:
+    resolution: {integrity: sha512-2Tth85cXwGFHfvRgZWszZSvdo+0Xsqmw8k8ZwxScfcBneNUraK+dxRxRm24nszx80Y0TVio8kKLt5sLE7ZCLlw==}
     engines: {node: '>=0.10.0'}
 
   icss-utils@5.1.0:
@@ -3755,15 +3755,15 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@25.83.1:
-    resolution: {integrity: sha512-oAU2TiQYMQVepKr9Yds2ihmg+gCydqChZ8sUQxHmvjBmAQdMPkhjVBkv0HV26bD2h7VnkhmENv8aDzDkScvJYw==}
+  zigbee-herdsman-converters@25.98.0:
+    resolution: {integrity: sha512-GBLmtRnxAvWRxb6fnAGjq3OmZq1mnO3XfH5HgL5apy1iirTzvshVkPdZ3YwNbK2KYRNrmQEtYjugDNMj5IOopw==}
     engines: {node: '>=20.15.0'}
 
-  zigbee-herdsman@7.0.1:
-    resolution: {integrity: sha512-XHfngXqc0G9cUN/YXivbhdNKX2NapxQ38F+ZWboF0VGJ6ZkiMNpGTO9Wnq6DpveBKHpcYJFlMbenDF5IxEW4qQ==}
+  zigbee-herdsman@8.0.1:
+    resolution: {integrity: sha512-avIIufN1QNAvFWw9U1IzqvstbpEznk8PLAJwCF7BgXhtKEsTUAujB3JzKc7mnhgVTyQRmVytoEDD7UpUuurjSw==}
 
-  zigbee-on-host@0.2.3:
-    resolution: {integrity: sha512-QHw2ojTDBu2AIjXB73Af143RsdfvUKx5YClAs0MFRxnZCpd5bOBCPFaqBP//wwAbgt9D83RK+mryNcIP88dsKQ==}
+  zigbee-on-host@0.2.4:
+    resolution: {integrity: sha512-NIG6CWp+Yfn7PjqEIRvenHqpwT1U7rSkyimnFOUIFpnmxQOJKrmcwWDfn6WjbU/YIYYWSQPlj+g13icu1xwlyg==}
     engines: {node: ^20.19.0 || >=22.12.0}
 
   zod@4.2.0:
@@ -6106,7 +6106,7 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  iconv-lite@0.7.0:
+  iconv-lite@0.7.1:
     dependencies:
       safer-buffer: 2.1.2
 
@@ -7633,15 +7633,15 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  zigbee-herdsman-converters@25.83.1:
+  zigbee-herdsman-converters@25.98.0:
     dependencies:
-      iconv-lite: 0.7.0
+      iconv-lite: 0.7.1
       semver: 7.7.3
-      zigbee-herdsman: 7.0.1
+      zigbee-herdsman: 8.0.1
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-herdsman@7.0.1:
+  zigbee-herdsman@8.0.1:
     dependencies:
       '@date-fns/tz': 1.4.1
       '@serialport/bindings-cpp': 13.0.1
@@ -7652,11 +7652,11 @@ snapshots:
       fast-deep-equal: 3.1.3
       mixin-deep: 2.0.1
       slip: 1.0.2
-      zigbee-on-host: 0.2.3
+      zigbee-on-host: 0.2.4
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-on-host@0.2.3: {}
+  zigbee-on-host@0.2.4: {}
 
   zod@4.2.0: {}
 

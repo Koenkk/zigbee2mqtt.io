@@ -24,7 +24,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 Binding information is confirmed by [sniffing](../advanced/zigbee/04_sniff_zigbee_traffic.md).
@@ -54,7 +53,6 @@ The reset button can be found by removing the back cover.
 | Single press <br> *press + release + wait 0.6s* | single     | *Toggle*    |
 |     Double press <br> *press + release + press* | double     | *On*        |
 |               Long press <br> *press + hold 2s* | long       | *Off*       |
-
 <!-- Notes END: Do not edit below this line -->
 
 

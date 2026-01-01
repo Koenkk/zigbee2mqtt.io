@@ -34,7 +34,6 @@ There are 3 reset methods:
 - power-cycle 5 times
 
 Resetting removes the device from Z2M and puts it in pairing mode (blinking blue LED), but keeps user configuration (switch-type and power-on-behavior).
-
 <!-- Notes END: Do not edit below this line -->
 
 
