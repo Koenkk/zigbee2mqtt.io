@@ -42,7 +42,7 @@ function compositeDocs(composite) {
             ]
                 .filter((e) => e)
                 .join(', ');
-        } else if (feature.type === 'text' || feature.type === 'list') {
+        } else if (feature.type === 'text' || feature.type === 'list' || feature.type === 'composite') {
             // do nothing on purpose
         } else {
             throw new Error(`Unsupported composite feature: ${feature.type}`);

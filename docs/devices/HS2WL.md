@@ -1,7 +1,7 @@
 ---
-title: "CTM Lyng mKomfy_Tak control via MQTT"
-description: "Integrate your CTM Lyng mKomfy_Tak via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-06-30T19:12:33
+title: "Heiman HS2WL control via MQTT"
+description: "Integrate your Heiman HS2WL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-01-01T13:27:46
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# CTM Lyng mKomfy_Tak
+# Heiman HS2WL
 
 |     |     |
 |-----|-----|
-| Model | mKomfy_Tak  |
-| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
-| Description | Temperature sensor |
-| Exposes | battery, temperature |
-| Picture | ![CTM Lyng mKomfy_Tak](https://www.zigbee2mqtt.io/images/devices/mKomfy_Tak.png) |
+| Model | HS2WL  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
+| Description | Water leakage sensor |
+| Exposes | water_leak, temperature, battery, battery_low |
+| Picture | ![Heiman HS2WL](https://www.zigbee2mqtt.io/images/devices/HS2WL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -39,6 +39,19 @@ pageClass: device-page
 
 ## Exposes
 
+### Water leak (binary)
+Indicates whether the device detected a water leak.
+Value can be found in the published state on the `water_leak` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` water leak is ON, if `false` OFF.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
@@ -47,10 +60,9 @@ It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `°C`.
+### Battery low (binary)
+Empty battery indicator.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
 

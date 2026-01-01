@@ -23,7 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 ### Battery
@@ -51,7 +50,6 @@ This button can **not** directly control individual devices or groups (v2.2.0).
 | Single press | single     | nothing     |
 | Double press | double     | nothing     |
 |   Long press | long       | nothing     |
-
 <!-- Notes END: Do not edit below this line -->
 
 

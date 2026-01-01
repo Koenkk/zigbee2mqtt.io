@@ -23,7 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 **All information is taken from the SONOFF website. It needs confirmation!**
@@ -71,7 +70,6 @@ The button is found under the back cover, next to the battery.
 | Button 4 double | `double_button_4` |                 ? |
 | Button 4 triple | `triple_button_4` |                 ? |
 | Button 4 long   |   `long_button_4` |                 ? |
-
 <!-- Notes END: Do not edit below this line -->
 
 
