@@ -24,6 +24,53 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+**All information is taken from the SONOFF website. It needs confirmation!**
+
+### Battery
+Uses 1 x CR2477 battery
+
+**This device *sleeps* to preserve energy when it's not actively used.**  
+When sleeping, it will not respond to any Z2M commands.  
+Press its buttons to keep it awake and allow interactions.
+
+### Pairing
+**Press and hold the reset button for 5s**. An LED indicator should slowly flash until it connects.  
+The button is found under the back cover, next to the battery.
+
+### Binding
+
+**This remote can directly control individual devices and/or groups.**
+
+- Pairing inside the network is possible by [binding](../guide/usage/binding.md): 
+  - `OnOff` cluster for toggling 
+  - `LevelCtrl` cluster for dimming
+  - `Scenes` cluster for changing scenes
+- Pairing outside the network is possible through [Touchlink](../guide/usage/touchlink.md).  
+  - Activate by keeping it very close to the target device and holding **Button 1** 'until the indicator stays solid for about 3 seconds, then release'.
+  - No information about *cloning*
+  
+### Action mapping
+
+| Real Action     |        Z2M Action |       Bind Action |
+| --------------- | ----------------: | ----------------: |
+| Button 1 single | `single_button_1` |        'On/Off' ? |
+| Button 1 double | `double_button_1` |                 ? |
+| Button 1 triple | `triple_button_1` |                 ? |
+| Button 1 long   |   `long_button_1` |                 ? |
+| Button 2 single | `single_button_2` |                 ? |
+| Button 2 double | `double_button_2` |                 ? |
+| Button 2 triple | `triple_button_2` |                 ? |
+| Button 2 long   |   `long_button_2` |      'Brighten' ? |
+| Button 3 single | `single_button_3` |                 ? |
+| Button 3 double | `double_button_3` |                 ? |
+| Button 3 triple | `triple_button_3` |                 ? |
+| Button 3 long   |   `long_button_3` |           'Dim' ? |
+| Button 4 single | `single_button_4` | 'Switch Scenes' ? |
+| Button 4 double | `double_button_4` |                 ? |
+| Button 4 triple | `triple_button_4` |                 ? |
+| Button 4 long   |   `long_button_4` |                 ? |
 
 <!-- Notes END: Do not edit below this line -->
 
