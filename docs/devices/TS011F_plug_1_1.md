@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zbeacon](/supported-devices/#v=Zbeacon)  |
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
-| Picture | ![Zbeacon TS011F_plug_1_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1_1.png) |
+| Picture | ![Zbeacon TS011F_plug_1_1](https://www.zigbee2mqtt.io/images/devices/3RSPE01044BZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
