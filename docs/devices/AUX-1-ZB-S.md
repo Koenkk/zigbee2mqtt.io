@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | AUX-1-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR AUX-1-MB-B (Adapter for household and semi-industrial AUX systems) |
-| Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, turbo_mode, sleep_mode, ionization, self_cleaning, mold_protection, indoor_heat_exchanger_temperature, screen_light, current_fan_rpm, current_compressor_power, compressor_power_limit |
+| Description | AIR AUX-1-ZB-S (Adapter for household and semi-industrial AUX systems) |
+| Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, turbo_mode, sleep_mode, ionization, self_cleaning, mold_protection, screen_light, current_fan_rpm, current_compressor_power, compressor_power_limit |
 | Picture | ![ONOKOM AUX-1-ZB-S](https://www.zigbee2mqtt.io/images/devices/AUX-1-ZB-S.png) |
 
 
@@ -58,7 +58,7 @@ Support depends on the switch firmware. Some devices might require both `on_time
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Current temperature (numeric)
-Current temperature.
+Indoor air temperature.
 Value can be found in the published state on the `current_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
@@ -79,7 +79,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `off`, `auto`, `cool`, `heat`, `fan_only`, `dry`.
 
 ### Mode (enum)
-Modes.
+Mode.
 Value can be found in the published state on the `mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
@@ -182,13 +182,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mold_protection": NEW_VALUE}`.
 If value equals `ON` mold protection is ON, if `OFF` OFF.
 
-### Indoor heat exchanger temperature (numeric)
-Indoor heat exchanger temperature.
-Value can be found in the published state on the `indoor_heat_exchanger_temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `°C`.
-
 ### Screen light (binary)
 Screen light.
 Value can be found in the published state on the `screen_light` property.
@@ -197,7 +190,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` screen light is ON, if `OFF` OFF.
 
 ### Current fan rpm (numeric)
-Current fan RPM.
+Current fan speed.
 Value can be found in the published state on the `current_fan_rpm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -36,7 +36,6 @@ In december 2025, the device was equipped with a Micro USB connector.
 
 ### Pairing
 There is a button underneath the device to activate the pairing activity.
-
 <!-- Notes END: Do not edit below this line -->
 
 
