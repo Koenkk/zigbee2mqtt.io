@@ -23,7 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+### Technical Reference
+For further details please take a look at the [ubisys S1-R technical reference manual](https://www.ubisys.de/downloads/ubisys-s1-technical-reference.pdf)
 
 <!-- Notes END: Do not edit below this line -->
 

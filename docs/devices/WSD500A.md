@@ -31,6 +31,8 @@ Press button for 5 seconds.
 
 ### Battery
 If battery value is not showing in Zigbee2MQTT briefly pressing reset button AFTER device is fully paired usually resolves the issue.
+
+As well, these devices may not report low batteries and start to report incorrect values. Try replacing the batteries before using the calibration options.
 <!-- Notes END: Do not edit below this line -->
 
 
