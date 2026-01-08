@@ -218,7 +218,7 @@ Linux: Some EmberZNet adapters use the exact same USB identifiers as a brltty ud
 
 In a terminal or command line, run `java -jar ZigbeeSniffer.jar -baud 115200 -flow {OPTION} -port {PORT} -c {CHANNEL}`.
 
-Depending on your adapter, `OPTION` should be replaced by `none` (Sonoff Dongle-E, SLZB-06m...) or `hardware` (HUSBZB-1, SkyConnect...).
+Depending on your adapter, `OPTION` should be replaced by `none` (Sonoff Dongle-E, SLZB-06m...) or `hardware` (HUSBZB-1, ZBT-1...).
 
 ##### Windows
 

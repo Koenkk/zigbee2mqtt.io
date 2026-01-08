@@ -1,7 +1,7 @@
 ---
-title: "Heiman HEIMAN-M1 control via MQTT"
-description: "Integrate your Heiman HEIMAN-M1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2019-07-22T20:08:17Z
+title: "Heiman Heiman-M1 control via MQTT"
+description: "Integrate your Heiman Heiman-M1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-01-01T13:27:46
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Heiman HEIMAN-M1
+# Heiman Heiman-M1
 
 |     |     |
 |-----|-----|
-| Model | HEIMAN-M1  |
+| Model | Heiman-M1  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, tamper |
-| Picture | ![Heiman HEIMAN-M1](https://www.zigbee2mqtt.io/images/devices/HEIMAN-M1.png) |
+| Picture | ![Heiman Heiman-M1](https://www.zigbee2mqtt.io/images/devices/Heiman-M1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

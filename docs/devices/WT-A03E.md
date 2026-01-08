@@ -18,13 +18,21 @@ pageClass: device-page
 | Model | WT-A03E  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Radiator thermostat W600 |
-| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, calibrate, calibrated, state, valve_detection, display_flip, helper, window_detection, child_lock, away_preset_temperature, identify |
+| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, calibrate, calibrated, state, valve_detection, display_flip, helper, window_detection, child_lock, away_preset_temperature, position, identify |
 | Picture | ![Aqara WT-A03E](https://www.zigbee2mqtt.io/images/devices/WT-A03E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+The thermostat needs to be flashed with the correct firmware before it can be used with Zigbee. This works without using a proprietary hub, but requires a iOS/Android device with Bluetooth and an Aqara account.
+
+1. Download the Aqara app, sign in and proceed to adding a new device.
+2. Put the thermostat into pairing mode by pressing and holding the center button for 10 seconds until the display starts flashing. The device should now show up in the app.
+3. Select the thermostat in the app and when prompted, choose Zigbee as the connection method. The app will then flash the correct firmware.
+4. Once the flashing process is complete, the thermostat will start pairing using Zigbee.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -34,7 +42,7 @@ pageClass: device-page
 
 * `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -138,6 +146,14 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_preset_temperature": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
+
+### Position (numeric)
+Position of the valve, 100% is fully open.
+Value can be found in the published state on the `position` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"position": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Identify (enum)
 Initiate device identification.

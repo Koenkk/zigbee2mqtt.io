@@ -87,6 +87,10 @@ If no image is available when a scheduled update triggers, the device is informe
 
 ## Local OTA index and firmware files
 
+:::caution CAUTION
+Improper use of local OTA index & firmware files can result in bricked devices. There are special checks that should nearly always be added for certain manufacturers (e.g. Tuya & derived) to prevent mismatches (mostly due to several manufacturers improperly implementing the Zigbee specification).
+:::
+
 An OTA index file is a list of firmware images available in designated locations. When checking if an update is available, Zigbee2MQTT determines current hardware and firmware version for a particular device, and then searches for a suitable upgrade image in the index file. Zigbee2MQTT uses the [Zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) firmware repository with contains the [upgrade index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json), and the [downgrade index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index1.json).
 
 Sometimes it is necessary to add a firmware image that is not in that repository. This could be helpful when developing a DIY device, or install a test/alternate image for a mass-produced device. In this case you can supply Zigbee2MQTT with an alternate index file, located locally or on a web server. This index file will point Zigbee2MQTT to the firmware image files. Records in the override OTA index file will take precedence over the records in the Zigbee-OTA repository, so that it is possible to alter the image for a particular device.

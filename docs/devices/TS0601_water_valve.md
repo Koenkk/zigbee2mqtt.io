@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_water_valve  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Ultrasonic water meter valve |
-| Exposes | switch (state), water_consumed, flow_rate, temperature, voltage, auto_clean |
+| Exposes | switch (state), water_consumed, month_consumption, daily_consumption, flow_rate, auto_clean, temperature, voltage |
 | Picture | ![Tuya TS0601_water_valve](https://www.zigbee2mqtt.io/images/devices/TS0601_water_valve.png) |
 
 
@@ -31,25 +31,21 @@ The pairing requires 19 steps, here's how to enter pairing mode: https://imgbox.
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `water_consumed_precision`: Number of digits after decimal point for water_consumed, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `water_consumed_precision`: Number of digits after decimal point for water_consumed, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `water_consumed_calibration`: Calibrates the water_consumed value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `flow_rate_precision`: Number of digits after decimal point for flow_rate, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `flow_rate_precision`: Number of digits after decimal point for flow_rate, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `flow_rate_calibration`: Calibrates the flow_rate value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -63,13 +59,32 @@ It's not possible to read (`/get`) this value.
 Total water consumption.
 Value can be found in the published state on the `water_consumed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `m³`.
+The unit of this value is `L`.
+
+### Month consumption (numeric)
+month consumption.
+Value can be found in the published state on the `month_consumption` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `L`.
+
+### Daily consumption (numeric)
+daily consumption.
+Value can be found in the published state on the `daily_consumption` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `L`.
 
 ### Flow rate (numeric)
 Instantaneous water flow rate.
 Value can be found in the published state on the `flow_rate` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `m³/h`.
+The unit of this value is `L/h`.
+
+### Auto clean (binary)
+Auto clean.
+Value can be found in the published state on the `auto_clean` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_clean": NEW_VALUE}`.
+If value equals `ON` auto clean is ON, if `OFF` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -78,15 +93,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Voltage (numeric)
-Measured electrical potential value.
+Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
-
-### Auto clean (binary)
-Auto clean mode.
-Value can be found in the published state on the `auto_clean` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_clean": NEW_VALUE}`.
-If value equals `true` auto clean is ON, if `false` OFF.
+The unit of this value is `mV`.
 

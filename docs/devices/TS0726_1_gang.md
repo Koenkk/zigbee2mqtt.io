@@ -1,7 +1,7 @@
 ---
 title: "Tuya TS0726_1_gang control via MQTT"
 description: "Integrate your Tuya TS0726_1_gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-06-01T17:54:42
+addedAt: 2026-01-01T13:30:29
 pageClass: device-page
 ---
 

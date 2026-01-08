@@ -1,6 +1,6 @@
 # EmberZNet adapters (Silicon Labs)
 
-Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x
+Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x, 8.2.x
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
@@ -28,8 +28,9 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
         - Router firmware also available
 - Web-based
+    - Multi-devices: [XZG Multi-tool](https://mt.xyzroe.cc/)
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
-    - For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
+    - For ZBT-1/ZBT-2 by [@NabuCasa](https://github.com/NabuCasa): [ZBT Flasher](https://toolbox.openhomefoundation.org/)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
     - For SONOFF Dongle: [SONOFF Dongle Flasher](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - Command-line based:
@@ -44,6 +45,27 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 Each category is ordered by chip, newer series first.
 
 ### USB
+
+::: details Home Assistant Connect ZBT-2
+
+Chip: [EFR32MG24A420F1536IM40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.EFR32MG24A420F1536IM40?tab=specs)
+
+With external antenna and hardware flow control support. Make sure to set the baudrate to 460800.
+
+```yaml
+serial:
+    baudrate: 460800
+    rtscts: true
+```
+
+- [Product page](https://www.home-assistant.io/connect/zbt-2)
+- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware-builder/releases)
+- [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-2)
+- [Buy](https://www.home-assistant.io/connect/zbt-2)
+
+<img src="../../images/zbt2.jpg" width="200" />
+
+:::
 
 ::: details SONOFF Dongle-PMG24
 
@@ -131,7 +153,7 @@ serial:
 
 :::
 
-::: details Nabu Casa Home Assistant SkyConnect
+::: details Home Assistant Connect ZBT-1
 
 Chip: [efr32mg21a020f512im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f512im32?tab=specs)
 
@@ -142,10 +164,10 @@ serial:
     rtscts: true
 ```
 
-- [Product page](https://www.home-assistant.io/skyconnect)
-- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
-- [Flashing](https://skyconnect.home-assistant.io/)
-- [Buy](https://www.home-assistant.io/skyconnect)
+- [Product page](https://www.home-assistant.io/connectzbt1)
+- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware-builder/releases)
+- [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
+- [Buy](https://www.home-assistant.io/connectzbt1)
 
 <img src="../../images/skyconnect_isometric.jpg" width="200" />
 
@@ -217,21 +239,6 @@ Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr2-zigbee-
 
 :::
 
-::: details SONOFF Dongle-M
-
-Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
-
-The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two external antennas, supports PoE power supply, has a built-in web console(http://Dongle-M.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB.
-
-- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
-- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
-- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
-- [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
-
-<img src="../../images/Dongle-M_600_600.jpg" width="200" />
-
-:::
-
 ::: details SMLIGHT SLZB-06Mg26
 
 Chip: [efr32mg26b420f3200im48](https://www.silabs.com/wireless/zigbee/efr32mg26-series-2-socs/device.efr32mg26b420f3200im48?tab=specs)
@@ -279,6 +286,19 @@ Not suitable for WiFi or other high latency connections.**
 
 ### Hub
 
+::: details SMLIGHT SMHUB Nano Mg24
+
+SMHUB Nano Mg24 is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates SL SoC EFR32MG24 SoC, with Ethernet+POE, Wi-Fi, Bluetooth and USB connectivity. Hardware features include SD card, eMMC, button and 4 service LEDs. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
+
+|                                            Product picture                                            |                                       Interface1 screenshot 1                                        |                                        Interface screenshot 2                                        |
+| :---------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_2.jpg" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_4.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_3.jpg" width="200" /> |
+
+- [Product page](https://smlight.tech/global/smhub-nano-mg24)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/smhub-nano), [Aliexpress-1 - Worldwide](https://a.aliexpress.com/_EwWCdYC), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010395706341.html).
+
+:::
+
 ::: details SMLIGHT SMHUB (Essential/Professional variants)
 
 SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Professional variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Professional variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
@@ -306,7 +326,7 @@ serial:
 
 - [Product page](https://www.home-assistant.io/yellow)
 - [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
-- [Flashing](https://skyconnect.home-assistant.io/)
+- [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
 - [Buy](https://www.home-assistant.io/yellow)
 
 <img src="../../images/yellow.jpg" width="200" />
@@ -326,6 +346,25 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 :::
 
 ### Not recommended
+
+::: details Sonoff Dongle-M (A.K.A Max)
+
+"Core" firmware issues as of 2025-12-12.
+Several undesired behaviors consistently reported by users.
+WiFi does not seem to be properly disabled after requested.
+
+Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
+
+The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two external antennas, supports PoE power supply, has a built-in web console(http://Dongle-M.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB.
+
+- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
+- [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+
+<img src="../../images/Dongle-M_600_600.jpg" width="200" />
+
+:::
 
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 

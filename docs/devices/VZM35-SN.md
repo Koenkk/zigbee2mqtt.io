@@ -35,7 +35,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -292,7 +292,7 @@ Which mode to use when binding EP3 (config button) to another device (like a fan
 Value can be found in the published state on the `fanControlMode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fanControlMode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanControlMode": NEW_VALUE}`.
-The possible values are: `Disabled`, `Multi Tap`, `Cycle`.
+The possible values are: `Disabled`, `Multi Tap`, `Cycle`, `Toggle`.
 
 ### LowLevelForFanControlMode (numeric)
 Level to send to device bound to EP3 when set to low..
