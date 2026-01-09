@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZM4LT2  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
-| Description | 2-gang switch module with buzzer |
+| Description | 2-gang switch module |
 | Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode, inching_control_set |
 | Picture | ![Moes ZM4LT2](https://www.zigbee2mqtt.io/images/devices/ZM4LT2.png) |
 

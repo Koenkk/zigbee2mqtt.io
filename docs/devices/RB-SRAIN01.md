@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RB-SRAIN01  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Solar rain sensor |
-| Exposes | illuminance, illuminance_average_20min, illuminance_maximum_today, cleaning_reminder, rain_intensity, rain, battery |
+| Exposes | illuminance_raw, illuminance_average_20min, illuminance_maximum_today, cleaning_reminder, rain_intensity, rain, battery |
 | Picture | ![Tuya RB-SRAIN01](https://www.zigbee2mqtt.io/images/devices/RB-SRAIN01.png) |
 
 
@@ -29,19 +29,13 @@ pageClass: device-page
 
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
-### Illuminance (numeric)
-Measured illuminance.
-Value can be found in the published state on the `illuminance` property.
+### Illuminance raw (numeric)
+Raw measured illuminance.
+Value can be found in the published state on the `illuminance_raw` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mV`.
 
 ### Illuminance average 20min (numeric)
 Illuminance average for the last 20 minutes.

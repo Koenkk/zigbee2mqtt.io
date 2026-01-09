@@ -1,7 +1,7 @@
 ---
 title: "Aqara WXKG06LM control via MQTT"
 description: "Integrate your Aqara WXKG06LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2020-06-10T16:45:59Z
+addedAt: 2026-01-01T13:27:46
 pageClass: device-page
 ---
 
@@ -23,28 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
-
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
-
-```yaml
-devices:
-  '0x12345678':
-    friendly_name: my_device
-    legacy: false
-```
-
-
-### Pairing
-Press and hold the button on the device for +- 10 seconds
-(until the blue light starts blinking and stops blinking), release and wait.
-
-You may have to unpair the switch from an existing coordinator before the pairing process will start.
-If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 <!-- Notes END: Do not edit below this line -->
 
 
