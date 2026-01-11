@@ -23,7 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-<!-- Notes BEGIN -->
 ## Notes
 
 ### Device Overview
@@ -76,7 +75,6 @@ Group IDs follow the pattern: `base + (button - 1) × 20`
 - Battery status is not exposed (not available even in Tuya app)
 - In Light/Curtain mode, you must press a button first before rotating the knob to select which button/device to control. This means a button press action is always sent before knob rotation, which may trigger unintended commands.
 - In Light mode, knob rotation (brightness/color temp) only works after `light_X_on`. The knob does not function when the light is off.
-<!-- Notes END -->
 
 <!-- Notes END: Do not edit below this line -->
 
