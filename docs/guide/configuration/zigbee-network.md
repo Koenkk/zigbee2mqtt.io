@@ -12,7 +12,7 @@ advanced:
     # Setting pan_id: GENERATE will make Zigbee2MQTT generate a new panID on next startup
     pan_id: 0x1a62
     # Optional: Zigbee extended pan ID, GENERATE will make Zigbee2MQTT generate a new extended panID on next startup (default: shown below)
-    ext_pan_id: [0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD]
+    
     # Optional: Zigbee channel, changing might require re-pairing of some devices (see docs below). (Note: use a ZLL channel: 11, 15, 20, or 25 to avoid problems)
     # (default: 11)
     channel: 11
