@@ -111,7 +111,7 @@ automation:
 ## Groups
 
 Groups discovery is supported for groups of lights, switches, locks and covers. For other types you have to manually create a config in the Home Assistant `configuration.yaml`.
-Group discovery properties (like `name` and `icon`) can be overridden via `groups.<id>.homeassistant` in the Zigbee2MQTT configuration.
+Group discovery properties can be overridden via `groups.<id>.homeassistant` in the Zigbee2MQTT configuration (same as devices).
 
 ## Overriding discovery properties
 

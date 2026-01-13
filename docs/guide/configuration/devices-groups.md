@@ -178,7 +178,7 @@ The group key has to be unique and a quoted integer.
 :::
 
 **`homeassistant`**  
-Allows overriding the values of the Home Assistant discovery payload for this group, such as `name` and `icon`.
+Allows overriding the values of the Home Assistant discovery payload for this group. Any Home Assistant MQTT discovery property can be overridden (same as devices).
 
 ## Extract config to separate files
 

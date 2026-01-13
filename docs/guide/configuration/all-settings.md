@@ -1047,19 +1047,6 @@ groups:
 
 - Type: `string,null`
 
-##### icon
-
-Icon of the group in Home Assistant
-
-```yaml
-groups:
-    1:
-        homeassistant:
-            icon: null
-```
-
-- Type: `string,null`
-
 ## health
 
 Health
