@@ -1030,6 +1030,36 @@ groups:
 
 - Type: `array` of `string`
 
+#### homeassistant
+
+Home Assistant
+
+##### name
+
+Name of the group in Home Assistant
+
+```yaml
+groups:
+    1:
+        homeassistant:
+            name: null
+```
+
+- Type: `string,null`
+
+##### icon
+
+Icon of the group in Home Assistant
+
+```yaml
+groups:
+    1:
+        homeassistant:
+            icon: null
+```
+
+- Type: `string,null`
+
 ## health
 
 Health
