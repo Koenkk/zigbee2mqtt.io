@@ -167,11 +167,18 @@ groups:
         transition: 2
         # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
         optimistic: true
+        # Optional: Override Home Assistant discovery properties for this group
+        homeassistant:
+            name: Kitchen Lights
+            icon: mdi:lightbulb-group
 ```
 
 ::: warning
 The group key has to be unique and a quoted integer.
 :::
+
+**`homeassistant`**  
+Allows overriding the values of the Home Assistant discovery payload for this group. Any Home Assistant MQTT discovery property can be overridden.
 
 ## Extract config to separate files
 
