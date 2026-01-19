@@ -23,6 +23,22 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+Observations after installing the device (based on [Sigalou's documentation](https://www.sigalou-domotique.fr/je-teste-le-capteur-de-niveau-zigbee-par-ultrasons-me201wz-de-chez-moray))
+- "Liquid depth max" is the actual max liquid level (distance from the bottom of the tank to the max level). The comment "Height from sensor to liquid level" is incorrect.
+- "Liquid Level %" is relative to "Liquid depth max".
+- "Mini set" and "Max set" are both relative to "Installation height".
+
+Example:
+- Sensor installation height: 1.70 m (from bottom of tank)
+- Max water level: 1.65 m
+- Settings:
+  - Max set = 97%
+  - Mini set = 5%
+  - Installation Height = 1.70 m
+  - Liquid Max Depth = 1.65 m
+- Liquid state = "low" below 0.085 m (8.5 cm) → 1.70 × 0.05
+- Liquid state = "high" above 1.65 m → 1.70 × 0.97 (prevents overflow)
+- Example reading: water level 1.42 m → sensor reports 1.42 m, 86% (1.65 × 0.86 = 1.419 → 1.42), liquid state = "normal"
 
 
 <!-- Notes END: Do not edit below this line -->
