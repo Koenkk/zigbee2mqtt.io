@@ -32,6 +32,8 @@ devices:
         # Device type specific examples
         occupancy_timeout: 120
         no_occupancy_since: [10, 600]
+        # Ignore update check requests from the device (Zigbee2MQTT will always reply "no image available")
+        disable_automatic_update_check: true
     # Another device
     '0x000d6ffffee405eb':
         friendly_name: 'Kitchen bulb'
