@@ -28,6 +28,9 @@ pageClass: device-page
 ### Battery
 Uses a CR2032 battery
 
+### Pairing
+Hold any of the buttons for 10s until the LED start to flash.
+
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
 
