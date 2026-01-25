@@ -31,4 +31,4 @@ Single Button
 
     Press 5 times rapidly: Toggle the clock format between 24-hour and 12-hour.
 
->> <!-- Notes END -->
+<!-- Notes END -->
