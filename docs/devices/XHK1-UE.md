@@ -25,6 +25,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing Mode Steps
+Prepare Keypad: Remove the cover and batteries.
+Initiate Pairing: 
+- While pressing and holding the Tamper/Pairing button (small button inside), insert the batteries.
+- Release Button: Keep holding the button for a second after inserting batteries, then release it.
+- Confirm Mode: Look for a flashing green LED below the Tamper/Pairing button, which indicates it is ready to pair.
+
+The keypad can be difficult to pair and may require several attempts.
+
 ### Arming/Disarming from the server
 To set arming mode publish the following payload to `zigbee2mqtt/FRIENDLY_NAME/set` topic:
 
