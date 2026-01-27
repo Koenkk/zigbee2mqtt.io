@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_futurehome_thermostat  |
 | Vendor  | [Futurehome](/supported-devices/#v=Futurehome)  |
 | Description | Thermostat |
-| Exposes | climate (system_mode, preset, local_temperature, local_temperature_calibration, running_state, current_heating_setpoint), sensor, local_temperature_floor, child_lock, switch (state), hysteresis, max_temperature_protection |
+| Exposes | climate (system_mode, preset, local_temperature, local_temperature_calibration, running_state, current_heating_setpoint), sensor, local_temperature_floor, child_lock, switch (state), energy, hysteresis, max_temperature_protection |
 | Picture | ![Futurehome TS0601_futurehome_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_futurehome_thermostat.png) |
 
 
@@ -67,6 +67,12 @@ If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
+
+### Energy (numeric)
+Energy consumption.
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Hysteresis (numeric)
 The offset from the target temperature in which the temperature has to change for the heating state to change. This is to prevent erratically turning on/off when the temperature is close to the target..
