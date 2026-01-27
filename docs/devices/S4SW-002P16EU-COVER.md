@@ -23,15 +23,18 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-### Device Modes
-The Shelly 2PM Gen4 device operates in two different modes that appear as separate devices in Zigbee2MQTT:
+## Notes
 
-- **Cover Mode** [(`S4SW-002P16EU-COVER`)](/devices/S4SW-002P16EU-COVER.html) - This device supports window covering controls with lift and tilt functionality with power monitoring
-- **Switch Mode** [(`S4SW-002P16EU-SWITCH`)](/devices/S4SW-002P16EU-SWITCH.html) - Provides dual switch functionality with power monitoring
+### Zigbee / Matter mode
+The device ships in Matter mode by default. To use the device with Zigbee2MQTT, switching to Zigbee mode is required. This can either be done via the Web UI, or by pressing the button on the back of the device 5 times. Afterwards, the device will start pairing mode for 3 minutes. To restart pairing mode, press the button three times again.
 
-The device mode is automatically detected based on the endpoint configuration. 
+### Usage scenarios
+The Shelly 2PM Gen4 device allows two different usage scenarios that appear as separate devices in Zigbee2MQTT:
 
-For now, changing modes is only possible through Shelly WebUI.
+- **Cover Control** [(`S4SW-002P16EU-COVER`)](/devices/S4SW-002P16EU-COVER.html) - This device supports window covering controls with lift and tilt functionality with power monitoring
+- **Switch Control** [(`S4SW-002P16EU-SWITCH`)](/devices/S4SW-002P16EU-SWITCH.html) - Provides dual switch functionality with power monitoring
+
+The usage is automatically detected based on the endpoint configuration.  For now, changing usage is only possible through Shelly WebUI.
 
 ### Cover Mode Features
 When operating in cover mode, this device provides:
@@ -40,6 +43,9 @@ When operating in cover mode, this device provides:
 - State reporting (OPEN/CLOSE)
 
 Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
+
+### Maintenance and factory reset
+To enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 5 seconds. Doing so for 10 seconds will trigger a factory reset.
 <!-- Notes END: Do not edit below this line -->
 
 
