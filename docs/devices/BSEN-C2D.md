@@ -23,7 +23,38 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Important: Install Code Required
+
+This device uses Zigbee 3.0 security and will not pair via the standard "Permit join" button. You must first add a specific Install Code to your Zigbee2MQTT configuration.
+
+**Note regarding the QR Code:** The QR code printed on the device is formatted for the **Matter** standard and **is not compatible** with Zigbee2MQTT. **Do not scan the QR code**, as it will yield incorrect data. You must construct the Zigbee Install Code manually using the text printed on the device label.
+
+**How to generate the code:** You need to combine 4 elements into a single long string (without spaces or hyphens):
+
+**Pattern:** `[Bosch Prefix]` + `[IEEE Address]` + `DLK` + `[Code from label]`
+
+1. Bosch Prefix (Fixed): Copy this exact string (it is identical for all devices in this series): `RB01SG0D83101826480080000000000000000000`
+2. IEEE Address (MAC): Find the 16-character code on the device sticker (often labeled MAC or IEEE). Type it as a continuous string, removing any colons.
+3. Marker: Simply type the letters: `DLK`
+4. Install Code: Find the alphanumeric string printed next to the QR code. Type it as a continuous string, removing any hyphens or spaces.
+
+**Construction Example:**
+
+- Prefix: `RB01SG0D83101826480080000000000000000000`
+- Your MAC: `18FC2600000A1B2C`
+- Marker: `DLK`
+- Your Code: `00112233445566778899AABBCCDDEEFF1234`
+
+Final string to paste (example): `RB01SG0D8310182648008000000000000000000018FC2600000A1B2CDLK00112233445566778899AABBCCDDEEFF1234`
+
+**How to apply in Zigbee2MQTT:**
+
+1. Go to Settings -> Tools.
+2. Click Add install code.
+3. Paste the long string generated above and click **OK**.
+4. Only after adding the code, put the sensor into pairing mode (press and hold the button for approx. 5 seconds until the LED flashes orange). The device should now pair automatically.
 
 <!-- Notes END: Do not edit below this line -->
 
