@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Light switch H2 EU (double rocker) |
 | Exposes | power, current, energy, led_indicator, flip_indicator_light, switch (state), device_temperature, power_outage_count, power_on_behavior, operation_mode, lock_relay, multi_click, action |
 | Picture | ![Aqara WS-K08E](https://www.zigbee2mqtt.io/images/devices/WS-K08E.png) |
+| White-label | Aqara WS-K08D |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

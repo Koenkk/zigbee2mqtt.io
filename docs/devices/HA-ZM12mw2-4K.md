@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HA-ZM12mw2-4K  |
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
-| Description | 4-channel LED driver |
+| Description | 4-channel WS LED driver |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior |
 | Picture | ![Halemeier HA-ZM12mw2-4K](https://www.zigbee2mqtt.io/images/devices/HA-ZM12mw2-4K.png) |
 
