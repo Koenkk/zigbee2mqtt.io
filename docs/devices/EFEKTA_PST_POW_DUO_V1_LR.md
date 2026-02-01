@@ -155,7 +155,7 @@ Setting the sensor reading interval in seconds, by default 10 seconds.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
-The minimal value is `10` and the maximum value is `360`.
+The minimal value is `5` and the maximum value is `360`.
 The unit of this value is `sec`.
 
 ### Tx radio power (enum)

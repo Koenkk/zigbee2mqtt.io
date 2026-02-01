@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VZM32-SN  |
 | Vendor  | [Inovelli](/supported-devices/#v=Inovelli)  |
 | Description | mmWave Zigbee Dimmer |
-| Exposes | light (state, brightness), led_effect, individual_led_effect, notificationComplete, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, switchType, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, singleTapBehavior, fanControlMode, lowLevelForFanControlMode, mediumLevelForFanControlMode, highLevelForFanControlMode, ledColorForFanControlMode, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, fanTimerMode, doubleTapClearNotifications, fanLedLevelType, minimumLevel, maximumLevel, powerType, outputMode, ledBarScaling, activePowerReports, periodicPowerAndEnergyReports, activeEnergyReports, quickStartTime, quickStartLevel, higherOutputInNonNeutral, dimmingMode, otaImageType, mmwaveControlWiredDevice, mmWaveRoomSizePreset, mmWaveHoldTime, mmWaveDetectSensitivity, mmWaveDetectTrigger, mmWaveTargetInfoReport, mmWaveStayLife, mmWaveVersion, mmWaveHeightMin, mmWaveHeightMax, mmWaveWidthMin, mmWaveWidthMax, mmWaveDepthMin, mmWaveDepthMax, mmwave_control_commands, identify, power, energy, illuminance, occupancy, action |
+| Exposes | light (state, brightness), led_effect, individual_led_effect, notificationComplete, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, switchType, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, singleTapBehavior, fanControlMode, lowLevelForFanControlMode, mediumLevelForFanControlMode, highLevelForFanControlMode, ledColorForFanControlMode, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, fanTimerMode, doubleTapClearNotifications, fanLedLevelType, minimumLevel, maximumLevel, powerType, outputMode, ledBarScaling, activePowerReports, periodicPowerAndEnergyReports, activeEnergyReports, quickStartTime, quickStartLevel, higherOutputInNonNeutral, dimmingMode, otaImageType, mmwaveControlWiredDevice, mmWaveRoomSizePreset, mmWaveHoldTime, mmWaveDetectSensitivity, mmWaveDetectTrigger, mmWaveTargetInfoReport, mmWaveStayLife, mmWaveVersion, mmWaveHeightMin, mmWaveHeightMax, mmWaveWidthMin, mmWaveWidthMax, mmWaveDepthMin, mmWaveDepthMax, mmwave_control_commands, area1Occupancy, area2Occupancy, area3Occupancy, area4Occupancy, mmwave_interference_areas, mmwave_detection_areas, mmwave_stay_areas, identify, energy_reset, power, voltage, current, energy, illuminance, occupancy, action |
 | Picture | ![Inovelli VZM32-SN](https://www.zigbee2mqtt.io/images/devices/VZM32-SN.png) |
 
 
@@ -38,6 +38,14 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -806,7 +814,55 @@ The minimal value is `0` and the maximum value is `600`.
 
 ### Mmwave control commands (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mmwave_control_commands": {"controlID": VALUE}}`
-- `controlID` (enum): Which mmWave Control command to send allowed values: `set_interference`, `clear_interference`, `reset_detection_area`, `reset_mmwave_module`
+- `controlID` (enum): Which mmWave Control command to send allowed values: `reset_mmwave_module`, `set_interference`, `query_areas`, `clear_interference`, `reset_detection_area`, `clear_stay_areas`
+
+### Area1Occupancy (binary)
+Indicates whether the device detected occupancy in Area 1.
+Value can be found in the published state on the `mmwave_area1_occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` area1Occupancy is ON, if `false` OFF.
+
+### Area2Occupancy (binary)
+Indicates whether the device detected occupancy in Area 2.
+Value can be found in the published state on the `mmwave_area2_occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` area2Occupancy is ON, if `false` OFF.
+
+### Area3Occupancy (binary)
+Indicates whether the device detected occupancy in Area 3.
+Value can be found in the published state on the `mmwave_area3_occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` area3Occupancy is ON, if `false` OFF.
+
+### Area4Occupancy (binary)
+Indicates whether the device detected occupancy in Area 4.
+Value can be found in the published state on the `mmwave_area4_occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` area4Occupancy is ON, if `false` OFF.
+
+### Mmwave interference areas (composite)
+Manually defines the coordinates of an interference area, which is an ignored zone where targets are not reported as present. Up to four zones can be defined..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mmwave_interference_areas": {"area1": VALUE, "area2": VALUE, "area3": VALUE, "area4": VALUE}}`
+- `area_1` (composite) 
+- `area_2` (composite) 
+- `area_3` (composite) 
+- `area_4` (composite) 
+
+### Mmwave detection areas (composite)
+Defines one or more active detection zones where the sensor reports movement or occupancy. Up to four detection zones can be set..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mmwave_detection_areas": {"area1": VALUE, "area2": VALUE, "area3": VALUE, "area4": VALUE}}`
+- `area_1` (composite) 
+- `area_2` (composite) 
+- `area_3` (composite) 
+- `area_4` (composite) 
+
+### Mmwave stay areas (composite)
+Defines one or more stay areas where stationary presence should still be detected. Up to four stay zones can be configured..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mmwave_stay_areas": {"area1": VALUE, "area2": VALUE, "area3": VALUE, "area4": VALUE}}`
+- `area_1` (composite) 
+- `area_2` (composite) 
+- `area_3` (composite) 
+- `area_4` (composite) 
 
 ### Identify (enum)
 Initiate device identification.
@@ -815,12 +871,33 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
 
+### Energy reset (enum)
+Reset energy meter.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_reset": NEW_VALUE}`.
+The possible values are: `reset`.
+
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `V`.
+
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `A`.
 
 ### Energy (numeric)
 Sum of consumed energy.

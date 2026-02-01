@@ -36,6 +36,7 @@ pageClass: device-page
 Raw measured illuminance.
 Value can be found in the published state on the `illuminance_raw` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Illuminance average 20min (numeric)
 Illuminance average for the last 20 minutes.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0001_switch_module  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 gang switch module |
-| Exposes | switch (state), countdown, switch_type, indicator_mode |
+| Exposes | switch (state), countdown, power_outage_memory, switch_type, indicator_mode |
 | Picture | ![Tuya TS0001_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_module.png) |
 | White-label | OXT SWTZ21, Moes ZM-104-M |
 
@@ -59,6 +59,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
+
+### Power outage memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
 
 ### Switch type (enum)
 Type of the switch.

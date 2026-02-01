@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_T1_v2_LR  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Temperature sensors with a signal amplifier. External DS18b20 sensor. Simple Thermostat. |
-| Exposes | identify, temperature, battery, voltage, battery_low, reading_interval, tx_radio_power, smart_sleep, uptime, resolution, config_report_enable, comparison_previous_data, enable_temperature, invert_logic_temperature, high_temperature, low_temperature |
+| Exposes | identify, temperature, battery, voltage, battery_low, reading_interval, tx_radio_power, smart_sleep, uptime, resolution, config_report_enable, comparison_previous_data, enabling_temperature_control, temperature_actions, high_temperature, low_temperature |
 | Picture | ![EFEKTA EFEKTA_T1_v2_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_T1_v2_LR.png) |
 
 
@@ -124,19 +124,19 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
 
-### Enable temperature (binary)
-Enable Temperature Control.
-Value can be found in the published state on the `enable_temperature` property.
+### Enabling temperature control (binary)
+Enables/disables Tempearure control.
+Value can be found in the published state on the `enabling_temperature_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_temperature": NEW_VALUE}`.
-If value equals `ON` enable temperature is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_temperature_control": NEW_VALUE}`.
+If value equals `ON` enabling temperature control is ON, if `OFF` OFF.
 
-### Invert logic temperature (binary)
-Invert Logic Temperature Control.
-Value can be found in the published state on the `invert_logic_temperature` property.
+### Temperature actions (enum)
+Heat or cool.
+Value can be found in the published state on the `temperature_actions` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_logic_temperature": NEW_VALUE}`.
-If value equals `ON` invert logic temperature is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_actions": NEW_VALUE}`.
+The possible values are: `HEAT`, `COOL`.
 
 ### High temperature (numeric)
 Setting High Temperature Border.
