@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Smart WiFi Zigbee chlorine meter |
 | Exposes | tds, temperature, battery, ph, ec, orp, free_chlorine, ph_max, ph_min, ec_max, ec_min, orp_max, orp_min, free_chlorine_max, free_chlorine_min, salinity, backlightvalue |
 | Picture | ![Tuya BLE-YL01](https://www.zigbee2mqtt.io/images/devices/BLE-YL01.png) |
-| Other Model Names | YY-1099L 
+| White-label | Tuya YY-1099L |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

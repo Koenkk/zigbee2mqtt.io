@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS1SA-E  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smoke detector |
-| Exposes | battery, temperature, smoke, battery_low, test, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, smoke_level, smoke_unit, chamber_contamination, siren_for_automation_only, reported_packages, rejoin_count, reboot_count |
+| Exposes | battery, identify, temperature, smoke, battery_low, test, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, smoke_level, smoke_unit, chamber_contamination, siren_for_automation_only, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman HS1SA-E](https://www.zigbee2mqtt.io/images/devices/HS1SA-E.png) |
 
 
@@ -39,6 +39,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
 
 ## Exposes
 
@@ -49,6 +51,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -94,12 +103,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_selftest": NEW_VALUE}`.
 The possible values are: `test`.
 
-### Temporary mute (enum)
+### Temporary mute (binary)
 temporarily mute smoke alarm but please ensure there is no real fire..
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
+Value can be found in the published state on the `temporary_mute` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mute": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mute": NEW_VALUE}`.
-The possible values are: `mute`.
+If value equals `true` temporary mute is ON, if `false` OFF.
 
 ### Heartbeat indicator (binary)
 active green indicator.
@@ -134,7 +143,7 @@ it indicates that how serious the smoke chamber get contaminated..
 Value can be found in the published state on the `chamber_contamination` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"chamber_contamination": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `normal`, `light_contamination`, `medium_contamication`, `critical_contamication`.
+The possible values are: `normal`, `light_contamination`, `medium_contamination`, `critical_contamination`.
 
 ### Siren for automation only (enum)
 siren effect.

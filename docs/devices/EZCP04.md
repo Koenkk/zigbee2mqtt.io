@@ -1,0 +1,109 @@
+---
+title: "Lincukoo EZCP04 control via MQTT"
+description: "Integrate your Lincukoo EZCP04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-01-31T13:10:42
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Lincukoo EZCP04
+
+|     |     |
+|-----|-----|
+| Model | EZCP04  |
+| Vendor  | [Lincukoo](/supported-devices/#v=Lincukoo)  |
+| Description | Smart air quality monitor (CO2+PM2.5) |
+| Exposes | co2, pm25, temperature, humidity, temperature_unit_convert, co2_alarm_value, pm25_alarm_value, alarm_ringtone, alarm_state |
+| Picture | ![Lincukoo EZCP04](https://www.zigbee2mqtt.io/images/devices/EZCP04.png) |
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `pm25_calibration`: Calibrates the pm25 value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+
+## Exposes
+
+### CO2 (numeric)
+The measured CO2 (carbon dioxide) value.
+Value can be found in the published state on the `co2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `ppm`.
+
+### PM25 (numeric)
+Measured PM2.5 (particulate matter) concentration.
+Value can be found in the published state on the `pm25` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `µg/m³`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Temperature unit convert (enum)
+Current display unit.
+Value can be found in the published state on the `temperature_unit_convert` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit_convert": NEW_VALUE}`.
+The possible values are: `celsius`, `fahrenheit`.
+
+### Co2 alarm value (numeric)
+CO2 alarm value.
+Value can be found in the published state on the `co2_alarm_value` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_alarm_value": NEW_VALUE}`.
+The minimal value is `1000` and the maximum value is `10000`.
+The unit of this value is `ppm`.
+
+### Pm25 alarm value (numeric)
+PM2.5 alarm value.
+Value can be found in the published state on the `pm25_alarm_value` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pm25_alarm_value": NEW_VALUE}`.
+The minimal value is `10` and the maximum value is `1000`.
+The unit of this value is `ug/m3`.
+
+### Alarm ringtone (enum)
+alarm_ringtone.
+Value can be found in the published state on the `alarm_ringtone` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": NEW_VALUE}`.
+The possible values are: `mute`, `ringtone_1`, `ringtone_2`, `ringtone_3`.
+
+### Alarm state (enum)
+alarm status.
+Value can be found in the published state on the `alarm_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `normal`, `alarm_co2`, `alarm_pm25`.
+

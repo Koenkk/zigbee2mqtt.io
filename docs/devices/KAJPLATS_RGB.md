@@ -25,7 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ### Pairing
 In order to pair the light, Zigbee mode should be activated. When unpaired, the lightbulb shows steady light. Do a power cycle 12 times to switch to Zigbee mode (off -> on). The lightbulb will start pulsing white, indicating it is in Zigbee pairing mode. Once successfully paired, the pulsing will stop.
-
 <!-- Notes END: Do not edit below this line -->
 
 ## Transition
