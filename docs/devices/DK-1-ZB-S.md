@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | DK-1-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR DK-1-MB-B (Adapter for household Daikin systems) |
-| Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, eco_mode, turbo_mode, screen_light, screen_low_bright, target_fan_rpm, current_fan_rpm |
+| Description | AIR DK-1-ZB-S (Adapter for household Daikin systems) |
+| Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, eco_mode, turbo_mode, ionization, screen_light, screen_low_bright, target_fan_rpm, current_fan_rpm |
 | Picture | ![ONOKOM DK-1-ZB-S](https://www.zigbee2mqtt.io/images/devices/DK-1-ZB-S.png) |
 
 
@@ -58,7 +58,7 @@ Support depends on the switch firmware. Some devices might require both `on_time
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Current temperature (numeric)
-Current temperature.
+Indoor air temperature.
 Value can be found in the published state on the `current_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
@@ -79,7 +79,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `off`, `auto`, `cool`, `heat`, `fan_only`, `dry`.
 
 ### Mode (enum)
-Modes.
+Mode.
 Value can be found in the published state on the `mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
@@ -161,6 +161,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo_mode": NEW_VALUE}`.
 If value equals `ON` turbo mode is ON, if `OFF` OFF.
 
+### Ionization (binary)
+Ionization.
+Value can be found in the published state on the `ionization` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ionization": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ionization": NEW_VALUE}`.
+If value equals `ON` ionization is ON, if `OFF` OFF.
+
 ### Screen light (binary)
 Screen light.
 Value can be found in the published state on the `screen_light` property.
@@ -176,15 +183,15 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` screen low bright is ON, if `OFF` OFF.
 
 ### Target fan rpm (numeric)
-Target fan rpm.
+Target fan speed.
 Value can be found in the published state on the `target_fan_rpm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"target_fan_rpm": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"target_fan_rpm": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `200`.
 
 ### Current fan rpm (numeric)
-Current fan RPM.
+Current fan speed.
 Value can be found in the published state on the `current_fan_rpm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `200`.
 

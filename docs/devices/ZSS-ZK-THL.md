@@ -24,7 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
+This device is not recommended, as it has a critical design flaw involving the temperature sensor used vs the available power source - for more details, see here: [https://pvvx.github.io/ZSS-ZK-THL/](https://pvvx.github.io/ZSS-ZK-THL/)
 
 ### Pairing
 Press the Orange button on the side until 3 dots appear on the screen.

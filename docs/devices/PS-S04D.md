@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PS-S04D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Presence sensor FP300 |
-| Exposes | power_outage_count, motion_sensitivity, battery, voltage, presence, pir_detection, presence_detection_options, ai_interference_source_selfidentification, ai_sensitivity_adaptive, absence_delay_timer, pir_detection_interval, illuminance, humidity, temperature, spatial_learning, restart_device, identify, temp_&_humidity_sampling, temp_&_humidity_sampling_period, temp_reporting_interval, temp_reporting_threshold, temp_reporting_mode, humidity_reporting_interval, humidity_reporting_threshold, humidity_report_mode, light_sampling, light_sampling_period, light_reporting_interval, light_reporting_threshold, light_report_mode, track_target_distance, target_distance, detection_range, detection_range_composite, led_disabled_night, schedule_start_time, schedule_end_time |
+| Exposes | power_outage_count, motion_sensitivity, battery, voltage, presence, pir_detection, presence_detection_options, ai_interference_source_selfidentification, ai_sensitivity_adaptive, absence_delay_timer, pir_detection_interval, illuminance, humidity, temperature, spatial_learning, restart_device, identify, temp_and_humidity_sampling, temp_and_humidity_sampling_period, temp_reporting_interval, temp_reporting_threshold, temp_reporting_mode, humidity_reporting_interval, humidity_reporting_threshold, humidity_report_mode, light_sampling, light_sampling_period, light_reporting_interval, light_reporting_threshold, light_report_mode, track_target_distance, target_distance, detection_range, detection_range_composite, led_disabled_night, schedule_start_time, schedule_end_time |
 | Picture | ![Aqara PS-S04D](https://www.zigbee2mqtt.io/images/devices/PS-S04D.png) |
 
 
@@ -170,18 +170,18 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
 
-### Temp & humidity sampling (enum)
+### Temp and humidity sampling (enum)
 Sampling time frequency, increasing affects battery life. Setting to custom allows specifying period, interval & threshold..
-Value can be found in the published state on the `temp_&_humidity_sampling` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_&_humidity_sampling": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_&_humidity_sampling": NEW_VALUE}`.
+Value can be found in the published state on the `temp_and_humidity_sampling` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_and_humidity_sampling": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_and_humidity_sampling": NEW_VALUE}`.
 The possible values are: `off`, `low`, `medium`, `high`, `custom`.
 
-### Temp & humidity sampling period (numeric)
+### Temp and humidity sampling period (numeric)
 How often temp & humidity readings are taken on the device when in custom mode..
-Value can be found in the published state on the `temp_&_humidity_sampling_period` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_&_humidity_sampling_period": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_&_humidity_sampling_period": NEW_VALUE}`.
+Value can be found in the published state on the `temp_and_humidity_sampling_period` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_and_humidity_sampling_period": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_and_humidity_sampling_period": NEW_VALUE}`.
 The minimal value is `0.5` and the maximum value is `3600`.
 The unit of this value is `sec`.
 
@@ -294,30 +294,30 @@ The minimal value is `0` and the maximum value is `16777215`.
 Specifies the detection range using set of boolean settings..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range_composite": {"detection_range_0": VALUE, "detection_range_1": VALUE, "detection_range_2": VALUE, "detection_range_3": VALUE, "detection_range_4": VALUE, "detection_range_5": VALUE, "detection_range_6": VALUE, "detection_range_7": VALUE, "detection_range_8": VALUE, "detection_range_9": VALUE, "detection_range_10": VALUE, "detection_range_11": VALUE, "detection_range_12": VALUE, "detection_range_13": VALUE, "detection_range_14": VALUE, "detection_range_15": VALUE, "detection_range_16": VALUE, "detection_range_17": VALUE, "detection_range_18": VALUE, "detection_range_19": VALUE, "detection_range_20": VALUE, "detection_range_21": VALUE, "detection_range_22": VALUE, "detection_range_23": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_range_composite": ""}`.
-- `detection_range_0` (binary): 0.00m - 1.00m allowed values: `true` or `false`
-- `detection_range_1` (binary): 0.25m - 1.25m allowed values: `true` or `false`
-- `detection_range_2` (binary): 0.50m - 1.50m allowed values: `true` or `false`
-- `detection_range_3` (binary): 0.75m - 1.75m allowed values: `true` or `false`
-- `detection_range_4` (binary): 1.00m - 2.00m allowed values: `true` or `false`
-- `detection_range_5` (binary): 1.25m - 2.25m allowed values: `true` or `false`
-- `detection_range_6` (binary): 1.50m - 2.50m allowed values: `true` or `false`
-- `detection_range_7` (binary): 1.75m - 2.75m allowed values: `true` or `false`
-- `detection_range_8` (binary): 2.00m - 3.00m allowed values: `true` or `false`
-- `detection_range_9` (binary): 2.25m - 3.25m allowed values: `true` or `false`
-- `detection_range_10` (binary): 2.50m - 3.50m allowed values: `true` or `false`
-- `detection_range_11` (binary): 2.75m - 3.75m allowed values: `true` or `false`
-- `detection_range_12` (binary): 3.00m - 4.00m allowed values: `true` or `false`
-- `detection_range_13` (binary): 3.25m - 4.25m allowed values: `true` or `false`
-- `detection_range_14` (binary): 3.50m - 4.50m allowed values: `true` or `false`
-- `detection_range_15` (binary): 3.75m - 4.75m allowed values: `true` or `false`
-- `detection_range_16` (binary): 4.00m - 5.00m allowed values: `true` or `false`
-- `detection_range_17` (binary): 4.25m - 5.25m allowed values: `true` or `false`
-- `detection_range_18` (binary): 4.50m - 5.50m allowed values: `true` or `false`
-- `detection_range_19` (binary): 4.75m - 5.75m allowed values: `true` or `false`
-- `detection_range_20` (binary): 5.00m - 6.00m allowed values: `true` or `false`
-- `detection_range_21` (binary): 5.25m - 6.25m allowed values: `true` or `false`
-- `detection_range_22` (binary): 5.50m - 6.50m allowed values: `true` or `false`
-- `detection_range_23` (binary): 5.75m - 6.75m allowed values: `true` or `false`
+- `detection_range_0` (binary): 0.00m - 0.25m allowed values: `true` or `false`
+- `detection_range_1` (binary): 0.25m - 0.50m allowed values: `true` or `false`
+- `detection_range_2` (binary): 0.50m - 0.75m allowed values: `true` or `false`
+- `detection_range_3` (binary): 0.75m - 1.00m allowed values: `true` or `false`
+- `detection_range_4` (binary): 1.00m - 1.25m allowed values: `true` or `false`
+- `detection_range_5` (binary): 1.25m - 1.50m allowed values: `true` or `false`
+- `detection_range_6` (binary): 1.50m - 1.75m allowed values: `true` or `false`
+- `detection_range_7` (binary): 1.75m - 2.00m allowed values: `true` or `false`
+- `detection_range_8` (binary): 2.00m - 2.25m allowed values: `true` or `false`
+- `detection_range_9` (binary): 2.25m - 2.50m allowed values: `true` or `false`
+- `detection_range_10` (binary): 2.50m - 2.75m allowed values: `true` or `false`
+- `detection_range_11` (binary): 2.75m - 3.00m allowed values: `true` or `false`
+- `detection_range_12` (binary): 3.00m - 3.25m allowed values: `true` or `false`
+- `detection_range_13` (binary): 3.25m - 3.50m allowed values: `true` or `false`
+- `detection_range_14` (binary): 3.50m - 3.75m allowed values: `true` or `false`
+- `detection_range_15` (binary): 3.75m - 4.00m allowed values: `true` or `false`
+- `detection_range_16` (binary): 4.00m - 4.25m allowed values: `true` or `false`
+- `detection_range_17` (binary): 4.25m - 4.50m allowed values: `true` or `false`
+- `detection_range_18` (binary): 4.50m - 4.75m allowed values: `true` or `false`
+- `detection_range_19` (binary): 4.75m - 5.00m allowed values: `true` or `false`
+- `detection_range_20` (binary): 5.00m - 5.25m allowed values: `true` or `false`
+- `detection_range_21` (binary): 5.25m - 5.50m allowed values: `true` or `false`
+- `detection_range_22` (binary): 5.50m - 5.75m allowed values: `true` or `false`
+- `detection_range_23` (binary): 5.75m - 6.00m allowed values: `true` or `false`
 
 ### Led disabled night (binary)
 Enables/disables LED indicator at night.

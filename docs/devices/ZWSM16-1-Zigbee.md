@@ -18,13 +18,22 @@ pageClass: device-page
 | Model | ZWSM16-1-Zigbee  |
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
 | Description | 1 gang switch module |
-| Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode |
+| Exposes | switch (state), countdown, power_outage_memory, switch_type, indicator_mode |
 | Picture | ![AVATTO ZWSM16-1-Zigbee](https://www.zigbee2mqtt.io/images/devices/ZWSM16-1-Zigbee.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+There are 3 reset methods:
+- press any switch 10 times  
+(counts correctly, depends on switch-type)
+- press and hold the side button for 10s
+- power-cycle 5 times
+
+Resetting removes the device from Z2M and puts it in pairing mode (blinking blue LED), but keeps user configuration (switch-type and power-on-behavior).
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -45,17 +54,17 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 ### Countdown (numeric)
 Countdown to turn device off after a certain time.
 Value can be found in the published state on the `countdown` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
-### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `previous`, `on`.
+### Power outage memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
 
 ### Switch type (enum)
 Type of the switch.

@@ -190,7 +190,7 @@ Update frequency.
 Value can be found in the published state on the `update_frequency` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": NEW_VALUE}`.
-The minimal value is `30` and the maximum value is `3600`.
+The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 Besides the numeric values the following values are accepted: `default`.
 

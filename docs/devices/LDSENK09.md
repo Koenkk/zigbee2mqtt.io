@@ -23,8 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+### Pairing
+The remote will automatically start pairing first time you connect battery.
+To manually reset/pair, press together the `disarm` (bottom-left) and `arm_day_zones` (top-right) for 3 seconds, release when the LED starts to blink.
 <!-- Notes END: Do not edit below this line -->
 
 

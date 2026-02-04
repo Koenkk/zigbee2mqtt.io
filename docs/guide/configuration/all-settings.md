@@ -799,6 +799,19 @@ devices:
 
 - Type: `string`
 
+#### disable_automatic_update_check
+
+Zigbee devices may request a firmware update, and do so frequently, causing Zigbee2MQTT to reach out to third party servers. If you disable these device initiated checks, you can still initiate a firmware update check manually.
+
+```yaml
+devices:
+    '0x1234567812345678':
+        disable_automatic_update_check: false
+```
+
+- Type: `boolean`
+- Default: `false`
+
 #### homeassistant
 
 Home Assistant
@@ -1029,6 +1042,23 @@ groups:
 ```
 
 - Type: `array` of `string`
+
+#### homeassistant
+
+Home Assistant
+
+##### name
+
+Name of the group in Home Assistant
+
+```yaml
+groups:
+    1:
+        homeassistant:
+            name: null
+```
+
+- Type: `string,null`
 
 ## health
 
@@ -1488,6 +1518,20 @@ ota:
     - `"index.json"`
 - <span style="color: red">Restart required to be effective</span>
 
+### image_block_request_timeout
+
+Timeout (in milliseconds) during OTA updates. You can increase this value if your device is requesting blocks too slowly.
+
+```yaml
+ota:
+    image_block_request_timeout: 150000
+```
+
+- Type: `number`
+- Default: `150000`
+- Minimum: `10000`
+- Maximum: `2147483647`
+
 ### image_block_response_delay
 
 Limits the rate of requests (in milliseconds) during OTA updates to reduce network congestion. You can increase this value if your network appears unstable during OTA.
@@ -1500,7 +1544,6 @@ ota:
 - Type: `number`
 - Default: `250`
 - Minimum: `50`
-- <span style="color: red">Restart required to be effective</span>
 
 ### default_maximum_data_size
 
@@ -1515,7 +1558,6 @@ ota:
 - Default: `50`
 - Minimum: `10`
 - Maximum: `100`
-- <span style="color: red">Restart required to be effective</span>
 
 ## serial
 

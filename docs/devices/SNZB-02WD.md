@@ -27,9 +27,11 @@ pageClass: device-page
 
 ### Battery
 Uses a CR2477 battery
-
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

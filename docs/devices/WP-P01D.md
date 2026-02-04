@@ -23,8 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+The smart wall outlet H2 reportedly supports Matter and Zigbee modes. But in contrast to other Aquara H2 products, which need to be switched from Matter to Zigbee mode for usage with Zigbee2MQTT, the wall outlet ships already in Zigbee mode and will start pairing on first power on. Pairing mode is indicated by a flashing blue indicator LED.
 
+### Factory reset
+To restart the pairing procedure or pair the device with a different Zigbee network, the device can be reset to factory defaults by pressing and holding the button next to the outlet for at least 5 seconds. The device will indicate a successful factory reset with a flashing red indicator LED. Afterwards, the device should return to pairing mode as indicated by a blue flashing LED.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -102,5 +102,5 @@ WARNING: You must update device firmware to V3.2.2 before changing this setting!
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"data_report_duration": NEW_VALUE}`.
-The minimal value is `30` and the maximum value is `3600`.
+The minimal value is `5` and the maximum value is `3600`.
 
