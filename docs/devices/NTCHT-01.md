@@ -1,0 +1,169 @@
+---
+title: "Excellux NTCHT-01 control via MQTT"
+description: "Integrate your Excellux NTCHT-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-01-31T13:20:01
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Excellux NTCHT-01
+
+|     |     |
+|-----|-----|
+| Model | NTCHT-01  |
+| Vendor  | [Excellux](/supported-devices/#v=Excellux)  |
+| Description | Probe Temperature and ht(humidity and temperature) Sensor |
+| Exposes | probe_temperature_warning, temperature_warning, humidity_warning, battery, probe_temperature, temperature, humidity, sampling_interval, probe_temperature_calibration, probe_temperature_v0_set, probe_temperature_v1_set, temperature_calibration, temperature_v0_set, temperature_v1_set, humidity_calibration, humidity_v0_set, humidity_v1_set |
+| Picture | ![Excellux NTCHT-01](https://www.zigbee2mqtt.io/images/devices/NTCHT-01.png) |
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+
+## Exposes
+
+### Probe temperature warning (enum)
+Probe temperature sensor warning.low :temperature is lower than v0 and v1.high:temperature is higher than v0 and v1.
+Value can be found in the published state on the `probe_temperature_warning` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `none`, `low`, `high`.
+
+### Temperature warning (enum)
+Temperature warning.low :temperature is lower than v0 and v1.high:temperature is higher than v0 and v1.
+Value can be found in the published state on the `temperature_warning` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `none`, `low`, `high`.
+
+### Humidity warning (enum)
+Humidity warning.low :humidity is lower than v0 and v1.high:humidity is higher than v0 and v1.
+Value can be found in the published state on the `humidity_warning` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `none`, `low`, `high`.
+
+### Battery (numeric)
+Battery percentage.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Probe temperature (numeric)
+Probe temperature sensor.
+Value can be found in the published state on the `probe_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `-40` and the maximum value is `120`.
+The unit of this value is `°C`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Sampling interval (numeric)
+sampling interval.
+Value can be found in the published state on the `sampling_interval` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sampling_interval": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `1200`.
+The unit of this value is `S`.
+
+### Probe temperature calibration (numeric)
+Probe temperature sensor calibration.
+Value can be found in the published state on the `probe_temperature_calibration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_calibration": NEW_VALUE}`.
+The minimal value is `-2` and the maximum value is `2`.
+The unit of this value is `°C`.
+
+### Probe temperature v0 set (numeric)
+Probe temperature sensor v0 threshold setting.
+Value can be found in the published state on the `probe_temperature_v0_set` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_v0_set": NEW_VALUE}`.
+The minimal value is `-40` and the maximum value is `125`.
+The unit of this value is `°C`.
+
+### Probe temperature v1 set (numeric)
+Probe temperature sensor v1 threshold setting.
+Value can be found in the published state on the `probe_temperature_v1_set` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_v1_set": NEW_VALUE}`.
+The minimal value is `-40` and the maximum value is `125`.
+The unit of this value is `°C`.
+
+### Temperature calibration (numeric)
+Temperature calibration.
+Value can be found in the published state on the `temperature_calibration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+The minimal value is `-2` and the maximum value is `2`.
+The unit of this value is `°C`.
+
+### Temperature v0 set (numeric)
+Temperature v0 threshold setting.
+Value can be found in the published state on the `temperature_v0_set` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v0_set": NEW_VALUE}`.
+The minimal value is `-40` and the maximum value is `85`.
+The unit of this value is `°C`.
+
+### Temperature v1 set (numeric)
+Temperature v1 threshold setting.
+Value can be found in the published state on the `temperature_v1_set` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v1_set": NEW_VALUE}`.
+The minimal value is `-40` and the maximum value is `85`.
+The unit of this value is `°C`.
+
+### Humidity calibration (numeric)
+Humidity calibration.
+Value can be found in the published state on the `humidity_calibration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+The minimal value is `-10` and the maximum value is `10`.
+The unit of this value is `%`.
+
+### Humidity v0 set (numeric)
+Humidity v0 threshold setting.
+Value can be found in the published state on the `humidity_v0_set` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_v0_set": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Humidity v1 set (numeric)
+Humidity v1 threshold setting.
+Value can be found in the published state on the `humidity_v1_set` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_v1_set": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+

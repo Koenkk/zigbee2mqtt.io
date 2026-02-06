@@ -44,9 +44,11 @@ devices:
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `control_sequence_of_operation`: . The value must be one of `cooling_only`, `cooling_and_heating_4-pipes`
+* `control_sequence_of_operation`: Report either cooling and fan or cooling, heating and fan capability. The value must be one of `cooling_only`, `cooling_and_heating`
 
-* `expose_device_state`: . The value must be `true` or `false`
+* `expose_device_state`: Expose a separate on/off switch, instead of including it in system mode. The value must be `true` or `false`
+
+* `wake_before_power_transition`: Send a wake-up command before turning the device on or/off, required for some firmware revisions. The value must be `true` or `false`
 
 
 ## Exposes
@@ -78,17 +80,17 @@ The unit of this value is `°C`.
 Value can be found in the published state on the `deadzone_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deadzone_temperature": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `5`.
+The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `°C`.
 
 ### Schedule text (text)
 Weekly schedule in the format "HH:MM/TT HH:MM/TT ...".
-Example for 12 segments:
-"06:00/20 11:30/21 13:30/22 17:30/23 06:00/24 12:00/23 14:30/22 17:30/21 06:00/19 12:30/20 14:30/21 18:30/20".
-Each segment contains:
-- HH:MM: Time in 24-hour format.
-- TT: Temperature in °C.
-Ensure all 12 segments are defined and separated by spaces..
+                    Example for 12 segments:
+                    "06:00/20 11:30/21 13:30/22 17:30/23 06:00/24 12:00/23 14:30/22 17:30/21 06:00/19 12:30/20 14:30/21 18:30/20".
+                    Each segment contains:
+                    - HH:MM: Time in 24-hour format.
+                    - TT: Temperature in °C.
+                    Ensure all 12 segments are defined and separated by spaces..
 Value can be found in the published state on the `schedule_text` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_text": NEW_VALUE}`.

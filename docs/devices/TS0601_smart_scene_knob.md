@@ -75,7 +75,6 @@ Group IDs follow the pattern: `base + (button - 1) × 20`
 - Battery status is not exposed (not available even in Tuya app)
 - In Light/Curtain mode, you must press a button first before rotating the knob to select which button/device to control. This means a button press action is always sent before knob rotation, which may trigger unintended commands.
 - In Light mode, knob rotation (brightness/color temp) only works after `light_X_on`. The knob does not function when the light is off.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -87,13 +86,13 @@ Group IDs follow the pattern: `base + (button - 1) × 20`
 Brightness level from light mode (1-254).
 Value can be found in the published state on the `brightness` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `254`.
+The minimal value is `1` and the maximum value is `254`.
 
 ### Color temp (numeric)
 Color temperature from light mode (mired).
 Value can be found in the published state on the `color_temp` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `150` and the maximum value is `500`.
+The minimal value is `153` and the maximum value is `523`.
 
 ### Curtain position (numeric)
 Curtain position from curtain mode (0-100%).

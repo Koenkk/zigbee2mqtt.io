@@ -106,7 +106,7 @@ Lux factor.
 Value can be found in the published state on the `lux_factor` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_factor": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
+The minimal value is `0` and the maximum value is `50`.
 
 ### Light 
 This light supports the following features: `state`, `brightness`.
