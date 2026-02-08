@@ -24,6 +24,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Pairing
+
+Pair the Thermostat radiator valve to Zigbee2MQTT by turning the dial knob to lowest setting 'OFF', put Zigbee2MQTT into joining mode and press the dial button for 5 seconds. The valve will show two lines ' - - ' when ready to be paired.
 
 <!-- Notes END: Do not edit below this line -->
 
