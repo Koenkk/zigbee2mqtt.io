@@ -23,8 +23,19 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+Press on stop button for 10 seconds to enter pairing mode
 
+### Calibration
+
+* Press the open button on the switch, wait until the curtains are completely open.
+* Press the pause button on the switch.
+* Put the device into calibration mode, see [below](#calibration-binary).
+* Press the close button on the switch, wait until curtains are fully closed.
+* Press the pause button on the switch.
+* Disable the calibration mode, see [below](#calibration-binary).
 <!-- Notes END: Do not edit below this line -->
 
 
