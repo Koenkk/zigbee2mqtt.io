@@ -44,7 +44,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Start feeding.
 Value can be found in the published state on the `feed` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"feed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"feed": "NEW_VALUE"}`.
 The possible values are: ``, `START`.
 
 ### Feeding source (enum)
@@ -78,7 +78,7 @@ If value equals `true` error is ON, if `false` OFF.
 
 ### Schedule (list)
 Feeding schedule.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule": [{"days": VALUE, "hour": VALUE, "minute": VALUE, "size": VALUE}]}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule": [{"days": "VALUE", "hour": "VALUE", "minute": "VALUE", "size": "VALUE"}]}`
 - `days` (enum) allowed values: `everyday`, `workdays`, `weekend`, `mon`, `tue`, `wed`, `thu`, `fri`, `sat`, `sun`, `mon-wed-fri-sun`, `tue-thu-sat`
 - `hour` (numeric) 
 - `minute` (numeric) 
@@ -88,28 +88,28 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 LED indicator will be disabled every day from 21:00 to 09:00.
 Value can be found in the published state on the `led_indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": "NEW_VALUE"}`.
 If value equals `ON` disable LED at night is ON, if `OFF` OFF.
 
 ### Child lock (binary)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "NEW_VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Mode (enum)
 Feeding mode.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "NEW_VALUE"}`.
 The possible values are: `schedule`, `manual`.
 
 ### Serving size (numeric)
 One serving size.
 Value can be found in the published state on the `serving_size` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"serving_size": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"serving_size": "NEW_VALUE"}`.
 The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `portion`.
 
@@ -117,7 +117,7 @@ The unit of this value is `portion`.
 Portion weight.
 Value can be found in the published state on the `portion_weight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"portion_weight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"portion_weight": "NEW_VALUE"}`.
 The minimal value is `1` and the maximum value is `20`.
 The unit of this value is `g`.
 
