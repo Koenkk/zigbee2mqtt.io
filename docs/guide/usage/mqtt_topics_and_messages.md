@@ -467,6 +467,10 @@ Creates a backup of the `data` folder (without the `data/log` directory). Payloa
 
 Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typically have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
 
+::: tip TIP
+The WindFront frontend does not automatically activate permit joining after adding an install code. This allows you to permit joining on whichever device you want or "all", same as a regular device.
+:::
+
 ### Device
 
 #### zigbee2mqtt/bridge/request/device/remove

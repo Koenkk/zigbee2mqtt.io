@@ -29,7 +29,7 @@ pageClass: device-page
 There are [multiple](https://github.com/Koenkk/zigbee2mqtt/issues/30048) [reports](https://community.bosch-smarthome.com/t5/technische-probleme/raumthermostat-2-batterie-alle-2-monate-leer/td-p/93359) that firmware version [`0.2.9`](https://github.com/Koenkk/zigbee-OTA/pull/873) causes excessive battery drain. While the offical OTA update hasn't been pulled, we would recommed to not update until a fix from Bosch is available.
 
 ### Pairing
-To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
+To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
 
 
 ### Factory resetting
