@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0201-z-SlD  |
 | Vendor  | [Slacky-DIY](/supported-devices/#v=Slacky-DIY)  |
 | Description | Tuya temperature and humidity sensor with custom Firmware |
-| Exposes | battery, voltage, temperature, humidity, temperature_offset, humidity_offset, read_interval, enabling_temperature_control, low_temperature, high_temperature, enabling_humidity_control, low_humidity, high_humidity, switch_actions |
+| Exposes | battery, voltage, temperature, humidity, temperature_offset, humidity_offset, read_interval, enabling_repeat_command, enabling_temperature_control, low_temperature, high_temperature, temperature_actions, enabling_humidity_control, low_humidity, high_humidity, humidity_actions |
 | Picture | ![Slacky-DIY TS0201-z-SlD](https://www.zigbee2mqtt.io/images/devices/TS0201-z-SlD.png) |
 
 
@@ -36,11 +36,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -83,7 +83,7 @@ The minimal value is `-5` and the maximum value is `5`.
 The unit of this value is `°C`.
 
 ### Humidity offset (numeric)
-Offset to add/subtract to the inside temperature.
+Offset to add/subtract to the inside humidity.
 Value can be found in the published state on the `humidity_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
@@ -97,6 +97,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_interval": NEW_VALUE}`.
 The minimal value is `5` and the maximum value is `600`.
 The unit of this value is `Sec`.
+
+### Enabling repeat command (binary)
+Enables/disables repeat command.
+Value can be found in the published state on the `enabling_repeat_command` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enabling_repeat_command": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_repeat_command": NEW_VALUE}`.
+If value equals `ON` enabling repeat command is ON, if `OFF` OFF.
 
 ### Enabling temperature control (binary)
 Enables/disables Tempearure control.
@@ -121,6 +128,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-40` and the maximum value is `125`.
 The unit of this value is `°C`.
 
+### Temperature actions (enum, 1 endpoint)
+Heat or cool.
+Value can be found in the published state on the `temperature_actions_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_actions_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_actions_1": NEW_VALUE}`.
+The possible values are: `heat`, `cool`.
+
 ### Enabling humidity control (binary)
 Enables/disables Humidity control.
 Value can be found in the published state on the `enabling_humidity_control` property.
@@ -144,10 +158,10 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Switch actions (enum)
-Actions switch.
-Value can be found in the published state on the `switch_actions` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions": NEW_VALUE}`.
-The possible values are: `off`, `on`.
+### Humidity actions (enum, 2 endpoint)
+Wet or dry.
+Value can be found in the published state on the `humidity_actions_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_actions_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_actions_2": NEW_VALUE}`.
+The possible values are: `wet`, `dry`.
 

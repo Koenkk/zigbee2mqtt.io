@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_dimmer_3  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 3 gang smart dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, backlight_mode |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, backlight_color, backlight_brightness |
 | Picture | ![Tuya TS0601_dimmer_3](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_3.png) |
 | White-label | Moes ZS-EUD_3gang |
 
@@ -73,6 +73,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
+### Light type (enum, l1 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l1": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
+
+### Light type (enum, l2 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l2` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l2": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
+
+### Light type (enum, l3 endpoint)
+Type of light attached to the device.
+Value can be found in the published state on the `light_type_l3` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type_l3": NEW_VALUE}`.
+The possible values are: `led`, `incandescent`, `halogen`.
+
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
@@ -86,4 +107,19 @@ Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 The possible values are: `off`, `normal`, `inverted`.
+
+### Backlight color (enum)
+Backlight color.
+Value can be found in the published state on the `backlight_color` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_color": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_color": NEW_VALUE}`.
+The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`, `warm_white`.
+
+### Backlight brightness (numeric)
+Backlight brightness.
+Value can be found in the published state on the `backlight_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-204ZM  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | PIR 24Ghz human presence sensor |
-| Exposes | presence, motion_state, illuminance, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, motion_detection_mode, motion_detection_sensitivity |
+| Exposes | presence, motion_state, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, motion_detection_mode, motion_detection_sensitivity, illuminance |
 | Picture | ![Tuya ZG-204ZM](https://www.zigbee2mqtt.io/images/devices/ZG-204ZM.png) |
 
 
@@ -31,7 +31,7 @@ various other considerations (like installation position) to get good results.
 
 There seem to be multiple versions of this device which visually look the same. 
 Devices which are detected as `Zigbee Model=TS0601, Zigbee Manufacturer=_TZE200_kb5noeto` are known to get stuck in "presence detected" state. See this [review](https://smarthomescene.com/reviews/zigbee-battery-powered-presence-sensor-zg-204zm-review/) for more user experiences.
-One of the suggestions is to remove residual solder-flux from the PCB and/or to resolder some components. 
+One of the suggestions is to remove residual solder-flux from the PCB and/or to resolder some components.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -40,6 +40,8 @@ One of the suggestions is to remove residual solder-flux from the PCB and/or to 
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
 
 ## Exposes
@@ -55,12 +57,6 @@ Motion state.
 Value can be found in the published state on the `motion_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `none`, `large`, `small`, `static`.
-
-### Illuminance (numeric)
-Measured illuminance.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
@@ -82,7 +78,7 @@ Static detection distance.
 Value can be found in the published state on the `static_detection_distance` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_distance": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
+The minimal value is `0` and the maximum value is `6`.
 The unit of this value is `m`.
 
 ### Static detection sensitivity (numeric)
@@ -114,4 +110,11 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `x`.
+
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
 

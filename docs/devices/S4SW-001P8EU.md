@@ -18,13 +18,18 @@ pageClass: device-page
 | Model | S4SW-001P8EU  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 1PM Mini Gen 4 |
-| Exposes | switch (state), power, voltage, ac_frequency, current, energy, produced_energy |
+| Exposes | switch (state), power, voltage, ac_frequency, current, energy, produced_energy, wifi_status, ip_address, dhcp_enabled, wifi_config |
 | Picture | ![Shelly S4SW-001P8EU](https://www.zigbee2mqtt.io/images/devices/S4SW-001P8EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Zigbee / Matter mode
+The device ships in Matter mode by default. To use the device with Zigbee2MQTT, switching to Zigbee mode is required. This can either be done via the Web UI, or by pressing the button on the back of the device 5 times. Afterwards, the device will start pairing mode for 3 minutes. To restart pairing mode, press the button three times again.
 
+### Maintenance and factory reset
+To enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 5 seconds. Doing so for 10 seconds will trigger a factory reset.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -34,23 +39,23 @@ pageClass: device-page
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -109,4 +114,34 @@ Value can be found in the published state on the `produced_energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"produced_energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Wi-Fi status (text)
+Current connection status.
+Value can be found in the published state on the `wifi_status` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_status": ""}`.
+It's not possible to write (`/set`) this value.
+
+### IP address (text)
+IP address currently assigned to the device.
+Value can be found in the published state on the `ip_address` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ip_address": ""}`.
+It's not possible to write (`/set`) this value.
+
+### DHCP enabled (binary)
+Indicates whether DHCP is used to automatically assign network settings.
+Value can be found in the published state on the `dhcp_enabled` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dhcp_enabled": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` dHCP enabled is ON, if `false` OFF.
+
+### Wi-Fi Configuration (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_config": {"enabled": VALUE, "ssid": VALUE, "password": VALUE, "static_ip": VALUE, "net_mask": VALUE, "gateway": VALUE, "name_server": VALUE}}`
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_config": ""}`.
+- `enabled` (binary): Enable/disable Wi-Fi connectivity allowed values: `true` or `false`
+- `ssid` (text): Name (SSID) of the Wi-Fi network to connect to 
+- `password` (text): Password for the selected Wi-Fi network 
+- `static_ip` (text): Manually assigned IP address (used when DHCP is disabled) 
+- `net_mask` (text): Subnet mask for the static IP configuration 
+- `gateway` (text): Default gateway address for static IP configuration 
+- `name_server` (text): Name server address for static IP configuration 
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | C-ZB-LC20-RGB  |
 | Vendor  | [Candeo](/supported-devices/#v=Candeo)  |
 | Description | Smart LED controller (RGB mode) |
-| Exposes | light (state, brightness, color_xy, color_hs, level_config), effect, power_on_behavior, identify |
+| Exposes | light (state, brightness, color_xy, color_hs, level_config), power_on_behavior, identify |
 | Picture | ![Candeo C-ZB-LC20-RGB](https://www.zigbee2mqtt.io/images/devices/C-ZB-LC20-RGB.png) |
 
 
@@ -28,6 +28,9 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -36,7 +39,7 @@ pageClass: device-page
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -86,13 +89,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.

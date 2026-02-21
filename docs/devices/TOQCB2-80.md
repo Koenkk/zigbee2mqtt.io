@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TOQCB2-80  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Smart circuit breaker |
-| Exposes | switch (state), energy, power, voltage, current, temperature, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, last_event, over_current_setting, current_threshold, under_voltage_setting, under_voltage_threshold, over_voltage_setting, over_voltage_threshold, over_power_setting, over_power_threshold, temperature_setting, temperature_threshold, clear_fault, factory_reset |
+| Exposes | switch (state), energy, power, voltage, current, temperature, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, last_event, over_current_setting, current_threshold, under_voltage_setting, under_voltage_threshold, over_voltage_setting, over_voltage_threshold, over_power_setting, over_power_threshold, temperature_setting, temperature_threshold, clear_fault, factory_reset, auto_reclosing |
 | Picture | ![Tongou TOQCB2-80](https://www.zigbee2mqtt.io/images/devices/TOQCB2-80.png) |
 
 
@@ -34,23 +34,23 @@ pageClass: device-page
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -238,4 +238,11 @@ Value can be found in the published state on the `factory_reset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
 If value equals `ON` factory reset is ON, if `OFF` OFF.
+
+### Auto-Reclosing (binary)
+When the circuit breaker trips due to voltage protection, it will automatically close when the circuit voItage returns to normal.(Note: For safety reasons, this function only applies to trips caused by voltage).
+Value can be found in the published state on the `auto_reclosing` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_reclosing": NEW_VALUE}`.
+If value equals `ON` auto-Reclosing is ON, if `OFF` OFF.
 

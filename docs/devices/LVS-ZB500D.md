@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | LVS-ZB500D  |
 | Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
-| Description | ZigBee smart dimmer switch |
+| Description | Zigbee smart dimmer switch |
 | Exposes | light (state, brightness), effect, power_on_behavior |
 | Picture | ![LivingWise LVS-ZB500D](https://www.zigbee2mqtt.io/images/devices/LVS-ZB500D.png) |
 

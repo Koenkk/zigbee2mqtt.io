@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | Eco-Dim.07/Eco-Dim.10  |
 | Vendor  | [EcoDim](/supported-devices/#v=EcoDim)  |
-| Description | Zigbee & Z-wave dimmer |
+| Description | Zigbee LED dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior |
 | Picture | ![EcoDim Eco-Dim.07/Eco-Dim.10](https://www.zigbee2mqtt.io/images/devices/Eco-Dim.07-Eco-Dim.10.png) |
 

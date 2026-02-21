@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9098A-Win  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee curtain control module |
-| Exposes | cover (state, position, tilt), power, voltage, current, energy, dev_mode, curtain_type, motor_direction_reversed, calibration_mode, identify, action |
+| Exposes | cover (state, position, tilt), power, voltage, current, energy, dev_mode, curtain_type, calibrate, identify, action |
 | Picture | ![Sunricher SR-ZG9098A-Win](https://www.zigbee2mqtt.io/images/devices/SR-ZG9098A-Win.png) |
 
 
@@ -34,35 +34,35 @@ pageClass: device-page
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
 
-### Cover 
-The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
-To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
+### Cover (1 endpoint)
+The current state of this cover is in the published state under the `state_1` property (value is `OPEN` or `CLOSE`).
+To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_1": "OPEN"}`, `{"state_1": "CLOSE"}`, `{"state_1": "STOP"}`.
 It's not possible to read (`/get`) this value.
-To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
-To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt": VALUE}` where `VALUE` is a number between `0` and `100`.
+To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position_1": VALUE}` where `VALUE` is a number between `0` and `100`.
+To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt_1": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Power (numeric, 3 endpoint)
 Instantaneous measured power.
@@ -106,19 +106,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"curtain_type": NEW_VALUE}`.
 The possible values are: `normal`, `venetian_blind`.
 
-### Motor direction reversed (binary)
-Reverse motor direction (if motor runs in the wrong direction after installation, use this and recalibration is required).
-Value can be found in the published state on the `motor_direction_reversed` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_direction_reversed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction_reversed": NEW_VALUE}`.
-If value equals `true` motor direction reversed is ON, if `false` OFF.
-
-### Calibration mode (binary)
-Trigger curtain calibration (motor will learn travel limits automatically).
-Value can be found in the published state on the `calibration_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_mode": NEW_VALUE}`.
-If value equals `true` calibration mode is ON, if `false` OFF.
+### Calibrate (enum)
+Calibrate curtain (motor will learn travel limits automatically).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibrate": NEW_VALUE}`.
+The possible values are: `calibrate`.
 
 ### Identify (enum)
 Initiate device identification.
