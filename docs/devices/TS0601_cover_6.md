@@ -23,7 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+## Notes
+Hiya, the correct image for this item is this one https://ibb.co/ns7czBfT
+Which is very similar to this one https://www.zigbee2mqtt.io/devices/ZNJLBL01LM.html#aqara-znjlbl01lm
 
 <!-- Notes END: Do not edit below this line -->
 
