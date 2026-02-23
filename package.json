@@ -26,7 +26,7 @@
     },
     "devDependencies": {
         "@types/json-schema": "^7.0.15",
-        "@types/node": "25.2.3",
+        "@types/node": "25.3.0",
         "@vuepress/bundler-webpack": "2.0.0-rc.26",
         "@vuepress/client": "2.0.0-rc.26",
         "@vuepress/plugin-docsearch": "2.0.0-rc.123",
@@ -37,7 +37,7 @@
         "async-g-i-s": "1.5.5",
         "cross-env": "10.1.0",
         "easyimage": "3.1.1",
-        "glob": "13.0.3",
+        "glob": "13.0.6",
         "husky": "9.1.7",
         "image-size": "2.0.2",
         "prettier": "3.8.1",
