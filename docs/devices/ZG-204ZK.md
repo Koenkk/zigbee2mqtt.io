@@ -50,12 +50,6 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Illuminance (numeric)
-Measured illuminance.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
-
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
