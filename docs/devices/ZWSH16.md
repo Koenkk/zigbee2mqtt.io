@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | ZWSH16  |
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
-| Description | Smart Temperature and Humidity Detector |
-| Exposes | battery, temperature, humidity, temperature_unit, battery_state |
+| Description | Smart temperature and humidity detector |
+| Exposes | battery, temperature, humidity, temperature_unit |
 | Picture | ![AVATTO ZWSH16](https://www.zigbee2mqtt.io/images/devices/ZWSH16.png) |
 
 
@@ -68,10 +68,4 @@ Value can be found in the published state on the `temperature_unit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
 The possible values are: `celsius`, `fahrenheit`.
-
-### Battery state (enum)
-State of the battery.
-Value can be found in the published state on the `battery_state` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `low`, `medium`, `high`.
 

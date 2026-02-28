@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_water_valve  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Ultrasonic water meter valve |
-| Exposes | switch (state), water_consumed, month_consumption, daily_consumption, flow_rate, auto_clean, temperature, voltage |
+| Exposes | switch (state), water_consumed, reverse_water_consumed, month_consumption, daily_consumption, flow_rate, auto_clean, temperature, voltage, meter_id, faults, report_period |
 | Picture | ![Tuya TS0601_water_valve](https://www.zigbee2mqtt.io/images/devices/TS0601_water_valve.png) |
 
 
@@ -35,9 +35,21 @@ The pairing requires 19 steps, here's how to enter pairing mode: https://imgbox.
 
 * `water_consumed_calibration`: Calibrates the water_consumed value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+* `month_consumption_precision`: Number of digits after decimal point for month_consumption, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `month_consumption_calibration`: Calibrates the month_consumption value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `daily_consumption_precision`: Number of digits after decimal point for daily_consumption, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `daily_consumption_calibration`: Calibrates the daily_consumption value (absolute offset), takes into effect on next report of device. The value must be a number.
+
 * `flow_rate_precision`: Number of digits after decimal point for flow_rate, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `flow_rate_calibration`: Calibrates the flow_rate value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `reverse_water_consumed_precision`: Number of digits after decimal point for reverse_water_consumed, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `reverse_water_consumed_calibration`: Calibrates the reverse_water_consumed value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
@@ -58,6 +70,12 @@ It's not possible to read (`/get`) this value.
 ### Water consumed (numeric)
 Total water consumption.
 Value can be found in the published state on the `water_consumed` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `L`.
+
+### Reverse water consumed (numeric)
+Total reverse water consumption.
+Value can be found in the published state on the `reverse_water_consumed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `L`.
 
@@ -97,4 +115,21 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Meter id (text)
+Meter identification number.
+Value can be found in the published state on the `meter_id` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Faults (text)
+Active fault status.
+Value can be found in the published state on the `faults` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Report period (enum)
+Report period.
+Value can be found in the published state on the `report_period` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_period": NEW_VALUE}`.
+The possible values are: `1h`, `2h`, `3h`, `4h`, `6h`, `8h`, `12h`, `24h`.
 

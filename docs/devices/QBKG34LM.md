@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG34LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch T1 (with neutral, triple rocker) |
-| Exposes | switch (state), device_temperature, power_outage_count, power_outage_memory, operation_mode, led_disabled_night, flip_indicator_light, energy, voltage, current, power, action |
+| Exposes | switch (state), device_temperature, power_outage_count, power_outage_memory, operation_mode, led_disabled_night, flip_indicator_light, energy, voltage, current, action |
 | Picture | ![Aqara QBKG34LM](https://www.zigbee2mqtt.io/images/devices/QBKG34LM.png) |
 
 
@@ -48,10 +48,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
-
-* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -161,12 +157,6 @@ Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
-
-### Power (numeric)
-Instantaneous measured power.
-Value can be found in the published state on the `power` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `W`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

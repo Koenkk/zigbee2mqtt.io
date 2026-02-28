@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS2IRC  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart IR Control |
-| Exposes | battery |
+| Exposes |  |
 | Picture | ![Heiman HS2IRC](https://www.zigbee2mqtt.io/images/devices/HS2IRC.png) |
 
 
@@ -155,10 +155,5 @@ Request:
 
 ## Exposes
 
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
+
 

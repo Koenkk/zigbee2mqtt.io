@@ -163,7 +163,7 @@ Indicator status.
 Value can be found in the published state on the `indicator_status` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_status": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_status": NEW_VALUE}`.
-The possible values are: `Off`, `Relay`, `Invert`.
+The possible values are: `off`, `relay`, `invert`.
 
 ### Induction mode (enum)
 Induction mode.

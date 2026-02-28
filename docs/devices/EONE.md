@@ -131,12 +131,12 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `30`.
 The unit of this value is `day`.
 
-### Valve protection (binary)
+### Valve Protection (binary)
 Prevents valve blockage during long periods of inactivity..
 Value can be found in the published state on the `valve_protection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_protection": NEW_VALUE}`.
-If value equals `ON` valve protection is ON, if `OFF` OFF.
+If value equals `ON` valve Protection is ON, if `OFF` OFF.
 
 ### Warm floor (enum)
 Automatically warms the floor every 60 minutes..

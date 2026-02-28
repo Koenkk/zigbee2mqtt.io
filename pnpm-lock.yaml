@@ -97,8 +97,8 @@ importers:
         specifier: 5.105.2
         version: 5.105.2
       zigbee-herdsman-converters:
-        specifier: 25.120.0
-        version: 25.120.0
+        specifier: 26.12.0
+        version: 26.12.0
 
 packages:
 
@@ -3063,8 +3063,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  semver@7.7.3:
-    resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
+  semver@7.7.4:
+    resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -3583,12 +3583,12 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@25.120.0:
-    resolution: {integrity: sha512-xB2ZMZRvGZWMQlBY7zszLILJ8AOGO0NmRRICwcxLK4gtWATnyuol2G6BfD7nBEgz73XgcsrERFFNMM5mDYsQaw==}
+  zigbee-herdsman-converters@26.12.0:
+    resolution: {integrity: sha512-Cvla9M0+05FPuFyVb9Qzq6WWZqM7fq5Znu1OmQAdBZBfeIwnc750JKM9fTKjC4kquPIsbrekQ9sNwoJEet4YxQ==}
     engines: {node: '>=20.15.0'}
 
-  zigbee-herdsman@9.0.2:
-    resolution: {integrity: sha512-tIg/JycgyxrS8HTWR7+42NVeOXScRylISZM2p5eM4E4gv3sWv2YzoOJD4DjXBM6FSen4vZ/9NSLD48akn7mJKw==}
+  zigbee-herdsman@9.0.8:
+    resolution: {integrity: sha512-UsmTdrp/VeGs+rm81D1/XyTsHY59ZRCyhRdUicFZg0bdUrgTgO2trIJzWEaKl7qGIuTRIXXsQoxpaUp2CacURg==}
 
   zigbee-on-host@0.2.4:
     resolution: {integrity: sha512-NIG6CWp+Yfn7PjqEIRvenHqpwT1U7rSkyimnFOUIFpnmxQOJKrmcwWDfn6WjbU/YIYYWSQPlj+g13icu1xwlyg==}
@@ -6676,7 +6676,7 @@ snapshots:
 
   semver@7.7.2: {}
 
-  semver@7.7.3: {}
+  semver@7.7.4: {}
 
   send@0.19.0:
     dependencies:
@@ -7250,15 +7250,15 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  zigbee-herdsman-converters@25.120.0:
+  zigbee-herdsman-converters@26.12.0:
     dependencies:
       iconv-lite: 0.7.2
-      semver: 7.7.3
-      zigbee-herdsman: 9.0.2
+      semver: 7.7.4
+      zigbee-herdsman: 9.0.8
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-herdsman@9.0.2:
+  zigbee-herdsman@9.0.8:
     dependencies:
       '@date-fns/tz': 1.4.1
       '@serialport/bindings-cpp': 13.0.1

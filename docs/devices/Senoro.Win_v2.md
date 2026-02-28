@@ -39,28 +39,28 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `open`, `closed`, `tilted`.
 
 ### Alarm state (binary)
-Alarm was triggered..
+Alarm state.
 Value can be found in the published state on the `alarm_state` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_state": NEW_VALUE}`.
 If value equals `true` alarm state is ON, if `false` OFF.
 
 ### Setup mode (binary)
-Set mode status.
+Exit Setup Mode.
 Value can be found in the published state on the `setup_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setup_mode": NEW_VALUE}`.
 If value equals `true` setup mode is ON, if `false` OFF.
 
 ### Alarm siren (binary)
-Activate the siren when the alarm is triggered..
+Alarm siren.
 Value can be found in the published state on the `alarm_siren` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_siren": NEW_VALUE}`.
 If value equals `true` alarm siren is ON, if `false` OFF.
 
 ### Alarm siren duration (numeric)
-Duration of the alarm siren..
+Alarm siren duration.
 Value can be found in the published state on the `alarm_siren_duration` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_siren_duration": NEW_VALUE}`.
@@ -72,42 +72,42 @@ Value can be found in the published state on the `vibration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Vibration limit (numeric)
-Limit at which a vibration is reported..
+Vibration limit.
 Value can be found in the published state on the `vibration_limit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_limit": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### Vibration siren (binary)
-Activate the siren when vibrating..
+Vibration siren.
 Value can be found in the published state on the `vibration_siren` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_siren": NEW_VALUE}`.
 If value equals `true` vibration siren is ON, if `false` OFF.
 
 ### Vibration siren duration (numeric)
-Duration of the vibrating siren..
+Vibration siren duration.
 Value can be found in the published state on the `vibration_siren_duration` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_siren_duration": NEW_VALUE}`.
 The minimal value is `5` and the maximum value is `180`.
 
 ### Close signal (binary)
-Enable sound when closing the window..
+Close signal.
 Value can be found in the published state on the `close_signal` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_signal": NEW_VALUE}`.
 If value equals `true` close signal is ON, if `false` OFF.
 
 ### Transmission power (numeric)
-Transmission power 11-19. High value > battery consumption..
+Transmission power.
 Value can be found in the published state on the `transmission_power` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transmission_power": NEW_VALUE}`.
 The minimal value is `11` and the maximum value is `19`.
 
 ### Magnetic status (binary)
-Magnetic status..
+Magnetic status.
 Value can be found in the published state on the `magnetic_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` magnetic status is ON, if `false` OFF.

@@ -1,7 +1,7 @@
 ---
-title: "Excellux NTCHT-01 control via MQTT"
-description: "Integrate your Excellux NTCHT-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2026-01-31T13:20:01
+title: "Excellux ZG-105NTH control via MQTT"
+description: "Integrate your Excellux ZG-105NTH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-02-28T20:18:44
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Excellux NTCHT-01
+# Excellux ZG-105NTH
 
 |     |     |
 |-----|-----|
-| Model | NTCHT-01  |
+| Model | ZG-105NTH  |
 | Vendor  | [Excellux](/supported-devices/#v=Excellux)  |
-| Description | Probe Temperature and ht(humidity and temperature) Sensor |
+| Description | Temperature and humidity sensor with probe |
 | Exposes | probe_temperature_warning, temperature_warning, humidity_warning, battery, probe_temperature, temperature, humidity, sampling_interval, probe_temperature_calibration, probe_temperature_v0_set, probe_temperature_v1_set, temperature_calibration, temperature_v0_set, temperature_v1_set, humidity_calibration, humidity_v0_set, humidity_v1_set |
-| Picture | ![Excellux NTCHT-01](https://www.zigbee2mqtt.io/images/devices/NTCHT-01.png) |
+| Picture | ![Excellux ZG-105NTH](https://www.zigbee2mqtt.io/images/devices/ZG-105NTH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,28 +44,28 @@ pageClass: device-page
 ## Exposes
 
 ### Probe temperature warning (enum)
-Probe temperature sensor warning.low :temperature is lower than v0 and v1.high:temperature is higher than v0 and v1.
+Probe temperature sensor warning. Low: temperature is lower than v0 and v1. High: temperature is higher than v0 and v1.
 Value can be found in the published state on the `probe_temperature_warning` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `none`, `low`, `high`.
 
 ### Temperature warning (enum)
-Temperature warning.low :temperature is lower than v0 and v1.high:temperature is higher than v0 and v1.
+Temperature warning. Low: temperature is lower than v0 and v1. High: temperature is higher than v0 and v1.
 Value can be found in the published state on the `temperature_warning` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `none`, `low`, `high`.
 
 ### Humidity warning (enum)
-Humidity warning.low :humidity is lower than v0 and v1.high:humidity is higher than v0 and v1.
+Humidity warning. Low: humidity is lower than v0 and v1. High: humidity is higher than v0 and v1.
 Value can be found in the published state on the `humidity_warning` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `none`, `low`, `high`.
 
 ### Battery (numeric)
-Battery percentage.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `1` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Probe temperature (numeric)
@@ -88,12 +88,12 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Sampling interval (numeric)
-sampling interval.
+Sampling interval.
 Value can be found in the published state on the `sampling_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sampling_interval": NEW_VALUE}`.
 The minimal value is `5` and the maximum value is `1200`.
-The unit of this value is `S`.
+The unit of this value is `s`.
 
 ### Probe temperature calibration (numeric)
 Probe temperature sensor calibration.

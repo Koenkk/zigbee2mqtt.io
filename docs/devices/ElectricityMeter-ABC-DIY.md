@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ElectricityMeter-ABC-DIY  |
 | Vendor  | [Slacky-DIY](/supported-devices/#v=Slacky-DIY)  |
 | Description | Three phase Electricity Meter via optical port |
-| Exposes | device_temperature, power, voltage, current, energy, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, energy_tier_1, energy_tier_2, energy_tier_3, energy_tier_4, model_name, serial_number, date_release, battery_life, tamper, battery_low, device_address_preset, device_password_preset, device_measurement_preset, device_model_preset |
+| Exposes | device_temperature, power, voltage, current, energy, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, energy_tier_1, energy_tier_2, energy_tier_3, energy_tier_4, model_name, serial_number, date_release, battery_life, tamper, battery_low, device_address_preset, device_password_preset, device_measurement_preset, device_model_preset |
 | Picture | ![Slacky-DIY ElectricityMeter-ABC-DIY](https://www.zigbee2mqtt.io/images/devices/ElectricityMeter-ABC-DIY.png) |
 
 
@@ -67,14 +67,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `voltage_phase_c_calibration`: Calibrates the voltage_phase_c value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `voltage_phase_c_precision`: Number of digits after decimal point for voltage_phase_c, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
-
-* `current_phase_b_calibration`: Calibrates the current_phase_b value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `current_phase_b_precision`: Number of digits after decimal point for current_phase_b, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
-
-* `current_phase_c_calibration`: Calibrates the current_phase_c value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `current_phase_c_precision`: Number of digits after decimal point for current_phase_c, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -141,20 +133,6 @@ Value can be found in the published state on the `voltage_phase_c` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage_phase_c": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `V`.
-
-### Current phase B (numeric)
-Instantaneous measured electrical current on phase B.
-Value can be found in the published state on the `current_phase_b` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_phase_b": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `A`.
-
-### Current phase C (numeric)
-Instantaneous measured electrical current on phase C.
-Value can be found in the published state on the `current_phase_c` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_phase_c": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `A`.
 
 ### Energy tier 1 (numeric)
 Energy consumed at Tier 1.

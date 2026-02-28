@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-204ZK  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | 24Ghz human presence sensor |
-| Exposes | presence, illuminance, battery, fading_time, static_detection_distance, static_detection_sensitivity, motion_detection_sensitivity, indicator |
+| Exposes | presence, battery, fading_time, static_detection_distance, static_detection_sensitivity, motion_detection_sensitivity, indicator |
 | Picture | ![HOBEIAN ZG-204ZK](https://www.zigbee2mqtt.io/images/devices/ZG-204ZK.png) |
 
 
@@ -35,11 +35,6 @@ One of the suggestions is to remove residual solder-flux from the PCB and/or to 
 <!-- Notes END: Do not edit below this line -->
 
 
-
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

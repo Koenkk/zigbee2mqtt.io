@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | MSA201Z  |
 | Vendor  | [Merrytek](/supported-devices/#v=Merrytek)  |
-| Description | 24 GHz human presence sensor (TS0601, _TZE284_ajuasrmx) |
+| Description | 24 GHz human presence sensor |
 | Exposes | state, presence, current_status, illuminance, hold_delay_time, sensitivity, trigger_distance, forbidden_area, ai_self_learning, fast_setting, indicator, sensor_mode, single_mode, absence_circling_report, absence_circling_interval, find_device, enable_sensor, factory_reset, lux_mode, daylight_threshold, lux_report_mode, lux_timed_interval, lux_difference_threshold, lux_difference_value, interference_positions, home_environment |
 | Picture | ![Merrytek MSA201Z](https://www.zigbee2mqtt.io/images/devices/MSA201Z.png) |
 

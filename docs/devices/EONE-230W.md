@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EONE-230W  |
 | Vendor  | [ENGO](/supported-devices/#v=ENGO)  |
 | Description | Zigbee smart thermostat |
-| Exposes | state, climate (system_mode, current_heating_setpoint, local_temperature, local_temperature_calibration, running_state, preset), local_temperature, floor_temperature, humidity, backlight, sensor_error, child_lock, relay_mode, sensor_choose, holiday_temperature, holiday_days, frost_set, control_algorithm, valve_protection, comfort_warm_floor, temp_resolution, max_temperature, min_temperature, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday |
+| Exposes | state, climate (system_mode, current_heating_setpoint, local_temperature, local_temperature_calibration, running_state, preset), local_temperature, floor_temperature, humidity, backlight, sensor_error, child_lock, relay_mode, sensor_choose, holiday_temperature, holiday_days, frost_set, max_floor_temp_heating, min_floor_temp_heating, max_floor_temp_cooling, min_floor_temp_coolnig, control_algorithm, valve_protection, comfort_warm_floor, temp_resolution, max_temperature, min_temperature, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday |
 | Picture | ![ENGO EONE-230W](https://www.zigbee2mqtt.io/images/devices/EONE-230W.png) |
 
 
@@ -51,7 +51,7 @@ This climate device supports the following features: `system_mode`, `current_hea
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `45`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`, `cool`. Reading (`/get`) this attribute is not possible.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `manual`, `program`, `holiday`, `boost`, `away`, `frost`. Reading (`/get`) this attribute is not possible.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `manual`, `schedule`, `holiday`, `frost`. Reading (`/get`) this attribute is not possible.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-3.5` and the maximum value is `3.5` with a step size of `0.5`.
 
@@ -102,11 +102,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `NO`, `NC`, `OFF`.
 
 ### Sensor choose (enum)
-Sensor selection.
+Sensor selection S1/S2.
 Value can be found in the published state on the `sensor_choose` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_choose": NEW_VALUE}`.
-The possible values are: `internal`, `all`, `external`.
+The possible values are: `internal`, `floor_temp`, `external`, `external_on_off`.
 
 ### Holiday temperature (numeric)
 Holiday temperature.
@@ -132,19 +132,51 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `17`.
 The unit of this value is `°C`.
 
+### Max floor temp heating (numeric)
+Maximum floor temperature while heating (requires sensor mode floor_temp).
+Value can be found in the published state on the `max_floor_temp_heating` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_floor_temp_heating": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `45`.
+The unit of this value is `°C`.
+
+### Min floor temp heating (numeric)
+Minimum floor temperature while heating (requires sensor mode floor_temp).
+Value can be found in the published state on the `min_floor_temp_heating` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_floor_temp_heating": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `45`.
+The unit of this value is `°C`.
+
+### Max floor temp cooling (numeric)
+Maximum floor temperature while cooling (requires sensor mode floor_temp).
+Value can be found in the published state on the `max_floor_temp_cooling` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_floor_temp_cooling": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `45`.
+The unit of this value is `°C`.
+
+### Min floor temp coolnig (numeric)
+Minimum floor temperature while cooling (requires sensor mode floor_temp).
+Value can be found in the published state on the `min_floor_temp_coolnig` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_floor_temp_coolnig": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `45`.
+The unit of this value is `°C`.
+
 ### Control algorithm (enum)
 Control algorithm.
 Value can be found in the published state on the `control_algorithm` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_algorithm": NEW_VALUE}`.
-The possible values are: `TPI_UFH`, `TPI_RAD`, `TPI_ELE`, `HIS_02`, `HIS_04`, `HIS_06`.
+The possible values are: `TPI_UFH`, `TPI_RAD`, `TPI_ELE`, `HIS_02`, `HIS_04`, `HIS_06`, `HIS_08`, `HIS_10`, `HIS_20`, `HIS_30`, `HIS_40`.
 
-### Valve protection (binary)
-Valve protection ON/OFF.
+### Valve Protection (enum)
+Prevents valve blockage during long periods of inactivity.
 Value can be found in the published state on the `valve_protection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_protection": NEW_VALUE}`.
-If value equals `ON` valve protection is ON, if `OFF` OFF.
+The possible values are: `off`, `on`, `anti_stop`.
 
 ### Comfort warm floor (enum)
 Comfort warm floor setting.
