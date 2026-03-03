@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | 1 gang switch module |
 | Exposes | switch (state), countdown, power_outage_memory, switch_type, indicator_mode |
 | Picture | ![Tuya TS0001_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_module.png) |
-| White-label | OXT SWTZ21, Moes ZM-104-M |
+| White-label | OXT SWTZ21 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

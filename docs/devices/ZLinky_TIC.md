@@ -47,7 +47,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. Default: 2. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `measurement_poll_chunk`: Number of attributes requested from the ZLinky in each poll to reduce Zigbee network load. Requesting too many at once may exceed the device's limit and cause read errors. Requires Z2M restart. Default: 4. The value must be a number with a minimum value of `1`
+* `measurement_poll_chunk`: Number of attributes requested from the ZLinky in each poll to reduce Zigbee network load. Requesting too many at once may exceed the device's limit and cause read errors. Requires Z2M restart. Default: 2. The value must be a number with a minimum value of `1`
 
 * `tic_command_whitelist`: Comma-separated list of TIC commands to expose. Requires Z2M restart. Default: all. The value must be textual.
 

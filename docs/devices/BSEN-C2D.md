@@ -53,8 +53,9 @@ Final string to paste (example): `RB01SG0D8310182648008000000000000000000018FC26
 
 1. Go to Settings -> Tools.
 2. Click Add install code.
-3. Paste the long string generated above and click **OK**.
-4. Only after adding the code, put the sensor into pairing mode (press and hold the button for approx. 5 seconds until the LED flashes orange). The device should now pair automatically.
+3. Ensure permit joining is active.
+4. Paste the long string generated above and click **OK**.
+5. Only after adding the code, put the sensor into pairing mode (press and hold the button for approx. 5 seconds until the LED flashes orange). The device should now pair automatically.
 <!-- Notes END: Do not edit below this line -->
 
 
