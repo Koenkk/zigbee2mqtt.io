@@ -71,3 +71,29 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
+### Time synchronization
+
+This device does not sync time using the standard Zigbee protocol, but instead requires the seconds since midnight of the current day. To fix the asynchronous time, you can regularly publish this value to the `genTime` cluster. 
+
+Using Home Assistant, you can create an automation to sync the time every hour:
+
+```yaml
+alias: "Heiman HS3AQ Time Sync"
+mode: single
+trigger:
+  - platform: time_pattern
+    hours: "/1"
+action:
+  - action: mqtt.publish
+    data:
+      topic: "zigbee2mqtt/FRIENDLY_NAME/1/set"
+      payload: >-
+        {
+          "write": {
+            "cluster": "genTime",
+            "payload": {
+              "time": {{ (now().hour * 3600) + (now().minute * 60) + now().second }}
+            }
+          }
+        }
+(Note: Replace FRIENDLY_NAME with your device's friendly name).
