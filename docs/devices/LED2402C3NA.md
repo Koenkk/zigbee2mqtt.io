@@ -24,6 +24,13 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+### Information
+
+[fcc]: https://apps.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=0RhiFi1AgPpUH1D8gXZJww%3D%3D&fcc_id=FHO-LED2402C3NA
+- [FCC - emissisons and teardown][fcc]
+
 
 <!-- Notes END: Do not edit below this line -->
 
