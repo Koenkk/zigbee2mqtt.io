@@ -33,8 +33,7 @@ pageClass: device-page
 
 ### Information
 
-[Shelly API docs]: https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button22_ZB
-See all information on [Shelly API docs] (pairing, modes, bind actions, find&bind).
+See all information on [Shelly API docs](https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button22_ZB) (pairing, modes, bind actions, find&bind).
 <!-- Notes END: Do not edit below this line -->
 
 

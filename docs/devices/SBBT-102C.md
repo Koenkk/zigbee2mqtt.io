@@ -31,8 +31,7 @@ pageClass: device-page
 - [SBBT-104CUS](./SBBT-104CUS.md) - Shelly BLU RC Button 4 ZB
 
 ### Information
-[Shelly API docs]: https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button1_ZB
-See all information on [Shelly API docs] (pairing, bind actions, find&bind).
+See all information on [Shelly API docs](https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button1_ZB) (pairing, bind actions, find&bind).
 <!-- Notes END: Do not edit below this line -->
 
 
