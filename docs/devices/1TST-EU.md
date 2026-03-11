@@ -94,9 +94,9 @@ Get or set whether the local temperature, outdoor temperature and occupancy are 
 
 Bit Number | Description
 -----------|-----------------------------------------
-0          | 0 – local temperature sensed internally <br> 1 – local temperature sensed remotely
-1          | 0 – outdoor temperature sensed internally <br> 1 – outdoor temperature sensed remotely
-2          | 0 – occupancy sensed internally <br> 1 – occupancy sensed remotely
+0          | 0 – local temperature sensed internally / 1 – local temperature sensed remotely
+1          | 0 – outdoor temperature sensed internally / 1 – outdoor temperature sensed remotely
+2          | 0 – occupancy sensed internally / 1 – occupancy sensed remotely
 
 Get or set control sequence of operation
 ```js
@@ -168,9 +168,9 @@ Get or set weekly schedule
 
 Attribute Value | Description
 ----------------|---------------------------------------------------------------------------
-0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. <br> 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. <br> Note: It does not clear or delete previous weekly schedule programming configurations.
-1               | 0 - Auto/recovery mode set to OFF <br> 1 – Auto/recovery mode set to ON
-2               | 0 – Economy/EnergyStar mode set to OFF <br> 1 – Economy/EnergyStar mode set to ON
+0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. / 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. _Note: It does not clear or delete previous weekly schedule programming configurations._
+1               | 0 - Auto/recovery mode set to OFF / 1 – Auto/recovery mode set to ON
+2               | 0 – Economy/EnergyStar mode set to OFF / 1 – Economy/EnergyStar mode set to ON
 
 Clear weekly schedule
 ```json
