@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_wall_outlet  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | In-wall outlet |
-| Exposes | switch (state), power_on_behavior |
+| Exposes | switch (state), power_on_behavior, child_lock |
 | Picture | ![Tuya TS011F_wall_outlet](https://www.zigbee2mqtt.io/images/devices/TS011F_wall_outlet.png) |
 | White-label | Teekar SWP86-01OG, BSEED Zigbee Socket |
 
@@ -55,4 +55,11 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
+
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 

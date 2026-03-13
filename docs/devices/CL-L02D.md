@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CL-L02D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Ceiling light T1M |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy, color_hs), power_on_behavior, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy), power_on_behavior, identify, dimming_range_minimum, dimming_range_maximum, on_off_duration, off_on_duration, effect, effect_speed, effect_colors, segment_colors |
 | Picture | ![Aqara CL-L02D](https://www.zigbee2mqtt.io/images/devices/CL-L02D.png) |
 
 
@@ -42,6 +42,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -103,7 +105,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Light (rgb endpoint)
-This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`, `color_hs`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_rgb": "ON"}`, `{"state_rgb": "OFF"}` or `{"state_rgb": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_rgb": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_rgb": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_rgb": ""}`.
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_rgb": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_rgb": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
@@ -111,10 +113,6 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
   - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
   - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
-- `color_hs`: To control the hue/saturation (color) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_rgb": {"hue": HUE, "saturation": SATURATION}}` (e.g. `{"color":{"hue":360,"saturation":100}}`). To read the hue/saturation send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_rgb":{"hue":"","saturation":""}}`. Alternatively it is possible to set the hue/saturation via:
-  - HSB space (hue, saturation, brightness): `{"color": {"h": H, "s": S, "b": B}}` e.g. `{"color":{"h":360,"s":100,"b":100}}` or `{"color": {"hsb": "H,S,B"}}` e.g. `{"color":{"hsb":"360,100,100"}}`
-  - HSV space (hue, saturation, value):`{"color": {"h": H, "s": S, "v": V}}` e.g. `{"color":{"h":360,"s":100,"v":100}}` or `{"color": {"hsv": "H,S,V"}}` e.g. `{"color":{"hsv":"360,100,100"}}`
-  - HSL space (hue, saturation, lightness)`{"color": {"h": H, "s": S, "l": L}}` e.g. `{"color":{"h":360,"s":100,"l":100}}` or `{"color": {"hsl": "H,S,L"}}` e.g. `{"color":{"hsl":"360,100,100"}}`
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -150,10 +148,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "color_temp_move": "down", // Move to cooler color temperature at default rate
   "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints
   "color_temp_step": 99, // Increase color temperature by 99
-  "hue_move": 40, // Starts moving hue up at 40 units per second, will endlessly loop (allowed value range: -255 till 255)
-  "hue_step": -90, // Decrease hue by 90 (allowed value range: -255 till 255)
-  "saturation_move": -55, // Starts moving saturation down at -55 units per second (allowed value range: -255 till 255)
-  "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
 }
 ````
 
@@ -163,6 +157,13 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `on`, `previous`, `off`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Dimming range minimum (numeric)
 Minimum allowed dimming value.
@@ -180,6 +181,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `2` and the maximum value is `100`.
 The unit of this value is `%`.
 
+### On off duration (numeric)
+Duration for light to gradually dim when turning off.
+Value can be found in the published state on the `on_off_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"on_off_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_off_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `s`.
+
 ### Off on duration (numeric)
 Duration for light to gradually brighten when turning on.
 Value can be found in the published state on the `off_on_duration` property.
@@ -188,11 +197,31 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
-### On off duration (numeric)
-Duration for light to gradually dim when turning off.
-Value can be found in the published state on the `on_off_duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"on_off_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_off_duration": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `s`.
+### Effect (enum)
+RGB dynamic effect type.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+The possible values are: `flow1`, `flow2`, `fading`, `hopping`, `breathing`, `rolling`.
+
+### Effect speed (numeric)
+RGB dynamic effect speed (1-100%).
+Value can be found in the published state on the `effect_speed` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"effect_speed": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_speed": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Effect colors (list)
+Array of RGB color objects for dynamic effects (1-8 colors)..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_colors": [{"r": VALUE, "g": VALUE, "b": VALUE}]}`
+- `r` (numeric): Red (0-255) max value is 255
+- `g` (numeric): Green (0-255) max value is 255
+- `b` (numeric): Blue (0-255) max value is 255
+
+### Segment colors (list)
+Set individual segment colors..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"segment_colors": [{"segment": VALUE, "color": VALUE}]}`
+- `segment` (numeric): Segment number 
+- `color` (composite): RGB color object 
 
