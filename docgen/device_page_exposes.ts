@@ -319,9 +319,14 @@ function getExposeDocs(expose, definition) {
         for (const f of expose.features.filter((e) =>
             ['occupied_heating_setpoint', 'occupied_cooling_setpoint', 'current_heating_setpoint', 'pi_heating_demand'].includes(e.name),
         )) {
-            lines.push(
-                `- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`. ${readGet(f)}`,
-            );
+            let line = `- \`${f.name}\`: ${f.description}.`;
+            if (f.access & access.SET) {
+                line += ` To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`.`;
+            } else {
+                line += ` Writing (\`/set\`) this attribute is not possible.`;
+            }
+            line += ' ' + readGet(f);
+            lines.push(line);
         }
 
         const localTemperature = expose.features.find((e) => e.name === 'local_temperature');
@@ -330,9 +335,14 @@ function getExposeDocs(expose, definition) {
         }
 
         for (const f of expose.features.filter((e) => ['system_mode', 'preset', 'mode'].includes(e.name))) {
-            lines.push(
-                `- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}. ${readGet(f)}`,
-            );
+            let line = `- \`${f.name}\`: ${f.description}.`;
+            if (f.access & access.SET) {
+                line += ` To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}.`;
+            } else {
+                line += ` Writing (\`/set\`) this attribute is not possible.`;
+            }
+            line += ' ' + readGet(f);
+            lines.push(line);
         }
 
         const runningState = expose.features.find((e) => e.name === 'running_state');
