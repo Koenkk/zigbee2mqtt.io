@@ -51,11 +51,6 @@ Most of the times this happens because of the following reasons:
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
-### Sensitivity
-The sensitivity can be changed by publishing to `zigbee2mqtt/FRIENDLY_NAME/set/sensitivity` with a number between 1 and 21, where 1 is the highest sensitivity and 21 the lowest.
-
-After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2MQTT publishing the new sensitivity to MQTT.
-
 
 ### Calibration
 In order to improve the factory calibration or lack thereof, you can get a better result with a 2 step offset calibration:
