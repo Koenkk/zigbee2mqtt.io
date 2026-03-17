@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIN-4-2-20_PRO  |
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Lighting relay switch |
-| Exposes | switch (state), power_on_behavior, switch_type |
+| Exposes | switch (state), power_on_behavior |
 | Picture | ![NodOn SIN-4-2-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-2-20_PRO.png) |
 
 
@@ -75,18 +75,4 @@ Value can be found in the published state on the `power_on_behavior_l2` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Switch type (enum, l1 endpoint)
-Select the switch type wire to the device. Available from version > V3.4.0.
-Value can be found in the published state on the `switch_type_l1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1": NEW_VALUE}`.
-The possible values are: `bistable`, `monostable`, `auto_detect`.
-
-### Switch type (enum, l2 endpoint)
-Select the switch type wire to the device. Available from version > V3.4.0.
-Value can be found in the published state on the `switch_type_l2` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l2": NEW_VALUE}`.
-The possible values are: `bistable`, `monostable`, `auto_detect`.
 

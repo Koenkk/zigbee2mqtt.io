@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1RC-EM control via MQTT"
-description: "Integrate your HEIMAN HS1RC-EM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1RC-EM control via MQTT"
+description: "Integrate your Heiman HS1RC-EM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-12-01T19:02:25Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1RC-EM
+# Heiman HS1RC-EM
 
 |     |     |
 |-----|-----|
 | Model | HS1RC-EM  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart remote controller |
 | Exposes | battery, action |
-| Picture | ![HEIMAN HS1RC-EM](https://www.zigbee2mqtt.io/images/devices/HS1RC-EM.png) |
+| Picture | ![Heiman HS1RC-EM](https://www.zigbee2mqtt.io/images/devices/HS1RC-EM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

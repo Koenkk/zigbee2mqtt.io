@@ -22,7 +22,7 @@ to any other radio transmitting devices (e.g. a Wi-Fi router) or an SSD.
 
 A **USB extension cable** of 50 cm is already enough to reduce the interference. Preferably get one with shielding as this may give better results ([source](https://www.reddit.com/r/homeassistant/comments/10ebkis/psareminder_about_zigbee_interference/)).
 
-**Do not underestimate this!** Placing your adapter close to an USB port can kill the radio signal entirely as demonstrated in [this article](https://www.unit3compliance.co.uk/2-4ghz-intra-system-or-self-platform-interference-demonstration/).
+**Do not underestimate this!** Placing your adapter close to an USB or HDMI port can kill the radio signal entirely as demonstrated in [this article](https://www.unit3compliance.co.uk/2-4ghz-intra-system-or-self-platform-interference-demonstration/).
 
 Additionally, it may help to plug the adapter to a USB 2 instead of USB 3 port.
 

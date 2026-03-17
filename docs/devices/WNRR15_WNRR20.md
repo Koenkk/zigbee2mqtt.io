@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WNRR15/WNRR20  |
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Outlet with power consumption monitoring |
-| Exposes | switch (state), action, power |
+| Exposes | switch (state), power, action |
 | Picture | ![Legrand WNRR15/WNRR20](https://www.zigbee2mqtt.io/images/devices/WNRR15-WNRR20.png) |
 
 
@@ -37,7 +37,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `identity_effect`: Defines the identification effect to simplify the device identification. Example:
 ```yaml
@@ -62,15 +62,15 @@ Additionally an `off_wait_time` property can be added to the payload to specify 
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `identify`.
-
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `identify`.
 

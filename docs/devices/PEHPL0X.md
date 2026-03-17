@@ -73,7 +73,7 @@ The unit of this value is `W`.
 Consumed energy.
 Value can be found in the published state on the `consumed_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `W*h`.
+The unit of this value is `Wh`.
 
 ### Alarm voltage min (binary)
 Indicates if the alarm is triggered on the voltage drop below the limit, allows to reset alarms.

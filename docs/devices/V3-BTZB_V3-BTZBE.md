@@ -27,7 +27,7 @@ pageClass: device-page
 
 
 ### Pairing
-If pairing failed, try the followings:
+If pairing failed, try the following:
 - Pairing it closer to the coordinator
 - Connecting the CC2531 via an USB extension cable (to avoid interference)
 - Replacing the batteries of the danalock.

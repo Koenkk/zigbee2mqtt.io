@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PA-44Z  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Photoelectric smoke detector |
-| Exposes | smoke, battery, silence, self_test, smoke_concentration, device_fault |
+| Exposes | smoke, battery, silence, test, smoke_concentration, device_fault |
 | Picture | ![Tuya PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.png) |
 
 
@@ -54,12 +54,11 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
 If value equals `true` silence is ON, if `false` OFF.
 
-### Self test (binary)
-Indicates whether the device is being self-tested.
-Value can be found in the published state on the `self_test` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_test": NEW_VALUE}`.
-If value equals `true` self test is ON, if `false` OFF.
+### Test (binary)
+Indicates whether the device is being tested.
+Value can be found in the published state on the `test` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` test is ON, if `false` OFF.
 
 ### Smoke concentration (numeric)
 Parts per million of smoke detected.

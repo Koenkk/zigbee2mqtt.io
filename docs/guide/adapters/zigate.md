@@ -1,6 +1,11 @@
 # ZiGate adapters
 
 ::: warning ATTENTION
+The implementation of this adapter is **not maintained** anymore.
+Consider buying one of the recommended adapters instead.
+:::
+
+::: warning ATTENTION
 
 Support for this adapter is **experimental**, not recommended yet for production setups
 

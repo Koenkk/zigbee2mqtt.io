@@ -2,7 +2,7 @@
 sidebarDepth: 1
 ---
 
-# Device-Availability
+# Device Availability
 
 The availability feature checks whether your devices are online. The availability state of a device is published
 to `zigbee2mqtt/[FRIENDLY_NAME]/availability` with payload `{"state":"online"}` or `{"state":"offline"}` (this message is a retained MQTT message).
@@ -14,15 +14,17 @@ availability:
     enabled: true
 ```
 
-The availability feature works differently for active and passive devices.
+The availability feature works differently for active and passive devices, since passive devices cannot be pinged.
 
-- Active devices (routers or mains powered end devices): by default they have to check-in every 10 minutes. If they
-  don't, they will be pinged, if that fails the device will be marked as `offline`.
-- Passive devices (everything that is not an active device, mostly battery powered devices): these devices need to
-  check-in every 25 hours, they cannot be pinged so if they don't they will be marked as `offline`.
+- Active devices (_non battery-powered_): by default they have to check-in\*\* every 10 minutes.
+  If they don't, they will be pinged, if that fails the device will be marked as `offline`.
+- Passive devices (_battery-powered_): by default they have to check-in\*\* every 25 hours.
+  If they don't they will be marked as `offline`.
 
 Note that this timeout is persisted between Zigbee2MQTT restarts. So if you for example stop Zigbee2MQTT for longer than 10
-minutes, all your active devices will be marked as `offline` initially.
+minutes, all your active devices will be marked as `offline` initially until they check-in\*\* again.
+
+\*\* A check-in is any kind of Zigbee message from the device that reaches Zigbee2MQTT (even internal updates that are not displayed/reported).
 
 ## Advanced configuration
 
@@ -31,12 +33,18 @@ minutes, all your active devices will be marked as `offline` initially.
 availability:
     enabled: true
     active:
-        # Time after which an active device will be marked as offline in
-        # minutes (default = 10 minutes)
+        # Time after which an active device will be marked as offline in minutes (default: 10 minutes)
         timeout: 10
+        # Maximum jitter (in msec) allowed on timeout to avoid availability pings trying to trigger around the same time (default: 30000, min: 1000)
+        max_jitter: 30000
+        # Enable timeout backoff on failed availability pings (default: true)
+        # Pattern used: x1.5, x3, x6, x12... (with default timeout of 10min: 10, 15, 30, 60, 120...)
+        backoff: true
+        # Pause availability pings when backoff reaches over this limit until a new Zigbee message is received from the device. (default: 0, min: 0)
+        # A value of zero disables pausing, else see `backoff` pattern above.
+        pause_on_backoff_gt: 0
     passive:
-        # Time after which a passive device will be marked as offline in
-        # minutes (default = 1500 minutes aka 25 hours)
+        # Time after which a passive device will be marked as offline in minutes (default: 1500 minutes aka 25 hours)
         timeout: 1500
 
 devices:
@@ -49,6 +57,7 @@ devices:
         # Change availability timeout to 3 minutes for this device only
         availability:
             timeout: 3
+            # active devices also can specify `max_jitter`, `backoff`, `pause_on_backoff_gt` (see above)
 ```
 
 If you want to enable the availability feature for only certain devices, don't add `availability: enabled: true` in

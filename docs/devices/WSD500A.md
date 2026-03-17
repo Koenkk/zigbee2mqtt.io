@@ -31,6 +31,8 @@ Press button for 5 seconds.
 
 ### Battery
 If battery value is not showing in Zigbee2MQTT briefly pressing reset button AFTER device is fully paired usually resolves the issue.
+
+As well, these devices may not report low batteries and start to report incorrect values. Try replacing the batteries before using the calibration options.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -40,11 +42,11 @@ If battery value is not showing in Zigbee2MQTT briefly pressing reset button AFT
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes

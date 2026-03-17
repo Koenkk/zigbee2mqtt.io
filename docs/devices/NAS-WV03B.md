@@ -1,6 +1,6 @@
 ---
-title: "Neo NAS-WV03B control via MQTT"
-description: "Integrate your Neo NAS-WV03B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "NEO NAS-WV03B control via MQTT"
+description: "Integrate your NEO NAS-WV03B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-06-30T19:12:33
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Neo NAS-WV03B
+# NEO NAS-WV03B
 
 |     |     |
 |-----|-----|
 | Model | NAS-WV03B  |
-| Vendor  | [Neo](/supported-devices/#v=Neo)  |
+| Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Smart sprinkler timer |
 | Exposes | switch (state), status, countdown, countdown_left, water_current, battery_percentage, water_total, fault, weather_delay, normal_timer, switch_enabled, smart_irrigation, total_flow_reset_switch, quantitative_watering, flow_switch, child_lock, surplus_flow, single_watering_duration, single_watering_amount |
-| Picture | ![Neo NAS-WV03B](https://www.zigbee2mqtt.io/images/devices/NAS-WV03B.png) |
+| Picture | ![NEO NAS-WV03B](https://www.zigbee2mqtt.io/images/devices/NAS-WV03B.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -33,6 +33,7 @@ export const sidebar: SidebarOptions = {
                 '/guide/configuration/homeassistant.md',
                 '/guide/configuration/more-config-options.md',
                 '/guide/configuration/configuration-update.md',
+                '/guide/configuration/all-settings.md',
             ],
         },
         {
@@ -48,6 +49,7 @@ export const sidebar: SidebarOptions = {
                 '/guide/usage/ota_updates.md',
                 '/guide/usage/mqtt_topics_and_messages.md',
                 '/guide/usage/exposes.md',
+                '/guide/usage/health.md',
             ],
         },
         {

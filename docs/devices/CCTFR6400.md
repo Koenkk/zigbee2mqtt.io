@@ -25,6 +25,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing
+Pair the device to Zigbee2MQTT by resetting it:
+1. Remove the batteries and re-insert them.
+2. When the “Wiser” startup screen appears, press the + and - buttons at the same time for 20 seconds until the unit restarts.
 
 ### Device info
 This device is a
@@ -44,7 +48,7 @@ It requires a Z-Stack controller (Firmware version > TBD). It is currently not w
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes

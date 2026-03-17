@@ -279,7 +279,7 @@ Debug config:
 8. Start the flashing firmware (it takes a long time, about 2-3 hours):
 
 ```
-C:\Projects\ZigBee>python cc_write_flash.py -e -p COM9 --in=CC2531ZNP-Pro-Secure_LinkKeyJoin_mod.hex
+C:\Projects\Zigbee>python cc_write_flash.py -e -p COM9 --in=CC2531ZNP-Pro-Secure_LinkKeyJoin_mod.hex
 ```
 
 ::: details Command output

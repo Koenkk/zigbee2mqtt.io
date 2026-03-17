@@ -13,7 +13,7 @@
       q-tooltip(self="center start") Added at {{ new Date(device.addedAt).toLocaleString() }}
     router-link.device-img(
       :to="link"
-      :style="{ backgroundImage: 'url(' + device.image + ')' }"
+      :style="{ backgroundImage: `url('${encodeURI(device.image)}')` }"
     )
   .desc
     .model {{ device.model }}

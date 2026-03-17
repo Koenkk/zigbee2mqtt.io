@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_PST_POW_V2_LR  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Water, gas smart pressure monitor with two types of power supply V2 |
-| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, mains_voltage, battery, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
+| Exposes | pressure, bar, psi, temperature, pressure_offset, temperature_offset, mains_voltage, battery, battery_low, uptime, reading_interval, sensor_type, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
 | Picture | ![EFEKTA EFEKTA_PST_POW_V2_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_POW_V2_LR.png) |
 
 
@@ -34,11 +34,11 @@ pageClass: device-page
 
 * `pressure_calibration`: Calibrates the pressure value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -72,16 +72,16 @@ Adjust first pressure sensor.
 Value can be found in the published state on the `pressure_offset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": NEW_VALUE}`.
-The minimal value is `-100` and the maximum value is `100`.
-The unit of this value is `kPa`.
+The minimal value is `-1000` and the maximum value is `1000`.
+The unit of this value is `hPa`.
 
-### Raw temperature calibration (numeric)
-Adjust first temperature sensor.
-Value can be found in the published state on the `raw_temperature_calibration` property.
+### Temperature offset (numeric)
+Adjust temperature sensor.
+Value can be found in the published state on the `temperature_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_calibration": NEW_VALUE}`.
-The minimal value is `-8192` and the maximum value is `8192`.
-The unit of this value is `raw unit`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+The minimal value is `-25` and the maximum value is `25`.
+The unit of this value is `°C`.
 
 ### Mains voltage (numeric)
 Mains voltage.
@@ -115,8 +115,15 @@ Setting the sensor reading interval in seconds, by default 10 seconds.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
-The minimal value is `10` and the maximum value is `360`.
+The minimal value is `3` and the maximum value is `360`.
 The unit of this value is `sec`.
+
+### Sensor type (enum)
+Set sensor type.
+Value can be found in the published state on the `sensor_type` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type": NEW_VALUE}`.
+The possible values are: `0-1bar`, `0-5bar`, `0-10bar`.
 
 ### Tx radio power (enum)
 Set TX Radio Power, dbm.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_Smart_AQ_Box_R3  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | EFEKTA Smart Air Quality Box, can control the relay, binding on some other devices |
-| Exposes | pm1, pm25, pm4, pm10, pm_size, aqi_25_index, co2, voc_index, pressure, temperature, humidity, reading_delay, alarm, light_indicator, light_indicator_level, temperature_offset, humidity_offset, auto_clean_interval, manual_clean, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2, enable_pm25, high_pm25, low_pm25, enable_co2_gas, high_co2_gas, low_co2_gas, enable_voc, high_voc, low_voc |
+| Exposes | co2, pm1, pm25, pm4, pm10, pm_size, aqi_25_index, voc_index, pressure, temperature, humidity, reading_delay, alarm, light_indicator, light_indicator_level, temperature_offset, humidity_offset, auto_clean_interval, manual_clean, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2, enable_pm25, high_pm25, low_pm25, enable_co2_gas, high_co2_gas, low_co2_gas, enable_voc, high_voc, low_voc |
 | Picture | ![EFEKTA EFEKTA_Smart_AQ_Box_R3](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Smart_AQ_Box_R3.png) |
 
 
@@ -32,24 +32,30 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `pm25_calibration`: Calibrates the pm25 value (absolute offset), takes into effect on next report of device. The value must be a number.
-
 * `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `pm25_calibration`: Calibrates the pm25 value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `pressure_calibration`: Calibrates the pressure value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
+
+### CO2 (numeric)
+Measured value.
+Value can be found in the published state on the `co2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `ppm`.
 
 ### Pm1 (numeric)
 Measured PM1.0 (particulate matter) concentration.
@@ -86,12 +92,6 @@ PM 2.5 INDEX.
 Value can be found in the published state on the `aqi_25_index` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `PM2.5 Index`.
-
-### CO2 (numeric)
-Measured value.
-Value can be found in the published state on the `co2` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
 
 ### Voc index (numeric)
 VOC index.

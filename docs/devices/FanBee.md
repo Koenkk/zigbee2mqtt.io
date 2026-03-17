@@ -23,8 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+The design is open-source, docs for building and using this can be found at https://github.com/lorenz/fanbee.
 <!-- Notes END: Do not edit below this line -->
 
 

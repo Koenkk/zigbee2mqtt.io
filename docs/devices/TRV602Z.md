@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TRV602Z  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Thermostatic radiator valve. |
-| Exposes | battery, child_lock, max_temperature, min_temperature, position, switch (state), window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, running_state, system_mode), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, comfort_temperature, eco_temperature, holiday_temperature, display_brightness, screen_orientation, hysteresis, motor_thrust |
+| Exposes | battery, child_lock, max_temperature, min_temperature, position, switch (state), boost_timeset_countdown, frost_protection, window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, running_state, system_mode), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, comfort_temperature, eco_temperature, holiday_temperature, display_brightness, screen_orientation, hysteresis, motor_thrust |
 | Picture | ![Tuya TRV602Z](https://www.zigbee2mqtt.io/images/devices/TRV602Z.png) |
 
 
@@ -72,6 +72,21 @@ The unit of this value is `%`.
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
+
+### Boost timeset countdown (numeric)
+Setting minimum 0 - maximum 120 minutes boost time. The boost function is activated. The remaining time for the function will be counted down in minutes ( 120 to 0 )..
+Value can be found in the published state on the `boost_timeset_countdown` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_timeset_countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `120`.
+The unit of this value is `m`.
+
+### Frost protection (binary)
+Antifreeze function.
+Value can be found in the published state on the `frost_protection` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection": NEW_VALUE}`.
+If value equals `ON` frost protection is ON, if `OFF` OFF.
 
 ### Window (binary)
 Window status closed or open .

@@ -23,8 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Pairing
+Turn on the light (press the rotary knob briefly). Press the rotary knob twice briefly. Now hold down the rotary knob until the light starts flashing.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -51,18 +51,4 @@ Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
-
-### Light type (enum)
-Type of light attached to the device.
-Value can be found in the published state on the `light_type` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type": NEW_VALUE}`.
-The possible values are: `led`, `incandescent`, `halogen`.
-
-### Backlight mode (enum)
-Mode of the backlight.
-Value can be found in the published state on the `backlight_mode` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-The possible values are: `off`, `normal`, `inverted`.
 

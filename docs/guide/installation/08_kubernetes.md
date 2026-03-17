@@ -36,7 +36,7 @@ Load the charts from the repository:
 helm repo update
 ```
 
-Install the helm chart using the values of your choice (`myvalues.yaml` in the snipet below):
+Install the helm chart using the values of your choice (`myvalues.yaml` in the snippet below):
 
 ```bash
 helm install -f myvalues.yaml zigbee2mqtt zigbee2mqtt/zigbee2mqtt
@@ -56,7 +56,7 @@ metadata:
     namespace: flux-system
 spec:
     interval: 10m
-    url: https://charts.zigbee2mqtt.io/index
+    url: https://charts.zigbee2mqtt.io
 ```
 
 Then create a Helm release:

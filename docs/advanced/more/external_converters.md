@@ -8,37 +8,39 @@ Zigbee2MQTT uses [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-h
 
 External converters provide a way to test support for new devices, they work identically to internal converters.
 
-External converters are stored in `data/external_converters` folder and have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
+External converters are stored in the `external_converters` folder (at the same level in the file system as the Zigbee2MQTT configuration.yaml file). They have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
 
 :::tip TIP
 Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just delete the external converter.
 :::
 
+:::tip TIP
+The easiest way to develop is by using the [external converter development environment](https://github.com/Nerivec/z2m-external-converter-dev?tab=readme-ov-file#how-to-use)
+:::
+
 Example:
 
-File: `data/external_converters/my-first-converter.js`
+File: `external_converters/my-first-converter.mjs`
 
 ```js
-const {temperature, humidity, battery} = require('zigbee-herdsman-converters/lib/modernExtend');
+import {temperature, humidity, battery} from 'zigbee-herdsman-converters/lib/modernExtend';
 
-const definition = {
+export default {
     zigbeeModel: ['lumi.sens'],
     model: 'WSDCGQ01LM',
     vendor: 'Xiaomi',
     description: 'MiJia temperature & humidity sensor',
     extend: [temperature(), humidity(), battery()],
 };
-
-module.exports = definition;
 ```
 
 ### More examples
 
-- [Sensor using modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor_me.js) (same as above)
-- [Sensor using non modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor.js)
-- [Bulb (light)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/light.js)
-- [Plug (switch)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/switch.js)
-- [Advanced example](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js)
+- [Sensor using modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor_me.mjs) (same as above)
+- [Sensor using non modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor.mjs)
+- [Bulb (light)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/light.mjs)
+- [Plug (switch)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/switch.mjs)
+- [Advanced example](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.mjs)
 - Definitions of already supported devices can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices). It may help to look at devices from the same vendor or type.
 
 ### Using modern extends
@@ -50,25 +52,38 @@ The entire API can be found [here](https://github.com/Koenkk/zigbee-herdsman-con
 The most common API endpoints are accessible from the following imports:
 
 ```js
-const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
-const tz = require('zigbee-herdsman-converters/converters/toZigbee');
-const exposes = require('zigbee-herdsman-converters/lib/exposes');
-const reporting = require('zigbee-herdsman-converters/lib/reporting');
-const ota = require('zigbee-herdsman-converters/lib/ota');
-const utils = require('zigbee-herdsman-converters/lib/utils');
-const globalStore = require('zigbee-herdsman-converters/lib/store');
-const e = exposes.presets;
-const ea = exposes.access;
+import * as m from 'zigbee-herdsman-converters/lib/modernExtend';
+import * as fz from 'zigbee-herdsman-converters/converters/fromZigbee';
+import * as tz from 'zigbee-herdsman-converters/converters/toZigbee';
+import * as exposes from 'zigbee-herdsman-converters/lib/exposes';
+import * as reporting from 'zigbee-herdsman-converters/lib/reporting';
+import * as ota from 'zigbee-herdsman-converters/lib/ota';
+import * as utils from 'zigbee-herdsman-converters/lib/utils';
+import * as globalStore from 'zigbee-herdsman-converters/lib/store';
+
+// exposes.presets
+// exposes.access
+```
+
+To optimize imports, you can import only the required items instead. For example:
+
+```js
+import {onOff} from 'zigbee-herdsman-converters/lib/modernExtend';
+import {presets, access} from 'zigbee-herdsman-converters/lib/exposes';
 ```
 
 ## Converters list
 
 When Zigbee2MQTT starts it publishes `zigbee2mqtt/bridge/converters` with payload `[{"name": "my-first-converter.js": "code": <HERE COMES YOUR CONVERTER CODE>}]` containing all the converters loaded from the file system. The same message is also published when a converter changes at runtime (from one of the below actions), with the appropriately updated payload.
 
+:::tip TIP
+Via the Zigbee2MQTT front end in Home Assistant, you can add or update external converters via Settings > Dev console > External converters.
+:::
+
 ## Save converter
 
-To save a converter at runtime, send a message to `zigbee2mqtt/bridge/request/converter/save` with payload `{"name": "my-first-converter.js", "code": <HERE COMES YOUR CONVERTER CODE>}`. The code will be saved in `data/external_converters/` in the file with the given name.
+To save a converter at runtime, send a message to `zigbee2mqtt/bridge/request/converter/save` with payload `{"name": "my-first-converter.js", "code": <HERE COMES YOUR CONVERTER CODE>}`. The code will be saved in `external_converters` in the file with the given name.
 
 ## Remove converter
 
-To remove a converter at runtime, send a message to `zigbee2mqtt/bridge/request/converter/remove` with payload `{"name": "my-first-converter.js"}`. The file will be deleted from `data/external_converters/`.
+To remove a converter at runtime, send a message to `zigbee2mqtt/bridge/request/converter/remove` with payload `{"name": "my-first-converter.js"}`. The file will be deleted from `external_converters`.

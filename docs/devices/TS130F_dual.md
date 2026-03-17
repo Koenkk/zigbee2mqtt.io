@@ -64,13 +64,17 @@ The possible values are: `UP`, `STOP`, `DOWN`.
 ### Calibration time (numeric, left endpoint)
 Calibration time.
 Value can be found in the published state on the `calibration_time_left` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_left": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_left": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `500`.
 The unit of this value is `s`.
 
 ### Calibration time (numeric, right endpoint)
 Calibration time.
 Value can be found in the published state on the `calibration_time_right` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_right": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_right": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `500`.
 The unit of this value is `s`.
 
 ### Cover (left endpoint)

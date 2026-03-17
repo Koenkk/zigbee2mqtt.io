@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+* This device exposes a CO2 value, but [does not contain a CO2 sensor](https://community.home-assistant.io/t/blitzwolf-bw-ar01-air-quality-meter/338396). The CO2 value seems to be calculated from the VOC value and is completely wrong when compared to a real CO2 sensor.
 
-
+* This device sends multiple value updates per second and poses a significant load for the Zigbee network.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -34,11 +36,11 @@ pageClass: device-page
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
 
@@ -71,11 +73,11 @@ The unit of this value is `ppm`.
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
+The unit of this value is `ppb`.
 
 ### Formaldehyd (numeric)
 The measured formaldehyd value.
 Value can be found in the published state on the `formaldehyd` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mg/m³`.
+The unit of this value is `µg/m³`.
 

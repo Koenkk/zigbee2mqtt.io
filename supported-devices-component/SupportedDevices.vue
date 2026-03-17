@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import {darkModeSymbol} from '@vuepress/theme-default/lib/client/composables/useDarkMode.js';
+import {useDarkMode} from '@vuepress/theme-default/lib/client/composables/useDarkMode.js';
 import Dark from 'quasar/src/plugins/dark/Dark';
 import SessionStorage from 'quasar/src/plugins/storage/SessionStorage';
-import {inject, onMounted, ref, watch} from 'vue';
+import {onMounted, ref, watch} from 'vue';
 import Device from './components/device.vue';
 import Filters from './components/filters.vue';
 import InfiniteScroll from './components/infinite-scroll.vue';
@@ -36,7 +36,7 @@ export default {
 
     setup() {
         // adopt dark-mode from vuepress for quasar
-        const darkMode = inject(darkModeSymbol);
+        const darkMode = useDarkMode();
         watch(darkMode, (isDark) => Dark.set(isDark), {immediate: true});
 
         const currentFilters = ref(null);

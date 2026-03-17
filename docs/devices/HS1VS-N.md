@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1VS-N control via MQTT"
-description: "Integrate your HEIMAN HS1VS-N via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1VS-N control via MQTT"
+description: "Integrate your Heiman HS1VS-N via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1VS-N
+# Heiman HS1VS-N
 
 |     |     |
 |-----|-----|
 | Model | HS1VS-N  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Vibration sensor |
 | Exposes | vibration, battery_low, tamper, battery |
-| Picture | ![HEIMAN HS1VS-N](https://www.zigbee2mqtt.io/images/devices/HS1VS-N.png) |
+| Picture | ![Heiman HS1VS-N](https://www.zigbee2mqtt.io/images/devices/HS1VS-N.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

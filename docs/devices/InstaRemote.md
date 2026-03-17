@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | InstaRemote  |
 | Vendor  | [Insta](/supported-devices/#v=Insta)  |
-| Description | ZigBee Light Link wall/handheld transmitter |
+| Description | Zigbee Light Link wall/handheld transmitter |
 | Exposes | action |
 | Picture | ![Insta InstaRemote](https://www.zigbee2mqtt.io/images/devices/InstaRemote.png) |
 | White-label | Gira 2430-100, Gira 2435-10, Jung ZLLCD5004M, Jung ZLLLS5004M, Jung ZLLA5004M, Jung ZLLHS4 |
@@ -27,10 +27,10 @@ pageClass: device-page
 ## Notes
 
 
-### Transmitters Loosing Connection in ZigBee 3 Networks
-With their factory firmware, the transmitters loose network connection after a few hours when ZigBee 3 devices are present in the network (which is a pretty much standard nowadays). For the Jung wall and handheld transmitters there is a firmware update available that fixes this problem (see [OTA updates](#ota-updates) below), but in turn decreases battery lifetime down to a few months.
+### Transmitters Loosing Connection in Zigbee 3 Networks
+With their factory firmware, the transmitters loose network connection after a few hours when Zigbee 3 devices are present in the network (which is a pretty much standard nowadays). For the Jung wall and handheld transmitters there is a firmware update available that fixes this problem (see [OTA updates](#ota-updates) below), but in turn decreases battery lifetime down to a few months.
 
-Unfortunately Gira seems to have dropped support for their ZigBee transmitters completely and does not offer any firmware updates at all. For the Gira handheld transmitter the Jung update seems to work (and to fix the problem), but for the Gira wall transmitter this is not the case (it only has 6 buttons instead of 8 on the Jung wall transmitter and would therefore need a different firmware). There does not seem to be real solution for this problem rendering the Gira wall transmitters pretty much useless nowadays.
+Unfortunately Gira seems to have dropped support for their Zigbee transmitters completely and does not offer any firmware updates at all. For the Gira handheld transmitter the Jung update seems to work (and to fix the problem), but for the Gira wall transmitter this is not the case (it only has 6 buttons instead of 8 on the Jung wall transmitter and would therefore need a different firmware). There does not seem to be real solution for this problem rendering the Gira wall transmitters pretty much useless nowadays.
 
 ### Factory Reset (8-Button Devices)
 * Press and hold buttons `3` and `4` simultaneously for about 10 seconds until the green LEDs start to flash.

@@ -125,6 +125,7 @@ The possible values are: `10_seconds`, `20_seconds`, `30_seconds`, `40_seconds`,
 
 ### Rgb light (binary)
 Value can be found in the published state on the `rgb_light` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` rgb light is ON, if `false` OFF.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rgb_light": NEW_VALUE}`.
+If value equals `ON` rgb light is ON, if `OFF` OFF.
 
