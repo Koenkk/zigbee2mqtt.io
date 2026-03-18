@@ -24,8 +24,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+The device will automatically be in pairing mode when it is first powered on. Resetting the device will allow it to re-pair. This can be done by pressing the On/Off button on the controller for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 
