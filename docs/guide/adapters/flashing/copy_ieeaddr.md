@@ -16,6 +16,21 @@ First you have to determine the ieee address of your old stick, there are 2 ways
 
 Note that the _primary_ ieee address will remain the same and these instructions only change the _secondary_ ieee address. The tools below generally only show the primary ieee address, so it can appear that the changes aren't taking effect. Setting the secondary ieee address via the instructions below is sufficient to avoid the problem mentioned above.
 
+## XZG Multi-Tool
+
+Supports: CC2652, CC1352, CC2538, EFR32-based coordinators
+
+1. Open [XZG Multi-tool](https://mt.xyzroe.cc/), select your coordinator's chip family and click `Choose Serial`
+2. After successful connection, you should see bootloader and firmware versions. For TI adapters, the primary (fixed) IEEE address will also be displayed in the `Device Info` section
+3. Scroll to the IEEE section and click `Read` to retrieve the current IEEE address of your coordinator (secondary for TI, primary for EFR32-based adapters)
+4. Enter the new IEEE address in the corresponding field and click `Write`
+
+::: warning
+If you're using an EFR32-based adapter and receive an error when attempting to write a new IEEE address, this indicates that your device's firmware doesn't support NV3 tokens. You can still write a new IEEE address to the MFG_CUSTOM_EUI_64 field, but this is a **ONE-TIME** write operation and cannot be changed afterward! If you're certain you want to proceed, check the `Force` checkbox and click `Write` again.
+
+**`Force` option performs a ONE-TIME write that cannot be reversed!**
+:::
+
 ## ZigStar Multi Tool
 
 Supports: CC2652, CC1352, CC2538

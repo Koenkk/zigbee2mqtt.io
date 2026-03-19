@@ -1,7 +1,7 @@
 ---
-title: "AVATTO_TRV60_thermostat control via MQTT"
-description: "Integrate your Tuya AVATTO_TRV60_thermostat via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-11-12T17:09
+title: "AVATTO TRV60_thermostat control via MQTT"
+description: "Integrate your AVATTO TRV60_thermostat via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-02-28T20:18:44
 pageClass: device-page
 ---
 
@@ -11,49 +11,57 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TRV60_thermostat
+# AVATTO TRV60_thermostat
 
 |     |     |
 |-----|-----|
 | Model | TRV60_thermostat  |
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
 | Description | Screen thermostatic radiator valve |
-| Exposes | mode, work_state, child_lock, battery, window_detection, climate (current_heating_setpoint, local_temperature, local_temperature_calibration), fault, frost_protection, scale_protection, valve_volume, humidity, out_door_sensor1, out_door_sensor2, out_door_sensor3, out_temperature, screen_orientation, linkquality |
-| Picture | ![Tuya TRV60_thermostat](https://www.zigbee2mqtt.io/images/devices/TRV60_thermostat.png) |
+| Exposes | mode, work_state, child_lock, battery, window_detection, climate (current_heating_setpoint, local_temperature, local_temperature_calibration), fault, frost_protection, scale_protection, valve_volume, humidity, out_door_sensor1, out_door_sensor2, out_door_sensor3, out_temperature, screen_orientation |
+| Picture | ![AVATTO TRV60_thermostat](https://www.zigbee2mqtt.io/images/devices/TRV60_thermostat.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
-### Pairing
-To pair this device, press and hold the button on the device until the network symbol starts to blink on the screen.
+
+
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
 
 ### Mode (enum)
-Mode of this device.
+Mode.
 Value can be found in the published state on the `mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
 The possible values are: `auto`, `manual`.
 
 ### Work state (enum)
 Work state.
 Value can be found in the published state on the `work_state` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"work_state": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_state": NEW_VALUE}`.
 The possible values are: `opened`, `closed`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -62,9 +70,9 @@ The unit of this value is `%`.
 ### Window detection (binary)
 Enables/disables window detection on the device.
 Value can be found in the published state on the `window_detection` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
-If value equals `ON` window detection is ON, if `OFF` OFF.
+If value equals `true` window detection is ON, if `false` OFF.
 
 ### Climate 
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`.
@@ -78,14 +86,13 @@ Value can be found in the published state on the `fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Frost protection (binary)
-When the room temperature is lower than 5 °C, the valve opens; when the temperature rises to 8 °C, the valve closes..
+When the room temperature is lower than 5 ℃, the valve opens; when the temperature rises to 8 ℃, the valve closes..
 Value can be found in the published state on the `frost_protection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection": NEW_VALUE}`.
 If value equals `ON` frost protection is ON, if `OFF` OFF.
 
 ### Scale protection (binary)
-Enables/disables scale protection on the device.
 Value can be found in the published state on the `scale_protection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scale_protection": NEW_VALUE}`.
@@ -100,7 +107,6 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The percentage of humidity collected after adding an external temperature and humidity sensor..
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `%`.
 
 ### Out door sensor1 (binary)
 The on-off status of the door magnet after adding the first external door magnet sensor..
@@ -124,20 +130,11 @@ If value equals `ON` out door sensor3 is ON, if `OFF` OFF.
 The percentage of temperature collected after adding an external temperature and humidity sensor..
 Value can be found in the published state on the `out_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
 
 ### Screen orientation (enum)
 Screen orientation.
 Value can be found in the published state on the `screen_orientation` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"screen_orientation": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_orientation": NEW_VALUE}`.
 The possible values are: `normal`, `inverted`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
-
 

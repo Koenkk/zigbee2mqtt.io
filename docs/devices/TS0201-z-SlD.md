@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0201-z-SlD  |
 | Vendor  | [Slacky-DIY](/supported-devices/#v=Slacky-DIY)  |
 | Description | Tuya temperature and humidity sensor with custom Firmware |
-| Exposes | battery, voltage, temperature, humidity, temperature_offset, humidity_offset, read_interval, enabling_temperature_control, low_temperature, high_temperature, temperature_actions, enabling_humidity_control, low_humidity, high_humidity, humidity_actions |
+| Exposes | battery, voltage, temperature, humidity, temperature_offset, humidity_offset, read_interval, enabling_repeat_command, enabling_temperature_control, low_temperature, high_temperature, temperature_actions, enabling_humidity_control, low_humidity, high_humidity, humidity_actions |
 | Picture | ![Slacky-DIY TS0201-z-SlD](https://www.zigbee2mqtt.io/images/devices/TS0201-z-SlD.png) |
 
 
@@ -83,7 +83,7 @@ The minimal value is `-5` and the maximum value is `5`.
 The unit of this value is `°C`.
 
 ### Humidity offset (numeric)
-Offset to add/subtract to the inside temperature.
+Offset to add/subtract to the inside humidity.
 Value can be found in the published state on the `humidity_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
@@ -95,8 +95,15 @@ Sensors reading period.
 Value can be found in the published state on the `read_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"read_interval": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_interval": NEW_VALUE}`.
-The minimal value is `15` and the maximum value is `600`.
+The minimal value is `5` and the maximum value is `600`.
 The unit of this value is `Sec`.
+
+### Enabling repeat command (binary)
+Enables/disables repeat command.
+Value can be found in the published state on the `enabling_repeat_command` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enabling_repeat_command": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_repeat_command": NEW_VALUE}`.
+If value equals `ON` enabling repeat command is ON, if `OFF` OFF.
 
 ### Enabling temperature control (binary)
 Enables/disables Tempearure control.

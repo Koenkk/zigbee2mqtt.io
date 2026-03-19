@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9081A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee curtain control module |
-| Exposes | cover (state, position, tilt), power, voltage, current, energy, dev_mode, curtain_type, calibrate, identify |
+| Exposes | cover (state, position, tilt), power, voltage, current, energy, curtain_type, calibrate, identify |
 | Picture | ![Sunricher SR-ZG9081A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9081A.png) |
 
 
@@ -91,13 +91,6 @@ Value can be found in the published state on the `energy_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_3": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Dev mode (enum)
-Set device type (curtain or light).
-Value can be found in the published state on the `dev_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dev_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dev_mode": NEW_VALUE}`.
-The possible values are: `curtain`, `light`.
 
 ### Curtain type (enum)
 Configure curtain type.

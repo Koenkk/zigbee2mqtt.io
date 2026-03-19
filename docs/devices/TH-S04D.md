@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TH-S04D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Climate Sensor W100 |
-| Exposes | data, mode, temperature, humidity, sensor, external_temperature, external_humidity, display_off, high_temperature, low_temperature, high_humidity, low_humidity, sampling, period, temp_report_mode, temp_period, temp_threshold, humi_report_mode, humi_period, humi_threshold, identify, action |
+| Exposes | thermostat_mode, climate (system_mode, fan_mode, occupied_heating_setpoint, local_temperature), PMTSD_from_W100_Data, battery, temperature, humidity, sensor, external_temperature, external_humidity, auto_hide_middle_line, high_temperature, low_temperature, high_humidity, low_humidity, sampling, period, temp_report_mode, temp_period, temp_threshold, humi_report_mode, humi_period, humi_threshold, identify, action |
 | Picture | ![Aqara TH-S04D](https://www.zigbee2mqtt.io/images/devices/TH-S04D.png) |
 
 
@@ -41,6 +41,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `min_target_temp`: Minimum target temperature for the thermostat (default: 5°C). The value must be a number with a minimum value of `-20` and with a maximum value of `60`
+
+* `max_target_temp`: Maximum target temperature for the thermostat (default: 30°C). The value must be a number with a minimum value of `-20` and with a maximum value of `60`
+
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
@@ -54,17 +58,30 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Data (text)
-Timestamp+Most Recent PMTSD Values Sent by W100.
-Value can be found in the published state on the `data` property.
+### Thermostat mode (binary)
+ON: Enables thermostat mode, buttons send encrypted payloads, and the middle line is displayed. OFF: Disables thermostat mode, buttons send actions, and the middle line is hidden..
+Value can be found in the published state on the `thermostat_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"thermostat_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"thermostat_mode": NEW_VALUE}`.
+If value equals `ON` thermostat mode is ON, if `OFF` OFF.
+
+### Climate 
+This climate device supports the following features: `system_mode`, `fan_mode`, `occupied_heating_setpoint`, `local_temperature`.
+- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
+- `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `cool`, `auto`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+
+### PMTSD from W100 Data (text)
+Latest PMTSD values sent by the W100 when manually changed, formatted as "YYYY-MM-DD HH:mm:ss_Px_Mx_Tx_Sx_Dx".
+Value can be found in the published state on the `PMTSD_from_W100_Data` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Mode (binary)
-On: Enable thermostat mode. Buttons send encrypted payloads and middle line is enabled. Off: Disable thermostat mode. Buttons send actions and middle line is disabled..
-Value can be found in the published state on the `mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
-If value equals `ON` mode is ON, if `OFF` OFF.
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -103,12 +120,12 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Display off (binary)
-Enables/disables auto display off.
-Value can be found in the published state on the `display_off` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_off": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_off": NEW_VALUE}`.
-If value equals `true` display off is ON, if `false` OFF.
+### Auto hide middle line (binary)
+Applies only when thermostat mode is enabled. True: Hides the middle line after 30 seconds of inactivity. False: Always displays the middle line..
+Value can be found in the published state on the `auto_hide_middle_line` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_hide_middle_line": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_hide_middle_line": NEW_VALUE}`.
+If value equals `true` auto hide middle line is ON, if `false` OFF.
 
 ### High temperature (numeric)
 High temperature alert.
@@ -169,7 +186,7 @@ Temperature reporting period.
 Value can be found in the published state on the `temp_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_period": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_period": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `10`.
+The minimal value is `1` and the maximum value is `600`.
 The unit of this value is `sec`.
 
 ### Temp threshold (numeric)
@@ -188,11 +205,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `no`, `threshold`, `period`, `threshold_period`.
 
 ### Humi period (numeric)
-Temperature reporting period.
+Humidity reporting period.
 Value can be found in the published state on the `humi_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humi_period": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humi_period": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `10`.
+The minimal value is `1` and the maximum value is `600`.
 The unit of this value is `sec`.
 
 ### Humi threshold (numeric)
@@ -214,5 +231,5 @@ The possible values are: `identify`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `data_request`, `hold_plus`, `hold_center`, `hold_minus`, `single_plus`, `single_center`, `single_minus`, `double_plus`, `double_center`, `double_minus`, `release_plus`, `release_center`, `release_minus`.
+The possible values are: `W100_PMTSD_request`, `hold_plus`, `hold_center`, `hold_minus`, `single_plus`, `single_center`, `single_minus`, `double_plus`, `double_center`, `double_minus`, `release_plus`, `release_center`, `release_minus`.
 

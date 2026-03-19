@@ -23,8 +23,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+There are 3 reset methods:
+- press any switch 10 times  
+(counts correctly, depends on switch-type)
+- press and hold the side button for 10s
+- power-cycle 5 times
+
+Resetting removes the device from Z2M and puts it in pairing mode (blinking blue LED), but keeps user configuration (switch-type and power-on-behavior).
 <!-- Notes END: Do not edit below this line -->
 
 

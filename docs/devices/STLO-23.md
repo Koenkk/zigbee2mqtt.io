@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | STLO-23  |
 | Vendor  | [Stello](/supported-devices/#v=Stello)  |
 | Description | Hilo water heater controller |
-| Exposes | switch (state), power, energy |
+| Exposes | peak_demand_icon, switch (state), power, energy |
 | Picture | ![Stello STLO-23](https://www.zigbee2mqtt.io/images/devices/STLO-23.png) |
 
 
@@ -44,6 +44,14 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Peak demand icon (numeric)
+Set peak demand event icon for the specified number of hours.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"peak_demand_icon": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `18`.
+The unit of this value is `hours`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).

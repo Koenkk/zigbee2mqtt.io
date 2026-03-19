@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-204ZE  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | 10G mw motion detection |
-| Exposes | presence, battery, fading_time, indicator, motion_detection_sensitivity |
+| Exposes | presence, illuminance, battery, fading_time, indicator, motion_detection_sensitivity, illuminance_interval |
 | Picture | ![HOBEIAN ZG-204ZE](https://www.zigbee2mqtt.io/images/devices/ZG-204ZE.png) |
 
 
@@ -39,6 +39,11 @@ or set values (i.e. `sensitivity` or `keep_time`) will only work when the sensor
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -47,6 +52,12 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
+
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
@@ -77,4 +88,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `19`.
 The unit of this value is `x`.
+
+### Illuminance interval (numeric)
+Light sensing sampling(refresh and update only while active).
+Value can be found in the published state on the `illuminance_interval` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `720`.
+The unit of this value is `minutes`.
 

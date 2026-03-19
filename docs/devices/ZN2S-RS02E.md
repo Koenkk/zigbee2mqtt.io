@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZN2S-RS02E  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Two gang switch with colored backlight modes |
-| Exposes | switch (state), backlight_mode, indicator_mode, power_on_behavior, child_lock, on_color, off_color, countdown_l1, countdown_l2 |
+| Exposes | switch (state), backlight_switch, backlight, indicator_mode, power_on_behavior, child_lock, on_color, off_color, countdown_l1, countdown_l2 |
 | Picture | ![Tuya ZN2S-RS02E](https://www.zigbee2mqtt.io/images/devices/ZN2S-RS02E.png) |
 
 
@@ -35,31 +35,39 @@ pageClass: device-page
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Switch (l1 endpoint)
 The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Switch (l2 endpoint)
 The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
-
-### Backlight mode (binary)
-Backlight mode.
-Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
-### Indicator mode (binary)
-Indicator mode.
+### Backlight switch (binary)
+Backlight master switch.
+Value can be found in the published state on the `backlight_switch` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": NEW_VALUE}`.
+If value equals `ON` backlight switch is ON, if `OFF` OFF.
+
+### Backlight (numeric)
+Backlight brightness percentage.
+Value can be found in the published state on the `backlight` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Indicator mode (enum)
+LED indicator mode.
 Value can be found in the published state on the `indicator_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-If value equals `ON` indicator mode is ON, if `OFF` OFF.
+The possible values are: `off`, `on_off_status`, `switch_position`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.

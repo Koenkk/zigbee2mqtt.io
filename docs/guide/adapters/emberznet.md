@@ -1,6 +1,6 @@
 # EmberZNet adapters (Silicon Labs)
 
-Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x
+Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x, 8.2.x
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
@@ -28,6 +28,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
         - Router firmware also available
 - Web-based
+    - Multi-devices: [XZG Multi-tool](https://mt.xyzroe.cc/)
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
     - For ZBT-1/ZBT-2 by [@NabuCasa](https://github.com/NabuCasa): [ZBT Flasher](https://toolbox.openhomefoundation.org/)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
@@ -210,9 +211,38 @@ Note: can also be powered via USB (with a special case) and used with a simple E
 
 ### Hybrid (USB + Network)
 
+::: details SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice
+
+**SLZB-Ultima Series** is a multi-radio smart-home gateway, designed for advanced Zigbee2MQTT and multi-protocol deployments.
+
+**Key features**:
+
+- **Dual IEEE 802.15.4 radios (Zigbee + Thread):**
+-   - **CC2674P10** - enables parallel **Zigbee coordinator/router** or **Thread Border Router** operation
+-   - **EFR32MG24** - enables parallel **Zigbee coordinator/router** or **Thread Border Router** operation
+- **Z-Wave** _(optional add-on)_ - Adds support for Z-Wave networks (Z-Wave JS over Ethernet).
+- **4G/LTE** _(optional add-on)_ - Provides mobile internet connectivity for locations without wired Ethernet or Wi-Fi, or as a backup WAN.
+- **Connectivity:** Ethernet + Wi-Fi + USB (Type-C)
+- **USB passthrough over Ethernet:** plug a USB device (with some limitations) into SLZB-Ultima and use that USB device via the network
+- **Power:** USB-C (default), **PoE** _(optional add-on)_ - Power the device over Ethernet using a single cable for clean, professional installations.
+- **IR receiver + IR transmitter:** - Learn and control infrared devices such as TVs, air conditioners, and AV equipment.
+- **Local feedback & interaction:** buzzer, **12× WS2812B RGB LEDs**, buttons, service LEDs
+- **Digital microphone** _(optional add-on)_ - Enables audio input when running ESPHome-based firmware.
+
+Designed for **local, cloud-independent** operation with Home Assistant and Zigbee2MQTT.
+
+|                                       Product functions                                        |                                    Porduct photo                                    |                                  Interface screenshot                                  |
+| :--------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-functions.png" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-fw.jpg" width="200" /> |
+
+- [Product page](https://smlight.tech/global/slzb-ultima)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-ultima), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005010752270531.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010752555288.html).
+
+:::
+
 ::: details SMLIGHT SLZB-MR Series (MR1/MR2/MR3/MR4) MultiRadio Zigbee + Matter-over-Thread Ethernet USB POE Wi-Fi BLE LAN adapter
 
-SLZB-MRx Series are the compact multi-radio smart home adapter featuring Silicon Labs **EFR32MG26**/EFR32MG24/EFR32MG21 and Texas Instruments CC2674P10/CC2652P7/CC2652P for MR4/MR3/MR2/MR1, respectivelly (two Zigbee/Thread radios), and and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs, alongsie with Ethernet, Wi-Fi, or USB. Devices support PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, DDNS, Wireguard VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
+SLZB-MRx Series is a compact multi-radio smart home adapter featuring Silicon Labs **EFR32MG26**/EFR32MG24/EFR32MG21 and Texas Instruments CC2674P10/CC2652P7/CC2652P for MR4/MR3/MR2/MR1, respectively (two Zigbee/Thread radios), and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread running on different SoCs, alongside Ethernet, Wi-Fi, or USB. Devices support PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, DDNS, WireGuard VPN, HA integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
 
 | Parameter                        |                                                                 **SLZB-MR4**                                                                  |                                                             **SLZB-MR3**                                                             |                                                                   **SLZB-MR2**                                                                    |                                                            **SLZB-MR1**                                                            |
 | :------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
@@ -300,9 +330,22 @@ Not suitable for WiFi or other high latency connections.**
 
 ### Hub
 
-::: details SMLIGHT SMHUB (Essential/Professional variants)
+::: details SMLIGHT SMHUB Nano Mg24
 
-SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Professional variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Professional variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
+SMHUB Nano Mg24 is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates SL SoC EFR32MG24 SoC, with Ethernet+POE, Wi-Fi, Bluetooth and USB connectivity. Hardware features include SD card, eMMC, button and 4 service LEDs. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
+
+|                                            Product picture                                            |                                       Interface1 screenshot 1                                        |                                        Interface screenshot 2                                        |
+| :---------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_2.jpg" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_4.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_3.jpg" width="200" /> |
+
+- [Product page](https://smlight.tech/global/smhub-nano-mg24)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/smhub-nano), [Aliexpress-1 - Worldwide](https://a.aliexpress.com/_EwWCdYC), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010395706341.html).
+
+:::
+
+::: details SMLIGHT SMHUB (Essential/Premium variants)
+
+SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Premium variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Premium variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
 
 |                               Product picture                               |                            Interface screenshot                            |                                               Youtube videoreview                                               |
 | :-------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |

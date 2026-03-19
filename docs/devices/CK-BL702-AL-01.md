@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CK-BL702-AL-01  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee LED bulb |
-| Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
+| Exposes | power_on_behavior, light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
 | Picture | ![Tuya CK-BL702-AL-01](https://www.zigbee2mqtt.io/images/devices/CK-BL702-AL-01.png) |
 
 
@@ -40,6 +40,13 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Light 
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-204ZH  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | PIR 24Ghz human presence sensor |
-| Exposes | presence, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, static_detection_distance, static_detection_sensitivity, motion_detection_mode |
+| Exposes | presence, motion_state, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, static_detection_distance, static_detection_sensitivity, motion_detection_mode, motion_detection_sensitivity |
 | Picture | ![HOBEIAN ZG-204ZH](https://www.zigbee2mqtt.io/images/devices/ZG-204ZH.png) |
 
 
@@ -50,6 +50,12 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
+
+### Motion state (enum)
+Motion state.
+Value can be found in the published state on the `motion_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `none`, `large`, `small`, `static`.
 
 ### Illuminance (numeric)
 Measured illuminance.
@@ -144,4 +150,12 @@ Value can be found in the published state on the `motion_detection_mode` propert
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": NEW_VALUE}`.
 The possible values are: `pir_and_radar`, `pir_or_radar`, `only_radar`.
+
+### Motion detection sensitivity (numeric)
+Radar Motion detection sensitivity.
+Value can be found in the published state on the `motion_detection_sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `x`.
 

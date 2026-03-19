@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_water_meter  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Ultrasonic water meter |
-| Exposes | water_consumed, month_consumption, daily_consumption, flow_rate, reverse_water_consumed, report_period, meter_id, temperature, voltage, fault |
+| Exposes | water_consumed, month_consumption, daily_consumption, flow_rate, reverse_water_consumed, report_period, meter_id, temperature, voltage, faults |
 | Picture | ![Tuya TS0601_water_meter](https://www.zigbee2mqtt.io/images/devices/TS0601_water_meter.png) |
 
 
@@ -59,10 +59,6 @@ pageClass: device-page
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
-
-* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -116,14 +112,13 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Voltage (numeric)
-Measured electrical potential value.
+Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
+The unit of this value is `mV`.
 
-### Fault (enum)
-Fault status.
-Value can be found in the published state on the `fault` property.
+### Faults (text)
+Active fault status.
+Value can be found in the published state on the `faults` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `no_fault`, `battery_alarm`, `magnetism_alarm`, `cover_alarm`, `credit_alarm`, `switch_gaps_alarm`, `meter_body_alarm`, `abnormal_water_alarm`, `arrearage_alarm`, `overflow_alarm`, `revflow_alarm`, `over_pre_alarm`, `empty_pipe_alarm`, `transducer_alarm`.
 

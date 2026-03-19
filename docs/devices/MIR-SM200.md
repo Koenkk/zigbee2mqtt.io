@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MIR-SM200  |
 | Vendor  | [MultIR](/supported-devices/#v=MultIR)  |
 | Description | Smoke sensor |
-| Exposes | battery, smoke, tamper, battery_low |
+| Exposes | silence, battery, smoke, tamper, battery_low |
 | Picture | ![MultIR MIR-SM200](https://www.zigbee2mqtt.io/images/devices/MIR-SM200.png) |
 
 
@@ -31,6 +31,13 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Silence (enum)
+After enabling mute, it will return to detection state after 90 seconds..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
+The possible values are: `ON`.
 
 ### Battery (numeric)
 Remaining battery in %.

@@ -55,6 +55,8 @@ While the LED is flashing, press the button you want to configure as many times 
 | 25 | Restore the factory settings of the remote control |
 <!-- Notes END: Do not edit below this line -->
 
+
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
