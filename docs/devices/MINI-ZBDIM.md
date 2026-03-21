@@ -23,8 +23,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Issues
 
+#### Inverted moving
+
+This device performs inverse effects on receipt of _Move_  
+(whether it's sent through Zigbee2MQTT, or a bound remote). Tested on version v1.0.5
+
+For example `{"brightness_move": -40}` will start **increasing** the brightness (instead of decreasing it).
 <!-- Notes END: Do not edit below this line -->
 
 
