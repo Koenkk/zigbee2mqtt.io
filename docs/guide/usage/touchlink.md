@@ -8,7 +8,7 @@ _Range depends on devices: normally 10cm, but up to 1m on strong adapters._
 **Example uses:**
 
 - Identify or reset devices near the coordinator via Zigbee2MQTT
-- Reset devices via a Touchlink-capable device, e.g. [Hue dimmer switch gen 1](/docs/devices/324131092621.md)
+- Reset devices via a Touchlink-capable device, e.g. [Hue dimmer switch gen 1](./../../devices/324131092621.md)
 - Setup device-to-device binding (e.g. remote to light) without involving the coordinator and Zigbee2MQTT
 
 ## Support
@@ -77,4 +77,4 @@ Target a specific device by adding a payload to the above message, e.g. `{"ieee_
 
 #### Serial number (Philips Hue only)
 
-Most Philips Hue devices can be targeted without scanning, by using the serial number written on the device. More info on device-specific pages, e.g. [Hue white ambiance E27](/docs/devices/9290022169.md)
+Most Philips Hue devices can be targeted without scanning, by using the serial number written on the device. More info on device-specific pages, e.g. [Hue white ambiance E27](./../../devices/9290022169.md)
