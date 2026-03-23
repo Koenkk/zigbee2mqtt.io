@@ -34,23 +34,23 @@ pageClass: device-page
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -98,7 +98,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hz`.
 
 ### Data report duration (numeric)
-WARNING: You must update device firmware to V3.2.2 before changing this setting! Use Tuya gateway/app to update firmware. Data report duration set (Threshold value range 5~3600 seconds).
+WARNING: You must update device firmware to V3.2.2 before changing this setting! Use Tuya gateway/app to update firmware. Data report duration set (Threshold value range 30~3600 seconds).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"data_report_duration": NEW_VALUE}`.

@@ -1,6 +1,6 @@
 ---
-title: "EfektaLab EFEKTA_Air_Monitor control via MQTT"
-description: "Integrate your EfektaLab EFEKTA_Air_Monitor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "EFEKTA EFEKTA_Air_Monitor control via MQTT"
+description: "Integrate your EFEKTA EFEKTA_Air_Monitor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-04-01T18:30:52
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# EfektaLab EFEKTA_Air_Monitor
+# EFEKTA EFEKTA_Air_Monitor
 
 |     |     |
 |-----|-----|
 | Model | EFEKTA_Air_Monitor  |
-| Vendor  | [EfektaLab](/supported-devices/#v=EfektaLab)  |
+| Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | CO2 smart monitor, AA battery |
 | Exposes | co2, battery, battery_low, uptime, report_delay, forced_recalibration, manual_forced_recalibration, automatic_scal, factory_reset_co2 |
-| Picture | ![EfektaLab EFEKTA_Air_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Air_Monitor.png) |
+| Picture | ![EFEKTA EFEKTA_Air_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Air_Monitor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

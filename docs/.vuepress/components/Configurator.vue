@@ -33,7 +33,7 @@ div.configurator
 import {defineComponent, ref, SetupContext, watch} from 'vue';
 
 /**
- * Very basic algorithm to get farthest away from the WiFi channel while remaining on "preferred" ZigBee channels (11, 15, 20, 25)
+ * Very basic algorithm to get farthest away from the WiFi channel while remaining on "preferred" Zigbee channels (11, 15, 20, 25)
  */
 function bestZigbeeChannel(wifiChannel: number) {
     if (wifiChannel >= 11) {
@@ -121,7 +121,7 @@ export default defineComponent({
 
                 // XXX: version should be kept in sync with Z2M's (updated with every release)
                 configurationKey.value = `
-version: 4
+version: 5
 mqtt:
     base_topic: zigbee2mqtt
     server: ${mqttServer}

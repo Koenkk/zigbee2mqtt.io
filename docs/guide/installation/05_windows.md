@@ -27,10 +27,9 @@ In order to be able to communicate with your USB device over a virtual COM port,
     ```bash
     node --version
     ```
-1. Install pnpm
+1. Enable corepack
     ```bash
-    npm install -g pnpm
-    pnpm --version
+    corepack enable
     ```
 1. Choose a suitable directory for Zigbee2MQTT and copy all the files from the [Zigbee2MQTT repository](https://github.com/koenkk/zigbee2mqtt)
     - if you prefer to use git (which you should), just clone the whole repository
@@ -40,7 +39,7 @@ In order to be able to communicate with your USB device over a virtual COM port,
     - otherwise use the green `Clone or download` button to download the zip archive, then extract it
 1. Change to the newly created directory and install dependencies with pnpm:
     ```bash
-    pnpm i --frozen-lockfile
+    pnpm install --frozen-lockfile
     ```
 
 ## Starting Zigbee2MQTT
@@ -97,7 +96,7 @@ It is recommended to back up the Zigbee2MQTT `\data` subdirectory before perform
     ```
 1. Update dependencies
     ```bat
-    pnpm i --frozen-lockfile
+    pnpm install --frozen-lockfile
     ```
 1. Restart Zigbee2MQTT
     ```bat
@@ -152,8 +151,8 @@ Copy-Item -Path $z2mDataPath -Destination $z2mBackupPath -Recurse
 "Running ""git pull""" | Write-Host
 & git pull
 # Update dependencies:
-"Running ""pnpm i --frozen-lockfile""" | Write-Host
-& pnpm i --frozen-lockfile
+"Running ""pnpm install --frozen-lockfile""" | Write-Host
+& pnpm install --frozen-lockfile
 # Restore backed-up data:
 "Restore backed up data directory" | Write-Host
 Copy-Item -Path "$($z2mBackupPath)\*" -Destination $z2mDataPath -Recurse -Force

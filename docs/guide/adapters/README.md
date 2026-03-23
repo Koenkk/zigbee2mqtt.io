@@ -11,12 +11,12 @@ All officially supported adapters are listed on this page. Note that before an a
 
 - [zStack based (Texas Instruments)](./zstack.md)
 - [EmberZNet based (Silicon Labs)](./emberznet.md)
+- [deCONZ based (Dresden Elektronik)](./deconz.md)
 
 ## Not recommended
 
 ### Not maintained
 
-- [deCONZ based (Dresden Elektronik)](./deconz.md)
 - [ZiGate based](./zigate.md)
 
 ### Experimental

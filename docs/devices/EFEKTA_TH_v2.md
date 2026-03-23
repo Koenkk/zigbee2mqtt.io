@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_TH_v2  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Temperature and humidity sensors. Simple Thermostat. |
-| Exposes | identify, temperature, humidity, battery, voltage, battery_low, reading_interval, smart_sleep, uptime, config_report_enable, comparison_previous_data, enable_temperature, invert_logic_temperature, high_temperature, low_temperature, enable_humidity, invert_logic_humidity, high_humidity, low_humidity |
+| Exposes | identify, temperature, humidity, battery, voltage, battery_low, reading_interval, smart_sleep, uptime, config_report_enable, comparison_previous_data, enabling_temperature_control, temperature_actions, high_temperature, low_temperature, enabling_humidity_control, humidity_actions, high_humidity, low_humidity |
 | Picture | ![EFEKTA EFEKTA_TH_v2](https://www.zigbee2mqtt.io/images/devices/EFEKTA_TH_v2.png) |
 
 
@@ -34,13 +34,13 @@ pageClass: device-page
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -120,19 +120,19 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
 
-### Enable temperature (binary)
-Enable Temperature Control.
-Value can be found in the published state on the `enable_temperature` property.
+### Enabling temperature control (binary)
+Enables/disables Tempearure control.
+Value can be found in the published state on the `enabling_temperature_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_temperature": NEW_VALUE}`.
-If value equals `ON` enable temperature is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_temperature_control": NEW_VALUE}`.
+If value equals `ON` enabling temperature control is ON, if `OFF` OFF.
 
-### Invert logic temperature (binary)
-Invert Logic Temperature Control.
-Value can be found in the published state on the `invert_logic_temperature` property.
+### Temperature actions (enum)
+Heat or cool.
+Value can be found in the published state on the `temperature_actions` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_logic_temperature": NEW_VALUE}`.
-If value equals `ON` invert logic temperature is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_actions": NEW_VALUE}`.
+The possible values are: `HEAT`, `COOL`.
 
 ### High temperature (numeric)
 Setting High Temperature Border.
@@ -150,19 +150,19 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-40` and the maximum value is `90`.
 The unit of this value is `°C`.
 
-### Enable humidity (binary)
-Enable Humidity Control.
-Value can be found in the published state on the `enable_humidity` property.
+### Enabling humidity control (binary)
+Enables/disables Humidity control.
+Value can be found in the published state on the `enabling_humidity_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_humidity": NEW_VALUE}`.
-If value equals `ON` enable humidity is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_humidity_control": NEW_VALUE}`.
+If value equals `ON` enabling humidity control is ON, if `OFF` OFF.
 
-### Invert logic humidity (binary)
-Invert Logic Humidity Control.
-Value can be found in the published state on the `invert_logic_humidity` property.
+### Humidity actions (enum)
+Wet or dry.
+Value can be found in the published state on the `humidity_actions` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_logic_humidity": NEW_VALUE}`.
-If value equals `ON` invert logic humidity is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_actions": NEW_VALUE}`.
+The possible values are: `WET`, `DRY`.
 
 ### High humidity (numeric)
 Setting High Humidity Border.

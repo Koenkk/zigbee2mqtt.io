@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CK-BL702-AL-01  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee LED bulb |
-| Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
+| Exposes | power_on_behavior, light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
 | Picture | ![Tuya CK-BL702-AL-01](https://www.zigbee2mqtt.io/images/devices/CK-BL702-AL-01.png) |
 
 
@@ -40,6 +40,13 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Light 
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.
@@ -70,13 +77,20 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
   "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second
   "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_move": "release", // Stop moving color temperature
+  "color_temp_move": 0, // Stop moving color temperature
+  "color_temp_move": "up", // Move to warmer color temperature at default rate
+  "color_temp_move": 1, // Move to warmer color temperature at default rate
+  "color_temp_move": "down", // Move to cooler color temperature at default rate
+  "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````

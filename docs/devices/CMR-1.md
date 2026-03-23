@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CMR-1  |
 | Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | Roller Blind Motor |
-| Exposes | cover (state, position), reverse_direction, motor_fault |
+| Exposes | cover (state, position), reverse_direction, motor_fault, upper_stroke_limit, middle_stroke_limit, lower_stroke_limit, motor_working_mode |
 | Picture | ![Nova Digital CMR-1](https://www.zigbee2mqtt.io/images/devices/CMR-1.png) |
 
 
@@ -55,4 +55,32 @@ Motor Fault.
 Value can be found in the published state on the `motor_fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` motor fault is ON, if `false` OFF.
+
+### Upper stroke limit (enum)
+Set or Reset the upper stroke limit.
+Value can be found in the published state on the `upper_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
+
+### Middle stroke limit (enum)
+Set or Reset the middle stroke limit.
+Value can be found in the published state on the `middle_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"middle_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
+
+### Lower stroke limit (enum)
+Set or Reset the lower stroke limit.
+Value can be found in the published state on the `lower_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lower_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
+
+### Motor working mode (enum)
+Motor operating mode.
+Value can be found in the published state on the `motor_working_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_working_mode": NEW_VALUE}`.
+The possible values are: `continuous`, `intermittently`.
 

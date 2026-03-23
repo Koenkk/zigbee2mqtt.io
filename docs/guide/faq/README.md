@@ -14,7 +14,7 @@ Any Zigbee device is limited to only be paired/joined to one Zigbee Coordinator 
 
 Another limitation that applies to all Zigbee implementations is that there is no such thing as "Zigbee over IP" or "Zigbee over LAN/WAN" in the Zigbee protocol specifications. It is therefore not possible to extend the same Zigbee network to two separate locations or sites that can not be reached directly via Zigbee radio signals within the Zigbee network mesh. That means that there is no way to use a so-called "Zigbee network adapter" or similar solutions to convert and bridge a single Zigbee network communication over a different medium such as Ethernet or VPN. As such there are no network-attached remote Zigbee adapters that can span a Zigbee network to remote sites, regardless if the marketing material of such products makes it sound like they can do in "Zigbee Router" mode. The fact is that the "Zigbee Router" feature of such "Zigbee network adapter" products puts their Zigbee radio chip into stand-alone mode so it works like any Zigbee Router device, disconnected from the Ethernet network part in those products.
 
-Support for commissioning Zigbee 3.0 devices via "Install Code" or "QR Code" has so far only been implemented for 'zstack' (Texas Instruments ZNP) and 'ember' (Silicon Labs EmberZNet) adapter type radios in Zigbee2MQTT. Other radio adapter types are either missing support in their respective adapter/driver for [zigbee-herdsman](https://github.com/Koenkk/zigbee-herdsman) or more likely missing in the manufacturer's firmware commands/APIs and documentation.
+Support for commissioning Zigbee 3.0 devices via "Install Code" or "QR Code" has so far only been implemented for 'zstack' (Texas Instruments ZNP), 'ember' (Silicon Labs EmberZNet) and 'deconz' (Dresden Elektronik deCONZ, requires recent coordinator firmware) adapter type radios in Zigbee2MQTT. Other radio adapter types are either missing support in their respective adapter/driver for [zigbee-herdsman](https://github.com/Koenkk/zigbee-herdsman) or more likely missing in the manufacturer's firmware commands/APIs and documentation.
 
 Zigbee2MQTT does not currently support devices that can only use the ZSE ("Zigbee Smart Energy") profile, that is however due to the "Zigbee SE" specification not being part of the standard Zigbee 3.0 specification that includes the more common Zigbee Home Automation + Zigbee lighting and thus not implemented in most of the Zigbee Coordinator firmware that is commonly available for Zigbee Coordinator radio adapters and modules, usually because the manufacturer offers separate Zigbee protocol stack SDK for Zigbee Smart Energy.
 
@@ -65,7 +65,7 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
 1. First make sure you are running the latest version of Zigbee2MQTT
 1. Stop Zigbee2MQTT
 1. Determine whether migrating [requires re-pairing of your devices](#what-does-and-does-not-require-re-pairing-of-all-devices)
-    - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db`
+    - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db` (if running as a Home Assistant addon, `data/` is renamed `zigbee2mqtt/`)
     - If re-pairing is **not** required: [copy the ieee address of the old adapter into the new one](../adapters/flashing/copy_ieeaddr.html)
 1. Update the `serial` -> `port` in your `configuration.yaml`
 1. Start Zigbee2MQTT
@@ -77,7 +77,8 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 
-Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
+Details about your network are stored in both the coordinator and files under the `data/` directory (if running as a Home Assistant addon, `data/` is renamed `zigbee2mqtt/`).
+To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
 
 ## What does and does not require re-pairing of all devices?
 
@@ -165,9 +166,11 @@ If after some uptime Zigbee2MQTT crashes with errors like: `SRSP - AF - dataRequ
 - Make sure you are using the latest firmware on your adapter, see the [adapter page](../adapters/README.md) for a link to the latest firmware.
 - If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected directly to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
 - Disable the USB autosuspend feature, if `cat /sys/module/usbcore/parameters/autosuspend` returns `1` or `2` it is enabled; to disable execute:
+
     ```bash
     sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
     update-grub
     systemctl reboot
     ```
+
     - On a Raspberry Pi, you will need to instead edit `/boot/cmdline.txt` and add `usbcore.autosuspend=-1` to the end of the line.

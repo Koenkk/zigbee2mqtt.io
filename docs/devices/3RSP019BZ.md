@@ -28,14 +28,14 @@ pageClass: device-page
 ### Switch between BLE and Zigbee mode
 
 Plug comes out of the box in BLE mode (Green LED). To use with zigbee2mqtt you need to change to zigbee mode (Red LED):
-#### BLE → ZigBee
+#### BLE → Zigbee
 1. Press the button and hold, then insert the Smart Plug into an outlet until the green light
 is ON.
 2. Release the button, then press the button immediately. LED light will flash in red,
-indicating that your Smart Plug is in ZigBee mode now.
+indicating that your Smart Plug is in Zigbee mode now.
 
 If you want to restore to BLE to work with most Echo devices: 
-#### ZigBee → BLE
+#### Zigbee → BLE
 1. Press the button and hold, then insert the Smart Plug into an outlet until the red light is
 ON.
 2. Release the button, then press the button immediately. LED light will alternately flash in

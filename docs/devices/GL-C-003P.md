@@ -73,7 +73,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -112,7 +112,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness

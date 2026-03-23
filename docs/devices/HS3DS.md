@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS3DS control via MQTT"
-description: "Integrate your HEIMAN HS3DS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS3DS control via MQTT"
+description: "Integrate your Heiman HS3DS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS3DS
+# Heiman HS3DS
 
 |     |     |
 |-----|-----|
 | Model | HS3DS  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Door sensor |
 | Exposes | contact, battery, battery_low, tamper |
-| Picture | ![HEIMAN HS3DS](https://www.zigbee2mqtt.io/images/devices/HS3DS.png) |
+| Picture | ![Heiman HS3DS](https://www.zigbee2mqtt.io/images/devices/HS3DS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

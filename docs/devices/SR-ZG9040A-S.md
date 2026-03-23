@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | SR-ZG9040A-S  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
-| Description | ZigBee AC phase-cut dimmer single-line |
+| Description | Zigbee AC phase-cut dimmer single-line |
 | Exposes | light (state, brightness), effect, power_on_behavior |
 | Picture | ![Sunricher SR-ZG9040A-S](https://www.zigbee2mqtt.io/images/devices/SR-ZG9040A-S.png) |
 
@@ -63,7 +63,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness

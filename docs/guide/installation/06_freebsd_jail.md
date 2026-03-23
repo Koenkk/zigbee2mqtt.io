@@ -27,13 +27,11 @@ Enter the following commands inside the jail's shell:
 # - It is recommended to install Node 22 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
 # - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # - Selecting `npm` also installs `node`.
-pkg install npm git gmake gcc
-npm install -g pnpm
+pkg install git gmake gcc
+corepack enable
 
-# Verify that the correct nodejs and pnpm (automatically installed with nodejs)
-# version has been installed
+# Verify that the correct Node.js version has been installed
 node --version  # Should output V20.x, V22.X
-pnpm --version  # Should output 10.X
 
 # Create installation folder (/usr/local prefix is used for software not part of the base system)
 mkdir -p /usr/local/opt/zigbee2mqtt
@@ -43,7 +41,7 @@ cd /usr/local/opt/zigbee2mqtt
 git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git .
 
 # Install dependencies
-pnpm i --frozen-lockfile
+pnpm install --frozen-lockfile
 
 # Build Zigbee2MQTT
 pnpm run build
@@ -71,10 +69,6 @@ Zigbee2MQTT:info  2019-11-09T13:04:01: Starting zigbee-herdsman...
 Zigbee2MQTT:info  2019-11-09T13:04:03: zigbee-herdsman started
 Zigbee2MQTT:info  2019-11-09T13:04:03: Coordinator firmware version: '{"type":"zStack30x","meta":{"transportrev":2,"product":2,"majorrel":2,"minorrel":7,"maintrel":2,"revision":20190425}}'
 Zigbee2MQTT:info  2019-11-09T13:04:03: Currently 0 devices are joined:
-Zigbee2MQTT:warn  2019-11-09T13:04:03: `permit_join` set to  `true` in configuration.yaml.
-Zigbee2MQTT:warn  2019-11-09T13:04:03: Allowing new devices to join.
-Zigbee2MQTT:warn  2019-11-09T13:04:03: Set `permit_join` to `false` once you joined all devices.
-Zigbee2MQTT:info  2019-11-09T13:04:03: Zigbee: allowing new devices to join.
 Zigbee2MQTT:info  2019-11-09T13:04:03: Connecting to MQTT server at mqtt://localhost
 Zigbee2MQTT:info  2019-11-09T13:04:03: Connected to MQTT server
 ```

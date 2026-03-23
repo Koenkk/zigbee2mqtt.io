@@ -24,6 +24,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+There is an [issue pending](https://github.com/Koenkk/zigbee2mqtt/issues/18950) 
+that the reported values are much too high. 
 
 ### Pairing
 To start pairing, press the button (pinhole on the side of the device) using a

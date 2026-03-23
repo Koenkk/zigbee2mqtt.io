@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | SZW08  |
 | Vendor  | [Lincukoo](/supported-devices/#v=Lincukoo)  |
-| Description | Water leakage sensor with 2 in 1 |
+| Description | Smart water leakage/lack alarm sensor |
 | Exposes | alarm_status, mode, alarm_ringtone, battery |
 | Picture | ![Lincukoo SZW08](https://www.zigbee2mqtt.io/images/devices/SZW08.png) |
 

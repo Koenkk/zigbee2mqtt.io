@@ -18,14 +18,21 @@ pageClass: device-page
 | Model | MOSZB-153  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor 2 pet |
-| Exposes | temperature, illuminance, battery, voltage, occupancy |
+| Exposes | occupancy_timeout, led_control, temperature, illuminance, battery, voltage, occupancy |
 | Picture | ![Develco MOSZB-153](https://www.zigbee2mqtt.io/images/devices/MOSZB-153.png) |
 | White-label | Frient MOSZB-153 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Reset Instructions
+1. Remove the sensor from its bracket or open the casing.
+2. Ensure batteries are correctly inserted.
+3. Press and hold the round menu button located inside the device.
+4. Watch the LED indicators: It will flash once, then twice, and finally flash several times in rapid succession.
+5. At the point when the LED is flashing several times in succession, release the button.
+6. The LED will then emit one long flash, indicating that the reset is successful and complete.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -38,7 +45,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -46,6 +53,20 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 
 ## Exposes
+
+### Occupancy timeout (numeric)
+Value can be found in the published state on the `occupancy_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `65535`.
+The unit of this value is `s`.
+
+### Led control (enum)
+Control LED indicator usage..
+Value can be found in the published state on the `led_control` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_control": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_control": NEW_VALUE}`.
+The possible values are: `off`, `fault_only`, `motion_only`, `both`.
 
 ### Temperature (numeric)
 Measured temperature value.

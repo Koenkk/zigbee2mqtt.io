@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1MIS-3.0 control via MQTT"
-description: "Integrate your HEIMAN HS1MIS-3.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1MIS-3.0 control via MQTT"
+description: "Integrate your Heiman HS1MIS-3.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-01T18:54:40
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1MIS-3.0
+# Heiman HS1MIS-3.0
 
 |     |     |
 |-----|-----|
 | Model | HS1MIS-3.0  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart occupancy sensor |
 | Exposes | occupancy, battery, illuminance |
-| Picture | ![HEIMAN HS1MIS-3.0](https://www.zigbee2mqtt.io/images/devices/HS1MIS-3.0.png) |
+| Picture | ![Heiman HS1MIS-3.0](https://www.zigbee2mqtt.io/images/devices/HS1MIS-3.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -34,7 +34,7 @@ pageClass: device-page
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be sent after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
 
 * `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 

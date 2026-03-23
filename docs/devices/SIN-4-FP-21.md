@@ -23,8 +23,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+### Pairing
 
+When power is turned ON for the first time, the relay switch Led will blink orange, looking to join a Zigbee network.
+If the relay switch has correctly joined the network, the Led becomes green.
+If the relay switch hasn't joined a network within 15 minutes, the Led becomes orange. Do a brief press on the relay switch button and start again.
 
+To remove the module from its network, perform a Module reset:
+1. Press more than 5 seconds on the module's button. The Led blinks orange.
+2. Press the button again (short press) to validate the reset. If the reset is successful, the Led flashes red and green alternately, then flashes orange.
+3. The module has returned to its original configuration and is ready to join a new Zigbee network.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -37,11 +45,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 

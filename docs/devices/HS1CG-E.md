@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1CG-E control via MQTT"
-description: "Integrate your HEIMAN HS1CG-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1CG-E control via MQTT"
+description: "Integrate your Heiman HS1CG-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-04-08T17:49:06Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1CG-E
+# Heiman HS1CG-E
 
 |     |     |
 |-----|-----|
 | Model | HS1CG-E  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper |
-| Picture | ![HEIMAN HS1CG-E](https://www.zigbee2mqtt.io/images/devices/HS1CG-E.png) |
+| Picture | ![Heiman HS1CG-E](https://www.zigbee2mqtt.io/images/devices/HS1CG-E.png) |
 | White-label | Piri HSIO18008 |
 
 

@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | SNZB-02LD  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
-| Description | Temperature sensor with screen |
-| Exposes | battery, temperature, comfort_temperature_min, comfort_temperature_max, temperature_units, temperature_calibration |
+| Description | Waterproof (IP65) sensor with screen and probe temperature detection |
+| Exposes | battery, temperature, temperature_units, temperature_calibration |
 | Picture | ![SONOFF SNZB-02LD](https://www.zigbee2mqtt.io/images/devices/SNZB-02LD.png) |
 
 
@@ -34,7 +34,7 @@ pageClass: device-page
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -52,22 +52,6 @@ Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
 It's not possible to write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Comfort temperature min (numeric)
-Minimum temperature that is considered comfortable. The device will display ❄️ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..
-Value can be found in the published state on the `comfort_temperature_min` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_min": NEW_VALUE}`.
-The minimal value is `-10` and the maximum value is `60`.
-The unit of this value is `°C`.
-
-### Comfort temperature max (numeric)
-Maximum temperature that is considered comfortable. The device will display 🔥 when the temperature is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..
-Value can be found in the published state on the `comfort_temperature_max` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_max": NEW_VALUE}`.
-The minimal value is `-10` and the maximum value is `60`.
 The unit of this value is `°C`.
 
 ### Temperature units (enum)

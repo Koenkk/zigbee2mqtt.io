@@ -1,6 +1,6 @@
 ---
-title: "Neo NAS-AB02B0 control via MQTT"
-description: "Integrate your Neo NAS-AB02B0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "NEO NAS-AB02B0 control via MQTT"
+description: "Integrate your NEO NAS-AB02B0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Neo NAS-AB02B0
+# NEO NAS-AB02B0
 
 |     |     |
 |-----|-----|
 | Model | NAS-AB02B0  |
-| Vendor  | [Neo](/supported-devices/#v=Neo)  |
+| Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Temperature & humidity sensor and alarm |
 | Exposes | temperature, humidity, humidity_alarm, battery_low, temperature_alarm, alarm, melody, duration, temperature_min, temperature_max, humidity_min, humidity_max, volume, power_type |
-| Picture | ![Neo NAS-AB02B0](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B0.png) |
+| Picture | ![NEO NAS-AB02B0](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -52,11 +52,11 @@ Alarm melodies sounds/tunes:
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes

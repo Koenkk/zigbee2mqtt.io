@@ -23,8 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+### Battery
+This device uses a CR2450 battery.
 <!-- Notes END: Do not edit below this line -->
 
 

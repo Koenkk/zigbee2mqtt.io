@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZPV-01  |
 | Vendor  | [Novato](/supported-devices/#v=Novato)  |
 | Description | Battery powered smart valve |
-| Exposes | switch (state), valve_state |
+| Exposes | switch (state), valve_state, battery |
 | Picture | ![Novato ZPV-01](https://www.zigbee2mqtt.io/images/devices/ZPV-01.png) |
 
 
@@ -38,8 +38,15 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 It's not possible to read (`/get`) this value.
 
 ### Valve state (enum)
-State of the valve.
+Valve Status.
 Value can be found in the published state on the `valve_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `close`, `unknown`, `open`.
+The possible values are: `Closed`, `Unknown`, `Open`.
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 

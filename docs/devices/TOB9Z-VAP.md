@@ -37,49 +37,28 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
-
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Temperature threshold (numeric)
-High temperature threshold.
-Value can be found in the published state on the `temperature_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_threshold": NEW_VALUE}`.
-The minimal value is `40` and the maximum value is `100`.
-The unit of this value is `°C`.
-
-### Temperature breaker (binary)
-High temperature breaker.
-Value can be found in the published state on the `temperature_breaker` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_breaker": NEW_VALUE}`.
-If value equals `ON` temperature breaker is ON, if `OFF` OFF.
 
 ### Power threshold (numeric)
 High power threshold.

@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2WDSC-E control via MQTT"
-description: "Integrate your HEIMAN HS2WDSC-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2WDSC-E control via MQTT"
+description: "Integrate your Heiman HS2WDSC-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-30T20:52:56Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2WDSC-E
+# Heiman HS2WDSC-E
 
 |     |     |
 |-----|-----|
 | Model | HS2WDSC-E  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Remote dimmer and temperature control |
 | Exposes | battery, action |
-| Picture | ![HEIMAN HS2WDSC-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSC-E.png) |
+| Picture | ![Heiman HS2WDSC-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSC-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

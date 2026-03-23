@@ -30,6 +30,8 @@ services:
             -v /sys:/host/sys
             -v /var/run/docker.sock:/var/run/docker.sock
             -v /dev:/dev
+            # Uncomment the line below if Docker version > 29.0.0
+            # -e DOCKER_API_VERSION=1.44
             ghcr.io/allfro/allfro/device-mapping-manager:latest
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ICZB-RM11S  |
 | Vendor  | [iCasa](/supported-devices/#v=iCasa)  |
 | Description | Zigbee 3.0 remote control |
-| Exposes | battery, action |
+| Exposes | battery, action, action_group |
 | Picture | ![iCasa ICZB-RM11S](https://www.zigbee2mqtt.io/images/devices/ICZB-RM11S.png) |
 
 
@@ -63,4 +63,9 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `recall_*`, `on`, `off`, `brightness_stop`, `brightness_move_up`, `brightness_move_down`.
+
+### Action group (numeric)
+Group where the action was triggered on.
+Value can be found in the published state on the `action_group` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 

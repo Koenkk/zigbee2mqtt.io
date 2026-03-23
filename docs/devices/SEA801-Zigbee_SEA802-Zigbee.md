@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SEA801-Zigbee/SEA802-Zigbee  |
 | Vendor  | [Saswell](/supported-devices/#v=Saswell)  |
 | Description | Thermostatic radiator valve |
-| Exposes | battery_low, switch (state), child_lock, heating, climate (current_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration) |
+| Exposes | battery_low, anti_scaling, switch (state), child_lock, heating, climate (current_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration) |
 | Picture | ![Saswell SEA801-Zigbee/SEA802-Zigbee](https://www.zigbee2mqtt.io/images/devices/SEA801-Zigbee-SEA802-Zigbee.png) |
 | White-label | HiHome WZB-TRVL, Hama 00176592, Maginon WT-1, RTX ZB-RT1, SETTI+ TRV001, Royal Thermo RTE 77.001B |
 
@@ -74,6 +74,13 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
+
+### Anti scaling (binary)
+Enables/disables bi-weekly anti-scaling feature.
+Value can be found in the published state on the `anti_scaling` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"anti_scaling": NEW_VALUE}`.
+If value equals `ON` anti scaling is ON, if `OFF` OFF.
 
 ### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).

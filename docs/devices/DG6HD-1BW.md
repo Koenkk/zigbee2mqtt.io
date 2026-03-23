@@ -23,8 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+1. Hold the top of the paddle for 7 seconds. Status light will turn amber.
+2. To start joining mode tap the top of the paddle 1 time. The status light will ﬂash green rapidly to indicate it is in joining mode.
+3. To stop joining mode tap the top of the paddle 1 time. The dimmer will leave joining mode.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -63,7 +68,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness

@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS3CG control via MQTT"
-description: "Integrate your HEIMAN HS3CG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS3CG control via MQTT"
+description: "Integrate your Heiman HS3CG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS3CG
+# Heiman HS3CG
 
 |     |     |
 |-----|-----|
 | Model | HS3CG  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper |
-| Picture | ![HEIMAN HS3CG](https://www.zigbee2mqtt.io/images/devices/HS3CG.png) |
+| Picture | ![Heiman HS3CG](https://www.zigbee2mqtt.io/images/devices/HS3CG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

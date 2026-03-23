@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | IOMZB-110  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | IO module |
-| Exposes | input, switch (state) |
+| Exposes | input, switch (state), duration, trigger |
 | Picture | ![Develco IOMZB-110](https://www.zigbee2mqtt.io/images/devices/IOMZB-110.png) |
 
 
@@ -42,28 +42,28 @@ State of input 1.
 Value can be found in the published state on the `input_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_l1": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` input is ON, if `false` OFF.
+If value equals `ON` input is ON, if `OFF` OFF.
 
 ### Input (binary, l2 endpoint)
 State of input 2.
 Value can be found in the published state on the `input_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_l2": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` input is ON, if `false` OFF.
+If value equals `ON` input is ON, if `OFF` OFF.
 
 ### Input (binary, l3 endpoint)
 State of input 3.
 Value can be found in the published state on the `input_l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_l3": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` input is ON, if `false` OFF.
+If value equals `ON` input is ON, if `OFF` OFF.
 
 ### Input (binary, l4 endpoint)
 State of input 4.
 Value can be found in the published state on the `input_l4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_l4": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` input is ON, if `false` OFF.
+If value equals `ON` input is ON, if `OFF` OFF.
 
 ### Switch (l11 endpoint)
 The current state of this switch is in the published state under the `state_l11` property (value is `ON` or `OFF`).
@@ -86,4 +86,34 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Pulse duration (numeric, l11 endpoint)
+Duration of the pulse..
+Value can be found in the published state on the `duration_l11` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration_l11": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `3600`.
+The unit of this value is `s`.
+
+### Pulse duration (numeric, l12 endpoint)
+Duration of the pulse..
+Value can be found in the published state on the `duration_l12` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration_l12": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `3600`.
+The unit of this value is `s`.
+
+### Trigger (enum, l11 endpoint)
+Trigger a timed pulse. The length of the pulse is defined by 'Pulse duration'. If the 'Pulse duration' is undefined a default value of 1s will be used..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_l11": NEW_VALUE}`.
+The possible values are: `press`.
+
+### Trigger (enum, l12 endpoint)
+Trigger a timed pulse. The length of the pulse is defined by 'Pulse duration'. If the 'Pulse duration' is undefined a default value of 1s will be used..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_l12": NEW_VALUE}`.
+The possible values are: `press`.
 
