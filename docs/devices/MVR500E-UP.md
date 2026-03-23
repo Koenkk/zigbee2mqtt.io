@@ -76,7 +76,7 @@ The possible values are: `relaunch_ble_advert`.
 
 ### Input mode (enum)
 Indicate how the input should be handle:
-        - 0 -> Unknow
+        - 0 -> Unknown
         - 1 -> Push button
         - 2 -> Switch
         - 3 -> Relay

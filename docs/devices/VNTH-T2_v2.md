@@ -68,7 +68,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 It's not possible to read (`/get`) this value.
 
 ### Temperature sensitivity (numeric)
-Temperature sensivity.
+Temperature sensitivity.
 Value can be found in the published state on the `temperature_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensitivity": NEW_VALUE}`.

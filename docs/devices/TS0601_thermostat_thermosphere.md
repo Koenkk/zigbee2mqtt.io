@@ -39,14 +39,14 @@ This climate device supports the following features: `system_mode`, `current_hea
 - `system_mode`: Whether the thermostat is turned on or off. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`. Reading (`/get`) this attribute is not possible.
 
 ### Sensor mode (enum)
-What type of sensor are you using to meausure the temperature of the floor?.
+What type of sensor are you using to measure the temperature of the floor?.
 Value can be found in the published state on the `sensor_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_mode": NEW_VALUE}`.
 The possible values are: `room_temperature`, `floor_temperature`, `room_with_floor_limit`.
 
 ### Adaptive start (binary)
-Preheat the room to the desired tempature before the scheduled start time..
+Preheat the room to the desired temperature before the scheduled start time..
 Value can be found in the published state on the `adaptive_start` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"adaptive_start": NEW_VALUE}`.

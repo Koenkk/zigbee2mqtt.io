@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPM02V3  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 3P+N system |
-| Exposes | voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, energy, produced_energy, power_factor, power, ac_frequency, energy_a, energy_b, energy_c, energy_produced_a, energy_produced_b, energy_produced_c, power_factor_a, power_factor_b, power_factor_c |
+| Exposes | voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, energy, produced_energy, power_factor, power, ac_frequency, energy_a, energy_b, energy_c, energy_produced_a, energy_produced_b, energy_produced_c, power_factor_a, power_factor_b, power_factor_c, update_frequency |
 | Picture | ![Tuya SPM02V3](https://www.zigbee2mqtt.io/images/devices/SPM02V3.png) |
 
 
@@ -184,4 +184,13 @@ Instantaneous measured power factor (phase C).
 Value can be found in the published state on the `power_factor_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
+
+### Update frequency (numeric)
+Update frequency.
+Value can be found in the published state on the `update_frequency` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `3600`.
+The unit of this value is `s`.
+Besides the numeric values the following values are accepted: `default`.
 

@@ -133,7 +133,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `true` led disabled night is ON, if `false` OFF.
 
 ### Click mode (enum)
-Click mode for wireless button. fast: only supports single click but allows faster reponse time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks..
+Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks..
 Value can be found in the published state on the `click_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"click_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_mode": NEW_VALUE}`.

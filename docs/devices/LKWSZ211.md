@@ -1,6 +1,6 @@
 ---
-title: "Tuya LKWSZ211 control via MQTT"
-description: "Integrate your Tuya LKWSZ211 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Linkoze LKWSZ211 control via MQTT"
+description: "Integrate your Linkoze LKWSZ211 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-01-31T19:37:46
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya LKWSZ211
+# Linkoze LKWSZ211
 
 |     |     |
 |-----|-----|
 | Model | LKWSZ211  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Scene remote with 2 keys |
+| Vendor  | [Linkoze](/supported-devices/#v=Linkoze)  |
+| Description | Wireless switch (2-key) |
 | Exposes | battery, action |
-| Picture | ![Tuya LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.png) |
+| Picture | ![Linkoze LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,6 +44,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `button_1_single`, `button_1_double`, `button_1_hold`, `button_2_single`, `button_2_double`, `button_2_hold`.
-
-button_2_hold`.
 

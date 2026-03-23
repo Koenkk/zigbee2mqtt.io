@@ -271,7 +271,7 @@ function getExposeDocs(expose, definition) {
                     `\n**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use \`brightness_move_onoff\`/\`brightness_step_onoff\``,
                 );
             }
-            lines.push(`\`\`\`\`js`);
+            lines.push(`\`\`\`js`);
             lines.push(`{`);
             if (brightness) {
                 lines.push(`  "brightness_move": -40, // Starts moving brightness down at 40 units per second`);

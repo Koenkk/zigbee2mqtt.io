@@ -110,7 +110,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Operation mode (enum)
-Command mode is usefull for binding. Event mode is usefull for processing..
+Command mode is useful for binding. Event mode is useful for processing..
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.

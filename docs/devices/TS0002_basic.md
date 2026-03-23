@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | 2 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type |
 | Picture | ![Tuya TS0002_basic](https://www.zigbee2mqtt.io/images/devices/TS0002_basic.png) |
-| White-label | OXT SWTZ22, Moes ZM-104B-M |
+| White-label | OXT SWTZ22 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -374,14 +374,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed1IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed1IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed1IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed1IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed1IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed1IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed1IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed1IntensityWhenOff": NEW_VALUE}`.
@@ -402,14 +402,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed2IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed2IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed2IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed2IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed2IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed2IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed2IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed2IntensityWhenOff": NEW_VALUE}`.
@@ -430,14 +430,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed3IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed3IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed3IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed3IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed3IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed3IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed3IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed3IntensityWhenOff": NEW_VALUE}`.
@@ -458,14 +458,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed4IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed4IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed4IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed4IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed4IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed4IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed4IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed4IntensityWhenOff": NEW_VALUE}`.
@@ -486,14 +486,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed5IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed5IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed5IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed5IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed5IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed5IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed5IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed5IntensityWhenOff": NEW_VALUE}`.
@@ -514,14 +514,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed6IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed6IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed6IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed6IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed6IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed6IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed6IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed6IntensityWhenOff": NEW_VALUE}`.
@@ -542,14 +542,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed7IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed7IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed7IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed7IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed7IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
+Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed7IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed7IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed7IntensityWhenOff": NEW_VALUE}`.

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eTH102zex  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Temperature and humidity sensor with e-ink1.02, date, termostat, hygrostat |
+| Description | Temperature and humidity sensor with e-ink1.02, date, thermostat, hygrostat |
 | Exposes | temperature, humidity, battery, voltage, battery_low, reading_interval, config_report_enable, comparison_previous_data, enable_temperature, invert_logic_temperature, invert, high_temperature, low_temperature, enable_humidity, invert_logic_humidity, high_humidity, low_humidity |
 | Picture | ![EFEKTA EFEKTA_eTH102zex](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eTH102zex.png) |
 
