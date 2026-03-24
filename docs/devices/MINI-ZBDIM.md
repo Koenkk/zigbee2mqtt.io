@@ -27,6 +27,10 @@ pageClass: device-page
 
 ### Issues
 
+#### Groups not supported
+
+This device can be added to groups, but it does **not** respond to any group commands. Tested on v1.0.5
+
 #### Inverted moving
 
 This device performs inverse effects on receipt of _Move_  
