@@ -1,10 +1,35 @@
 # Touchlink
 
-**Important:** The touchlinking function **only** works with Zigbee Coordinator adapters based on a Texas Instruments ZNP adapters (TI chips starting with "CC", e.g. CC2652) and Silicon Labs EZSP adapters (Silabs chips starting with "EFR32", e.g. EFR32MG21) with touchlink enabled in the Zigbee Coordinator firmware.
+Touchlink (or ZLL) is a feature that allows Zigbee devices to communicate, **without** necessarily being in the same network.
 
-Touchlink is a feature of Zigbee which allows devices physically close to each other to communicate with each other **without** being in the same network.
+Devices must be **physically close** to each other, and have Touchlink enabled in their firmware.  
+_Range depends on devices: normally 10cm, but up to 1m on strong adapters._
 
-Note that not all Zigbee devices support Touchlink, but most bulbs of common brands like Philips and IKEA support this.
+**Example uses:**
+
+- Identify or reset devices near the coordinator via Zigbee2MQTT
+- Reset devices via a Touchlink-capable device, e.g. [Hue dimmer switch gen 1](./../../devices/324131092621.md)
+- Setup device-to-device binding (e.g. remote to light) without involving the coordinator and Zigbee2MQTT
+
+## Support
+
+### Coordinator
+
+Texas Instruments adapters _(zStack, CCxxxx)_ are **fully supported**.
+
+Silicon Labs adapters _(EmberZNet, EFR32xxxx)_ are **partially supported**.  
+`2026-03-18`: The [Scan](#scan) operation does not produce responses with some firmware versions (other operations should not be affected). _Under investigation._
+
+Other adapters/drivers are currently **not supported**.
+
+### Devices
+
+Compatible devices expose the `Touchlink` cluster, which includes most Philips and IKEA devices, some Tuya light bulbs, Namron relays and more.
+
+::: warning
+Some devices may disable Touchlink after a few minutes! _(security measure)_  
+Power-cycle the device to make sure it's active.
+:::
 
 ::: tip
 All commands below can also be executed via the frontend _Touchlink_ tab.
@@ -12,21 +37,44 @@ All commands below can also be executed via the frontend _Touchlink_ tab.
 
 ## Scan
 
-This allows to scan for Touchlink enabled devices. The outcome of this scan can be used later to determine what device to factory reset. To scan send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/scan` with an empty payload.
-The response will be send to `zigbee2mqtt/bridge/response/touchlink/scan`, example payload: `{"data":{"found":[{"ieee_address": '0x12345678', "channel": 12}, {"ieee_address": '0x12654321', "channel": 24}]},"status":"ok"}`.
+Scan for Touchlink-enabled devices **near the coordinator**.  
+The outcome of this scan can be used later, to choose which device to reset or identify.
+
+This can take up to 1 minute. **This is a disruptive operation**, during the scan, **communication with devices is unavailable** (be sure to account for that, prefer times of lesser usage if necessary).
+
+To scan, send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/scan` with an empty payload.
+
+The response will be sent to `zigbee2mqtt/bridge/response/touchlink/scan`, example payload: `{"data":{"found":[{"ieee_address": '0x12345678', "channel": 12}, {"ieee_address": '0x12654321', "channel": 24}]},"status":"ok"}`.
 
 ## Identify
 
-This allows to identify (e.g. bulb blinking) a device via Touchlink. To identify send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/identify` with payload e.g. `{"ieee_address": '0x12345678', "channel": 12}` (use scan from above to determine `ieee_address` and `channel`).
+Identify a nearby device via Touchlink _(e.g. bulb blinking)._
+
+Send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/identify` with payload e.g. `{"ieee_address": '0x12345678', "channel": 12}`  
+_(Use scan from above to determine `ieee_address` and `channel`)._
 
 ## Factory reset device
 
-Zigbee2MQTT allows to factory reset devices through Touchlink. This is especially handy for e.g. Philips Hue bulbs as they cannot be factory reset by turning them on/off 5 times. Demo: [video](https://www.youtube.com/watch?v=kcRj77YGyKk)
+Factory reset nearby devices through Touchlink. _Demonstration: [video](https://www.youtube.com/watch?v=kcRj77YGyKk)_
 
-To factory reset a device through Touchlink bring the device close (< 10 cm) to your Zigbee Coordinator (e.g. Zigbee USB adapter). After this send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/factory_reset` with an empty payload.
+If the device does not enter pairing mode after one of the following methods, it may additionally need one **power-cycle.**
 
-Zigbee2MQTT will now start scanning, this can take up to 1 minute and during this scan **your network cannot be used**. After some time the device will identify itself (e.g. a bulb will start to blink).
+To pair the device again, _permit joining_ **after** the reset is done.
 
-Now that your device has been factory reset, it will automatically join Zigbee2MQTT (make sure that joining is enabled). If it doesn't, try powering the bulb off and on 1 time.
+### Any device
 
-In case you want to factory reset a specific device (which can be found through a scan, see above) request the factory reset with the following payload: `{"ieee_address": "0x12345678", "channel": 12}`.
+Without targeting a specific device, it is advised to _power-off devices that should not be reset or ensure they are out of range_ (the first device found becomes the target).
+Send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/factory_reset` with an empty payload.
+
+Zigbee2MQTT will start scanning.
+After some time the device will identify itself and reset.
+
+### Specific device
+
+#### IEEE address + channel
+
+Target a specific device by adding a payload to the above message, e.g. `{"ieee_address": "0x12345678", "channel": 12}`. _(Obtain the values from a scan)_
+
+#### Serial number (Philips Hue only)
+
+Most Philips Hue devices can be targeted without scanning, by using the serial number written on the device. More info on device-specific pages, e.g. [Hue white ambiance E27](./../../devices/9290022169.md)

@@ -23,8 +23,14 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Related
+- [SBBT-004CEU](./SBBT-004CEU.md) - Shelly BLU Wall Switch 4 ZB
+- [SBBT-104CEU](./SBBT-104CEU.md) - Shelly BLU Wall Switch 4 ZB DK
+- [SBBT-102C](./SBBT-102C.md) - Shelly BLU Button Tough 1 ZB
 
+See all information on [Shelly API docs](https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button4_ZB) (pairing, modes, bind actions, find&bind).
 <!-- Notes END: Do not edit below this line -->
 
 

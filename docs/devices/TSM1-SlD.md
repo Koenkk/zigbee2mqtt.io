@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TSM1-SlD  |
 | Vendor  | [Slacky-DIY](/supported-devices/#v=Slacky-DIY)  |
 | Description | Tuya switch module 1 gang with custom firmware |
-| Exposes | switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, switch_model, action |
+| Exposes | switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, action |
 | Picture | ![Slacky-DIY TSM1-SlD](https://www.zigbee2mqtt.io/images/devices/TSM1-SlD.png) |
 
 
@@ -77,13 +77,6 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
-
-### Switch model (enum)
-Switch model.
-Value can be found in the published state on the `switch_model` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_model": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_model": NEW_VALUE}`.
-The possible values are: `none`, `model_1`, `model_2`, `model_3`, `model_4`, `model_5`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

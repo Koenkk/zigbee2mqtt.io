@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VNTH-T2_v2  |
 | Vendor  | [TECH](/supported-devices/#v=TECH)  |
 | Description | Smart radiator valve |
-| Exposes | child_lock, switch (state), window_open, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), temperature_sensitivity, comfort_temperature, eco_temperature, holiday_temperature, min_temperature_limit, scale_protection, frost_protection, valve_alarm, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday |
+| Exposes | child_lock, switch (state), window_open, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), temperature_sensitivity, comfort_temperature, eco_temperature, holiday_temperature, min_temperature_limit, scale_protection, frost_protection, valve_alarm, battery, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday |
 | Picture | ![TECH VNTH-T2_v2](https://www.zigbee2mqtt.io/images/devices/VNTH-T2_v2.png) |
 
 
@@ -125,6 +125,13 @@ If value equals `ON` frost protection is ON, if `OFF` OFF.
 Value can be found in the published state on the `valve_alarm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` valve alarm is ON, if `false` OFF.
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Schedule monday (text)
 Schedule for monday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".

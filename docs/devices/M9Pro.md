@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | M9Pro  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart 4 gang switch, curtain, smart light or scene. 1x thermostat control |
-| Exposes | switch (state), mode, name, scene_name, dimmer_name, dimmer_switch, curtain_name, curtain_switch, power_on_behavior, show_weather, backlight, show_screen, thermostat, thermostat_name, scene_switch, temperature_1, condition_1, action |
+| Exposes | switch (state), mode, name, scene_name, dimmer_name, dimmer_switch, brightness, color_temp, curtain_name, curtain_switch, group_id, power_on_behavior, show_weather, backlight, show_screen, thermostat, thermostat_name, current_heating_setpoint, fan_mode, scene_switch, temperature_1, condition_1, action |
 | Picture | ![Tuya M9Pro](https://www.zigbee2mqtt.io/images/devices/M9Pro.png) |
 
 
@@ -180,6 +180,62 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_switch_l4": NEW_VALUE}`.
 If value equals `ON` dimmer switch is ON, if `OFF` OFF.
 
+### Brightness (numeric, l1 endpoint)
+Brightness for endpoint 1 (Read Only).
+Value can be found in the published state on the `brightness_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l1": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `254`.
+
+### Brightness (numeric, l2 endpoint)
+Brightness for endpoint 2 (Read Only).
+Value can be found in the published state on the `brightness_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l2": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `254`.
+
+### Brightness (numeric, l3 endpoint)
+Brightness for endpoint 3 (Read Only).
+Value can be found in the published state on the `brightness_l3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l3": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `254`.
+
+### Brightness (numeric, l4 endpoint)
+Brightness for endpoint 4 (Read Only).
+Value can be found in the published state on the `brightness_l4` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l4": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `254`.
+
+### Color temp (numeric, l1 endpoint)
+Color temp for endpoint 1 (Read Only).
+Value can be found in the published state on the `color_temp_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_l1": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `254`.
+
+### Color temp (numeric, l2 endpoint)
+Color temp for endpoint 2 (Read Only).
+Value can be found in the published state on the `color_temp_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_l2": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `254`.
+
+### Color temp (numeric, l3 endpoint)
+Color temp for endpoint 3 (Read Only).
+Value can be found in the published state on the `color_temp_l3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_l3": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `254`.
+
+### Color temp (numeric, l4 endpoint)
+Color temp for endpoint 4 (Read Only).
+Value can be found in the published state on the `color_temp_l4` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_l4": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `254`.
+
 ### Curtain name (text, l1 endpoint)
 Curtain name for switch 1 (max 8 chars displayed).
 Value can be found in the published state on the `curtain_name_l1` property.
@@ -231,6 +287,34 @@ Value can be found in the published state on the `curtain_switch_l4` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"curtain_switch_l4": NEW_VALUE}`.
 If value equals `ON` curtain switch is ON, if `OFF` OFF.
+
+### Group id (numeric, l1 endpoint)
+Group ID to bind to for switch 1..
+Value can be found in the published state on the `group_id_l1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_l1": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10000`.
+
+### Group id (numeric, l2 endpoint)
+Group ID to bind to for switch 2..
+Value can be found in the published state on the `group_id_l2` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_l2": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10000`.
+
+### Group id (numeric, l3 endpoint)
+Group ID to bind to for switch 3..
+Value can be found in the published state on the `group_id_l3` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_l3": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10000`.
+
+### Group id (numeric, l4 endpoint)
+Group ID to bind to for switch 4..
+Value can be found in the published state on the `group_id_l4` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_l4": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10000`.
 
 ### Power-on behavior (enum)
 Whole panel override..
@@ -300,6 +384,20 @@ Name for Thermostat (max 8 chars displayed).
 Value can be found in the published state on the `thermostat_name` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"thermostat_name": NEW_VALUE}`.
+
+### Current heating setpoint (numeric)
+Thermostat temperature setting (Read Only).
+Value can be found in the published state on the `current_heating_setpoint` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `16` and the maximum value is `32`.
+
+### Fan mode (numeric)
+Thermostat fan setting (Read Only).
+Value can be found in the published state on the `fan_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fan_mode": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `3`.
 
 ### Scene switch (enum)
 Scene Switch.

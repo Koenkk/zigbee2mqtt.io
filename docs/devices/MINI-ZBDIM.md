@@ -23,8 +23,20 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Issues
 
+#### Groups not supported
+
+This device can be added to groups, but it does **not** respond to any group commands. Tested on v1.0.5
+
+#### Inverted moving
+
+This device performs inverse effects on receipt of _Move_  
+(whether it's sent through Zigbee2MQTT, or a bound remote). Tested on version v1.0.5
+
+For example `{"brightness_move": -40}` will start **increasing** the brightness (instead of decreasing it).
 <!-- Notes END: Do not edit below this line -->
 
 

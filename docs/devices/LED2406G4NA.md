@@ -24,6 +24,12 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+### Information
+
+- [FCC - emissisons and teardown](https://apps.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=1fLYFFfj7fLlUfRWplJYbQ%3D%3D&fcc_id=FHO-LED2406G4NA)
+- [CSA IoT - Zigbee compliance](https://csa-iot.org/csa_product/kajplats-e26-ws-globe-450lm-2/)
 
 <!-- Notes END: Do not edit below this line -->
 
