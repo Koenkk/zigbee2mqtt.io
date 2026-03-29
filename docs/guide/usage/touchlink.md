@@ -18,7 +18,7 @@ _Range depends on devices: normally 10cm, but up to 1m on strong adapters._
 Texas Instruments adapters _(zStack, CCxxxx)_ are **fully supported**.
 
 Silicon Labs adapters _(EmberZNet, EFR32xxxx)_ are **partially supported**.  
-`2026-03-18`: The [Scan](#scan) operation does not produce responses with some firmware versions (other operations should not be affected). _Under investigation._
+`2026-03-18`: The [Scan](#scan) operation does not produce responses with some firmware versions. Philips Hue reset is not affected. _Under investigation_
 
 Other adapters/drivers are currently **not supported**.
 
