@@ -28,7 +28,7 @@ pageClass: device-page
 
 ### Information
 
-- [FCC - emissisons and teardown](https://apps.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=9RFODW3SBewC4XowK6%2BBCQ%3D%3D&fcc_id=FHO-LED2404G6NA)
+- [FCC - emissions and teardown](https://apps.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=9RFODW3SBewC4XowK6%2BBCQ%3D%3D&fcc_id=FHO-LED2404G6NA)
 
 <!-- Notes END: Do not edit below this line -->
 
