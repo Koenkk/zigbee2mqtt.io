@@ -1,7 +1,7 @@
 ---
-title: "Heiman HS1SA-EF control via MQTT"
-description: "Integrate your Heiman HS1SA-EF via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2026-02-28T20:18:44
+title: "Heiman HS1SA-E-PLUS control via MQTT"
+description: "Integrate your Heiman HS1SA-E-PLUS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-03-31T19:04:38
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Heiman HS1SA-EF
+# Heiman HS1SA-E-PLUS
 
 |     |     |
 |-----|-----|
-| Model | HS1SA-EF  |
+| Model | HS1SA-E-PLUS  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smoke detector |
 | Exposes | battery, identify, temperature, smoke, battery_low, test, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, smoke_level, smoke_unit, chamber_contamination, siren_for_automation_only, reported_packages, rejoin_count, reboot_count |
-| Picture | ![Heiman HS1SA-EF](https://www.zigbee2mqtt.io/images/devices/HS1SA-EF.png) |
+| Picture | ![Heiman HS1SA-E-PLUS](https://www.zigbee2mqtt.io/images/devices/HS1SA-E-PLUS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

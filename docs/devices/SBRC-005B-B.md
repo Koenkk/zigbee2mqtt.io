@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### Warning
 At least one batch of these remotes has been identified as using the same IEEE address. Multiple devices with the same IEEE address cannot be added to the same network.
-
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | TS0601_bed_presence_sensor  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | 'Pressure Sensing Strap/Bed Occupancy Sensor |
+| Description | Pressure Sensing Strap/Bed Occupancy Sensor |
 | Exposes | occupancy, battery, illuminance, sensitivity, interval_time, presence_delay, presence_time, work_state |
 | Picture | ![Tuya TS0601_bed_presence_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_bed_presence_sensor.png) |
 

@@ -71,7 +71,6 @@ Value can be found in the published state on the `large_motion_detection_sensiti
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"large_motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Large motion detection distance (numeric)
 Motion detection distance.
@@ -103,7 +102,6 @@ Value can be found in the published state on the `medium_motion_detection_sensit
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"medium_motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Indicator (binary)
 LED Indicator.
@@ -126,7 +124,6 @@ Value can be found in the published state on the `small_detection_sensitivity` p
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"small_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Minimum range (numeric)
 Minimum range.

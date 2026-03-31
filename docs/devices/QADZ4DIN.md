@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QADZ4DIN  |
 | Vendor  | [QA](/supported-devices/#v=QA)  |
 | Description | 4 channel dimmer module |
-| Exposes | light (state, brightness, min_brightness), switch_type, power_on_behavior |
+| Exposes | light (state, brightness, min_brightness), switch_type, dimming_speed, power_on_behavior |
 | Picture | ![QA QADZ4DIN](https://www.zigbee2mqtt.io/images/devices/QADZ4DIN.png) |
 
 
@@ -55,9 +55,16 @@ This light supports the following features: `state`, `brightness`, `min_brightne
 ### Switch type (enum)
 Type of the switch.
 Value can be found in the published state on the `switch_type` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `toggle`, `state`, `momentary`.
+The possible values are: `momentary`, `toggle`.
+
+### Dimming speed (enum)
+Dimming speed.
+Value can be found in the published state on the `dimming_speed` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_speed": NEW_VALUE}`.
+The possible values are: `slow`, `middle`, `fast`.
 
 ### Power on behavior (enum)
 Value can be found in the published state on the `power_on_behavior` property.

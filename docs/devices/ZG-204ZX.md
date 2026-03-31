@@ -1,6 +1,6 @@
 ---
 title: "HOBEIAN ZG-204ZX control via MQTT"
-description: "Integrate your HOBEIAN ZG-204ZH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+description: "Integrate your HOBEIAN ZG-204ZX via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2026-03-27T15:19:08
 pageClass: device-page
 ---
@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG-204ZX  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
-| Description |24Ghz human presence+T&H sensor |
-| Exposes | presence, motion_state, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, static_detection_distance, static_detection_sensitivity, motion_detection_mode, motion_detection_sensitivity |
-| Picture | ![HOBEIAN ZG-204ZH](https://www.zigbee2mqtt.io/images/devices/ZG-204ZX.png) |
+| Description | 24Ghz millimeter wave and T&H sensor |
+| Exposes | presence, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, detection_distance, motion_detection_sensitivity, static_detection_sensitivity, anti_interference |
+| Picture | ![HOBEIAN ZG-204ZX](https://www.zigbee2mqtt.io/images/devices/ZG-204ZX.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -100,7 +100,7 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Fading time (numeric)
-Motion keep time.
+Presence keep time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
@@ -122,13 +122,20 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `720`.
 The unit of this value is `minutes`.
 
-### Static detection distance (numeric)
-Static detection distance.
-Value can be found in the published state on the `static_detection_distance` property.
+### Detection distance (numeric)
+Detection distance.
+Value can be found in the published state on the `detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `m`.
+
+### Motion detection sensitivity (numeric)
+Motion detection sensitivity.
+Value can be found in the published state on the `motion_detection_sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
 
 ### Static detection sensitivity (numeric)
 Static detection sensitivity.
@@ -136,18 +143,11 @@ Value can be found in the published state on the `static_detection_sensitivity` 
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
-### Motion detection sensitivity (numeric)
-Radar Motion detection sensitivity.
-Value can be found in the published state on the `motion_detection_sensitivity` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
-
-### anti_interference (bool)
-Radar anti interference.
+### Anti interference (binary)
+Anti interference function.
 Value can be found in the published state on the `anti_interference` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"anti_interference": NEW_VALUE}`.
+If value equals `ON` anti interference is ON, if `OFF` OFF.
+
