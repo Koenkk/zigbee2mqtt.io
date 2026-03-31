@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SZLR08  |
 | Vendor  | [Lincukoo](/supported-devices/#v=Lincukoo)  |
 | Description | 24GHz millimeter wave radar |
-| Exposes | presence, illuminance, installation_height, radar_sensitivity, fading_time, relay_switch, radar_switch, indicator, relay_mode, radar_mode |
+| Exposes | presence, detection_distance, illuminance, installation_height, radar_sensitivity, fading_time, relay_switch, radar_switch, indicator, relay_mode, radar_mode |
 | Picture | ![Lincukoo SZLR08](https://www.zigbee2mqtt.io/images/devices/SZLR08.png) |
 
 
@@ -42,6 +42,13 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
+
+### Detection distance (numeric)
+Distance of detected person.
+Value can be found in the published state on the `detection_distance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `1000`.
+The unit of this value is `cm`.
 
 ### Illuminance (numeric)
 Measured illuminance.

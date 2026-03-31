@@ -1,6 +1,6 @@
 ---
-title: "NOUS D5Z control via MQTT"
-description: "Integrate your NOUS D5Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Nous D5Z control via MQTT"
+description: "Integrate your Nous D5Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-10-31T19:12:27
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NOUS D5Z
+# Nous D5Z
 
 |     |     |
 |-----|-----|
 | Model | D5Z  |
-| Vendor  | [NOUS](/supported-devices/#v=NOUS)  |
+| Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Zigbee smart energy meter with leakage and prepayment |
 | Exposes | energy, produced_energy, current, temperature, leakage_current, switch (state), reclosing_enable, timer, cycle_schedule, clear_energy, switch_prepayment, balance_energy, charge_energy, fault, status, reclose_recover_seconds, power_on_delay, overcurrent_threshold_time, lost_flow_threshold_time, relay_status_on_power_on, alarm_set_1, alarm_set_2, alarm_set_3 |
-| Picture | ![NOUS D5Z](https://www.zigbee2mqtt.io/images/devices/D5Z.png) |
+| Picture | ![Nous D5Z](https://www.zigbee2mqtt.io/images/devices/D5Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

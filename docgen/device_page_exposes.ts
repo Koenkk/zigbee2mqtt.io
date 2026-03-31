@@ -42,7 +42,7 @@ function compositeDocs(composite) {
             ]
                 .filter((e) => e)
                 .join(', ');
-        } else if (feature.type === 'text' || feature.type === 'list') {
+        } else if (feature.type === 'text' || feature.type === 'list' || feature.type === 'composite') {
             // do nothing on purpose
         } else {
             throw new Error(`Unsupported composite feature: ${feature.type}`);
@@ -129,33 +129,36 @@ function getExposeDocs(expose, definition) {
         }
     } else if (['switch', 'lock', 'cover', 'fan'].includes(expose.type)) {
         const state = expose.features.find((e) => e.name === 'state');
-        const stateStr = expose.type === 'cover' ? `(value is \`OPEN\` or \`CLOSE\`)` : `(value is \`${state.value_on}\` or \`${state.value_off}\`)`;
-        lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property ${stateStr}.`);
+        if (state) {
+            const stateStr =
+                expose.type === 'cover' ? `(value is \`OPEN\` or \`CLOSE\`)` : `(value is \`${state.value_on}\` or \`${state.value_off}\`)`;
+            lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property ${stateStr}.`);
 
-        if (state.access & access.SET) {
-            if (expose.type === 'switch') {
+            if (state.access & access.SET) {
+                if (expose.type === 'switch') {
+                    lines.push(
+                        `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`,
+                    );
+                } else if (state.type === 'enum') {
+                    lines.push(
+                        `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload ${state.values.map((v) => `\`{"${state.property}": "${v}"}\``).join(', ')}.`,
+                    );
+                } else {
+                    lines.push(
+                        `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\` or \`{"${state.property}": "${state.value_off}"}\`.`,
+                    );
+                }
+            } else {
+                lines.push(`It's not possible to write (\`/set\`) this value.`);
+            }
+
+            if (state.access & access.GET) {
                 lines.push(
-                    `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`,
-                );
-            } else if (state.type === 'enum') {
-                lines.push(
-                    `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload ${state.values.map((v) => `\`{"${state.property}": "${v}"}\``).join(', ')}.`,
+                    `To read the current state of this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${state.property}": ""}\`.`,
                 );
             } else {
-                lines.push(
-                    `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\` or \`{"${state.property}": "${state.value_off}"}\`.`,
-                );
+                lines.push(`It's not possible to read (\`/get\`) this value.`);
             }
-        } else {
-            lines.push(`It's not possible to write (\`/set\`) this value.`);
-        }
-
-        if (state.access & access.GET) {
-            lines.push(
-                `To read the current state of this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${state.property}": ""}\`.`,
-            );
-        } else {
-            lines.push(`It's not possible to read (\`/get\`) this value.`);
         }
 
         const on_time = definition.toZigbee.find((t) => t.key?.includes('on_time'));
@@ -316,9 +319,14 @@ function getExposeDocs(expose, definition) {
         for (const f of expose.features.filter((e) =>
             ['occupied_heating_setpoint', 'occupied_cooling_setpoint', 'current_heating_setpoint', 'pi_heating_demand'].includes(e.name),
         )) {
-            lines.push(
-                `- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`. ${readGet(f)}`,
-            );
+            let line = `- \`${f.name}\`: ${f.description}.`;
+            if (f.access & access.SET) {
+                line += ` To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`.`;
+            } else {
+                line += ` Writing (\`/set\`) this attribute is not possible.`;
+            }
+            line += ' ' + readGet(f);
+            lines.push(line);
         }
 
         const localTemperature = expose.features.find((e) => e.name === 'local_temperature');
@@ -327,9 +335,14 @@ function getExposeDocs(expose, definition) {
         }
 
         for (const f of expose.features.filter((e) => ['system_mode', 'preset', 'mode'].includes(e.name))) {
-            lines.push(
-                `- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}. ${readGet(f)}`,
-            );
+            let line = `- \`${f.name}\`: ${f.description}.`;
+            if (f.access & access.SET) {
+                line += ` To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}.`;
+            } else {
+                line += ` Writing (\`/set\`) this attribute is not possible.`;
+            }
+            line += ' ' + readGet(f);
+            lines.push(line);
         }
 
         const runningState = expose.features.find((e) => e.name === 'running_state');

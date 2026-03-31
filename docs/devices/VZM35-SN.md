@@ -292,7 +292,7 @@ Which mode to use when binding EP3 (config button) to another device (like a fan
 Value can be found in the published state on the `fanControlMode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fanControlMode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanControlMode": NEW_VALUE}`.
-The possible values are: `Disabled`, `Multi Tap`, `Cycle`.
+The possible values are: `Disabled`, `Multi Tap`, `Cycle`, `Toggle`.
 
 ### LowLevelForFanControlMode (numeric)
 Level to send to device bound to EP3 when set to low..

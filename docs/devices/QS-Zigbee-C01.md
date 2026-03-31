@@ -27,7 +27,7 @@ pageClass: device-page
 
 _How to reset_
 * Press the reset key (upper right in hole) for about 10 seconds until the indicator LED inside the module flashes quickly.
-* Alternatively turn on/off the wired switch for 5 times until the indicator LED inside the module flashes quickly.
+* Alternatively turn on/off the wired switch  for 5 times until the indicator LED inside the module flashes quickly. (The relay should click 10 times, so if you have a momentary switch connected to the module, you should push it 10 times)
 <!-- Notes END: Do not edit below this line -->
 
 

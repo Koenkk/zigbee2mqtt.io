@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | T2_E27_CCT  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
-| Description | E27 led bulb |
+| Description | E27 CCT led bulb |
 | Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_on_behavior, identify, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration, transition_curve_curvature, transition_initial_brightness |
 | Picture | ![Aqara T2_E27_CCT](https://www.zigbee2mqtt.io/images/devices/T2_E27_CCT.png) |
 

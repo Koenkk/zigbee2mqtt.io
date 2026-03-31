@@ -15,19 +15,27 @@ Adapters can be flashed by putting them in the BSL (bootloader) mode.
 See the "Vendor flashing instructions" of your adapter below on how to do this.
 Once you've successfully put your adapter into BSL mode, use any of the tools below to flash it.
 
+- Browser based (easiest, recommended)
+    - [XZG Multi-Tool](https://mt.xyzroe.cc/)
+        - Select and flash firmware from built-in dropdown list.
+        - Detect chip revision, installed version and backup current firmware.
+        - NVRAM operations: read / write / erase.
+        - Read / write IEEE address.
+        - Remote devices: access serial, USB, and TCP devices via provided `bridge` (executables, Docker, or HA add-on).
+    - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc)
+        - Recommended for SLZB adapters, can also flash other adapters
 - UI tools
-    - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc) (**recommended**)
-        - Allows for flashing your adapter from the browser, eliminating the need for any software installation.
     - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
-    - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
 - CLI tools (multi platform Python based command line tools)
     - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
     - [llama-bsl](https://github.com/electrolama/llama-bsl) (fork of cc2538-bsl with added features)
 - Home Assistant addon
+    - [XZG Multi-Tool](https://github.com/xyzroe/XZG-MT)
+        - Bridge add-on for full interaction with remote serial, USB, and TCP devices.
     - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
     - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
 
-- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
+- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the web-interface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
 
 <img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" height=300 />
 
@@ -422,11 +430,40 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 
 :::
 
+::: details SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice
+
+**SLZB-Ultima Series** is a multi-radio smart-home gateway, designed for advanced Zigbee2MQTT and multi-protocol deployments.
+
+**Key features**:
+
+- **Dual IEEE 802.15.4 radios (Zigbee + Thread):**
+-   - **CC2674P10** - enables parallel **Zigbee coordinator/router** or **Thread Border Router** operation
+-   - **EFR32MG24** - enables parallel **Zigbee coordinator/router** or **Thread Border Router** operation
+- **Z-Wave** _(optional add-on)_ - Adds support for Z-Wave networks (Z-Wave JS over Ethernet).
+- **4G/LTE** _(optional add-on)_ - Provides mobile internet connectivity for locations without wired Ethernet or Wi-Fi, or as a backup WAN.
+- **Connectivity:** Ethernet + Wi-Fi + USB (Type-C)
+- **USB passthrough over Ethernet:** plug a USB device (with some limitations) into SLZB-Ultima and use that USB device via the network
+- **Power:** USB-C (default), **PoE** _(optional add-on)_ - Power the device over Ethernet using a single cable for clean, professional installations.
+- **IR receiver + IR transmitter:** - Learn and control infrared devices such as TVs, air conditioners, and AV equipment.
+- **Local feedback & interaction:** buzzer, **12× WS2812B RGB LEDs**, buttons, service LEDs
+- **Digital microphone** _(optional add-on)_ - Enables audio input when running ESPHome-based firmware.
+
+Designed for **local, cloud-independent** operation with Home Assistant and Zigbee2MQTT.
+
+|                                       Product functions                                        |                                    Porduct photo                                    |                                  Interface screenshot                                  |
+| :--------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-functions.png" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-fw.jpg" width="200" /> |
+
+- [Product page](https://smlight.tech/global/slzb-ultima)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-ultima), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005010752270531.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010752555288.html).
+
+:::
+
 ### Hub
 
-::: details SMLIGHT SMHUB (Essential/Professional variants)
+::: details SMLIGHT SMHUB (Essential/Premium variants)
 
-SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Professional variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Professional variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
+SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Premium variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Premium variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
 
 |                               Product picture                               |                            Interface screenshot                            |                                               Youtube videoreview                                               |
 | :-------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |

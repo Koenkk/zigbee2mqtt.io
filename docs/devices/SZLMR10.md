@@ -69,7 +69,7 @@ Fading time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
-The minimal value is `30` and the maximum value is `60`.
+The minimal value is `30` and the maximum value is `300`.
 The unit of this value is `s`.
 
 ### Radar switch (binary)

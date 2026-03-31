@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WT-A03E  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Radiator thermostat W600 |
-| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, calibrate, calibrated, state, valve_detection, display_flip, helper, window_detection, child_lock, away_preset_temperature, identify |
+| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, calibrate, calibrated, state, valve_detection, display_flip, helper, window_detection, child_lock, away_preset_temperature, position, identify |
 | Picture | ![Aqara WT-A03E](https://www.zigbee2mqtt.io/images/devices/WT-A03E.png) |
 
 
@@ -36,6 +36,9 @@ The thermostat needs to be flashed with the correct firmware before it can be us
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -51,7 +54,7 @@ The thermostat needs to be flashed with the correct firmware before it can be us
 This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-12.8` and the maximum value is `12.8` with a step size of `0.1`.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
 
 ### Temperature setpoint hold (binary)
 Prevent changes. `false` = run normally. `true` = prevent from making changes..
@@ -146,6 +149,14 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_preset_temperature": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
+
+### Position (numeric)
+Position of the valve, 100% is fully open.
+Value can be found in the published state on the `position` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"position": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Identify (enum)
 Initiate device identification.

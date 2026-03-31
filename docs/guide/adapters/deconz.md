@@ -3,10 +3,10 @@
 ::: warning ATTENTION
 Various features are not supported by this adapter, in case you depend on these features, consider a different adapter.
 
-- Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
 - Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
 - Lowering the [transmit power](../../guide/configuration/adapter-settings.md)
 - ConBee II (and possibly RaspBee II) [may exhibit network connectivity issues (MacNoAck)](https://github.com/Koenkk/zigbee2mqtt/issues/28041)
+- [Install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd) support requires recent coordinator firmware. This is required to pair some devices.
 
 :::
 

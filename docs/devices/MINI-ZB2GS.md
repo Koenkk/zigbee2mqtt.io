@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MINI-ZB2GS  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee dual-channel smart switch |
-| Exposes | switch (state), power_on_behavior, external_trigger_mode, detach_relay_mode, inching_control_set, network_indicator, turbo_mode, delayed_power_on_state_channel_1, delayed_power_on_state_channel_2, delayed_power_on_time, action |
+| Exposes | switch (state), power_on_behavior, external_trigger_mode, detach_relay_mode, inching_control_set, network_indicator, turbo_mode, delayed_power_on_state_channel_1, delayed_power_on_state_channel_2, delayed_power_on_time, programmable_stepper_seq1, programmable_stepper_seq2, programmable_stepper_seq3, programmable_stepper_seq4, action |
 | Picture | ![SONOFF MINI-ZB2GS](https://www.zigbee2mqtt.io/images/devices/MINI-ZB2GS.png) |
 
 
@@ -154,6 +154,58 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_time_l2": NEW_VALUE}`.
 The minimal value is `0.5` and the maximum value is `3599.5`.
 The unit of this value is `seconds`.
+
+### Programmable stepper seq1 (composite)
+Configure programmable stepper sequence 1..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"programmable_stepper_seq1": {"enable_stepper": VALUE, "switch_outlet": VALUE, "enable_double_press": VALUE, "double_press_interval": VALUE, "step_1": VALUE, "step_2": VALUE, "step_3": VALUE, "step_4": VALUE}}`
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"programmable_stepper_seq1": ""}`.
+- `enable_stepper` (binary): Enable/disable the stepper sequence. allowed values: `true` or `false`
+- `switch_outlet` (numeric): The outlet channel of the external trigger switch bound to this sequence. min value is 1, max value is 2
+- `enable_double_press` (binary): Enable/disable double press to switch steps. allowed values: `true` or `false`
+- `double_press_interval` (numeric): Set the double press interval for step switching. max value is 32767, unit is ms
+- `step_1` (composite) 
+- `step_2` (composite) 
+- `step_3` (composite) 
+- `step_4` (composite) 
+
+### Programmable stepper seq2 (composite)
+Configure programmable stepper sequence 2..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"programmable_stepper_seq2": {"enable_stepper": VALUE, "switch_outlet": VALUE, "enable_double_press": VALUE, "double_press_interval": VALUE, "step_1": VALUE, "step_2": VALUE, "step_3": VALUE, "step_4": VALUE}}`
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"programmable_stepper_seq2": ""}`.
+- `enable_stepper` (binary): Enable/disable the stepper sequence. allowed values: `true` or `false`
+- `switch_outlet` (numeric): The outlet channel of the external trigger switch bound to this sequence. min value is 1, max value is 2
+- `enable_double_press` (binary): Enable/disable double press to switch steps. allowed values: `true` or `false`
+- `double_press_interval` (numeric): Set the double press interval for step switching. max value is 32767, unit is ms
+- `step_1` (composite) 
+- `step_2` (composite) 
+- `step_3` (composite) 
+- `step_4` (composite) 
+
+### Programmable stepper seq3 (composite)
+Configure programmable stepper sequence 3..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"programmable_stepper_seq3": {"enable_stepper": VALUE, "switch_outlet": VALUE, "enable_double_press": VALUE, "double_press_interval": VALUE, "step_1": VALUE, "step_2": VALUE, "step_3": VALUE, "step_4": VALUE}}`
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"programmable_stepper_seq3": ""}`.
+- `enable_stepper` (binary): Enable/disable the stepper sequence. allowed values: `true` or `false`
+- `switch_outlet` (numeric): The outlet channel of the external trigger switch bound to this sequence. min value is 1, max value is 2
+- `enable_double_press` (binary): Enable/disable double press to switch steps. allowed values: `true` or `false`
+- `double_press_interval` (numeric): Set the double press interval for step switching. max value is 32767, unit is ms
+- `step_1` (composite) 
+- `step_2` (composite) 
+- `step_3` (composite) 
+- `step_4` (composite) 
+
+### Programmable stepper seq4 (composite)
+Configure programmable stepper sequence 4..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"programmable_stepper_seq4": {"enable_stepper": VALUE, "switch_outlet": VALUE, "enable_double_press": VALUE, "double_press_interval": VALUE, "step_1": VALUE, "step_2": VALUE, "step_3": VALUE, "step_4": VALUE}}`
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"programmable_stepper_seq4": ""}`.
+- `enable_stepper` (binary): Enable/disable the stepper sequence. allowed values: `true` or `false`
+- `switch_outlet` (numeric): The outlet channel of the external trigger switch bound to this sequence. min value is 1, max value is 2
+- `enable_double_press` (binary): Enable/disable double press to switch steps. allowed values: `true` or `false`
+- `double_press_interval` (numeric): Set the double press interval for step switching. max value is 32767, unit is ms
+- `step_1` (composite) 
+- `step_2` (composite) 
+- `step_3` (composite) 
+- `step_4` (composite) 
 
 ### Action (enum)
 Triggered action (e.g. a button click).
