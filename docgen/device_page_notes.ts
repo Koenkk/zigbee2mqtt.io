@@ -137,7 +137,7 @@ If the device flashes, but does not join, this may help:
 - Pair another device at the same time
 - Fiddle with an IKEA remote: re-insert batteries, press buttons, activate Touchlink
 
-[Touchlink](../guide/usage/touchlink.md) reset is also possible, but it seems the device only leaves and identifies for 15s, without entering pairing mode.
+[Touchlink](../guide/usage/touchlink.md) reset is also possible, but it seems the device only identifies for 15s, without leaving its current network and entering pairing mode.
 
 Note that Matter pairing (via Bluetooth) is simultaneously active for 5 minutes after power-on, even if the device is already paired to a Zigbee network.
 
