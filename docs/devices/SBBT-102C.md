@@ -63,5 +63,5 @@ The possible values are: `identify`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `triple`.
+The possible values are: `single`, `double`, `triple`, `single_long`, `double_long`, `triple_long`.
 
