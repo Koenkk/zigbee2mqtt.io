@@ -1,21 +1,11 @@
-const notes = {
-    awox: (definition) => {
-        if (definition.vendor.toLowerCase() === 'awox') {
-            return `
-## Warning: degrades network performance
-AwoX devices are known to cause network instability. If your Zigbee network has poor performance or you are seeing errors like \`NO_NETWORK_ROUTE\` you should remove this device from the network.
-It [may help](https://github.com/Koenkk/zigbee2mqtt/discussions/18366) to OTA update your device via the "AwoX HomeControl" app over Bluetooth.
-`;
-        }
-    },
-    hueRouterPair: (definition, exposes) => {
-        if (definition.vendor === 'Philips' && exposes.find((e) => e.type === 'light')) {
-            const hueGo = `
+export function hueRouterPair(definition, exposes) {
+    if (definition.vendor === 'Philips' && exposes.find((e) => e.type === 'light')) {
+        const hueGo = `
 ### Button long-press
 The first-generation Hue Go can be reset by long pressing the button on the bottom of the unit, [as advised by Philips on Twitter](https://twitter.com/tweethue/status/937713840728559621).
 They suggest keeping the button pressed for 35 seconds. After about 25 seconds the light will start doing some flashes: keep pressing anyway for the whole 35. **The power cord has to be connected while doing this procedure**.
 `;
-            return `
+        return `
 ## Pairing
 New lights are automatically in pairing mode. 
 Factory resetting a Hue light can be accomplished in 6 ways which are described below. After resetting the light will automatically connect.
@@ -110,72 +100,5 @@ Rules:
 
 Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn the bulb on will be through a paired smart device (see pairing above). You will NOT be able to turn the bulb on by sequentially switching power on and off.    
 `;
-        }
-    },
-    ikeaKajplats: (definition) => {
-        if (definition.vendor === 'IKEA' && definition.description.includes('KAJPLATS')) {
-            const cycles = definition.description.includes('clear') ? '15' : '12';
-            return `
-
-
-## Related
-- [IKEA KAJPLATS color/white spectrum](./KAJPLATS_CWS.md)
-- [IKEA KAJPLATS white spectrum](./KAJPLATS_WS.md)
-- [IKEA KAJPLATS white spectrum clear](./KAJPLATS_WS_clear.md)
-- [All IKEA KAJPLATS models](https://www.zigbee2mqtt.io/supported-devices/#s=KAJPLATS)
-
-## Pairing
-
-1. **Power-cycle the lamp 6 times** to factory reset ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
-   
-2. **Power-cycle the lamp ${cycles} times** (easier with a smart plug) to start Zigbee pairing.  
-   The light will flash white.
-
-If the device flashes, but does not join, this may help:
-- Use a default Zigbee channel (11, 15, 20, 25)
-- Bring it very close to the coordinator
-- Pair another device at the same time
-- Fiddle with an IKEA remote: re-insert batteries, press buttons, activate Touchlink
-
-[Touchlink](../guide/usage/touchlink.md) reset is also possible, but it seems the device only leaves and identifies for 15s, without entering pairing mode.
-
-Note that Matter pairing (via Bluetooth) is simultaneously active for 5 minutes after power-on, even if the device is already paired to a Zigbee network.
-
-## Firmware
-The device does not support OTA updates via Zigbee. Instead, updates are provided over Matter. **Move it to any Thread hub to update.**  
-View available updates [here](https://webui.dcl.csa-iot.org/models) (search *KAJPLATS* or *4476*).
-
-## Issues
-- The device may come with null model and manufacturer attributes. In this case, Zigbee2MQTT will recognize it generically. A firmware update may fix it
-- Power-on behavior may not work, only in Zigbee mode, on some models (at least one variant of [LED2401G5](./LED2401G5.md))
-- Scenes, groups and the _OffWithEffect_ command may fail, with the INSUFFICIENT_SPACE error. See more info and workaround in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/30211#issuecomment-4019236515)
-
-
-`;
-        }
-    },
-    ikeaLight: (definition, exposes) => {
-        if (definition.vendor === 'IKEA' && exposes.find((e) => e.type === 'light')) {
-            return `
-## Transition
-IKEA lights only support transitions on 1 attribute at a time.
-If you would for example change the color temperature and brightness in 1 command, the color temperature transition is ignored.
-`;
-        }
-    },
-    sengledBulbs: (definition, exposes) => {
-        if (definition.vendor === 'Sengled' && exposes.find((e) => e.type === 'light')) {
-            return `
-## Device Type
-Sengled bulbs are Zigbee [end devices](/advanced/zigbee/01_zigbee_network.html#end-device), not [routers](/advanced/zigbee/01_zigbee_network.html#router), and therefore will not extend the reach of your Zigbee network. For more information see the [Sengled FAQ](https://support.sengled.com/hc/en-us/articles/115010871308-Do-any-Sengled-Zigbee-devices-act-as-Zigbee-repeaters-).
-`;
-        }
-    },
-};
-
-export function getNotes(definition, exposes) {
-    return Object.values(notes)
-        .map((n) => n(definition, exposes))
-        .filter((n) => n)
-        .join('\n');
+    }
 }
