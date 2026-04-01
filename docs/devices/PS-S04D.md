@@ -221,7 +221,7 @@ Reporting will trigger as humidity change reaches this value when in custom mode
 Value can be found in the published state on the `humidity_reporting_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_reporting_threshold": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_reporting_threshold": NEW_VALUE}`.
-The minimal value is `2` and the maximum value is `10`.
+The minimal value is `2` and the maximum value is `15`.
 The unit of this value is `%`.
 
 ### Humidity report mode (enum)

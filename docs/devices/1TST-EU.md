@@ -94,9 +94,9 @@ Get or set whether the local temperature, outdoor temperature and occupancy are 
 
 Bit Number | Description
 -----------|-----------------------------------------
-0          | 0 – local temperature sensed internally <br> 1 – local temperature sensed remotely
-1          | 0 – outdoor temperature sensed internally <br> 1 – outdoor temperature sensed remotely
-2          | 0 – occupancy sensed internally <br> 1 – occupancy sensed remotely
+0          | 0 – local temperature sensed internally / 1 – local temperature sensed remotely
+1          | 0 – outdoor temperature sensed internally / 1 – outdoor temperature sensed remotely
+2          | 0 – occupancy sensed internally / 1 – occupancy sensed remotely
 
 Get or set control sequence of operation
 ```js
@@ -168,9 +168,9 @@ Get or set weekly schedule
 
 Attribute Value | Description
 ----------------|---------------------------------------------------------------------------
-0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. <br> 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. <br> Note: It does not clear or delete previous weekly schedule programming configurations.
-1               | 0 - Auto/recovery mode set to OFF <br> 1 – Auto/recovery mode set to ON
-2               | 0 – Economy/EnergyStar mode set to OFF <br> 1 – Economy/EnergyStar mode set to ON
+0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. / 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. _Note: It does not clear or delete previous weekly schedule programming configurations._
+1               | 0 - Auto/recovery mode set to OFF / 1 – Auto/recovery mode set to ON
+2               | 0 – Economy/EnergyStar mode set to OFF / 1 – Economy/EnergyStar mode set to ON
 
 Clear weekly schedule
 ```json
@@ -209,7 +209,7 @@ The unit of this value is `%`.
 ### Climate 
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `local_temperature_calibration`, `pi_heating_demand`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `7` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
-- `pi_heating_demand`: Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pi_heating_demand": VALUE}` where `VALUE` is the % between `0` and `100`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pi_heating_demand": ""}`.
+- `pi_heating_demand`: Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open. Writing (`/set`) this attribute is not possible. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pi_heating_demand": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.

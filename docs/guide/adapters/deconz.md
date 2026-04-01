@@ -28,7 +28,7 @@ USB connected adapters (ConBee / ConBee II / ConBee III) and Raspberry Pi GPIO m
 Add the correct baudrate to the `configuration.yaml` into the serial section.
 
 - For ConBee2: specifying the baudrate is not necessary
-- For RaspBee2 it is 38400
+- For Conbee and RaspBee2 it is 38400
 - For ConBee3 it is 115200
 
 The latest stable firmware versions are recommended and listed in the [firmware changelog](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Firmware-Changelog).

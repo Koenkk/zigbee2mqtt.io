@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QAT44Z6  |
 | Vendor  | [QA](/supported-devices/#v=QA)  |
 | Description | 6 channel scene switch |
-| Exposes | switch (state), action_1, action_2, action_3, action_4, action_5, action_6, backlight_brightness |
+| Exposes | switch (state), backlight_brightness, action |
 | Picture | ![QA QAT44Z6](https://www.zigbee2mqtt.io/images/devices/QAT44Z6.png) |
 
 
@@ -62,36 +62,6 @@ The current state of this switch is in the published state under the `state_l6` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l6": "ON"}`, `{"state_l6": "OFF"}` or `{"state_l6": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l6": ""}`.
 
-### Action 1 (numeric)
-Scene 1.
-Value can be found in the published state on the `action_1` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Action 2 (numeric)
-Scene 2.
-Value can be found in the published state on the `action_2` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Action 3 (numeric)
-Scene 3.
-Value can be found in the published state on the `action_3` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Action 4 (numeric)
-Scene 4.
-Value can be found in the published state on the `action_4` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Action 5 (numeric)
-Scene 5.
-Value can be found in the published state on the `action_5` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Action 6 (numeric)
-Scene 6.
-Value can be found in the published state on the `action_6` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
 ### Backlight brightness (numeric)
 Backlight brightness (0-99).
 Value can be found in the published state on the `backlight_brightness` property.
@@ -99,4 +69,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_brightness": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `scene_1`, `scene_2`, `scene_3`, `scene_4`, `scene_5`, `scene_6`.
 
