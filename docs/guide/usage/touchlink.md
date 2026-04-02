@@ -44,13 +44,13 @@ This can take up to 1 minute. **This is a disruptive operation**, during the sca
 
 To scan, send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/scan` with an empty payload.
 
-The response will be sent to `zigbee2mqtt/bridge/response/touchlink/scan`, example payload: `{"data":{"found":[{"ieee_address": '0x12345678', "channel": 12}, {"ieee_address": '0x12654321', "channel": 24}]},"status":"ok"}`.
+The response will be sent to `zigbee2mqtt/bridge/response/touchlink/scan`, example payload: `{"data":{"found":[{"ieee_address": "0x12345678", "channel": 12}, {"ieee_address": "0x12654321", "channel": 24}]},"status":"ok"}`.
 
 ## Identify
 
 Identify a nearby device via Touchlink _(e.g. bulb blinking)._
 
-Send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/identify` with payload e.g. `{"ieee_address": '0x12345678', "channel": 12}`  
+Send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/identify` with payload e.g. `{"ieee_address": "0x12345678", "channel": 12}`  
 _(Use scan from above to determine `ieee_address` and `channel`)._
 
 ## Factory reset device
