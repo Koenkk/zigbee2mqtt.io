@@ -9,7 +9,7 @@ _Range depends on devices: normally 10cm, but up to 1m on strong adapters._
 
 - Identify or reset devices near the coordinator via Zigbee2MQTT
 - Reset devices via a Touchlink-capable device, e.g. [Hue dimmer switch gen 1](./../../devices/324131092621.md)
-- Setup device-to-device binding (e.g. remote to light) without involving the coordinator and Zigbee2MQTT
+- Setup device-to-device [binding](./binding.md) (e.g. remote to light) without involving the coordinator and Zigbee2MQTT
 
 ## Support
 
