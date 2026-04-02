@@ -201,29 +201,34 @@ function getExposeDocs(expose, definition) {
         lines.push(`This light supports the following features: ${expose.features.map((e) => `\`${e.name}\``).join(', ')}.`);
         if (state) {
             lines.push(
-                `- \`state\`: To control the state publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`. To read the state send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${state.property}": ""}\`.`,
+                `- \`state\`: To control the state publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`. To read the state send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${state.property}": ""}\`.
+                `,
             );
         }
         if (brightness) {
             lines.push(
-                `- \`brightness\`: To control the brightness publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${brightness.property}": VALUE}\` where \`VALUE\` is a number between \`${brightness.value_min}\` and \`${brightness.value_max}\`. To read the brightness send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${brightness.property}": ""}\`.`,
+                `- \`brightness\`: To control the brightness publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${brightness.property}": VALUE}\` where \`VALUE\` is a number between \`${brightness.value_min}\` and \`${brightness.value_max}\`. To read the brightness send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${brightness.property}": ""}\`.
+                `,
             );
         }
         if (colorTemp) {
             const presets = `Besides the numeric values the following values are accepted: ${colorTemp.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
             lines.push(
-                `- \`color_temp\`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTemp.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTemp.value_min}\` and \`${colorTemp.value_max}\`, the higher the warmer the color. To read the color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTemp.property}": ""}\`. ${presets}`,
+                `- \`color_temp\`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTemp.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTemp.value_min}\` and \`${colorTemp.value_max}\`, the higher the warmer the color. To read the color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTemp.property}": ""}\`. ${presets}
+                `,
             );
         }
         if (colorTempStartup) {
             const presets = `Besides the numeric values the following values are accepted: ${colorTempStartup.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
             lines.push(
-                `- \`color_temp_startup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}`,
+                `- \`color_temp_startup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}
+                `,
             );
         }
         if (colorXY) {
             lines.push(
-                `- \`color_xy\`: To control the XY color (CIE 1931 color space) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorXY.property}": {"x": X_VALUE, "y": Y_VALUE}}\` (e.g. \`{"color":{"x":0.123,"y":0.123}}\`). To read the XY color send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorXY.property}":{"x":"","y":""}}\`. Alternatively it is possible to set the XY color via RGB:`,
+                `- \`color_xy\`: To control the XY color (CIE 1931 color space) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorXY.property}": {"x": X_VALUE, "y": Y_VALUE}}\` (e.g. \`{"color":{"x":0.123,"y":0.123}}\`). To read the XY color send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorXY.property}":{"x":"","y":""}}\`. Alternatively it is possible to set the XY color via RGB:
+                `,
             );
             lines.push(`  - \`{"color": {"r": R, "g": G, "b": B}}\` e.g. \`{"color":{"r":46,"g":102,"b":150}}\``);
             lines.push(`  - \`{"color": {"rgb": "R,G,B"}}\` e.g. \`{"color":{"rgb":"46,102,150"}}\``);
@@ -231,7 +236,8 @@ function getExposeDocs(expose, definition) {
         }
         if (colorHS) {
             lines.push(
-                `- \`color_hs\`: To control the hue/saturation (color) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorHS.property}": {"hue": HUE, "saturation": SATURATION}}\` (e.g. \`{"color":{"hue":360,"saturation":100}}\`). To read the hue/saturation send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorHS.property}":{"hue":"","saturation":""}}\`. Alternatively it is possible to set the hue/saturation via:`,
+                `- \`color_hs\`: To control the hue/saturation (color) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorHS.property}": {"hue": HUE, "saturation": SATURATION}}\` (e.g. \`{"color":{"hue":360,"saturation":100}}\`). To read the hue/saturation send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorHS.property}":{"hue":"","saturation":""}}\`. Alternatively it is possible to set the hue/saturation via:
+                `,
             );
             lines.push(
                 `  - HSB space (hue, saturation, brightness): \`{"color": {"h": H, "s": S, "b": B}}\` e.g. \`{"color":{"h":360,"s":100,"b":100}}\` or \`{"color": {"hsb": "H,S,B"}}\` e.g. \`{"color":{"hsb":"360,100,100"}}\``,
