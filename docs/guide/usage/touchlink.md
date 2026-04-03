@@ -9,7 +9,7 @@ _Range depends on devices: normally 10cm, but up to 1m on strong adapters._
 
 - Identify or reset devices near the coordinator via Zigbee2MQTT
 - Reset devices via a Touchlink-capable device, e.g. [Hue dimmer switch gen 1](./../../devices/324131092621.md)
-- Setup device-to-device binding (e.g. remote to light) without involving the coordinator and Zigbee2MQTT
+- Setup device-to-device [binding](./binding.md) (e.g. remote to light) without involving the coordinator and Zigbee2MQTT
 
 ## Support
 
@@ -18,7 +18,7 @@ _Range depends on devices: normally 10cm, but up to 1m on strong adapters._
 Texas Instruments adapters _(zStack, CCxxxx)_ are **fully supported**.
 
 Silicon Labs adapters _(EmberZNet, EFR32xxxx)_ are **partially supported**.  
-`2026-03-18`: The [Scan](#scan) operation does not produce responses with some firmware versions (other operations should not be affected). _Under investigation._
+`2026-03-18`: The [Scan](#scan) operation does not produce responses with some firmware versions. Philips Hue reset is not affected. _Under investigation_
 
 Other adapters/drivers are currently **not supported**.
 
@@ -44,13 +44,13 @@ This can take up to 1 minute. **This is a disruptive operation**, during the sca
 
 To scan, send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/scan` with an empty payload.
 
-The response will be sent to `zigbee2mqtt/bridge/response/touchlink/scan`, example payload: `{"data":{"found":[{"ieee_address": '0x12345678', "channel": 12}, {"ieee_address": '0x12654321', "channel": 24}]},"status":"ok"}`.
+The response will be sent to `zigbee2mqtt/bridge/response/touchlink/scan`, example payload: `{"data":{"found":[{"ieee_address": "0x12345678", "channel": 12}, {"ieee_address": "0x12654321", "channel": 24}]},"status":"ok"}`.
 
 ## Identify
 
 Identify a nearby device via Touchlink _(e.g. bulb blinking)._
 
-Send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/identify` with payload e.g. `{"ieee_address": '0x12345678', "channel": 12}`  
+Send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/identify` with payload e.g. `{"ieee_address": "0x12345678", "channel": 12}`  
 _(Use scan from above to determine `ieee_address` and `channel`)._
 
 ## Factory reset device
