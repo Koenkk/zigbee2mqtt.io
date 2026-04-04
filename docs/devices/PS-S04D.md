@@ -23,7 +23,21 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+If your PS-S04D (FP300) was previously added in Thread/Matter mode and you want to use it with Zigbee2MQTT, a normal reset may not be enough.
+
+Important reset behavior:
+- Press and hold the reset button for 5 seconds: resets network settings and puts the device back into pairing mode.
+- Quickly press the reset button 10 times: performs a full factory reset.
+
+For protocol switching from Thread to Zigbee:
+1. If the PS-S04D (FP300) does not show up correctly in Aqara Home during Bluetooth discovery after using the 5-second reset, perform the full factory reset by pressing the reset button 10 times.
+2. Open Aqara Home and add the PS-S04D (FP300) again.
+3. During setup, choose to switch the device to Zigbee mode.
+4. After the Zigbee firmware/mode change is completed, pair the device with Zigbee2MQTT.
+
+In practice, the 10-press factory reset can be required to make the PS-S04D (FP300) discoverable again in Aqara Home for switching from Thread mode to Zigbee mode.
 
 <!-- Notes END: Do not edit below this line -->
 
