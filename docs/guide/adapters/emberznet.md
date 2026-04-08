@@ -219,7 +219,7 @@ serial:
     adapter: ember
 ```
 
-Note: you can use TCP like this way: zbgw_efr32_pro.local:6638 or gateway IP:6638 .
+Note: You can also use TCP with either `zbgw_efr32_pro.local:6638` or `<gateway-ip>:6638`.
 
 - [Product page](https://shop68536829.taobao.com)
 - [Buy](https://shop68536829.taobao.com)
