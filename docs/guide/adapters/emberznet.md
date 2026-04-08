@@ -209,6 +209,25 @@ Note: can also be powered via USB (with a special case) and used with a simple E
 
 :::
 
+::: details Zbgw_pro EFR32 LAN
+
+Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
+
+```yaml
+serial:
+    port: tcp://zbgw_efr32_pro.local:6638
+    adapter: ember
+```
+
+Note: You can also use TCP with either `zbgw_efr32_pro.local:6638` or `<gateway-ip>:6638`.
+
+- [Product page](https://shop68536829.taobao.com)
+- [Buy](https://shop68536829.taobao.com)
+
+<img src="../../images/zbgw_pro.jpg" width="200" />
+
+:::
+
 ### Hybrid (USB + Network)
 
 ::: details SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice
