@@ -209,6 +209,25 @@ Note: can also be powered via USB (with a special case) and used with a simple E
 
 :::
 
+::: details Zbgw_pro EFR32 LAN
+
+Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
+
+```yaml
+serial:
+    port: tcp://zbgw_efr32_pro.local:6638
+    adapter: ember
+```
+
+Note: You can also use TCP with either `zbgw_efr32_pro.local:6638` or `<gateway-ip>:6638`.
+
+- [Product page](https://shop68536829.taobao.com)
+- [Buy](https://shop68536829.taobao.com)
+
+<img src="../../images/zbgw_pro.jpg" width="200" />
+
+:::
+
 ### Hybrid (USB + Network)
 
 ::: details SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice
@@ -265,6 +284,21 @@ Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr2-zigbee-
 
 **SLZB-MR1 buy**: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr1-multiradio-coordinator), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005004942648430.html).  
  Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr1-zigbee-and-thread-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [CZ](https://www.homebrainz.shop/de/p/smlight-slzb-mr1?srsltid=AfmBOorf9TiY1ZBQD7a7hUwDemKbCFsH_dv8ru9uDCT5yoq19AlyHy6z), [FR+EU](https://www.domadoo.fr/de/smart-home-produkte/7773-smlight-slzb-mr1-usb-ethernet-poe-zigbee-thread-matter-adapter.html), [BE](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [DE](https://mediarath.de/en/products/smlight-slzb-mr1-zigbee-thread-multiradio-cc2652p7-efr32mg21-lan-poe-usb-wifi-adapter), [NL](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [PL](https://pcblab.io/koordynator-slzb-mr1-multiradio-zigbee-thread.html), [SE](https://www.lohelectronics.se/hemautomation/zigbee/controllers-1473/smlight-slzb-mr1-zigbee-3-0-lan-gateway-med-poe-och-z2m), [CH](https://www.swiss-domotique.ch/en/gateways-antennas/2752-smlight-slzb-06-adaptateur-zigbee-ethernet-poe-usb-wifi-2.html), [FI](https://verkkokauppa.nurkantakaa.fi/tuote/smlight-slzb-mr1/), [UK](https://zigbeesmart.com/de-de/products/zigbee-lan-poe-coordinator-smlight-slzb-mr1-multiradio), [US](https://cloudfree.shop/product/smlight-slzb-mr1-zigbee-thread/).
+
+:::
+
+::: details SONOFF Dongle-M
+
+Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
+
+The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two external antennas, supports PoE power supply, has a built-in web console(http://Dongle-M.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB.
+
+- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
+- [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+
+<img src="../../images/Dongle-M_600_600.jpg" width="200" />
 
 :::
 
@@ -375,25 +409,6 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 :::
 
 ### Not recommended
-
-::: details Sonoff Dongle-M (A.K.A Max)
-
-"Core" firmware issues as of 2025-12-12.
-Several undesired behaviors consistently reported by users.
-WiFi does not seem to be properly disabled after requested.
-
-Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
-
-The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two external antennas, supports PoE power supply, has a built-in web console(http://Dongle-M.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB.
-
-- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
-- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
-- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
-- [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
-
-<img src="../../images/Dongle-M_600_600.jpg" width="200" />
-
-:::
 
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 

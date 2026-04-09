@@ -46,19 +46,22 @@ After this the device will automatically join.
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Contact (binary)
 Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `false` contact is ON, if `true` OFF.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"contact": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"contact": NEW_VALUE}`.
+If value equals `true` contact is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 

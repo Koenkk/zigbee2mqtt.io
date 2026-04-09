@@ -26,11 +26,14 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-1. Switch on your device.
-2. Now switch off and on within 2 seconds.
-3. Repeat off/on four times.
-4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
+### Factory resetting and pairing
+1. Turn off the device and wait until the light has fully gone out.
+2. Turn it on and back off within 2 seconds.
+3. Wait longer than 10 seconds.
+4. Repeat steps 2–3 three more times.
+5. Turn it on again and leave it on.
+6. The LED will blink three times to confirm the reset is complete.
+7. The device will now start pairing with any open Zigbee network.
 <!-- Notes END: Do not edit below this line -->
 
 

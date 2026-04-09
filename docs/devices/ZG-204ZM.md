@@ -87,7 +87,6 @@ Value can be found in the published state on the `static_detection_sensitivity` 
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Indicator (binary)
 LED indicator mode.
@@ -109,7 +108,6 @@ Value can be found in the published state on the `motion_detection_sensitivity` 
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Illuminance (numeric)
 Measured illuminance.

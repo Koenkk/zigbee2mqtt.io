@@ -39,8 +39,6 @@ Example:
 - Liquid state = "low" below 0.085 m (8.5 cm) → 1.70 × 0.05
 - Liquid state = "high" above 1.65 m → 1.70 × 0.97 (prevents overflow)
 - Example reading: water level 1.42 m → sensor reports 1.42 m, 86% (1.65 × 0.86 = 1.419 → 1.42), liquid state = "normal"
-
-
 <!-- Notes END: Do not edit below this line -->
 
 
