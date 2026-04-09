@@ -24,14 +24,6 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-This page is for the **Aqara Shutter Switch H2 EU (DS-K02D/DS-K02E)**.
-
-### Validated features
-- Cover control and position reporting
-- Wireless button actions for the top and bottom wireless buttons: single, double, hold, and release
-- Home Assistant native device triggers for the wireless button actions
-- Energy reporting
-- OTA update entity support
 
 ### Metering
 Only `energy` is exposed for the Aqara Shutter Switch H2 EU. `power`, `current`, and `voltage` are intentionally not exposed because they could not be validated reliably on this model.
