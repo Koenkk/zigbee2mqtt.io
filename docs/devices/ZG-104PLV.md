@@ -23,11 +23,14 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-**Warning:** This device may generate very frequent Zigbee traffic (multiple messages per second) even when no sensor state changes occur.
+## Notes
 
-In practice, this can result in significantly reduced battery life. Users have observed CR2450 batteries lasting only a few weeks instead of the expected months for typical Zigbee end devices.
+### Battery
+Uses 1 x CR2450 battery
 
-This behavior appears related to frequent polling rather than motion, vibration, or illuminance reporting.
+### Issues
+#### Network spam
+This device may generate very frequent Zigbee traffic (multiple messages per second), even when no sensor state changes occur. This can result in significantly reduced battery life (a few weeks).
 
 <!-- Notes END: Do not edit below this line -->
 
