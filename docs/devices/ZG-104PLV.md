@@ -23,7 +23,14 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Battery
+Uses 1 x CR2450 battery
+
+### Issues
+#### Network spam
+This device may generate very frequent Zigbee traffic (multiple messages per second), even when no sensor state changes occur. This can result in significantly reduced battery life (a few weeks).
 
 <!-- Notes END: Do not edit below this line -->
 
