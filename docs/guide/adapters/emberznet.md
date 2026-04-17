@@ -36,6 +36,10 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 - Command-line based:
     - Multi-devices by [@NabuCasa](https://github.com/NabuCasa) using Python: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
+- Home Assistant addon
+    - [XZG Multi-Tool](https://github.com/xyzroe/XZG-MT)
+        - Bridge add-on for full interaction with remote serial, USB, and TCP devices.
+    - [SONOFF Dongle Flasher](https://dongle.sonoff.tech/guide/dongle-lmg21/flash-firmware-via-home-assistant-add-on/)
 - Other:
     - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
