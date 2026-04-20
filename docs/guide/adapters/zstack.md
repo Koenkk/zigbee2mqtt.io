@@ -24,6 +24,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
         - Remote devices: access serial, USB, and TCP devices via provided `bridge` (executables, Docker, or HA add-on).
     - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc)
         - Recommended for SLZB adapters, can also flash other adapters
+    - [SONOFF Dongle Flasher](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - UI tools
     - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
 - CLI tools (multi platform Python based command line tools)
@@ -34,6 +35,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
         - Bridge add-on for full interaction with remote serial, USB, and TCP devices.
     - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
     - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
+    - [SONOFF Dongle Flasher](https://dongle.sonoff.tech/guide/dongle-lmg21/flash-firmware-via-home-assistant-add-on/)
 
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the web-interface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
 
