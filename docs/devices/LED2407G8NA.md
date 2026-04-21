@@ -18,14 +18,54 @@ pageClass: device-page
 | Model | LED2407G8NA  |
 | Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
 | Description | KAJPLATS E26 bulb, white spectrum, globe, opal, 1100 lm |
-| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, level_config), effect, power_on_behavior, identify |
 | Picture | ![IKEA LED2407G8NA](https://www.zigbee2mqtt.io/images/devices/LED2407G8NA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Information
 
+- [FCC - emissions and teardown](https://apps.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=by%2Fql7Osb8HH7V%2FC1dkq8Q%3D%3D&fcc_id=FHO-LED2407G8NA)
 <!-- Notes END: Do not edit below this line -->
+
+
+
+## Related
+- [IKEA KAJPLATS color/white spectrum](./KAJPLATS_CWS.md)
+- [IKEA KAJPLATS white spectrum](./KAJPLATS_WS.md)
+- [IKEA KAJPLATS white spectrum clear](./KAJPLATS_WS_clear.md)
+- [All IKEA KAJPLATS models](https://www.zigbee2mqtt.io/supported-devices/#s=KAJPLATS)
+
+## Pairing
+
+1. **Power-cycle the lamp 6 times** to factory reset ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
+   
+2. **Power-cycle the lamp 12 times** (easier with a smart plug) to start Zigbee pairing.  
+   The light will flash white.
+
+If the device flashes, but does not join, this may help:
+- Use a default Zigbee channel (11, 15, 20, 25)
+- Bring it very close to the coordinator
+- Pair another device at the same time
+- Fiddle with an IKEA remote: re-insert batteries, press buttons, activate Touchlink
+
+[Touchlink](../guide/usage/touchlink.md) reset is also possible, but it seems the device only leaves and identifies for 15s, without entering pairing mode.
+
+Note that Matter pairing (via Bluetooth) is simultaneously active for 5 minutes after power-on, even if the device is already paired to a Zigbee network.
+
+## Firmware
+The device does not support OTA updates via Zigbee. Instead, updates are provided over Matter. **Move it to any Thread hub to update.**  
+View available updates [here](https://webui.dcl.csa-iot.org/models) (search *KAJPLATS* or *4476*).
+
+## Issues
+- The device may come with null model and manufacturer attributes. In this case, Zigbee2MQTT will recognize it generically. A firmware update may fix it
+- Power-on behavior may not work, only in Zigbee mode, on some models (at least one variant of [LED2401G5](./LED2401G5.md))
+- Scenes, groups and the _OffWithEffect_ command may fail, with the INSUFFICIENT_SPACE error. See more info and workaround in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/30211#issuecomment-4019236515)
+
+
+
 
 ## Transition
 IKEA lights only support transitions on 1 attribute at a time.
@@ -40,13 +80,15 @@ If you would for example change the color temperature and brightness in 1 comman
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`, `level_config`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `454`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
@@ -102,4 +144,11 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 

@@ -1,0 +1,68 @@
+---
+title: "Shelly SBBT-104CEU control via MQTT"
+description: "Integrate your Shelly SBBT-104CEU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-03-31T19:04:19
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Shelly SBBT-104CEU
+
+|     |     |
+|-----|-----|
+| Model | SBBT-104CEU  |
+| Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
+| Description | BLU Wall Switch 4 ZB DK |
+| Exposes | battery, identify, action |
+| Picture | ![Shelly SBBT-104CEU](https://www.zigbee2mqtt.io/images/devices/SBBT-104CEU.png) |
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+### Related
+- [SBBT-004CEU](./SBBT-004CEU.md) - Shelly BLU Wall Switch 4 ZB
+- [SBBT-104CUS](./SBBT-104CUS.md) - Shelly BLU RC Button 4 ZB
+- [SBBT-102C](./SBBT-102C.md) - Shelly BLU Button Tough 1 ZB
+
+### Information
+
+See all information on [Shelly API docs](https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button22_ZB) (pairing, modes, bind actions, find&bind).
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
+
+## Exposes
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `1_single`, `2_single`, `3_single`, `4_single`, `1_double`, `2_double`, `3_double`, `4_double`, `1_triple`, `2_triple`, `3_triple`, `4_triple`, `1_single_long`, `2_single_long`, `3_single_long`, `4_single_long`, `1_double_long`, `2_double_long`, `3_double_long`, `4_double_long`, `1_triple_long`, `2_triple_long`, `3_triple_long`, `4_triple_long`, `1_hold`, `2_hold`, `3_hold`, `4_hold`.
+
