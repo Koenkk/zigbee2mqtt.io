@@ -1,5 +1,9 @@
 # Get Tuya and Xiaomi OTA url
 
+::: warning
+On x86 computers, Android Studio can no longer emulate ARM and run the Tuya app
+:::
+
 This guide explains how to retrieve a TuYa or Xiaomi OTA file for your device. This file can then be used to update your TuYa/Xiaomi device via Zigbee2MQTT.
 
 Prerequisites:
