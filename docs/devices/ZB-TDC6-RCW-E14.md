@@ -32,7 +32,6 @@ Turn off - on - off - on - off - on. The light should start flashing.
 If you don't see the *fade-in* transition at each *on*, you are doing it too fast.
 
 Alternatively, reset it with [Touchlink](../guide/usage/touchlink.md).
-
 <!-- Notes END: Do not edit below this line -->
 
 

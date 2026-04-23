@@ -33,8 +33,8 @@ As an alternative to disassembling the device, you can also use the browser-base
 ### Hints
 The guide from SONOFF is not very detailed. Here are some additional hints:
 * First, you have to disassemble the device and pull the logic board out of its housing. You need a **J00 Phillips screwdriver** for this.
-  <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-screws.jpg" width="130" height="129"/>
-  <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-board-in-housing.jpg" width="130" height="117"/>
+  ![dongle-e-screws](https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-screws.jpg)
+  ![dongle-e-board-in-housing](https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-board-in-housing.jpg)
 * Second, you need a **software supporting the [XMODEM file transfer protocol](https://en.wikipedia.org/wiki/XMODEM)** for sending the firmware image to the device. On Debian Linux like Ubuntu you can use lrzsz, 
   * install XMODEM transfer protocol and terminal emulator Putty with 
   
@@ -56,14 +56,14 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
 
   * Press and hold the "BOOT" button (see image below)
   
-      <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-buttons.png" width="648" height="242"/>
+      ![dongle-e-buttons](https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-buttons.png)
   * While holding the "BOOT" button press the "RST" button once to restart the device. You should see the output below. Release the "BOOT" button.
   
-      <img src="../../docs/images/putty-bootloader-1.png" width="350" height="250"/>  
+      ![putty-bootloader-1](../../docs/images/putty-bootloader-1.png)
 * Fifth, to upload the file
   * In the bootloader terminal press '1' to initiate the upload  
 
-      <img src="../../docs/images/putty-bootloader-2.png" width="350" height="250"/>
+      ![putty-bootloader-2](../../docs/images/putty-bootloader-2.png)
   * Open another terminal on the host system. Download the router firmware *.gbl file from [github.com/darkxst/silabs-firmware-builder](https://github.com/darkxst/silabs-firmware-builder/releases), e.g.
 
       `wget https://github.com/darkxst/silabs-firmware-builder/releases/download/20250627/zbdonglee_zigbee_ncp_8.0.3.0_sw_flow_115200.gbl`

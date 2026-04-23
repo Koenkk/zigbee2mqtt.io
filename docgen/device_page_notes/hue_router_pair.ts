@@ -1,21 +1,11 @@
-const notes = {
-    awox: (definition) => {
-        if (definition.vendor.toLowerCase() === 'awox') {
-            return `
-## Warning: degrades network performance
-AwoX devices are known to cause network instability. If your Zigbee network has poor performance or you are seeing errors like \`NO_NETWORK_ROUTE\` you should remove this device from the network.
-It [may help](https://github.com/Koenkk/zigbee2mqtt/discussions/18366) to OTA update your device via the "AwoX HomeControl" app over Bluetooth.
-`;
-        }
-    },
-    hueRouterPair: (definition, exposes) => {
-        if (definition.vendor === 'Philips' && exposes.find((e) => e.type === 'light')) {
-            const hueGo = `
+export function hueRouterPair(definition, exposes) {
+    if (definition.vendor === 'Philips' && exposes.find((e) => e.type === 'light')) {
+        const hueGo = `
 ### Button long-press
 The first-generation Hue Go can be reset by long pressing the button on the bottom of the unit, [as advised by Philips on Twitter](https://twitter.com/tweethue/status/937713840728559621).
 They suggest keeping the button pressed for 35 seconds. After about 25 seconds the light will start doing some flashes: keep pressing anyway for the whole 35. **The power cord has to be connected while doing this procedure**.
 `;
-            return `
+        return `
 ## Pairing
 New lights are automatically in pairing mode. 
 Factory resetting a Hue light can be accomplished in 6 ways which are described below. After resetting the light will automatically connect.
@@ -110,30 +100,5 @@ Rules:
 
 Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn the bulb on will be through a paired smart device (see pairing above). You will NOT be able to turn the bulb on by sequentially switching power on and off.    
 `;
-        }
-    },
-    ikeaLight: (definition, exposes) => {
-        if (definition.vendor === 'IKEA' && exposes.find((e) => e.type === 'light')) {
-            return `
-## Transition
-IKEA lights only support transitions on 1 attribute at a time.
-If you would for example change the color temperature and brightness in 1 command, the color temperature transition is ignored.
-`;
-        }
-    },
-    sengledBulbs: (definition, exposes) => {
-        if (definition.vendor === 'Sengled' && exposes.find((e) => e.type === 'light')) {
-            return `
-## Device Type
-Sengled bulbs are Zigbee [end devices](/advanced/zigbee/01_zigbee_network.html#end-device), not [routers](/advanced/zigbee/01_zigbee_network.html#router), and therefore will not extend the reach of your Zigbee network. For more information see the [Sengled FAQ](https://support.sengled.com/hc/en-us/articles/115010871308-Do-any-Sengled-Zigbee-devices-act-as-Zigbee-repeaters-).
-`;
-        }
-    },
-};
-
-export function getNotes(definition, exposes) {
-    return Object.values(notes)
-        .map((n) => n(definition, exposes))
-        .filter((n) => n)
-        .join('\n');
+    }
 }

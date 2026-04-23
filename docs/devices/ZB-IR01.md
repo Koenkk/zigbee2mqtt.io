@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZB-IR01  |
 | Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
 | Description | Infrared remote control equipped with local code library, |
-| Exposes | last_received_command, send_command |
+| Exposes | last_received_command, send_command, ac_kfid_offset_model, ac_power, ac_mode, ac_temperature, ac_wind_speed |
 | Picture | ![easyiot ZB-IR01](https://www.zigbee2mqtt.io/images/devices/ZB-IR01.png) |
 
 
@@ -1090,13 +1090,48 @@ Table 14
 ## Exposes
 
 ### Last received command (text)
-Received infrared control command.
+Last received IR command code.
 Value can be found in the published state on the `last_received_command` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Send command (text)
-Send infrared control command.
+Send infrared control command, This is a low-level interface. You can refer to the protocol documentation to implement more features..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_command": NEW_VALUE}`.
+
+### Ac kfid offset model (composite)
+Here you can create a new air conditioner remote control. First, select the brand of your air conditioner, then enter the remote control number within the indicated range in Ac kfid offset and click Apply. Finally, try turning on the air conditioner. If it fails, try the next number until it works..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_kfid_offset_model": {"ac_brand": VALUE, "ac_kfid_offset": VALUE}}`
+- `ac_brand` (enum): AC brand - choose a brand first allowed values: `gree(格力)(0-19)`, `haier(海尔)(20-39)`, `midea(美的)(40-59)`, `changhong(长虹)(60-79)`, `chigo(志高)(80-99)`, `aux(奥克斯)(100-119)`, `tcl(TCL)(120-139)`, `hisense(海信)(140-159)`, `kelon(科龙)(160-179)`, `xiaomi(小米)(180-189)`, `hitachi(日立)(190-209)`, `natpanasonic(松下)(210-235)`, `toshiba(东芝)(236-245)`, `galanz(格兰仕)(246-259)`, `mitsubishiheavy(三菱重工)(260-279)`, `mitsubishielectric(三菱电机)(280-299)`, `samsung(三星)(300-319)`, `lg(LG)(320-329)`, `whirlpool(惠而浦)(330-339)`, `electrolux(伊莱克斯)(340-349)`, `konka(康佳)(350-359)`, `daikin(大金)(360-389)`, `sharp(夏普)(390-409)`, `trane(特灵)(410-419)`, `skyworth(创维)(420-429)`, `york(约克)(430-443)`, `fujitsu(富士通)(444-459)`, `shinco(新科)(460-469)`, `yangzi(扬子)(470-479)`, `mbo(美博)(480-489)`, `mcquay(麦克维尔)(490-499)`, `frestech(新飞)(500-506)`, `xiaoya(小鸭)(507-509)`, `tica(TICA)(510-515)`, `sast(先科)(516-519)`, `littleswan(小天鹅)(520-529)`, `sanyo(三洋)(530-559)`, `royalsta(荣事达)(560-565)`, `rca(RCA)(566-569)`, `lejn(乐京)(570-573)`, `rowa(乐华)(574-589)`, `casarte(卡萨帝)(590-595)`, `carrier(开利)(596-619)`, `giwee(积微)(620-622)`, `jensany(金三洋)(623-629)`, `hualing(华凌)(630-639)`, `gome(国美)(640-644)`, `gelin(歌林)(645-655)`, `chunlan(春兰)(656-666)`, `aoli(奥力)(667-669)`, `aucma(澳柯玛)(670-675)`, `shuanglu(双鹿)(676-679)`, `jiwu(苏宁极物)(680-683)`, `leader(统帅)(684-688)`, `tomsen(汤姆森)(689-693)`, `hyundai(现代)(694-699)`, `panda(熊猫)(700-704)`, `xyingyan(新迎燕)(705-709)`, `shenhua(申花)(710-712)`, `pascmio(中松)(713-714)`, `yuetu(月兔)(715-719)`, `fzm(方米)(720-721)`, `xft(雪菲特)(722-723)`, `boyin(波音)(724-725)`, `huabao(华宝)(726-729)`, `daewoo(大宇)(730-735)`, `conrowa(高路华)(736-739)`, `guqiao(古桥)(740-745)`, `huake(华科)(746-749)`, `huamei(华美)(750-754)`, `jinsong(金松)(755-759)`, `risuo(日索)(760-764)`, `shenbao(绅宝)(765-769)`, `wanbao(万宝)(770-774)`, `neitian(内田)(775-779)`, `electra(凉宇)(780-784)`, `bluestar(BlueStar)(785-789)`, `voltas(Voltas)(790-794)`, `akira(爱家乐)(795-799)`, `panlisen(Panlisen)(800-801)`, `rasonic(乐信)(802-809)`, `palcsicons(赢松)(810-811)`, `itan(盈田)(812-814)`, `whircipol(WhirciPol)(815-819)`, `changgu(长谷)(820-824)`, `funiki(Funiki)(825-829)`, `yiruite(亿瑞特)(830-834)`, `sanzuan(三钻)(835-839)`, `deroxi(德澳西)(840-844)`, `fedders(飞达仕)(845-849)`, `paonoca(韩亚)(850-854)`, `wuq(五强)(855-859)`, `sinro(新菱)(860-864)`, `insignia(影雅)(865-869)`, `elco(宜科)(870-874)`, `vicoo(VICOO)(875-879)`, `gmcc(GMCC)(880-884)`, `xinshiji(新世纪)(885-889)`, `bendao(本岛)(890-894)`, `sumsaxng(东方三星)(895-899)`, `jinxing(金兴)(900-904)`, `mitsein(弥特斯)(905-909)`, `ek(EK)(910-914)`, `kingair(国祥)(915-919)`, `aqua(AQUA)(920-924)`, `unionaire(Union aire)(925-929)`, `korechi(韩电)(930-939)`, `inventor(Inventor)(940-944)`, `xingfeidq(XINGFEIDQ)(945-949)`, `xffh(新飞飞鸿)(950-954)`, `dizhi(帝智)(955-959)`, `winia(WINIA)(960-964)`, `pascmio1(松电)(965-969)`, `chuangye(创野)(970-974)`, `shacopu(夏科普)(975-979)`, `panwosoci(正松川)(980-984)`, `shineleaf(夏立)(985-989)`, `panatomic(Panatomic)(990-994)`, `paonoca1(Paonoca)(995-999)`, `geling(歌菱)(1000-1004)`, `sharbo(夏宝)(1005-1009)`, `hangtiandianqi(航天电器)(1010-1014)`, `dongbao(东宝)(1015-1019)`, `toyo(东洋)(1020-1024)`, `shangling(上菱)(1025-1029)`, `teco(TECO)(1030-1034)`, `airwell(欧威尔)(1035-1039)`, `combine(康拜恩)(1040-1042)`, `feige(飞歌)(1043-1045)`, `partsoinc(Partsoinc)(1046-1049)`, `nikai(NiKai)(1050-1052)`, `mitsubishiheavy_haier(三菱重工海尔)(1053-1055)`, `voton(沃顿)(1056-1059)`, `tadiran(塔迪兰)(1060-1061)`, `lexin(乐新)(1062-1063)`, `nuolin(诺林)(1064-1066)`, `xiamenyilin(厦门亿林)(1067-1069)`, `horshron(虹声)(1070-1071)`, `levante(LEVANTE)(1072-1073)`, `guanyuan(冠远)(1074-1075)`, `lilytech(百合)(1076-1078)`, `sunny(阳光)(1079-1080)`, `viomi(云米)(1081-1082)`, `soyea(索伊)(1082-1085)`, `serene(西冷)(1086-1088)`, `cheblo(樱花电器)(1089-1094)`, `smartmi(智米)(1095-1099)`, `bosch(博世)(1100-1104)`, `partmusic(日松)(1105-1109)`, `funiki1(FUNIKI)(1110-1114)`, `hilaire(雪莱尔)(1115-1116)`, `hkc(惠科)(1117-1119)`, `bluestar1(Blue Star)(1120-1125)`, `teco1(东元)(1126-1128)`, `paohanic(松川)(1129-1131)`, `nintaus(金正)(1132-1136)`, `olimpiasplendid(欧菱宝)(1137-1139)`, `philips(飞利浦)(1140-1145)`, `fortress(丰泽)(1146-1147)`, `meilihongzuan(MEILIHONGZUAN)(1148-1149)`, `tica1(天加)(1150-1154)`, `junda(骏安达)(1155-1159)`, `electra1(以莱特)(1160-1162)`, `mingyi(名亿)(1163-1165)`, `ifb(IFB)(1166-1167)`, `kingsfin(Kingsfin)(1168-1169)`, `onida(Onida)(1170-1172)`, `suittc(鑫源)(1173-1175)`, `colmo(COLMO)(1176-1177)`, `duozuanhua(多钻花)(1178-1179)`, `huikang(惠康)(1180-1181)`, `gibson(吉普生)(1182-1189)`, `first(FIRST)(1190-1191)`, `jhs(金鸿盛)(1192-1193)`, `meiling(美菱)(1194-1197)`, `maxe(万士益)(1198-1201)`, `skg(SKG)(1202-1203)`, `acl(喜事来)(1204-1205)`, `tongyi(同益)(1206-1207)`, `tianyuan(天元)(1208-1209)`, `tianhui(天汇集成)(1210-1211)`, `tianjin(天津)(1212-1213)`, `tair(Tair)(1214-1215)`, `macro(万家乐)(1216-1219)`, `xinle(新乐)(1220-1223)`, `xinhuabao(新华宝)(1224-1225)`, `xiongdi(兄弟)(1226-1227)`, `benwin(宾维)(1228-1229)`, `sanshui(山水)(1230-1231)`, `phlgco(飞歌中国)(1232-1233)`, `linkcool(麟酷)(1234-1235)`, `nec(NEC)(1236-1238)`, `lanbo(蓝波)(1239-1249)`, `changling(长岭)(1250-1259)`, `jinli(金立)(1260-1261)`, `huifeng(汇丰)(1262-1265)`, `huanghe(黄河)(1266-1267)`, `hailin(海林)(1268-1269)`, `cih(CIH)(1270-1271)`, `meico(美歌)(1272-1273)`, `museen(慕森)(1274-1275)`, `millink(米林客)(1276-1277)`, `mistral(名氏风)(1278-1279)`, `mljd(麦勒)(1280-1281)`, `bole(波乐)(1282-1285)`, `sacon(帅康)(1286-1290)`, `weili(威力)(1291-1295)`, `sova(索华)(1296-1297)`, `zymbo(深宝)(1298-1299)`, `weiteli(威特利)(1300-1301)`, `kenwood(健伍)(1302-1304)`, `gee(弘立)(1305-1306)`, `hneyrea(虹立)(1307-1308)`, `langge(朗歌)(1309-1313)`, `oudian(欧典)(1314-1315)`, `pgtess(品格特斯)(1316-1317)`, `panwosoci1(Panwosoci)(1318-1319)`, `partsonic(深圳松下)(1320-1321)`, `twinswan(双凤)(1322-1323)`, `shengsong(深松)(1324-1325)`, `pamosautc(Pamosautc)(1326-1327)`, `caixing(彩星)(1328-1329)`, `cmv(CMV)(1330-1331)`, `dongxia(冬夏)(1332-1333)`, `guangda(光大)(1334-1335)`, `geyang(格阳)(1336-1337)`, `gchv(GCHV)(1338-1339)`, `huayi(华意)(1340-1342)`, `sunburg(森宝)(1343-1344)`, `boerka(波尔卡)(1345-1346)`, `aite(爱特)(1347-1348)`, `aidelong(艾德龙)(1349-1350)`, `dajinxing(大金星)(1351-1352)`, `dometic(多美达)(1353-1354)`, `museen1(慕森)(1274-1275)`
+- `ac_kfid_offset` (numeric): For example, if you select the first option, Gree, you can enter any number between 0 and 19, and then click Apply. 
+
+### Ac power (binary)
+AC power .
+Value can be found in the published state on the `ac_power` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ac_power": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_power": NEW_VALUE}`.
+If value equals `on` ac power is ON, if `off` OFF.
+
+### Ac mode (enum)
+AC mode: auto/cooling/dehumidification/air_supply/heating.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_mode": NEW_VALUE}`.
+The possible values are: `auto`, `cooling`, `dehumidification`, `air_supply`, `heating`.
+
+### Ac temperature (numeric)
+AC temperature setting: 16-32°C.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_temperature": NEW_VALUE}`.
+The minimal value is `16` and the maximum value is `32`.
+The unit of this value is `°C`.
+
+### Ac wind speed (enum)
+AC fan speed.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_wind_speed": NEW_VALUE}`.
+The possible values are: `auto`, `low`, `medium`, `high`, `strong`.
 
