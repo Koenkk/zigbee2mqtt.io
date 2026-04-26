@@ -23,8 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Related
+- [SBBT-004CEU](./SBBT-004CEU.md) - Shelly BLU Wall Switch 4 ZB
+- [SBBT-104CEU](./SBBT-104CEU.md) - Shelly BLU Wall Switch 4 ZB DK
+- [SBBT-104CUS](./SBBT-104CUS.md) - Shelly BLU RC Button 4 ZB
 
+### Information
+See all information on [Shelly API docs](https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button1_ZB) (pairing, bind actions, find&bind).
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -56,5 +63,5 @@ The possible values are: `identify`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `triple`.
+The possible values are: `single`, `double`, `triple`, `single_long`, `double_long`, `triple_long`.
 

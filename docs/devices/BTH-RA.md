@@ -39,7 +39,7 @@ The device also needs to be in Zigbee-pairing mode. After resetting it, it will 
 To leave Matter pairing Mode and enter Zigbee pairing mode, hold the main button for 3 seconds after Factory reset. The display should confirm with a "Z" that you switched to Zigbee paring Mode. Now proceed to section "Zigbee2MQTT Install Code" below.
 
 ### Enter Install Code in Zigbee2MQTT
-In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the Install Code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined. The valve should still show ">o<" on its display. Now you can press the button on the valve to initiate valve adaption.
+In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the Install Code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined. The valve should still show ">o<" on its display. Now you can press the button on the valve to initiate valve adaption.
 
 ### Factory resetting
 To factory reset the device remove one of the batteries. While pressing and holding the device's main button on the front, insert the battery back. As soon as the device's LED is starting to blink orange while showing "RES", release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart into the calibration process and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.

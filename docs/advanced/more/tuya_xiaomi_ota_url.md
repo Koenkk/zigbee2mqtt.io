@@ -1,5 +1,9 @@
 # Get Tuya and Xiaomi OTA url
 
+::: warning
+On x86 computers, Android Studio can no longer emulate ARM and run the Tuya app
+:::
+
 This guide explains how to retrieve a TuYa or Xiaomi OTA file for your device. This file can then be used to update your TuYa/Xiaomi device via Zigbee2MQTT.
 
 Prerequisites:
@@ -28,7 +32,7 @@ Start Android Studio and create a new empty project:
 
 ## Step 3a: get the TuYa OTA url
 
-1. Download the TuYa app apk from [this link](https://aapks.com/download.php?dl=48267761) (IMPORTANT: newer version don't work, tested with 3.12.6). Drag the downloaded apk on the emulator (which will install it).
+1. Download the TuYa app apk from [this link](https://www.apkmirror.com/apk/volcano-technology-limited/smart-life-smart-living/smart-life-smart-living-3-12-6-release/smart-life-smart-living-3-12-6-android-apk-download/) (IMPORTANT: newer version don't work, tested with 3.12.6). Drag the downloaded apk on the emulator (which will install it).
 1. Open the TuYa Smart Life app in the emulator, log in with your account
 1. Make sure the TuYa bridge + the device you want to get the OTA of is already coupled to your account, this cannot be done from the emulator so use your phone for this. Make sure to use the same app on your phone, otherwise the device will not show up (e.g. for iOS use [this](https://apps.apple.com/nl/app/smart-life-smart-living/id1115101477), [**not this**](https://apps.apple.com/nl/app/tuya-smart/id1034649547)).
 1. Click on the device -> edit (pencil icon right top). Click "Check for Firmware Upgrade".

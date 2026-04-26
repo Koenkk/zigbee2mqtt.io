@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | F3-Pro  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart panel, 4-gang switch with scene, dimmer, and curtain control |
-| Exposes | backlight_switch, switch (state), switch_name, scene_name, cover_name, led_switch_name, led_switch, led_warm, led_bright, cover_state, cover_position, action |
+| Exposes | backlight_switch, switch (state), switch_name, scene_name, cover_name, led_switch_name, led_switch, led_warm, led_bright, cover_state, cover_position, temperature_1, condition_1, action |
 | Picture | ![Tuya F3-Pro](https://www.zigbee2mqtt.io/images/devices/F3-Pro.png) |
 
 
@@ -322,6 +322,20 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l4": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Temperature 1 (numeric)
+Temperature.
+Value can be found in the published state on the `temperature_1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_1": NEW_VALUE}`.
+The minimal value is `-65` and the maximum value is `99`.
+
+### Condition 1 (enum)
+Weather condition.
+Value can be found in the published state on the `condition_1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"condition_1": NEW_VALUE}`.
+The possible values are: `heavy_rain`, `thunderstorm`, `dust_storm`, `light_snow`, `snow`, `freezing_fog`, `shower`, `floating_dust`, `thunder_and_lighting`, `light_shower`, `rain`, `rain_and_snow`, `dust_bowl`, `ice_pellets`, `strong_dust_storms`, `sandy`, `light_to_moderate_rain`, `mostly_sunny`, `sunny`, `haze`, `heavy_shower`, `heavy_snow`, `very_heavy_rain`, `blizzard`, `ice_pod`, `light_to_moderate_snow`, `few_clouds`, `light_snow_showers`, `moderate_snow`, `cloudy`, `icy_needles`, `thunderstorm_with_ice_pods`, `freezing_rain`, `snow_shower`, `light_rain`, `thunder`, `moderate_rain`, `moderate_to_heavy_rain`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

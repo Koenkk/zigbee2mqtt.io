@@ -23,8 +23,14 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Related
+- [SBBT-004CEU](./SBBT-004CEU.md) - Shelly BLU Wall Switch 4 ZB
+- [SBBT-104CEU](./SBBT-104CEU.md) - Shelly BLU Wall Switch 4 ZB DK
+- [SBBT-102C](./SBBT-102C.md) - Shelly BLU Button Tough 1 ZB
 
+See all information on [Shelly API docs](https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button4_ZB) (pairing, modes, bind actions, find&bind).
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -56,5 +62,5 @@ The possible values are: `identify`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `1_single`, `2_single`, `3_single`, `4_single`, `1_hold`, `2_hold`, `3_hold`, `4_hold`.
+The possible values are: `1_single`, `2_single`, `3_single`, `4_single`, `1_double`, `2_double`, `3_double`, `4_double`, `1_triple`, `2_triple`, `3_triple`, `4_triple`, `1_single_long`, `2_single_long`, `3_single_long`, `4_single_long`, `1_double_long`, `2_double_long`, `3_double_long`, `4_double_long`, `1_triple_long`, `2_triple_long`, `3_triple_long`, `4_triple_long`, `1_hold`, `2_hold`, `3_hold`, `4_hold`.
 

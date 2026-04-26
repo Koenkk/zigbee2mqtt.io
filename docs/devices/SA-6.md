@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SA-6  |
 | Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | Safira smart switch - 6 gang |
-| Exposes | switch (state) |
+| Exposes | switch (state), power_on_behavior, indicator_mode |
 | Picture | ![Nova Digital SA-6](https://www.zigbee2mqtt.io/images/devices/SA-6.png) |
 
 
@@ -61,4 +61,18 @@ It's not possible to read (`/get`) this value.
 The current state of this switch is in the published state under the `state_l6` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l6": "ON"}`, `{"state_l6": "OFF"}` or `{"state_l6": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
+
+### Power on behavior (enum)
+Power on behavior state.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `previous`.
+
+### Indicator mode (enum)
+Mode of the indicator light.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `none`, `relay`, `pos`.
 

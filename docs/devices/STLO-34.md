@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | STLO-34  |
 | Vendor  | [Stello](/supported-devices/#v=Stello)  |
 | Description | Hilo thermostat |
-| Exposes | local_temperature, keypad_lockout, power, energy, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state) |
+| Exposes | local_temperature, keypad_lockout, power, energy, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), peak_demand_icon, outdoor_temperature_display |
 | Picture | ![Stello STLO-34](https://www.zigbee2mqtt.io/images/devices/STLO-34.png) |
 
 
@@ -77,4 +77,20 @@ This climate device supports the following features: `occupied_heating_setpoint`
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
+
+### Peak demand icon (numeric)
+Set peak demand event icon for the specified number of hours.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"peak_demand_icon": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `18`.
+The unit of this value is `hours`.
+
+### Outdoor temperature display (numeric)
+Outdoor temperature displayed on the thermostat.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outdoor_temperature_display": NEW_VALUE}`.
+The minimal value is `-32` and the maximum value is `199`.
+The unit of this value is `°C`.
 

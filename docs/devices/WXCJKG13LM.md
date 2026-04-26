@@ -41,16 +41,16 @@ As the device is sleeping by default, you need to wake it up after sending the b
 When endpoint `1` is bound to a light or a group of lights, the behavior is as follows (for a triple band model):
 | Button | Click | Action | Comment |
 |-----|-----|-----|-----|
-| Top<br>left | Single<br>Double<br>Long  | Turn off | Using the `commandOff` command. |
-| Top<br>right | Single<br>Double<br>Long  | Turn on | Using the `commandOn` command. |
-| Middle<br>left | Single<br>Double | Step down the brightness | In steps of 85 points (33%), using the `step` command. |
-| Middle<br>right | Single<br>Double | Step up the brightness | In steps of 85 points (33%), using the `step` command. |
-| Middle<br>left | Long | Smoothly decrease the brightness | In steps of 15 points (around 6%), using the `commandMove` command.<br>Sends the `commandStop` command, on button release. |
-| Middle<br>right | Long | Smoothly increase the brightness | In steps of 15 points (around 6%), using the `commandMove` command.<br>Sends the `commandStop` command, on button release. |
-| Bottom<br>left | Single<br>Double | Step color the temperature down | In steps of 69 mired, using the `stepColorTemp` command.<br>I.e., make it warmer. |
-| Bottom<br>right | Single<br>Double | Step color the temperature up | In steps of 69 mired, using the `stepColorTemp` command.<br>I.e., make it colder. |
-| Bottom<br>left | Double | Smoothly decrease the color temperature | In steps of 15 mired, using the `commandMoveColorTemp` command.<br>I.e., make it warmer. |
-| Bottom<br>right | Double | Smoothly increase the color temperature | In steps of 15 mired, using the `commandMoveColorTemp` command.<br>I.e., make it colder. |
+| Top, Left | Single, Double, Long  | Turn off | Using the `commandOff` command |
+| Top, Right | Single, Double, Long  | Turn on | Using the `commandOn` command |
+| Middle, Left | Single, Double | Step down the brightness | In steps of 85 points (33%), using the `step` command |
+| Middle, Right | Single, Double | Step up the brightness | In steps of 85 points (33%), using the `step` command |
+| Middle, Left | Long | Smoothly decrease the brightness | In steps of 15 points (around 6%), using the `commandMove` command (sends the `commandStop` command, on button release) |
+| Middle, Right | Long | Smoothly increase the brightness | In steps of 15 points (around 6%), using the `commandMove` command (sends the `commandStop` command, on button release) |
+| Bottom, Left | Single, Double | Step color the temperature down | In steps of 69 mired, using the `stepColorTemp` command (make it warmer) |
+| Bottom, Right | Single, Double | Step color the temperature up | In steps of 69 mired, using the `stepColorTemp` command (make it colder) |
+| Bottom, Left | Double | Smoothly decrease the color temperature | In steps of 15 mired, using the `commandMoveColorTemp` command (make it warmer) |
+| Bottom, Right | Double | Smoothly increase the color temperature | In steps of 15 mired, using the `commandMoveColorTemp` command (make it colder) |
 
 ### Battery Replacement
 All devices in the Opple line share the same internal design. First, you will need to remove the wireless switch part from its mount.
