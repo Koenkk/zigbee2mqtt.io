@@ -82,11 +82,17 @@ reboot
 
 ## 3. Configure
 
-Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the adapter is connected to.
+Now edit the Zigbee2MQTT using the App Configuration tab. Do not edit configuration.yaml, as the app will overwrite your changes at startup. Replace `192.168.2.13` with the IP or hostname of your system where the adapter is connected to.
 
-```yaml
-serial:
-    port: 'tcp://192.168.2.13:20108'
+```On Zigbee2MQTT app Configuration tab, select Serial:
+     --Change port to tcp://192.168.2.13:20108
+     --Change adapter to your adapter type:
+          Sonoff Zigbee 3.0 USB Plus (ZBDongle-P): zstack
+          Sonoff Zigbee 3.0 USB Plus-E (ZBDongle-E): ember
+          CC2652P/CC2652R sticks: zstack
+          ConBee II / RaspBee: deconz
+          HUSBZB-1: ember
+          Elelabs: ember
 ```
 
 Done! Now you can start Zigbee2MQTT.
