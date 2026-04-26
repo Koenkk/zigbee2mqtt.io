@@ -33,7 +33,7 @@ This device can be added to groups, but it does **not** respond to any group com
 
 #### Inverted moving
 
-This device performs inverse effects on receipt of _Move_  
+This device performs inverse effects on receipt of *Move*  
 (whether it's sent through Zigbee2MQTT, or a bound remote). Tested on version v1.0.5
 
 For example `{"brightness_move": -40}` will start **increasing** the brightness (instead of decreasing it).
