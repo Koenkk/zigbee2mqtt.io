@@ -20,10 +20,13 @@ pageClass: device-page
 | Exposes | ir switch1 on/off/ study,ir switch2 on/off/study....... |
 | Picture | ![HOBEIAN ZG-IR01](https://www.zigbee2mqtt.io/images/devices/ZG-IR01.png) |
 
-
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 # Notes
-
 * If you have additional technical problems, please email Technical support at [szalarm@qq.com]
+
+<!-- Notes END: Do not edit below this line -->
+
+## Options
 
 ## Exposes
 
