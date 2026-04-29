@@ -168,7 +168,7 @@ Get or set weekly schedule
 
 Attribute Value | Description
 ----------------|---------------------------------------------------------------------------
-0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. / 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. _Note: It does not clear or delete previous weekly schedule programming configurations._
+0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. / 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. *Note: It does not clear or delete previous weekly schedule programming configurations.*
 1               | 0 - Auto/recovery mode set to OFF / 1 – Auto/recovery mode set to ON
 2               | 0 – Economy/EnergyStar mode set to OFF / 1 – Economy/EnergyStar mode set to ON
 

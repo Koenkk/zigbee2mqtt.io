@@ -27,7 +27,7 @@ pageClass: device-page
 
 ### Known issues
 
-- Device sends _Leave_ events when power is restored, but it doesn't actually leave the network
+- Device sends *Leave* events when power is restored, but it doesn't actually leave the network
   - Discussion [here](https://github.com/Koenkk/zigbee-herdsman/issues/1648)
 <!-- Notes END: Do not edit below this line -->
 
