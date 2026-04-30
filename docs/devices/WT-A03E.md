@@ -30,11 +30,14 @@ pageClass: device-page
 The thermostat needs to be flashed with the correct firmware before it can be used with Zigbee. This works without using a proprietary hub, but requires a iOS/Android device with Bluetooth and an Aqara account.
 
 1. Download the Aqara app, sign in and proceed to adding a new device.
-2. Put the thermostat into pairing mode by pressing and holding the center button for 10 seconds until the display starts flashing. The device should now show up in the app.
+2. (Skip this step in case of a new device) Put the thermostat into pairing mode by pressing and holding the center button for 10 seconds until the display starts flashing. The device should now show up in the app.
 3. Select the thermostat in the app and when prompted, choose Zigbee as the connection method. The app will then flash the correct firmware.
 4. Once the flashing process is complete, the thermostat will start pairing using Zigbee.
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -51,7 +54,7 @@ The thermostat needs to be flashed with the correct firmware before it can be us
 This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-12.8` and the maximum value is `12.8` with a step size of `0.1`.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
 
 ### Temperature setpoint hold (binary)
 Prevent changes. `false` = run normally. `true` = prevent from making changes..

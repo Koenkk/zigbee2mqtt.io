@@ -1,6 +1,6 @@
 ---
-title: "Powernity PO-BOCO-ELEC control via MQTT"
-description: "Integrate your Powernity PO-BOCO-ELEC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Powernity / Xanlite PO-BOCO-ELEC control via MQTT"
+description: "Integrate your Powernity / Xanlite PO-BOCO-ELEC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-01-03T20:11:47
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Powernity PO-BOCO-ELEC
+# Powernity / Xanlite PO-BOCO-ELEC
 
 |     |     |
 |-----|-----|
 | Model | PO-BOCO-ELEC  |
-| Vendor  | [Powernity](/supported-devices/#v=Powernity)  |
+| Vendor  | [Powernity / Xanlite](/supported-devices/#v=Powernity%20%2F%20Xanlite)  |
 | Description | Pilot wire heating module |
 | Exposes | climate (preset, local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode), auto_mode, manual_mode, frost_protection, humidity, child_lock, switch (state), window_opening_mode, window_opening_mode_duration, temperature_unit, boost_heating, boost_timeset_countdown, power_rating, energy_consumed, mode_switching, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, holiday_start_stop, reset_consumption |
-| Picture | ![Powernity PO-BOCO-ELEC](https://www.zigbee2mqtt.io/images/devices/PO-BOCO-ELEC.png) |
+| Picture | ![Powernity / Xanlite PO-BOCO-ELEC](https://www.zigbee2mqtt.io/images/devices/PO-BOCO-ELEC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

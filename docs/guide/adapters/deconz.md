@@ -3,10 +3,10 @@
 ::: warning ATTENTION
 Various features are not supported by this adapter, in case you depend on these features, consider a different adapter.
 
-- Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
 - Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
 - Lowering the [transmit power](../../guide/configuration/adapter-settings.md)
 - ConBee II (and possibly RaspBee II) [may exhibit network connectivity issues (MacNoAck)](https://github.com/Koenkk/zigbee2mqtt/issues/28041)
+- [Install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd) support requires recent coordinator firmware. This is required to pair some devices.
 
 :::
 
@@ -28,7 +28,7 @@ USB connected adapters (ConBee / ConBee II / ConBee III) and Raspberry Pi GPIO m
 Add the correct baudrate to the `configuration.yaml` into the serial section.
 
 - For ConBee2: specifying the baudrate is not necessary
-- For RaspBee2 it is 38400
+- For Conbee and RaspBee2 it is 38400
 - For ConBee3 it is 115200
 
 The latest stable firmware versions are recommended and listed in the [firmware changelog](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Firmware-Changelog).

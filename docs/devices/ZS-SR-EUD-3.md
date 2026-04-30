@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZS-SR-EUD-3  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Star ring smart dimmer switch 3 gangs |
-| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, backlight_color, backlight_brightness |
 | Picture | ![Moes ZS-SR-EUD-3](https://www.zigbee2mqtt.io/images/devices/ZS-SR-EUD-3.png) |
 
 
@@ -105,4 +105,19 @@ Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 The possible values are: `off`, `normal`, `inverted`.
+
+### Backlight color (enum)
+Backlight color.
+Value can be found in the published state on the `backlight_color` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_color": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_color": NEW_VALUE}`.
+The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`, `warm_white`.
+
+### Backlight brightness (numeric)
+Backlight brightness.
+Value can be found in the published state on the `backlight_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 

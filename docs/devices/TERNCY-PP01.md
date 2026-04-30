@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TERNCY-PP01  |
 | Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Awareness switch |
-| Exposes | temperature, occupancy, illuminance, action |
+| Exposes | occupancy, temperature, illuminance, action |
 | Picture | ![TERNCY TERNCY-PP01](https://www.zigbee2mqtt.io/images/devices/TERNCY-PP01.png) |
 
 
@@ -59,17 +59,18 @@ devices:
 
 ## Exposes
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Illuminance (numeric)
 Measured illuminance.

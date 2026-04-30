@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-204ZK  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | 24Ghz human presence sensor |
-| Exposes | presence, illuminance, battery, fading_time, static_detection_distance, static_detection_sensitivity, motion_detection_sensitivity, indicator |
+| Exposes | presence, battery, fading_time, detection_distance, static_detection_sensitivity, motion_detection_sensitivity, indicator, anti_interference |
 | Picture | ![HOBEIAN ZG-204ZK](https://www.zigbee2mqtt.io/images/devices/ZG-204ZK.png) |
 
 
@@ -36,11 +36,6 @@ One of the suggestions is to remove residual solder-flux from the PCB and/or to 
 
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
@@ -49,12 +44,6 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
-
-### Illuminance (numeric)
-Measured illuminance.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
@@ -68,14 +57,14 @@ Presence keep time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `28800`.
+The minimal value is `10` and the maximum value is `28800`.
 The unit of this value is `s`.
 
-### Static detection distance (numeric)
-Static detection distance.
-Value can be found in the published state on the `static_detection_distance` property.
+### Detection distance (numeric)
+Detection distance.
+Value can be found in the published state on the `detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `m`.
 
@@ -85,15 +74,13 @@ Value can be found in the published state on the `static_detection_sensitivity` 
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Motion detection sensitivity (numeric)
-Motion detection sensitivity (Firmware version>=0122052017).
+Motion detection sensitivity.
 Value can be found in the published state on the `motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Indicator (binary)
 LED indicator mode.
@@ -101,4 +88,11 @@ Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
+
+### Anti interference (binary)
+Anti interference function.
+Value can be found in the published state on the `anti_interference` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"anti_interference": NEW_VALUE}`.
+If value equals `ON` anti interference is ON, if `OFF` OFF.
 

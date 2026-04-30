@@ -23,8 +23,58 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Device Overview
+Smart scene knob controller with 4 physical buttons and rotation knob. Each button can be configured to one of three modes:
 
+| Mode | LED Color | Function |
+|------|-----------|----------|
+| Scene | Red | Triggers scene actions (DP 1-4) |
+| Light | Green | Controls brightness & color temperature |
+| Curtain | Blue | Controls curtain position |
+
+### Mode Switching
+Hold button 2 (left) or 4 (right) for 3 seconds to cycle through bound modes. Only modes that have been bound are available.
+
+### Initial Setup (Light/Curtain Mode)
+Light and Curtain modes use Group ID broadcasting which must be detected on first use:
+
+1. Click `bind_all_light` or `bind_all_curtain` in the device settings
+2. Status changes to `waiting_button_1`
+3. Press **button 1** on the physical device
+4. Base Group ID is auto-detected, status changes to `ready`
+
+To reassign, use `assign_button_1` or manually set via `set_base_group_id`.
+
+### Group ID Pattern
+Group IDs follow the pattern: `base + (button - 1) × 20`
+
+| Button | Offset | Example (base=11220) |
+|--------|--------|----------------------|
+| 1 | +0 | 11220 |
+| 2 | +20 | 11240 |
+| 3 | +40 | 11260 |
+| 4 | +60 | 11280 |
+
+### Actions
+
+**Scene mode:**
+- Single press: `scene_1` / `scene_2` / `scene_3` / `scene_4`
+
+**Light mode:**
+- Single press: `light_X_on` / `light_X_off`
+- Knob rotation: `light_X_brightness_up` / `light_X_brightness_down`
+- Double press (LED blinks) + knob rotation: `light_X_colortemp_up` / `light_X_colortemp_down`
+
+**Curtain mode:**
+- Single press: `curtain_X_start` / `curtain_X_stop`
+- Knob rotation: `curtain_X_position_open` / `curtain_X_position_close`
+
+### Known Limitations
+- Battery status is not exposed (not available even in Tuya app)
+- In Light/Curtain mode, you must press a button first before rotating the knob to select which button/device to control. This means a button press action is always sent before knob rotation, which may trigger unintended commands.
+- In Light mode, knob rotation (brightness/color temp) only works after `light_X_on`. The knob does not function when the light is off.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -36,13 +86,13 @@ pageClass: device-page
 Brightness level from light mode (1-254).
 Value can be found in the published state on the `brightness` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `254`.
+The minimal value is `1` and the maximum value is `254`.
 
 ### Color temp (numeric)
 Color temperature from light mode (mired).
 Value can be found in the published state on the `color_temp` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `150` and the maximum value is `500`.
+The minimal value is `153` and the maximum value is `523`.
 
 ### Curtain position (numeric)
 Curtain position from curtain mode (0-100%).

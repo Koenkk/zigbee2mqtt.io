@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
-This device needs to be paired using the installation code, which can be obtained by scanning the QR-code on the device with your smartphone (95 digits, alphanumerical). The device will activate pairing mode for 3 minutes after power on or factory reset. To re-activate pairing mode, press any button while the device is not yet paired. In zigbee2mqtt, navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
+This device needs to be paired using the installation code, which can be obtained by scanning the QR-code on the device with your smartphone (95 digits, alphanumerical). The device will activate pairing mode for 3 minutes after power on or factory reset. To re-activate pairing mode, press any button while the device is not yet paired. In zigbee2mqtt, navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
 
 #### Failed pairing after device removal
 When the device re-joins the network after being removed, pairing may fail. In this case, the device will be listed in zigbee2mqtt, but discovery fails, and an error message occurs. To fix this issue, just add the installation code again. The device should be correctly rediscovered automatically.

@@ -24,7 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-If new, the device will be in pairing mode when powered on, but you will need to add the install code from the back of the unit in order to pair the siren. If you do not complete this step the interview will fail and the unit will be shown as unsupported. On the back of the siren is a QR code and a 36 digit code that is called "Install code" - do NOT use this 36 digit code. Instead, scan the QR code with your phone and this will return a 91 or 95 character code. Use this code by going to Z2M GUI, Settings, Tools, "Add Install Code". Z2M will automatically enable pairing and start listening for new devices.
+If new, the device will be in pairing mode when powered on, but you will need to add the install code from the back of the unit in order to pair the siren. If you do not complete this step the interview will fail and the unit will be shown as unsupported. On the back of the siren is a QR code and a 36 digit code that is called "Install code" - do NOT use this 36 digit code. Instead, scan the QR code with your phone and this will return a 91 or 95 character code. In zigbee2mqtt, navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
 IMPORTANT: [Check DIP switchers](https://github.com/Koenkk/zigbee2mqtt/issues/28088) factory settings and set switch number 8 to ON - "Smart" mode (Operation Bosch Smart Home controller).
 
 If the device is not in pairing mode, you must
