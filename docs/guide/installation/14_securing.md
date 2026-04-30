@@ -56,7 +56,7 @@ Refer to the available documentation and guides for your broker.
 :::
 
 :::caution CAUTION
-Using `reject_unauthorized: false` in production is dangerous. Its disables TLS certificate validation and makes the connection vulnerable to man-in-the-middle attacks.
+Using `reject_unauthorized: false` in production is dangerous. Its disables TLS certificate validation and makes the connection vulnerable.
 :::
 
 ## Frontend
@@ -154,6 +154,16 @@ Joining is enabled temporarily (for 254 seconds by default) via the dedicated fr
 Freshly joined devices may automatically permit joining on themselves for a specific duration (max 254 seconds).
 :::
 
+#### Install codes
+
+Joining with an install code provides better security (if available).
+A code is randomly assigned during the manufacturing process of a device.
+The code allows to encrypt the initial network key transport from the Trust Center (coordinator) to the joining device.
+
+Ask the vendor or refer to each device's documentation to check if an install code is available (usually printed on the device, plainly or as a QR code).
+Codes can be added through the frontend.
+See also [Add install code via MQTT](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd).
+
 ### Device passlist and blocklist
 
 For stricter control over which devices are allowed on the network, use a passlist or blocklist.
@@ -167,6 +177,13 @@ Devices that are not allowed are removed from the network on startup (e.g. confi
 Using a passlist is the most restrictive and therefore most secure option, only explicitly trusted devices can join.
 :::
 
+### Zigbee 4.0
+
+Zigbee 4.0 provides several security enhancements.
+You can read more about it in the announcement from the CSA: [https://csa-iot.org/newsroom/the-connectivity-standards-alliance-announces-zigbee-4-0-and-suzi-empowering-the-next-generation-of-secure-interoperable-iot-devices/](https://csa-iot.org/newsroom/the-connectivity-standards-alliance-announces-zigbee-4-0-and-suzi-empowering-the-next-generation-of-secure-interoperable-iot-devices/)
+
+NOTE: It will take time before devices catch up to the new standard and support all these enhancements.
+
 ## External extensions and converters
 
 By design, external extensions and converters execute arbitrary user-provided JavaScript code within the Zigbee2MQTT process.
@@ -179,15 +196,15 @@ Treat them with the same level of scrutiny as any other code/scripts running on 
 
 ## Firmware updates (OTA)
 
-Firmware updates can change device behavior in ways that may affect Zigbee2MQTT compatibility, and could in theory introduce malicious or buggy functionality.
+Firmware updates can provide bug fixes, security updates and other welcomed features.
+However, they can also change device behavior in ways that may affect Zigbee2MQTT compatibility and potentially introduce buggy, or even malicious functionality.
+Review the release notes before applying a firmware update.
+See [OTA updates](../usage/ota_updates.md) for more details.
 
-Zigbee2MQTT retrieves OTA images from the [Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) repository by default.
+By default, Zigbee2MQTT matches and retrieves OTA images from the [Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) repository.
+This repository is a mirror of manufacturer-provided firmware updates, both manually and automatically curated.
 
 :::caution CAUTION
 Only use firmware from trusted sources.
 Avoid using custom OTA index URLs unless you fully trust the source.
-:::
-
-:::tip TIP
-Review the release notes before applying a firmware update. See [OTA updates](../usage/ota_updates.md) for more details.
 :::
