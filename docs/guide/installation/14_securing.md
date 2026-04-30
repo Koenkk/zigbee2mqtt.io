@@ -150,7 +150,7 @@ The Network Address is randomly assigned on device join and usually remains the 
 The "permit join" state determines whether new devices are allowed to join the network.
 Joining is enabled temporarily (for 254 seconds by default) via the dedicated frontend button or via MQTT. You can also close the joining window manually once pairing is complete.
 
-:::warning WARNING
+:::tip TIP
 Freshly joined devices may automatically permit joining on themselves for a specific duration (max 254 seconds).
 :::
 
@@ -169,11 +169,12 @@ See also [Add install code via MQTT](../../guide/usage/mqtt_topics_and_messages.
 For stricter control over which devices are allowed on the network, use a passlist or blocklist.
 See [Device blocklist / passlist](../configuration/block-pass-list.md) for more details.
 
-:::tip
+:::tip TIP
 Devices that are not allowed are removed from the network on startup (e.g. configuration changes since last run), and on join attempts.
+Note: removal is a request sent to the targeted device to "ask it" to leave, a malicious device could purposely ignore it.
 :::
 
-:::tip
+:::tip TIP
 Using a passlist is the most restrictive and therefore most secure option, only explicitly trusted devices can join.
 :::
 
