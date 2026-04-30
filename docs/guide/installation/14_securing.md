@@ -133,7 +133,7 @@ See [Zigbee network configuration](../configuration/zigbee-network.md) for more 
 
 The PAN ID and Extended PAN ID identify your network. These are not security measures.
 
-Changing them is possible and require re-pairing all devices.
+Changing them is possible and requires re-pairing all devices.
 This is mostly done in case you need to avoid a conflict with another nearby network.
 
 ### IEEE and Network addresses
