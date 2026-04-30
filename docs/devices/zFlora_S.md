@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | zFlora_S  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Plant watering sensor zFlora S |
-| Exposes | identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_offset, temperature_compensation |
+| Exposes | identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_compensation |
 | Picture | ![EFEKTA zFlora_S](https://www.zigbee2mqtt.io/images/devices/zFlora_S.png) |
 
 
@@ -138,14 +138,6 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_level": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Temperature offset (numeric)
-Adjust temperature.
-Value can be found in the published state on the `temperature_offset` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
-The minimal value is `-50` and the maximum value is `50`.
-The unit of this value is `°C`.
 
 ### Temperature compensation (binary)
 Temperature compensation.

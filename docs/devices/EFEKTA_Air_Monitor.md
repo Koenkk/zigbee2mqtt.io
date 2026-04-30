@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_Air_Monitor  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | CO2 smart monitor, AA battery |
-| Exposes | co2, battery, battery_low, uptime, report_delay, forced_recalibration, manual_forced_recalibration, automatic_scal, factory_reset_co2 |
+| Exposes | co2, battery, battery_low, uptime, report_delay, power_mode, forced_recalibration, manual_forced_recalibration, automatic_scal, factory_reset_co2 |
 | Picture | ![EFEKTA EFEKTA_Air_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Air_Monitor.png) |
 
 
@@ -70,6 +70,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
 The minimal value is `20` and the maximum value is `1800`.
 The unit of this value is `sec`.
+
+### Power mode (enum)
+Set power mode.
+Value can be found in the published state on the `power_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_mode": NEW_VALUE}`.
+The possible values are: `Fast`, `Medium`, `Slow`.
 
 ### Forced recalibration (binary)
 Start FRC (Perform Forced Recalibration of the CO2 Sensor).

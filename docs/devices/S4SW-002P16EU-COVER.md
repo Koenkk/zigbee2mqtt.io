@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-002P16EU-COVER  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 2PM Gen4 (Cover mode) |
-| Exposes | cover (state, position, tilt), wifi_status, ip_address, dhcp_enabled, wifi_config |
+| Exposes | switch_type, cover (state, position, tilt), switch_mode, wifi_status, ip_address, dhcp_enabled, wifi_config, action |
 | Picture | ![Shelly S4SW-002P16EU-COVER](https://www.zigbee2mqtt.io/images/devices/S4SW-002P16EU-COVER.png) |
 
 
@@ -49,6 +49,9 @@ To enable the on-device access point and bluetooth for maintenance, press and ho
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -60,12 +63,40 @@ To enable the on-device access point and bluetooth for maintenance, press and ho
 
 ## Exposes
 
+### Switch type (enum, sw1 endpoint)
+Switch input type.
+Value can be found in the published state on the `switch_type_sw1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_sw1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_sw1": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
+
+### Switch type (enum, sw2 endpoint)
+Switch input type.
+Value can be found in the published state on the `switch_type_sw2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_sw2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_sw2": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
+
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Switch mode (enum, sw1 endpoint)
+Switch input mode.
+Value can be found in the published state on the `switch_mode_sw1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_sw1": NEW_VALUE}`.
+The possible values are: `follow`, `flip`, `detached`, `cycle`, `activation`.
+
+### Switch mode (enum, sw2 endpoint)
+Switch input mode.
+Value can be found in the published state on the `switch_mode_sw2` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_sw2": NEW_VALUE}`.
+The possible values are: `follow`, `flip`, `detached`, `cycle`, `activation`.
 
 ### Wi-Fi status (text)
 Current connection status.
@@ -96,4 +127,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `net_mask` (text): Subnet mask for the static IP configuration 
 - `gateway` (text): Default gateway address for static IP configuration 
 - `name_server` (text): Name server address for static IP configuration 
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_hold`, `input_2_on`, `input_2_off`, `input_2_toggle`, `input_2_hold`.
 

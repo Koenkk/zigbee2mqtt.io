@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HS-3-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR HS-3-ZB-S (Adapter for household Hisesnse systems) |
+| Description | Adapter for household Hisesnse systems |
 | Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, eco_mode, turbo_mode, sleep_mode, smart_sleep_mode, ionization, smart_eye, screen_light, beeper, current_compressor_power, target_compressor_power, indoor_heat_exchanger_temperature, outdoor_heat_exchanger_temperature |
 | Picture | ![ONOKOM HS-3-ZB-S](https://www.zigbee2mqtt.io/images/devices/HS-3-ZB-S.png) |
 

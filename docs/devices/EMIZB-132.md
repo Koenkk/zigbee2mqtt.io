@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EMIZB-132  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Wattle AMS HAN power-meter sensor |
-| Exposes | interface_mode, power, power_reactive, voltage, current, energy, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c |
+| Exposes | power, power_reactive, interface_mode, voltage, current, energy, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c |
 | Picture | ![Develco EMIZB-132](https://www.zigbee2mqtt.io/images/devices/EMIZB-132.png) |
 
 
@@ -93,13 +93,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Interface mode (enum)
-Specifies the configuration of the external HAN port interface..
-Value can be found in the published state on the `interface_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"interface_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interface_mode": NEW_VALUE}`.
-The possible values are: `norwegian_han`, `norwegian_han_extra_load`, `aidon_meter`, `kaifa_and_kamstrup`.
-
 ### Power (numeric)
 Total active power..
 Value can be found in the published state on the `power` property.
@@ -113,6 +106,13 @@ Value can be found in the published state on the `power_reactive` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_reactive": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `VAr`.
+
+### Interface mode (enum)
+Specifies the configuration of the external HAN port interface..
+Value can be found in the published state on the `interface_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"interface_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interface_mode": NEW_VALUE}`.
+The possible values are: `norwegian_han`, `norwegian_han_extra_load`, `aidon_meter`, `kaifa_and_kamstrup`.
 
 ### Voltage (numeric)
 Measured electrical potential value.

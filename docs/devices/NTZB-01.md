@@ -1,6 +1,7 @@
 ---
-title: "HOBEIAN ZG-301Z-2CH control via MQTT"
-description: "Integrate your HOBEIAN ZG-301Z-2CH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Nova Digital NTZB-01 control via MQTT"
+description: "Integrate your Nova Digital NTZB-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-04-30T19:57:28
 pageClass: device-page
 ---
 
@@ -10,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TS0002_basic
+# Nova Digital NTZB-01
 
 |     |     |
 |-----|-----|
-| Model | ZG-301Z-2CH  |
-| Vendor  | [HOBEIAN ](/supported-devices/#v=HOBEIAN )  |
-| Description | 2 gang switch module |
+| Model | NTZB-01  |
+| Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
+| Description | 1 switch and 1 socket with backlight |
 | Exposes | switch (state), power_outage_memory, switch_type |
-| Picture | ![Tuya TS0002_basic](https://www.zigbee2mqtt.io/images/devices/ZG-301Z-2CH.png) |
+| Picture | ![Nova Digital NTZB-01](https://www.zigbee2mqtt.io/images/devices/NTZB-01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -46,12 +47,13 @@ The current state of this switch is in the published state under the `state_l2` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
 
-### Power outage memory (enum)
-Recover state after power outage.
-Value can be found in the published state on the `power_outage_memory` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-The possible values are: `on`, `off`, `restore`.
+### Countdown (numeric)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
 
 ### Switch type (enum)
 Type of the switch.
@@ -59,4 +61,18 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `toggle`, `state`, `momentary`.
+
+### Backlight mode (binary)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
+
+### Indicator mode (enum)
+LED indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `off`, `off/on`, `on/off`, `on`.
 

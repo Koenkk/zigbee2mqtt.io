@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SWV  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart water valve |
-| Exposes | flow, battery, switch (state), current_device_status, auto_close_when_water_shortage, cyclic_timed_irrigation, cyclic_quantitative_irrigation |
+| Exposes | flow, battery, switch (state), current_device_status, auto_close_when_water_shortage, cyclic_timed_irrigation, cyclic_quantitative_irrigation, real_time_irrigation_duration, real_time_irrigation_volume, irrigation_start_time, irrigation_end_time, daily_irrigation_volume, valve_work_state |
 | Picture | ![SONOFF SWV](https://www.zigbee2mqtt.io/images/devices/SWV.png) |
 
 
@@ -96,4 +96,38 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `total_number` (numeric): Total times of circulating irrigation max value is 100, unit is times
 - `irrigation_capacity` (numeric): Single irrigation capacity max value is 6500, unit is liter
 - `irrigation_interval` (numeric): Time interval between two adjacent irrigation max value is 86400, unit is seconds
+
+### Real time irrigation duration (numeric)
+Duration of the last/current irrigation session.
+Value can be found in the published state on the `real_time_irrigation_duration` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `s`.
+
+### Real time irrigation volume (numeric)
+Volume of the last/current irrigation session.
+Value can be found in the published state on the `real_time_irrigation_volume` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `L`.
+
+### Irrigation start time (numeric)
+Start time of the last/current irrigation session (Unix timestamp).
+Value can be found in the published state on the `irrigation_start_time` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Irrigation end time (numeric)
+End time of the last irrigation session (Unix timestamp).
+Value can be found in the published state on the `irrigation_end_time` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Daily irrigation volume (numeric)
+Total irrigation volume today.
+Value can be found in the published state on the `daily_irrigation_volume` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `L`.
+
+### Valve work state (binary)
+Current valve work state.
+Value can be found in the published state on the `valve_work_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `working` valve work state is ON, if `idle` OFF.
 

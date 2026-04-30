@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | mSwitch_Mic  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | Mikrofon, alarm detection microphone |
-| Exposes | temperature, battery, battery_low, smoke, action, group_id |
+| Exposes | temperature, battery, battery_low, smoke, group_id, action |
 | Picture | ![CTM Lyng mSwitch_Mic](https://www.zigbee2mqtt.io/images/devices/mSwitch_Mic.png) |
 
 
@@ -64,14 +64,14 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
+### Group id (numeric)
+The device sends commands with this group ID. Put devices in this group to control them..
+Value can be found in the published state on the `group_id` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`.
-
-### Group id (numeric)
-The device sends commands with this group ID. Put devices in this group to control them..
-Value can be found in the published state on the `group_id` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
 
