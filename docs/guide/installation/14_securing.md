@@ -177,6 +177,13 @@ Devices that are not allowed are removed from the network on startup (e.g. confi
 Using a passlist is the most restrictive and therefore most secure option, only explicitly trusted devices can join.
 :::
 
+### Inter-PAN
+
+Inter-PAN messages are **unsecured messages** sent to or received from unjoined devices 1-hop away.
+Touchlink (previously known as ZLL) uses inter-PAN messaging.
+
+Inter-PAN is usually reserved for highly specific operations (e.g. resetting a device to factory settings), and undesired messages are aggressively dropped; this limits the impact of its lack of security.
+
 ### Zigbee 4.0
 
 Zigbee 4.0 provides several security enhancements.
