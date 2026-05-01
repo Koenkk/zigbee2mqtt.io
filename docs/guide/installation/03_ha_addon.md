@@ -1,5 +1,5 @@
 ---
-next: ../configuration/
+next: 14_securing.md
 ---
 
 # Home Assistant addon
