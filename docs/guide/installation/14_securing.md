@@ -183,7 +183,12 @@ Using a passlist is the most restrictive and therefore most secure option, only 
 Inter-PAN messages are **unsecured messages** sent to or received from unjoined devices 1-hop away.
 Touchlink (previously known as ZLL) uses inter-PAN messaging.
 
-Inter-PAN is usually reserved for highly specific operations (e.g. resetting a device to factory settings), and undesired messages are aggressively dropped; this limits the impact of its lack of security.
+Inter-PAN is usually reserved for highly specific operations (e.g. resetting a device to factory settings via Touchlink), undesired messages are aggressively dropped, and close physical proximity is required.
+This limits the impact of its lack of security.
+
+:::warning WARNING
+Avoid devices that keep Touchlink permanently enabled, especially in places with relative ease of access; a malicious user could otherwise disrupt the network.
+:::
 
 ### Zigbee 4.0
 
