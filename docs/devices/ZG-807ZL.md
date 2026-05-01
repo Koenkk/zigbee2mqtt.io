@@ -1,6 +1,6 @@
 ---
-title: "HOBEIAN ZG-807Z control via MQTT"
-description: "Integrate your HOBEIAN ZG-807Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "COOLO ZG-807ZL control via MQTT"
+description: "Integrate your COOLO ZG-807ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-03-31T18:43:56
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HOBEIAN ZG-807ZL
+# COOLO ZG-807ZL
 
 |     |     |
 |-----|-----|
-| Model | ZG-807Z  |
-| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
+| Model | ZG-807ZL  |
+| Vendor  | [COOLO](/supported-devices/#v=COOLO)  |
 | Description | USB signal repeater |
 | Exposes |  |
-| Picture | ![HOBEIAN ZG-807ZL](https://www.zigbee2mqtt.io/images/devices/ZG-807ZL.png) |
+| Picture | ![COOLO ZG-807ZL](https://www.zigbee2mqtt.io/images/devices/ZG-807ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,7 +27,6 @@ pageClass: device-page
 To pair: 
 1. Press and hold the button for 3 seconds until the LED flash rapidly.
 2. LED will turn off when paired.
-
 <!-- Notes END: Do not edit below this line -->
 
 

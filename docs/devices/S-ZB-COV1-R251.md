@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | S-ZB-COV1-R251  |
 | Vendor  | [smarli.](/supported-devices/#v=smarli.)  |
-| Description | Zigbee curtain control module |
+| Description | cover |
 | Exposes | cover (state, position, tilt), power, voltage, current, energy, curtain_type, calibrate, identify |
 | Picture | ![smarli. S-ZB-COV1-R251](https://www.zigbee2mqtt.io/images/devices/S-ZB-COV1-R251.png) |
 

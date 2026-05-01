@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | S-ZB-PDM1-R251  |
 | Vendor  | [smarli.](/supported-devices/#v=smarli.)  |
-| Description | Phase dimmer gen 1 |
+| Description | phase dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy, external_switch_type, minimum_pwm |
 | Picture | ![smarli. S-ZB-PDM1-R251](https://www.zigbee2mqtt.io/images/devices/S-ZB-PDM1-R251.png) |
 

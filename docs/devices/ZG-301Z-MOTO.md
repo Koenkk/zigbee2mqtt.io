@@ -1,6 +1,6 @@
 ---
 title: "HOBEIAN ZG-301Z-MOTO control via MQTT"
-description: "Integrate your Girier TS130F_GIRIER via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+description: "Integrate your HOBEIAN ZG-301Z-MOTO via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-11-30T20:27:20
 pageClass: device-page
 ---
@@ -15,11 +15,11 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model | ZG-301Z-MOTO |
+| Model | ZG-301Z-MOTO  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
-| Description | Smart curtain switch |
-| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode |
-| Picture | ![Girier TS130F_GIRIER](https://www.zigbee2mqtt.io/images/devices/ZG-301Z-MOTO.png) |
+| Description | Curtain Motor Controller |
+| Exposes | cover (state, position), cur_calibration, control_back, tr_timecon, switch_type, indicator_mode |
+| Picture | ![HOBEIAN ZG-301Z-MOTO](https://www.zigbee2mqtt.io/images/devices/ZG-301Z-MOTO.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,13 +36,6 @@ Disable the calibration mode.
 
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
-
-* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
-
 
 ## Exposes
 
@@ -52,26 +45,39 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Moving (enum)
-Value can be found in the published state on the `moving` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `UP`, `STOP`, `DOWN`.
+### Cur calibration (enum)
+Curtain calibration.
+Value can be found in the published state on the `cur_calibration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cur_calibration": NEW_VALUE}`.
+The possible values are: `start`, `end`.
 
-### Motor reversal (binary)
-Value can be found in the published state on the `motor_reversal` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
-If value equals `ON` motor reversal is ON, if `OFF` OFF.
+### Control back (enum)
+Set curtain control back.
+Value can be found in the published state on the `control_back` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_back": NEW_VALUE}`.
+The possible values are: `forward`, `back`.
 
-### Calibration (binary)
-Value can be found in the published state on the `calibration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
-If value equals `ON` calibration is ON, if `OFF` OFF.
-
-### Calibration time (numeric)
-Value can be found in the published state on the `calibration_time` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time": NEW_VALUE}`.
+### Tr timecon (numeric)
+Quick Calibrate.
+Value can be found in the published state on the `tr_timecon` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tr_timecon": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `120`.
 The unit of this value is `s`.
+
+### Switch type (enum)
+Set curtain controller switch type.
+Value can be found in the published state on the `switch_type` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `flip_switch`, `sync_switch`, `button_switch`.
+
+### Indicator mode (enum)
+Set Controller indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `relay`, `pos`, `none`.
 
