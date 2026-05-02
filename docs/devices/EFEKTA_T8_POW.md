@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_T8_POW  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Temperature sensor with a signal amplifier, support up to 8 DS18B20 |
-| Exposes | temperature, battery, battery_low, number_of_sensors, uptime, mains_voltage, reading_interval, tx_radio_power, smart_sleep |
+| Exposes | temperature, battery, battery_low, number_of_sensors, uptime, mains_voltage, reading_interval, tx_radio_power, resolution, smart_sleep |
 | Picture | ![EFEKTA EFEKTA_T8_POW](https://www.zigbee2mqtt.io/images/devices/EFEKTA_T8_POW.png) |
 
 
@@ -133,6 +133,13 @@ Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
 The possible values are: `4dbm`, `19dbm`.
+
+### Resolution (enum)
+Set Bit resolution DS18B20.
+Value can be found in the published state on the `resolution` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"resolution": NEW_VALUE}`.
+The possible values are: `9 bit`, `10 bit`, `11 bit`, `12 bit`.
 
 ### Smart sleep (binary)
 Enable Smart Sleep, short wakeup every 2-7 seconds.

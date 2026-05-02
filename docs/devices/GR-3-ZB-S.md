@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | GR-3-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR GR-3-ZB-S (Adapter for control of semi-industrial and multi-split systems GREE) |
+| Description | Adapter for control of semi-industrial and multi-split systems GREE |
 | Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, eco_mode, turbo_mode, sleep_mode, ionization, self_cleaning, indoor_heat_exchanger_temperature |
 | Picture | ![ONOKOM GR-3-ZB-S](https://www.zigbee2mqtt.io/images/devices/GR-3-ZB-S.png) |
 

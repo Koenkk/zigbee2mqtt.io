@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS1SA-E-PLUS  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smoke detector |
-| Exposes | battery, identify, temperature, smoke, battery_low, test, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, smoke_level, smoke_unit, chamber_contamination, siren_for_automation_only, reported_packages, rejoin_count, reboot_count |
+| Exposes | battery, identify, temperature, smoke, battery_low, test, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, smoke_level, smoke_unit, chamber_contamination, link_available, siren_for_automation_only, temperature_offset, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman HS1SA-E-PLUS](https://www.zigbee2mqtt.io/images/devices/HS1SA-E-PLUS.png) |
 
 
@@ -145,12 +145,26 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The possible values are: `normal`, `light_contamination`, `medium_contamination`, `critical_contamination`.
 
+### Link available (enum)
+used for interconnection automation..
+Value can be found in the published state on the `link_available` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"link_available": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `inactive`, `smoke_active`, `co_active`, `heat_active`.
+
 ### Siren for automation only (enum)
 siren effect.
 Value can be found in the published state on the `siren_for_automation_only` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_for_automation_only": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_for_automation_only": NEW_VALUE}`.
 The possible values are: `stop`, `smoke_siren`, `co_siren`.
+
+### Temperature offset (numeric)
+used for temperature offset, unit: 0.01℃.
+Value can be found in the published state on the `temperature_offset` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+The minimal value is `-1500` and the maximum value is `1500`.
 
 ### Reported packages (numeric)
 for diagnostic purpose, how many zigbee packages has the reported in a day..

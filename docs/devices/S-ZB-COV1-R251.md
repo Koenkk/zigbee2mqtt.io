@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | S-ZB-COV1-R251  |
 | Vendor  | [smarli.](/supported-devices/#v=smarli.)  |
-| Description | Zigbee curtain control module |
+| Description | cover |
 | Exposes | cover (state, position, tilt), power, voltage, current, energy, curtain_type, calibrate, identify |
 | Picture | ![smarli. S-ZB-COV1-R251](https://www.zigbee2mqtt.io/images/devices/S-ZB-COV1-R251.png) |
 
@@ -57,12 +57,12 @@ pageClass: device-page
 
 ## Exposes
 
-### Cover (1 endpoint)
-The current state of this cover is in the published state under the `state_1` property (value is `OPEN` or `CLOSE`).
-To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_1": "OPEN"}`, `{"state_1": "CLOSE"}`, `{"state_1": "STOP"}`.
+### Cover 
+The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
+To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
-To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position_1": VALUE}` where `VALUE` is a number between `0` and `100`.
-To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt_1": VALUE}` where `VALUE` is a number between `0` and `100`.
+To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Power (numeric, 3 endpoint)
 Instantaneous measured power.

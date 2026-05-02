@@ -123,7 +123,7 @@ Set sensor type.
 Value can be found in the published state on the `sensor_type` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type": NEW_VALUE}`.
-The possible values are: `0-1bar`, `0-5bar`, `0-10bar`.
+The possible values are: `0-1bar`, `0-5bar`, `0-6bar`, `0-10bar`, `0-40bar`.
 
 ### Tx radio power (enum)
 Set TX Radio Power, dbm.

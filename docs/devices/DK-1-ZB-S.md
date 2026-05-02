@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | DK-1-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR DK-1-ZB-S (Adapter for household Daikin systems) |
+| Description | Adapter for household Daikin systems |
 | Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, eco_mode, turbo_mode, ionization, screen_light, screen_low_bright, target_fan_rpm, current_fan_rpm |
 | Picture | ![ONOKOM DK-1-ZB-S](https://www.zigbee2mqtt.io/images/devices/DK-1-ZB-S.png) |
 
