@@ -1,7 +1,7 @@
 ---
-title: "Lincukoo V04-Z20T control via MQTT"
-description: "Integrate your Lincukoo V04-Z20T via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2026-01-31T13:10:42
+title: "Tuya TS0601_vibration_alarm_sensor control via MQTT"
+description: "Integrate your Tuya TS0601_vibration_alarm_sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-04-30T19:57:27
 pageClass: device-page
 ---
 
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Lincukoo V04-Z20T
+# Tuya TS0601_vibration_alarm_sensor
 
 |     |     |
 |-----|-----|
-| Model | V04-Z20T  |
-| Vendor  | [Lincukoo](/supported-devices/#v=Lincukoo)  |
+| Model | TS0601_vibration_alarm_sensor  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Vibration alarm sensor |
 | Exposes | alarm_status, sensitivity, disarm, silence_mode, battery_state |
-| Picture | ![Lincukoo V04-Z20T](https://www.zigbee2mqtt.io/images/devices/V04-Z20T.png) |
+| Picture | ![Tuya TS0601_vibration_alarm_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_vibration_alarm_sensor.png) |
+| White-label | Lincukoo V04-Z20T, Nous E14 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

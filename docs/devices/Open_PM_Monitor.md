@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Open_PM_Monitor  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | PM1, PM2.5, PM10 Monitor with retro-style analog indicator and RGB backlight |
-| Exposes | identify, light (state, brightness), pm1, pm25, pm10, aqi25 |
+| Exposes | identify, light (state, brightness), pm1, pm25, pm10, aqi25, tvoc, eco2, aqi, indicator_corection, invert_color |
 | Picture | ![EFEKTA Open_PM_Monitor](https://www.zigbee2mqtt.io/images/devices/Open_PM_Monitor.png) |
 
 
@@ -56,7 +56,9 @@ The possible values are: `identify`.
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -108,4 +110,36 @@ PM 2.5 INDEX.
 Value can be found in the published state on the `aqi25` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `PM2.5 Index`.
+
+### Tvoc (numeric)
+TVOC.
+Value can be found in the published state on the `tvoc` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `ppb`.
+
+### Eco2 (numeric)
+eCO2.
+Value can be found in the published state on the `eco2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `ppm`.
+
+### Aqi (numeric)
+aqi.
+Value can be found in the published state on the `aqi` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `index`.
+
+### Indicator corection (numeric)
+Indicator corection.
+Value can be found in the published state on the `indicator_corection` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_corection": NEW_VALUE}`.
+The minimal value is `-15` and the maximum value is `15`.
+
+### Invert color (enum)
+Set color mode.
+Value can be found in the published state on the `invert_color` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_color": NEW_VALUE}`.
+The possible values are: `WB`, `BW`.
 

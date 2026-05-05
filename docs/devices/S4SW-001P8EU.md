@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-001P8EU  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 1PM Mini Gen 4 |
-| Exposes | switch (state), power, voltage, ac_frequency, current, energy, produced_energy, wifi_status, ip_address, dhcp_enabled, wifi_config |
+| Exposes | switch_type, switch (state), power, voltage, ac_frequency, current, energy, produced_energy, switch_mode, wifi_status, ip_address, dhcp_enabled, wifi_config, action |
 | Picture | ![Shelly S4SW-001P8EU](https://www.zigbee2mqtt.io/images/devices/S4SW-001P8EU.png) |
 
 
@@ -32,6 +32,9 @@ The device ships in Matter mode by default. To use the device with Zigbee2MQTT, 
 To enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 5 seconds. Doing so for 10 seconds will trigger a factory reset.
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -61,6 +64,13 @@ To enable the on-device access point and bluetooth for maintenance, press and ho
 
 
 ## Exposes
+
+### Switch type (enum, sw1 endpoint)
+Switch input type.
+Value can be found in the published state on the `switch_type_sw1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_sw1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_sw1": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
@@ -115,6 +125,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
+### Switch mode (enum, sw1 endpoint)
+Switch input mode.
+Value can be found in the published state on the `switch_mode_sw1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_sw1": NEW_VALUE}`.
+The possible values are: `follow`, `flip`, `detached`, `cycle`, `activation`.
+
 ### Wi-Fi status (text)
 Current connection status.
 Value can be found in the published state on the `wifi_status` property.
@@ -144,4 +161,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `net_mask` (text): Subnet mask for the static IP configuration 
 - `gateway` (text): Default gateway address for static IP configuration 
 - `name_server` (text): Name server address for static IP configuration 
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_hold`.
 

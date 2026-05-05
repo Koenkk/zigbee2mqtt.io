@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_PST_POW_V1_LR  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Water, gas smart pressure monitor with two types of power supply |
-| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, mains_voltage, battery, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
+| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, range, mains_voltage, battery, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
 | Picture | ![EFEKTA EFEKTA_PST_POW_V1_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_POW_V1_LR.png) |
 
 
@@ -82,6 +82,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_calibration": NEW_VALUE}`.
 The minimal value is `-8192` and the maximum value is `8192`.
 The unit of this value is `raw unit`.
+
+### Range (enum)
+Measuring range of the sensor.
+Value can be found in the published state on the `range` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"range": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range": NEW_VALUE}`.
+The possible values are: `0-10 Bar`, `0-16 Bar`.
 
 ### Mains voltage (numeric)
 Mains voltage.
