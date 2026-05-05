@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EC-SL-FK86ZPCS31  |
 | Vendor  | [BSEED](/supported-devices/#v=BSEED)  |
-| Description | 3 gang switch with scene and backlight (no neutral line required) |
+| Description | 3 gang switch with scene and backlight (Neutral line optional) |
 | Exposes | switch (state), countdown, power_on_behavior, backlight_mode, indicator_mode, switch_mode, action |
 | Picture | ![BSEED EC-SL-FK86ZPCS31](https://www.zigbee2mqtt.io/images/devices/EC-SL-FK86ZPCS31.png) |
 

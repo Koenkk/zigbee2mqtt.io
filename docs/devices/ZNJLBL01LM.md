@@ -29,7 +29,7 @@ pageClass: device-page
 ### Pairing
 Hold the reset button, on the bottom of the device, for 5 seconds.
 
-_Pairing the device with a new bridge will **not** reset the fully open/closed position._
+*Pairing the device with a new bridge will **not** reset the fully open/closed position.*
 
 ### Fully open and fully closed positions
 The rotation range (fully open and fully closed) can be reset by holding the both the up and down buttons for 3 seconds until the light turns blue.

@@ -122,7 +122,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Energy month (numeric)
+### Energy this month (numeric)
 Electricity consumption for the month.
 Value can be found in the published state on the `energy_month` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_month": ""}`.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_eAir_Monitor  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Smart digital carbon dioxide detector with e-ink display. |
-| Exposes | co2, battery, battery_low, lifetime, оperating_mode, invert_color, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2 |
+| Exposes | co2, battery, battery_low, lifetime, power_mode, invert_color, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2 |
 | Picture | ![EFEKTA EFEKTA_eAir_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eAir_Monitor.png) |
 
 
@@ -63,12 +63,12 @@ Value can be found in the published state on the `lifetime` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hours`.
 
-### Оperating mode (enum)
-Set data output on the display.
-Value can be found in the published state on the `оperating_mode` property.
+### Power mode (enum)
+Set power mode.
+Value can be found in the published state on the `power_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"оperating_mode": NEW_VALUE}`.
-The possible values are: `Normal`, `Energy-saving`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_mode": NEW_VALUE}`.
+The possible values are: `Fast`, `Medium`, `Slow`.
 
 ### Invert color (enum)
 Set color mode.

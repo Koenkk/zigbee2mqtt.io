@@ -31,12 +31,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-
 ## Related
-- [IKEA KAJPLATS color/white spectrum](./KAJPLATS_CWS.md)
-- [IKEA KAJPLATS white spectrum](./KAJPLATS_WS.md)
-- [IKEA KAJPLATS white spectrum clear](./KAJPLATS_WS_clear.md)
-- [All IKEA KAJPLATS models](https://www.zigbee2mqtt.io/supported-devices/#s=KAJPLATS)
+- [KAJPLATS color/white spectrum](./KAJPLATS_CWS.md)
+- [KAJPLATS white spectrum](./KAJPLATS_WS.md)
+- [KAJPLATS white spectrum clear](./KAJPLATS_WS_clear.md)
+- [All KAJPLATS models](https://www.zigbee2mqtt.io/supported-devices/#s=KAJPLATS)
 
 ## Pairing
 
@@ -51,19 +50,19 @@ If the device flashes, but does not join, this may help:
 - Pair another device at the same time
 - Fiddle with an IKEA remote: re-insert batteries, press buttons, activate Touchlink
 
-[Touchlink](../guide/usage/touchlink.md) reset is also possible, but it seems the device only leaves and identifies for 15s, without entering pairing mode.
+[Touchlink](../guide/usage/touchlink.md) reset is also possible, but it seems the device only identifies for 15s, without leaving its current network and entering pairing mode.
 
 Note that Matter pairing (via Bluetooth) is simultaneously active for 5 minutes after power-on, even if the device is already paired to a Zigbee network.
 
 ## Firmware
-The device does not support OTA updates via Zigbee. Instead, updates are provided over Matter. **Move it to any Thread hub to update.**  
+The device does not support OTA updates via Zigbee. Instead, updates are provided over Matter.  
+**Move it to any Thread hub to update.**  
 View available updates [here](https://webui.dcl.csa-iot.org/models) (search *KAJPLATS* or *4476*).
 
 ## Issues
 - The device may come with null model and manufacturer attributes. In this case, Zigbee2MQTT will recognize it generically. A firmware update may fix it
 - Power-on behavior may not work, only in Zigbee mode, on some models (at least one variant of [LED2401G5](./LED2401G5.md))
-- Scenes, groups and the _OffWithEffect_ command may fail, with the INSUFFICIENT_SPACE error. See more info and workaround in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/30211#issuecomment-4019236515)
-
+- Scenes, groups and the *OffWithEffect* command may fail, with the INSUFFICIENT_SPACE error. See more info and workaround in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/30211#issuecomment-4019236515)
 
 
 
@@ -90,9 +89,13 @@ If you would for example change the color temperature and brightness in 1 comman
 ### Light 
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`, `level_config`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `454`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
+                
 - `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `153` and `454`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`, `previous`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.

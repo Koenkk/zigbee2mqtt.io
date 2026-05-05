@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-101ZS  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Star Ring 4 Gang Scene Switch |
-| Exposes | battery, action |
+| Exposes | battery, voltage, action |
 | Picture | ![HOBEIAN ZG-101ZS](https://www.zigbee2mqtt.io/images/devices/ZG-101ZS.png) |
 
 
@@ -36,11 +36,19 @@ To enter pairing mode hold bottom left button for 10 seconds until all 4 LEDs st
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

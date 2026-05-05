@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | L101Ze-DBN  |
 | Vendor  | [LYTKO](/supported-devices/#v=LYTKO)  |
 | Description | Dual channel thermostat with big display |
-| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_mode), identify, child_lock, brigness_Active, brigness_Standby, occupied_setback, sensor_type_3, sensor_type_4, target_first_3, target_first_4 |
+| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_mode), identify, child_lock, brigness_Active, brigness_Standby, occupied_setback, sensor_type, target_first_3, target_first_4 |
 | Picture | ![LYTKO L101Ze-DBN](https://www.zigbee2mqtt.io/images/devices/L101Ze-DBN.png) |
 
 
@@ -104,16 +104,16 @@ The unit of this value is `°C`.
 
 ### Sensor (enum, 3 endpoint)
 Sensor type.
-Value can be found in the published state on the `sensor_type_3_3` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_type_3_3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type_3_3": NEW_VALUE}`.
+Value can be found in the published state on the `sensor_type_3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_type_3": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type_3": NEW_VALUE}`.
 The possible values are: `3.3K`, `5.0K`, `6.8K`, `10.0K`, `12.0K`, `14.8K`, `15.0K`, `20.0K`, `33.0K`, `47.0K`.
 
 ### Sensor (enum, 4 endpoint)
 Sensor type.
-Value can be found in the published state on the `sensor_type_4_4` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_type_4_4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type_4_4": NEW_VALUE}`.
+Value can be found in the published state on the `sensor_type_4` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_type_4": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type_4": NEW_VALUE}`.
 The possible values are: `3.3K`, `5.0K`, `6.8K`, `10.0K`, `12.0K`, `14.8K`, `15.0K`, `20.0K`, `33.0K`, `47.0K`.
 
 ### First temperature (enum, 3 endpoint)

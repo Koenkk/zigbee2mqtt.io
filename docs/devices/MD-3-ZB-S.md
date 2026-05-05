@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | MD-3-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR MD-3-ZB-S (Adapter for semi-industrial MDV systems) |
+| Description | Adapter for semi-industrial MDV systems |
 | Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, zb_fan_speed, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, eco_mode, indoor_heat_exchanger_temperature, outdoor_heat_exchanger_temperature |
 | Picture | ![ONOKOM MD-3-ZB-S](https://www.zigbee2mqtt.io/images/devices/MD-3-ZB-S.png) |
 

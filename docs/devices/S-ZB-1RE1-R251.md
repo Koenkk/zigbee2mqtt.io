@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | S-ZB-1RE1-R251  |
 | Vendor  | [smarli.](/supported-devices/#v=smarli.)  |
-| Description | Zigbee 2ch smart relay |
+| Description | relay |
 | Exposes | identify, switch (state), power, voltage, current, energy, action |
 | Picture | ![smarli. S-ZB-1RE1-R251](https://www.zigbee2mqtt.io/images/devices/S-ZB-1RE1-R251.png) |
 

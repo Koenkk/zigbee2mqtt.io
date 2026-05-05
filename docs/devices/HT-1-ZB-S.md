@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HT-1-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR HT-1-ZB-S (Adapter for household Hitachi systems) |
+| Description | Adapter for household Hitachi systems |
 | Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, zb_fan_speed, fan_speed, smart_fan_speed, status_led |
 | Picture | ![ONOKOM HT-1-ZB-S](https://www.zigbee2mqtt.io/images/devices/HT-1-ZB-S.png) |
 

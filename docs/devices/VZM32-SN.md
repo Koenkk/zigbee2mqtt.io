@@ -67,7 +67,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -865,7 +867,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mmwa
 ### Mmwave targets (list)
 All of the detected mmWave targets.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mmwave_targets": [{"id": VALUE, "x": VALUE, "y": VALUE, "z": VALUE, "dop": VALUE}]}`
-- `id` (numeric): Target ID max value is 255
+- `id` (numeric): Target ID 
 - `x` (numeric): X-axis coordinate of the target in centimeters unit is cm
 - `y` (numeric): Y-axis coordinate of the target in centimeters unit is cm
 - `z` (numeric): Z-axis coordinate of the target in centimeters unit is cm

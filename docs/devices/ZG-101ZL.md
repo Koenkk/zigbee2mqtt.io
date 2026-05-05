@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-101ZL  |
 | Vendor  | [Loginovo](/supported-devices/#v=Loginovo)  |
 | Description | Smart button |
-| Exposes | action, battery, operation_mode |
+| Exposes | battery, operation_mode, action |
 | Picture | ![Loginovo ZG-101ZL](https://www.zigbee2mqtt.io/images/devices/ZG-101ZL.png) |
 
 
@@ -51,12 +51,6 @@ simulated_brightness:
 
 ## Exposes
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `hold`, `brightness_move_to_level`, `color_temperature_move`, `brightness_step_up`, `brightness_step_down`, `on`, `off`.
-
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
@@ -70,4 +64,10 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `hold`, `brightness_move_to_level`, `color_temperature_move`, `brightness_step_up`, `brightness_step_down`, `on`, `off`.
 

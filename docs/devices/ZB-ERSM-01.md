@@ -44,7 +44,7 @@ You have 3 possibilities of pairing:
 6. Open the shutter by pushing the "open" button every 0.5 seconds until the shutter is totally open
 7. Exit calibration mode (now the opening time is set, calibration is done)
 
-**Caution**: _In calibration mode, any shutter movement command lasts 1 second maximum. For continuous movement, the Zigbee Down/Close command must be sent approximately every 0.5 seconds._
+**Caution**: *In calibration mode, any shutter movement command lasts 1 second maximum. For continuous movement, the Zigbee Down/Close command must be sent approximately every 0.5 seconds.*
 <!-- Notes END: Do not edit below this line -->
 
 

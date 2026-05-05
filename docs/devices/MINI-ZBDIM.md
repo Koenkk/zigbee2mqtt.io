@@ -33,7 +33,7 @@ This device can be added to groups, but it does **not** respond to any group com
 
 #### Inverted moving
 
-This device performs inverse effects on receipt of _Move_  
+This device performs inverse effects on receipt of *Move*  
 (whether it's sent through Zigbee2MQTT, or a bound remote). Tested on version v1.0.5
 
 For example `{"brightness_move": -40}` will start **increasing** the brightness (instead of decreasing it).
@@ -69,7 +69,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.

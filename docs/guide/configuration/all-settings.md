@@ -291,7 +291,7 @@ advanced:
 
 ### transmit_power
 
-Transmit power of adapter, only available for Z-Stack (CC253\*/CC2652/CC1352) adapters, CC2652 = 5dbm, CC1352 max is = 20dbm (5dbm default)
+Transmit power of adapter, in dBm (max is often 20, refer to chip specifications)
 
 ```yaml
 advanced:
@@ -594,7 +594,7 @@ availability:
 
 #### pause_on_backoff_gt
 
-Pause availability pings when backoff reaches over this limit until a new Zigbee message is received from the device. A value of zero disables pausing.
+Pause availability pings when the backoff multiplier reaches over this limit until a new Zigbee message is received from the device. A value of zero disables pausing.
 
 ```yaml
 availability:

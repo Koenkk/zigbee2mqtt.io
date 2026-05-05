@@ -1,7 +1,7 @@
 ---
-title: "ONOKOM GR-1-ZB-S control via MQTT"
-description: "Integrate your ONOKOM GR-1-ZB-S via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-09-01T18:20:17
+title: "ONOKOM OK-AC-H-AUX-1-ZB-S-A control via MQTT"
+description: "Integrate your ONOKOM OK-AC-H-AUX-1-ZB-S-A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-04-30T19:57:27
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# ONOKOM GR-1-ZB-S
+# ONOKOM OK-AC-H-AUX-1-ZB-S-A
 
 |     |     |
 |-----|-----|
-| Model | GR-1-ZB-S  |
+| Model | OK-AC-H-AUX-1-ZB-S-A  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR GR-1-ZB-S (Adapter for household GREE systems) |
-| Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, eco_mode, turbo_mode, sleep_mode, ionization, screen_light, disable_screen_when_power_off |
-| Picture | ![ONOKOM GR-1-ZB-S](https://www.zigbee2mqtt.io/images/devices/GR-1-ZB-S.png) |
+| Description | Adapter for household and semi-industrial AUX systems |
+| Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, turbo_mode, sleep_mode, ionization, self_cleaning, mold_protection, screen_light, current_fan_rpm, current_compressor_power, compressor_power_limit |
+| Picture | ![ONOKOM OK-AC-H-AUX-1-ZB-S-A](https://www.zigbee2mqtt.io/images/devices/OK-AC-H-AUX-1-ZB-S-A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -68,7 +68,7 @@ Target temperature.
 Value can be found in the published state on the `target_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"target_temperature": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"target_temperature": NEW_VALUE}`.
-The minimal value is `16` and the maximum value is `30`.
+The minimal value is `16` and the maximum value is `32`.
 The unit of this value is `°C`.
 
 ### System mode (enum)
@@ -99,11 +99,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `5`.
 
 ### Vertical vanes (numeric)
-Vertical vanes: Stopped(0), Swing(1), Leftmost position(2), Rightmost position(6).
+Vertical vanes: Stopped(0), Swing(1).
 Value can be found in the published state on the `vertical_vanes` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"vertical_vanes": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vertical_vanes": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `6`.
+The minimal value is `0` and the maximum value is `1`.
 
 ### Horizontal vanes (numeric)
 Horizontal vanes: Stopped(0), Swing(1), Lowest postion(2), Highest position(6).
@@ -113,18 +113,18 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `6`.
 
 ### Fan speed (numeric)
-Fan speed: Auto(0), First(1) - Maximum(5).
+Fan speed: Auto(0), First(1) - Maximum(3).
 Value can be found in the published state on the `fan_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fan_speed": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_speed": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `5`.
+The minimal value is `0` and the maximum value is `3`.
 
 ### Smart fan speed (numeric)
-Smart fan speed: Auto (0), Quiet mode (1), First (2) ... Maximum (6), Turbo(7).
+Smart fan speed: Auto (0), Quiet mode (1), First (2) ... Maximum (4), Turbo(5).
 Value can be found in the published state on the `smart_fan_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smart_fan_speed": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_fan_speed": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `7`.
+The minimal value is `0` and the maximum value is `5`.
 
 ### Vanes swing (numeric)
 Vanes swing: Stopped(0), Horizontal and vertical swing(1), Horizontal swing(2), Vertical swing(3).
@@ -147,13 +147,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quiet_mode": NEW_VALUE}`.
 If value equals `ON` quiet mode is ON, if `OFF` OFF.
 
-### Eco mode (binary)
-Eco mode.
-Value can be found in the published state on the `eco_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eco_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_mode": NEW_VALUE}`.
-If value equals `ON` eco mode is ON, if `OFF` OFF.
-
 ### Turbo mode (binary)
 Turbo mode.
 Value can be found in the published state on the `turbo_mode` property.
@@ -175,6 +168,20 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ionization": NEW_VALUE}`.
 If value equals `ON` ionization is ON, if `OFF` OFF.
 
+### Self cleaning (binary)
+Self cleaning.
+Value can be found in the published state on the `self_cleaning` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"self_cleaning": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_cleaning": NEW_VALUE}`.
+If value equals `ON` self cleaning is ON, if `OFF` OFF.
+
+### Mold protection (binary)
+Mold protection.
+Value can be found in the published state on the `mold_protection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mold_protection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mold_protection": NEW_VALUE}`.
+If value equals `ON` mold protection is ON, if `OFF` OFF.
+
 ### Screen light (binary)
 Screen light.
 Value can be found in the published state on the `screen_light` property.
@@ -182,10 +189,22 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_light": NEW_VALUE}`.
 If value equals `ON` screen light is ON, if `OFF` OFF.
 
-### Disable screen when power off (binary)
-Disable screen when power off.
-Value can be found in the published state on the `disable_screen_when_power_off` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"disable_screen_when_power_off": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"disable_screen_when_power_off": NEW_VALUE}`.
-If value equals `ON` disable screen when power off is ON, if `OFF` OFF.
+### Current fan rpm (numeric)
+Current fan speed.
+Value can be found in the published state on the `current_fan_rpm` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+
+### Current compressor power (numeric)
+Current compressor power.
+Value can be found in the published state on the `current_compressor_power` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+
+### Compressor power limit (numeric)
+Compressor power limit.
+Value can be found in the published state on the `compressor_power_limit` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"compressor_power_limit": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"compressor_power_limit": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
 

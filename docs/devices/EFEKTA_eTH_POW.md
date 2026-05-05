@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_eTH_POW  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Temperature and humidity smart sensor with with e-ink display |
-| Exposes | temperature, humidity, mains_voltage, battery, battery_low, reading_interval, tx_radio_power, comparison_previous_data, invert, fastmode |
+| Exposes | temperature, humidity, mains_voltage, battery, battery_low, reading_interval, heater, tx_radio_power, comparison_previous_data, invert, fastmode |
 | Picture | ![EFEKTA EFEKTA_eTH_POW](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eTH_POW.png) |
 
 
@@ -82,6 +82,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
 The minimal value is `10` and the maximum value is `300`.
 The unit of this value is `sec`.
+
+### Heater (binary)
+Activation of the sensor heating service mode, 15 minutes.
+Value can be found in the published state on the `heater` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heater": NEW_VALUE}`.
+If value equals `ON` heater is ON, if `OFF` OFF.
 
 ### Tx radio power (enum)
 Set TX Radio Power, dbm.

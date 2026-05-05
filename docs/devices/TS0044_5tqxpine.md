@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0044_5tqxpine  |
 | Vendor  | [iHseno](/supported-devices/#v=iHseno)  |
 | Description | Zigbee 4 button wall switch |
-| Exposes | battery, action |
+| Exposes | battery, voltage, action |
 | Picture | ![iHseno TS0044_5tqxpine](https://www.zigbee2mqtt.io/images/devices/TS0044_5tqxpine.png) |
 
 
@@ -33,11 +33,19 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

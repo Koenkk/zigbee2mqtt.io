@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | AUX-1-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | AIR AUX-1-ZB-S (Adapter for household and semi-industrial AUX systems) |
+| Description | Adapter for household and semi-industrial AUX systems |
 | Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, turbo_mode, sleep_mode, ionization, self_cleaning, mold_protection, screen_light, current_fan_rpm, current_compressor_power, compressor_power_limit |
 | Picture | ![ONOKOM AUX-1-ZB-S](https://www.zigbee2mqtt.io/images/devices/AUX-1-ZB-S.png) |
 

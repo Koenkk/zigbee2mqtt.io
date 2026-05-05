@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ERS-10TZBVK-AA  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart knob |
-| Exposes | action, action_step_size, action_transition_time, action_rate, battery, operation_mode |
+| Exposes | action_step_size, action_transition_time, action_rate, battery, operation_mode, action |
 | Picture | ![Tuya ERS-10TZBVK-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVK-AA.png) |
 
 
@@ -79,12 +79,6 @@ simulated_brightness:
 
 ## Exposes
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `toggle`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `saturation_move`, `hue_move`, `hue_stop`, `single`, `double`, `hold`, `rotate_left`, `rotate_right`.
-
 ### Action step size (numeric)
 Value can be found in the published state on the `action_step_size` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -113,4 +107,10 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `toggle`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `saturation_move`, `hue_move`, `hue_stop`, `single`, `double`, `hold`, `rotate_left`, `rotate_right`.
 
