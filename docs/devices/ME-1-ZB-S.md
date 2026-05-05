@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ME-1-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | ONOKOM-AIR-ME-1-ZB-S (Adapter for household and semi-industrial Mitsubishi Electric systems) |
+| Description | Adapter for household and semi-industrial Mitsubishi Electric systems |
 | Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode |
 | Picture | ![ONOKOM ME-1-ZB-S](https://www.zigbee2mqtt.io/images/devices/ME-1-ZB-S.png) |
 

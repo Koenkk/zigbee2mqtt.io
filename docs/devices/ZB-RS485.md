@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZB-RS485  |
 | Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
 | Description | Zigbee to RS485 controller |
-| Exposes | last_received_command, send_command |
+| Exposes | last_received_command, send_command, rs485_config |
 | Picture | ![easyiot ZB-RS485](https://www.zigbee2mqtt.io/images/devices/ZB-RS485.png) |
 
 
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 
@@ -42,4 +45,11 @@ Send data.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_command": NEW_VALUE}`.
+
+### Rs485 config (composite)
+RS485 serial port configuration.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rs485_config": {"baud_rate": VALUE, "parity": VALUE, "stop_bits": VALUE}}`
+- `baud_rate` (enum): Baud rate (bps) allowed values: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`, `230400`, `460800`, `921600`
+- `parity` (enum): Parity (none / even / odd) allowed values: `none`, `even`, `odd`
+- `stop_bits` (enum): Stop bits (1 / 1.5 / 2) allowed values: `1`, `1.5`, `2`
 

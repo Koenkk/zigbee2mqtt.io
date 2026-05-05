@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### Battery
 Uses a CR2477 battery
-
 <!-- Notes END: Do not edit below this line -->
 
 

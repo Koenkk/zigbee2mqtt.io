@@ -38,7 +38,6 @@ For protocol switching from Thread to Zigbee:
 4. After the Zigbee firmware/mode change is completed, pair the device with Zigbee2MQTT.
 
 In practice, the 10-press factory reset can be required to make the PS-S04D (FP300) discoverable again in Aqara Home for switching from Thread mode to Zigbee mode.
-
 <!-- Notes END: Do not edit below this line -->
 
 

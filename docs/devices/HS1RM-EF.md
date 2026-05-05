@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS1RM-EF  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart relay module - 2 gang with neutral wire |
-| Exposes | switch (state), power_on_behavior, temperature |
+| Exposes | switch (state), power_on_behavior, device_temperature, identify, switch_actions |
 | Picture | ![Heiman HS1RM-EF](https://www.zigbee2mqtt.io/images/devices/HS1RM-EF.png) |
 
 
@@ -32,9 +32,9 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -77,10 +77,31 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+### Device temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_temperature": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
+
+### Switch actions (enum, l1 endpoint)
+Actions for switch 1.
+Value can be found in the published state on the `switch_actions_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l1": NEW_VALUE}`.
+The possible values are: `on_off`, `off_on`, `toggle`.
+
+### Switch actions (enum, l2 endpoint)
+Actions for switch 2.
+Value can be found in the published state on the `switch_actions_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l2": NEW_VALUE}`.
+The possible values are: `on_off`, `off_on`, `toggle`.
 
