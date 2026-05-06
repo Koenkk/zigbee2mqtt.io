@@ -67,7 +67,14 @@ pageClass: device-page
 | Description | ${device.description} |
 | Exposes | ${exposesDescription} |
 | Picture | ![${device.vendor} ${device.model}](${image}) |
-${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor ? d.vendor + ' ' : ''}${d.model}`).join(', ')} |\n` : ''}
+${
+    device.whiteLabel
+        ? `| White-label | ${device.whiteLabel
+              .filter((d) => !d.linkToModel || d.linkToModel === device.model)
+              .map((d) => `${d.vendor ? d.vendor + ' ' : ''}${d.model}`)
+              .join(', ')} |\n`
+        : ''
+}
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ${notes || '\n'}
