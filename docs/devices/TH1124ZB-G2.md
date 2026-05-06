@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Setting outdoor temperature
-To set _outdoor temperature_, you need to send the value to the following MQTT topic:
+To set *outdoor temperature*, you need to send the value to the following MQTT topic:
 ```
 zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_outdoor_temperature
 ```

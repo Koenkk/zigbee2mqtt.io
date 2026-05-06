@@ -1,6 +1,6 @@
 ---
-title: "Efektalab Netuya_CO2_Smart_Box control via MQTT"
-description: "Integrate your Efektalab Netuya_CO2_Smart_Box via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "EFEKTA Netuya_CO2_Smart_Box control via MQTT"
+description: "Integrate your EFEKTA Netuya_CO2_Smart_Box via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2026-01-31T13:10:41
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Efektalab Netuya_CO2_Smart_Box
+# EFEKTA Netuya_CO2_Smart_Box
 
 |     |     |
 |-----|-----|
 | Model | Netuya_CO2_Smart_Box  |
-| Vendor  | [Efektalab](/supported-devices/#v=Efektalab)  |
+| Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | CO2 Smart Monitor, rgb indicator, alarm, can control the relay |
-| Exposes | identify, co2, lifetime, light (state, brightness), night_onoff_backlight, night_on_backlight, night_off_backlight, alarm, alarm volume, alarm level, calibration mode, forced_recalibration, factory_reset_co2, manual_forced_recalibration, invert_logic_onoff, enable_co2_gas, high_co2_gas, low_co2_gas |
-| Picture | ![Efektalab Netuya_CO2_Smart_Box](https://www.zigbee2mqtt.io/images/devices/Netuya_CO2_Smart_Box.png) |
+| Exposes | identify, co2, lifetime, light (state, brightness), night_onoff_backlight, night_on_backlight, night_off_backlight, alarm, alarm_volume, alarm_level, calibration_mode, forced_recalibration, factory_reset_co2, manual_forced_recalibration, invert_logic_onoff, enable_co2_gas, high_co2_gas, low_co2_gas |
+| Picture | ![EFEKTA Netuya_CO2_Smart_Box](https://www.zigbee2mqtt.io/images/devices/Netuya_CO2_Smart_Box.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -68,7 +68,9 @@ The unit of this value is `Hours`.
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -129,24 +131,24 @@ If value equals `ON` alarm is ON, if `OFF` OFF.
 
 ### Alarm volume (numeric)
 Set alarm volume.
-Value can be found in the published state on the `alarm volume` property.
+Value can be found in the published state on the `alarm_volume` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_volume": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Alarm level (numeric)
 Set alarm level.
-Value can be found in the published state on the `alarm level` property.
+Value can be found in the published state on the `alarm_level` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_level": NEW_VALUE}`.
 The minimal value is `400` and the maximum value is `5000`.
 The unit of this value is `ppm`.
 
 ### Calibration mode (binary)
 Set calibration mode of the CO2 sensor.
-Value can be found in the published state on the `calibration mode` property.
+Value can be found in the published state on the `calibration_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_mode": NEW_VALUE}`.
 If value equals `Auto` calibration mode is ON, if `Manual` OFF.
 
 ### Forced recalibration (binary)

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SWV-ZFU  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart water valve |
-| Exposes | battery, switch (state), child_lock, valve_abnormal_state, manual_default_settings, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, valve_alarm_settings, real_time_irrigation_duration, real_time_irrigation_volume, hour_irrigation_volume, hour_irrigation_duration, daily_irrigation_volume, daily_irrigation_duration, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records, longitude, latitude, weather_based_adjustment, weather_delay_end_datetime |
+| Exposes | battery, switch (state), child_lock, valve_abnormal_state, manual_default_settings, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, valve_alarm_settings, real_time_irrigation_duration, real_time_irrigation_volume, hour_irrigation_duration, hour_irrigation_volume, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
 | Picture | ![SONOFF SWV-ZFU](https://www.zigbee2mqtt.io/images/devices/SWV-ZFU.png) |
 
 
@@ -70,17 +70,15 @@ If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 Valve abnormal state.
 Value can be found in the published state on the `valve_abnormal_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `normal`, `water_shortage`, `water_leakage`, `water_shortage,water_leakage`, `frost_protection`, `water_shortage,frost_protection`, `water_leakage,frost_protection`, `water_shortage,water_leakage,frost_protection`, `fail_safe`, `water_shortage,fail_safe`, `water_leakage,fail_safe`, `water_shortage,water_leakage,fail_safe`, `frost_protection,fail_safe`, `water_shortage,frost_protection,fail_safe`, `water_leakage,frost_protection,fail_safe`, `water_shortage,water_leakage,frost_protection,fail_safe`.
+The possible values are: `normal`, `water_shortage`, `water_leakage`, `water_shortage,water_leakage`, `fail_safe`, `water_shortage,fail_safe`, `water_leakage,fail_safe`, `water_shortage,water_leakage,fail_safe`.
 
 ### Manual default settings (composite)
 Single irrigation settings.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_default_settings": {"irrigation_mode": VALUE, "irrigation_total_duration": VALUE, "irrigation_duration": VALUE, "interval_duration": VALUE, "irrigation_amount_unit": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_default_settings": {"irrigation_duration": VALUE, "irrigation_mode": VALUE, "irrigation_amount_unit": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_default_settings": ""}`.
-- `irrigation_mode` (enum): Irrigation mode: duration, capacity, or duration with interval allowed values: `duration`, `capacity`, `duration_with_interval`
-- `irrigation_total_duration` (numeric): Total irrigation duration max value is 719, unit is min
 - `irrigation_duration` (numeric): Irrigation duration min value is 1, max value is 719, unit is min
-- `interval_duration` (numeric): Irrigation interval min value is 1, max value is 719, unit is min
-- `irrigation_amount_unit` (enum): Capacity unit allowed values: `gallon`, `liter`
+- `irrigation_mode` (enum): Irrigation mode: duration or capacity allowed values: `duration`, `capacity`
+- `irrigation_amount_unit` (enum): Capacity unit allowed values: `US gallon`, `liter`
 - `irrigation_amount` (numeric): Irrigation volume max value is 10000
 - `fail_safe` (numeric): Safety protection timeout max value is 719, unit is min
 
@@ -98,7 +96,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irri
 - `irrigation_total_duration` (numeric) max value is 719, unit is min
 - `irrigation_duration` (numeric) min value is 1, max value is 60, unit is min
 - `interval_duration` (numeric) min value is 1, max value is 60, unit is min
-- `irrigation_amount_unit` (enum) allowed values: `gallon`, `liter`
+- `irrigation_amount_unit` (enum) allowed values: `US gallon`, `liter`
 - `irrigation_amount` (numeric) min value is 1, max value is 10000
 - `fail_safe` (numeric) max value is 719, unit is min
 - `create_datetime` (text): Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
@@ -116,17 +114,15 @@ Irrigation plan report.
 - `irrigation_total_duration` (numeric) 
 - `irrigation_duration` (numeric) 
 - `interval_duration` (numeric) 
-- `irrigation_amount_unit` (enum) allowed values: `gallon`, `liter`
+- `irrigation_amount_unit` (enum) allowed values: `US gallon`, `liter`
 - `irrigation_amount` (numeric) 
 - `fail_safe` (numeric) 
 - `create_datetime` (text): Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
 
-### Irrigation plan remove (numeric)
-The index of the irrigation plan to remove.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_remove": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `5`.
+### Irrigation plan remove (composite)
+Remove irrigation plan.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_remove": {"plan_index": VALUE}}`
+- `plan_index` (numeric): The index of the irrigation plan to remove max value is 5
 
 ### Irrigation schedule status (composite)
 Irrigation schedule execution status.
@@ -138,7 +134,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `start_time` (text): Schedule start time 
 - `expected_end_time` (text): Expected end time 
 - `actual_end_time` (text): Actual end time 
-- `irrigation_amount_unit` (enum): Irrigation amount unit allowed values: `gallon`, `liter`
+- `irrigation_amount_unit` (enum): Irrigation amount unit allowed values: `US gallon`, `liter`
 - `expected_irrigation_amount` (numeric): Expected irrigation amount 
 - `actual_irrigation_amount` (numeric): Actual irrigation amount 
 
@@ -172,35 +168,25 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 
 ### Valve alarm settings (composite)
 Valve alarm settings.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_alarm_settings": {"enable_alarm_water_shortage": VALUE, "enable_alarm_water_leak": VALUE, "enable_frost_protection": VALUE, "enable_water_shortage_auto_close": VALUE, "enable_water_leak_auto_close": VALUE, "alarm_water_shortage_duration": VALUE, "alarm_water_leak_duration": VALUE, "set_frost_temperature": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_alarm_settings": {"enable_alarm_water_shortage": VALUE, "enable_alarm_water_leak": VALUE, "enable_water_shortage_auto_close": VALUE, "alarm_water_shortage_duration": VALUE, "alarm_water_leak_duration": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_alarm_settings": ""}`.
 - `enable_alarm_water_shortage` (binary): Water shortage alarm allowed values: `true` or `false`
 - `enable_alarm_water_leak` (binary): Water leak alarm allowed values: `true` or `false`
-- `enable_frost_protection` (binary): Frost protection allowed values: `true` or `false`
 - `enable_water_shortage_auto_close` (binary): Auto close valve on water shortage allowed values: `true` or `false`
-- `enable_water_leak_auto_close` (binary): Auto close valve on water leak allowed values: `true` or `false`
 - `alarm_water_shortage_duration` (numeric): Water shortage trigger alarm duration min value is 1, max value is 10, unit is min
 - `alarm_water_leak_duration` (numeric): Water leak trigger alarm duration min value is 1, max value is 3, unit is min
-- `set_frost_temperature` (numeric): Frost protection temperature max value is 10, unit is °C
 
 ### Real time irrigation duration (numeric)
 Real-time irrigation duration.
 Value can be found in the published state on the `real_time_irrigation_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"real_time_irrigation_duration": ""}`.
 It's not possible to write (`/set`) this value.
-The unit of this value is `s`.
+The unit of this value is `min`.
 
 ### Real time irrigation volume (numeric)
 The amount of water irrigated in real time.
 Value can be found in the published state on the `real_time_irrigation_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"real_time_irrigation_volume": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `L`.
-
-### Hour irrigation volume (numeric)
-Hourly irrigation volume.
-Value can be found in the published state on the `hour_irrigation_volume` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hour_irrigation_volume": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `L`.
 
@@ -211,19 +197,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `min`.
 
-### Daily irrigation volume (numeric)
-The amount of water irrigated today.
-Value can be found in the published state on the `daily_irrigation_volume` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"daily_irrigation_volume": ""}`.
+### Hour irrigation volume (numeric)
+Hourly irrigation volume.
+Value can be found in the published state on the `hour_irrigation_volume` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hour_irrigation_volume": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `L`.
-
-### Daily irrigation duration (numeric)
-Daily irrigation duration.
-Value can be found in the published state on the `daily_irrigation_duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"daily_irrigation_duration": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `min`.
 
 ### 24 hours records (text)
 Value can be found in the published state on the `24_hours_records` property.
@@ -243,39 +222,4 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read
 - `type` (enum): Reading type allowed values: `24_hours`, `30_days`, `6_months`
 - `time_start` (text): Start time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
 - `time_end` (text): End time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
-
-### Longitude (numeric)
-Longitude coordinate used to retrieve weather information. Currently only available in the eWeLink app..
-Value can be found in the published state on the `longitude` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"longitude": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"longitude": NEW_VALUE}`.
-The minimal value is `-180` and the maximum value is `180`.
-The unit of this value is `°`.
-
-### Latitude (numeric)
-Latitude coordinate used to retrieve weather information. Currently only available in the eWeLink app..
-Value can be found in the published state on the `latitude` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"latitude": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"latitude": NEW_VALUE}`.
-The minimal value is `-90` and the maximum value is `90`.
-The unit of this value is `°`.
-
-### Weather based adjustment (composite)
-Weather-based irrigation delay settings. Currently only available in the eWeLink app..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_based_adjustment": {"enable_rain_delay": VALUE, "enable_humidity_delay": VALUE, "enable_frost_delay": VALUE, "rain_probability_threshold": VALUE, "frost_temperature_threshold": VALUE, "humidity_delay_threshold": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weather_based_adjustment": ""}`.
-- `enable_rain_delay` (binary): Enable rain-based 24h delay allowed values: `true` or `false`
-- `enable_humidity_delay` (binary): Enable humidity-based 24h delay allowed values: `true` or `false`
-- `enable_frost_delay` (binary): Enable frost-based 24h delay allowed values: `true` or `false`
-- `rain_probability_threshold` (numeric): Rain probability threshold to trigger 24h delay min value is 10, max value is 90, unit is %
-- `frost_temperature_threshold` (numeric): Temperature threshold to trigger 24h delay when below this value max value is 10, unit is °C
-- `humidity_delay_threshold` (numeric): Humidity threshold to trigger 24h delay when exceeded min value is 40, max value is 90, unit is %
-
-### Weather delay end datetime (composite)
-Weather delay end time and trigger types. Currently only available in the eWeLink app..
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weather_delay_end_datetime": ""}`.
-- `delay_due_to_rain` (binary): Delay due to rain allowed values: `true` or `false`
-- `delay_due_to_humidity` (binary): Delay due to humidity allowed values: `true` or `false`
-- `delay_due_to_frost` (binary): Delay due to frost allowed values: `true` or `false`
-- `delay_end_time` (text): Delay end time. 
 

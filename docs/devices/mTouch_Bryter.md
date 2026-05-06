@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | mTouch_Bryter  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch Bryter OP, 3 channel switch |
-| Exposes | battery, temperature, action, group_id |
+| Exposes | battery, temperature, group_id, action |
 | Picture | ![CTM Lyng mTouch_Bryter](https://www.zigbee2mqtt.io/images/devices/mTouch_Bryter.png) |
 
 
@@ -59,14 +59,14 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
+### Group id (numeric)
+The device sends commands with this group ID. Put dvices in this group to control them..
+Value can be found in the published state on the `group_id` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `recall_1`, `recall_2`, `recall_3`, `on`, `off`, `toggle`, `brightness_move_down`, `brightness_move_up`, `brightness_stop`.
-
-### Group id (numeric)
-The device sends commands with this group ID. Put dvices in this group to control them..
-Value can be found in the published state on the `group_id` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
 
