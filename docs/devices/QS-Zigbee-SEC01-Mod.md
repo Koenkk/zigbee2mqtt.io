@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QS-Zigbee-SEC01-Mod  |
 | Vendor  | [Svetomaniya](/supported-devices/#v=Svetomaniya)  |
 | Description | Smart light switch module 1 gang |
-| Exposes | switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, action |
+| Exposes | switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, scene_id, group_id, min_level, max_level, action |
 | Picture | ![Svetomaniya QS-Zigbee-SEC01-Mod](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC01-Mod.png) |
 
 
@@ -36,6 +36,13 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
 
 
 ## Exposes
@@ -70,7 +77,7 @@ Switch type.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`, `scene`.
 
 ### Operation mode (enum)
 Relay decoupled.
@@ -79,9 +86,37 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
+### Scene id (numeric)
+Scene ID.
+Value can be found in the published state on the `scene_id` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"scene_id": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_id": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `255`.
+
+### Group id (numeric)
+Group ID for scenes.
+Value can be found in the published state on the `group_id` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"group_id": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65527`.
+
+### Min level (numeric)
+Minimum level when decreasing.
+Value can be found in the published state on the `min_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_level": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+
+### Max level (numeric)
+Maximum level when increasing.
+Value can be found in the published state on the `max_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_level": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `toggle`, `hold`, `single`, `double`, `triple`, `quadruple`, `quintuple`, `release`.
+The possible values are: `on`, `off`, `toggle`, `hold`, `single`, `double`, `triple`, `quadruple`, `quintuple`, `release`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`, `recall`, `store`, `add`, `remove`, `remove_all`.
 

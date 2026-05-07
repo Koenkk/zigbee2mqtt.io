@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_pir_solar  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Solar PIR occupancy sensor |
-| Exposes | occupancy, battery, pir_sensitivity |
+| Exposes | occupancy, pir_sensitivity, alarm_time, alarm_mode, battery |
 | Picture | ![Tuya TS0601_pir_solar](https://www.zigbee2mqtt.io/images/devices/TS0601_pir_solar.png) |
 
 
@@ -38,17 +38,32 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
 ### Pir sensitivity (enum)
 PIR sensitivity (0=high, 1=low).
 Value can be found in the published state on the `pir_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity": NEW_VALUE}`.
 The possible values are: `high`, `low`.
+
+### Alarm time (numeric)
+Alarm time.
+Value can be found in the published state on the `alarm_time` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_time": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `180`.
+The unit of this value is `s`.
+
+### Alarm mode (enum)
+Alarm work mode.
+Value can be found in the published state on the `alarm_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_mode": NEW_VALUE}`.
+The possible values are: `arm`, `silent`, `disarm`.
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 

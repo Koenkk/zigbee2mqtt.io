@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-002P16EU-SWITCH  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 2PM Gen4 (Switch mode) |
-| Exposes | switch_type, switch (state), power, voltage, ac_frequency, current, energy, produced_energy, switch_mode, wifi_status, ip_address, dhcp_enabled, wifi_config, action |
+| Exposes | switch_type, switch (state), power, voltage, ac_frequency, current, energy, produced_energy, wifi_status, ip_address, dhcp_enabled, wifi_config, action |
 | Picture | ![Shelly S4SW-002P16EU-SWITCH](https://www.zigbee2mqtt.io/images/devices/S4SW-002P16EU-SWITCH.png) |
 
 
@@ -201,20 +201,6 @@ Value can be found in the published state on the `produced_energy_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"produced_energy_l2": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Switch mode (enum, sw1 endpoint)
-Switch input mode.
-Value can be found in the published state on the `switch_mode_sw1` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_sw1": NEW_VALUE}`.
-The possible values are: `follow`, `flip`, `detached`, `cycle`, `activation`.
-
-### Switch mode (enum, sw2 endpoint)
-Switch input mode.
-Value can be found in the published state on the `switch_mode_sw2` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_sw2": NEW_VALUE}`.
-The possible values are: `follow`, `flip`, `detached`, `cycle`, `activation`.
 
 ### Wi-Fi status (text)
 Current connection status.

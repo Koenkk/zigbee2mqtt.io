@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MINI-ZBDIM  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart mini dimmer switch |
-| Exposes | light (state, brightness), power_on_behavior, current, voltage, power, delayed_power_on_state, delayed_power_on_time, inching_control_set, external_trigger_mode, set_calibration_action, calibration_status, calibration_progress, min_brightness_threshold, transition_time, dimming_light_rate |
+| Exposes | light (state, brightness), power_on_behavior, current, voltage, power, delayed_power_on_state, delayed_power_on_time, inching_control_set, external_trigger_mode, set_calibration_action, calibration_status, calibration_progress, min_brightness_threshold, max_brightness_threshold, level_for_calibration, dimmer_transition_time, dimming_light_rate |
 | Picture | ![SONOFF MINI-ZBDIM](https://www.zigbee2mqtt.io/images/devices/MINI-ZBDIM.png) |
 
 
@@ -159,10 +159,10 @@ The possible values are: `edge`, `pulse`, `double pulse`, `triple pulse`.
 
 ### Set calibration action (enum)
 After calibration, the light adjustment becomes smooth and consistent.. Takes about 2 minutes; device unavailable during calibration..
-Value can be found in the published state on the `set_calibration_action` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"set_calibration_action": ""}`.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_calibration_action": NEW_VALUE}`.
-The possible values are: `start`, `stop`, `clear`.
+The possible values are: `start`, `stop`.
 
 ### Calibration status (enum)
 Calibration status..
@@ -184,14 +184,30 @@ Lowest brightness level mapped to 1 % on the dimmer slider..
 Value can be found in the published state on the `min_brightness_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_brightness_threshold": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness_threshold": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `50`.
+The minimal value is `1` and the maximum value is `99`.
 The unit of this value is `%`.
 
-### Transition time (numeric)
+### Max brightness threshold (numeric)
+highest brightness level mapped to 100 % on the dimmer slider..
+Value can be found in the published state on the `max_brightness_threshold` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_brightness_threshold": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness_threshold": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Level for calibration (numeric)
+Brightness Calibration ensures your dimmer works within the optimal range for your specific bulb..
+Value can be found in the published state on the `level_for_calibration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"level_for_calibration": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Dimmer transition time (numeric)
 Transition time.
-Value can be found in the published state on the `transition_time` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"transition_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transition_time": NEW_VALUE}`.
+Value can be found in the published state on the `dimmer_transition_time` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimmer_transition_time": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_transition_time": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `s`.
 
