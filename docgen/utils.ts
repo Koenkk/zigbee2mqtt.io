@@ -66,7 +66,7 @@ for (const definition of baseDefinitions) {
     if ('whiteLabel' in resolvedDefinition && resolvedDefinition.whiteLabel) {
         for (const whiteLabel of resolvedDefinition.whiteLabel.filter((w) => 'fingerprint' in w && w.fingerprint)) {
             const {vendor, model, description} = whiteLabel;
-            const whiteLabelsOfWhiteLabel = resolvedDefinition.whiteLabel.filter((d) => 'linkToModel' in d && d.linkToModel === model);
+            const whiteLabelsOfWhiteLabel = resolvedDefinition.whiteLabel.filter((d) => 'whiteLabelOf' in d && d.whiteLabelOf === model);
             allDefinitionsTemp.push({
                 ...resolvedDefinition,
                 vendor: vendor ?? definition.vendor,

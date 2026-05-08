@@ -28,7 +28,7 @@ export default async function generate_supportedDevices() {
                     vendor: w.vendor ?? definition.vendor,
                     description: w.description ?? definition.description,
                     isWhiteLabel: true,
-                    whiteLabelOf: 'linkToModel' in w && w.linkToModel ? definitionMap.get(w.linkToModel) : definition,
+                    whiteLabelOf: 'whiteLabelOf' in w && w.whiteLabelOf ? definitionMap.get(w.whiteLabelOf) : definition,
                 };
 
                 delete whiteLabelDefinition.whiteLabel;

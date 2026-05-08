@@ -70,7 +70,7 @@ pageClass: device-page
 ${
     device.whiteLabel
         ? `| White-label | ${device.whiteLabel
-              .filter((d) => !d.linkToModel || d.linkToModel === device.model)
+              .filter((d) => !d.whiteLabelOf || d.whiteLabelOf === device.model)
               .map((d) => `${d.vendor ? d.vendor + ' ' : ''}${d.model}`)
               .join(', ')} |\n`
         : ''
