@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EMIZB-132  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Wattle AMS HAN power-meter sensor |
-| Exposes | power, power_reactive, interface_mode, voltage, current, energy, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c |
+| Exposes | power, power_reactive, interface_mode, voltage, current, energy, produced_energy, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c |
 | Picture | ![Develco EMIZB-132](https://www.zigbee2mqtt.io/images/devices/EMIZB-132.png) |
 
 
@@ -132,6 +132,13 @@ The unit of this value is `A`.
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Produced energy (numeric)
+Sum of produced energy.
+Value can be found in the published state on the `produced_energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"produced_energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 

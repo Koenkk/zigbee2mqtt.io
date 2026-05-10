@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-104PLV  |
 | Vendor  | [Excellux](/supported-devices/#v=Excellux)  |
 | Description | PIR motion sensor, vibration sensor, and light sensor |
-| Exposes | presence, vibration, illuminance_warning, battery, illuminance, sampling_interval, vibration_sensitivity, illuminance_v0, illuminance_v1, illuminance_calibration |
+| Exposes | presence, vibration, illuminance_warning, battery, illuminance, vibration_count, sampling_interval, vibration_sensitivity, illuminance_v0, illuminance_v1, illuminance_calibration |
 | Picture | ![Excellux ZG-104PLV](https://www.zigbee2mqtt.io/images/devices/ZG-104PLV.png) |
 
 
@@ -69,11 +69,17 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `10000`.
-The unit of this value is `lux`.
+The unit of this value is `lx`.
+
+### Vibration count (numeric)
+Vibration count detected by the vibration sensor.
+Value can be found in the published state on the `vibration_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `500`.
+The unit of this value is `times`.
 
 ### Sampling interval (numeric)
 Sampling illuminance interval.
