@@ -90,7 +90,7 @@ In order for this feature to work, the device has to support it. As devices from
 
 1. Bulbs on old firmware (date 20170908 or older) do report On/Off
 2. Zigbee2MQTT will manual poll for change if a binding updates the bulb.
-3. Devices manufactured after ~2019
+3. Lamps & bulbs released starting around 2019
 
 If your devices do **not** support reporting put the device in a group and bind the remote to the group instead of directly to the device. This will make Zigbee2MQTT poll the device for updates when the bound remote controls the device. To minimize traffic this has not been enabled for all devices. If this does not work please create an issue for it [here](https://github.com/Koenkk/zigbee2mqtt/issues).
 
