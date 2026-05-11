@@ -4,6 +4,12 @@ sidebar: auto
 
 # External extensions
 
+:::warning WARNING
+External extensions are disabled by default in new installations in version 2.11.0 and later.
+See [`enable_external_js`](../../guide/configuration/all-settings.md#enable-external-js) to enable it.
+See [more details](../../guide/installation/14_securing.md#external-extensions-and-converters)
+:::
+
 External extensions provide a way to extend Zigbee2MQTT behavior, they work identically to internal extensions.
 
 To get familiar with the Extension framework, refer to the [source code of internal extensions](https://github.com/Koenkk/zigbee2mqtt/tree/master/lib/extension).

@@ -4,6 +4,12 @@ sidebar: auto
 
 # External converters
 
+:::warning WARNING
+External converters are disabled by default in new installations in version 2.11.0 and later.
+See [`enable_external_js`](../../guide/configuration/all-settings.md#enable-external-js) to enable it.
+See [more details](../../guide/installation/14_securing.md#external-extensions-and-converters)
+:::
+
 Zigbee2MQTT uses [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) to parse messages to and from devices.
 
 External converters provide a way to test support for new devices, they work identically to internal converters.
