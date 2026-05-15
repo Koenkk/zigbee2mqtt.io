@@ -23,7 +23,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing mode
+
+The device is shipped in Matter/Thread mode. To use it with Zigbee2MQTT, switch it to Zigbee mode first. This can be done through the Aqara Home app via Bluetooth. An Aqara Zigbee hub is not required for switching the protocol.
+
+After switching to Zigbee mode, enable permit join in Zigbee2MQTT and press and hold the device button for about 5 seconds until the LED starts blinking.
+
+### Door/window calibration
+
+When using the device in door/window mode, the sensor should be calibrated after installation. Close the door or window, then press the device button 3 times. This sets the current position as the closed state.
 
 <!-- Notes END: Do not edit below this line -->
 
