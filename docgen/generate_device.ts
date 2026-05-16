@@ -8,6 +8,7 @@ import {generateExpose} from './device_page_exposes';
 import {generateOptions} from './device_page_options';
 import {devicesBaseDir, imageBaseDir, imageBaseUrl} from './constants';
 import {getNotes} from './device_page_notes';
+import {getWarnings} from './device_page_warnings';
 
 export function resolveDeviceFile(model) {
     return path.resolve(devicesBaseDir, `${normalizeModel(model)}.md`);
@@ -69,6 +70,7 @@ pageClass: device-page
 | Picture | ![${device.vendor} ${device.model}](${image}) |
 ${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor ? d.vendor + ' ' : ''}${d.model}`).join(', ')} |\n` : ''}
 
+${getWarnings(device, exposes)}
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ${notes || '\n'}
 <!-- Notes END: Do not edit below this line -->

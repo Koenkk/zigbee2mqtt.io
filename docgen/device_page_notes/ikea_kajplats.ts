@@ -2,7 +2,6 @@ export function ikeaKajplats(definition) {
     if (definition.vendor === 'IKEA' && definition.description.includes('KAJPLATS')) {
         const cycles = definition.description.includes('clear') ? '15' : '12';
         return `
-
 ## Related
 - [KAJPLATS color/white spectrum](./KAJPLATS_CWS.md)
 - [KAJPLATS white spectrum](./KAJPLATS_WS.md)
