@@ -13,7 +13,7 @@ export async function removeObsoleteDevices(devices) {
             const filePath = path.resolve(devicesBaseDir, file);
             try {
                 const content = await fsp.readFile(filePath, 'utf8');
-                if (content.includes('keepRedirect:')) {
+                if (content.includes('redirectTo:')) {
                     console.log('Keeping redirect file', file);
                     return;
                 }

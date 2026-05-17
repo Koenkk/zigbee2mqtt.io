@@ -83,6 +83,7 @@ export default async function generate_supportedDevices() {
 sidebar: false
 editLink: false
 pageClass: supported-devices-page
+redirectFrom: /information/supported_devices.md
 ---
 
 <!-- !!!! -->

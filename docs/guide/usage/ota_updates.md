@@ -1,4 +1,5 @@
 ---
+redirectFrom: /information/ota_updates.md
 ---
 
 # OTA updates
