@@ -34,7 +34,7 @@ pageClass: device-page
 4. Install the thermostat on radiator valve - display whould be on top side.
 5. Insert the cover back to thermostat - Push and Pull symbols should match.
 6. Shortly press the big round button - adaptation to the valve will start (Ada + rotating n is shown).
-7. To pair - long-press the main big rotating button. Make sure the thermostat has a good signal from ZigBee coordinator.
+7. To pair - long-press the main big rotating button. Make sure the thermostat has a good signal from Zigbee coordinator.
 8. There is a hidden reset button under the cover, in case of repairing or other issues press it for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 

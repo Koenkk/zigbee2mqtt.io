@@ -1,7 +1,7 @@
 ---
 title: "Bacchus Duck Pool Thermometer control via MQTT"
 description: "Integrate your Bacchus Duck Pool Thermometer via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-05-31T11:45:45
+addedAt: 2026-03-31T19:04:19
 pageClass: device-page
 ---
 
@@ -33,7 +33,7 @@ pageClass: device-page
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes

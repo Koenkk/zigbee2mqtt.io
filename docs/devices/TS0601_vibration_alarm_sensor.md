@@ -1,0 +1,68 @@
+---
+title: "Tuya TS0601_vibration_alarm_sensor control via MQTT"
+description: "Integrate your Tuya TS0601_vibration_alarm_sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-04-30T19:57:27
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Tuya TS0601_vibration_alarm_sensor
+
+|     |     |
+|-----|-----|
+| Model | TS0601_vibration_alarm_sensor  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Description | Vibration alarm sensor |
+| Exposes | alarm_status, sensitivity, disarm, silence_mode, battery_state |
+| Picture | ![Tuya TS0601_vibration_alarm_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_vibration_alarm_sensor.png) |
+| White-label | Lincukoo V04-Z20T, Nous E14 |
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
+
+
+## Exposes
+
+### Alarm status (enum)
+device alarm status.
+Value can be found in the published state on the `alarm_status` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `normal`, `alarm`.
+
+### Sensitivity (enum)
+Sensitivity of the sensor.
+Value can be found in the published state on the `sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+The possible values are: `low`, `middle`, `high`.
+
+### Disarm (enum)
+Disarm the current alarm.
+Value can be found in the published state on the `disarm` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"disarm": NEW_VALUE}`.
+The possible values are: `normal`.
+
+### Silence mode (binary)
+enable/disable alarm.
+Value can be found in the published state on the `silence_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence_mode": NEW_VALUE}`.
+If value equals `ON` silence mode is ON, if `OFF` OFF.
+
+### Battery state (enum)
+battery state of the sensor.
+Value can be found in the published state on the `battery_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `low`, `middle`, `high`.
+

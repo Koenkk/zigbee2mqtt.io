@@ -43,7 +43,7 @@ On firmware versions lower than 1.0.5, the shortest detection duration is 30 (se
 
 Firmware version 1.0.5 and above allows setting the shortest detection duration to 15 (seconds).
 
-[Source - Sonoff documentation](https://sonoff.tech/product-review/tutorial/snzb-06p-firmware-upgrade-and-home-assistant-operation-guide/)
+[Source - Sonoff documentation](https://www.sonoff.in/blog/product-guides-3/snzb-06p-firmware-upgrade-and-home-assistant-operation-guide-111)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -54,7 +54,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be sent after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
 
 
 ## Exposes
@@ -67,7 +67,7 @@ It's not possible to write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Occupancy timeout (numeric)
-Unoccupied to occupied delay.
+Occupied to unoccupied delay.
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.

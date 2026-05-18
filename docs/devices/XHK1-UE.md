@@ -25,6 +25,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing Mode Steps
+Prepare Keypad: Remove the cover and batteries.
+Initiate Pairing: 
+- While pressing and holding the Tamper/Pairing button (small button inside), insert the batteries.
+- Release Button: Keep holding the button for a second after inserting batteries, then release it.
+- Confirm Mode: Look for a flashing green LED below the Tamper/Pairing button, which indicates it is ready to pair.
+
+The keypad can be difficult to pair and may require several attempts.
+
 ### Arming/Disarming from the server
 To set arming mode publish the following payload to `zigbee2mqtt/FRIENDLY_NAME/set` topic:
 
@@ -72,7 +81,7 @@ The automation server must follow the notification with an actual change to the 
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
 

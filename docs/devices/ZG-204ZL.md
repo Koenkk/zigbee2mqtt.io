@@ -59,7 +59,7 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`. 
+The unit of this value is `lx`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.

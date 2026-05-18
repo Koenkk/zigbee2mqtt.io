@@ -51,9 +51,3 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
-

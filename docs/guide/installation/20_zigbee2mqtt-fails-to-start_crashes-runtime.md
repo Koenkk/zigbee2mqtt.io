@@ -26,6 +26,21 @@ Common reasons for this error:
 6. Your network Zigbee adapter is not accessible over the LAN network.
 7. Another software on your machine (including Home Assistant integration) is interfering with USB devices (example: [HA EDL21 integration](https://www.home-assistant.io/integrations/edl21) trying to find a USB device).
 
+## Error: `ERROR_EXCEEDED_MAXIMUM_ACK_TIMEOUT_COUNT` for EmberZNet
+
+Common sources:
+
+- Interference at USB or in 2.4GHz
+    - refer to various guides to reduce interference
+- Improper / unstable power source (USB, POE...)
+    - verify cabling, and power ratings, replace dubious hardware
+- Spikes in resource usage on the machine running Zigbee2MQTT (disk, CPU or RAM) - more prominent on low spec machines
+    - if necessary upgrade components or allocate more resources (for virtualized environments)
+- Spikes in resource usage on "core" chip (for TCP adapters)
+    - verify availability of new "core" firmware that may fix known bugs
+- [Spammy devices](#spammy-devices) (particularly Tuya & co)
+    - use coordinator firmware 8.0.2 and later from [darkxst](https://github.com/darkxst/silabs-firmware-builder/releases) or [Nerivec](https://github.com/Nerivec/silabs-firmware-builder/releases), and 7.4.4.5 or later from [Nabu Casa](https://github.com/NabuCasa/silabs-firmware-builder/releases)
+
 ## Verify that you put the correct port in configuration.yaml
 
 Execute the following command to find out the correct path:
@@ -37,6 +52,8 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ```
 
 In this example the correct `port` would be `/dev/ttyACM0`.
+
+You can also force [onboarding](../getting-started/README.md#onboarding) to re-do the configuration
 
 ### Which port should I use for Texas Instruments LAUNCHXL-CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?
 
@@ -279,11 +296,11 @@ If all the onboard adapters are in use and you need to add another network adapt
 
 ## Error: regular crashes with timeout errors or failure to start after the serial port is opened
 
-These errors may occur when the serial communication between the ZigBee dongle and Zigbee2MQTT unexpectedly stops working.
+These errors may occur when the serial communication between the Zigbee dongle and Zigbee2MQTT unexpectedly stops working.
 
 Possible reasons that may cause this error:
 
-1. The hardware connection between the host computer and the ZigBee dongle is unreliable.
+1. The hardware connection between the host computer and the Zigbee dongle is unreliable.
    In the following example a cheap USB cable causing unreliable connection is compared with a good USB cable:
    ![good-vs-bad-usb-cable](../../images/good-vs-bad-usb-cable.jpg)
    With such cheap cable it is enough to touch the cable to cause USB disconnections.
@@ -307,3 +324,20 @@ As an example, this is the procedure to passthrough the serial device to a Proxm
 
 Now Zigbee2MQTT is able to reach the dongle through /dev/ttyS0 which is a "real" serial port inside the VM.
 Any issue with the USB device is logged by the host kernel and can be easily spotted with dmesg in this way we isolate them from the issues on the serial device.
+
+## Spammy devices
+
+Devices that spam data reports can quickly crowd the network and reduce the overall stability. Using several devices like that can even go as far as crashing the network on a regular basis. This is a well known problem of brands like Tuya (and derived). Some mmWave sensors have been known to have that problem as well (especially earlier variants).
+
+You can disable or decrease the rate of reports of a device (for all or specific states). If possible, configure [reporting](../usage/mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-device-reporting-configure) to better match your need and fit what your network can handle.
+However, often enough the devices cited above also don't allow proper configuration, in that case, there is no real way to fix them, you can only replace them with better ones.
+
+::: tip TIP
+Several Open Source projects offer alternative Tuya OTA update firmware (be sure to read all associated documentation before using these). Examples:
+
+- [https://github.com/romasku/tuya-zigbee-switch](https://github.com/romasku/tuya-zigbee-switch)
+- [https://github.com/pvvx/ZigbeeTLc](https://github.com/pvvx/ZigbeeTLc)
+- [https://github.com/Andrik45719/ZY-M100](https://github.com/Andrik45719/ZY-M100)
+- [https://github.com/slacky1965](https://github.com/slacky1965)
+
+:::

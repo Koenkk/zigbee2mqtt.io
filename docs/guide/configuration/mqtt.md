@@ -12,6 +12,7 @@ Zigbee2MQTT requires a MQTT-Server connection to operate.
 # Required: MQTT settings
 mqtt:
     # Required: MQTT server URL (use mqtts:// for SSL/TLS connection)
+    # Example: 'localhost', when using the Mosquito HA addon use 'core-mosquitto'
     server: 'mqtt://localhost:1883'
     # Optional: MQTT base topic for Zigbee2MQTT MQTT messages (default: zigbee2mqtt)
     base_topic: zigbee2mqtt

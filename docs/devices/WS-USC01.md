@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### Pairing
 Long press the button for more than 10s, until blue light blinks quickly.
-
 <!-- Notes END: Do not edit below this line -->
 
 

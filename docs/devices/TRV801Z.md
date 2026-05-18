@@ -23,8 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Binding
+Mount the valve on a radiator so the motor can detect resistance or simulate resistence manually. Perform a factory reset (hold main button while inserting the last battery until FAC blinks). After the motor self-test, hold the main button again until the display blinks continuously to enter pairing mode.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -99,7 +99,7 @@ This climate device supports the following features: `local_temperature`, `curre
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `off`, `antifrost`, `eco`, `comfort`, `auto`, `on`. Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `auto`, `heat`, `off`. Reading (`/get`) this attribute is not possible.
+- `system_mode`: Mode of this device. Writing (`/set`) this attribute is not possible. Reading (`/get`) this attribute is not possible.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-10` and the maximum value is `10` with a step size of `0.1`.
 

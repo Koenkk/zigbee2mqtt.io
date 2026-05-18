@@ -56,6 +56,18 @@ To do this execute the following steps:
 3. Bind the remote to the group by sending the following MQTT message.
     - `zigbee2mqtt/bridge/request/device/bind` with payload `{"from": "my_remote", "to": "my_group"}`
 
+### Clearing bindings
+
+Using `zigbee2mqtt/bridge/request/device/binds/clear`, bindings can be all or selectively cleared.
+
+To clear all bindings, just send the topic with the payload e.g. `{"target": "my_device"}`.
+
+To selectively clear bindings by IEEE address, send the topic with the payload e.g. `{"target": "my_deivce", "ieee_list": ["0xa1a2a3a4a5a6a7a8", "0xb1b2b3b4b5b6b7b8"]}`.
+
+::: tip
+Clearing bindings will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, bindings in Zigbee2MQTT should reflect actual bindings on the device.
+:::
+
 ## Devices
 
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
@@ -66,19 +78,19 @@ When a devices is being bound to, Zigbee2MQTT will automatically configure repor
 
 In order for this feature to work, the device has to support it. As devices from the same manufacturer (mostly) have the same features the table below might help to find out if your device supports it.
 
-| Brand            | On/Off | Brightness | Color | Color temperature | Color Mode |
-| :--------------- | :----: | :--------: | :---: | :---------------: | :--------: |
-| Philips Hue      |  N(1)  |    N(2)    |   N   |         N         |     N      |
-| Philips Hue (BT) |   Y    |     Y      |   Y   |         Y         |     N      |
-| Trådfri(3)       |   Y    |     Y      |   Y   |         N         |     Y      |
-| Innr             |   Y    |     Y      |   Y   |         Y         |     Y      |
-| GLEDOPTO         |   N    |     N      |   N   |         N         |     N      |
-| OSRAM            |   Y    |     Y      |   N   |         N         |     Y      |
-| Müller Licht     |   N    |     N      |   N   |         N         |     Y      |
+| Brand              | On/Off | Brightness | Color | Color temperature | Color mode |
+| :----------------- | :----: | :--------: | :---: | :---------------: | :--------: |
+| Philips Hue (old)  |   N¹   |     N²     |   N   |         N         |     N      |
+| Philips Hue (new³) |   Y    |     Y      |   Y   |         Y         |     N      |
+| IKEA               |   Y    |     Y      |   Y   |         Y         |     Y      |
+| Innr               |   Y    |     Y      |   Y   |         Y         |     Y      |
+| GLEDOPTO           |   N    |     N      |   N   |         N         |     N      |
+| OSRAM              |   Y    |     Y      |   N   |         N         |     Y      |
+| Müller Licht       |   N    |     N      |   N   |         N         |     Y      |
 
 1. Bulbs on old firmware (date 20170908 or older) do report On/Off
 2. Zigbee2MQTT will manual poll for change if a binding updates the bulb.
-3. The color/brightness of a Trådfri bulb can be changed while the state=off, it also reports back the change.
+3. Lamps & bulbs released starting around 2019
 
 If your devices do **not** support reporting put the device in a group and bind the remote to the group instead of directly to the device. This will make Zigbee2MQTT poll the device for updates when the bound remote controls the device. To minimize traffic this has not been enabled for all devices. If this does not work please create an issue for it [here](https://github.com/Koenkk/zigbee2mqtt/issues).
 

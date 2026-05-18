@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | BMCT-RZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
-| Description | Relay, potential free |
-| Exposes | switch (state) |
+| Description | Relay (potential free) |
+| Exposes | switch (state), actuator_type |
 | Picture | ![Bosch BMCT-RZ](https://www.zigbee2mqtt.io/images/devices/BMCT-RZ.png) |
 
 
@@ -28,7 +28,7 @@ pageClass: device-page
 This device needs an zigbee-3.0 capable coordinator (will not work with cc2531-based coordinators)! 
 
 ### Pairing
-To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the device with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
+To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the device with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
 
 
 ### Misc
@@ -43,6 +43,9 @@ Mode 2: Pulse
 In this mode, the device behaves like a button. The circuit is briefly closed and the connected devices react to the short current pulse. A good example of this is stairwell lighting.
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -63,4 +66,11 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Actuator type (enum)
+Select the appropriate actuator type so that the connected device can be controlled correctly..
+Value can be found in the published state on the `actuator_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"actuator_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"actuator_type": NEW_VALUE}`.
+The possible values are: `normally_closed`, `normally_open`.
 

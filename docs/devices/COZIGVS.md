@@ -41,8 +41,7 @@ If value equals `true` vibration is ON, if `false` OFF.
 ### Sensitivity (numeric)
 Sensitivity of the sensor (single press the button when muted to switch between low (one beep), medium (two beeps) and max (three beeps)).
 Value can be found in the published state on the `sensitivity` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `2`.
 
 ### Buzzer mute (text)

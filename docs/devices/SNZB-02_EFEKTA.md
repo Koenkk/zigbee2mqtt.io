@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SNZB-02_EFEKTA  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Alternative firmware for the SONOFF SNZB-02 sensor from EfektaLab, DIY |
-| Exposes | battery, voltage, temperature, humidity, report_delay, enable_temperature, high_temperature, low_temperature, enable_humidity, high_humidity, low_humidity |
+| Exposes | battery, voltage, temperature, humidity, sensor_reading_interval, enabling_temperature_control, temperature_actions, high_temperature, low_temperature, enabling_humidity_control, humidity_actions, high_humidity, low_humidity |
 | Picture | ![EFEKTA SNZB-02_EFEKTA](https://www.zigbee2mqtt.io/images/devices/SNZB-02_EFEKTA.png) |
 
 
@@ -40,11 +40,11 @@ Instructions on how to build this device can be found [here](https://github.com/
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -78,48 +78,62 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### Report delay (numeric)
-Adjust Report Delay. Setting the time in minutes, by default 5 minutes.
-Value can be found in the published state on the `report_delay` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"report_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
+### Sensor reading interval (numeric)
+Adjust Report Delay. Setting the time in seconds, by default 6 seconds.
+Value can be found in the published state on the `sensor_reading_interval` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_reading_interval": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_reading_interval": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `60`.
-The unit of this value is `min`.
+The unit of this value is `sec.`.
 
-### Enable temperature (binary)
-Enable Temperature Control.
-Value can be found in the published state on the `enable_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_temperature": NEW_VALUE}`.
-If value equals `ON` enable temperature is ON, if `OFF` OFF.
+### Enabling temperature control (binary)
+Enables/disables Tempearure control.
+Value can be found in the published state on the `enabling_temperature_control` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_temperature_control": NEW_VALUE}`.
+If value equals `ON` enabling temperature control is ON, if `OFF` OFF.
+
+### Temperature actions (enum)
+Heat or cool.
+Value can be found in the published state on the `temperature_actions` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_actions": NEW_VALUE}`.
+The possible values are: `HEAT`, `COOL`.
 
 ### High temperature (numeric)
 Setting High Temperature Border.
 Value can be found in the published state on the `high_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_temperature": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature": NEW_VALUE}`.
-The minimal value is `-5` and the maximum value is `50`.
+The minimal value is `-40` and the maximum value is `90`.
 The unit of this value is `°C`.
 
 ### Low temperature (numeric)
 Setting Low Temperature Border.
 Value can be found in the published state on the `low_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_temperature": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_temperature": NEW_VALUE}`.
-The minimal value is `-5` and the maximum value is `50`.
+The minimal value is `-40` and the maximum value is `90`.
 The unit of this value is `°C`.
 
-### Enable humidity (binary)
-Enable Humidity Control.
-Value can be found in the published state on the `enable_humidity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_humidity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_humidity": NEW_VALUE}`.
-If value equals `ON` enable humidity is ON, if `OFF` OFF.
+### Enabling humidity control (binary)
+Enables/disables Humidity control.
+Value can be found in the published state on the `enabling_humidity_control` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_humidity_control": NEW_VALUE}`.
+If value equals `ON` enabling humidity control is ON, if `OFF` OFF.
+
+### Humidity actions (enum)
+Wet or dry.
+Value can be found in the published state on the `humidity_actions` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_actions": NEW_VALUE}`.
+The possible values are: `WET`, `DRY`.
 
 ### High humidity (numeric)
 Setting High Humidity Border.
 Value can be found in the published state on the `high_humidity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_humidity": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_humidity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.
@@ -127,7 +141,7 @@ The unit of this value is `%`.
 ### Low humidity (numeric)
 Setting Low Humidity Border.
 Value can be found in the published state on the `low_humidity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_humidity": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_humidity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.

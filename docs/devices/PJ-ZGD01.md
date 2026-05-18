@@ -1,6 +1,6 @@
 ---
-title: "Tuya PJ-ZGD01 control via MQTT"
-description: "Integrate your Tuya PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "MatSee Plus PJ-ZGD01 control via MQTT"
+description: "Integrate your MatSee Plus PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -11,16 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya PJ-ZGD01
+# MatSee Plus PJ-ZGD01
 
 |     |     |
 |-----|-----|
 | Model | PJ-ZGD01  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [MatSee Plus](/supported-devices/#v=MatSee%20Plus)  |
 | Description | Garage door opener |
 | Exposes | trigger, countdown, garage_door_contact, run_time, open_alarm_time, status |
-| Picture | ![Tuya PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
-| White-label | MatSee Plus PJ-ZGD01 |
+| Picture | ![MatSee Plus PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

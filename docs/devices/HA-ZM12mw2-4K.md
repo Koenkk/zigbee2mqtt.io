@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HA-ZM12mw2-4K  |
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
-| Description | 4-channel LED driver |
+| Description | 4-channel WS LED driver |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior |
 | Picture | ![Halemeier HA-ZM12mw2-4K](https://www.zigbee2mqtt.io/images/devices/HA-ZM12mw2-4K.png) |
 
@@ -56,9 +56,13 @@ Advanced features like `effect`, `color_temp_startup`, and `power_on_behavior` a
 ### Light (l1 endpoint)
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l1": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l1": ""}`.
+                
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_l1": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_l1": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+                
 - `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup_l1": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup_l1": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -85,7 +89,14 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
   "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second
   "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_move": "release", // Stop moving color temperature
+  "color_temp_move": 0, // Stop moving color temperature
+  "color_temp_move": "up", // Move to warmer color temperature at default rate
+  "color_temp_move": 1, // Move to warmer color temperature at default rate
+  "color_temp_move": "down", // Move to cooler color temperature at default rate
+  "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
@@ -93,9 +104,13 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 ### Light (l2 endpoint)
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l2": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l2": ""}`.
+                
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_l2": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_l2": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+                
 - `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup_l2": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup_l2": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -122,7 +137,14 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
   "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second
   "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_move": "release", // Stop moving color temperature
+  "color_temp_move": 0, // Stop moving color temperature
+  "color_temp_move": "up", // Move to warmer color temperature at default rate
+  "color_temp_move": 1, // Move to warmer color temperature at default rate
+  "color_temp_move": "down", // Move to cooler color temperature at default rate
+  "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
@@ -130,9 +152,13 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 ### Light (l3 endpoint)
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l3": "ON"}`, `{"state_l3": "OFF"}` or `{"state_l3": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l3": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l3": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l3": ""}`.
+                
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_l3": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_l3": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+                
 - `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup_l3": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup_l3": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -159,7 +185,14 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
   "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second
   "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_move": "release", // Stop moving color temperature
+  "color_temp_move": 0, // Stop moving color temperature
+  "color_temp_move": "up", // Move to warmer color temperature at default rate
+  "color_temp_move": 1, // Move to warmer color temperature at default rate
+  "color_temp_move": "down", // Move to cooler color temperature at default rate
+  "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
@@ -167,9 +200,13 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 ### Light (l4 endpoint)
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l4": "ON"}`, `{"state_l4": "OFF"}` or `{"state_l4": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l4": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l4": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l4": ""}`.
+                
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_l4": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_l4": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+                
 - `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup_l4": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup_l4": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -196,7 +233,14 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
   "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second
   "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_move": "release", // Stop moving color temperature
+  "color_temp_move": 0, // Stop moving color temperature
+  "color_temp_move": "up", // Move to warmer color temperature at default rate
+  "color_temp_move": 1, // Move to warmer color temperature at default rate
+  "color_temp_move": "down", // Move to cooler color temperature at default rate
+  "color_temp_move": {"rate": 30, "minimum": 150, "maximum": 500}, // Move with custom rate and constraints
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````

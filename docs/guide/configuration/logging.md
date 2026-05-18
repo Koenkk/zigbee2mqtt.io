@@ -16,6 +16,7 @@ advanced:
     log_namespaced_levels:
         z2m:mqtt: warning
     # Optional: log timestamp format (default: shown below)
+    # See https://github.com/taylorhakes/fecha?tab=readme-ov-file#formatting-tokens for all supported tokens.
     timestamp_format: 'YYYY-MM-DD HH:mm:ss'
     # Optional: Location of log directory (default: shown below)
     log_directory: data/log/%TIMESTAMP%
@@ -83,6 +84,15 @@ First enable debug logging by adding the following in your `configuration.yaml`:
 ```yaml
 advanced:
     log_level: debug
+```
+
+If you are debugging an issue and want complete logs from Zigbee2MQTT startup, remember to turn off `log_rotation` and turn on logging to file by adding the following in your `configuration.yaml`:
+
+```yaml
+advanced:
+    log_rotation: false
+    log_output:
+        - file
 ```
 
 In the logging you will see the following abbreviations:

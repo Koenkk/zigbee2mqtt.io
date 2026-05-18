@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TERNCY-PP01  |
 | Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Awareness switch |
-| Exposes | temperature, occupancy, illuminance, action |
+| Exposes | occupancy, temperature, illuminance, action |
 | Picture | ![TERNCY TERNCY-PP01](https://www.zigbee2mqtt.io/images/devices/TERNCY-PP01.png) |
 
 
@@ -46,30 +46,31 @@ devices:
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
 
-* `no_occupancy_since`: Sends a message the last time occupancy (occupancy: true) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `no_occupancy_since`: Sends a message the last time occupancy (occupancy: true) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be sent after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
 
 * `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
 
 ## Exposes
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Illuminance (numeric)
 Measured illuminance.

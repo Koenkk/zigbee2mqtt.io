@@ -41,12 +41,12 @@ As the device is sleeping by default, you need to wake it up after sending the b
 When endpoint `1` is bound to a light or a group of lights, the behavior is as follows (for a double band model):
 | Button | Click | Action | Comment |
 |-----|-----|-----|-----|
-| Top left | Single<br>Double<br>Long  | Turn off | Using the `commandOff` command. |
-| Top right | Single<br>Double<br>Long  | Turn on | Using the `commandOn` command. |
-| Bottom left | Single | Step down the brightness | In steps of 85 points (33%), using the `step` command.  |
-| Bottom right | Single | Step up the brightness | In steps of 85 points (33%), using the `step` command.  |
-| Bottom left | Double | Step the color temperature down | In steps of 69 mired, using the `stepColorTemp` command.<br>I.e., make it warmer. |
-| Bottom right | Double | Step the color temperature up | In steps of 69 mired, using the `stepColorTemp` command.<br>I.e., make it colder. |
+| Top, Left | Single, Double, Long  | Turn off | Using the `commandOff` command |
+| Top, Right | Single, Double, Long  | Turn on | Using the `commandOn` command |
+| Bottom, Left | Single | Step down the brightness | In steps of 85 points (33%), using the `step` command  |
+| Bottom, Right | Single | Step up the brightness | In steps of 85 points (33%), using the `step` command  |
+| Bottom, Left | Double | Step the color temperature down | In steps of 69 mired, using the `stepColorTemp` command (make it warmer) |
+| Bottom, Right | Double | Step the color temperature up | In steps of 69 mired, using the `stepColorTemp` command (make it colder) |
 
 ### Battery Replacement
 All devices in the Opple line share the same internal design. First, you will need to remove the wireless switch part from its mount.

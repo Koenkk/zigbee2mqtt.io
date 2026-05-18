@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NAS-WV03B2  |
 | Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Smart sprinkler timer |
-| Exposes | switch (state), status, countdown, countdown_left, child_lock, battery |
+| Exposes | switch (state), status, refresh, countdown, on_with_countdown, countdown_left, single_watering_duration, fault, child_lock, battery |
 | Picture | ![NEO NAS-WV03B2](https://www.zigbee2mqtt.io/images/devices/NAS-WV03B2.png) |
 
 
@@ -35,35 +35,62 @@ pageClass: device-page
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Status (enum)
 Status.
 Value can be found in the published state on the `status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `off`, `auto`, `disabled`, `app_manual`, `key_control`.
+The possible values are: `off`, `on_auto`, `button_locked`, `on_manual_app`, `on_manual_button`.
+
+### Refresh (enum)
+Refresh the device status.
+Value can be found in the published state on the `refresh` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh": NEW_VALUE}`.
+The possible values are: `refresh`.
 
 ### Countdown (numeric)
-Count down.
+Turn off the sprinkler after set duration (one time).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `60`.
+The minimal value is `1` and the maximum value is `240`.
+The unit of this value is `min`.
+
+### On with countdown (numeric)
+Turn on the sprinkler and start countdown.
+Value can be found in the published state on the `on_with_countdown` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_with_countdown": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
 
 ### Countdown left (numeric)
-Countdown left time.
+Time left in the countdown.
 Value can be found in the published state on the `countdown_left` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `1` and the maximum value is `60`.
+The minimal value is `0` and the maximum value is `240`.
 The unit of this value is `min`.
 
+### Single watering duration (numeric)
+Duration of last watering.
+Value can be found in the published state on the `single_watering_duration` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `s`.
+
+### Fault (binary)
+Indicates whether a fault was detected.
+Value can be found in the published state on the `fault` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` fault is ON, if `false` OFF.
+
 ### Child lock (binary)
-Child lock.
+Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
-If value equals `ON` child lock is ON, if `OFF` OFF.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.

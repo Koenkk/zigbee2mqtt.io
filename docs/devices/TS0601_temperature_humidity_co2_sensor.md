@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | TS0601_temperature_humidity_co2_sensor  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | NDIR co2 sensor |
+| Description | CO2 sensor |
 | Exposes | temperature, humidity, co2 |
 | Picture | ![Tuya TS0601_temperature_humidity_co2_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_co2_sensor.png) |
 
@@ -34,11 +34,11 @@ pageClass: device-page
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
 

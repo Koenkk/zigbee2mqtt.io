@@ -27,13 +27,13 @@ pageClass: device-page
 
 ### Pairing the Device
 
-To manually pair the device, press and hold the pairing button for approximately 5 seconds until the ZigBee LED indicator starts flashing, then release the button.
+To manually pair the device, press and hold the pairing button for approximately 5 seconds until the Zigbee LED indicator starts flashing, then release the button.
 
 Be aware that the device also enters pairing mode automatically after a power cycle. Therefore, whenever power is restored, make sure pairing mode is active.
 
 ### Device Stuck After Coordinator Change
 
-When switching ZigBee coordinators, the device may enter an error state—indicated by a slow blinking light (approximately one flash per second).
+When switching Zigbee coordinators, the device may enter an error state—indicated by a slow blinking light (approximately one flash per second).
 To resolve this, power off the device for at least 10 seconds. Upon powering it back on, the device will automatically enter pairing mode.
 
 ### Re-pairing with a Hue Dimmer Remote

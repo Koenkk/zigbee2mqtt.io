@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS110E_1gang_1  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 channel dimmer |
-| Exposes | power_on_behavior, switch_type, min_brightness, max_brightness, light (state, brightness), effect |
+| Exposes | power_on_behavior, switch_type, min_brightness, max_brightness, light (state, brightness) |
 | Picture | ![Tuya TS110E_1gang_1](https://www.zigbee2mqtt.io/images/devices/TS110E_1gang_1.png) |
 
 
@@ -70,7 +70,9 @@ The minimal value is `1` and the maximum value is `255`.
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -98,11 +100,4 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 

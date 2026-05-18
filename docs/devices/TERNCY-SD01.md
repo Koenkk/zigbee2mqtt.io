@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TERNCY-SD01  |
 | Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Knob smart dimmer |
-| Exposes | battery, action, direction |
+| Exposes | battery, direction, action |
 | Picture | ![TERNCY TERNCY-SD01](https://www.zigbee2mqtt.io/images/devices/TERNCY-SD01.png) |
 
 
@@ -59,13 +59,13 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
+### Direction (text)
+Value can be found in the published state on the `direction` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `triple`, `quadruple`, `rotate`.
-
-### Direction (text)
-Value can be found in the published state on the `direction` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
 

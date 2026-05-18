@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2FD-EF1-3.0 control via MQTT"
-description: "Integrate your HEIMAN HS2FD-EF1-3.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2FD-EF1-3.0 control via MQTT"
+description: "Integrate your Heiman HS2FD-EF1-3.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-07-01T17:54:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2FD-EF1-3.0
+# Heiman HS2FD-EF1-3.0
 
 |     |     |
 |-----|-----|
 | Model | HS2FD-EF1-3.0  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Fall Detection Sensor |
-| Exposes | occupancy, sensor_status, fall_status, enable_indicator, sensitivity, enable_sub_region_isolation, installation_method, cell_mounted_table, wall_mounted_table, sub_region_isolation_table |
-| Picture | ![HEIMAN HS2FD-EF1-3.0](https://www.zigbee2mqtt.io/images/devices/HS2FD-EF1-3.0.png) |
+| Exposes | enable_indicator, enable_sub_region_isolation, occupancy, sensor_status, fall_status, cell_mounted_table, wall_mounted_table, sub_region_isolation_table, sensitivity, installation_method |
+| Picture | ![Heiman HS2FD-EF1-3.0](https://www.zigbee2mqtt.io/images/devices/HS2FD-EF1-3.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -34,6 +34,20 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 
 ## Exposes
+
+### Enable indicator (binary)
+active green indicator.
+Value can be found in the published state on the `enable_indicator` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_indicator": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_indicator": NEW_VALUE}`.
+If value equals `true` enable indicator is ON, if `false` OFF.
+
+### Enable sub region isolation (binary)
+active green indicator.
+Value can be found in the published state on the `enable_sub_region_isolation` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_sub_region_isolation": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_sub_region_isolation": NEW_VALUE}`.
+If value equals `true` enable sub region isolation is ON, if `false` OFF.
 
 ### Occupancy (binary)
 Indicates if someone is present.
@@ -53,34 +67,6 @@ Value can be found in the published state on the `fall_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `normal`, `fall_warning`, `fall_alarm`, `unknown`.
 
-### Enable indicator (enum)
-0: Off, 1: Enable.
-Value can be found in the published state on the `enable_indicator` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_indicator": NEW_VALUE}`.
-The possible values are: `0`, `1`.
-
-### Sensitivity (enum)
-0: Off, 1: Low sensitivity, 2: High sensitivity.
-Value can be found in the published state on the `sensitivity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
-The possible values are: `0`, `1`, `2`.
-
-### Enable sub region isolation (enum)
-0: Disable, 1: Enable.
-Value can be found in the published state on the `enable_sub_region_isolation` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_sub_region_isolation": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_sub_region_isolation": NEW_VALUE}`.
-The possible values are: `0`, `1`.
-
-### Installation method (enum)
-0: Wall-mounted, 1: Ceiling, 2: Rotate ceiling 45°.
-Value can be found in the published state on the `installation_method` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"installation_method": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"installation_method": NEW_VALUE}`.
-The possible values are: `0`, `1`, `2`.
-
 ### Cell mounted table (text)
 Ceiling installation area coordinate table. Format: 'X1,X2,Y1,Y2,height'. Value range: -2000≤X1≤0, 0≤X2≤2000 -2500≤Y1≤0, 0≤Y2≤2500 2300≤height≤3000 Unit:mm.
 Value can be found in the published state on the `cell_mounted_table` property.
@@ -98,4 +84,18 @@ Undetectable area coordinate table. Format: 'x1,x2,y1,y2,z1,z2'. Ranges: X1≤x1
 Value can be found in the published state on the `sub_region_isolation_table` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sub_region_isolation_table": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sub_region_isolation_table": NEW_VALUE}`.
+
+### Sensitivity (enum)
+0: Off, 1: Low sensitivity, 2: High sensitivity.
+Value can be found in the published state on the `sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+The possible values are: `Off`, `LowSensitivity`, `HighSensitivity`.
+
+### Installation method (enum)
+0: Wall-mounted, 1: Ceiling, 2: Rotate ceiling 45°.
+Value can be found in the published state on the `installation_method` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"installation_method": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"installation_method": NEW_VALUE}`.
+The possible values are: `WallMounted`, `Ceiling`, `RotateCeiling45`.
 

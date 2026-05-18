@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | THERM_SLACKY_DIY_R06  |
 | Vendor  | [Slacky-DIY](/supported-devices/#v=Slacky-DIY)  |
 | Description | Tuya Thermostat for Floor Heating with custom Firmware |
-| Exposes | child_lock, sound, inversion, brightness_level, programming_operation_mode, sensor, histeresis_temperature, max_heat_setpoint_limit, frost_protect_on_off, heat_protect, climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, running_state, schedule), schedule_monday, schedule_sunday, schedule_mode, settings_reset |
+| Exposes | child_lock, sound, relay_type, brightness_level, programming_operation_mode, sensor, hysteresis_temperature, max_heat_setpoint_limit, frost_protect_on_off, heat_protect, climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, running_state, schedule), schedule_monday, schedule_sunday, schedule_mode, settings_reset |
 | Picture | ![Slacky-DIY THERM_SLACKY_DIY_R06](https://www.zigbee2mqtt.io/images/devices/THERM_SLACKY_DIY_R06.png) |
 
 
@@ -55,12 +55,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound": NEW_VALUE}`.
 If value equals `On` sound is ON, if `Off` OFF.
 
-### Inversion (binary)
-Inversion of the output.
-Value can be found in the published state on the `inversion` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"inversion": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inversion": NEW_VALUE}`.
-If value equals `On` inversion is ON, if `Off` OFF.
+### Relay type (binary)
+Relay type NC/NO.
+Value can be found in the published state on the `relay_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"relay_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_type": NEW_VALUE}`.
+If value equals `NC` relay type is ON, if `NO` OFF.
 
 ### Brightness level (enum)
 Screen brightness.
@@ -83,11 +83,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `Inner (IN)`, `All (AL)`, `Outer (OU)`.
 
-### Histeresis temperature (numeric)
+### Hysteresis temperature (numeric)
 The delta between local_temperature and current_heating_setpoint to trigger activity.
-Value can be found in the published state on the `histeresis_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"histeresis_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"histeresis_temperature": NEW_VALUE}`.
+Value can be found in the published state on the `hysteresis_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hysteresis_temperature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hysteresis_temperature": NEW_VALUE}`.
 The minimal value is `0.5` and the maximum value is `10`.
 The unit of this value is `°C`.
 

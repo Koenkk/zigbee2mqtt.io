@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ECB62-ZB  |
 | Vendor  | [ENGO](/supported-devices/#v=ENGO)  |
 | Description | Control box for underfloor heating system |
-| Exposes | pump_delay_time, zone_1, zone_2, zone_3, zone_4, zone_5, zone_6, zone_a, zone_b, boiler_state, pump_state, zone_1_linked, zone_2_linked, zone_3_linked, zone_4_linked, zone_5_linked, zone_6_linked, zone_a_name, zone_b_name, zone_1_name, zone_2_name, zone_3_name, zone_4_name, zone_5_name, zone_6_name |
+| Exposes | pump_delay_time, zone_1, zone_2, zone_3, zone_4, zone_5, zone_6, zone_a, zone_b, boiler_state, pump_state, zone_1_linked, zone_2_linked, zone_3_linked, zone_4_linked, zone_5_linked, zone_6_linked, zone_a_name, zone_b_name, zone_1_name, zone_2_name, zone_3_name, zone_4_name, zone_5_name, zone_6_name, voltage |
 | Picture | ![ENGO ECB62-ZB](https://www.zigbee2mqtt.io/images/devices/ECB62-ZB.png) |
 
 
@@ -28,6 +28,13 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -182,4 +189,10 @@ Custom name for zigbee zone 6.
 Value can be found in the published state on the `zone_6_name` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_6_name": NEW_VALUE}`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
 

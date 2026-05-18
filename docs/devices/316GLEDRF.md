@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | 316GLEDRF  |
 | Vendor  | [ELKO](/supported-devices/#v=ELKO)  |
-| Description | ZigBee in-wall smart dimmer |
-| Exposes | light (state, brightness), effect, power_on_behavior |
+| Description | Zigbee in-wall smart dimmer |
+| Exposes | light (state, brightness) |
 | Picture | ![ELKO 316GLEDRF](https://www.zigbee2mqtt.io/images/devices/316GLEDRF.png) |
 
 
@@ -42,7 +42,9 @@ pageClass: device-page
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -70,18 +72,4 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
-
-### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 

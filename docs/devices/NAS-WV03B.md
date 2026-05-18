@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | NAS-WV03B  |
 | Vendor  | [NEO](/supported-devices/#v=NEO)  |
-| Description | Smart sprinkler timer |
-| Exposes | switch (state), status, countdown, countdown_left, water_current, battery_percentage, water_total, fault, weather_delay, normal_timer, switch_enabled, smart_irrigation, total_flow_reset_switch, quantitative_watering, flow_switch, child_lock, surplus_flow, single_watering_duration, single_watering_amount |
+| Description | Smart sprinkler timer with measurements |
+| Exposes | switch (state), status, refresh, countdown, on_with_countdown, countdown_left, single_watering_duration, flow_switch, quantitative_watering, single_watering_amount, surplus_flow, water_current, water_total, water_total_reset, fault, child_lock, battery |
 | Picture | ![NEO NAS-WV03B](https://www.zigbee2mqtt.io/images/devices/NAS-WV03B.png) |
 
 
@@ -35,122 +35,113 @@ pageClass: device-page
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Status (enum)
 Status.
 Value can be found in the published state on the `status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `off`, `auto`, `disabled`.
+The possible values are: `off`, `on_auto`, `button_locked`, `on_manual_app`, `on_manual_button`.
+
+### Refresh (enum)
+Refresh the device status.
+Value can be found in the published state on the `refresh` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh": NEW_VALUE}`.
+The possible values are: `refresh`.
 
 ### Countdown (numeric)
-Countdown.
+Turn off the sprinkler after set duration (one time).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
 
-### Countdown left (numeric)
-Countdown left.
-Value can be found in the published state on the `countdown_left` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+### On with countdown (numeric)
+Turn on the sprinkler and start countdown.
+Value can be found in the published state on the `on_with_countdown` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_with_countdown": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
 
-### Water current (numeric)
-Current water flow (L/min).
-Value can be found in the published state on the `water_current` property.
+### Countdown left (numeric)
+Time left in the countdown.
+Value can be found in the published state on the `countdown_left` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `3785.41`.
-The unit of this value is `L/min`.
+The minimal value is `0` and the maximum value is `240`.
+The unit of this value is `min`.
 
-### Battery percentage (numeric)
-Battery percentage.
-Value can be found in the published state on the `battery_percentage` property.
+### Single watering duration (numeric)
+Duration of last watering.
+Value can be found in the published state on the `single_watering_duration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
-### Water total (numeric)
-Total water flow (L).
-Value can be found in the published state on the `water_total` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `378541`.
-The unit of this value is `L`.
-
-### Fault (binary)
-Fault status.
-Value can be found in the published state on the `fault` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `DETECTED` fault is ON, if `NOT_DETECTED` OFF.
-
-### Weather delay (enum)
-Weather delay.
-Value can be found in the published state on the `weather_delay` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_delay": NEW_VALUE}`.
-The possible values are: `24h`, `48h`, `72h`, `cancel`.
-
-### Normal timer (text)
-Normal timer.
-Value can be found in the published state on the `normal_timer` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"normal_timer": NEW_VALUE}`.
-
-### Switch enabled (binary)
-Switch enabled.
-Value can be found in the published state on the `switch_enabled` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_enabled": NEW_VALUE}`.
-If value equals `ON` switch enabled is ON, if `OFF` OFF.
-
-### Smart irrigation (numeric)
-Smart irrigation.
-Value can be found in the published state on the `smart_irrigation` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Total flow reset switch (binary)
-Total flow reset switch.
-Value can be found in the published state on the `total_flow_reset_switch` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"total_flow_reset_switch": NEW_VALUE}`.
-If value equals `ON` total flow reset switch is ON, if `OFF` OFF.
-
-### Quantitative watering (numeric)
-Quantitative watering.
-Value can be found in the published state on the `quantitative_watering` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quantitative_watering": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10000`.
-The unit of this value is `L`.
+The unit of this value is `s`.
 
 ### Flow switch (binary)
-Flow switch.
+Enables water flow measurement, and automatically turn off the sprinkler when flow is 0 for ~30s.
 Value can be found in the published state on the `flow_switch` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flow_switch": NEW_VALUE}`.
 If value equals `ON` flow switch is ON, if `OFF` OFF.
 
+### Quantitative watering (numeric)
+Turn on the sprinkler with a set amount of water.
+Value can be found in the published state on the `quantitative_watering` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quantitative_watering": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10000`.
+The unit of this value is `gal`.
+
+### Single watering amount (numeric)
+Quantity of last watering.
+Value can be found in the published state on the `single_watering_amount` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `gal`.
+
+### Surplus flow (numeric)
+Remaining amount.
+Value can be found in the published state on the `surplus_flow` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `gal`.
+
+### Water current (numeric)
+Current water flow.
+Value can be found in the published state on the `water_current` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `gal/min`.
+
+### Water total (numeric)
+Total watering amount.
+Value can be found in the published state on the `water_total` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `gal`.
+
+### Water total reset (enum)
+Reset the stored watering amount to 0.
+Value can be found in the published state on the `water_total_reset` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_total_reset": NEW_VALUE}`.
+The possible values are: `reset`.
+
+### Fault (binary)
+Indicates whether a fault was detected.
+Value can be found in the published state on the `fault` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` fault is ON, if `false` OFF.
+
 ### Child lock (binary)
-Child lock.
+Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
-If value equals `ON` child lock is ON, if `OFF` OFF.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
-### Surplus flow (numeric)
-Surplus flow.
-Value can be found in the published state on the `surplus_flow` property.
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Single watering duration (numeric)
-Single watering duration.
-Value can be found in the published state on the `single_watering_duration` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Single watering amount (numeric)
-Single watering amount.
-Value can be found in the published state on the `single_watering_amount` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 

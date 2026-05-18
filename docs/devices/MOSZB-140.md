@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MOSZB-140  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor |
-| Exposes | occupancy, tamper, battery_low, temperature, illuminance, battery, voltage |
+| Exposes | occupancy, occupancy_timeout, tamper, battery_low, led_control, temperature, illuminance, battery, voltage |
 | Picture | ![Develco MOSZB-140](https://www.zigbee2mqtt.io/images/devices/MOSZB-140.png) |
 
 
@@ -37,7 +37,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -52,6 +52,13 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
+### Occupancy timeout (numeric)
+Value can be found in the published state on the `occupancy_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `65535`.
+The unit of this value is `s`.
+
 ### Tamper (binary)
 Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
@@ -63,6 +70,13 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
+
+### Led control (enum)
+Control LED indicator usage..
+Value can be found in the published state on the `led_control` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_control": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_control": NEW_VALUE}`.
+The possible values are: `off`, `fault_only`, `motion_only`, `both`.
 
 ### Temperature (numeric)
 Measured temperature value.

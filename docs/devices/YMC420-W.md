@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | YMC420-W  |
 | Vendor  | [Yale](/supported-devices/#v=Yale)  |
-| Description | Fechadura Digital YMC 420 W |
+| Description | Digital Lock YMC 420 W |
 | Exposes | lock (state, lock_state), battery, pin_code, action_source_name, action_user, auto_relock_time, sound_volume, battery_low, action |
 | Picture | ![Yale YMC420-W](https://www.zigbee2mqtt.io/images/devices/YMC420-W.png) |
 
@@ -94,5 +94,5 @@ If value equals `true` battery low is ON, if `false` OFF.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `unknown`, `lock`, `unlock`, `lock_failure_invalid_pin_or_id`, `lock_failure_invalid_schedule`, `unlock_failure_invalid_pin_or_id`, `unlock_failure_invalid_schedule`, `one_touch_lock`, `key_lock`, `key_unlock`, `auto_lock`, `schedule_lock`, `schedule_unlock`, `manual_lock`, `manual_unlock`, `non_access_user_operational_event`.
+The possible values are: `password_unlock`, `unlock`, `auto_lock`, `rfid_unlock`, `fingerprint_unlock`, `unlock_failure_invalid_pin_or_id`, `unlock_failure_invalid_schedule`, `one_touch_lock`, `key_lock`, `key_unlock`, `schedule_lock`, `schedule_unlock`, `manual_lock`, `manual_unlock`, `non_access_user_operational_event`, `unknown`, `lock`, `lock_failure_invalid_pin_or_id`, `lock_failure_invalid_schedule`.
 

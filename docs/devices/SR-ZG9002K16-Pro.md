@@ -31,9 +31,9 @@ For easy integration with Home Assistant, you can use our blueprint. This bluepr
 - Easily distinguish between buttons in your automations
 - Simplify the automation setup process
 
-<a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fraw.githubusercontent.com%2Fmaginawin%2Fsr_ha_blueprints%2Frefs%2Fheads%2Fmain%2Fblueprints%2FSR-ZG9002K16-Pro%2Fbutton-trigger.yaml"><img src="https://my.home-assistant.io/badges/blueprint_import.svg" width="300"></a>
+[https://github.com/maginawin/sr_ha_blueprints](https://github.com/maginawin/sr_ha_blueprints)
 
-Click the badge above to import the blueprint into your Home Assistant instance.
+Find the appropriate badge in the link above to import the blueprint into your Home Assistant instance.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -81,7 +81,6 @@ Value can be found in the published state on the `large_motion_detection_sensiti
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"large_motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Small motion detection distance (numeric)
 Small motion detection distance.
@@ -97,7 +96,6 @@ Value can be found in the published state on the `small_motion_detection_sensiti
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"small_motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Static detection distance (numeric)
 Static detection distance.
@@ -113,7 +111,6 @@ Value can be found in the published state on the `static_detection_sensitivity` 
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Mode (enum)
 Working mode.

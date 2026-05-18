@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_PST_V1_LR  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Water, gas smart pressure monitor with signal amplifier |
-| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, raw_temperature, raw_temperature_recalibrated, battery, voltage, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
+| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, raw_temperature, raw_temperature_recalibrated, range, battery, voltage, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
 | Picture | ![EFEKTA EFEKTA_PST_V1_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_V1_LR.png) |
 
 
@@ -34,11 +34,11 @@ pageClass: device-page
 
 * `pressure_calibration`: Calibrates the pressure value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -94,6 +94,13 @@ Recalibrated sensor raw temperature.
 Value can be found in the published state on the `raw_temperature_recalibrated` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `raw unit`.
+
+### Range (enum)
+Measuring range of the sensor.
+Value can be found in the published state on the `range` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"range": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range": NEW_VALUE}`.
+The possible values are: `0-10 Bar`, `0-16 Bar`.
 
 ### Battery (numeric)
 Remaining battery in %.

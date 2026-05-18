@@ -26,13 +26,15 @@ pageClass: device-page
 ## Notes
 
 ### Troubleshooting
-In case the sensor gets stuck and stops reporting (correct) data, you can try to restore it by following these steps:
-  1. Force remove the device via the frontend.
-  2. Restart Zigbee2MQTT.
-  3. Re-pair the device.
+* In case the sensor gets stuck and stops reporting (correct) data, you can try to restore it by following these steps:
+    1. Force remove the device via the frontend.
+    2. Restart Zigbee2MQTT.
+    3. Re-pair the device.
 
-Zigbee2MQTT version v2.3.0 introduced firmware version v2.3.0 which seems to improve data reporting. \
-To update your device, short press the pairing button once and use the web interface to start the firmware update.
+  Zigbee2MQTT version v2.3.0 introduced firmware version v2.3.0 which seems to improve data reporting. \
+  To update your device, short press the pairing button once and use the web interface to start the firmware update.
+
+* In case the sensor does not pair with the coordinator, just remove the battery for 10 seconds.
 
 ### Battery
 Uses a CR2450 battery
@@ -54,11 +56,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes

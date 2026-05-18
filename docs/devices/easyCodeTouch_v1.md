@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | easyCodeTouch_v1  |
 | Vendor  | [Onesti Products AS](/supported-devices/#v=Onesti%20Products%20AS)  |
 | Description | Zigbee module for EasyAccess code touch series |
-| Exposes | lock (state, lock_state), battery, sound_volume, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, pin_code, last_successful_pincode_clear, last_successful_pincode_save |
+| Exposes | lock (state, lock_state), battery, sound_volume, voltage, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, auto_relock_time, max_pin_users, min_pin_length, max_pin_length, pin_code, last_successful_pincode_clear, last_successful_pincode_save |
 | Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.png) |
 
 
@@ -28,6 +28,13 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 
 ## Exposes
@@ -52,6 +59,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
 
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
 ### Last unlock source (enum)
 Last unlock source.
 Value can be found in the published state on the `last_unlock_source` property.
@@ -59,7 +72,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `self`, `unknown`.
 
 ### Last unlock user (text)
-Last unlock user.
+Last unlock user (slot number).
 Value can be found in the published state on the `last_unlock_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
@@ -70,12 +83,12 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `self`, `unknown`.
 
 ### Last lock user (text)
-Last lock user.
+Last lock user (slot number).
 Value can be found in the published state on the `last_lock_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Last used pin code (text)
-Last used pin code.
+Last used pin code (actual digits).
 Value can be found in the published state on the `last_used_pin_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
@@ -85,6 +98,27 @@ Value can be found in the published state on the `auto_relock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": NEW_VALUE}`.
 If value equals `true` auto relock is ON, if `false` OFF.
+
+### Auto relock time (numeric)
+Auto relock delay in seconds.
+Value can be found in the published state on the `auto_relock_time` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `s`.
+
+### Max pin users (numeric)
+Maximum number of PIN users supported.
+Value can be found in the published state on the `max_pin_users` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Min pin length (numeric)
+Minimum PIN code length.
+Value can be found in the published state on the `min_pin_length` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Max pin length (numeric)
+Maximum PIN code length.
+Value can be found in the published state on the `max_pin_length` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Pin code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`

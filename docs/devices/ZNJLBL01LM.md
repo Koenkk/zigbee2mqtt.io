@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNJLBL01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Roller shade driver E1 |
-| Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, motor_speed |
+| Exposes | cover (state, position), battery, device_temperature, charging_status, reverse_direction, motor_state, running, motor_speed |
 | Picture | ![Aqara ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.png) |
 | White-label | Aqara RSD-M01 |
 
@@ -29,7 +29,7 @@ pageClass: device-page
 ### Pairing
 Hold the reset button, on the bottom of the device, for 5 seconds.
 
-_Pairing the device with a new bridge will **not** reset the fully open/closed position._
+*Pairing the device with a new bridge will **not** reset the fully open/closed position.*
 
 ### Fully open and fully closed positions
 The rotation range (fully open and fully closed) can be reset by holding the both the up and down buttons for 3 seconds until the light turns blue.
@@ -94,6 +94,13 @@ Value can be found in the published state on the `charging_status` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charging_status": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` charging status is ON, if `false` OFF.
+
+### Reverse direction (binary)
+Whether the curtain direction is inverted.
+Value can be found in the published state on the `reverse_direction` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"reverse_direction": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
+If value equals `true` reverse direction is ON, if `false` OFF.
 
 ### Motor state (enum)
 The current state of the motor..

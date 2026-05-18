@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | M8Pro  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 4 gang switch with LCD |
-| Exposes | switch (state), name, scene_name, mode, action |
+| Exposes | switch (state), name, scene_name, mode, backlight, indicator_switch, backlight_switch, temperature_1, condition_1, action |
 | Picture | ![Tuya M8Pro](https://www.zigbee2mqtt.io/images/devices/M8Pro.png) |
 
 
@@ -127,6 +127,41 @@ Value can be found in the published state on the `mode_l4` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l4": NEW_VALUE}`.
 The possible values are: `switch_1`, `scene_1`, `smart_light_1`.
+
+### Backlight (binary)
+Backlight.
+Value can be found in the published state on the `backlight` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": NEW_VALUE}`.
+If value equals `ON` backlight is ON, if `OFF` OFF.
+
+### Indicator switch (enum)
+Indicator switch.
+Value can be found in the published state on the `indicator_switch` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_switch": NEW_VALUE}`.
+The possible values are: `status`, `switch_position`, `off`.
+
+### Backlight switch (binary)
+Backlight switch.
+Value can be found in the published state on the `backlight_switch` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_switch": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": NEW_VALUE}`.
+If value equals `ON` backlight switch is ON, if `OFF` OFF.
+
+### Temperature 1 (numeric)
+Temperature.
+Value can be found in the published state on the `temperature_1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_1": NEW_VALUE}`.
+The minimal value is `-65` and the maximum value is `99`.
+
+### Condition 1 (enum)
+Weather condition.
+Value can be found in the published state on the `condition_1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"condition_1": NEW_VALUE}`.
+The possible values are: `sunny`, `heavy_rain`, `cloudy`, `sandstorm`, `light_snow`, `snow`, `freezing_fog`, `rainstorm`, `shower`, `dust`, `spit`, `sleet`, `yin`, `freezing_rain`, `rain`, `fog`, `heavy_shower`, `heavy_snow`, `heavy_downpour`, `blizzard`, `hailstone`, `snow_shower`, `haze`, `thunder_shower`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

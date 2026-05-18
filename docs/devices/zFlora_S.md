@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | zFlora_S  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Plant watering sensor zFlora S |
-| Exposes | identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_offset, temperature_compensation |
+| Exposes | identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_compensation |
 | Picture | ![EFEKTA zFlora_S](https://www.zigbee2mqtt.io/images/devices/zFlora_S.png) |
 
 
@@ -34,17 +34,17 @@ pageClass: device-page
 
 * `soil_moisture_calibration`: Calibrates the soil_moisture value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `soil_moisture_precision`: Number of digits after decimal point for soil_moisture, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `soil_moisture_precision`: Number of digits after decimal point for soil_moisture, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -138,14 +138,6 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_level": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Temperature offset (numeric)
-Adjust temperature.
-Value can be found in the published state on the `temperature_offset` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
-The minimal value is `-50` and the maximum value is `50`.
-The unit of this value is `°C`.
 
 ### Temperature compensation (binary)
 Temperature compensation.

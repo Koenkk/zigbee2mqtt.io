@@ -26,13 +26,13 @@ pageClass: device-page
 ## Notes
 
 ### Description
-Wiren Board WB-MSW v.3 — hybrid digital sensor of motion, temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+Wiren Board WB-MSW v.3 — hybrid digital sensor of motion, temperature, humidity, illuminance, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
 
 ### Switch endpoints
-The device allways exposes 3 on/off endpoints named `l1`, `l2` and `l3`. Frist two of them only work if illuminannce + IR blaster addon is installed. Their finctuons as follows:
+The device always exposes 3 on/off endpoints named `l1`, `l2` and `l3`. First two of them only work if illuminance + IR blaster addon is installed. Their functions are as follows:
 - `l1` – controls blinking red led
 - `l2` – controls blinking green led
-- `l3` – controlls buzzer
+- `l3` – controls buzzer
 
 Warning, the installed buzzer is very loud.
 
@@ -122,11 +122,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
 
@@ -134,7 +134,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be sent after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 

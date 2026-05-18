@@ -22,6 +22,8 @@ First determine the port of your adapter:
     lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00 -> ../../ttyACM0
     ```
 
+    - If it's still not connecting, make sure your adapter is in USB mode. Some adapters, eg. the [ZigStar](https://xzg.xyzroe.cc/hardware/) run in network mode by default, and won't communicate over USB until put into USB mode.
+
 - For network adapters you need to find the IP address of your adapter through router/switch web-interface. Make sure that the adapter has been assigned a static IP address!
     - Alternatively, in case your adapter supports mDNS, see the mDNS docs below.
 

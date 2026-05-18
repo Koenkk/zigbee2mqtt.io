@@ -10,7 +10,18 @@ export async function removeObsoleteDevices(devices) {
 
     await Promise.all(
         obsolete.map(async (file) => {
-            await fsp.unlink(path.resolve(devicesBaseDir, file));
+            const filePath = path.resolve(devicesBaseDir, file);
+            try {
+                const content = await fsp.readFile(filePath, 'utf8');
+                if (content.includes('keepRedirect:')) {
+                    console.log('Keeping redirect file', file);
+                    return;
+                }
+            } catch (e) {
+                console.warn('Could not read file before removal:', file, e.message);
+            }
+
+            await fsp.unlink(filePath);
             console.log('Removed obsolete file', file);
         }),
     );

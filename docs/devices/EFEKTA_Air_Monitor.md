@@ -1,6 +1,6 @@
 ---
-title: "EfektaLab EFEKTA_Air_Monitor control via MQTT"
-description: "Integrate your EfektaLab EFEKTA_Air_Monitor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "EFEKTA EFEKTA_Air_Monitor control via MQTT"
+description: "Integrate your EFEKTA EFEKTA_Air_Monitor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-04-01T18:30:52
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# EfektaLab EFEKTA_Air_Monitor
+# EFEKTA EFEKTA_Air_Monitor
 
 |     |     |
 |-----|-----|
 | Model | EFEKTA_Air_Monitor  |
-| Vendor  | [EfektaLab](/supported-devices/#v=EfektaLab)  |
+| Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | CO2 smart monitor, AA battery |
-| Exposes | co2, battery, battery_low, uptime, report_delay, forced_recalibration, manual_forced_recalibration, automatic_scal, factory_reset_co2 |
-| Picture | ![EfektaLab EFEKTA_Air_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Air_Monitor.png) |
+| Exposes | co2, battery, battery_low, uptime, report_delay, power_mode, forced_recalibration, manual_forced_recalibration, automatic_scal, factory_reset_co2 |
+| Picture | ![EFEKTA EFEKTA_Air_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Air_Monitor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -70,6 +70,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
 The minimal value is `20` and the maximum value is `1800`.
 The unit of this value is `sec`.
+
+### Power mode (enum)
+Set power mode.
+Value can be found in the published state on the `power_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_mode": NEW_VALUE}`.
+The possible values are: `Fast`, `Medium`, `Slow`.
 
 ### Forced recalibration (binary)
 Start FRC (Perform Forced Recalibration of the CO2 Sensor).

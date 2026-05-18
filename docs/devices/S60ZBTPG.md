@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S60ZBTPG  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart plug |
-| Exposes | switch (state), power_on_behavior, current, voltage, power, energy_yesterday, energy_today, energy_month, inching_control_set, outlet_control_protect, overload_protection |
+| Exposes | energy, switch (state), power_on_behavior, network_indicator, current, voltage, power, energy_yesterday, energy_today, energy_month, inching_control_set, outlet_control_protect, overload_protection |
 | Picture | ![SONOFF S60ZBTPG](https://www.zigbee2mqtt.io/images/devices/S60ZBTPG.png) |
 
 
@@ -35,22 +35,32 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
@@ -69,6 +79,13 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Network indicator (binary)
+Network indicator settings, turn off/on the blue online status network indicator..
+Value can be found in the published state on the `network_indicator` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"network_indicator": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": NEW_VALUE}`.
+If value equals `true` network indicator is ON, if `false` OFF.
 
 ### Current (numeric)
 Current.
@@ -105,7 +122,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Energy month (numeric)
+### Energy this month (numeric)
 Electricity consumption for the month.
 Value can be found in the published state on the `energy_month` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_month": ""}`.
@@ -130,14 +147,14 @@ If value equals `true` outlet control protect is ON, if `false` OFF.
 Over load protection, max power and max current are required,other is optional.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": {"max_power": VALUE, "enable_min_power": VALUE, "min_power": VALUE, "enable_max_voltage": VALUE, "max_voltage": VALUE, "enable_min_voltage": VALUE, "min_voltage": VALUE, "max_current": VALUE, "enable_min_current": VALUE, "min_current": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overload_protection": ""}`.
-- `max_power` (numeric): max power min value is 0.1, max value is 4000, unit is W
+- `max_power` (numeric): max power min value is 0.1, max value is 3250, unit is W
 - `enable_min_power` (binary): Enable/disable lower limit of power overload protection. allowed values: `ENABLE` or `DISABLE`
-- `min_power` (numeric): Lower limit of power overload protection min value is 0.1, max value is 4000, unit is W
+- `min_power` (numeric): Lower limit of power overload protection min value is 0.1, max value is 3250, unit is W
 - `enable_max_voltage` (binary): Enable/disable upper limit of voltage overload protection.. allowed values: `ENABLE` or `DISABLE`
 - `max_voltage` (numeric): Upper limit of voltage overload protection. min value is 165, max value is 277, unit is V
 - `enable_min_voltage` (binary): Enable/disable lower limit of voltage overload protection. allowed values: `ENABLE` or `DISABLE`
 - `min_voltage` (numeric): Lower limit of voltage overload protection. min value is 165, max value is 277, unit is V
-- `max_current` (numeric): Upper limit of current overload protection. min value is 0.1, max value is 17, unit is A
+- `max_current` (numeric): Upper limit of current overload protection. min value is 0.1, max value is 14, unit is A
 - `enable_min_current` (binary): Enable/disable lower limit of current overload protection. allowed values: `ENABLE` or `DISABLE`
-- `min_current` (numeric): Lower limit of current overload protection. min value is 0.1, max value is 17, unit is A
+- `min_current` (numeric): Lower limit of current overload protection. min value is 0.1, max value is 14, unit is A
 
