@@ -26,11 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### 🚨 Version issue v21 🚨
-There is currently an issue with the version v21 for this device. In this version, when the device goes off (because of real smoke), the device only buzzers ONE time and then mutes itself (which you can manually unmute again). This version has been pulled back from the OTA repository (so you can't update currently the device with Z2M) and if you have this version installed, make sure that you test your device. **You can't downgrade, as the device blocks any downgrades**. If you installed this version and have this issue, then you got currently bad luck.
+### Version issue v21 
+There is currently an issue with the version v21 for this device. In this version, when the device goes off (because of real smoke), the device only buzzers ONE time and then mutes itself (which you can manually unmute again). This version has been pulled back from the OTA repository (so you can't update currently the device with Z2M) and if you have this version installed, make sure that you test your device and downgrade if needed.
 
-#### Workaround
-To make sure, that you get alarmed, when smoke gets detected, you can create an automation in Homeassistant which manually unmutes the device when it goes off. **Note: This workaround REQUIRES that Z2M and Homeassistant are up and working!** Currently, there is no offline workaround.
+
+#### Fix
+There is now an OTA JSON file from andrei-lazarov, which is tricks the device into this update is an v22 update, but it is actually an v17 downgrade. This version doesn't have the alarm bug inside. **Install this update only, to revert the smoke detector to the old working version, if you have the v21 installed (or any other broken version, which is higher than v17).**
+_Note: It is possible, that future updates to something like v21 or something similar won't be possible, as a "downgrade" to a lower version is not possible on this device (the device will have the version v22 installed, but the code inside is from v17). For that, you would need to manually change the version to something like v23 to trick device into "upgrading". As of 18. May 2026, it is currently not needed to upgrade to an newer version._
+
+[Link to the v22 OTA JSON File](https://raw.githubusercontent.com/andrei-lazarov/zigbee-OTA/refs/heads/aqara/aqara.json)
 
 [Link to the GitHub issue](https://github.com/Koenkk/zigbee-OTA/issues/938)
 
