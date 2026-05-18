@@ -36,6 +36,9 @@ importers:
       '@vuepress/plugin-google-analytics':
         specifier: 2.0.0-rc.124
         version: 2.0.0-rc.124(vuepress@2.0.0-rc.26(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))
+      '@vuepress/plugin-redirect':
+        specifier: 2.0.0-rc.124
+        version: 2.0.0-rc.124(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vuepress@2.0.0-rc.26(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))
       '@vuepress/plugin-register-components':
         specifier: 2.0.0-rc.124
         version: 2.0.0-rc.124(vuepress@2.0.0-rc.26(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))
@@ -1001,6 +1004,12 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.26
 
+  '@vuepress/plugin-redirect@2.0.0-rc.124':
+    resolution: {integrity: sha512-0WS+c9A/4A/Aqq1Dpq8BgB3Nm+2YuEyRp6EjHzD31Z9RcUdYwdDan1NIMP78KdGq95DbIH7DQyEQ/dq7yicdvA==}
+    hasBin: true
+    peerDependencies:
+      vuepress: 2.0.0-rc.26
+
   '@vuepress/plugin-register-components@2.0.0-rc.124':
     resolution: {integrity: sha512-ZDr83W4Df5rxNN8oBEHxrkXbVJyjElBhShc3sazXWDeMsZJQNT2u2sfWxnC7JDb/Xawu1+u6amJNRnCOF//6Xw==}
     peerDependencies:
@@ -1380,6 +1389,10 @@ packages:
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
+
+  commander@14.0.3:
+    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
+    engines: {node: '>=20'}
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
@@ -4555,6 +4568,18 @@ snapshots:
       - '@vueuse/core'
       - typescript
 
+  '@vuepress/plugin-redirect@2.0.0-rc.124(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vuepress@2.0.0-rc.26(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))':
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.124(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vuepress@2.0.0-rc.26(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))
+      '@vueuse/core': 14.2.1(vue@3.5.29(typescript@5.9.3))
+      commander: 14.0.3
+      vue: 3.5.29(typescript@5.9.3)
+      vuepress: 2.0.0-rc.26(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3))
+    transitivePeerDependencies:
+      - '@vuepress/bundler-vite'
+      - '@vuepress/bundler-webpack'
+      - typescript
+
   '@vuepress/plugin-register-components@2.0.0-rc.124(vuepress@2.0.0-rc.26(@vuepress/bundler-webpack@2.0.0-rc.26(typescript@5.9.3))(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))':
     dependencies:
       chokidar: 5.0.0
@@ -5003,6 +5028,8 @@ snapshots:
   colorette@2.0.20: {}
 
   comma-separated-tokens@2.0.3: {}
+
+  commander@14.0.3: {}
 
   commander@2.20.3: {}
 

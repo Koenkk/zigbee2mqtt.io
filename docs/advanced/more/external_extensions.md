@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+redirectFrom: /information/external_extensions.md
 ---
 
 # External extensions

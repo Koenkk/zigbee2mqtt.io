@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+redirectFrom: /information/external_converters.md
 ---
 
 # External converters
