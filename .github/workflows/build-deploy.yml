@@ -26,6 +26,16 @@ jobs:
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
+            # To prevent build from running out of memory
+            - name: Configure swap
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
+              run: |
+                  sudo fallocate -l 16G /swapfile
+                  sudo chmod 600 /swapfile
+                  sudo mkswap /swapfile
+                  sudo swapon /swapfile
+                  sudo sysctl vm.swappiness=10
+
             - name: Lint
               run: pnpm run pretty:check
 
