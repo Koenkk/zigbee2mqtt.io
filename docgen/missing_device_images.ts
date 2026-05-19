@@ -52,7 +52,7 @@ export async function downloadMissing() {
         console.log(`Querying '${query}'`);
         // @ts-expect-error
         const images: {url: string}[] = (await gis(`${definition.model} ${definition.vendor}`))
-            .filter((r) => r.url.endsWith('.webp') || r.url.endsWith('.jpg') || r.url.endsWith('.jpeg') || r.url.endsWith('.png'))
+            .filter((r: {url: string}) => r.url.endsWith('.webp') || r.url.endsWith('.jpg') || r.url.endsWith('.jpeg') || r.url.endsWith('.png'))
             .slice(0, 5);
         for (const image of images) {
             let imagePath = path.join(
