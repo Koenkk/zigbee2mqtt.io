@@ -139,8 +139,8 @@ const conf = defineUserConfig({
                     __QUASAR_SSR_PWA__: false,
                 },
             ]);
-            // Limit concurrent webpack compilations to reduce peak memory usage
-            chain.set('parallelism', 1);
+            // Serialize cold modules to disk instead of keeping full graph in RAM
+            chain.cache({type: 'filesystem'});
         },
     }),
 
