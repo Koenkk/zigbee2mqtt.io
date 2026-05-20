@@ -139,6 +139,8 @@ const conf = defineUserConfig({
                     __QUASAR_SSR_PWA__: false,
                 },
             ]);
+            // Limit concurrent webpack compilations to reduce peak memory usage
+            chain.set('parallelism', 1);
         },
     }),
 
