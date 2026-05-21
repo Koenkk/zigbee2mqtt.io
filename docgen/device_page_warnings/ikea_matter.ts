@@ -1,4 +1,6 @@
-export function ikeaMatter(definition) {
+import {Definition} from 'zigbee-herdsman-converters';
+
+export function ikeaMatter(definition: Definition) {
     if (definition.vendor === 'IKEA' && definition.description.includes('Matter')) {
         return `
 ## Unofficial support

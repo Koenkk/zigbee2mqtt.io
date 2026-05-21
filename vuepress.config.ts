@@ -140,6 +140,10 @@ const conf = defineUserConfig({
                     __QUASAR_SSR_PWA__: false,
                 },
             ]);
+            // Serialize cold modules to disk instead of keeping full graph in RAM
+            chain.cache({type: 'filesystem'});
+            // Terser holds ASTs for all pages simultaneously; disable to reduce peak heap
+            chain.optimization.minimize(false);
         },
     }),
 

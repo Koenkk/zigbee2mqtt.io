@@ -5,7 +5,7 @@ import {promises as fsp} from 'fs';
 import {generatePage, getAddedAt, getImage, normalizeModel, allDefinitions} from './utils';
 import {imageBaseDir} from './constants';
 import {resolveDeviceFile} from './generate_device';
-import {Definition} from 'zigbee-herdsman-converters';
+import {DefinitionWithWhiteLabelOf} from './types';
 
 const vendors = new Set();
 
@@ -17,7 +17,7 @@ export default async function generate_supportedDevices() {
 
     const definitionMap = new Map(allDefinitions.map((d) => [d.model, d]));
 
-    let definitions: (Definition & {isWhiteLabel?: boolean; whiteLabelOf?: Definition})[] = [...allDefinitions];
+    let definitions: DefinitionWithWhiteLabelOf[] = [...allDefinitions];
 
     for (const definition of allDefinitions) {
         if (definition.whiteLabel) {
@@ -59,7 +59,7 @@ export default async function generate_supportedDevices() {
                 const deviceContent = await fsp.readFile(resolveDeviceFile(baseModel), 'utf-8');
                 addedAt = getAddedAt(deviceContent);
             } catch (e) {
-                console.warn(`Could not read addedAt from ${baseModel}`, e.message);
+                console.warn(`Could not read addedAt from ${baseModel}`, (e as Error).message);
             }
 
             vendors.add(d.vendor);
