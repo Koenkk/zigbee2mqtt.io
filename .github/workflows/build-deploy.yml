@@ -26,17 +26,13 @@ jobs:
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
-            # To prevent build from running out of memory
-            - name: Configure swap
+            - name: Restore webpack build cache
               if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
-              run: |
-                  sudo swapoff -a
-                  sudo rm -f /swapfile
-                  sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
-                  sudo chmod 600 /swapfile
-                  sudo mkswap /swapfile
-                  sudo swapon /swapfile
-                  sudo sysctl vm.swappiness=10
+              uses: actions/cache@v4
+              with:
+                  path: .cache
+                  key: webpack-cache-${{ hashFiles('pnpm-lock.yaml') }}
+                  restore-keys: webpack-cache-
 
             - name: Lint
               run: pnpm run pretty:check
