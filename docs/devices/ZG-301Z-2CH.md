@@ -1,6 +1,7 @@
 ---
 title: "HOBEIAN ZG-301Z-2CH control via MQTT"
 description: "Integrate your HOBEIAN ZG-301Z-2CH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-05-01T17:25:15
 pageClass: device-page
 ---
 
@@ -10,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TS0002_basic
+# HOBEIAN ZG-301Z-2CH
 
 |     |     |
 |-----|-----|
 | Model | ZG-301Z-2CH  |
-| Vendor  | [HOBEIAN ](/supported-devices/#v=HOBEIAN )  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | 2 gang switch module |
 | Exposes | switch (state), power_outage_memory, switch_type |
-| Picture | ![Tuya TS0002_basic](https://www.zigbee2mqtt.io/images/devices/ZG-301Z-2CH.png) |
+| Picture | ![HOBEIAN ZG-301Z-2CH](https://www.zigbee2mqtt.io/images/devices/ZG-301Z-2CH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

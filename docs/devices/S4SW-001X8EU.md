@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-001X8EU  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 1 Mini Gen 4 |
-| Exposes | switch (state), wifi_status, ip_address, dhcp_enabled, wifi_config |
+| Exposes | switch_type, switch (state), wifi_status, ip_address, dhcp_enabled, wifi_config, action |
 | Picture | ![Shelly S4SW-001X8EU](https://www.zigbee2mqtt.io/images/devices/S4SW-001X8EU.png) |
 
 
@@ -28,6 +28,9 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -36,6 +39,13 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Switch type (enum, sw1 endpoint)
+Switch input type.
+Value can be found in the published state on the `switch_type_sw1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_sw1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_sw1": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
@@ -77,4 +87,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `net_mask` (text): Subnet mask for the static IP configuration 
 - `gateway` (text): Default gateway address for static IP configuration 
 - `name_server` (text): Name server address for static IP configuration 
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_hold`.
 

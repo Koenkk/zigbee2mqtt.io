@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_PST_DUO_V1  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Water, gas smart pressure monitor with two sensors |
-| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, raw_temperature_cal, battery, voltage, battery_low, uptime, reading_interval, smart_sleep, config_report_enable, comparison_previous_data |
+| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, range, raw_temperature_cal, battery, voltage, battery_low, uptime, reading_interval, smart_sleep, config_report_enable, comparison_previous_data |
 | Picture | ![EFEKTA EFEKTA_PST_DUO_V1](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_DUO_V1.png) |
 
 
@@ -83,6 +83,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-8192` and the maximum value is `8192`.
 The unit of this value is `raw unit`.
 
+### Range (enum, 1 endpoint)
+Measuring range of the first sensor.
+Value can be found in the published state on the `range_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"range_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range_1": NEW_VALUE}`.
+The possible values are: `0-10 Bar`, `0-16 Bar`.
+
 ### Pressure (numeric, 2 endpoint)
 Measured pressure value оf the second sensor in kPa.
 Value can be found in the published state on the `pressure_2` property.
@@ -122,6 +129,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_cal_2": NEW_VALUE}`.
 The minimal value is `-8192` and the maximum value is `8192`.
 The unit of this value is `raw unit`.
+
+### Range (enum, 2 endpoint)
+Measuring range of the first sensor.
+Value can be found in the published state on the `range_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"range_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range_2": NEW_VALUE}`.
+The possible values are: `0-10 Bar`, `0-16 Bar`.
 
 ### Battery (numeric)
 Remaining battery in %.

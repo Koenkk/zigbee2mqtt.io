@@ -142,7 +142,6 @@ Correct endpoint selection is critical due to the multi-endpoint structure of th
 - Endpoint numbering directly reflects the physical layout of connected IHC modules (detected at startup when not joined to a network).
 - Bus A and Bus B are separated in endpoint numbering.
 - The device is designed for flexible integration using both Zigbee bindings and automation logic.
-
 <!-- Notes END: Do not edit below this line -->
 
 

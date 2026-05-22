@@ -1,4 +1,7 @@
-export function sengledBulbs(definition, exposes) {
+import {Definition} from 'zigbee-herdsman-converters';
+import {Expose} from 'zigbee-herdsman-converters/lib/types';
+
+export function sengledBulbs(definition: Definition, exposes: Expose[]) {
     if (definition.vendor === 'Sengled' && exposes.find((e) => e.type === 'light')) {
         return `
 ## Device Type

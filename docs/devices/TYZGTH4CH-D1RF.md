@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TYZGTH4CH-D1RF  |
 | Vendor  | [Mumubiz](/supported-devices/#v=Mumubiz)  |
 | Description | 4 channel changeover contact with temperature and humidity sensing |
-| Exposes | switch (state), countdown, power_on_behavior, temperature, humidity |
+| Exposes | switch (state), countdown, power_on_behavior, inching_control_set, temperature, humidity |
 | Picture | ![Mumubiz TYZGTH4CH-D1RF](https://www.zigbee2mqtt.io/images/devices/TYZGTH4CH-D1RF.png) |
 
 
@@ -135,6 +135,18 @@ Value can be found in the published state on the `power_on_behavior_l4` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l4": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l4": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
+
+### Inching control set (composite)
+Device Inching function Settings. The device will automatically turn off after each turn on for a specified period of time..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control_1": VALUE, "inching_time_1": VALUE, "inching_control_2": VALUE, "inching_time_2": VALUE, "inching_control_3": VALUE, "inching_time_3": VALUE, "inching_control_4": VALUE, "inching_time_4": VALUE}}`
+- `inching_control` (binary): Enable/disable inching function for endpoint 1. allowed values: `ENABLE` or `DISABLE`
+- `inching_time` (numeric): Delay time for executing a inching action for endpoint 1. min value is 1, max value is 65535, unit is seconds
+- `inching_control` (binary): Enable/disable inching function for endpoint 2. allowed values: `ENABLE` or `DISABLE`
+- `inching_time` (numeric): Delay time for executing a inching action for endpoint 2. min value is 1, max value is 65535, unit is seconds
+- `inching_control` (binary): Enable/disable inching function for endpoint 3. allowed values: `ENABLE` or `DISABLE`
+- `inching_time` (numeric): Delay time for executing a inching action for endpoint 3. min value is 1, max value is 65535, unit is seconds
+- `inching_control` (binary): Enable/disable inching function for endpoint 4. allowed values: `ENABLE` or `DISABLE`
+- `inching_time` (numeric): Delay time for executing a inching action for endpoint 4. min value is 1, max value is 65535, unit is seconds
 
 ### Temperature (numeric)
 Measured temperature value.

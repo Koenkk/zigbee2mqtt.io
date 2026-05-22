@@ -11,6 +11,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
 
             - name: Setup pnpm
               uses: pnpm/action-setup@v4
@@ -23,6 +25,14 @@ jobs:
 
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
+
+            - name: Restore webpack build cache
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
+              uses: actions/cache@v4
+              with:
+                  path: .cache
+                  key: webpack-cache-${{ hashFiles('pnpm-lock.yaml') }}
+                  restore-keys: webpack-cache-
 
             - name: Lint
               run: pnpm run pretty:check

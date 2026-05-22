@@ -1,4 +1,6 @@
-export function ikeaKajplats(definition) {
+import {Definition} from 'zigbee-herdsman-converters';
+
+export function ikeaKajplats(definition: Definition) {
     if (definition.vendor === 'IKEA' && definition.description.includes('KAJPLATS')) {
         const cycles = definition.description.includes('clear') ? '15' : '12';
         return `

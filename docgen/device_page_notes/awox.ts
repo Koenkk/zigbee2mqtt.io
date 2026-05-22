@@ -1,4 +1,6 @@
-export function awox(definition) {
+import {Definition} from 'zigbee-herdsman-converters';
+
+export function awox(definition: Definition) {
     if (definition.vendor.toLowerCase() === 'awox') {
         return `
 ## Warning: degrades network performance
