@@ -1,2 +1,0 @@
-<!-- Notes BEGIN -->
-<!-- Notes END -->
