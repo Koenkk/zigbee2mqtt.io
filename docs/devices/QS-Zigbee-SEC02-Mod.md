@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QS-Zigbee-SEC02-Mod  |
 | Vendor  | [Svetomaniya](/supported-devices/#v=Svetomaniya)  |
 | Description | Smart light switch module 2 gang |
-| Exposes | switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, action |
+| Exposes | switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, scene_id, group_id, min_level, max_level, action |
 | Picture | ![Svetomaniya QS-Zigbee-SEC02-Mod](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC02-Mod.png) |
 
 
@@ -36,6 +36,13 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
 
 
 ## Exposes
@@ -77,50 +84,106 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Switch actions (enum, 1 endpoint)
-Actions switch 1.
+Actions switch.
 Value can be found in the published state on the `switch_actions_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_1": NEW_VALUE}`.
 The possible values are: `off`, `on`.
 
 ### Switch actions (enum, 2 endpoint)
-Actions switch 2.
+Actions switch.
 Value can be found in the published state on the `switch_actions_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_2": NEW_VALUE}`.
 The possible values are: `off`, `on`.
 
 ### Switch type (enum, 1 endpoint)
-Switch 1 type.
+Switch type.
 Value can be found in the published state on the `switch_type_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_1": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`, `brightness_level_up`, `brightness_level_down`, `scene`.
 
 ### Switch type (enum, 2 endpoint)
-Switch 2 type.
+Switch type.
 Value can be found in the published state on the `switch_type_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_2": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`, `brightness_level_up`, `brightness_level_down`, `scene`.
 
 ### Operation mode (enum, 1 endpoint)
-Relay 1 decoupled.
+Relay decoupled.
 Value can be found in the published state on the `operation_mode_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_1": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
 ### Operation mode (enum, 2 endpoint)
-Relay 2 decoupled.
+Relay decoupled.
 Value can be found in the published state on the `operation_mode_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_2": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
+### Scene id (numeric, 1 endpoint)
+Scene ID.
+Value can be found in the published state on the `scene_id_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"scene_id_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_id_1": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `255`.
+
+### Scene id (numeric, 2 endpoint)
+Scene ID.
+Value can be found in the published state on the `scene_id_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"scene_id_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_id_2": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `255`.
+
+### Group id (numeric, 1 endpoint)
+Group ID for scenes.
+Value can be found in the published state on the `group_id_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"group_id_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_1": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65527`.
+
+### Group id (numeric, 2 endpoint)
+Group ID for scenes.
+Value can be found in the published state on the `group_id_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"group_id_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_2": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65527`.
+
+### Min level (numeric, 1 endpoint)
+Minimum level when decreasing.
+Value can be found in the published state on the `min_level_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_level_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_level_1": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+
+### Min level (numeric, 2 endpoint)
+Minimum level when decreasing.
+Value can be found in the published state on the `min_level_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_level_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_level_2": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+
+### Max level (numeric, 1 endpoint)
+Maximum level when increasing.
+Value can be found in the published state on the `max_level_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_level_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_level_1": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+
+### Max level (numeric, 2 endpoint)
+Maximum level when increasing.
+Value can be found in the published state on the `max_level_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_level_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_level_2": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on_1`, `on_2`, `off_1`, `off_2`, `toggle_1`, `toggle_2`, `hold_1`, `hold_2`, `single_1`, `single_2`, `double_1`, `double_2`, `triple_1`, `triple_2`, `quadruple_1`, `quadruple_2`, `quintuple_1`, `quintuple_2`, `release_1`, `release_2`.
+The possible values are: `on_1`, `on_2`, `off_1`, `off_2`, `toggle_1`, `toggle_2`, `hold_1`, `hold_2`, `single_1`, `single_2`, `double_1`, `double_2`, `triple_1`, `triple_2`, `quadruple_1`, `quadruple_2`, `quintuple_1`, `quintuple_2`, `release_1`, `release_2`, `brightness_move_to_level_1`, `brightness_move_to_level_2`, `brightness_move_up_1`, `brightness_move_up_2`, `brightness_move_down_1`, `brightness_move_down_2`, `brightness_step_up_1`, `brightness_step_up_2`, `brightness_step_down_1`, `brightness_step_down_2`, `brightness_stop_1`, `brightness_stop_2`, `recall_1`, `recall_2`, `store_1`, `store_2`, `add_1`, `add_2`, `remove_1`, `remove_2`, `remove_all_1`, `remove_all_2`.
 

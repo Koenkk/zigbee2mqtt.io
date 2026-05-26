@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-001P8EU  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 1PM Mini Gen 4 |
-| Exposes | switch_type, switch (state), power, voltage, ac_frequency, current, energy, produced_energy, switch_mode, wifi_status, ip_address, dhcp_enabled, wifi_config, action |
+| Exposes | switch_type, switch (state), power, voltage, ac_frequency, current, energy, produced_energy, wifi_status, ip_address, dhcp_enabled, wifi_config, action |
 | Picture | ![Shelly S4SW-001P8EU](https://www.zigbee2mqtt.io/images/devices/S4SW-001P8EU.png) |
 
 
@@ -124,13 +124,6 @@ Value can be found in the published state on the `produced_energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"produced_energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Switch mode (enum, sw1 endpoint)
-Switch input mode.
-Value can be found in the published state on the `switch_mode_sw1` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_sw1": NEW_VALUE}`.
-The possible values are: `follow`, `flip`, `detached`, `cycle`, `activation`.
 
 ### Wi-Fi status (text)
 Current connection status.
