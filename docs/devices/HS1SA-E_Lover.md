@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smoke detector |
 | Exposes | battery, identify, smoke, battery_low, test, trouble, trigger_selftest, temporary_mute, siren_for_automation_only, reported_packages, rejoin_count, reboot_count |
-| Picture | ![Heiman HS1SA-E Lover](https://www.zigbee2mqtt.io/images/devices/HS1SA-E-Lover.png) |
+| Picture | ![Heiman HS1SA-E Lover](https://www.zigbee2mqtt.io/images/devices/HS1SA-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
