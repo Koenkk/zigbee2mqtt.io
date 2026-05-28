@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-002P16EU-COVER  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 2PM Gen4 (Cover mode) |
-| Exposes | switch_type, cover (state, position, tilt), switch_mode, wifi_status, ip_address, dhcp_enabled, wifi_config, action |
+| Exposes | switch_type, cover (state, position, tilt), wifi_status, ip_address, dhcp_enabled, wifi_config, action |
 | Picture | ![Shelly S4SW-002P16EU-COVER](https://www.zigbee2mqtt.io/images/devices/S4SW-002P16EU-COVER.png) |
 
 
@@ -83,20 +83,6 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt": VALUE}` where `VALUE` is a number between `0` and `100`.
-
-### Switch mode (enum, sw1 endpoint)
-Switch input mode.
-Value can be found in the published state on the `switch_mode_sw1` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_sw1": NEW_VALUE}`.
-The possible values are: `follow`, `flip`, `detached`, `cycle`, `activation`.
-
-### Switch mode (enum, sw2 endpoint)
-Switch input mode.
-Value can be found in the published state on the `switch_mode_sw2` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_sw2": NEW_VALUE}`.
-The possible values are: `follow`, `flip`, `detached`, `cycle`, `activation`.
 
 ### Wi-Fi status (text)
 Current connection status.

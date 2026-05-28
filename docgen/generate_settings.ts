@@ -1,4 +1,4 @@
-import type {JSONSchema7} from 'json-schema';
+import type {JSONSchema7, JSONSchema7Definition} from 'json-schema';
 import {generatePage} from './utils';
 
 const getDisplayValue = (
@@ -128,7 +128,7 @@ const groupProperties = (
     properties: JSONSchema7['properties'],
     parents: string[] = [],
     required: string[] = [],
-    definitions: Record<string, JSONSchema7> = {},
+    definitions: {[key: string]: JSONSchema7Definition} = {},
 ): string[] => {
     const elements: string[] = [];
     const nestedElements: string[] = [];
@@ -177,7 +177,7 @@ ${groupProperties(property.properties, newParents, property.required, definition
                 }
             } else {
                 if (parents.length === 0 && (key === 'devices' || key === 'groups')) {
-                    const definition = definitions[key.slice(0, -1)];
+                    const definition = definitions[key.slice(0, -1)] as JSONSchema7;
 
                     if (key === 'devices') {
                         newParents.push('"0x1234567812345678"');
@@ -205,7 +205,7 @@ export default async function generate_settings() {
     console.log(`Generating settings`);
 
     const schemaRsp = await fetch('https://github.com/Koenkk/zigbee2mqtt/raw/refs/heads/dev/lib/util/settings.schema.json');
-    const schemaJson = await schemaRsp.json();
+    const schemaJson = (await schemaRsp.json()) as JSONSchema7;
 
     const result = `---
 sidebarDepth: 1
