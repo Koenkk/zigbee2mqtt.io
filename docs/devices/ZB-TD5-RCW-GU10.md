@@ -28,6 +28,14 @@ pageClass: device-page
 ### Pairing
 Power cycle three times: on-off, on-off, on-off, ON >> [up to 5 seconds] >>> starts flashing.
 A gap of 3+ seconds between off and on should be applied so the power drains out.
+
+### Issues
+
+The pairing sequence is triggered too easily, for example by noisy power (internal or external). As a result, **the device may occasionally "reset" on its own**, or with a single power-on cycle.  
+
+The device keeps the network key until it's overwritten with a new one. So even if it was "reset", the device behaves like it never left the network. However, Zigbee2MQTT and the routers would have removed it from their tables.
+
+An [external extension](https://github.com/Koenkk/zigbee-herdsman/issues/1648#issuecomment-4582443523) can be used to keep it in the Zigbee2MQTT database. But ideally, the misbehaving devices should be avoided, in order to keep a healthy and secure network.
 <!-- Notes END: Do not edit below this line -->
 
 
