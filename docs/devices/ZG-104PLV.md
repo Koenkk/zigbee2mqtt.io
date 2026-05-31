@@ -31,6 +31,8 @@ Uses 1 x CR2450 battery
 ### Issues
 #### Network spam
 This device may generate very frequent Zigbee traffic (multiple messages per second), even when no sensor state changes occur. This can result in significantly reduced battery life (a few weeks).
+#### Low light sensor sensitivity
+The device uses the PIR sensor area as its light sensor and reports `lux=0` even when the environment is not yet dark (`lux>1000` on other sensors in the same location). This can be improved slightly by drilling a small hole, around 1 mm, in the center of the opaque Fresnel lens dome. However, even with this modification, the device is still not suitable for locations where you want to trigger lights only when a hallway is genuinely dark.
 <!-- Notes END: Do not edit below this line -->
 
 
