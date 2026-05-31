@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![VSmart HS-SW200ZB-VNM](https://www.zigbee2mqtt.io/images/devices/HS-SW200ZB-VNM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

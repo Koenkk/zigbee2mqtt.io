@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hive FWGU10Bulb02UK](https://www.zigbee2mqtt.io/images/devices/FWGU10Bulb02UK.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

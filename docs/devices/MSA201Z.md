@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Merrytek MSA201Z](https://www.zigbee2mqtt.io/images/devices/MSA201Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

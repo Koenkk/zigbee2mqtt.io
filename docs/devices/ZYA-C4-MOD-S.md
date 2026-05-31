@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Yale ZYA-C4-MOD-S](https://www.zigbee2mqtt.io/images/devices/ZYA-C4-MOD-S.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

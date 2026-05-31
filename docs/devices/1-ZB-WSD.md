@@ -1,7 +1,7 @@
 ---
-title: "Scimagic TYONOFFTS control via MQTT"
-description: "Integrate your Scimagic TYONOFFTS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-06-01T17:54:42
+title: "Scimagic 1-ZB-WSD control via MQTT"
+description: "Integrate your Scimagic 1-ZB-WSD via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-05-31T19:17:59
 pageClass: device-page
 ---
 
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Scimagic TYONOFFTS
+# Scimagic 1-ZB-WSD
 
 |     |     |
 |-----|-----|
-| Model | TYONOFFTS  |
+| Model | 1-ZB-WSD  |
 | Vendor  | [Scimagic](/supported-devices/#v=Scimagic)  |
-| Description | Smart switch with temperature sensor |
-| Exposes | switch (state), temperature, temperature_calibration, temperature_range, auto_work, temperature_target, mode, delay, delay_time |
-| Picture | ![Scimagic TYONOFFTS](https://www.zigbee2mqtt.io/images/devices/TYONOFFTS.png) |
+| Description | Smart temperature and humidity switch (thermostat/hygrostat) |
+| Exposes | switch (state), temperature, temperature_calibration, auto_work, temperature_target, temperature_range, mode, delay, delay_time |
+| Picture | ![Scimagic 1-ZB-WSD](https://www.zigbee2mqtt.io/images/devices/1-ZB-WSD.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -42,7 +43,7 @@ pageClass: device-page
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-It's not possible to read (`/get`) this value.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -56,14 +57,6 @@ Value can be found in the published state on the `temperature_calibration` prope
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
-The unit of this value is `°C`.
-
-### Temperature range (numeric)
-Keep the temperature in a range.
-Value can be found in the published state on the `temperature_range` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_range": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `°C`.
 
 ### Auto work (binary)
@@ -81,12 +74,20 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-100` and the maximum value is `100`.
 The unit of this value is `°C`.
 
+### Temperature range (numeric)
+Keep the temperature in a range.
+Value can be found in the published state on the `temperature_range` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_range": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10`.
+The unit of this value is `°C`.
+
 ### Mode (enum)
 Work mode.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
-The possible values are: `Heating`, `Cooling`.
+The possible values are: `heating`, `cooling`.
 
 ### Delay (binary)
 Switch delay time mode.

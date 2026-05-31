@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZMR4_1](https://www.zigbee2mqtt.io/images/devices/ZMR4_1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

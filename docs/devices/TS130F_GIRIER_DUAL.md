@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Girier TS130F_GIRIER_DUAL](https://www.zigbee2mqtt.io/images/devices/TS130F_GIRIER_DUAL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

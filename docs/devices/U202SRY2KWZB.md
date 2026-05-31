@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Schneider Electric U202SRY2KWZB](https://www.zigbee2mqtt.io/images/devices/U202SRY2KWZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

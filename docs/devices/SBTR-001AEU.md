@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shelly SBTR-001AEU](https://www.zigbee2mqtt.io/images/devices/SBTR-001AEU.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

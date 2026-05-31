@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara H1-EU](https://www.zigbee2mqtt.io/images/devices/H1-EU.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

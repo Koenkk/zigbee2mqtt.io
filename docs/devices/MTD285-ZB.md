@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Wenzhi MTD285-ZB](https://www.zigbee2mqtt.io/images/devices/MTD285-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

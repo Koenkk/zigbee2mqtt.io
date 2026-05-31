@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya SDM01V1-GT](https://www.zigbee2mqtt.io/images/devices/SDM01V1-GT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

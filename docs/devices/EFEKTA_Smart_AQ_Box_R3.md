@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_Smart_AQ_Box_R3](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Smart_AQ_Box_R3.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

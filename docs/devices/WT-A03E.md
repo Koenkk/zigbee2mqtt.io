@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | WT-A03E  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Radiator thermostat W600 |
-| Exposes | battery, valve_alarm, window_open, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, preset), temperature_setpoint_hold_duration, override_active, sensor, external_temperature_input, calibrate, calibrated, temperature_control_abnormal_notification, display_flip, window_detection, child_lock, anti_freeze_temperature, preset_home_temperature, preset_away_temperature, preset_sleep_temperature, preset_vacation_temperature, preset_wind_down_temperature, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, schedule_upload_status, save_schedule, clear_schedule, position, identify |
+| Exposes | battery, valve_alarm, window_open, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state, preset), temperature_setpoint_hold_duration, override_active, sensor, external_temperature_input, calibrate, calibrated, temperature_control_abnormal_notification, display_flip, window_detection, child_lock, anti_freeze_temperature, preset_home_temperature, preset_away_temperature, preset_sleep_temperature, preset_vacation_temperature, preset_wind_down_temperature, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, schedule_upload_status, save_schedule, clear_schedule, position, identify |
 | Picture | ![Aqara WT-A03E](https://www.zigbee2mqtt.io/images/devices/WT-A03E.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -70,11 +71,12 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` window open is ON, if `false` OFF.
 
 ### Climate 
-This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`, `system_mode`, `preset`.
+This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`, `system_mode`, `running_state`, `preset`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `auto`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `preset`: Selected preset scene. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `home`, `away`, `sleep`, `vacation`, `wind_down`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
+- `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
 
 ### Manual Override Duration (numeric)

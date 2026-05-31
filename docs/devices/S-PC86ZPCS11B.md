@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![BSEED S-PC86ZPCS11B](https://www.zigbee2mqtt.io/images/devices/S-PC86ZPCS11B.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

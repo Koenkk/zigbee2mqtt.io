@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shelly SBRC-005B-B](https://www.zigbee2mqtt.io/images/devices/SBRC-005B-B.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

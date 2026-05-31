@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Bosch BSEN-W](https://www.zigbee2mqtt.io/images/devices/BSEN-W.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

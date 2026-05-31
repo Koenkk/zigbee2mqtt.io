@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![JIAWEN K2RGBW01](https://www.zigbee2mqtt.io/images/devices/K2RGBW01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![eWeLink ZB-SW05](https://www.zigbee2mqtt.io/images/devices/ZB-SW05.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

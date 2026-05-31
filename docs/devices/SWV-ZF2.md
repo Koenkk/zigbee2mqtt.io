@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF SWV-ZF2](https://www.zigbee2mqtt.io/images/devices/SWV-ZF2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

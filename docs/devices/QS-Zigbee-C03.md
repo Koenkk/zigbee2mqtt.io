@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lonsonho QS-Zigbee-C03](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-C03.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

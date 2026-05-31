@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya AETZ01_AC](https://www.zigbee2mqtt.io/images/devices/AETZ01_AC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

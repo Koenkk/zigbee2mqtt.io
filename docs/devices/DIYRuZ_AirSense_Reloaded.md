@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA DIYRuZ_AirSense_Reloaded](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_AirSense_Reloaded.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![MAZDA MZTE1Z](https://www.zigbee2mqtt.io/images/devices/MZTE1Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 You've to open the device and switch the internal switch to choose the radiator type to control : || No Wire Pilot || 4 Wire Pilot Signal (Comfort,Eco,AntiFrost,Standby) || 6 Wire Pilot Signal (Comfort,Eco,AntiFrost,StandBy,Comfort-1,Comfort-2) >
 <!-- Notes END: Do not edit below this line -->

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![M-ELEC ML-ST-R200](https://www.zigbee2mqtt.io/images/devices/ML-ST-R200.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

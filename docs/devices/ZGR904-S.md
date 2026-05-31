@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Envilar ZGR904-S](https://www.zigbee2mqtt.io/images/devices/ZGR904-S.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shenzhen Homa HLD812-Z-SC](https://www.zigbee2mqtt.io/images/devices/HLD812-Z-SC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

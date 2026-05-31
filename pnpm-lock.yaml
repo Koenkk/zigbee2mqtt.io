@@ -100,8 +100,8 @@ importers:
         specifier: 2.0.0-rc.30
         version: 2.0.0-rc.30(@vue/compiler-sfc@3.5.34)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@25.9.1)(@vue/compiler-sfc@3.5.34)(esbuild@0.28.0)(jiti@2.7.0)(sass@1.100.0)(terser@5.47.1)(typescript@6.0.3)(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.34)(esbuild@0.28.0)(tslib@2.8.1)(typescript@6.0.3))(typescript@6.0.3)(vue@3.5.34(typescript@6.0.3))
       zigbee-herdsman-converters:
-        specifier: 26.54.0
-        version: 26.54.0
+        specifier: 26.60.0
+        version: 26.60.0
 
 packages:
 
@@ -1548,9 +1548,6 @@ packages:
   body-parser@1.20.5:
     resolution: {integrity: sha512-3grm+/2tUOvu2cjJkvsIxrv/wVpfXQW4PsQHYm7yk4vfpu7Ekl6nEsYBoJUL6qDwZUx8wUhQ8tR2qz+ad9c9OA==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
-
-  bonjour-service@1.3.0:
-    resolution: {integrity: sha512-3YuAUiSkWykd+2Azjgyxei8OWf8thdn8AITIog2M4UICzoqfjlqr64WIjEXZllf/W6vK1goqleSR6brGomxQqA==}
 
   bonjour-service@1.4.0:
     resolution: {integrity: sha512-fGQtj1qdR9vIKjFiWPQd52qIqwjaYqhcI40JEiDuvlZ86E7ZBPBwY9fPgHy9r2rYGIjiRfctNPYz6OQU73ww2w==}
@@ -3399,11 +3396,6 @@ packages:
     resolution: {integrity: sha512-ftnu3TW4+3eBfLRFnDEkzGxSF/10BJBkaLJuBHZX0kiPS7bRdlpZGu6YGt4KngMkdTwJE6MbjavFpqHvqVt+Ew==}
     engines: {node: '>=18'}
 
-  semver@7.8.0:
-    resolution: {integrity: sha512-AcM7dV/5ul4EekoQ29Agm5vri8JNqRyj39o0qpX6vDF2GZrtutZl5RwgD1XnZjiTAfncsJhMI48QQH3sN87YNA==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.8.1:
     resolution: {integrity: sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg==}
     engines: {node: '>=10'}
@@ -4008,8 +4000,8 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@26.54.0:
-    resolution: {integrity: sha512-BFrpcDJgpzUKZrBEiU9YYn4qe16d3MiMbpN0kURpq1VQRMLROJgYfB2ih9IxlBtUW7JZaH4BkPObQ+o5ThEstg==}
+  zigbee-herdsman-converters@26.60.0:
+    resolution: {integrity: sha512-WoPcbrVFHoxtjwCmQWqJsbJdrsQrZkDFe48l0eTAGhOjBZzYsOAaTgbJ7bx+Op2izqvD0q59/7t9S3VywTJZRg==}
     engines: {node: '>=20.15.0'}
 
   zigbee-herdsman@10.1.0:
@@ -5767,16 +5759,10 @@ snapshots:
       - supports-color
     optional: true
 
-  bonjour-service@1.3.0:
-    dependencies:
-      fast-deep-equal: 3.1.3
-      multicast-dns: 7.2.5
-
   bonjour-service@1.4.0:
     dependencies:
       fast-deep-equal: 3.1.3
       multicast-dns: 7.2.5
-    optional: true
 
   boolbase@1.0.0: {}
 
@@ -7918,10 +7904,7 @@ snapshots:
       pkijs: 3.4.0
     optional: true
 
-  semver@7.8.0: {}
-
-  semver@7.8.1:
-    optional: true
+  semver@7.8.1: {}
 
   send@0.19.2:
     dependencies:
@@ -8603,10 +8586,10 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  zigbee-herdsman-converters@26.54.0:
+  zigbee-herdsman-converters@26.60.0:
     dependencies:
       iconv-lite: 0.7.2
-      semver: 7.8.0
+      semver: 7.8.1
       zigbee-herdsman: 10.1.0
     transitivePeerDependencies:
       - supports-color
@@ -8617,7 +8600,7 @@ snapshots:
       '@serialport/bindings-cpp': 13.0.1
       '@serialport/parser-delimiter': 13.0.0
       '@serialport/stream': 13.0.0
-      bonjour-service: 1.3.0
+      bonjour-service: 1.4.0
       debounce: 3.0.0
       fast-deep-equal: 3.1.3
       slip: 1.0.2

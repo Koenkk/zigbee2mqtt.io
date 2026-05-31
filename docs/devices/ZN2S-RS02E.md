@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZN2S-RS02E](https://www.zigbee2mqtt.io/images/devices/ZN2S-RS02E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![BSEED EC-GL86ZPCRS31](https://www.zigbee2mqtt.io/images/devices/EC-GL86ZPCRS31.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![zunzunbee SSWZ8T](https://www.zigbee2mqtt.io/images/devices/SSWZ8T.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

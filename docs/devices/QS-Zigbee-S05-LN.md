@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lonsonho QS-Zigbee-S05-LN](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-S05-LN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LYTKO L101Ze-SBN](https://www.zigbee2mqtt.io/images/devices/L101Ze-SBN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

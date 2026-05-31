@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ronco RM28-LE](https://www.zigbee2mqtt.io/images/devices/RM28-LE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

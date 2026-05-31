@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara DWZTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/DWZTCGQ11LM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -34,7 +35,6 @@ After switching to Zigbee mode, enable permit join in Zigbee2MQTT and press and 
 ### Door/window calibration
 
 When using the device in door/window mode, the sensor should be calibrated after installation. Close the door or window, then press the device button 3 times. This sets the current position as the closed state.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -65,8 +65,8 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": NEW_VALUE}`.
 The possible values are: `door_window`, `object`.
 
-### Door window type (enum)
-Door/window type (applies when device_mode = door window).
+### Door/window type (enum)
+Door/window type (applies when device_mode = door_window).
 Value can be found in the published state on the `door_window_type` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"door_window_type": NEW_VALUE}`.
@@ -80,7 +80,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `10`.
 
 ### Report interval (numeric)
-Reporting interval in seconds.
+Reporting interval in seconds. Also drives the device's 802.15.4 poll cadence — lower values are more responsive but reduce battery life..
 Value can be found in the published state on the `report_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_interval": NEW_VALUE}`.
@@ -88,35 +88,35 @@ The minimal value is `5` and the maximum value is `300`.
 The unit of this value is `s`.
 
 ### Orientation detection (binary)
-Enable orientation event detection.
+Enable orientation event detection (object mode, requires device button press).
 Value can be found in the published state on the `orientation_detection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"orientation_detection": NEW_VALUE}`.
 If value equals `ON` orientation detection is ON, if `OFF` OFF.
 
 ### Movement detection (binary)
-Enable movement event detection.
+Enable movement event detection (object mode, requires device button press).
 Value can be found in the published state on the `movement_detection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movement_detection": NEW_VALUE}`.
 If value equals `ON` movement detection is ON, if `OFF` OFF.
 
 ### Fall detection (binary)
-Enable fall event detection.
+Enable fall event detection (object mode, requires device button press).
 Value can be found in the published state on the `fall_detection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fall_detection": NEW_VALUE}`.
 If value equals `ON` fall detection is ON, if `OFF` OFF.
 
 ### Vibration detection (binary)
-Enable vibration event detection.
+Enable vibration event detection (object mode, requires device button press).
 Value can be found in the published state on the `vibration_detection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_detection": NEW_VALUE}`.
 If value equals `ON` vibration detection is ON, if `OFF` OFF.
 
 ### Triple tap detection (binary)
-Enable triple-tap event detection.
+Enable triple-tap event detection (object mode, requires device button press).
 Value can be found in the published state on the `triple_tap_detection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"triple_tap_detection": NEW_VALUE}`.
@@ -135,7 +135,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
 ### Device posture (enum)
-Mounting orientation check — 'abnormal' when the sensor is incorrectly installed or needs calibration.
+Door/window mounting orientation check — 'abnormal' if the sensor is incorrectly installed or needs calibration.
 Value can be found in the published state on the `device_posture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `normal`, `abnormal`.
@@ -144,5 +144,5 @@ The possible values are: `normal`, `abnormal`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `triple_tap`, `movement`, `vibration`, `orientation`, `fall`.
+The possible values are: `triple_tap`, `movement`, `vibration`, `orientation`, `fall`, `static`.
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya YK-S03](https://www.zigbee2mqtt.io/images/devices/YK-S03.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

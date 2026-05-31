@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![TECH VNTH-T2_v2](https://www.zigbee2mqtt.io/images/devices/VNTH-T2_v2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

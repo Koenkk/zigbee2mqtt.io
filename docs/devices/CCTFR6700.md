@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Schneider Electric CCTFR6700](https://www.zigbee2mqtt.io/images/devices/CCTFR6700.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

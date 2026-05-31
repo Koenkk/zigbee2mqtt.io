@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya XZ-AKT101](https://www.zigbee2mqtt.io/images/devices/XZ-AKT101.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

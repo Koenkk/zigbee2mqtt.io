@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara KD-R01D](https://www.zigbee2mqtt.io/images/devices/KD-R01D.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Warning: Zigbee firmware flashing required

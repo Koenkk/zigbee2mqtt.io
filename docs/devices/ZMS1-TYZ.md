@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZMS1-TYZ](https://www.zigbee2mqtt.io/images/devices/ZMS1-TYZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

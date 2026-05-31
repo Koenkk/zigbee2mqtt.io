@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Girier ME168_Girier](https://www.zigbee2mqtt.io/images/devices/ME168_Girier.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Pairing

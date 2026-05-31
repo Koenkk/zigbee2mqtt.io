@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Smart Home Pty HGZB-07A](https://www.zigbee2mqtt.io/images/devices/HGZB-07A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

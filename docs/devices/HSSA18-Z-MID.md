@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![iLightsIn HSSA18-Z-MID](https://www.zigbee2mqtt.io/images/devices/HSSA18-Z-MID.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LoraTap SC500ZB](https://www.zigbee2mqtt.io/images/devices/SC500ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

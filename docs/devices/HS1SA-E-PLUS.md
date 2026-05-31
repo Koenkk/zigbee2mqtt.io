@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman HS1SA-E-PLUS](https://www.zigbee2mqtt.io/images/devices/HS1SA-E-PLUS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -111,7 +112,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `true` temporary mute is ON, if `false` OFF.
 
 ### Heartbeat indicator (binary)
-active green indicator.
+Enable/disable the indicator on product.
 Value can be found in the published state on the `heartbeat_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"heartbeat_indicator": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heartbeat_indicator": NEW_VALUE}`.

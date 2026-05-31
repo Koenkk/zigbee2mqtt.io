@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![YOKIS TLC2-UP](https://www.zigbee2mqtt.io/images/devices/TLC2-UP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 Press a button on the transmitter 5 times quickly.

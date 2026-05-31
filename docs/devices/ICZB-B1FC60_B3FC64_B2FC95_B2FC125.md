@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125](https://www.zigbee2mqtt.io/images/devices/ICZB-B1FC60-B3FC64-B2FC95-B2FC125.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
