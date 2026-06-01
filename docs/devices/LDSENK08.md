@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO LDSENK08](https://www.zigbee2mqtt.io/images/devices/LDSENK08.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Reset/pairing:

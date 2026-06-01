@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Intuis intuisradiator](https://www.zigbee2mqtt.io/images/devices/intuisradiator.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

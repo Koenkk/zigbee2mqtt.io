@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SNZB-02B  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, voltage, temperature, humidity, cold_threshold, hot_threshold, dry_threshold, damp_threshold, temperature_calibration, humidity_calibration, temperature_max_in_hour, temperature_min_in_hour, temperature_aver_in_hour, humidity_max_in_hour, humidity_min_in_hour, humidity_aver_in_hour, temperature_half_hour_records, humidity_half_hour_records |
+| Exposes | battery, temperature, humidity, temperature_calibration, humidity_calibration |
 | Picture | ![SONOFF SNZB-02B](https://www.zigbee2mqtt.io/images/devices/SNZB-02B.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -54,13 +55,6 @@ It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Voltage (numeric)
-Reported battery voltage in millivolts.
-Value can be found in the published state on the `voltage` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `mV`.
-
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
@@ -74,38 +68,6 @@ Value can be found in the published state on the `humidity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
 It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
-### Min comfort temperature (numeric)
-Minimum temperature that is considered comfortable. Note: wake up the device by pressing the button on the back before changing this value..
-Value can be found in the published state on the `cold_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cold_threshold": NEW_VALUE}`.
-The minimal value is `-10` and the maximum value is `60`.
-The unit of this value is `°C`.
-
-### Max comfort temperature (numeric)
-Maximum temperature that is considered comfortable. Note: wake up the device by pressing the button on the back before changing this value..
-Value can be found in the published state on the `hot_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hot_threshold": NEW_VALUE}`.
-The minimal value is `-10` and the maximum value is `60`.
-The unit of this value is `°C`.
-
-### Min comfort humidity (numeric)
-Minimum relative humidity that is considered comfortable. Note: wake up the device by pressing the button on the back before changing this value..
-Value can be found in the published state on the `dry_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dry_threshold": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `95`.
-The unit of this value is `%`.
-
-### Max comfort humidity (numeric)
-Maximum relative humidity that is considered comfortable. Note: wake up the device by pressing the button on the back before changing this value..
-Value can be found in the published state on the `damp_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"damp_threshold": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `95`.
 The unit of this value is `%`.
 
 ### Temperature calibration (numeric)
@@ -123,58 +85,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
-
-### Temperature max in hour (numeric)
-Maximum temperature recorded in the last hour.
-Value can be found in the published state on the `temperature_max_in_hour` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_max_in_hour": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Temperature min in hour (numeric)
-Minimum temperature recorded in the last hour.
-Value can be found in the published state on the `temperature_min_in_hour` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_min_in_hour": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Temperature aver in hour (numeric)
-Average temperature recorded in the last hour.
-Value can be found in the published state on the `temperature_aver_in_hour` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_aver_in_hour": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Humidity max in hour (numeric)
-Maximum humidity recorded in the last hour.
-Value can be found in the published state on the `humidity_max_in_hour` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_max_in_hour": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `%`.
-
-### Humidity min in hour (numeric)
-Minimum humidity recorded in the last hour.
-Value can be found in the published state on the `humidity_min_in_hour` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_min_in_hour": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `%`.
-
-### Humidity aver in hour (numeric)
-Average humidity recorded in the last hour.
-Value can be found in the published state on the `humidity_aver_in_hour` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_aver_in_hour": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `%`.
-
-### Temperature half hour records (list)
-Temperature readings reported during the last 30 minutes..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_half_hour_records": [{"value": VALUE, "time": VALUE}]}`
-- `value` (numeric) 
-- `time` (text): Time in local ISO format with timezone 
-
-### Humidity half hour records (list)
-Humidity readings reported during the last 30 minutes..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_half_hour_records": [{"value": VALUE, "time": VALUE}]}`
-- `value` (numeric) 
-- `time` (text): Time in local ISO format with timezone 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Third Reality 3RMS16BZ](https://www.zigbee2mqtt.io/images/devices/3RMS16BZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

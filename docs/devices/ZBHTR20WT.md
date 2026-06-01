@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nedis ZBHTR20WT](https://www.zigbee2mqtt.io/images/devices/ZBHTR20WT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 

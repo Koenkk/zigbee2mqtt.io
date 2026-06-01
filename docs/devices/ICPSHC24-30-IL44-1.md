@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![IKEA ICPSHC24-30-IL44-1](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-30-IL44-1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

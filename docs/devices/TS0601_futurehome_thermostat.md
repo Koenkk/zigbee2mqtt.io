@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Futurehome TS0601_futurehome_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_futurehome_thermostat.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher SR-ZG9001K2-DIM2](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K2-DIM2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

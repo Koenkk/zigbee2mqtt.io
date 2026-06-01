@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Legrand WNRR15/WNRR20](https://www.zigbee2mqtt.io/images/devices/WNRR15-WNRR20.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

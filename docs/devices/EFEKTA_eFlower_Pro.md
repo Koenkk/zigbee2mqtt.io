@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_eFlower_Pro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlower_Pro.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Plant Wattering Sensor with e-ink display 2.13](https://efektalab.com/eFlowerPro)

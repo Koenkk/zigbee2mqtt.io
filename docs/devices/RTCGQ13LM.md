@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara RTCGQ13LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ13LM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

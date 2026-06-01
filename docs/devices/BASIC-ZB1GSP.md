@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | BASIC-ZB1GSP  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart plug with power monitoring |
-| Exposes | switch (state), power_on_behavior, inching_control_set, network_indicator, power, current, voltage, total_energy_consumption, energy_today, energy_month, energy_yesterday, outlet_control_protect, ac_current_max_overload_enable, ac_current_max_overload, ac_voltage_max_overload_enable, ac_voltage_max_overload, ac_power_max_overload_enable, ac_power_max_overload, consumption_records, consumption_records_dst, read_consumption_records, clear_history |
+| Exposes | switch (state), power_on_behavior, inching_control_set, network_indicator, power, current, voltage, total_energy_consumption, energy_today, energy_month, energy_yesterday, total_energy, outlet_control_protect, ac_current_max_overload_enable, ac_current_max_overload, ac_voltage_max_overload_enable, ac_voltage_max_overload, ac_power_max_overload_enable, ac_power_max_overload, consumption_records, consumption_records_dst, read_consumption_records, clear_history |
 | Picture | ![SONOFF BASIC-ZB1GSP](https://www.zigbee2mqtt.io/images/devices/BASIC-ZB1GSP.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -130,6 +131,13 @@ The unit of this value is `kWh`.
 Electricity consumption for the yesterday.
 Value can be found in the published state on the `energy_yesterday` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_yesterday": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Total energy (numeric)
+Total energy used since the device started..
+Value can be found in the published state on the `total_energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"total_energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZTS-EUR-C](https://www.zigbee2mqtt.io/images/devices/ZTS-EUR-C.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

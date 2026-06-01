@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0726_multi_1_gang](https://www.zigbee2mqtt.io/images/devices/TS0726_multi_1_gang.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

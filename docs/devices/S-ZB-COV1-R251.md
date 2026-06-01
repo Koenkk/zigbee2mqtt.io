@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![smarli. S-ZB-COV1-R251](https://www.zigbee2mqtt.io/images/devices/S-ZB-COV1-R251.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

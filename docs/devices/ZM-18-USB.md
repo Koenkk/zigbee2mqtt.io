@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZM-18-USB](https://www.zigbee2mqtt.io/images/devices/ZM-18-USB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

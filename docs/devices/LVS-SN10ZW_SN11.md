@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LivingWise LVS-SN10ZW_SN11](https://www.zigbee2mqtt.io/images/devices/LVS-SN10ZW_SN11.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ajax Online ZB_A60_RGBCW](https://www.zigbee2mqtt.io/images/devices/ZB_A60_RGBCW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

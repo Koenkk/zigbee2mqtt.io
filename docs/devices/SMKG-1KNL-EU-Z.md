@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![UNSH SMKG-1KNL-EU-Z](https://www.zigbee2mqtt.io/images/devices/SMKG-1KNL-EU-Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -147,7 +148,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Countdown (numeric)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![KMPCIL KMPCIL_RES005](https://www.zigbee2mqtt.io/images/devices/KMPCIL_RES005.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

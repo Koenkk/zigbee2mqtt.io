@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LUX KN-Z-WH1-B04](https://www.zigbee2mqtt.io/images/devices/KN-Z-WH1-B04.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

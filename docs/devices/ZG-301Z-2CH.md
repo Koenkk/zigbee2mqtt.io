@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HOBEIAN ZG-301Z-2CH](https://www.zigbee2mqtt.io/images/devices/ZG-301Z-2CH.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

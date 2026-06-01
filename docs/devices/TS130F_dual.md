@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lonsonho TS130F_dual](https://www.zigbee2mqtt.io/images/devices/TS130F_dual.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 The output is only driven once the input signal is released, hence making this device difficult to work with non-momentary switches.

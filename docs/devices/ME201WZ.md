@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ME201WZ  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Water level sensor |
-| Exposes | liquid_level_percent, liquid_depth, liquid_state, max_set, mini_set, installation_height, liquid_depth_max |
+| Exposes | liquid_level_percent, liquid_depth, liquid_state, max_set, min_set, installation_height, liquid_depth_max |
 | Picture | ![Tuya ME201WZ](https://www.zigbee2mqtt.io/images/devices/ME201WZ.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -53,10 +54,10 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Liquid depth (numeric)
-Liquid Depth.
+Liquid depth.
 Value can be found in the published state on the `liquid_depth` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `m`.
+The unit of this value is `cm`.
 
 ### Liquid state (enum)
 Liquid level status.
@@ -65,18 +66,18 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `low`, `normal`, `high`.
 
 ### Max set (numeric)
-Liquid max percentage.
+Liquid maximum percentage.
 Value can be found in the published state on the `max_set` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_set": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Mini set (numeric)
+### Min set (numeric)
 Liquid minimal percentage.
-Value can be found in the published state on the `mini_set` property.
+Value can be found in the published state on the `min_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mini_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_set": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -85,14 +86,14 @@ Height from sensor to tank bottom.
 Value can be found in the published state on the `installation_height` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"installation_height": NEW_VALUE}`.
-The minimal value is `0.1` and the maximum value is `4`.
-The unit of this value is `m`.
+The minimal value is `10` and the maximum value is `4000`.
+The unit of this value is `mm`.
 
 ### Liquid depth max (numeric)
 Height from sensor to liquid level.
 Value can be found in the published state on the `liquid_depth_max` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"liquid_depth_max": NEW_VALUE}`.
-The minimal value is `0.1` and the maximum value is `4`.
-The unit of this value is `m`.
+The minimal value is `10` and the maximum value is `4000`.
+The unit of this value is `mm`.
 

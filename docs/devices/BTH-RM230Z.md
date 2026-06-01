@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Bosch BTH-RM230Z](https://www.zigbee2mqtt.io/images/devices/BTH-RM230Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the back of the cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.

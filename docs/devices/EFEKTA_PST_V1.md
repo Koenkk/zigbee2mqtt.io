@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_PST_V1](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_V1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

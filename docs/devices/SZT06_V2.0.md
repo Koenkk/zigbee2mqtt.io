@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya SZT06 V2.0](https://www.zigbee2mqtt.io/images/devices/SZT06-V2.0.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

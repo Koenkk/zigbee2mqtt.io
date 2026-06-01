@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart KES-606US-L4](https://www.zigbee2mqtt.io/images/devices/KES-606US-L4.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

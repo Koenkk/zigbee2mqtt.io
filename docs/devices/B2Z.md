@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nous B2Z](https://www.zigbee2mqtt.io/images/devices/B2Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

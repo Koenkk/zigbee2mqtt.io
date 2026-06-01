@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Novato ZIS-01P](https://www.zigbee2mqtt.io/images/devices/ZIS-01P.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

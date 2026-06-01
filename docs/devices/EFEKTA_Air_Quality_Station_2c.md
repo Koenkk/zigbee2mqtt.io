@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_Air_Quality_Station_2c](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Air_Quality_Station_2c.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

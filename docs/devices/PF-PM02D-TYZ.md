@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![IOTPerfect PF-PM02D-TYZ](https://www.zigbee2mqtt.io/images/devices/PF-PM02D-TYZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

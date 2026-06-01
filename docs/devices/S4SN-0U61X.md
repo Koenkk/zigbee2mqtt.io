@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shelly S4SN-0U61X](https://www.zigbee2mqtt.io/images/devices/S4SN-0U61X.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

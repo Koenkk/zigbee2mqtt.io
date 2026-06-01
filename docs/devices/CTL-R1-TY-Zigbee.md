@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya CTL-R1-TY-Zigbee](https://www.zigbee2mqtt.io/images/devices/CTL-R1-TY-Zigbee.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

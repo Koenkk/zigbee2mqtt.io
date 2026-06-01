@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![IKEA ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-30EU-IL-1-ICPSHC24-10EU-IL-2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pair
 To pair this device, push the little hole for a few seconds on the backside of the driver. The on/off sequence you might read about, doesn't work. However, the method suggested [here](https://www.reddit.com/r/tradfri/comments/yifty5/can_you_pair_the_tr%C3%A5dfri_driver_without_pressing/ixmkzd2/) might work for you.

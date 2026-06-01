@@ -8,6 +8,7 @@ import {generateExpose} from './device_page_exposes';
 import {generateOptions} from './device_page_options';
 import {devicesBaseDir, imageBaseDir, imageBaseUrl} from './constants';
 import {getNotes} from './device_page_notes';
+import {getWarnings} from './device_page_warnings';
 import {Definition} from 'zigbee-herdsman-converters';
 
 export function resolveDeviceFile(model: string) {
@@ -68,8 +69,16 @@ pageClass: device-page
 | Description | ${device.description} |
 | Exposes | ${exposesDescription} |
 | Picture | ![${device.vendor} ${device.model}](${image}) |
-${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor ? d.vendor + ' ' : ''}${d.model}`).join(', ')} |\n` : ''}
+${
+    device.whiteLabel
+        ? `| White-label | ${device.whiteLabel
+              .filter((d) => !('whiteLabelOf' in d) || d.whiteLabelOf === device.model)
+              .map((d) => `${d.vendor ? d.vendor + ' ' : ''}${d.model}`)
+              .join(', ')} |\n`
+        : ''
+}
 
+${getWarnings(device, exposes)}
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ${notes || '\n'}
 <!-- Notes END: Do not edit below this line -->

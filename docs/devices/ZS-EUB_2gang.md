@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZS-EUB_2gang](https://www.zigbee2mqtt.io/images/devices/ZS-EUB_2gang.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 This device does not act as a Zigbee router, even when the optional neutral connection is used. In addition the vendor does not provide a firmware update to enable the router functionality.
 

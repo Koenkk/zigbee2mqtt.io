@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_multifunction_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_multifunction_switch.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -67,11 +68,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Inching (composite)
-Inching (auto delay shut down) configuration.
+Inching configuration.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching": {"state": VALUE, "minutes": VALUE, "seconds": VALUE}}`
-- `state` (binary): Enable/disable inching allowed values: `ON` or `OFF`
-- `minutes` (numeric): Delay minutes max value is 1440, unit is m
-- `seconds` (numeric): Delay seconds max value is 59, unit is s
+- `state` (binary): Whenever the device is switched ON, switch it OFF automatically after the configured delay allowed values: `ON` or `OFF`
+- `minutes` (numeric): Minutes component of the delay duration max value is 1440, unit is m
+- `seconds` (numeric): Seconds component of the delay duration max value is 59, unit is s
 
 ### On color (enum)
 ON Color.

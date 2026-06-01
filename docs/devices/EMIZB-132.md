@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco EMIZB-132](https://www.zigbee2mqtt.io/images/devices/EMIZB-132.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

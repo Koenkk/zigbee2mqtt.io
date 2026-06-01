@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Smart9 S9ZGBRC01](https://www.zigbee2mqtt.io/images/devices/S9ZGBRC01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -1,6 +1,9 @@
 ---
 sidebarDepth: 1
 next: ../configuration/
+redirectFrom:
+    - /how_tos/how_to_secure_network.md
+    - /advanced/zigbee/03_secure_network.md
 ---
 
 # Securing the installation

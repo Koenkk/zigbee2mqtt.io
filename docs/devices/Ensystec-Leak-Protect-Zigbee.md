@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ensystec Ensystec-Leak-Protect-Zigbee](https://www.zigbee2mqtt.io/images/devices/Ensystec-Leak-Protect-Zigbee.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

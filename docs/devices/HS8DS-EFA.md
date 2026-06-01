@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman HS8DS-EFA](https://www.zigbee2mqtt.io/images/devices/HS8DS-EFA.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

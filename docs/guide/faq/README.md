@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 0
+redirectFrom: /information/FAQ.md
 ---
 
 # FAQ

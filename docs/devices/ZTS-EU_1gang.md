@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZTS-EU_1gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_1gang.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

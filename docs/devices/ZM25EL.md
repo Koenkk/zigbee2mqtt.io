@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZM25EL](https://www.zigbee2mqtt.io/images/devices/ZM25EL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

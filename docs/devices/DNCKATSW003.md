@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) DNCKATSW003](https://www.zigbee2mqtt.io/images/devices/DNCKATSW003.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/)

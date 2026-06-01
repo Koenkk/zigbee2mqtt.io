@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ERS-10TZBVK-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVK-AA.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

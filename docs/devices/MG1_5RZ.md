@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF MG1_5RZ](https://www.zigbee2mqtt.io/images/devices/MG1_5RZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

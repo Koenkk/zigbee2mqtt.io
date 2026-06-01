@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS004F_6_button](https://www.zigbee2mqtt.io/images/devices/TS004F_6_button.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_water_valve](https://www.zigbee2mqtt.io/images/devices/TS0601_water_valve.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 The pairing requires 19 steps, here's how to enter pairing mode: https://imgbox.com/LxxyRYiD
 <!-- Notes END: Do not edit below this line -->

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Frient SIRZB-112](https://www.zigbee2mqtt.io/images/devices/SIRZB-112.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

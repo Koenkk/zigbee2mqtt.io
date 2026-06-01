@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AVATTO ZBS16](https://www.zigbee2mqtt.io/images/devices/ZBS16.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

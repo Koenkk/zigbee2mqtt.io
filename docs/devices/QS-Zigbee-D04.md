@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LEDRON QS-Zigbee-D04](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D04.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

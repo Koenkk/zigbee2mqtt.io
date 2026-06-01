@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![MultIR MIR-MC100-E](https://www.zigbee2mqtt.io/images/devices/MIR-MC100-E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

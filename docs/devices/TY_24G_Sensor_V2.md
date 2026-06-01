@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![iHseno TY_24G_Sensor_V2](https://www.zigbee2mqtt.io/images/devices/TY_24G_Sensor_V2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

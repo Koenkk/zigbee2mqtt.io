@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SOMA SmartShades3](https://www.zigbee2mqtt.io/images/devices/SmartShades3.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

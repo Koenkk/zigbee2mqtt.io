@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Marmitek Push_LO](https://www.zigbee2mqtt.io/images/devices/Push_LO.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

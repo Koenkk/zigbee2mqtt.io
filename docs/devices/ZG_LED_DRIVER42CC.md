@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Envilar ZG_LED_DRIVER42CC](https://www.zigbee2mqtt.io/images/devices/ZG_LED_DRIVER42CC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HOBEIAN ZG-IR01](https://www.zigbee2mqtt.io/images/devices/ZG-IR01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 # Notes
 * If you have additional technical problems, please email Technical support at [szalarm@qq.com]

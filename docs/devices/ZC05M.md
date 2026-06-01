@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![GIDEALED ZC05M](https://www.zigbee2mqtt.io/images/devices/ZC05M.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
