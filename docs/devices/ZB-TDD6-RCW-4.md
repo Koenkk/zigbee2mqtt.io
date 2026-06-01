@@ -35,7 +35,7 @@ The pairing sequence is triggered too easily, for example by noisy power (intern
 
 The device keeps the network key until it's overwritten with a new one. So even if it was "reset", the device behaves like it never left the network. However, Zigbee2MQTT and the routers would have removed it from their tables.
 
-An [external extension](https://github.com/Koenkk/zigbee-herdsman/issues/1648#issuecomment-4582443523) can be used to keep it in the Zigbee2MQTT database. But ideally, the misbehaving devices should be avoided, in order to keep a healthy and secure network.
+An [external extension](https://github.com/Koenkk/zigbee2mqtt-user-extensions/tree/main/stable/ignore_device_leave) can be used to keep it in the Zigbee2MQTT database. But ideally, the misbehaving devices should be avoided, in order to keep a healthy and secure network.
 <!-- Notes END: Do not edit below this line -->
 
 
