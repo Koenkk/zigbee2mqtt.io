@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZY-ZHPS01-24G  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 24GHz mmWave human presence sensor |
-| Exposes | presence, illuminance, dis_current, presence_delay, movesensitivity, breathsensitivity, movedistance_max, movedistance_min, breathdistance_max, breathdistance_min, notice, move_noise, move_threshold, breath_noise, breath_threshold, self_learning, restore_factory_setting |
+| Exposes | presence, illuminance, dis_current, presence_delay, movesensitivity, breathsensitivity, movedistance_max, movedistance_min, breathdistance_max, breathdistance_min, self_learning, restore_factory_setting |
 | Picture | ![Tuya ZY-ZHPS01-24G](https://www.zigbee2mqtt.io/images/devices/ZY-ZHPS01-24G.png) |
 
 
@@ -32,6 +32,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds, set to -1 to disable. The value must be a number with a minimum value of `-1`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -110,31 +112,6 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
-### Notice (text)
-Notice.
-Value can be found in the published state on the `notice` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Move noise (text)
-Move noise (raw).
-Value can be found in the published state on the `move_noise` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Move threshold (text)
-Move threshold (raw).
-Value can be found in the published state on the `move_threshold` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Breath noise (text)
-Breath noise (raw).
-Value can be found in the published state on the `breath_noise` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Breath threshold (text)
-Breath threshold (raw).
-Value can be found in the published state on the `breath_threshold` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
 ### Self learning (enum)
 Self learning mode.
 Value can be found in the published state on the `self_learning` property.
@@ -143,7 +120,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `start`, `stop`.
 
 ### Restore factory setting (binary)
-Factory reset.
+Factory reset (behavior depends on firmware).
 Value can be found in the published state on the `restore_factory_setting` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restore_factory_setting": NEW_VALUE}`.
