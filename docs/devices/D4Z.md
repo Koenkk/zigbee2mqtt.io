@@ -29,7 +29,7 @@ pageClass: device-page
 ### Pairing
 
 **Press and hold the reset button for 5s** to put the device in pairing mode.  
-The yellow status LED will flash until it connects. 
+The yellow status LED will flash until it connects.
 <!-- Notes END: Do not edit below this line -->
 
 
