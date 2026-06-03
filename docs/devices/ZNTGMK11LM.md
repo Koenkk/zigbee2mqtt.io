@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara ZNTGMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNTGMK11LM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

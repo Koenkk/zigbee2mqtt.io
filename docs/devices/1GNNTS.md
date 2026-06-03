@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![WETEN 1GNNTS](https://www.zigbee2mqtt.io/images/devices/1GNNTS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

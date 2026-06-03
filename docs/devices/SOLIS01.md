@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Yale SOLIS01](https://www.zigbee2mqtt.io/images/devices/SOLIS01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

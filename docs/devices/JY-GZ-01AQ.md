@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Aqara JY-GZ-03AQ |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -42,7 +43,6 @@ The Conbee III may not detect state/alarm reports from the smoke detector! See [
 #### Regression in v21 firmware
 When smoke is detected under firmware version 21, the alarm may beep only once! The device automatically mutes itself, and needs unmuting.  
 The version has been [retracted](https://github.com/Koenkk/zigbee-OTA/tree/master/retracted-images) from Zigbee2MQTT. See [this issue](https://github.com/Koenkk/zigbee-OTA/issues/938#issuecomment-3706591752) for more information and downgrading steps.
-
 <!-- Notes END: Do not edit below this line -->
 
 

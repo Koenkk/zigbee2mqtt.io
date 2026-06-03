@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya U86KWF-ZPSJ](https://www.zigbee2mqtt.io/images/devices/U86KWF-ZPSJ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

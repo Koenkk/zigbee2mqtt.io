@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco MOSZB-130](https://www.zigbee2mqtt.io/images/devices/MOSZB-130.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

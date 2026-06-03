@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Candeo C-ZB-DM201-2G](https://www.zigbee2mqtt.io/images/devices/C-ZB-DM201-2G.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

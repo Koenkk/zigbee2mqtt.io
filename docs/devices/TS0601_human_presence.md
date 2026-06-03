@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![iHseno TS0601_human_presence](https://www.zigbee2mqtt.io/images/devices/TS0601_human_presence.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

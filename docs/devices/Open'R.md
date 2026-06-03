@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nexelec Open'R](https://www.zigbee2mqtt.io/images/devices/Open-R.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

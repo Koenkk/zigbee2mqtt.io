@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ekaza EKAT-T304Z](https://www.zigbee2mqtt.io/images/devices/EKAT-T304Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

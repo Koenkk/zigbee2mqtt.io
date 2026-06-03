@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | HS1RM-EF  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart relay module - 2 gang with neutral wire |
-| Exposes | switch (state), power_on_behavior, device_temperature, identify, switch_type, switch_actions |
+| Exposes | switch (state), power_on_behavior, device_temperature, identify, switch_type_l1, switch_type_l2, switch_actions_l1, switch_actions_l2 |
 | Picture | ![Heiman HS1RM-EF](https://www.zigbee2mqtt.io/images/devices/HS1RM-EF.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -91,31 +92,31 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
 
-### Switch type (enum, l1 endpoint)
-Switch input type for l1.
-Value can be found in the published state on the `switch_type_l1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1": NEW_VALUE}`.
+### Switch type l1 (enum, l1 endpoint)
+Switch input type for l1..
+Value can be found in the published state on the `switch_type_l1_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l1_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1_l1": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`.
 
-### Switch type (enum, l2 endpoint)
-Switch input type for l2.
-Value can be found in the published state on the `switch_type_l2` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l2": NEW_VALUE}`.
+### Switch type l2 (enum, l2 endpoint)
+Switch input type for l2..
+Value can be found in the published state on the `switch_type_l2_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l2_l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l2_l2": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`.
 
-### Switch actions (enum, l1 endpoint)
+### Switch actions l1 (enum, l1 endpoint)
 Actions for switch 1.
-Value can be found in the published state on the `switch_actions_l1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l1": NEW_VALUE}`.
+Value can be found in the published state on the `switch_actions_l1_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l1_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l1_l1": NEW_VALUE}`.
 The possible values are: `on_off`, `off_on`, `toggle`.
 
-### Switch actions (enum, l2 endpoint)
+### Switch actions l2 (enum, l2 endpoint)
 Actions for switch 2.
-Value can be found in the published state on the `switch_actions_l2` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l2": NEW_VALUE}`.
+Value can be found in the published state on the `switch_actions_l2_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l2_l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l2_l2": NEW_VALUE}`.
 The possible values are: `on_off`, `off_on`, `toggle`.
 

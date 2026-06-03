@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lincukoo E04CF-Z10T](https://www.zigbee2mqtt.io/images/devices/E04CF-Z10T.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

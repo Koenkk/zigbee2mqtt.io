@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart TS130F_ZEMISMART](https://www.zigbee2mqtt.io/images/devices/TS130F_ZEMISMART.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

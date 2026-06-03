@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ONOKOM OK-AC-H-DK-1-ZB-S-A](https://www.zigbee2mqtt.io/images/devices/OK-AC-H-DK-1-ZB-S-A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SmartThings 7ZA-A806ST-Q1R](https://www.zigbee2mqtt.io/images/devices/7ZA-A806ST-Q1R.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

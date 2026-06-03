@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart LXZB-12A](https://www.zigbee2mqtt.io/images/devices/LXZB-12A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

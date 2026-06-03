@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nue / 3A LXN56-TS27LX1.2](https://www.zigbee2mqtt.io/images/devices/LXN56-TS27LX1.2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

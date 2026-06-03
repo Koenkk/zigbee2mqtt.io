@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Leedarson ZA806SQ1TCF](https://www.zigbee2mqtt.io/images/devices/ZA806SQ1TCF.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

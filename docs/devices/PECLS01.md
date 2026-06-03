@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Perenio PECLS01](https://www.zigbee2mqtt.io/images/devices/PECLS01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

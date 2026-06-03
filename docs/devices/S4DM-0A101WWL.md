@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shelly S4DM-0A101WWL](https://www.zigbee2mqtt.io/images/devices/S4DM-0A101WWL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![MySmartHouse msh.ds18b20psm](https://www.zigbee2mqtt.io/images/devices/msh.ds18b20psm.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

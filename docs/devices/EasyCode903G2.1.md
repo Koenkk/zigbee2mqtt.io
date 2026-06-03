@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Datek Wireless EasyCode903G2.1 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZN-LC1E](https://www.zigbee2mqtt.io/images/devices/ZN-LC1E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

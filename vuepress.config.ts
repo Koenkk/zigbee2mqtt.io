@@ -2,10 +2,10 @@ import {navbar} from './navbar';
 import {sidebar} from './sidebar';
 import * as path from 'path';
 import {defaultTheme} from '@vuepress/theme-default';
-import webpackBundler from '@vuepress/bundler-webpack';
-import * as DefinePlugin from 'webpack/lib/DefinePlugin.js';
+import viteBundler from '@vuepress/bundler-vite';
 import {googleAnalyticsPlugin} from '@vuepress/plugin-google-analytics';
 import {sitemapPlugin} from '@vuepress/plugin-sitemap';
+import {redirectPlugin} from '@vuepress/plugin-redirect';
 import {docsearchPlugin} from '@vuepress/plugin-docsearch';
 import {registerComponentsPlugin} from '@vuepress/plugin-register-components';
 import {defineUserConfig} from 'vuepress';
@@ -122,27 +122,31 @@ const conf = defineUserConfig({
 
     debug: false,
 
-    bundler: webpackBundler({
-        scss: {
-            sassOptions: {
-                // ignore sass deprecation errors
-                quietDeps: true,
+    bundler: viteBundler({
+        viteOptions: {
+            define: {
+                __QUASAR_VERSION__: '"dev"',
+                __QUASAR_SSR__: false,
+                __QUASAR_SSR_SERVER__: false,
+                __QUASAR_SSR_CLIENT__: false,
+                __QUASAR_SSR_PWA__: false,
             },
-        },
-        chainWebpack: (chain) => {
-            chain.plugin('define-quasar').use(DefinePlugin.default, [
-                {
-                    __QUASAR_VERSION__: `'dev'`,
-                    __QUASAR_SSR__: false,
-                    __QUASAR_SSR_SERVER__: false,
-                    __QUASAR_SSR_CLIENT__: false,
-                    __QUASAR_SSR_PWA__: false,
+            css: {
+                preprocessorOptions: {
+                    scss: {
+                        // ignore sass deprecation warnings from dependencies
+                        quietDeps: true,
+                    },
+                    sass: {
+                        // ignore sass deprecation warnings from dependencies
+                        quietDeps: true,
+                    },
                 },
-            ]);
-            // Serialize cold modules to disk instead of keeping full graph in RAM
-            chain.cache({type: 'filesystem'});
-            // Terser holds ASTs for all pages simultaneously; disable to reduce peak heap
-            chain.optimization.minimize(false);
+            },
+            build: {
+                // Keep memory usage lower by skipping minification during docs build.
+                minify: false,
+            },
         },
     }),
 
@@ -178,6 +182,7 @@ const conf = defineUserConfig({
                 }
             },
         },
+        redirectPlugin(),
     ],
 });
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hej GLSK3ZB-1712](https://www.zigbee2mqtt.io/images/devices/GLSK3ZB-1712.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

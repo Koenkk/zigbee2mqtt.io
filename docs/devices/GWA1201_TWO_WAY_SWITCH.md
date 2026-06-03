@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Gewiss GWA1201_TWO_WAY_SWITCH](https://www.zigbee2mqtt.io/images/devices/GWA1201_TWO_WAY_SWITCH.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

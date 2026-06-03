@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![THALEOS TWC-R01](https://www.zigbee2mqtt.io/images/devices/TWC-R01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

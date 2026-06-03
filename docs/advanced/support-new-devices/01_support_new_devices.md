@@ -1,3 +1,7 @@
+---
+redirectFrom: /how_tos/how_to_support_new_devices.md
+---
+
 # Support new devices
 
 This page will guide you through the process of adding support for new devices through a temporary [external converter](../../advanced/more/external_converters.md).

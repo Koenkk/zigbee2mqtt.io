@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) DNCKATSD001](https://www.zigbee2mqtt.io/images/devices/DNCKATSD001.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [DNCKAT single key wired wall dimmable light switch](https://github.com/dzungpv/dnckatsw00x/)

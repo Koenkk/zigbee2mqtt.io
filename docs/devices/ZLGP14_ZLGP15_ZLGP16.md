@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Legrand ZLGP14/ZLGP15/ZLGP16](https://www.zigbee2mqtt.io/images/devices/ZLGP14-ZLGP15-ZLGP16.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

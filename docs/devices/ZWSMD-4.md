@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AVATTO ZWSMD-4](https://www.zigbee2mqtt.io/images/devices/ZWSMD-4.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

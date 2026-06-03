@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ZYXH ZYXH_switch_24](https://www.zigbee2mqtt.io/images/devices/ZYXH_switch_24.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

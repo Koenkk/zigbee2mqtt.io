@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LDS FWBulb03UK](https://www.zigbee2mqtt.io/images/devices/FWBulb03UK.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO IA-CDZFB2AA007NA-MZN-01](https://www.zigbee2mqtt.io/images/devices/IA-CDZFB2AA007NA-MZN-01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

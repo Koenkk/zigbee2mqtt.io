@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_dimmer_1_gang_2](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1_gang_2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -40,7 +41,7 @@ This light supports the following features: `state`, `brightness`.
                 
 
 ### Countdown (numeric)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.

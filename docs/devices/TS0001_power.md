@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0001_power](https://www.zigbee2mqtt.io/images/devices/TS0001_power.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ### Re-Pairing
 - long press Button until the indicator light flashes 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![THALEOS TRV06-AT](https://www.zigbee2mqtt.io/images/devices/TRV06-AT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0726_4_gang_switch_and_2_scene](https://www.zigbee2mqtt.io/images/devices/TS0726_4_gang_switch_and_2_scene.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

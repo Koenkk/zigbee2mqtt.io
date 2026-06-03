@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ENGO E25-BATB](https://www.zigbee2mqtt.io/images/devices/E25-BATB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
