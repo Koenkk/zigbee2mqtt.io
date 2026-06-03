@@ -77,7 +77,6 @@ ${
               .join(', ')} |\n`
         : ''
 }
-
 ${getWarnings(device, exposes)}
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ${notes || '\n'}
