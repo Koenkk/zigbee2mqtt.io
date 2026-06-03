@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | QS-Zigbee-SEC01-DC  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Mini 1 Gang Zigbee Switch Module |
-| Exposes | switch (state), power_on_behavior, switch_type |
+| Exposes | switch (state), power_outage_memory, switch_type |
 | Picture | ![Tuya QS-Zigbee-SEC01-DC](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC01-DC.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,17 +49,17 @@ Additionally an `off_wait_time` property can be added to the payload to specify 
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `previous`, `on`.
+### Power outage memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
 
 ### Switch type (enum)
-Type of the switch.
+External switch type.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `toggle`, `state`, `momentary`.
+The possible values are: `momentary`, `toggle`, `state`.
 

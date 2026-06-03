@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Brimate FZB8708HD-S1](https://www.zigbee2mqtt.io/images/devices/FZB8708HD-S1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

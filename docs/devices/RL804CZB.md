@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ORVIBO RL804CZB](https://www.zigbee2mqtt.io/images/devices/RL804CZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

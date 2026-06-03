@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![iHseno TS0044_5tqxpine](https://www.zigbee2mqtt.io/images/devices/TS0044_5tqxpine.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

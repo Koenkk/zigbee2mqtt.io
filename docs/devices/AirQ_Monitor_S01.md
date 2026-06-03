@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Slacky-DIY AirQ_Monitor_S01](https://www.zigbee2mqtt.io/images/devices/AirQ_Monitor_S01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/slacky1965/air_quality_monitor_zrd)
 <!-- Notes END: Do not edit below this line -->

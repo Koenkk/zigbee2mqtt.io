@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sprut.device Drivent](https://www.zigbee2mqtt.io/images/devices/Drivent.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

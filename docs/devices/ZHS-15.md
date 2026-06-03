@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Schwaiger ZHS-15](https://www.zigbee2mqtt.io/images/devices/ZHS-15.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

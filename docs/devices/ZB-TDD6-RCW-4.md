@@ -22,13 +22,21 @@ pageClass: device-page
 | Picture | ![Moes ZB-TDD6-RCW-4](https://www.zigbee2mqtt.io/images/devices/ZB-TDD6-RCW-4.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Known issues
+### Pairing
+Power cycle three times: on-off, on-off, on-off, ON >> [up to 5 seconds] >>> starts flashing.
+A gap of 3+ seconds between off and on should be applied so the power drains out.
 
-- Device sends *Leave* events when power is restored, but it doesn't actually leave the network
-  - Discussion [here](https://github.com/Koenkk/zigbee-herdsman/issues/1648)
+### Issues
+
+The pairing sequence is triggered too easily, for example by noisy power (internal or external). As a result, **the device may occasionally "reset" on its own**, or with a single power-on cycle.  
+
+The device keeps the network key until it's overwritten with a new one. So even if it was "reset", the device behaves like it never left the network. However, Zigbee2MQTT and the routers would have removed it from their tables.
+
+An [external extension](https://github.com/Koenkk/zigbee2mqtt-user-extensions/tree/main/stable/ignore_device_leave) can be used to keep it in the Zigbee2MQTT database. But ideally, the misbehaving devices should be avoided, in order to keep a healthy and secure network.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -104,7 +112,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Do not disturb (binary)
-Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
+Controls state after power outage: false = on, true = restore previous state.
 Value can be found in the published state on the `do_not_disturb` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.

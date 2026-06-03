@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CASAIA CSLC601-D-E](https://www.zigbee2mqtt.io/images/devices/CSLC601-D-E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

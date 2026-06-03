@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nedis ZBWD20RD](https://www.zigbee2mqtt.io/images/devices/ZBWD20RD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 The inputs of the device are only for toggle switches and do not work with momentary buttons. Therfore only switching the light on and off is possible with the input. Dimming is only available by zigbee commands.

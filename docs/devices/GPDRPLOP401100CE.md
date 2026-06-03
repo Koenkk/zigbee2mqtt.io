@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LEDVANCE GPDRPLOP401100CE](https://www.zigbee2mqtt.io/images/devices/GPDRPLOP401100CE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

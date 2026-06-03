@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher HK-SL-DIM-US-A](https://www.zigbee2mqtt.io/images/devices/HK-SL-DIM-US-A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

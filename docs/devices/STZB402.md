@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Stelpro STZB402](https://www.zigbee2mqtt.io/images/devices/STZB402.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

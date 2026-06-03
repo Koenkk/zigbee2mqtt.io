@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Espressif Espressif-ZigbeeRangeExtender](https://www.zigbee2mqtt.io/images/devices/Espressif-ZigbeeRangeExtender.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

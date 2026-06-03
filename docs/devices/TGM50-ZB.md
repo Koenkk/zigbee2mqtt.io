@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TGM50-ZB](https://www.zigbee2mqtt.io/images/devices/TGM50-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 In power on state, press and hold the '^' key (bottom right key) for 5-8 seconds, the Wi-Fi icon flashes on the thermostat display, and the thermostat enters pairing state.

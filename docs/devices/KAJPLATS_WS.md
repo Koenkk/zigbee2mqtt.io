@@ -17,16 +17,21 @@ pageClass: device-page
 |-----|-----|
 | Model | KAJPLATS_WS  |
 | Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
-| Description | KAJPLATS white spectrum light |
+| Description | KAJPLATS bulb, white spectrum (Matter) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, level_config), effect, power_on_behavior, identify |
 | Picture | ![IKEA KAJPLATS_WS](https://www.zigbee2mqtt.io/images/devices/KAJPLATS_WS.png) |
 
+
+
+## Unofficial support
+**This device is part of the IKEA Matter/Thread line-up.**  
+The hidden Zigbee mode is not officially supported by IKEA. It exists mainly to keep backwards compatibility via Touchlink.  
+As a result, the Zigbee firmware is stripped-down to the essentials, and could even be removed in OTA updates.
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## Related
 - [KAJPLATS color/white spectrum](./KAJPLATS_CWS.md)
@@ -60,6 +65,7 @@ View available updates [here](https://webui.dcl.csa-iot.org/models) (search *KAJ
 - The device may come with null model and manufacturer attributes. In this case, Zigbee2MQTT will recognize it generically. A firmware update may fix it
 - Power-on behavior may not work, only in Zigbee mode, on some models (at least one variant of [LED2401G5](./LED2401G5.md))
 - Scenes, groups and the *OffWithEffect* command may fail, with the INSUFFICIENT_SPACE error. See more info and workaround in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/30211#issuecomment-4019236515)
+- The device may not announce itself on rejoin / power-on. More info in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/32115)
 
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya F3-Pro](https://www.zigbee2mqtt.io/images/devices/F3-Pro.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

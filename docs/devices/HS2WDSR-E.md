@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman HS2WDSR-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSR-E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

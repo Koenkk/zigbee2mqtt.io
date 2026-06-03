@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO 9CZA-A806ST-Q1Z](https://www.zigbee2mqtt.io/images/devices/9CZA-A806ST-Q1Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

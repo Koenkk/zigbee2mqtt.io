@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Schneider Electric E8332RWMZB](https://www.zigbee2mqtt.io/images/devices/E8332RWMZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

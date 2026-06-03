@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CY-LIGHTING DM A60F](https://www.zigbee2mqtt.io/images/devices/DM-A60F.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

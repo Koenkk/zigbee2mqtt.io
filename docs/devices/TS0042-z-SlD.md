@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Slacky-DIY TS0042-z-SlD](https://www.zigbee2mqtt.io/images/devices/TS0042-z-SlD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/slacky1965/tuya_battery_switch_ts004x_zed)
 <!-- Notes END: Do not edit below this line -->
@@ -71,14 +72,14 @@ Switch type.
 Value can be found in the published state on the `switch_type_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_1": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`, `brightness_level_up`, `brightness_level_down`, `scene`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`, `brightness_level_up`, `brightness_level_down`, `move_to_color_temperature`, `move_to_color_temperature_up`, `move_to_color_temperature_down`, `scene`.
 
 ### Switch type (enum, 2 endpoint)
 Switch type.
 Value can be found in the published state on the `switch_type_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_2": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`, `brightness_level_up`, `brightness_level_down`, `scene`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`, `brightness_level_up`, `brightness_level_down`, `move_to_color_temperature`, `move_to_color_temperature_up`, `move_to_color_temperature_down`, `scene`.
 
 ### Scene id (numeric, 1 endpoint)
 Scene ID.
@@ -140,5 +141,5 @@ The minimal value is `1` and the maximum value is `255`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on_1`, `on_2`, `off_1`, `off_2`, `toggle_1`, `toggle_2`, `hold_1`, `hold_2`, `single_1`, `single_2`, `double_1`, `double_2`, `triple_1`, `triple_2`, `quadruple_1`, `quadruple_2`, `quintuple_1`, `quintuple_2`, `release_1`, `release_2`, `brightness_move_to_level_1`, `brightness_move_to_level_2`, `brightness_move_up_1`, `brightness_move_up_2`, `brightness_move_down_1`, `brightness_move_down_2`, `brightness_step_up_1`, `brightness_step_up_2`, `brightness_step_down_1`, `brightness_step_down_2`, `brightness_stop_1`, `brightness_stop_2`, `recall_1`, `recall_2`, `store_1`, `store_2`, `add_1`, `add_2`, `remove_1`, `remove_2`, `remove_all_1`, `remove_all_2`.
+The possible values are: `on_1`, `on_2`, `off_1`, `off_2`, `toggle_1`, `toggle_2`, `hold_1`, `hold_2`, `single_1`, `single_2`, `double_1`, `double_2`, `triple_1`, `triple_2`, `quadruple_1`, `quadruple_2`, `quintuple_1`, `quintuple_2`, `release_1`, `release_2`, `brightness_move_to_level_1`, `brightness_move_to_level_2`, `brightness_move_up_1`, `brightness_move_up_2`, `brightness_move_down_1`, `brightness_move_down_2`, `brightness_step_up_1`, `brightness_step_up_2`, `brightness_step_down_1`, `brightness_step_down_2`, `brightness_stop_1`, `brightness_stop_2`, `color_temperature_move_stop_1`, `color_temperature_move_stop_2`, `color_temperature_move_up_1`, `color_temperature_move_up_2`, `color_temperature_move_down_1`, `color_temperature_move_down_2`, `color_temperature_step_up_1`, `color_temperature_step_up_2`, `color_temperature_step_down_1`, `color_temperature_step_down_2`, `enhanced_move_to_hue_and_saturation_1`, `enhanced_move_to_hue_and_saturation_2`, `move_to_hue_and_saturation_1`, `move_to_hue_and_saturation_2`, `color_hue_step_up_1`, `color_hue_step_up_2`, `color_hue_step_down_1`, `color_hue_step_down_2`, `color_saturation_step_up_1`, `color_saturation_step_up_2`, `color_saturation_step_down_1`, `color_saturation_step_down_2`, `color_loop_set_1`, `color_loop_set_2`, `color_temperature_move_1`, `color_temperature_move_2`, `color_move_1`, `color_move_2`, `hue_move_1`, `hue_move_2`, `hue_stop_1`, `hue_stop_2`, `move_to_saturation_1`, `move_to_saturation_2`, `move_to_hue_1`, `move_to_hue_2`, `stop_move_step_1`, `stop_move_step_2`, `recall_1`, `recall_2`, `store_1`, `store_2`, `add_1`, `add_2`, `remove_1`, `remove_2`, `remove_all_1`, `remove_all_2`.
 

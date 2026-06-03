@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Titan Products TPZRCO2HT-Z3](https://www.zigbee2mqtt.io/images/devices/TPZRCO2HT-Z3.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

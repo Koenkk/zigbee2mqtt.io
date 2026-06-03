@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Stello STLO-23](https://www.zigbee2mqtt.io/images/devices/STLO-23.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

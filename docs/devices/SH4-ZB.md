@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes SH4-ZB](https://www.zigbee2mqtt.io/images/devices/SH4-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

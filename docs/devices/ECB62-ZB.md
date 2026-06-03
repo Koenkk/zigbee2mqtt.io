@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ENGO ECB62-ZB](https://www.zigbee2mqtt.io/images/devices/ECB62-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

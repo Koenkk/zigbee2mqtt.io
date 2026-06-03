@@ -15,18 +15,20 @@ export default async function generate_supportedDevices() {
     try {
     } catch (e) {}
 
+    const definitionMap = new Map(allDefinitions.map((d) => [d.model, d]));
+
     let definitions: DefinitionWithWhiteLabelOf[] = [...allDefinitions];
 
     for (const definition of allDefinitions) {
         if (definition.whiteLabel) {
-            for (const whiteLabel of definition.whiteLabel) {
+            for (const w of definition.whiteLabel) {
                 const whiteLabelDefinition = {
                     ...definition,
-                    model: whiteLabel.model,
-                    vendor: whiteLabel.vendor ?? definition.vendor,
-                    description: whiteLabel.description ?? definition.description,
+                    model: w.model,
+                    vendor: w.vendor ?? definition.vendor,
+                    description: w.description ?? definition.description,
                     isWhiteLabel: true,
-                    whiteLabelOf: definition,
+                    whiteLabelOf: 'whiteLabelOf' in w && w.whiteLabelOf ? definitionMap.get(w.whiteLabelOf) : definition,
                 };
 
                 delete whiteLabelDefinition.whiteLabel;
@@ -81,6 +83,7 @@ export default async function generate_supportedDevices() {
 sidebar: false
 editLink: false
 pageClass: supported-devices-page
+redirectFrom: /information/supported_devices.md
 ---
 
 <!-- !!!! -->

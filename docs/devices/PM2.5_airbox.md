@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya PM2.5_airbox](https://www.zigbee2mqtt.io/images/devices/PM2.5_airbox.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF SNZB-02M](https://www.zigbee2mqtt.io/images/devices/SNZB-02M.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

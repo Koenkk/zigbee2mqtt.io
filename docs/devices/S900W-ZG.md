@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HZC Electric S900W-ZG](https://www.zigbee2mqtt.io/images/devices/S900W-ZG.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

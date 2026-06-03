@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya GM35TEQ-TYZ-2/25](https://www.zigbee2mqtt.io/images/devices/GM35TEQ-TYZ-2-25.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

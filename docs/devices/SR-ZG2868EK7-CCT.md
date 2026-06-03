@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher SR-ZG2868EK7-CCT](https://www.zigbee2mqtt.io/images/devices/SR-ZG2868EK7-CCT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

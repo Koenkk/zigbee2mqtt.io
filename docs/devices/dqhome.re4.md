@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![DQHOME dqhome.re4](https://www.zigbee2mqtt.io/images/devices/dqhome.re4.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

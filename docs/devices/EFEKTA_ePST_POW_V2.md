@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_ePST_POW_V2](https://www.zigbee2mqtt.io/images/devices/EFEKTA_ePST_POW_V2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -123,7 +124,7 @@ Set sensor type.
 Value can be found in the published state on the `sensor_type` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type": NEW_VALUE}`.
-The possible values are: `0-1bar`, `0-5bar`, `0-6bar`, `0-10bar`, `0-40bar`.
+The possible values are: `0-1bar`, `0-5bar`, `0-6bar`, `0-10bar`, `0-12bar`, `0-40bar`.
 
 ### Comparison previous data (binary)
 Enable сontrol of comparison with previous data.

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) MiCASAGasCounter](https://www.zigbee2mqtt.io/images/devices/MiCASAGasCounter.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 >> ## Notes
 Zigbee Gas Counter so it counts gas consumption from the counter directly and reports back the value to the coordinator.

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![PLAID SYSTEMS PS-SPRZMS-SLP3](https://www.zigbee2mqtt.io/images/devices/PS-SPRZMS-SLP3.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

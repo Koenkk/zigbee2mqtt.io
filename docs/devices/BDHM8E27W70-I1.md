@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![GS BDHM8E27W70-I1](https://www.zigbee2mqtt.io/images/devices/BDHM8E27W70-I1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

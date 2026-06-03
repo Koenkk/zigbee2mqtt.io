@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shelly SBHT-103C](https://www.zigbee2mqtt.io/images/devices/SBHT-103C.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Shelly BLU H&T Display ZB Black - SBHT-103C

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TR-M3Z](https://www.zigbee2mqtt.io/images/devices/TR-M3Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes TRV801Z](https://www.zigbee2mqtt.io/images/devices/TRV801Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Binding
 Mount the valve on a radiator so the motor can detect resistance or simulate resistence manually. Perform a factory reset (hold main button while inserting the last battery until FAC blinks). After the motor self-test, hold the main button again until the display blinks continuously to enter pairing mode.

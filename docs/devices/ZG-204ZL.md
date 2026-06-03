@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 There is an [issue pending](https://github.com/Koenkk/zigbee2mqtt/issues/18950) 

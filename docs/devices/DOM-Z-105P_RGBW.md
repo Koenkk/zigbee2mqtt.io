@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![DOMRAEM DOM-Z-105P_RGBW](https://www.zigbee2mqtt.io/images/devices/DOM-Z-105P_RGBW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher ZG2855-RGB](https://www.zigbee2mqtt.io/images/devices/ZG2855-RGB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

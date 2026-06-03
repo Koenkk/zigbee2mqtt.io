@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Bacchus Mercury_3ph_Counter](https://www.zigbee2mqtt.io/images/devices/Mercury_3ph_Counter.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/Bacchus777/Mercury_3Ph)
 <!-- Notes END: Do not edit below this line -->
