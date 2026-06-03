@@ -189,3 +189,48 @@ footer a {
         }
     }
 }
+
+.giscus-float-btn {
+    position: fixed !important;
+    top: 4.5rem;
+    right: 1rem;
+    z-index: 100;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border-radius: 50%;
+    border-width: 0;
+    background: var(--c-bg, #fff);
+    color: var(--c-text, #2c3e50);
+    box-shadow: 2px 2px 10px 4px var(--c-shadow, rgba(0, 0, 0, 0.05));
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.85;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    .giscus-float-icon {
+        font-size: 1.2rem;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.dark .giscus-float-btn {
+    background: var(--c-bg, #1e1e1e);
+    box-shadow: 2px 2px 10px 4px var(--c-shadow, rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 959px) {
+    .giscus-float-btn {
+        transform-origin: 100% 0;
+        transform: scale(0.8);
+    }
+}
