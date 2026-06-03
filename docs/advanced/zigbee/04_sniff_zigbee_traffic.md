@@ -1,4 +1,5 @@
 ---
+redirectFrom: /how_tos/how_to_sniff_zigbee_traffic.md
 ---
 
 # Sniff Zigbee traffic

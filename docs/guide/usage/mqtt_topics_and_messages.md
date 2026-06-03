@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 1
+redirectFrom: /information/mqtt_topics_and_message_structure.md
 ---
 
 # MQTT Topics and Messages

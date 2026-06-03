@@ -1,6 +1,7 @@
 ---
 sidebarDepth: 1
 next: ../usage/
+redirectFrom: /getting_started/what_do_i_need.md
 ---
 
 # Getting started

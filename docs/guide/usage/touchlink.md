@@ -1,3 +1,7 @@
+---
+redirectFrom: /information/touchlink.md
+---
+
 # Touchlink
 
 Touchlink (or ZLL) is a feature that allows Zigbee devices to communicate, **without** necessarily being in the same network.
