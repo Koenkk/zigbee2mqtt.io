@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 1-ZB-WSD  |
 | Vendor  | [Scimagic](/supported-devices/#v=Scimagic)  |
 | Description | Smart temperature and humidity switch (thermostat/hygrostat) |
-| Exposes | Exposesswitch (state), temperature, humidity, temperature_calibration, humidity_calibration,auto_work,, mode, temperature_target, temperature_range,  humidity_target, humidity_range, delay, delay_time |
+| Exposes | switch (state), temperature, humidity, temperature_calibration, humidity_calibration,auto_work,, mode, temperature_target, temperature_range,  humidity_target, humidity_range, delay, delay_time |
 | Picture | ![Scimagic 1-ZB-WSD](https://www.zigbee2mqtt.io/images/devices/1-ZB-WSD.png) |
 
 
