@@ -142,7 +142,7 @@ If value equals `true` multi click is ON, if `false` OFF.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
-Since the top button is a physical relais it only exposes 'single_up'. The down button exposes more states such as 'double_down'.
+Since the top button is a physical relay it only exposes 'single_up'. The down button exposes more states such as 'double_down'.
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single_up`, `single_down`, `double_down`, `release_down`, `hold_down`.
