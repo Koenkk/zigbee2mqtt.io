@@ -1,7 +1,7 @@
 ---
-title: "Third Reality 3RAQ1096Z control via MQTT"
-description: "Integrate your Third Reality 3RAQ1096Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2026-04-30T19:57:28
+title: "easyiot ZB-LTH01 control via MQTT"
+description: "Integrate your easyiot ZB-LTH01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-06-09T18:58:47
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Third Reality 3RAQ1096Z
+# easyiot ZB-LTH01
 
 |     |     |
 |-----|-----|
-| Model | 3RAQ1096Z  |
-| Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
-| Description | Smart air quality sensor |
-| Exposes | temperature, humidity, co2, voc_index |
-| Picture | ![Third Reality 3RAQ1096Z](https://www.zigbee2mqtt.io/images/devices/3RAQ1096Z.png) |
+| Model | ZB-LTH01  |
+| Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
+| Description | Zigbee light and temperature sensor |
+| Exposes | temperature, humidity, illuminance, battery |
+| Picture | ![easyiot ZB-LTH01](https://www.zigbee2mqtt.io/images/devices/ZB-LTH01.png) |
 
 
 
@@ -28,9 +28,6 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -44,7 +41,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
 
 ## Exposes
@@ -63,17 +62,18 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### CO2 (numeric)
-Measured value.
-Value can be found in the published state on the `co2` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2": ""}`.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
-The unit of this value is `ppm`.
+The unit of this value is `lx`.
 
-### Voc index (numeric)
-Measured VOC Index.
-Value can be found in the published state on the `voc_index` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voc_index": ""}`.
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.
-The unit of this value is `VOC Index points`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 

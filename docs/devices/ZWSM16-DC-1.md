@@ -24,7 +24,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 ### Pairing
@@ -32,7 +31,6 @@ Press and hold the button on the device for more than 5 seconds (until the LED s
 
 ### Dry contact output
 This module switches a dry contact (potential-free relay output), suitable for controlling devices that require a volt-free switching signal (e.g. gate controllers, alarm systems, boilers).
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -78,3 +76,4 @@ Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `off/on`, `on/off`, `on`.
+

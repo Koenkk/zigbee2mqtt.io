@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | SYT-ZB01  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
-| Description | Smart scene button with rotary knob |
-| Exposes | operation_mode, battery, action |
+| Description | Smart knob |
+| Exposes | action_brightness_delta, action_step_size, action_color_temperature_delta, action_transition_time, action_rate, battery, operation_mode, action |
 | Picture | ![Moes SYT-ZB01](https://www.zigbee2mqtt.io/images/devices/SYT-ZB01.png) |
 
 
@@ -43,6 +43,38 @@ simulated_brightness:
 
 ## Exposes
 
+### Action brightness delta (numeric)
+Value can be found in the published state on the `action_brightness_delta` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `-255` and the maximum value is `255`.
+
+### Action step size (numeric)
+Value can be found in the published state on the `action_step_size` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+
+### Action color temperature delta (numeric)
+Value can be found in the published state on the `action_color_temperature_delta` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `-65535` and the maximum value is `65535`.
+
+### Action transition time (numeric)
+Value can be found in the published state on the `action_transition_time` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `s`.
+
+### Action rate (numeric)
+Value can be found in the published state on the `action_rate` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Operation mode (enum)
 Operation mode: "command" - for group control, "event" - for clicks.
 Value can be found in the published state on the `operation_mode` property.
@@ -50,17 +82,9 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
 
-### Battery (numeric)
-Remaining battery in %.
-Value can be found in the published state on the `battery` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
-It's not possible to write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `toggle`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`.
+The possible values are: `toggle`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `saturation_move`, `hue_move`, `hue_stop`, `single`, `double`, `hold`, `rotate_left`, `rotate_right`.
 
