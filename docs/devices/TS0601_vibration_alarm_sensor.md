@@ -24,8 +24,30 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Battery
 
+Uses 2 × AAA battery
+
+### Pairing
+
+**Press and hold the button for 5s** to put the device in pairing mode.  
+The red LED will flash until it connects.
+
+### Button actions
+
+- Single press
+  - if buzzer is ringing: stop buzzer (dismiss current alarm)
+  - if buzzer is not ringing: change sensitivity (low/middle/high: 1/2/3 beeps)
+- Double press to mute / unmute alarm (normal: do-re-mi, silent: mi-re-do)
+- Long press to reset
+
+### Firmware
+
+- Device comes with appVersion `80`  
+(reported in Tuya app as Zigbee module v1.1.0 + MCU v1.0.0)  
+- Subscribed to *manufacturerCode* `4417`, *imageType* `54179`
 <!-- Notes END: Do not edit below this line -->
 
 
