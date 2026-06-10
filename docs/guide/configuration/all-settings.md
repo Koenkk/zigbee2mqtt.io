@@ -316,6 +316,19 @@ advanced:
 - Default: `"json"`
 - Possible values: `attribute_and_json`, `attribute`, `json`
 
+### enable_external_js
+
+Enable external JavaScript (extensions and converters) that can execute arbitrary user-provided code. WARNING: If unused, it is advised to disable this.
+
+```yaml
+advanced:
+    enable_external_js: true
+```
+
+- Type: `boolean`
+- Default: `true`
+- <span style="color: red">Restart required to be effective</span>
+
     ### log_syslog
 
     syslog (enabled)
@@ -646,10 +659,11 @@ Retain MQTT messages of this device
 ```yaml
 devices:
     '0x1234567812345678':
-        retain: true
+        retain: false
 ```
 
 - Type: `boolean`
+- Default: `false`
 
 #### disabled
 
@@ -987,15 +1001,20 @@ groups:
 
 #### retain
 
+Retain MQTT messages of this group
+
 ```yaml
 groups:
     1:
-        retain: true
+        retain: false
 ```
 
 - Type: `boolean`
+- Default: `false`
 
 #### optimistic
+
+Publish the expected state of group members after set
 
 ```yaml
 groups:
@@ -1004,6 +1023,7 @@ groups:
 ```
 
 - Type: `boolean`
+- Default: `true`
 
 #### qos
 

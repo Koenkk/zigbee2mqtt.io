@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya MTG235-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG235-ZB-RL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

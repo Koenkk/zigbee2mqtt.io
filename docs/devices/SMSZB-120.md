@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Frient 94430, Cavius 2103 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Factory resetting

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nous SZ-T04](https://www.zigbee2mqtt.io/images/devices/SZ-T04.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

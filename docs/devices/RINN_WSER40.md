@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![RINNconnect RINN WSER40](https://www.zigbee2mqtt.io/images/devices/RINN-WSER40.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

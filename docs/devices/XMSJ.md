@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya XMSJ](https://www.zigbee2mqtt.io/images/devices/XMSJ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

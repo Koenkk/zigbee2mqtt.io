@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![iCasa ICZB-R11D](https://www.zigbee2mqtt.io/images/devices/ICZB-R11D.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

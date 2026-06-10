@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Slacky-DIY TS0001_power-SlD](https://www.zigbee2mqtt.io/images/devices/TS0001_power-SlD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/slacky1965/tuya_mini_relay_zrd)
 <!-- Notes END: Do not edit below this line -->

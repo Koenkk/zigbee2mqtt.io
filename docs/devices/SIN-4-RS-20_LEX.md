@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO SIN-4-RS-20_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20_LEX.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Candeo C-RFZB-HUB](https://www.zigbee2mqtt.io/images/devices/C-RFZB-HUB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

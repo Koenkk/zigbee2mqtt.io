@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | HM-722ESY-E Plus  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Co detector |
-| Exposes | co, battery, identify, temperature, carbon_monoxide, battery_low, test, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, link_available, siren_for_automation_only, reported_packages, rejoin_count, reboot_count |
+| Exposes | battery, identify, temperature, carbon_monoxide, battery_low, test, co, endoflife, alarm_state, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, link_available, siren_for_automation_only, temperature_offset, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman HM-722ESY-E Plus](https://www.zigbee2mqtt.io/images/devices/HM-722ESY-E-Plus.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,22 +36,16 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `co_calibration`: Calibrates the co value (absolute offset), takes into effect on next report of device. The value must be a number.
-
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `co_calibration`: Calibrates the co value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
-
-### CO (numeric)
-The measured CO (carbon monoxide) value.
-Value can be found in the published state on the `co` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -92,6 +87,28 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
+### Co (numeric)
+The measured CO level.
+Value can be found in the published state on the `co` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `900`.
+The unit of this value is `ppm`.
+
+### Endoflife (enum)
+It indicates if the sensor expired.
+Value can be found in the published state on the `endoflife` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"endoflife": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `normal`, `expires_soon`, `expired`.
+
+### Alarm state (enum)
+It indicates the level of alarm states.
+Value can be found in the published state on the `alarm_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_state": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `normal`, `prealarm`, `warning_alarm`, `critical_alarm`.
+
 ### Fault state (text)
 Device fault status (normal or fault types)..
 Value can be found in the published state on the `fault_state` property.
@@ -119,7 +136,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `true` temporary mute is ON, if `false` OFF.
 
 ### Heartbeat indicator (binary)
-active green indicator.
+Enable/disable the indicator on product.
 Value can be found in the published state on the `heartbeat_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"heartbeat_indicator": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heartbeat_indicator": NEW_VALUE}`.
@@ -145,6 +162,13 @@ Value can be found in the published state on the `siren_for_automation_only` pro
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_for_automation_only": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_for_automation_only": NEW_VALUE}`.
 The possible values are: `stop`, `smoke_siren`, `co_siren`.
+
+### Temperature offset (numeric)
+used for temperature offset, unit: 0.01℃.
+Value can be found in the published state on the `temperature_offset` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+The minimal value is `-1500` and the maximum value is `1500`.
 
 ### Reported packages (numeric)
 for diagnostic purpose, how many zigbee packages has the reported in a day..

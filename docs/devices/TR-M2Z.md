@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![MAZDA TR-M2Z](https://www.zigbee2mqtt.io/images/devices/TR-M2Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

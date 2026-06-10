@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | EFEKTA_TDS_Monitor  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | TDS Monitor with DS18B20 temperature sensor |
-| Exposes | temperature, tds, tds_coefficient, reading_interval, tds_offset, tx_radio_power, temperature_offset |
+| Exposes | temperature, tds, tds_coefficient, reading_interval, tds_offset, tx_radio_power |
 | Picture | ![EFEKTA EFEKTA_TDS_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_TDS_Monitor.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -79,13 +80,5 @@ Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
-The possible values are: `0dbm`, `4dbm`, `10dbm`, `19dbm`.
-
-### Temperature offset (numeric)
-Adjust temperature.
-Value can be found in the published state on the `temperature_offset` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
-The minimal value is `-50` and the maximum value is `50`.
-The unit of this value is `°C`.
+The possible values are: `4dbm`, `19dbm`.
 

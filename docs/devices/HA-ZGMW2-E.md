@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Halemeier HA-ZGMW2-E](https://www.zigbee2mqtt.io/images/devices/HA-ZGMW2-E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

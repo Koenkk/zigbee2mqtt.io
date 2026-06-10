@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Excellux ZG-102MV](https://www.zigbee2mqtt.io/images/devices/ZG-102MV.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

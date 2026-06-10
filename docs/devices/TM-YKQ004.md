@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TM-YKQ004](https://www.zigbee2mqtt.io/images/devices/TM-YKQ004.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

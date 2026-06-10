@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ekaza EKAC-T3095Z](https://www.zigbee2mqtt.io/images/devices/EKAC-T3095Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

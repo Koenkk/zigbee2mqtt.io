@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Girier JR-ZDS01](https://www.zigbee2mqtt.io/images/devices/JR-ZDS01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | TS0601_RTX_DIN  |
 | Vendor  | [RTX](/supported-devices/#v=RTX)  |
 | Description | Din rail switch |
-| Exposes | switch (state), power, current, voltage, energy, temperature, leakage |
+| Exposes | switch (state), power, current, voltage, energy, power_on_behavior, temperature, leakage, faults, reclosing_allowed_times, reclosing_enable, timer, clear_energy, status |
 | Picture | ![RTX TS0601_RTX_DIN](https://www.zigbee2mqtt.io/images/devices/TS0601_RTX_DIN.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -84,6 +85,13 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `previous`, `on`.
+
 ### Temperature (numeric)
 Current temperature.
 Value can be found in the published state on the `temperature` property.
@@ -95,4 +103,39 @@ Current leakage.
 Value can be found in the published state on the `leakage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mA`.
+
+### Faults (list)
+List of current faults.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"faults": ["short_circuit", "surge", "overload", "leakage_current", "temperature", "fire", "high_power", "self_test", "over_current", "unbalance", "over_voltage", "under_voltage", "miss_phase", "outage", "magnetism", "credit", "no_balance"]}`
+
+### Reclosing allowed times (numeric)
+Reclosing tries.
+Value can be found in the published state on the `reclosing_allowed_times` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reclosing_allowed_times": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
+
+### Auto reclosing (binary)
+Value can be found in the published state on the `reclosing_enable` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reclosing_enable": NEW_VALUE}`.
+If value equals `ON` auto reclosing is ON, if `OFF` OFF.
+
+### Timer (numeric)
+Value can be found in the published state on the `timer` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `86400`.
+The unit of this value is `s`.
+
+### Clear energy (binary)
+Value can be found in the published state on the `clear_energy` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"clear_energy": NEW_VALUE}`.
+If value equals `ON` clear energy is ON, if `OFF` OFF.
+
+### Status (text)
+Status.
+Value can be found in the published state on the `status` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 

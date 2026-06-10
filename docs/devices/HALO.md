@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Halo Smart Labs HALO](https://www.zigbee2mqtt.io/images/devices/HALO.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

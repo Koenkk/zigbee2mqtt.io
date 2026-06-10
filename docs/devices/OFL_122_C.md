@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Innr OFL 122 C](https://www.zigbee2mqtt.io/images/devices/OFL-122-C.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aurora Lighting AU-A1GSZ9RGBW_HV-GSCXZB269K](https://www.zigbee2mqtt.io/images/devices/AU-A1GSZ9RGBW_HV-GSCXZB269K.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

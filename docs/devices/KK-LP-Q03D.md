@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Konke KK-LP-Q03D](https://www.zigbee2mqtt.io/images/devices/KK-LP-Q03D.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

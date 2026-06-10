@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Adeo ZBEK-37](https://www.zigbee2mqtt.io/images/devices/ZBEK-37.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Acova ALCANTARA3](https://www.zigbee2mqtt.io/images/devices/ALCANTARA3.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

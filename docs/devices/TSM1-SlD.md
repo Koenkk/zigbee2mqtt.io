@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Slacky-DIY TSM1-SlD](https://www.zigbee2mqtt.io/images/devices/TSM1-SlD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/slacky1965/tuya_mini_switch_1s_zrd)
 <!-- Notes END: Do not edit below this line -->

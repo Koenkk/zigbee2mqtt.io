@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya M9-zigbee-SL-2](https://www.zigbee2mqtt.io/images/devices/M9-zigbee-SL-2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LELLKI WP33-EU/WP34-EU](https://www.zigbee2mqtt.io/images/devices/WP33-EU-WP34-EU.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

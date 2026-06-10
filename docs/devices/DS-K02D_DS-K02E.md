@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara DS-K02D/DS-K02E](https://www.zigbee2mqtt.io/images/devices/DS-K02D-DS-K02E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

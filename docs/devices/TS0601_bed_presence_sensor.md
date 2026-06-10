@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_bed_presence_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_bed_presence_sensor.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -51,11 +52,10 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Raw pressure value.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `10000`.
-The unit of this value is `lux`.
+The unit of this value is `lx`.
 
 ### Sensitivity (enum)
 Sensitivity.

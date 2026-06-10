@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Danor SK-Z802C-US](https://www.zigbee2mqtt.io/images/devices/SK-Z802C-US.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

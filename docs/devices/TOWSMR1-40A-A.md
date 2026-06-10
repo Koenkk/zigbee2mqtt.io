@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tongou TOWSMR1-40A-A](https://www.zigbee2mqtt.io/images/devices/TOWSMR1-40A-A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

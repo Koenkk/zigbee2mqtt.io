@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

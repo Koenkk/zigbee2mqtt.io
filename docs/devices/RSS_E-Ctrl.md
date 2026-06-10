@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Imhotep Creation RSS E-Ctrl](https://www.zigbee2mqtt.io/images/devices/RSS-E-Ctrl.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

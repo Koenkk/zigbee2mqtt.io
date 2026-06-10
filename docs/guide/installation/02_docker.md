@@ -1,5 +1,6 @@
 ---
 next: 14_securing.md
+redirectFrom: /information/docker.md
 ---
 
 # Docker

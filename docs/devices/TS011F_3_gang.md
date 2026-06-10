@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS011F_3_gang](https://www.zigbee2mqtt.io/images/devices/TS011F_3_gang.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![JIAWEN JW-A04-CT](https://www.zigbee2mqtt.io/images/devices/JW-A04-CT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

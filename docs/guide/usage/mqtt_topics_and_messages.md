@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 1
+redirectFrom: /information/mqtt_topics_and_message_structure.md
 ---
 
 # MQTT Topics and Messages
@@ -495,6 +496,10 @@ In case you also want to block the device the optional `block` property (default
 See [OTA updates](./ota_updates.md).
 
 #### zigbee2mqtt/bridge/request/device/ota_update/update
+
+See [OTA updates](./ota_updates.md).
+
+#### zigbee2mqtt/bridge/request/device/ota_update/update/abort
 
 See [OTA updates](./ota_updates.md).
 

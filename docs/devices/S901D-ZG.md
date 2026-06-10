@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shyugj S901D-ZG](https://www.zigbee2mqtt.io/images/devices/S901D-ZG.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

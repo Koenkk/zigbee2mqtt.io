@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Svetomaniya QS-Zigbee-SEC01-Mod](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC01-Mod.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -77,7 +78,7 @@ Switch type.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`, `scene`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `light_control`, `scene`.
 
 ### Operation mode (enum)
 Relay decoupled.
@@ -118,5 +119,5 @@ The minimal value is `1` and the maximum value is `255`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `toggle`, `hold`, `single`, `double`, `triple`, `quadruple`, `quintuple`, `release`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`, `recall`, `store`, `add`, `remove`, `remove_all`.
+The possible values are: `on`, `off`, `toggle`, `hold`, `single`, `double`, `triple`, `quadruple`, `quintuple`, `release`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`, `color_temperature_move_stop`, `color_temperature_move_up`, `color_temperature_move_down`, `color_temperature_step_up`, `color_temperature_step_down`, `enhanced_move_to_hue_and_saturation`, `move_to_hue_and_saturation`, `color_hue_step_up`, `color_hue_step_down`, `color_saturation_step_up`, `color_saturation_step_down`, `color_loop_set`, `color_temperature_move`, `color_move`, `hue_move`, `hue_stop`, `move_to_saturation`, `move_to_hue`, `stop_move_step`, `recall`, `store`, `add`, `remove`, `remove_all`.
 

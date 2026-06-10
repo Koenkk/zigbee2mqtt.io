@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | LoraTap RR400ZB, LoraTap SP400ZB |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
