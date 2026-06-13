@@ -101,6 +101,19 @@ const conf = defineUserConfig({
                 content: '#ffc135',
             },
         ],
+        [
+            'script',
+            {},
+            `window.__GISCUS_CONFIG__=${JSON.stringify({
+                repo: process.env.GISCUS_REPO || '',
+                repoId: process.env.GISCUS_REPO_ID || '',
+                category: process.env.GISCUS_CATEGORY || '',
+                categoryId: process.env.GISCUS_CATEGORY_ID || '',
+                mapping: process.env.GISCUS_MAPPING || 'specific',
+                termPrefix: process.env.GISCUS_TERM_PREFIX || 'Device: ',
+                lang: process.env.GISCUS_LANG || 'en',
+            })}`,
+        ],
     ],
 
     theme: defaultTheme({

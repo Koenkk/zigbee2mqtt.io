@@ -1,4 +1,5 @@
 import {defineClientConfig} from '@vuepress/client';
+import GiscusInjector from './components/GiscusInjector.vue';
 
 export default defineClientConfig({
     async enhance({app, router, siteData}) {
@@ -9,5 +10,5 @@ export default defineClientConfig({
         }
     },
     setup() {},
-    rootComponents: [],
+    rootComponents: [GiscusInjector],
 });
