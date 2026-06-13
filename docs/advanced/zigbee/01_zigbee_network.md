@@ -78,12 +78,13 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [Philips 4090230P9](../../devices/4090230P9.md)                                     |    Y     |    Y    |   Nⁱ    |
 | [Philips 5047130P9](../../devices/5047130P9.md)                                     |    Y     |    N    |    Y    |
 | [Philips 5062131P7](../../devices/5062131P7.md)                                     |    Y     |    N    |    Y    |
-| [Philips 9290024896](../../devices/9290024896.md)                                   |    Y     |    N    |    Y    |
-| [Philips 9290022166](../../devices/9290022166.md)                                   |    Y     |    N    |   Nⁱ    |
-| [Philips 9290022169](../../devices/9290022169.md)                                   |    Y     |    N    |    Y    |
-| [Philips 929001953301](../../devices/929001953301.md)                               |    Y     |    N    |    Y    |
 | [Philips 8718696548738](../../devices/8718696548738.md)                             |    Y     |    Y    |   Nⁱ    |
 | [Philips 8719514491106](../../devices/8719514491106.md)                             |    Y     |    N    |    Y    |
+| [Philips 8719514491229](../../devices/8719514491229.md)                             |    Y     |    N    |   Y³    |
+| [Philips 9290024896](../../devices/9290024896.md)                                   |    Y     |    N    |    Y    |
+| [Philips 9290022166](../../devices/9290022166.md)                                   |    Y     |    N    |   Y³    |
+| [Philips 9290022169](../../devices/9290022169.md)                                   |    Y     |    N    |    Y    |
+| [Philips 929001953301](../../devices/929001953301.md)                               |    Y     |    N    |    Y    |
 | [Silabs series 2 router](../../devices/Silabs_series_2_router.md)                   |    Y     |    N    |    Y    |
 | [Sonoff ZBDongle-E](../../devices/ZBDongle-E.md)                                    |    Y     |    N    |    Y    |
 | [Sunricher R-ZG9040A-ZG9041A-D](../../devices/SR-ZG9040A_ZG9041A-D.md)              |    Y     |    Y    |    Y    |
@@ -95,6 +96,8 @@ The following Zigbee routers have already been confirmed to support (at least so
 _ⁱ ZGP frames are always being re-transmitted as broadcast, even if unicast was requested by the coordinator. Might be a [firmware bug](https://github.com/Koenkk/zigbee2mqtt/issues/22897#issuecomment-2158291085)._
 
 _² Only ICPSHC24-10EU-IL-2 (new version) is able to translate ZGP frames._
+
+_³ Firmware 1.145.1 (or higher) re-trasnmits ZGP frames as unicast._
 
 ## Zigbee networking
 
