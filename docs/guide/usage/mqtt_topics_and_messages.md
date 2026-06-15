@@ -499,6 +499,10 @@ See [OTA updates](./ota_updates.md).
 
 See [OTA updates](./ota_updates.md).
 
+#### zigbee2mqtt/bridge/request/device/ota_update/update/abort
+
+See [OTA updates](./ota_updates.md).
+
 #### zigbee2mqtt/bridge/request/device/ota_update/check/downgrade
 
 See [OTA updates](./ota_updates.md).

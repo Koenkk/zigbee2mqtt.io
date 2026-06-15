@@ -59,7 +59,7 @@ Disabling automatic update checks does not prevent [scheduled OTA](#scheduling-u
 
 ### Manual checking
 
-To manually check for **updates**, send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"id":"deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device.  
+To manually check for **upgrade**, send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"id":"deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device.  
 To check if a **downgrade** is available, send the message to `zigbee2mqtt/bridge/request/device/ota_update/check/downgrade` instead.
 
 Zigbee2MQTT will request the current firmware information from the device (manufacturer code, image type and installed version). Only after reception, it will look up the OTA index.
@@ -85,14 +85,15 @@ Since updating can drastically change the device behavior, Zigbee2MQTT treats it
 
 ### Manual update request
 
-When an **update** is available, start it by sending a message to `zigbee2mqtt/bridge/request/device/ota_update/update` with payload `{"id":"deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device.  
+When an **upgrade** is available, start it by sending a message to `zigbee2mqtt/bridge/request/device/ota_update/update` with payload `{"id":"deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device.
 When a **downgrade** is available, start it by sending the message to `zigbee2mqtt/bridge/request/device/ota_update/update/downgrade` instead.
+You can abort a running update by sending a message to `zigbee2mqtt/bridge/request/device/ota_update/update/abort` with payload `{"id":"deviceID"}` (same as above).
 
 If the device does not respond, wake it up (e.g. push a button) right before starting, or [schedule](#scheduling-update-on-next-device-request) the update.  
 The progress is published to the respective device topic, as described [above](#device-state).
 
 Once the update is completed, a response is sent, example response: `{"data":{"id":"my_remote","from":{"file_version":5,"software_build_id":1,"date_code":"20190101"},"to":{"file_version":10,"software_build_id":2,"date_code":"20190102"}},"status":"ok"}`.  
-Note that `software_build_id` and `date_code` are optional device attributes.
+Note that `software_build_id` and `date_code` are **optional** device attributes, some devices may have them, others not (even same model can differ, since this is firmware-dependent).
 
 ### Scheduling update on next device request
 

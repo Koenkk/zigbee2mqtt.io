@@ -74,7 +74,7 @@ Value can be found in the published state on the `pressure_offset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": NEW_VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Raw temperature calibration (numeric)
 Adjust first temperature sensor.
