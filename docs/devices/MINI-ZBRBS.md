@@ -26,8 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-- Pairing the device is done by pressing the back button of the device for around 5 seconds
-- Auto calibration is done by pressing the button of the device for around 10 seconds. There is currently no way in Zigbee2Mqtt to auto calibrate the device.
+- Pairing the device is done by pressing the back button of the device for around 5 seconds.
+- **Automatic calibration** can be triggered via Zigbee2MQTT by setting `motor_travel_calibration_action` to `start_automatic`. Alternatively, it can be initiated physically by holding the device button for around 10 seconds until the LED enters breathing mode; the device will then drive the motor through the full stroke automatically.
+- **Manual calibration** via Zigbee2MQTT:
+  1. Set `motor_travel_calibration_action` to `start_manual` to begin.
+  2. Move the cover to the fully open position, then set `motor_travel_calibration_action` to `manual_2_fully_opened`. The device will automatically start moving the cover toward the closed position.
+  3. Once the cover has reached the fully closed (end) position, set `motor_travel_calibration_action` to `manual_3_fully_closed`. Calibration is now complete.
+- To reset the calibration, set `motor_travel_calibration_action` to `clear`.
+- The current calibration status can be read from `motor_travel_calibration_status` (`Uncalibrated` or `Calibrated`).
+- Percentage-based position control (`position`) requires a completed calibration.
 <!-- Notes END: Do not edit below this line -->
 
 
