@@ -25,6 +25,50 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+### Displaying readings from an external sensor
+
+This device can show temperature and humidity coming from another sensor instead
+of its own built-in sensor (for example showing an outdoor sensor on the screen).
+
+1. Set `temperature_sensor_select` to `external` to switch the display to the
+   external source (set it back to `internal` to show the built-in sensor with
+   the min/max view).
+2. Push readings to `external_temperature` and `external_humidity`. Values are in
+   °C / % (e.g. `external_temperature: 25.5`, `external_humidity: 88`).
+
+Notes:
+- Humidity on the external display requires device firmware `1.0.4` or later.
+- This is a battery-powered sleepy device, so writes are applied on the next
+  poll/check-in; press the button on the back to wake it for an immediate update.
+
+Example Home Assistant automation mirroring another sensor onto the display:
+
+```yaml
+alias: SNZB-02DR2 external display
+triggers:
+  - trigger: state
+    entity_id:
+      - sensor.outdoor_temperature
+      - sensor.outdoor_humidity
+conditions:
+  - condition: template
+    value_template: >-
+      {{ states('sensor.outdoor_temperature') not in ['unknown', 'unavailable', 'none']
+         and states('sensor.outdoor_humidity') not in ['unknown', 'unavailable', 'none'] }}
+actions:
+  - action: mqtt.publish
+    data:
+      topic: zigbee2mqtt/FRIENDLY_NAME/set
+      payload: >-
+        {
+          "temperature_sensor_select": "external",
+          "external_temperature": {{ states('sensor.outdoor_temperature') | float | round(1) }},
+          "external_humidity": {{ states('sensor.outdoor_humidity') | float | round(0) }}
+        }
+mode: single
+```
 
 <!-- Notes END: Do not edit below this line -->
 
