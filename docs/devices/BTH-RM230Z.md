@@ -26,6 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the back of the cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+
+## Home Assistant discovery
+This thermostat is normally used as a heat-only thermostat. Zigbee2MQTT suppresses Home Assistant cooling mode by default; enable the `expose_cooling` device option only for installations that actually support cooling. The raw MQTT climate expose can still show cooling-oriented cluster fields reported by the firmware.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -165,4 +168,3 @@ Indicates whether the device encounters any errors or not.
 Value can be found in the published state on the `error_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"error_state": ""}`.
 It's not possible to write (`/set`) this value.
-
