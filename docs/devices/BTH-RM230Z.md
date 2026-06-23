@@ -29,6 +29,9 @@ To pair this device you have to install the device via its installation code. Th
 
 ## Optional relay
 The thermostat can be used as a thermostat-only device or with its relay exposed as a switch. Zigbee2MQTT exposes the relay switch by default; disable the `expose_relay` device option if the installation should only expose thermostat controls.
+
+### Home Assistant discovery
+This thermostat is normally used as a heat-only thermostat. Zigbee2MQTT suppresses Home Assistant cooling mode by default; set the `homeassistant_climate_modes` device option to `cool` or `heat_cool` only for installations that actually support cooling. The raw MQTT climate expose can still show cooling-oriented cluster fields reported by the firmware.
 <!-- Notes END: Do not edit below this line -->
 
 
