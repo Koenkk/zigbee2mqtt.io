@@ -71,6 +71,14 @@ The button is found under the back cover, next to the battery.
 | Button 4 double | `double_button_4` |                 ? |
 | Button 4 triple | `triple_button_4` |                 ? |
 | Button 4 long   |   `long_button_4` |                 ? |
+
+
+**The following information was obtained directly from SONOFF support.**
+
+Starting with firmware 1.1.0, all four buttons can be bound to a switch or dimming device:
+
+- Single click — toggles the switch (On/Off)
+- Long press — alternates between increasing and decreasing brightness
 <!-- Notes END: Do not edit below this line -->
 
 
