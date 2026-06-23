@@ -24,7 +24,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Presence zones
+Zigbee2MQTT discovers configured presence zones from the Shelly device configuration over RPC. After the configuration has been read, only configured zones are exposed. Before this discovery has completed, or when the RPC read fails, Zigbee2MQTT falls back to the maximum supported zone list.
 
 <!-- Notes END: Do not edit below this line -->
 
@@ -169,4 +172,3 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `net_mask` (text): Subnet mask for the static IP configuration 
 - `gateway` (text): Default gateway address for static IP configuration 
 - `name_server` (text): Name server address for static IP configuration 
-
