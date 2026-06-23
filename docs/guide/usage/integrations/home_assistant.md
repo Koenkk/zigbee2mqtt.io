@@ -41,6 +41,10 @@ without having to restart Home Assistant. It also makes it possible to show whic
 
 The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/devices-groups.html#specific-device-options) for the available options.
 
+## Electrical telemetry entities
+
+Devices with a primary controllable entity, such as a switch, light, cover, lock, or fan, can also expose electrical measurements. In Home Assistant, secondary telemetry such as voltage and AC frequency is treated as diagnostic data when the device also exposes primary power or energy data.
+
 ## Responding to button actions
 
 To respond to button actions you can use one of the following Home Assistant configurations.
