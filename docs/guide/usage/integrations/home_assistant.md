@@ -43,7 +43,7 @@ The device specific configuration allows you to modify the discovery payload. He
 
 ## Electrical telemetry entities
 
-Devices with a primary controllable entity, such as a switch, light, cover, lock, or fan, can also expose electrical measurements. In Home Assistant, secondary telemetry such as voltage and AC frequency is treated as diagnostic data when the device also exposes primary power or energy data.
+Device definitions can mark secondary electrical measurements with Home Assistant discovery metadata. For modern meter-based devices, voltage, phase voltage, and AC frequency are exposed as diagnostic entities, while primary power, energy, and current entities stay visible as normal measurements.
 
 ## Responding to button actions
 
