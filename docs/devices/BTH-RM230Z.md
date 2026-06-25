@@ -26,6 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the back of the cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+
+## Optional relay
+The thermostat can be used as a thermostat-only device or with its relay exposed as a switch. Zigbee2MQTT exposes the relay switch by default; disable the `expose_relay` device option if the installation should only expose thermostat controls.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -165,4 +168,3 @@ Indicates whether the device encounters any errors or not.
 Value can be found in the published state on the `error_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"error_state": ""}`.
 It's not possible to write (`/set`) this value.
-
