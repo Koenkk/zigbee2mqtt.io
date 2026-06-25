@@ -42,9 +42,11 @@ Zigbee2MQTT exposes switch input type controls for each input endpoint reported 
 
 ### Cover Mode Features
 When operating in cover mode, this device provides:
-- Window covering controls (lift and tilt)
+- Window covering controls
 - Position feedback
 - State reporting (OPEN/CLOSE)
+
+Tilt support is only available when slat control is enabled on the Shelly device. The `cover_tilt_enabled` device option controls whether Zigbee2MQTT exposes tilt: `auto` reads the Shelly cover configuration over RPC, while `true` or `false` can be used to override the detected value.
 
 Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
 
