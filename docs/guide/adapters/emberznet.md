@@ -1,6 +1,6 @@
 # EmberZNet adapters (Silicon Labs)
 
-Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x, 8.2.x
+Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x, 8.2.x, 9.0.x, 9.1.x
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
