@@ -35,6 +35,14 @@ After switching to Zigbee mode, enable permit join in Zigbee2MQTT and press and 
 ### Door/window calibration
 
 When using the device in door/window mode, the sensor should be calibrated after installation. Close the door or window, then press the device button 3 times. This sets the current position as the closed state.
+
+### Object mode calibration
+
+When using the device in object mode, the sensor should be calibrated before use. Place the sensor face-up on a flat level surface, then press the device button 3 times.
+
+### Actions
+
+`triple_tap`, `movement`, `vibration`, `orientation`, `fall`, `static` are only reported when the device is in Object mode. To use these momentary events in Home Assistant enable `experimental_event_entities` in the Zigbee2MQTT Home Assistant integration settings.
 <!-- Notes END: Do not edit below this line -->
 
 
