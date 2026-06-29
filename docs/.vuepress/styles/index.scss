@@ -1,0 +1,191 @@
+@import 'palette';
+
+:root {
+    --content-width: 940px;
+}
+
+.body--dark {
+    .q-menu,
+    .q-select__dialog {
+        background: #333538;
+    }
+}
+
+@media (max-width: 959px) {
+    .back-to-top {
+        display: block !important;
+    }
+}
+
+img.float-left {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+.page {
+    padding-bottom: 3rem;
+}
+
+// Hide @vuepress/theme-default repo link in navbar
+.navbar-links .navbar-links-item:last-child {
+    display: none;
+}
+
+code {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-left: 0.2rem !important;
+    margin-right: 0.2rem !important;
+}
+
+.theme-default-content pre code,
+.theme-default-content pre[class*='language-'] code {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.dark .custom-container.tip code {
+    background: #292c34;
+}
+
+.theme-default-content:not(.custom) {
+    @media (max-width: $MQNarrow) {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+
+        // Disable line-numbers on small devices
+        div[class*='language-'] {
+            margin: 0;
+            &:after {
+                display: none;
+            }
+            .line-numbers {
+                display: none;
+            }
+            > pre {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.no-sidebar .theme-default-content:not(.custom) {
+    max-width: 1065px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+footer a {
+    color: var(--c-text-accent) !important;
+}
+
+.page {
+    a,
+    summary {
+        position: relative;
+    }
+
+    &:not(.custom) a:hover {
+        text-decoration: none;
+    }
+
+    /* Link hover fade-in */
+    a::after,
+    summary:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: var(--c-text-accent);
+        opacity: 0;
+        transition:
+            opacity 250ms,
+            transform 250ms;
+    }
+
+    a:hover::after,
+    a:focus::after,
+    summary:hover::after {
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+    }
+
+    .page-nav .next a:after,
+    .page-nav .prev a:before {
+        content: ' ';
+    }
+    .page-nav .next:after {
+        content: '→';
+    }
+    .page-nav .prev:before {
+        content: '←';
+    }
+
+    summary {
+        color: var(--c-text-accent);
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    details {
+        > p,
+        > div,
+        > ul {
+            background: var(--c-bg-navbar);
+            padding: 0.5rem 1.5rem 1rem 1.5rem;
+            margin: 0;
+            border-left: 0.5rem solid var(--c-border);
+            border-radius: 0;
+            &:nth-child(2) {
+                margin-top: 0.5rem;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+            &:last-child {
+                margin-bottom: 1rem;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+            }
+        }
+        > ul {
+            padding-left: 2.5rem;
+        }
+        div[class*='language-'] {
+            background: var(--code-bg-color);
+            padding: 0;
+            > pre {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.home {
+    .actions > a {
+        margin: 0.5rem 0.5rem 0 0.5rem !important;
+        font-weight: bold;
+    }
+}
+
+.sidebar {
+    .sidebar-links {
+        > ul {
+            overflow: hidden;
+            height: 0;
+        }
+        .active + ul {
+            height: auto;
+        }
+        > ul:only-of-type {
+            height: auto;
+        }
+    }
+}

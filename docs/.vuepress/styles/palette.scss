@@ -1,0 +1,99 @@
+// https://v2.vuepress.vuejs.org/reference/default-theme/styles.html#palette-file
+
+// responsive breakpoints
+$MQNarrow: 1000px;
+$MQMobile: 820px;
+$MQMobileNarrow: 419px;
+
+:root {
+    // brand colors
+    --c-brand: #1e6bb8;
+    --c-brand-light: #3072b4;
+
+    // background colors
+    --c-bg: #ffffff;
+    --c-bg-light: #f3f4f5;
+    --c-bg-lighter: #eeeeee;
+    --c-bg-navbar: #f3f4f5;
+    --c-bg-sidebar: #f3f4f5;
+    --c-bg-arrow: #cccccc;
+
+    // text colors
+    --c-text: #272727;
+    --c-text-accent: var(--c-brand);
+    --c-text-light: #222;
+    --c-text-lighter: #495154;
+    --c-text-lightest: #738086;
+    --c-text-quote: #999999;
+
+    // border colors
+    --c-border: #eaecef;
+    --c-border-dark: #dfe2e5;
+
+    // custom container colors
+    --c-tip: #42b983;
+    --c-tip-bg: var(--c-bg-light);
+    --c-tip-title: var(--c-text);
+    --c-tip-text: var(--c-text);
+    --c-tip-text-accent: var(--c-text-accent);
+    --c-warning: #e7c000;
+    --c-warning-bg: #fffae3;
+    --c-warning-title: #ad9000;
+    --c-warning-text: #746000;
+    --c-warning-text-accent: var(--c-text);
+    --c-danger: #cc0000;
+    --c-danger-bg: #ffe0e0;
+    --c-danger-title: #990000;
+    --c-danger-text: #660000;
+    --c-danger-text-accent: var(--c-text);
+    --c-details-bg: #eeeeee;
+
+    // badge component colors
+    --c-badge-tip: var(--c-tip);
+    --c-badge-warning: var(--c-warning);
+    --c-badge-danger: var(--c-danger);
+
+    // code blocks vars
+    --code-bg-color: #282c34;
+    --code-hl-bg-color: rgba(0, 0, 0, 0.66);
+    --code-ln-color: #9e9e9e;
+    --code-ln-wrapper-width: 3.5rem;
+}
+
+html.dark {
+    // brand colors
+    --c-brand: #ffc135;
+    --c-brand-light: #ffd97e;
+
+    // background colors
+    --c-bg: #232629;
+    --c-bg-light: #31363b;
+    --c-bg-lighter: #262c34;
+    --c-bg-sidebar: #2a2e32;
+    --c-bg-navbar: #2a2e32;
+
+    // text colors
+    --c-text: #cecece;
+    --c-text-light: #c5c5c5;
+    --c-text-lighter: #c2c2c2;
+    --c-text-lightest: #c0c0c0;
+
+    // border colors
+    --c-border: #3e4c5a;
+    --c-border-dark: #34404c;
+
+    // custom container colors
+    --c-tip: #318a62;
+    --c-warning: #ceab00;
+    --c-warning-bg: #7e755b;
+    --c-warning-title: #ceac03;
+    --c-warning-text: #eeeeee;
+    --c-danger: #940000;
+    --c-danger-bg: #806161;
+    --c-danger-title: #610000;
+    --c-danger-text: #3a0000;
+    --c-details-bg: #323843;
+
+    // code blocks vars
+    --code-hl-bg-color: #363b46;
+}

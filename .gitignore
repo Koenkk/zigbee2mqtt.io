@@ -1,0 +1,8 @@
+node_modules
+.temp
+.cache
+dist
+.idea
+.DS_Store
+docgen/missing-device-images/
+venv/

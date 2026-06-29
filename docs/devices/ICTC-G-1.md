@@ -1,0 +1,124 @@
+---
+title: "IKEA ICTC-G-1 control via MQTT"
+description: "Integrate your IKEA ICTC-G-1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# IKEA ICTC-G-1
+
+|     |     |
+|-----|-----|
+| Model | ICTC-G-1  |
+| Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
+| Description | TRADFRI wireless dimmer |
+| Exposes | identify, battery, action |
+| Picture | ![IKEA ICTC-G-1](https://www.zigbee2mqtt.io/images/devices/ICTC-G-1.png) |
+
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+
+### Pairing
+To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
+4 times (so the red lights starts blinking).
+After the blinks you might be willing to rotate the dimmer
+like you are trying to control your lights. It will prevent the device
+from going to sleep and ensure successful pairing. In case the dimmer was
+recognized but no actions seems to be detected, try to restart Zigbee2MQTT.
+See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
+
+
+### Legacy integration
+By default (for backwards compatibility purposes) the legacy integration is enabled.
+For new users it is recommended to **disable** this as it has several fundamental problems.
+To disable the legacy integration add the following to your `configuration.yaml`:
+
+
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    legacy: false
+```
+
+
+
+The information below only applies to the legacy integration.
+
+### Recommendation
+This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without losing unique action payloads.
+
+E.g. (devices.yaml)
+
+
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    debounce: 0.5
+    debounce_ignore:
+    - action
+```
+
+
+To find optimal "smoothness" play with debounce time or if you need all unique rotation steps consider adding `brightness` to `debounce_ignore` option
+
+
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    debounce: 0.1
+    debounce_ignore:
+    - action
+    - brightness
+```
+<!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
+
+
+## Exposes
+
+### Identify (enum)
+Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `brightness_move_to_level`.
+
