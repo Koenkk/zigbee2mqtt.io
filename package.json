@@ -26,7 +26,7 @@
     },
     "devDependencies": {
         "@types/json-schema": "^7.0.15",
-        "@types/node": "26.0.0",
+        "@types/node": "26.0.1",
         "@vuepress/bundler-vite": "2.0.0-rc.30",
         "@vuepress/client": "2.0.0-rc.30",
         "@vuepress/plugin-docsearch": "2.0.0-rc.130",
@@ -41,7 +41,7 @@
         "glob": "13.0.6",
         "husky": "9.1.7",
         "image-size": "2.0.2",
-        "prettier": "3.8.4",
+        "prettier": "3.9.3",
         "pug": "3.0.4",
         "pug-plain-loader": "1.1.0",
         "sass": "1.101.0",
@@ -49,8 +49,8 @@
         "throat": "6.0.2",
         "ts-node": "10.9.2",
         "typescript": "6.0.3",
-        "vite": "8.0.16",
-        "vue": "3.5.38",
+        "vite": "8.1.0",
+        "vue": "3.5.39",
         "vuepress": "2.0.0-rc.30",
         "zigbee-herdsman-converters": "26.63.0"
     },
