@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Mercury_3ph_Counter  |
 | Vendor  | [Bacchus](/supported-devices/#v=Bacchus)  |
 | Description | Zigbee Mercury 3 Phase electricity meter |
-| Exposes | power, voltage, current, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, energy_t1, energy_t2, energy_t3, energy_t4, measurement_period, device_address, temperature |
+| Exposes | power, voltage, current, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, energy_t1, energy_t2, energy_t3, energy_t4, energy_all, measurement_period, device_address, temperature |
 | Picture | ![Bacchus Mercury_3ph_Counter](https://www.zigbee2mqtt.io/images/devices/Mercury_3ph_Counter.png) |
 
 
@@ -163,6 +163,13 @@ The unit of this value is `kWh`.
 Energy on tariff 4.
 Value can be found in the published state on the `energy_t4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_t4": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Energy all (numeric)
+Energy on all tariffs.
+Value can be found in the published state on the `energy_all` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_all": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-104PLV  |
 | Vendor  | [Excellux](/supported-devices/#v=Excellux)  |
 | Description | PIR motion sensor, vibration sensor, and light sensor |
-| Exposes | presence, vibration, illuminance_warning, battery, illuminance, vibration_count, sampling_interval, vibration_sensitivity, illuminance_v0, illuminance_v1, illuminance_calibration |
+| Exposes | occupancy, vibration, illuminance_warning, battery, illuminance, vibration_count, sampling_interval, vibration_sensitivity, illuminance_v0, illuminance_v1, illuminance_calibration |
 | Picture | ![Excellux ZG-104PLV](https://www.zigbee2mqtt.io/images/devices/ZG-104PLV.png) |
 
 
@@ -46,11 +46,11 @@ The device uses the PIR sensor area as its light sensor and reports `lux=0` even
 
 ## Exposes
 
-### Presence (enum)
+### Occupancy (binary)
 Presence state, true: motion detected, false: no motion.
-Value can be found in the published state on the `presence` property.
+Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `true`, `false`.
+If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Vibration (binary)
 Vibration state, true: vibration detected, false: no vibration.

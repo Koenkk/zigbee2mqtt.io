@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HM-722ESY-E Plus  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Co detector |
-| Exposes | battery, identify, temperature, carbon_monoxide, battery_low, test, co, endoflife, alarm_state, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, link_available, siren_for_automation_only, temperature_offset, reported_packages, rejoin_count, reboot_count |
+| Exposes | battery, identify, temperature, carbon_monoxide, battery_low, test, co, endoflife, alarm_state, preheating, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, link_available, siren_for_automation_only, temperature_offset, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman HM-722ESY-E Plus](https://www.zigbee2mqtt.io/images/devices/HM-722ESY-E-Plus.png) |
 
 
@@ -109,6 +109,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The possible values are: `normal`, `prealarm`, `warning_alarm`, `critical_alarm`.
 
+### Preheating (enum)
+It indicates if the sensor is under preheating status.
+Value can be found in the published state on the `preheating` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preheating": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `normal`, `preheating`.
+
 ### Fault state (text)
 Device fault status (normal or fault types)..
 Value can be found in the published state on the `fault_state` property.
@@ -164,11 +171,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `stop`, `smoke_siren`, `co_siren`.
 
 ### Temperature offset (numeric)
-used for temperature offset, unit: 0.01℃.
+used for temperature offset, unit: ℃.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
-The minimal value is `-1500` and the maximum value is `1500`.
+The minimal value is `-15` and the maximum value is `15`.
 
 ### Reported packages (numeric)
 for diagnostic purpose, how many zigbee packages has the reported in a day..

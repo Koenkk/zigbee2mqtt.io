@@ -563,7 +563,7 @@ availability:
 
 Active
 
-#### timeout <span style="color: red">\*</span>
+#### timeout <span style="color: red">*</span>
 
 Time after which an active device will be marked as offline in minutes
 
@@ -623,7 +623,7 @@ availability:
 
 Passive
 
-#### timeout <span style="color: red">\*</span>
+#### timeout <span style="color: red">*</span>
 
 Time after which an passive device will be marked as offline in minutes
 
@@ -640,7 +640,7 @@ availability:
 
 ## devices
 
-#### friendly_name <span style="color: red">\*</span>
+#### friendly_name <span style="color: red">*</span>
 
 Used in the MQTT topic of a device. By default this is the device ID
 
@@ -966,7 +966,7 @@ frontend:
 
 ### notification_filter
 
-Hide frontend notifications matching specified regex strings. Example: 'z2m: Failed to ping.\*'
+Hide frontend notifications matching specified regex strings. Example: 'z2m: Failed to ping.*'
 
 ```yaml
 frontend:
@@ -989,7 +989,7 @@ frontend:
 
 ## groups
 
-#### friendly_name <span style="color: red">\*</span>
+#### friendly_name <span style="color: red">*</span>
 
 ```yaml
 groups:
@@ -1316,7 +1316,7 @@ mqtt:
     - `"zigbee2mqtt"`
 - <span style="color: red">Restart required to be effective</span>
 
-### server <span style="color: red">\*</span>
+### server <span style="color: red">*</span>
 
 MQTT server URL (use mqtts:// for SSL/TLS connection)
 
@@ -1438,6 +1438,20 @@ mqtt:
 
 - Type: `boolean`
 - Default: `true`
+- <span style="color: red">Restart required to be effective</span>
+
+### server_name
+
+Override the TLS SNI / hostname used for certificate verification when it differs from the host in 'server' (e.g. connecting to an internal service DNS name while validating a public certificate SAN). Leave unset to use the hostname from 'server'.
+
+```yaml
+mqtt:
+    server_name: 'mqtt.example.com'
+```
+
+- Type: `string`
+- Examples:
+    - `"mqtt.example.com"`
 - <span style="color: red">Restart required to be effective</span>
 
 ### include_device_information

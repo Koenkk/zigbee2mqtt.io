@@ -18,13 +18,12 @@ pageClass: device-page
 | Model | SNZB-02DR2  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor with display and relay control |
-| Exposes | battery, voltage, temperature, humidity, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, temperature_units, temperature_calibration, humidity_calibration |
+| Exposes | battery, voltage, temperature, humidity, temperature_sensor_select, external_temperature, external_humidity, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, temperature_units, temperature_calibration, humidity_calibration |
 | Picture | ![SONOFF SNZB-02DR2](https://www.zigbee2mqtt.io/images/devices/SNZB-02DR2.png) |
 
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 ### Displaying readings from an external sensor
@@ -69,7 +68,6 @@ actions:
         }
 mode: single
 ```
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -118,6 +116,29 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
 It's not possible to write (`/set`) this value.
+The unit of this value is `%`.
+
+### Temperature sensor select (enum)
+Data source shown on the display. Set to 'external' to enable the external display and show the values written to external_temperature and external_humidity; set to 'internal' to show the built-in sensor again..
+Value can be found in the published state on the `temperature_sensor_select` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
+The possible values are: `internal`, `external`.
+
+### External temperature (numeric)
+Temperature value to display when temperature_sensor_select is set to 'external'. Push readings here from another sensor (e.g. via an automation)..
+Value can be found in the published state on the `external_temperature` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_temperature": NEW_VALUE}`.
+The minimal value is `-50` and the maximum value is `125`.
+The unit of this value is `°C`.
+
+### External humidity (numeric)
+Relative humidity value to display when temperature_sensor_select is set to 'external'. Push readings here from another sensor. Requires device firmware 1.0.4 or later..
+Value can be found in the published state on the `external_humidity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_humidity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Comfort temperature min (numeric)

@@ -66,5 +66,5 @@ Set Indicator Mode for smart switch..
 Value can be found in the published state on the `indicator_mode_smart` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode_smart": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode_smart": NEW_VALUE}`.
-The possible values are: `reverse_with_load`, `consistent_with_load`, `always_off`, `always_on`.
+The possible values are: `reverse_with_load`, `consistent_with_load`, `always_off`, `always_on`, `flash_on_click`.
 

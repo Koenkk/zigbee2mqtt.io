@@ -1,6 +1,6 @@
 ---
-title: "Haozee  HZ-SL10 control via MQTT"
-description: "Integrate your HOBEIAN ZG-303Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Haozee HZ-SL10 control via MQTT"
+description: "Integrate your Haozee HZ-SL10 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-01-24T08:59:10
 pageClass: device-page
 ---
@@ -15,10 +15,10 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model |  HZ-SL10  |
-| Vendor  | [Haozee](/supported-devices/#v=HOBEIAN)  |
+| Model | HZ-SL10  |
+| Vendor  | [Haozee](/supported-devices/#v=Haozee)  |
 | Description | Soil moisture sensor |
-| Exposes | water_warning, temperature, humidity, soil_moisture, temperature_unit, temperature_calibration, humidity_calibration, soil_calibration, temperature_sampling, soil_sampling, soil_warning, battery |
+| Exposes | dry, temperature, soil_moisture, temperature_unit, temperature_calibration, soil_calibration, temperature_sampling, soil_sampling, soil_warning, battery |
 | Picture | ![Haozee HZ-SL10](https://www.zigbee2mqtt.io/images/devices/HZ-SL10.png) |
 
 
@@ -40,10 +40,6 @@ Pair the device by holding the button (the water droplet is the button) for 6 se
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
-
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
-
 * `soil_moisture_calibration`: Calibrates the soil_moisture value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `soil_moisture_precision`: Number of digits after decimal point for soil_moisture, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
@@ -51,23 +47,17 @@ Pair the device by holding the button (the water droplet is the button) for 6 se
 
 ## Exposes
 
-### Water warning (enum)
+### Dry (binary)
 Water shortage warning.
-Value can be found in the published state on the `water_warning` property.
+Value can be found in the published state on the `dry` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `none`, `alarm`.
+If value equals `true` dry is ON, if `false` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Humidity (numeric)
-Measured relative humidity.
-Value can be found in the published state on the `humidity` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `%`.
 
 ### Soil moisture (numeric)
 Measured soil moisture value.
@@ -89,14 +79,6 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
-
-### Humidity calibration (numeric)
-Humidity calibration.
-Value can be found in the published state on the `humidity_calibration` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
-The minimal value is `-30` and the maximum value is `30`.
-The unit of this value is `%`.
 
 ### Soil calibration (numeric)
 Soil Humidity calibration.
