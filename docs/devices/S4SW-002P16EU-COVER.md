@@ -37,6 +37,9 @@ The Shelly 2PM Gen4 device allows two different usage scenarios that appear as s
 
 The usage is automatically detected based on the endpoint configuration.  For now, changing usage is only possible through Shelly WebUI.
 
+### Switch inputs
+Zigbee2MQTT exposes switch input type controls for each input endpoint reported by the device. Cover-mode devices normally expose `switch_type_sw1` and `switch_type_sw2`; devices that do not report a second switch input endpoint only expose the available input.
+
 ### Cover Mode Features
 When operating in cover mode, this device provides:
 - Window covering controls (lift and tilt)
@@ -120,4 +123,3 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_hold`, `input_2_on`, `input_2_off`, `input_2_toggle`, `input_2_hold`.
-

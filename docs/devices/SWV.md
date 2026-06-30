@@ -127,7 +127,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `L`.
 
 ### Valve work state (binary)
-Current valve work state.
+Current valve work state. This turns on when a Cyclic timed or quantitative irrigation program is running, and turns off when the program is complete.
 Value can be found in the published state on the `valve_work_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `working` valve work state is ON, if `idle` OFF.

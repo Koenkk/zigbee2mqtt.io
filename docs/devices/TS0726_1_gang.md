@@ -24,7 +24,20 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Zemismart KES-606US (`_TZ3000_ovbvmhiq`)
+
+This 1 gang variant is the Zemismart KES-606US-LH1. It additionally exposes an `indicator_mode` enum (`none` / `relay` / `pos`) to control the LED backlight behaviour.
+
+**Scene mode requires one-time initialization with the Tuya / Smart Life app before pairing to Zigbee2MQTT.** Without this step, setting `switch_mode` to `scene` will not emit `action` events. To enable it:
+
+1. Pair the switch to the Tuya Smart Life app (using a Tuya Zigbee gateway).
+2. Set the desired gang(s) to **Scene Mode** in the Smart Life device settings.
+3. Remove the device from Smart Life.
+4. Factory reset the switch and pair it to Zigbee2MQTT.
+
+After this, `switch_mode: scene` will emit `scene_1` actions that can be used in automations.
 
 <!-- Notes END: Do not edit below this line -->
 
