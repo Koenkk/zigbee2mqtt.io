@@ -41,6 +41,10 @@ without having to restart Home Assistant. It also makes it possible to show whic
 
 The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/devices-groups.html#specific-device-options) for the available options.
 
+## Electrical telemetry entities
+
+Device definitions can mark secondary electrical measurements with Home Assistant discovery metadata. For modern meter-based devices, voltage, phase voltage, and AC frequency are exposed as diagnostic entities, while primary power, energy, and current entities stay visible as normal measurements.
+
 ## Responding to button actions
 
 To respond to button actions you can use one of the following Home Assistant configurations.
