@@ -36,6 +36,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `shelly_wifi_ssid`: Full Wi-Fi SSID to use when the Shelly Wi-Fi setup cluster reports a shortened network name. The value must be textual.
+
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
@@ -93,5 +95,5 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_hold`.
+The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_single`, `input_1_double`, `input_1_triple`, `input_1_hold`.
 

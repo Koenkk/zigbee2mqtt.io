@@ -52,7 +52,7 @@
         "vite": "8.1.0",
         "vue": "3.5.39",
         "vuepress": "2.0.0-rc.30",
-        "zigbee-herdsman-converters": "26.63.0"
+        "zigbee-herdsman-converters": "26.76.0"
     },
     "pnpm": {
         "onlyBuiltDependencies": [

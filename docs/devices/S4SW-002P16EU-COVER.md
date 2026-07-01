@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-002P16EU-COVER  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 2PM Gen4 (Cover mode) |
-| Exposes | switch_type, cover (state, position, tilt), wifi_status, ip_address, dhcp_enabled, wifi_config, action |
+| Exposes | action, switch_type, cover (state, position), wifi_status, ip_address, dhcp_enabled, wifi_config |
 | Picture | ![Shelly S4SW-002P16EU-COVER](https://www.zigbee2mqtt.io/images/devices/S4SW-002P16EU-COVER.png) |
 
 
@@ -60,12 +60,22 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `cover_tilt_enabled`: Expose tilt/slat controls for covers with Shelly slat control enabled. The value must be one of `auto`, `true`, `false`
+
+* `shelly_wifi_ssid`: Full Wi-Fi SSID to use when the Shelly Wi-Fi setup cluster reports a shortened network name. The value must be textual.
+
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
 ## Exposes
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_single`, `input_1_double`, `input_1_triple`, `input_1_hold`, `input_2_on`, `input_2_off`, `input_2_toggle`, `input_2_single`, `input_2_double`, `input_2_triple`, `input_2_hold`.
 
 ### Switch type (enum, sw1 endpoint)
 Switch input type.
@@ -86,7 +96,6 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
-To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Wi-Fi status (text)
 Current connection status.
@@ -118,8 +127,3 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `gateway` (text): Default gateway address for static IP configuration 
 - `name_server` (text): Name server address for static IP configuration 
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_hold`, `input_2_on`, `input_2_off`, `input_2_toggle`, `input_2_hold`.

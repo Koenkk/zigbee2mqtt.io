@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TO-Q-SYS-JZT  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Din rail smart meter |
-| Exposes | switch (state), power, current, voltage, energy, ac_frequency, power_factor, temperature, event, over_current_setting, over_current_threshold, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, test1, test5 |
+| Exposes | switch (state), power, current, voltage, energy, ac_frequency, power_factor, temperature, event, control_mode, over_current_setting, over_current_threshold, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, test1, test5 |
 | Picture | ![Tongou TO-Q-SYS-JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SYS-JZT.png) |
 
 
@@ -112,6 +112,13 @@ Last event of the device.
 Value can be found in the published state on the `event` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `normal`, `over_current_trip`, `over_power_trip`, `high_temp_trip`, `over_voltage_trip`, `under_voltage_trip`, `over_current_alarm`, `over_power_alarm`, `high_temp_alarm`, `over_voltage_alarm`, `under_voltage_alarm`, `remote_on`, `remote_off`, `manual_on`, `manual_off`, `leakage_trip`, `leakage_alarm`, `restore_default`, `automatic_closing`, `electricity_shortage`, `electricity_shortage_alarm`, `timing_switch_On`, `timing_switch_off`.
+
+### Control mode (enum)
+Device control mode.
+Value can be found in the published state on the `control_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_mode": NEW_VALUE}`.
+The possible values are: `local_lock`, `local_mode`, `remote_mode`, `full_control`.
 
 ### Over current setting (enum)
 Over current setting.

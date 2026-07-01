@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TRV-ZBT  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee thermostatic radiator valve |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, fault_code, screen_direction, child_lock, open_window, frost_protection_temperature, temperature_sensor_select, external_temperature_input, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, heating_valve_position, idle_valve_position, temperature_accuracy, smart_temperature_control, temporary_mode, low_battery_valve_state, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, open_window_detected, heat_percentage_hour, bluetooth_pairing, bluetooth_pairing_status, read_temperature_control_history, temperature_control_history |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, fault_code, screen_direction, child_lock, open_window, frost_protection_temperature, temperature_sensor_select, external_temperature_input, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, heating_valve_position, idle_valve_position, temperature_accuracy, smart_temperature_control, temporary_mode, low_battery_valve_state, schedule_active_group, schedule_group_to_edit, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, open_window_detected, heat_percentage_hour, valve_travel_calibration, motor_travel_calibration_status, bluetooth_pairing, bluetooth_pairing_status, read_temperature_control_history, temperature_control_history |
 | Picture | ![SONOFF TRV-ZBT](https://www.zigbee2mqtt.io/images/devices/TRV-ZBT.png) |
 
 
@@ -175,7 +175,7 @@ Temporary temperature mode settings..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode": {"mode": VALUE, "duration": VALUE, "target_temperature": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode": ""}`.
 - `mode` (enum): Temporary mode. allowed values: `boost`, `timer`
-- `duration` (numeric): Boost Mode: Sets maximum TRV temperature for up to 180 minutes.Timer Mode: Customizes temperature and duration, up to 24 hours. min value is 1, max value is 1440, unit is minutes
+- `duration` (numeric): Boost Mode: Sets maximum TRV temperature for up to 180 minutes.Timer Mode: Customizes temperature and duration, up to 24 hours. max value is 1440, unit is minutes
 - `target_temperature` (numeric): Target temperature used in timer mode. min value is 5, max value is 30, unit is °C
 
 ### Low battery valve state (enum)
@@ -184,6 +184,20 @@ Value can be found in the published state on the `low_battery_valve_state` prope
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_battery_valve_state": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_battery_valve_state": NEW_VALUE}`.
 The possible values are: `close`, `open_30`.
+
+### Schedule active group (enum)
+The schedule group currently used in Auto mode..
+Value can be found in the published state on the `schedule_active_group` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_active_group": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_active_group": NEW_VALUE}`.
+The possible values are: `1`, `2`, `3`.
+
+### Schedule group to edit (enum)
+Select the schedule group to view or edit its weekly schedule settings..
+Value can be found in the published state on the `schedule_group_to_edit` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_group_to_edit": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_group_to_edit": NEW_VALUE}`.
+The possible values are: `1`, `2`, `3`.
 
 ### Weekly schedule sunday (text)
 The preset heating schedule to use when the system mode is set to "auto" (indicated with ⏲ on the TRV). Up to 12 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 5-30°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..
@@ -240,6 +254,19 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Valve travel calibration (enum)
+Calibrates the valve travel range to ensure accurate opening and closing control..
+Value can be found in the published state on the `valve_travel_calibration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_travel_calibration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_travel_calibration": NEW_VALUE}`.
+The possible values are: `calibrate`.
+
+### Motor travel calibration status (text)
+Motor travel calibration status.
+Value can be found in the published state on the `motor_travel_calibration_status` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_travel_calibration_status": ""}`.
+It's not possible to write (`/set`) this value.
 
 ### Bluetooth pairing (enum)
 Start or stop TRV-ZBT Bluetooth pairing mode..

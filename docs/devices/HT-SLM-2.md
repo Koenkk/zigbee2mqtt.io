@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HT-SLM-2  |
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
-| Description | Doorlock with fingerprint |
+| Description | Smart (fingerprint/PIN/RFID) doorlock |
 | Exposes | lock (state, lock_state), pin_code, battery, sound_volume |
 | Picture | ![Heimgard Technologies HT-SLM-2](https://www.zigbee2mqtt.io/images/devices/HT-SLM-2.png) |
 
@@ -65,9 +65,9 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Sound volume (enum)
-Sound volume of the lock.
+Sound volume.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
-The possible values are: `silent_mode`, `low_volume`, `high_volume`.
+The possible values are: `off`, `low`, `medium`, `high`.
 

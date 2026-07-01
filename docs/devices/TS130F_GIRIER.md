@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS130F_GIRIER  |
 | Vendor  | [Girier](/supported-devices/#v=Girier)  |
 | Description | Smart curtain switch |
-| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode |
+| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode, switch_type |
 | Picture | ![Girier TS130F_GIRIER](https://www.zigbee2mqtt.io/images/devices/TS130F_GIRIER.png) |
 
 
@@ -75,4 +75,11 @@ Value can be found in the published state on the `calibration_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time": NEW_VALUE}`.
 The unit of this value is `s`.
+
+### Switch type (enum)
+Type of the installed switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `momentary`, `toggle`.
 
