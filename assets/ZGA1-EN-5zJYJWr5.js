@@ -1,0 +1,45 @@
+import { F as openBlock, _ as createVNode, c as createBaseVNode, d as createElementBlock, g as createTextVNode, h as createStaticVNode, q as withCtx, z as resolveComponent } from "./runtime-core.esm-bundler-7nvd8r64.js";
+import { t as _plugin_vue_export_helper_default } from "./app-6lrgQ-1_.js";
+//#region docs/devices/ZGA1-EN.md
+var _pageData = JSON.parse("{\"path\":\"/devices/ZGA1-EN.html\",\"title\":\"IMOU ZGA1-EN control via MQTT\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"device-page\",\"title\":\"IMOU ZGA1-EN control via MQTT\",\"description\":\"Integrate your IMOU ZGA1-EN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway.\",\"addedAt\":\"2025-05-01T17:59:08.000Z\"},\"git\":{\"updatedTime\":1780255998000,\"contributors\":[{\"name\":\"Koen Kanters\",\"username\":\"\",\"email\":\"koenkanters94@gmail.com\",\"commits\":2}],\"changelog\":[{\"hash\":\"418544c6755785747a937feb1d71964b20cc22d2\",\"time\":1780255998000,\"email\":\"koenkanters94@gmail.com\",\"author\":\"Koen Kanters\",\"message\":\"Bump zhc\"},{\"hash\":\"7fecb4295cc84ff50f35d4450bad1d971ff8644f\",\"time\":1746123337000,\"email\":\"koenkanters94@gmail.com\",\"author\":\"Koen Kanters\",\"message\":\"Update zhc to 23.36.0\"}]},\"filePathRelative\":\"devices/ZGA1-EN.md\"}");
+var _sfc_main = { name: "ZGA1-EN.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	const _component_RouteLink = resolveComponent("RouteLink");
+	return openBlock(), createElementBlock("div", null, [
+		_cache[8] || (_cache[8] = createBaseVNode("h1", {
+			id: "imou-zga1-en",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#imou-zga1-en"
+		}, [createBaseVNode("span", null, "IMOU ZGA1-EN")])], -1)),
+		createBaseVNode("table", null, [_cache[6] || (_cache[6] = createBaseVNode("thead", null, [createBaseVNode("tr", null, [createBaseVNode("th"), createBaseVNode("th")])], -1)), createBaseVNode("tbody", null, [
+			_cache[2] || (_cache[2] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Model"), createBaseVNode("td", null, "ZGA1-EN")], -1)),
+			createBaseVNode("tr", null, [_cache[1] || (_cache[1] = createBaseVNode("td", null, "Vendor", -1)), createBaseVNode("td", null, [createVNode(_component_RouteLink, { to: "/supported-devices/#v=IMOU" }, {
+				default: withCtx(() => [..._cache[0] || (_cache[0] = [createTextVNode("IMOU", -1)])]),
+				_: 1
+			})])]),
+			_cache[3] || (_cache[3] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Description"), createBaseVNode("td", null, "Smart gas detector")], -1)),
+			_cache[4] || (_cache[4] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Exposes"), createBaseVNode("td", null, "gas_alarm_1, gas_alarm_2, tamper, test")], -1)),
+			_cache[5] || (_cache[5] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Picture"), createBaseVNode("td", null, [createBaseVNode("img", {
+				src: "https://www.zigbee2mqtt.io/images/devices/ZGA1-EN.png",
+				alt: "IMOU ZGA1-EN"
+			})])], -1))
+		])]),
+		_cache[9] || (_cache[9] = createBaseVNode("h2", {
+			id: "options",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#options"
+		}, [createBaseVNode("span", null, "Options")])], -1)),
+		createBaseVNode("p", null, [createBaseVNode("em", null, [createVNode(_component_RouteLink, { to: "/guide/configuration/devices-groups.html#specific-device-options" }, {
+			default: withCtx(() => [..._cache[7] || (_cache[7] = [createTextVNode("How to use device type specific configuration", -1)])]),
+			_: 1
+		})])]),
+		_cache[10] || (_cache[10] = createStaticVNode("<ul><li><code>gas_timeout</code>: Time in seconds after which gas is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of <code>0</code></li></ul><h2 id=\"exposes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#exposes\"><span>Exposes</span></a></h2><h3 id=\"gas-alarm-1-binary\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#gas-alarm-1-binary\"><span>Gas alarm 1 (binary)</span></a></h3><p>Indicates whether the device detected gas (alarm_1). Value can be found in the published state on the <code>gas_alarm_1</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. If value equals <code>true</code> gas alarm 1 is ON, if <code>false</code> OFF.</p><h3 id=\"gas-alarm-2-binary\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#gas-alarm-2-binary\"><span>Gas alarm 2 (binary)</span></a></h3><p>Indicates whether the device detected gas (alarm_2). Value can be found in the published state on the <code>gas_alarm_2</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. If value equals <code>true</code> gas alarm 2 is ON, if <code>false</code> OFF.</p><h3 id=\"tamper-binary\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#tamper-binary\"><span>Tamper (binary)</span></a></h3><p>Indicates whether the device is tampered. Value can be found in the published state on the <code>tamper</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. If value equals <code>true</code> tamper is ON, if <code>false</code> OFF.</p><h3 id=\"test-binary\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#test-binary\"><span>Test (binary)</span></a></h3><p>Indicates whether the device is currently performing a test. Value can be found in the published state on the <code>test</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. If value equals <code>true</code> test is ON, if <code>false</code> OFF.</p>", 10))
+	]);
+}
+var ZGA1_EN_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+//#endregion
+export { _pageData, ZGA1_EN_default as default };
