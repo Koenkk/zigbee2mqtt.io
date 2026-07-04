@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nova Digital ZTS-MM](https://www.zigbee2mqtt.io/images/devices/ZTS-MM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -63,7 +64,6 @@ Value can be found in the published state on the `move_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `X`.
 
 ### Move minimum range (numeric)
 Movement minimum range.
@@ -87,7 +87,6 @@ Value can be found in the published state on the `breath_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breath_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `X`.
 
 ### Breath minimum range (numeric)
 Breath minimum range.

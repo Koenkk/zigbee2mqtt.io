@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aubess 40ZH-O](https://www.zigbee2mqtt.io/images/devices/40ZH-O.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -291,7 +291,7 @@ advanced:
 
 ### transmit_power
 
-Transmit power of adapter, only available for Z-Stack (CC253\*/CC2652/CC1352) adapters, CC2652 = 5dbm, CC1352 max is = 20dbm (5dbm default)
+Transmit power of adapter, in dBm (max is often 20, refer to chip specifications)
 
 ```yaml
 advanced:
@@ -315,6 +315,19 @@ advanced:
 - Type: `string`
 - Default: `"json"`
 - Possible values: `attribute_and_json`, `attribute`, `json`
+
+### enable_external_js
+
+Enable external JavaScript (extensions and converters) that can execute arbitrary user-provided code. WARNING: If unused, it is advised to disable this.
+
+```yaml
+advanced:
+    enable_external_js: true
+```
+
+- Type: `boolean`
+- Default: `true`
+- <span style="color: red">Restart required to be effective</span>
 
     ### log_syslog
 
@@ -550,7 +563,7 @@ availability:
 
 Active
 
-#### timeout <span style="color: red">\*</span>
+#### timeout <span style="color: red">*</span>
 
 Time after which an active device will be marked as offline in minutes
 
@@ -594,7 +607,7 @@ availability:
 
 #### pause_on_backoff_gt
 
-Pause availability pings when backoff reaches over this limit until a new Zigbee message is received from the device. A value of zero disables pausing.
+Pause availability pings when the backoff multiplier reaches over this limit until a new Zigbee message is received from the device. A value of zero disables pausing.
 
 ```yaml
 availability:
@@ -610,7 +623,7 @@ availability:
 
 Passive
 
-#### timeout <span style="color: red">\*</span>
+#### timeout <span style="color: red">*</span>
 
 Time after which an passive device will be marked as offline in minutes
 
@@ -627,7 +640,7 @@ availability:
 
 ## devices
 
-#### friendly_name <span style="color: red">\*</span>
+#### friendly_name <span style="color: red">*</span>
 
 Used in the MQTT topic of a device. By default this is the device ID
 
@@ -646,10 +659,11 @@ Retain MQTT messages of this device
 ```yaml
 devices:
     '0x1234567812345678':
-        retain: true
+        retain: false
 ```
 
 - Type: `boolean`
+- Default: `false`
 
 #### disabled
 
@@ -952,7 +966,7 @@ frontend:
 
 ### notification_filter
 
-Hide frontend notifications matching specified regex strings. Example: 'z2m: Failed to ping.\*'
+Hide frontend notifications matching specified regex strings. Example: 'z2m: Failed to ping.*'
 
 ```yaml
 frontend:
@@ -975,7 +989,7 @@ frontend:
 
 ## groups
 
-#### friendly_name <span style="color: red">\*</span>
+#### friendly_name <span style="color: red">*</span>
 
 ```yaml
 groups:
@@ -987,15 +1001,20 @@ groups:
 
 #### retain
 
+Retain MQTT messages of this group
+
 ```yaml
 groups:
     1:
-        retain: true
+        retain: false
 ```
 
 - Type: `boolean`
+- Default: `false`
 
 #### optimistic
+
+Publish the expected state of group members after set
 
 ```yaml
 groups:
@@ -1004,6 +1023,7 @@ groups:
 ```
 
 - Type: `boolean`
+- Default: `true`
 
 #### qos
 
@@ -1296,7 +1316,7 @@ mqtt:
     - `"zigbee2mqtt"`
 - <span style="color: red">Restart required to be effective</span>
 
-### server <span style="color: red">\*</span>
+### server <span style="color: red">*</span>
 
 MQTT server URL (use mqtts:// for SSL/TLS connection)
 
@@ -1418,6 +1438,20 @@ mqtt:
 
 - Type: `boolean`
 - Default: `true`
+- <span style="color: red">Restart required to be effective</span>
+
+### server_name
+
+Override the TLS SNI / hostname used for certificate verification when it differs from the host in 'server' (e.g. connecting to an internal service DNS name while validating a public certificate SAN). Leave unset to use the hostname from 'server'.
+
+```yaml
+mqtt:
+    server_name: 'mqtt.example.com'
+```
+
+- Type: `string`
+- Examples:
+    - `"mqtt.example.com"`
 - <span style="color: red">Restart required to be effective</span>
 
 ### include_device_information

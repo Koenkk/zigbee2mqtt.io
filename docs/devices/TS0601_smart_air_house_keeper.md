@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_smart_air_house_keeper](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 The Device only provides an estimated CO2 value (aka eCO2) based on the two Sensors inside KQM6600TA (A chinese TVOC sensor) and the DHT20.

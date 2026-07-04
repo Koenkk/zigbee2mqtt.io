@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit SLS301ZB_3](https://www.zigbee2mqtt.io/images/devices/SLS301ZB_3.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

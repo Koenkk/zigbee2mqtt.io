@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara WS-K04E](https://www.zigbee2mqtt.io/images/devices/WS-K04E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 All functions working except for ability to control indicator on fourth, wireless, button.

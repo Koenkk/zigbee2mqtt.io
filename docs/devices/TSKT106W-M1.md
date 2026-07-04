@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit TSKT106W-M1](https://www.zigbee2mqtt.io/images/devices/TSKT106W-M1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

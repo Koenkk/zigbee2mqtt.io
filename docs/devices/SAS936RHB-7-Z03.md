@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Saswell SAS936RHB-7-Z03](https://www.zigbee2mqtt.io/images/devices/SAS936RHB-7-Z03.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

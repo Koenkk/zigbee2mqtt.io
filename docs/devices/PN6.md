@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ZSVIOT PN6](https://www.zigbee2mqtt.io/images/devices/PN6.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -100,5 +101,5 @@ Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`.
+The possible values are: `off`, `on`, `previous`.
 

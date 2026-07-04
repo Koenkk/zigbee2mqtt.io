@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) EFR32MG21.Router.2](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

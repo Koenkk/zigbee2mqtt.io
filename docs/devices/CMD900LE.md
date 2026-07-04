@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HUARUI CMD900LE](https://www.zigbee2mqtt.io/images/devices/CMD900LE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

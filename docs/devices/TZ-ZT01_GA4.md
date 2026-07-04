@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TZ-ZT01_GA4](https://www.zigbee2mqtt.io/images/devices/TZ-ZT01_GA4.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

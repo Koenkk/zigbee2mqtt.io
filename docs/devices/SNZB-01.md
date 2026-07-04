@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | eWeLink RHK07 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -48,11 +49,11 @@ The reset button can be found by removing the back cover.
 
 ### Action mapping
 
-|                                     Real Action | Z2M Action | Bind Action |
-| ----------------------------------------------: | ---------- | ----------- |
-| Single press <br> *press + release + wait 0.6s* | single     | *Toggle*    |
-|     Double press <br> *press + release + press* | double     | *On*        |
-|               Long press <br> *press + hold 2s* | long       | *Off*       |
+|                                 Real Action | Z2M Action | Bind Action |
+| ------------------------------------------: | ---------- | ----------- |
+| Single press, *press + release + wait 0.6s* | single     | *Toggle*    |
+|     Double press, *press + release + press* | double     | *On*        |
+|               Long press, *press + hold 2s* | long       | *Off*       |
 <!-- Notes END: Do not edit below this line -->
 
 

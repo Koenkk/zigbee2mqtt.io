@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nobø SPC-IZ](https://www.zigbee2mqtt.io/images/devices/SPC-IZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![eWeLink CK-BL702-ROUTER-01(7018)](https://www.zigbee2mqtt.io/images/devices/CK-BL702-ROUTER-01(7018).png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

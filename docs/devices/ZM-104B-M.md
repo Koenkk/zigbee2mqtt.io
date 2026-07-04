@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZM-104B-M](https://www.zigbee2mqtt.io/images/devices/ZM-104B-M.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

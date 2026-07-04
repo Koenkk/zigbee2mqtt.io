@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HOBEIAN ZG-204ZE](https://www.zigbee2mqtt.io/images/devices/ZG-204ZE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -87,7 +88,6 @@ Value can be found in the published state on the `motion_detection_sensitivity` 
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `19`.
-The unit of this value is `x`.
 
 ### Illuminance interval (numeric)
 Light sensing sampling(refresh and update only while active).

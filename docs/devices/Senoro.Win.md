@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Senoro Senoro.Win](https://www.zigbee2mqtt.io/images/devices/Senoro.Win.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -33,11 +34,13 @@ pageClass: device-page
 ## Exposes
 
 ### Opening state (enum)
+Opening state.
 Value can be found in the published state on the `opening_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `open`, `closed`, `tilted`.
 
 ### Alarm (binary)
+Alarm state.
 Value can be found in the published state on the `alarm` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.

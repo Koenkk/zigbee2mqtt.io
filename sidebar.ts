@@ -2,6 +2,7 @@ import type {SidebarOptions} from '@vuepress/theme-default';
 import {getFiles} from './navbar';
 
 export const sidebar: SidebarOptions = {
+    '/devices/': false,
     '/guide/': [
         '/guide/getting-started/',
         {

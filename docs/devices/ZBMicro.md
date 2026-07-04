@@ -22,9 +22,28 @@ pageClass: device-page
 | Picture | ![SONOFF ZBMicro](https://www.zigbee2mqtt.io/images/devices/ZBMicro.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Information
 
+- [SONOFF knowledge center](https://help.sonoff.tech/docs/zbmicro)
+- Device is a Zigbee router
+
+### Pairing
+
+**Press and hold the button for 5s** to factory reset the device and start pairing.  
+The green network indicator will slowly flash until it connects.
+
+### Issues
+
+#### Network spam  
+  
+The device does not automatically clear stale entries from its routing table.  
+As a result, it might broadcast unnecessary *Network address requests*.  
+This happens when you remove one of its children without notifying it (e.g. *force-remove*).  
+**Factory reset the device** to solve the issue.
 <!-- Notes END: Do not edit below this line -->
 
 

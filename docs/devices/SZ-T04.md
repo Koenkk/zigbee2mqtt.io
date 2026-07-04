@@ -22,9 +22,12 @@ pageClass: device-page
 | Picture | ![Nous SZ-T04](https://www.zigbee2mqtt.io/images/devices/SZ-T04.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Configuration
+Changing parameters (like the reporting interval) may require waking up the device (by pressing a button) and attempting multiple times.
 <!-- Notes END: Do not edit below this line -->
 
 

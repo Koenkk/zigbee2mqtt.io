@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nedis ZBSM20WT](https://www.zigbee2mqtt.io/images/devices/ZBSM20WT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

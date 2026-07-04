@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit NZRC106W-M2](https://www.zigbee2mqtt.io/images/devices/NZRC106W-M2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

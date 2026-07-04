@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | MiCASAGasCounter  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | Zigbee Gas counter |
-| Exposes | gas, battery, voltage, battery_low |
+| Exposes | gas, battery, voltage, battery_low, gas_counter_set |
 | Picture | ![Custom devices (DiY) MiCASAGasCounter](https://www.zigbee2mqtt.io/images/devices/MiCASAGasCounter.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -65,4 +66,11 @@ Empty battery indicator.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
+
+### Gas counter set (numeric)
+Write absolute gas meter value.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_counter_set": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `281474976710655`.
 

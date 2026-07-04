@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Linkoze LKDSZ001](https://www.zigbee2mqtt.io/images/devices/LKDSZ001.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

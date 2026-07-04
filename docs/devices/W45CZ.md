@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ORVIBO W45CZ](https://www.zigbee2mqtt.io/images/devices/W45CZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

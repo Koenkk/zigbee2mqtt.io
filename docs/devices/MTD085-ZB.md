@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LeapMMW MTD085-ZB](https://www.zigbee2mqtt.io/images/devices/MTD085-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

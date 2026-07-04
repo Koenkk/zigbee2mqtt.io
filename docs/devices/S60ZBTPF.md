@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | S60ZBTPF  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart plug |
-| Exposes | energy, switch (state), power_on_behavior, current, voltage, power, energy_yesterday, energy_today, energy_month, inching_control_set, outlet_control_protect, overload_protection |
+| Exposes | energy, switch (state), power_on_behavior, network_indicator, current, voltage, power, energy_yesterday, energy_today, energy_month, inching_control_set, outlet_control_protect, overload_protection |
 | Picture | ![SONOFF S60ZBTPF](https://www.zigbee2mqtt.io/images/devices/S60ZBTPF.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -80,6 +81,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
+### Network indicator (binary)
+Network indicator settings, turn off/on the blue online status network indicator..
+Value can be found in the published state on the `network_indicator` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"network_indicator": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": NEW_VALUE}`.
+If value equals `true` network indicator is ON, if `false` OFF.
+
 ### Current (numeric)
 Current.
 Value can be found in the published state on the `current` property.
@@ -115,7 +123,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Energy month (numeric)
+### Energy this month (numeric)
 Electricity consumption for the month.
 Value can be found in the published state on the `energy_month` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_month": ""}`.

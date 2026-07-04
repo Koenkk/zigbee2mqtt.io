@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ENGO E25-BATB](https://www.zigbee2mqtt.io/images/devices/E25-BATB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -53,7 +54,7 @@ Maximum temperature.
 Value can be found in the published state on the `max_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `35`.
+The minimal value is `5` and the maximum value is `45`.
 The unit of this value is `°C`.
 
 ### Min temperature (numeric)
@@ -61,7 +62,7 @@ Minimum temperature.
 Value can be found in the published state on the `min_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `35`.
+The minimal value is `5` and the maximum value is `45`.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
@@ -104,7 +105,7 @@ The unit of this value is `°C`.
 Defines paired devices type: None, Commutation Center or TRV.
 Value can be found in the published state on the `device_pair_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `none`, `trv`.
+The possible values are: `none`, `commutation_center`, `trv`.
 
 ### Frost Mode Temperature (numeric)
 Defines temperature for frost mode. Defaults to 7.0.
@@ -114,12 +115,12 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `17`.
 The unit of this value is `°C`.
 
-### Valve Protection (enum)
+### Valve Protection (binary)
 Prevents valve blockage during long periods of inactivity.
 Value can be found in the published state on the `valve_protection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_protection": NEW_VALUE}`.
-The possible values are: `off`, `on`, `anti_stop`.
+If value equals `ON` valve Protection is ON, if `OFF` OFF.
 
 ### Schedule monday (text)
 Schedule for monday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".

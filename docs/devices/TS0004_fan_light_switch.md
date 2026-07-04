@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0004_fan_light_switch](https://www.zigbee2mqtt.io/images/devices/TS0004_fan_light_switch.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

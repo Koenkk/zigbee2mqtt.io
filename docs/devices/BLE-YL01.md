@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Tuya YY-1099L |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

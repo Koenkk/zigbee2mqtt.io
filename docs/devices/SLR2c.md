@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hive SLR2c](https://www.zigbee2mqtt.io/images/devices/SLR2c.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | ZY-ZTH02  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Temperature and humidity sensor |
+| Description | Temperature and humidity sensor - with or without display |
 | Exposes | battery, temperature, humidity, voltage |
 | Picture | ![Tuya ZY-ZTH02](https://www.zigbee2mqtt.io/images/devices/ZY-ZTH02.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
