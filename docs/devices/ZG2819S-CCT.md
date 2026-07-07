@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher ZG2819S-CCT](https://www.zigbee2mqtt.io/images/devices/ZG2819S-CCT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

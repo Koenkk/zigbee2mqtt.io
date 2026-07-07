@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shelly SBBT-102C](https://www.zigbee2mqtt.io/images/devices/SBBT-102C.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

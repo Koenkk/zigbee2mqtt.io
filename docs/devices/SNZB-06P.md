@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF SNZB-06P](https://www.zigbee2mqtt.io/images/devices/SNZB-06P.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Firmware 1.0.3 can be misbehaving, as of December 2023 upgrade to 1.0.5 is recommended.
@@ -43,7 +44,7 @@ On firmware versions lower than 1.0.5, the shortest detection duration is 30 (se
 
 Firmware version 1.0.5 and above allows setting the shortest detection duration to 15 (seconds).
 
-[Source - Sonoff documentation](https://sonoff.tech/product-review/tutorial/snzb-06p-firmware-upgrade-and-home-assistant-operation-guide/)
+[Source - Sonoff documentation](https://www.sonoff.in/blog/product-guides-3/snzb-06p-firmware-upgrade-and-home-assistant-operation-guide-111)
 <!-- Notes END: Do not edit below this line -->
 
 

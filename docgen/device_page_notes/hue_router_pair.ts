@@ -1,4 +1,7 @@
-export function hueRouterPair(definition, exposes) {
+import {Definition} from 'zigbee-herdsman-converters';
+import {Expose} from 'zigbee-herdsman-converters/lib/types';
+
+export function hueRouterPair(definition: Definition, exposes: Expose[]) {
     if (definition.vendor === 'Philips' && exposes.find((e) => e.type === 'light')) {
         const hueGo = `
 ### Button long-press

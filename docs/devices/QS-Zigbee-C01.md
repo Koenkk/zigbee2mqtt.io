@@ -18,14 +18,15 @@ pageClass: device-page
 | Model | QS-Zigbee-C01  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Curtain/blind motor controller |
-| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time |
+| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time, switch_type |
 | Picture | ![Lonsonho QS-Zigbee-C01](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-C01.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-_How to reset_
+*How to reset*
 * Press the reset key (upper right in hole) for about 10 seconds until the indicator LED inside the module flashes quickly.
 * Alternatively turn on/off the wired switch  for 5 times until the indicator LED inside the module flashes quickly. (The relay should click 10 times, so if you have a momentary switch connected to the module, you should push it 10 times)
 <!-- Notes END: Do not edit below this line -->
@@ -72,4 +73,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `s`.
+
+### Switch type (enum)
+Type of the installed switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `momentary`, `toggle`.
 

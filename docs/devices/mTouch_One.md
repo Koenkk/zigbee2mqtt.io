@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CTM Lyng mTouch_One](https://www.zigbee2mqtt.io/images/devices/mTouch_One.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

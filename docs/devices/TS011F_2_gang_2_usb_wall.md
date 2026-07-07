@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS011F_2_gang_2_usb_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_2_usb_wall.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

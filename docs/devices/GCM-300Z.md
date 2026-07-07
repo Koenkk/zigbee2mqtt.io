@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ShinaSystem GCM-300Z](https://www.zigbee2mqtt.io/images/devices/GCM-300Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Manhot BX82-TYZ1](https://www.zigbee2mqtt.io/images/devices/BX82-TYZ1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

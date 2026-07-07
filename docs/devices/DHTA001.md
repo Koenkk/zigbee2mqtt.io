@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Excellux DHTA001](https://www.zigbee2mqtt.io/images/devices/DHTA001.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

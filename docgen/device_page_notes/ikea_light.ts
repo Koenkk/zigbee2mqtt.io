@@ -1,4 +1,7 @@
-export function ikeaLight(definition, exposes) {
+import {Definition} from 'zigbee-herdsman-converters';
+import {Expose} from 'zigbee-herdsman-converters/lib/types';
+
+export function ikeaLight(definition: Definition, exposes: Expose[]) {
     if (definition.vendor === 'IKEA' && exposes.find((e) => e.type === 'light')) {
         return `
 ## Transition

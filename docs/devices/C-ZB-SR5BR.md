@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Candeo C-ZB-SR5BR](https://www.zigbee2mqtt.io/images/devices/C-ZB-SR5BR.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

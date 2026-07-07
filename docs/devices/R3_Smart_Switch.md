@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya R3 Smart Switch](https://www.zigbee2mqtt.io/images/devices/R3-Smart-Switch.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

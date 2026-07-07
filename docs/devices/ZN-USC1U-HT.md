@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZN-USC1U-HT](https://www.zigbee2mqtt.io/images/devices/ZN-USC1U-HT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Pairing

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Powernity PO-THCO-EAU](https://www.zigbee2mqtt.io/images/devices/PO-THCO-EAU.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

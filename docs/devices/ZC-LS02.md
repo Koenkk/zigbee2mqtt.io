@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZC-LS02  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Roller blind motor |
-| Exposes | cover (state, position), motor_direction |
+| Exposes | cover (state, position), motor_direction, battery |
 | Picture | ![Moes ZC-LS02](https://www.zigbee2mqtt.io/images/devices/ZC-LS02.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,4 +45,11 @@ Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
 The possible values are: `normal`, `reversed`.
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 

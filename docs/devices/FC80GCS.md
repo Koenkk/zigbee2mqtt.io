@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![BTicino FC80GCS](https://www.zigbee2mqtt.io/images/devices/FC80GCS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

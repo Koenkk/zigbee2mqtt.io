@@ -18,13 +18,22 @@ pageClass: device-page
 | Model | ZG-104PLV  |
 | Vendor  | [Excellux](/supported-devices/#v=Excellux)  |
 | Description | PIR motion sensor, vibration sensor, and light sensor |
-| Exposes | presence, vibration, illuminance_warning, battery, illuminance, sampling_interval, vibration_sensitivity, illumiance_v0, illumiance_v1, illumiance_calibration |
+| Exposes | occupancy, vibration, illuminance_warning, battery, illuminance, vibration_count, sampling_interval, vibration_sensitivity, illuminance_v0, illuminance_v1, illuminance_calibration |
 | Picture | ![Excellux ZG-104PLV](https://www.zigbee2mqtt.io/images/devices/ZG-104PLV.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Battery
+Uses 1 x CR2450 battery
 
+### Issues
+#### Network spam
+This device may generate very frequent Zigbee traffic (multiple messages per second), even when no sensor state changes occur. This can result in significantly reduced battery life (a few weeks).
+#### Low light sensor sensitivity
+The device uses the PIR sensor area as its light sensor and reports `lux=0` even when the environment is not yet dark (`lux>1000` on other sensors in the same location). This can be improved slightly by drilling a small hole, around 1 mm, in the center of the opaque Fresnel lens dome. However, even with this modification, the device is still not suitable for locations where you want to trigger lights only when a hallway is genuinely dark.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -37,11 +46,11 @@ pageClass: device-page
 
 ## Exposes
 
-### Presence (enum)
+### Occupancy (binary)
 Presence state, true: motion detected, false: no motion.
-Value can be found in the published state on the `presence` property.
+Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `true`, `false`.
+If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Vibration (binary)
 Vibration state, true: vibration detected, false: no vibration.
@@ -63,11 +72,17 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `10000`.
-The unit of this value is `lux`.
+The unit of this value is `lx`.
+
+### Vibration count (numeric)
+Vibration count detected by the vibration sensor.
+Value can be found in the published state on the `vibration_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `500`.
+The unit of this value is `times`.
 
 ### Sampling interval (numeric)
 Sampling illuminance interval.
@@ -84,27 +99,27 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `50`.
 
-### Illumiance v0 (numeric)
+### Illuminance v0 (numeric)
 Illuminance v0 threshold setting.
-Value can be found in the published state on the `illumiance_v0` property.
+Value can be found in the published state on the `illuminance_v0` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illumiance_v0": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v0": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `lux`.
 
-### Illumiance v1 (numeric)
+### Illuminance v1 (numeric)
 Illuminance v1 threshold setting.
-Value can be found in the published state on the `illumiance_v1` property.
+Value can be found in the published state on the `illuminance_v1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illumiance_v1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v1": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `lux`.
 
-### Illumiance calibration (numeric)
+### Illuminance calibration (numeric)
 Illuminance calibration.
-Value can be found in the published state on the `illumiance_calibration` property.
+Value can be found in the published state on the `illuminance_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illumiance_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": NEW_VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `lux`.
 

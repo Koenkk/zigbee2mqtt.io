@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | EC-SL-FK86ZPCS11  |
 | Vendor  | [BSEED](/supported-devices/#v=BSEED)  |
-| Description | 1 gang switch with scene and backlight (no neutral line required) |
+| Description | 1 gang switch with scene and backlight (Neutral line optional) |
 | Exposes | switch (state), countdown, power_on_behavior, backlight_mode, indicator_mode, switch_mode, action |
 | Picture | ![BSEED EC-SL-FK86ZPCS11](https://www.zigbee2mqtt.io/images/devices/EC-SL-FK86ZPCS11.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,7 +44,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Countdown (numeric)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.

@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 concurrency:
     group: ${{ github.ref }}
+    cancel-in-progress: true
 
 jobs:
     build-and-deploy:
@@ -11,6 +12,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
 
             - name: Setup pnpm
               uses: pnpm/action-setup@v4

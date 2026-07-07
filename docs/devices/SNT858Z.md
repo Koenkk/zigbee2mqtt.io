@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Soanalarm SNT858Z](https://www.zigbee2mqtt.io/images/devices/SNT858Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 0
+redirectFrom: /information/FAQ.md
 ---
 
 # FAQ
@@ -68,6 +69,7 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
     - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db` (if running as a Home Assistant addon, `data/` is renamed `zigbee2mqtt/`)
     - If re-pairing is **not** required: [copy the ieee address of the old adapter into the new one](../adapters/flashing/copy_ieeaddr.html)
 1. Update the `serial` -> `port` in your `configuration.yaml`
+    - Note in some cases you may also need to update the `baud` if coming from an older adapter (i.e. zbt-1 -> zbt2)
 1. Start Zigbee2MQTT
 
 - If re-pairing was required:

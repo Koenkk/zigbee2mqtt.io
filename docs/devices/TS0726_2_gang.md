@@ -18,13 +18,26 @@ pageClass: device-page
 | Model | TS0726_2_gang  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang switch with neutral wire |
-| Exposes | switch (state), power_on_behavior, switch_mode, action |
+| Exposes | switch (state), power_on_behavior, switch_mode, action, indicator_mode |
 | Picture | ![Tuya TS0726_2_gang](https://www.zigbee2mqtt.io/images/devices/TS0726_2_gang.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Zemismart KES-606US (`_TZ3000_icoxotza`)
 
+This 2 gang variant is the Zemismart KES-606US-L2. It additionally exposes an `indicator_mode` enum (`none` / `relay` / `pos`) to control the LED backlight behaviour. Each gang (`l1`, `l2`) has an independent `switch_mode`.
+
+**Scene mode requires one-time initialization with the Tuya / Smart Life app before pairing to Zigbee2MQTT.** Without this step, setting `switch_mode` to `scene` will not emit `action` events. To enable it:
+
+1. Pair the switch to the Tuya Smart Life app (using a Tuya Zigbee gateway).
+2. Set the desired gang(s) to **Scene Mode** in the Smart Life device settings.
+3. Remove the device from Smart Life.
+4. Factory reset the switch and pair it to Zigbee2MQTT.
+
+After this, `switch_mode: scene` will emit `scene_1` / `scene_2` actions that can be used in automations.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -90,4 +103,10 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `scene_1`, `scene_2`.
+
+### Indicator mode (enum)
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `none`, `relay`, `pos`.
 

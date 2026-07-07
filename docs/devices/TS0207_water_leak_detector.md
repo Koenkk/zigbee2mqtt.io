@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | CR Smart Home TS0207 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

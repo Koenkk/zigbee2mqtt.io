@@ -18,9 +18,10 @@ pageClass: device-page
 | Model | STB3L-125-ZJ  |
 | Vendor  | [SUTON](/supported-devices/#v=SUTON)  |
 | Description | Zigbee DIN RCBO energy meter |
-| Exposes | switch (state), energy, fault, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, temperature, leakage_test, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, insufficient_balance_breaker, insufficient_balance_threshold, overload_breaker, overload_threshold, leakage_breaker, leakage_threshold, high_temperature_breaker, high_temperature_threshold |
+| Exposes | switch (state), energy, faults, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, temperature, leakage_test, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, insufficient_balance_breaker, insufficient_balance_threshold, overload_breaker, overload_threshold, leakage_breaker, leakage_threshold, high_temperature_breaker, high_temperature_threshold |
 | Picture | ![SUTON STB3L-125-ZJ](https://www.zigbee2mqtt.io/images/devices/STB3L-125-ZJ.png) |
 | White-label | SUTON STB3L-125/ZJ |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -55,11 +56,9 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Fault (enum)
-Fault status of the device (clear = nothing).
-Value can be found in the published state on the `fault` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `clear`, `short_circuit_alarm`, `surge_alarm`, `overload_alarm`, `leakagecurr_alarm`, `temp_dif_fault`, `fire_alarm`, `high_power_alarm`, `self_test_alarm`, `ov_cr`, `unbalance_alarm`, `ov_vol`, `undervoltage_alarm`, `miss_phase_alarm`, `outage_alarm`, `magnetism_alarm`, `credit_alarm`, `no_balance_alarm`.
+### Faults (list)
+List of current faults.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"faults": ["short_circuit", "surge", "overload", "leakage_current", "temperature", "fire", "high_power", "self_test", "over_current", "unbalance", "over_voltage", "under_voltage", "miss_phase", "outage", "magnetism", "credit", "no_balance"]}`
 
 ### Voltage a (numeric)
 Measured electrical potential value (phase A).

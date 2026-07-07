@@ -22,15 +22,25 @@ pageClass: device-page
 | Picture | ![Shelly S4EM-001PXCEU16](https://www.zigbee2mqtt.io/images/devices/S4EM-001PXCEU16.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Zigbee / Matter mode & pairing
+The device ships in Matter mode by default. To use the device with Zigbee2MQTT, switching to Zigbee mode is required. This can be done by pressing the button on the back of the device 5 times fast enough (at 0.5 second intervals or so). The blinking red light will pause blinking temporarily. Afterwards, the device will start pairing mode for 2 minutes. To restart pairing mode, press the button three times again.
 
+### Maintenance and factory reset
+In Zigbee mode, to enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 3 seconds. Doing so for 10 seconds will trigger a factory reset.
+
+When the access point is enabled, it exposes a Wifi access point that you can access without password. After connecting, open http://192.168.33.1 in your browser to access the maintenance. Recommend setting a password if you keep the access point enabled. You can also see the current voltage, current & power consumption through this interface.
 <!-- Notes END: Do not edit below this line -->
 
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `shelly_wifi_ssid`: Full Wi-Fi SSID to use when the Shelly Wi-Fi setup cluster reports a shortened network name. The value must be textual.
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 

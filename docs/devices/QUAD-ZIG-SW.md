@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![smarthjemmet.dk QUAD-ZIG-SW](https://www.zigbee2mqtt.io/images/devices/QUAD-ZIG-SW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [FUGA compatible switch from Smarthjemmet.dk](https://smarthjemmet.dk)

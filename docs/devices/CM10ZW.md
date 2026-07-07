@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ORVIBO CM10ZW](https://www.zigbee2mqtt.io/images/devices/CM10ZW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

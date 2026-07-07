@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZIGBEE-B09-UK](https://www.zigbee2mqtt.io/images/devices/ZIGBEE-B09-UK.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

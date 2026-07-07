@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | IKEA E2206, IKEA E2220, IKEA E2223, IKEA E2224 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

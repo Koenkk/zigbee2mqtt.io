@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![QA QAT42Z2H](https://www.zigbee2mqtt.io/images/devices/QAT42Z2H.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
