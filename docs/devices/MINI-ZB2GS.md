@@ -24,8 +24,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Issues
 
+#### Groups and Scenes partially supported
+
+This device is missing the Groups and Scenes clusters on endpoint 2.  
+As a result, the respective features can only be used on endpoint 1.  
+Tested on version 1.0.7 (20251231). Discussion in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/32534)
 <!-- Notes END: Do not edit below this line -->
 
 
