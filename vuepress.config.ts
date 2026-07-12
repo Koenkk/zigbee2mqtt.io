@@ -1,5 +1,5 @@
-import {navbar} from './navbar';
-import {sidebar} from './sidebar';
+import {navbar, navbarZh} from './navbar';
+import {sidebar, sidebarZh} from './sidebar';
 import * as path from 'path';
 import {defaultTheme} from '@vuepress/theme-default';
 import viteBundler from '@vuepress/bundler-vite';
@@ -28,6 +28,19 @@ const conf = defineUserConfig({
     base: getBase(),
     title: 'Zigbee2MQTT' + (isDevelop ? ' develop' : ''),
     description: 'Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges',
+
+    locales: {
+        '/': {
+            lang: 'en-US',
+            title: 'Zigbee2MQTT' + (isDevelop ? ' develop' : ''),
+            description: 'Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges',
+        },
+        '/zh/': {
+            lang: 'zh-CN',
+            title: 'Zigbee2MQTT' + (isDevelop ? ' develop' : ''),
+            description: 'Zigbee 转 MQTT 桥接，摆脱各品牌私有的 Zigbee 网关',
+        },
+    },
 
     dest: 'dist',
     public: 'public',
@@ -107,16 +120,32 @@ const conf = defineUserConfig({
         repo: 'Koenkk/zigbee2mqtt.io',
         repoLabel: 'GitHub (docs)',
         docsBranch: isDevelop ? 'develop' : 'master',
-        editLinkText: 'Help to make the docu better and edit this page on Github ✌',
-        lastUpdatedText: 'Page was last updated on',
         logo: '/logo.png',
         docsDir: 'docs',
-        navbar,
-        sidebar,
         sidebarDepth: 2,
         contributors: false,
         themePlugins: {
             git: true,
+        },
+        locales: {
+            '/': {
+                selectLanguageName: 'English',
+                navbar,
+                sidebar,
+                editLinkText: 'Help to make the docu better and edit this page on Github ✌',
+                lastUpdatedText: 'Page was last updated on',
+            },
+            '/zh/': {
+                selectLanguageName: '简体中文',
+                selectLanguageText: '语言',
+                selectLanguageAriaLabel: '选择语言',
+                navbar: navbarZh,
+                sidebar: sidebarZh,
+                editLinkText: '帮助改进文档，在 GitHub 上编辑此页 ✌',
+                lastUpdatedText: '最后更新于',
+                notFound: ['页面不存在'],
+                backToHome: '返回首页',
+            },
         },
     }),
 
@@ -162,6 +191,9 @@ const conf = defineUserConfig({
             locales: {
                 '/': {
                     placeholder: 'Search',
+                },
+                '/zh/': {
+                    placeholder: '搜索',
                 },
             },
         }),
