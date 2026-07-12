@@ -8,7 +8,7 @@ redirectFrom: /information/external_converters.md
 :::warning 警告
 从 2.11.0 及更高版本开始，新安装中外部转换器默认是禁用的。
 参见 [`enable_external_js`](../../guide/configuration/all-settings.md#enable-external-js) 以启用它。
-参见[更多详情](../../guide/installation/14_securing.md#external-extensions-and-converters)
+参见[更多详情](../../guide/installation/14_securing.md#外部扩展与转换器)
 :::
 
 Zigbee2MQTT 使用 [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) 来解析设备之间收发的消息。

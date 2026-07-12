@@ -39,7 +39,7 @@ sidebar: auto
 
 ## 自定义 discovery
 
-设备专属配置允许你修改 discovery 的 payload 内容。你也可以在这里阻止某个设备被发现。可用选项请参见[设备专属配置](../../configuration/devices-groups.html#specific-device-options)。
+设备专属配置允许你修改 discovery 的 payload 内容。你也可以在这里阻止某个设备被发现。可用选项请参见[设备专属配置](../../configuration/devices-groups.html#特定设备选项)。
 
 ## 响应按钮动作
 

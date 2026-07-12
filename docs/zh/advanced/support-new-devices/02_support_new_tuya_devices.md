@@ -85,7 +85,7 @@ data: Buffer;
 
 ### 4. 映射数据点
 
-现在我们需要在 `tuyaDatapoints` 中映射这些数据点。启动 Zigbee2MQTT 并开启[调试日志](../../guide/configuration/logging.md#debugging)，然后在设备上触发一些操作。你会看到类似这样的日志：
+现在我们需要在 `tuyaDatapoints` 中映射这些数据点。启动 Zigbee2MQTT 并开启[调试日志](../../guide/configuration/logging.md#调试)，然后在设备上触发一些操作。你会看到类似这样的日志：
 
 ```
 Zigbee2MQTT:debug 2022-11-30 18:29:19: Datapoint '106' with value '77' not defined for '_TZE200_d0yu2xgi'

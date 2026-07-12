@@ -33,7 +33,7 @@ redirectFrom: /how_tos/how_to_improve_network_range_and_stability.md
 
 ## 通过更改 Zigbee 信道减少 Wi-Fi 干扰
 
-**更改 Zigbee 信道可能需要重新配对（pairing）部分设备，详情请阅读[相关文档](../../guide/configuration/zigbee-network.md#changing-the-zigbee-channel)**
+**更改 Zigbee 信道可能需要重新配对（pairing）部分设备，详情请阅读[相关文档](../../guide/configuration/zigbee-network.md#更改-zigbee-信道)**
 
 由于 Wi-Fi 和 Zigbee 都工作在相同的频段（2.4 GHz），它们之间可能会相互干扰。使用合适的 Zigbee 信道可以（部分）避免与 Wi-Fi 之间的干扰。[Zigbee and Wi-Fi Coexistence](https://www.metageek.com/training/resources/zigbee-wifi-coexistence/) 是一篇很好地解释了这一点的文章。
 

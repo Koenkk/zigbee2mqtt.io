@@ -9,7 +9,7 @@ sidebarDepth: 1
 在开始迁移之前，迁移系统会自动为你当前的 `data/configuration.yaml` 创建一份备份。备份文件会按照其版本号命名，例如 `data/configuration_backup_v1.yaml`。
 
 :::warning 重要
-通过 Home Assistant 插件配置页面，或通过[环境变量](./README.md#environment-variables)设置的配置值不会持久化保存到 `configuration.yaml` 中。因此，迁移系统无法处理这些配置值，如果其中任何一项需要迁移，都需要你手动介入处理。
+通过 Home Assistant 插件配置页面，或通过[环境变量](./README.md#环境变量)设置的配置值不会持久化保存到 `configuration.yaml` 中。因此，迁移系统无法处理这些配置值，如果其中任何一项需要迁移，都需要你手动介入处理。
 :::
 
 :::warning 重要

@@ -56,7 +56,7 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 
 在此示例中，正确的 `port` 应为 `/dev/ttyACM0`。
 
-你也可以强制重新[引导设置（onboarding）](../getting-started/README.md#onboarding)以重新进行配置
+你也可以强制重新[引导设置（onboarding）](../getting-started/README.md#引导设置)以重新进行配置
 
 ### 对于德州仪器（Texas Instruments）LAUNCHXL-CC26X2R1/CC1352P-2，应该使用 /dev/ttyACM0 还是 /dev/ttyACM1 端口？
 
@@ -118,7 +118,7 @@ sudo usermod -a -G dialout $USER
 
 ## 错误：`Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
 
-- 如果你按照[这里](../configuration/zigbee-network.md#network-config)的说明增大了 panID 之后仍然出现此错误，并且你使用的树莓派上还连接了其他 USB 设备（例如 SSD），请尝试通过带电源的 USB 集线器连接该 SSD 或适配器。
+- 如果你按照[这里](../configuration/zigbee-network.md#网络配置)的说明增大了 panID 之后仍然出现此错误，并且你使用的树莓派上还连接了其他 USB 设备（例如 SSD），请尝试通过带电源的 USB 集线器连接该 SSD 或适配器。
 - 如果你是在首次成功启动并配对（pairing）一个设备之后才出现此错误，可能是固件刷写有误。请尝试在另一台电脑上重新刷写该适配器（[详细信息](https://github.com/Koenkk/zigbee2mqtt/issues/6302)）。此问题主要出现在配合 Slaesh 的 CC2652RB 适配器使用时。
 - 如果你之前已经拥有一个 Zigbee 网络，换了新的 Zigbee 适配器后出现此错误，请尝试关闭之前连接到旧 Zigbee 网络的 Zigbee 路由器（router），然后重启 Zigbee2MQTT。
 
@@ -210,7 +210,7 @@ ModemManager（例如在 Ubuntu 上默认安装）已知会导致问题。可以
 
 ## 仅限 EmberZNet 协调器
 
-参见 [EmberZNet 错误](../adapters/emberznet.md#error-level)。
+参见 [EmberZNet 错误](../adapters/emberznet.md#error-级别)。
 
 ## 多个廉价 USB-UART 设备
 
@@ -222,7 +222,7 @@ ModemManager（例如在 Ubuntu 上默认安装）已知会导致问题。可以
 如果你使用支持 MQTT 规范第 5 版的 MQTT 代理（broker），在出现异常情况时可能会遇到断开连接的问题。
 例如，当“最大数据包大小”（maximum packet size）被超出时（大型网络中）就可能发生这种情况。
 
-要解决这个问题，请相应地配置你的代理，并检查 Zigbee2MQTT 中是否也有对应的设置需要调整。参见 [MQTT 配置](../configuration/mqtt.md#server-connection)。
+要解决这个问题，请相应地配置你的代理，并检查 Zigbee2MQTT 中是否也有对应的设置需要调整。参见 [MQTT 配置](../configuration/mqtt.md#服务器连接)。
 
 ## 错误：`startup failed - configuration-adapter mismatch - see logs above for more information`
 

@@ -77,7 +77,7 @@ pnpm start
 
 首次启动时，Zigbee2MQTT 会在 8080 端口启动引导设置（onboarding）。
 访问该端口对应的页面并按提示完成配置。
-更多信息请参阅[引导设置](../getting-started/README.md#onboarding)。
+更多信息请参阅[引导设置](../getting-started/README.md#引导设置)。
 
 引导设置完成后，你会看到类似下面的输出：
 
@@ -150,7 +150,7 @@ WantedBy=multi-user.target
 
 ::: tip
 
-使用 `Type=notify` 可以让 systemd 知道 Zigbee2MQTT 何时启动完成，例如何时开始监听其[前端界面（frontend）](../configuration/frontend.md)的套接字。这对于启动其他依赖此服务的 systemd 单元，或使用 `ExecStartPost=` 属性很有用。例如，若要让[反向代理](../configuration/frontend.md#nginx-proxy-configuration)能够访问 Zigbee2MQTT 的 Unix 套接字，你可以在 `[Service]` 部分添加 `ExecStartPost=setfacl -m u:www-data:rw /run/zigbee2mqtt/zigbee2mqtt.sock`，并执行 `apt install acl`。保存文件并退出。
+使用 `Type=notify` 可以让 systemd 知道 Zigbee2MQTT 何时启动完成，例如何时开始监听其[前端界面（frontend）](../configuration/frontend.md)的套接字。这对于启动其他依赖此服务的 systemd 单元，或使用 `ExecStartPost=` 属性很有用。例如，若要让[反向代理](../configuration/frontend.md#nginx-代理配置)能够访问 Zigbee2MQTT 的 Unix 套接字，你可以在 `[Service]` 部分添加 `ExecStartPost=setfacl -m u:www-data:rw /run/zigbee2mqtt/zigbee2mqtt.sock`，并执行 `apt install acl`。保存文件并退出。
 
 :::
 

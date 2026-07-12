@@ -75,7 +75,7 @@ Zigbee2MQTT:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' 
     fromZigbee: [fz.temperature],
 ```
 
-_注意：这个转换器实际上已经被对应的现代扩展（`temperature()`）所覆盖，这里只是作为示例。参见[更多示例](../../advanced/more/external_converters.md#more-examples)。_
+_注意：这个转换器实际上已经被对应的现代扩展（`temperature()`）所覆盖，这里只是作为示例。参见[更多示例](../../advanced/more/external_converters.md#更多示例)。_
 
 重复这最后一步，直到设备不再产生类似 `No converter available for 'WSDCGQ01LM' with cluster...` 的日志消息。
 

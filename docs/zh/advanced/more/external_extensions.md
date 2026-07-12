@@ -8,7 +8,7 @@ redirectFrom: /information/external_extensions.md
 :::warning 警告
 在 2.11.0 及更高版本中，新安装默认禁用外部扩展。
 参见 [`enable_external_js`](../../guide/configuration/all-settings.md#enable-external-js) 以启用该功能。
-参见[更多细节](../../guide/installation/14_securing.md#external-extensions-and-converters)
+参见[更多细节](../../guide/installation/14_securing.md#外部扩展与转换器)
 :::
 
 外部扩展提供了一种扩展 Zigbee2MQTT 行为的方式，其工作原理与内部扩展完全相同。

@@ -54,7 +54,7 @@ $ docker run \
 
 首次启动时，Zigbee2MQTT 会在 8080 端口启动引导设置（onboarding）。
 请访问该端口并进行相应配置。
-关于[引导设置](../getting-started/README.md#onboarding)的更多信息。
+关于[引导设置](../getting-started/README.md#引导设置)的更多信息。
 
 引导设置完成后，Zigbee2MQTT 将会启动。
 

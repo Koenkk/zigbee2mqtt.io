@@ -14,7 +14,7 @@ sidebarDepth: 1
 
 首先确定你的适配器所使用的端口：
 
-- 对于 USB 适配器：在 Windows 上运行时请参考[这些说明](../installation/05_windows.md#starting-zigbee2mqtt)；在 Linux 上执行 `ls -l /dev/serial/by-id`：
+- 对于 USB 适配器：在 Windows 上运行时请参考[这些说明](../installation/05_windows.md#启动-zigbee2mqtt)；在 Linux 上执行 `ls -l /dev/serial/by-id`：
 
     ```bash
     pi@raspberry:/ $ ls -l /dev/serial/by-id

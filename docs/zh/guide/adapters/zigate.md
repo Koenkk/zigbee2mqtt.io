@@ -16,7 +16,7 @@
 ::: warning ATTENTION
 该适配器不支持多项功能，如果您依赖这些功能，请考虑使用其他适配器。
 
-- [更改信道](../configuration/zigbee-network.md#changing-the-zigbee-channel)，更改需要重新配对所有设备。
+- [更改信道](../configuration/zigbee-network.md#更改-zigbee-信道)，更改需要重新配对所有设备。
 - 添加[安装代码](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd)，这是配对某些设备所必需的。
 - [备份](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
 - Inter-PAN，这是 [touchlink](../../guide/usage/touchlink.md) 所必需的

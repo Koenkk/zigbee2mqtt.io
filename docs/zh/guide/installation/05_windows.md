@@ -56,7 +56,7 @@ pnpm start
 
 首次启动时，Zigbee2MQTT 会在 8080 端口启动引导设置（onboarding）。
 访问该端口对应的页面并进行相应配置。
-关于[引导设置](../getting-started/README.md#onboarding)的更多信息。
+关于[引导设置](../getting-started/README.md#引导设置)的更多信息。
 
 引导设置完成后，你将看到类似如下的内容：
 

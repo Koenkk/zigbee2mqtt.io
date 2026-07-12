@@ -141,7 +141,7 @@ device_options:
 
 ## 组
 
-组可以在 `configuration.yaml` 中定义，设备可以通过前端界面或 [MQTT](../usage/mqtt_topics_and_messages.md#group) 添加到组中。更多信息参见[组指南](../usage/groups.md)。
+组可以在 `configuration.yaml` 中定义，设备可以通过前端界面或 [MQTT](../usage/mqtt_topics_and_messages.md#组) 添加到组中。更多信息参见[组指南](../usage/groups.md)。
 
 ```yaml
 groups:

@@ -27,7 +27,7 @@ advanced:
 :::
 
 ::: tip
-[通过更改 Zigbee 信道减少 Wi-Fi 干扰](../../advanced/zigbee/02_improve_network_range_and_stability.md#reduce-wi-fi-interference-by-changing-the-zigbee-channel)
+[通过更改 Zigbee 信道减少 Wi-Fi 干扰](../../advanced/zigbee/02_improve_network_range_and_stability.md#通过更改-zigbee-信道减少-wi-fi-干扰)
 :::
 
 ### 配置生成器

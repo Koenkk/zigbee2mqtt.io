@@ -73,14 +73,14 @@ MQTT 是进出 Zigbee2MQTT 的主要入口。
 
 ### 身份验证
 
-通过 [`auth_token` 选项](../configuration/frontend.md#advanced-configuration)启用基于令牌（token）的身份验证。
+通过 [`auth_token` 选项](../configuration/frontend.md#高级配置)启用基于令牌（token）的身份验证。
 
 对待它要像对待任何密码一样谨慎。
 将其存储在 `secret.yaml` 中（参见[配置文件](#配置文件)），而不要直接写在 `configuration.yaml` 中。
 
 ### 加密（HTTPS / WSS）
 
-通过提供[证书和私钥](../configuration/frontend.md#advanced-configuration)，可以直接在 Zigbee2MQTT 内部启用 HTTPS/WSS。
+通过提供[证书和私钥](../configuration/frontend.md#高级配置)，可以直接在 Zigbee2MQTT 内部启用 HTTPS/WSS。
 
 也可以选择在前端界面之前放置一个反向代理（Nginx、Apache 等）来终止 TLS。
 代理配置示例请参见 [前端配置](../configuration/frontend.md)。
@@ -120,7 +120,7 @@ Zigbee 通信使用 128 位网络密钥进行加密。
 如果你当前运行的网络仍在使用旧的默认密钥 `[1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]`，强烈建议你更换它。
 :::
 
-要在下次启动时生成新的随机密钥，可使用[引导设置（onboarding）](../getting-started/README.md#onboarding)，或手动更新：
+要在下次启动时生成新的随机密钥，可使用[引导设置（onboarding）](../getting-started/README.md#引导设置)，或手动更新：
 
 ```yaml
 advanced:

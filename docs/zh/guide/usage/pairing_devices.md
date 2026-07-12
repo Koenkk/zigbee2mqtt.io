@@ -32,4 +32,4 @@ redirectFrom: /getting_started/pairing_devices.md
 Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
 ```
 
-如果配对过程中出现问题，请查看 [常见问题](../../guide/faq/#why-does-my-device-not-or-fail-to-pair) 以获取可能的解决方法。
+如果配对过程中出现问题，请查看 [常见问题](../../guide/faq/#为什么我的设备无法配对-pairing-或配对失败) 以获取可能的解决方法。
