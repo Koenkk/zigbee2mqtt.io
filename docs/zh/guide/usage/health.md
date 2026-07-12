@@ -4,7 +4,7 @@ sidebarDepth: 1
 
 # 健康状态
 
-健康相关信息会发布到 `zigbee2mqtt/bridge/health` 主题，示例负载：
+健康相关信息会发布到 `zigbee2mqtt/bridge/health` 主题，示例 payload：
 
 ```json
 {

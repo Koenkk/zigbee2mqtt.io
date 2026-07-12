@@ -39,7 +39,7 @@ sidebar: auto
 
 ## 自定义 discovery
 
-设备专属配置允许你修改 discovery 的负载内容。你也可以在这里阻止某个设备被发现。可用选项请参见[设备专属配置](../../configuration/devices-groups.html#specific-device-options)。
+设备专属配置允许你修改 discovery 的 payload 内容。你也可以在这里阻止某个设备被发现。可用选项请参见[设备专属配置](../../configuration/devices-groups.html#specific-device-options)。
 
 ## 响应按钮动作
 
@@ -47,7 +47,7 @@ sidebar: auto
 
 ### 通过 MQTT device trigger（推荐）
 
-**只要设备上的事件至少被触发过一次**，Zigbee2MQTT 就会被发现 [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/)。
+**只要设备上的事件至少被触发过一次**，[MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/) 就会被 Zigbee2MQTT 发现。
 
 ```yaml
 automation:
