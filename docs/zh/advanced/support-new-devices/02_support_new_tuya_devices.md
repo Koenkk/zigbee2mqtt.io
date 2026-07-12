@@ -123,7 +123,7 @@ Zigbee2MQTT:debug 2022-11-30 18:29:19: Datapoint '106' with value '77' not defin
 
 ### 6. 创建拉取请求
 
-要将你的新设备定义贡献给 Zigbee2MQTT，使其在下一个版本中开箱即支持，请按照以下步骤操作：[创建拉取请求](./01_support_new_devices.md#4-create-a-pull-request)。
+要将你的新设备定义贡献给 Zigbee2MQTT，使其在下一个版本中开箱即用地被支持，请按照以下步骤操作：[创建拉取请求](./01_support_new_devices.md#4-create-a-pull-request)。
 
 ### 7. 附加内容：联系制造商
 

@@ -45,6 +45,6 @@ serial:
 
 <img alt="Nice!Nano v2" src="https://github.com/user-attachments/assets/db2f3041-e36c-4921-b078-7cf0236eeae3" width="75" />
 
-- [ESP32-C6 固件](https://github.com/tostmann/esp-coordinator) — 是原始项目 `andryblack/esp-coordinator`（该项目已被归档，并指向此处）的积极维护的后继项目；同时提供了一个[基于浏览器的网页烧录工具](https://install.busware.de/zboss/)
+- [ESP32-C6 固件](https://github.com/tostmann/esp-coordinator) — 是原始项目 `andryblack/esp-coordinator`（该项目已被归档，并指向此处）的积极维护的后继项目；同时提供了一个[基于浏览器的网页刷写工具](https://install.busware.de/zboss/)
 
 <img src="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/_images/esp32-c6-devkitc-1-isometric_v1.2.png" width="200" />
