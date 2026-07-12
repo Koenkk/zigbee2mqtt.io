@@ -23,27 +23,27 @@ sudo iocage console <jail-name>
 在 jail 的 shell 中输入以下命令：
 
 ```bash
-# 安装 Node.js 及所需依赖：
-# - 建议从官方 Node 仓库安装 Node 22。具体方法请参阅 https://github.com/nodesource/distributions/blob/master/README.md。
-# - 较旧的 i386 硬件可以使用 [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ 例如 20.9.0 版本应该可以使用。
-# - 选择 `npm` 时会同时安装 `node`。
+# Install Node.js and required dependencies:
+# - It is recommended to install Node 22 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
+# - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
+# - Selecting `npm` also installs `node`.
 pkg install git gmake gcc
 corepack enable
 
-# 验证安装的 Node.js 版本是否正确
-node --version  # 应输出 V20.x、V22.X
+# Verify that the correct Node.js version has been installed
+node --version  # Should output V20.x, V22.X
 
-# 创建安装目录（/usr/local 前缀用于不属于基础系统的软件）
+# Create installation folder (/usr/local prefix is used for software not part of the base system)
 mkdir -p /usr/local/opt/zigbee2mqtt
 cd /usr/local/opt/zigbee2mqtt
 
-# 克隆 Zigbee2MQTT 仓库
+# Clone Zigbee2MQTT repository
 git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git .
 
-# 安装依赖
+# Install dependencies
 pnpm install --frozen-lockfile
 
-# 构建 Zigbee2MQTT
+# Build Zigbee2MQTT
 pnpm run build
 ```
 
@@ -80,7 +80,7 @@ Zigbee2MQTT:info  2019-11-09T13:04:03: Connected to MQTT server
 要让 Zigbee2MQTT 作为守护进程（在后台）运行，并在 jail 启动时自动启动，我们需要为它创建一个服务文件。
 
 ```sh
-# 为 Zigbee2MQTT 创建服务文件（假定已安装 `nano`，也可以使用 `vi`）
+# Create service file for Zigbee2MQTT (assuming `nano` is installed, `vi` can also be used)
 nano /usr/local/etc/rc.d/zigbee2mqtt
 ```
 
@@ -127,10 +127,10 @@ chmod +x /usr/local/etc/rc.d/zigbee2mqtt
 验证该配置是否可用：
 
 ```sh
-# 在不启用的情况下启动一次 Zigbee2MQTT
+# Start Zigbee2MQTT without enabling it
 service zigbee2mqtt onestart
 
-# 查看状态
+# Show status
 service zigbee2mqtt onestatus
 ```
 
@@ -152,10 +152,10 @@ service zigbee2mqtt enable
 以下是一些之后可能会用到的小提示：
 
 ```sh
-# 停止 Zigbee2MQTT
+# Stopping Zigbee2MQTT
 service zigbee2mqtt stop
 
-# 启动 Zigbee2MQTT
+# Starting Zigbee2MQTT
 service zigbee2mqtt start
 ```
 
@@ -164,7 +164,7 @@ service zigbee2mqtt start
 要将 Zigbee2MQTT 更新到最新版本，执行：
 
 ```sh
-# 在 Zigbee2MQTT 目录下运行更新脚本
+# Run the update script from the Zigbee2MQTT directory
 cd /usr/local/opt/zigbee2mqtt
 ./update.sh
 ```
