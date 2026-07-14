@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zen Zen-01-W](https://www.zigbee2mqtt.io/images/devices/Zen-01-W.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

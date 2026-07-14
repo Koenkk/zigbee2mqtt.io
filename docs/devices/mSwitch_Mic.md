@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CTM Lyng mSwitch_Mic](https://www.zigbee2mqtt.io/images/devices/mSwitch_Mic.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

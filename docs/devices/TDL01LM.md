@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Aqara MZSD11LM, Aqara MZSD12LM, Aqara MZTD11LM |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

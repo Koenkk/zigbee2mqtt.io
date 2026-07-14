@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HZC Electric S902M-ZG](https://www.zigbee2mqtt.io/images/devices/S902M-ZG.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

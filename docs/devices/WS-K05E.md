@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara WS-K05E](https://www.zigbee2mqtt.io/images/devices/WS-K05E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Warning: Zigbee firmware flashing required

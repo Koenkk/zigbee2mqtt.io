@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Spacetronik ZB-DG02](https://www.zigbee2mqtt.io/images/devices/ZB-DG02.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

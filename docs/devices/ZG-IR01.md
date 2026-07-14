@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZG-IR01  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Smart IR remote switch |
-| Exposes | switch1, switch2, switch3, switch4, switch5, switch6, temperature, humidity, switch1_on, switch1_off, switch2_on, switch2_off, switch3_on, switch3_off, switch4_on, switch4_off, switch5_on, switch5_off, switch6_on, switch6_off, temperature_unit, temperature_calibration, humidity_calibration, battery |
+| Exposes | switch1, switch2, switch3, switch4, switch5, switch6, temperature, humidity, learn_ir_code, learned_ir_code, ir_code_to_send, switch1_on, switch1_off, switch2_on, switch2_off, switch3_on, switch3_off, switch4_on, switch4_off, switch5_on, switch5_off, switch6_on, switch6_off, temperature_unit, temperature_calibration, humidity_calibration, battery |
 | Picture | ![HOBEIAN ZG-IR01](https://www.zigbee2mqtt.io/images/devices/ZG-IR01.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -96,6 +97,24 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
+
+### Learn ir code (binary)
+Turn on to learn new IR code .
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": NEW_VALUE}`.
+If value equals `ON` learn ir code is ON, if `OFF` OFF.
+
+### Learned ir code (text)
+The IR code learned by device.
+Value can be found in the published state on the `learned_ir_code` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Ir code to send (text)
+The IR code to send by device (Support SmartIR IR code library. IR remote Firmware ID must be Firmware ID>01062026).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_code_to_send": NEW_VALUE}`.
 
 ### Switch1 on (enum)
 Switch 1 on IR code Study and Study status.

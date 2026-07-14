@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EARU EAKCB-T-M-Z](https://www.zigbee2mqtt.io/images/devices/EAKCB-T-M-Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -101,7 +102,7 @@ Over-current threshold.
 Value can be found in the published state on the `over_current_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `64`.
+The minimal value is `1` and the maximum value is `65`.
 The unit of this value is `A`.
 
 ### Over current breaker (binary)
@@ -131,7 +132,7 @@ Under-voltage threshold.
 Value can be found in the published state on the `under_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": NEW_VALUE}`.
-The minimal value is `76` and the maximum value is `240`.
+The minimal value is `75` and the maximum value is `240`.
 The unit of this value is `V`.
 
 ### Under voltage breaker (binary)
@@ -147,7 +148,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Countdown (numeric)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.

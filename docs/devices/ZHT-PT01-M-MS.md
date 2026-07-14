@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZHT-PT01-M-MS](https://www.zigbee2mqtt.io/images/devices/ZHT-PT01-M-MS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

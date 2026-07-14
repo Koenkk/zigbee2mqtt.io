@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ledron QS-Zigbee-D06-DC](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D06-DC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

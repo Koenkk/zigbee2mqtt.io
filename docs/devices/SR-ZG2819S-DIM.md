@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher SR-ZG2819S-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZG2819S-DIM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

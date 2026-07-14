@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AVATTO TRV06_1b](https://www.zigbee2mqtt.io/images/devices/TRV06_1b.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

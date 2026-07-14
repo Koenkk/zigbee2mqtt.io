@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LEDVANCE ST8EM-CON](https://www.zigbee2mqtt.io/images/devices/ST8EM-CON.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

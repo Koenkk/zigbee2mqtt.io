@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA SNZB-02_EFEKTA](https://www.zigbee2mqtt.io/images/devices/SNZB-02_EFEKTA.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Additional functions: 

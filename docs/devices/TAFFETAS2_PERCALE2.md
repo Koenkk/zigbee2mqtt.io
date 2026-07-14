@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Acova TAFFETAS2/PERCALE2](https://www.zigbee2mqtt.io/images/devices/TAFFETAS2-PERCALE2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EssentielB EB-GU10-MR16-RGBW](https://www.zigbee2mqtt.io/images/devices/EB-GU10-MR16-RGBW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

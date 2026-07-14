@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nobø SWT-IZ](https://www.zigbee2mqtt.io/images/devices/SWT-IZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

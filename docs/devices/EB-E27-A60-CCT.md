@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EssentielB EB-E27-A60-CCT](https://www.zigbee2mqtt.io/images/devices/EB-E27-A60-CCT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

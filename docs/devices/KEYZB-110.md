@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Frient KEPZB-110 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

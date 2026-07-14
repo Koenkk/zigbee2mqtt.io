@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LivingWise LVS-ZB15R](https://www.zigbee2mqtt.io/images/devices/LVS-ZB15R.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

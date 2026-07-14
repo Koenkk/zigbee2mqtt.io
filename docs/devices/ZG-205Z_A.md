@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

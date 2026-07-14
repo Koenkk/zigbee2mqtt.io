@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Mill MFTWIFI](https://www.zigbee2mqtt.io/images/devices/MFTWIFI.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

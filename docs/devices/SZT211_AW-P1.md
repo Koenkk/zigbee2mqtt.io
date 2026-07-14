@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit SZT211_AW-P1](https://www.zigbee2mqtt.io/images/devices/SZT211_AW-P1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

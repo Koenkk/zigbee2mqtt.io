@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) m5NanoC6](https://www.zigbee2mqtt.io/images/devices/m5NanoC6.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 See https://github.com/cameronnewell/m5NanoC6_Zigbee_light for instructions how to build this device.
 <!-- Notes END: Do not edit below this line -->

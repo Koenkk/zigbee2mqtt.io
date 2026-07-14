@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AVATTO LZWSM16-3](https://www.zigbee2mqtt.io/images/devices/LZWSM16-3.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -53,7 +54,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
 ### Countdown (numeric, left endpoint)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_left` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown_left": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_left": NEW_VALUE}`.
@@ -61,7 +62,7 @@ The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
 ### Countdown (numeric, center endpoint)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_center` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown_center": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_center": NEW_VALUE}`.
@@ -69,7 +70,7 @@ The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
 ### Countdown (numeric, right endpoint)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_right` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_right": NEW_VALUE}`.

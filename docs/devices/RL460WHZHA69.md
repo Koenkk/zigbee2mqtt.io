@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Eaton/Halo LED RL460WHZHA69](https://www.zigbee2mqtt.io/images/devices/RL460WHZHA69.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SMLIGHT SLZB-06M](https://www.zigbee2mqtt.io/images/devices/SLZB-06M.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

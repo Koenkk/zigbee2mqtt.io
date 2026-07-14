@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SWV-ZNU  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart water valve |
-| Exposes | battery, switch (state), child_lock, manual_default_settings, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, real_time_irrigation_duration, hour_irrigation_duration, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
+| Exposes | battery, switch (state), child_lock, manual_irrigation_duration, irrigation_plan_index, irrigation_plan_enabled, irrigation_plan_loop_type, irrigation_plan_interval_days, irrigation_plan_sunday, irrigation_plan_monday, irrigation_plan_tuesday, irrigation_plan_wednesday, irrigation_plan_thursday, irrigation_plan_friday, irrigation_plan_saturday, irrigation_plan_enable_date, irrigation_plan_start_time, irrigation_plan_mode, irrigation_plan_total_duration, irrigation_plan_duration, irrigation_plan_interval_duration, irrigation_plan_create_datetime, irrigation_plan_remove_plan_index, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment_january, seasonal_watering_adjustment_february, seasonal_watering_adjustment_march, seasonal_watering_adjustment_april, seasonal_watering_adjustment_may, seasonal_watering_adjustment_june, seasonal_watering_adjustment_july, seasonal_watering_adjustment_august, seasonal_watering_adjustment_september, seasonal_watering_adjustment_october, seasonal_watering_adjustment_november, seasonal_watering_adjustment_december, real_time_irrigation_duration, hour_irrigation_duration, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
 | Picture | ![SONOFF SWV-ZNU](https://www.zigbee2mqtt.io/images/devices/SWV-ZNU.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -66,47 +67,146 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
-### Manual default settings (composite)
-Single irrigation settings.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_default_settings": {"irrigation_duration": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_default_settings": ""}`.
-- `irrigation_duration` (numeric): Irrigation duration min value is 1, max value is 719, unit is min
+### Manual irrigation duration (numeric)
+Default duration for manual irrigation.
+Value can be found in the published state on the `manual_irrigation_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_irrigation_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_irrigation_duration": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `719`.
+The unit of this value is `min`.
 
-### Irrigation plan settings (composite)
-Set irrigation plan.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_settings": {"plan_index": VALUE, "enable_state": VALUE, "loop_type_mode": VALUE, "loop_type_interval_days": VALUE, "loop_type_week_days": VALUE, "enable_date": VALUE, "start_time": VALUE, "irrigation_mode": VALUE, "irrigation_total_duration": VALUE, "irrigation_duration": VALUE, "interval_duration": VALUE, "create_datetime": VALUE}}`
-- `plan_index` (numeric): Plan index max value is 5
-- `enable_state` (binary) allowed values: `true` or `false`
-- `loop_type_mode` (enum) allowed values: `odd_days`, `even_days`, `day_interval`, `weekdays`
-- `loop_type_interval_days` (numeric): Only effective when loop_type_mode is day_interval min value is 1, max value is 30
-- `loop_type_week_days` (composite): Only effective when loop_type_mode is weekdays 
-- `enable_date` (text): Enable date in local YYYY-MM-DD format. 
-- `start_time` (text): Start time in local HH:mm format (24-hour, zero-padded). 
-- `irrigation_mode` (enum) allowed values: `duration`, `duration_with_interval`
-- `irrigation_total_duration` (numeric) max value is 719, unit is min
-- `irrigation_duration` (numeric) min value is 1, max value is 60, unit is min
-- `interval_duration` (numeric) min value is 1, max value is 60, unit is min
-- `create_datetime` (text): Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
+### Irrigation plan index (numeric)
+Irrigation plan index.
+Value can be found in the published state on the `irrigation_plan_index` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_index": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_index": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `5`.
 
-### Irrigation plan report (composite)
-Irrigation plan report.
-- `plan_index` (numeric) 
-- `enable_state` (binary) allowed values: `true` or `false`
-- `loop_type_mode` (enum) allowed values: `odd_days`, `even_days`, `day_interval`, `weekdays`
-- `loop_type_interval_days` (numeric): Effective when loop_type_mode is day_interval 
-- `loop_type_week_days` (composite): Effective when loop_type_mode is weekdays 
-- `enable_date` (text): Enable date in local YYYY-MM-DD format (local day start) 
-- `start_time` (text): Start time in local HH:mm format (24-hour) 
-- `irrigation_mode` (enum) allowed values: `duration`, `duration_with_interval`
-- `irrigation_total_duration` (numeric) 
-- `irrigation_duration` (numeric) 
-- `interval_duration` (numeric) 
-- `create_datetime` (text): Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
+### Irrigation plan enabled (binary)
+Enable the selected irrigation plan.
+Value can be found in the published state on the `irrigation_plan_enabled` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_enabled": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_enabled": NEW_VALUE}`.
+If value equals `true` irrigation plan enabled is ON, if `false` OFF.
 
-### Irrigation plan remove (composite)
-Remove irrigation plan.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_remove": {"plan_index": VALUE}}`
-- `plan_index` (numeric): The index of the irrigation plan to remove max value is 5
+### Irrigation plan loop type (enum)
+Repeat mode for the selected irrigation plan.
+Value can be found in the published state on the `irrigation_plan_loop_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_loop_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_loop_type": NEW_VALUE}`.
+The possible values are: `odd_days`, `even_days`, `day_interval`, `weekdays`.
+
+### Irrigation plan interval days (numeric)
+Repeat interval in days when loop type is day_interval.
+Value can be found in the published state on the `irrigation_plan_interval_days` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_interval_days": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_interval_days": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
+
+### Irrigation plan sunday (binary)
+Run the selected irrigation plan on sunday.
+Value can be found in the published state on the `irrigation_plan_sunday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_sunday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_sunday": NEW_VALUE}`.
+If value equals `true` irrigation plan sunday is ON, if `false` OFF.
+
+### Irrigation plan monday (binary)
+Run the selected irrigation plan on monday.
+Value can be found in the published state on the `irrigation_plan_monday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_monday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_monday": NEW_VALUE}`.
+If value equals `true` irrigation plan monday is ON, if `false` OFF.
+
+### Irrigation plan tuesday (binary)
+Run the selected irrigation plan on tuesday.
+Value can be found in the published state on the `irrigation_plan_tuesday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_tuesday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_tuesday": NEW_VALUE}`.
+If value equals `true` irrigation plan tuesday is ON, if `false` OFF.
+
+### Irrigation plan wednesday (binary)
+Run the selected irrigation plan on wednesday.
+Value can be found in the published state on the `irrigation_plan_wednesday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_wednesday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_wednesday": NEW_VALUE}`.
+If value equals `true` irrigation plan wednesday is ON, if `false` OFF.
+
+### Irrigation plan thursday (binary)
+Run the selected irrigation plan on thursday.
+Value can be found in the published state on the `irrigation_plan_thursday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_thursday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_thursday": NEW_VALUE}`.
+If value equals `true` irrigation plan thursday is ON, if `false` OFF.
+
+### Irrigation plan friday (binary)
+Run the selected irrigation plan on friday.
+Value can be found in the published state on the `irrigation_plan_friday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_friday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_friday": NEW_VALUE}`.
+If value equals `true` irrigation plan friday is ON, if `false` OFF.
+
+### Irrigation plan saturday (binary)
+Run the selected irrigation plan on saturday.
+Value can be found in the published state on the `irrigation_plan_saturday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_saturday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_saturday": NEW_VALUE}`.
+If value equals `true` irrigation plan saturday is ON, if `false` OFF.
+
+### Irrigation plan enable date (text)
+Enable date in local YYYY-MM-DD format.
+Value can be found in the published state on the `irrigation_plan_enable_date` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_enable_date": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_enable_date": NEW_VALUE}`.
+
+### Irrigation plan start time (text)
+Start time in local HH:mm format.
+Value can be found in the published state on the `irrigation_plan_start_time` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_start_time": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_start_time": NEW_VALUE}`.
+
+### Irrigation plan mode (enum)
+Irrigation mode for the selected plan.
+Value can be found in the published state on the `irrigation_plan_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_mode": NEW_VALUE}`.
+The possible values are: `duration`, `duration_with_interval`.
+
+### Irrigation plan total duration (numeric)
+Total duration for the selected irrigation plan.
+Value can be found in the published state on the `irrigation_plan_total_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_total_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_total_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `719`.
+The unit of this value is `min`.
+
+### Irrigation plan duration (numeric)
+Irrigation duration for the selected plan.
+Value can be found in the published state on the `irrigation_plan_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_duration": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `60`.
+The unit of this value is `min`.
+
+### Irrigation plan interval duration (numeric)
+Pause duration between irrigation cycles.
+Value can be found in the published state on the `irrigation_plan_interval_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_interval_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_interval_duration": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `60`.
+The unit of this value is `min`.
+
+### Irrigation plan create datetime (text)
+Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00).
+Value can be found in the published state on the `irrigation_plan_create_datetime` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"irrigation_plan_create_datetime": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_create_datetime": NEW_VALUE}`.
+
+### Irrigation plan remove plan index (numeric)
+Index of the irrigation plan to remove.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_remove_plan_index": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `5`.
 
 ### Irrigation schedule status (composite)
 Irrigation schedule execution status.
@@ -130,22 +230,89 @@ User triggered delay end time..
 Value can be found in the published state on the `rain_delay_end_datetime` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Seasonal watering adjustment (composite)
-Monthly watering adjustment multiplier (1.0 = 100%, 2.0 = 200%).
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment": {"january": VALUE, "february": VALUE, "march": VALUE, "april": VALUE, "may": VALUE, "june": VALUE, "july": VALUE, "august": VALUE, "september": VALUE, "october": VALUE, "november": VALUE, "december": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment": ""}`.
-- `january` (numeric): Adjustment multiplier for january min value is 0.1, max value is 2
-- `february` (numeric): Adjustment multiplier for february min value is 0.1, max value is 2
-- `march` (numeric): Adjustment multiplier for march min value is 0.1, max value is 2
-- `april` (numeric): Adjustment multiplier for april min value is 0.1, max value is 2
-- `may` (numeric): Adjustment multiplier for may min value is 0.1, max value is 2
-- `june` (numeric): Adjustment multiplier for june min value is 0.1, max value is 2
-- `july` (numeric): Adjustment multiplier for july min value is 0.1, max value is 2
-- `august` (numeric): Adjustment multiplier for august min value is 0.1, max value is 2
-- `september` (numeric): Adjustment multiplier for september min value is 0.1, max value is 2
-- `october` (numeric): Adjustment multiplier for october min value is 0.1, max value is 2
-- `november` (numeric): Adjustment multiplier for november min value is 0.1, max value is 2
-- `december` (numeric): Adjustment multiplier for december min value is 0.1, max value is 2
+### Seasonal watering adjustment january (numeric)
+Watering adjustment multiplier for january (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_january` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_january": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_january": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment february (numeric)
+Watering adjustment multiplier for february (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_february` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_february": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_february": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment march (numeric)
+Watering adjustment multiplier for march (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_march` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_march": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_march": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment april (numeric)
+Watering adjustment multiplier for april (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_april` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_april": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_april": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment may (numeric)
+Watering adjustment multiplier for may (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_may` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_may": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_may": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment june (numeric)
+Watering adjustment multiplier for june (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_june` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_june": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_june": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment july (numeric)
+Watering adjustment multiplier for july (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_july` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_july": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_july": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment august (numeric)
+Watering adjustment multiplier for august (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_august` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_august": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_august": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment september (numeric)
+Watering adjustment multiplier for september (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_september` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_september": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_september": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment october (numeric)
+Watering adjustment multiplier for october (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_october` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_october": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_october": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment november (numeric)
+Watering adjustment multiplier for november (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_november` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_november": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_november": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
+
+### Seasonal watering adjustment december (numeric)
+Watering adjustment multiplier for december (1.0 = 100%, 2.0 = 200%).
+Value can be found in the published state on the `seasonal_watering_adjustment_december` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"seasonal_watering_adjustment_december": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"seasonal_watering_adjustment_december": NEW_VALUE}`.
+The minimal value is `0.1` and the maximum value is `2`.
 
 ### Real time irrigation duration (numeric)
 Real-time irrigation duration.

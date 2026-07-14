@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nova Digital NTZB-04-W-B](https://www.zigbee2mqtt.io/images/devices/NTZB-04-W-B.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

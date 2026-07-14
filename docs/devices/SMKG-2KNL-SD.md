@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SMKG-2KNL-SD  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart leakage protector 63a with leakage monitoring |
-| Exposes | switch (state), voltage, current, power, energy, temperature, leakage_current, over_voltage_threshold, under_voltage_threshold, over_current_threshold, leakage_threshold, temp_threshold, fault_code |
+| Exposes | switch (state), voltage, current, power, energy, temperature, leakage_current, over_voltage_threshold, under_voltage_threshold, over_current_threshold, leakage_threshold, temp_threshold, faults |
 | Picture | ![Tuya SMKG-2KNL-SD](https://www.zigbee2mqtt.io/images/devices/SMKG-2KNL-SD.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -91,7 +92,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Leakage current (numeric)
-Real-time leakage current (DP 53).
+Measured current difference between live and neutral wires.
 Value can be found in the published state on the `leakage_current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mA`.
@@ -131,8 +132,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `40` and the maximum value is `150`.
 The unit of this value is `°C`.
 
-### Fault code (numeric)
-0 = OK.
-Value can be found in the published state on the `fault_code` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+### Faults (list)
+List of current faults.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"faults": ["short_circuit", "surge", "overload", "leakage_current", "temperature", "fire", "high_power", "self_test", "over_current", "unbalance", "over_voltage", "under_voltage", "miss_phase", "outage", "magnetism", "credit", "no_balance"]}`
 

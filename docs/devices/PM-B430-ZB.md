@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Dawon DNS PM-B430-ZB](https://www.zigbee2mqtt.io/images/devices/PM-B430-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

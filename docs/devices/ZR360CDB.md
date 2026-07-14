@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zorro Alert ZR360CDB](https://www.zigbee2mqtt.io/images/devices/ZR360CDB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

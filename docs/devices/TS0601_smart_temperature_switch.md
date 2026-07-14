@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_smart_temperature_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_temperature_switch.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

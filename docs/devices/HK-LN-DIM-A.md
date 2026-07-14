@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LED-Trading HK-LN-DIM-A](https://www.zigbee2mqtt.io/images/devices/HK-LN-DIM-A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

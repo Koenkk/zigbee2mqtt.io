@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Alchemy AL8TC13W-AP](https://www.zigbee2mqtt.io/images/devices/AL8TC13W-AP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HOBEIAN ZG-302ZL](https://www.zigbee2mqtt.io/images/devices/ZG-302ZL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 The power must be disconnected during installation

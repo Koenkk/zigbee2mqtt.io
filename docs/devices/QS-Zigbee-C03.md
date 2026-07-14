@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | QS-Zigbee-C03  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Curtain/blind motor controller |
-| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time |
+| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time, switch_type |
 | Picture | ![Lonsonho QS-Zigbee-C03](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-C03.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -79,4 +80,11 @@ Calibration time.
 Value can be found in the published state on the `calibration_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.
+
+### Switch type (enum)
+Type of the installed switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `momentary`, `toggle`.
 

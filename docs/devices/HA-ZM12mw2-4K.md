@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Halemeier HA-ZM12mw2-4K](https://www.zigbee2mqtt.io/images/devices/HA-ZM12mw2-4K.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 4-channel LED driver from Halemeier. Each channel is exposed as a separate Zigbee light.

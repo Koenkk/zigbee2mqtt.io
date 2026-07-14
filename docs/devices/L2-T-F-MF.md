@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya L2-T-F-MF](https://www.zigbee2mqtt.io/images/devices/L2-T-F-MF.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

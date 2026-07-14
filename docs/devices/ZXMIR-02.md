@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZXMIR-02](https://www.zigbee2mqtt.io/images/devices/ZXMIR-02.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

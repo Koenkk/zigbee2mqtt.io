@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya _TZE204_w2vunxzm](https://www.zigbee2mqtt.io/images/devices/_TZE204_w2vunxzm.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

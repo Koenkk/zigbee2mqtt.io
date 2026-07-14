@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya UFO-R4Z](https://www.zigbee2mqtt.io/images/devices/UFO-R4Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

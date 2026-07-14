@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shelly S4EM-001PXCEU16](https://www.zigbee2mqtt.io/images/devices/S4EM-001PXCEU16.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -38,6 +39,8 @@ When the access point is enabled, it exposes a Wifi access point that you can ac
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `shelly_wifi_ssid`: Full Wi-Fi SSID to use when the Shelly Wi-Fi setup cluster reports a shortened network name. The value must be textual.
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 

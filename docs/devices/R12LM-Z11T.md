@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lincukoo R12LM-Z11T](https://www.zigbee2mqtt.io/images/devices/R12LM-Z11T.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya BAB-1413_Pro](https://www.zigbee2mqtt.io/images/devices/BAB-1413_Pro.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Still in WIP. Copied most from BRT-100-TRV

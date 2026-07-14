@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hive HV-GSCXZB229B](https://www.zigbee2mqtt.io/images/devices/HV-GSCXZB229B.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

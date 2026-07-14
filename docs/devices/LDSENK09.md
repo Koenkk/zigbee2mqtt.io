@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO LDSENK09](https://www.zigbee2mqtt.io/images/devices/LDSENK09.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ### Pairing
 The remote will automatically start pairing first time you connect battery.

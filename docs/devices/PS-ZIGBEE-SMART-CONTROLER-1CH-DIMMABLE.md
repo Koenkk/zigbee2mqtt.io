@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Niviss PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE](https://www.zigbee2mqtt.io/images/devices/PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![DIYRuZ DIYRuZ_R8_8](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_R8_8.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [DiY 8 Relays + 8 switches](https://modkam.ru/?p=1638)

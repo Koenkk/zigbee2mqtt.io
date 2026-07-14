@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nue / 3A HGZB-DLC4-N12B](https://www.zigbee2mqtt.io/images/devices/HGZB-DLC4-N12B.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
