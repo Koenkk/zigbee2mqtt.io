@@ -1,5 +1,13 @@
 version: 2
 updates:
+    - package-ecosystem: 'github-actions'
+      directory: /
+      schedule:
+          interval: quarterly
+      groups:
+          github-actions:
+              patterns:
+                  - '*'
     - package-ecosystem: npm
       versioning-strategy: increase
       directory: /
