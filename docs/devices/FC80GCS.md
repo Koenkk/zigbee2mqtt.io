@@ -24,6 +24,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+### Pairing
+This device might only work on channel 11. Once configured on channel 11, put your network in join mode and the device (steady red light) will auto join it.
 
 
 <!-- Notes END: Do not edit below this line -->
