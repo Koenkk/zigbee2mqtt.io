@@ -26,6 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
+## Notes
+
+### Valve abnormal state does not update (firmware 1.0.7)
+
+On firmware 1.0.7 (build 4103) the `valve_abnormal_state` property never leaves `normal`, even though the underlying protections work: in controlled tests, a water-shortage auto-close (5 minutes of zero flow with the alarm enabled) and a fail-safe cutoff both closed the valve correctly, yet no anomaly was ever reported. The firmware also rejects `configureReporting` for the underlying attribute (`UNSUPPORTED_ATTRIBUTE`), and direct attribute reads return `normal` even seconds after a shortage-triggered auto-close.
+
+Do not rely on this property for leak or shortage alerting on this firmware. As a workaround, watch `irrigation_schedule_status` on run end and compare `actual_irrigation_amount` against `expected_irrigation_amount`
+
+
 <!-- Notes END: Do not edit below this line -->
 
 
