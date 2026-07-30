@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TSM1-SlD  |
 | Vendor  | [Slacky-DIY](/supported-devices/#v=Slacky-DIY)  |
 | Description | Tuya switch module 1 gang with custom firmware |
-| Exposes | switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, action |
+| Exposes | model_number, switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, min_level, max_level, action |
 | Picture | ![Slacky-DIY TSM1-SlD](https://www.zigbee2mqtt.io/images/devices/TSM1-SlD.png) |
 
 
@@ -37,8 +37,21 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
+
 
 ## Exposes
+
+### Model number (text)
+Switch model number.
+Value can be found in the published state on the `model_number` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"model_number": ""}`.
+It's not possible to write (`/set`) this value.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
@@ -70,7 +83,7 @@ Switch type.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `brightness_level`.
 
 ### Operation mode (enum)
 Relay decoupled.
@@ -79,9 +92,23 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
+### Min level (numeric)
+Minimum level when decreasing.
+Value can be found in the published state on the `min_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_level": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+
+### Max level (numeric)
+Maximum level when increasing.
+Value can be found in the published state on the `max_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_level": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `255`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `toggle`, `hold`, `single`, `double`, `triple`, `quadruple`, `quintuple`, `release`.
+The possible values are: `on`, `off`, `toggle`, `hold`, `single`, `double`, `triple`, `quadruple`, `quintuple`, `release`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`.
 

@@ -1,6 +1,6 @@
 ---
-title: "ZBeacon MC-z control via MQTT"
-description: "Integrate your ZBeacon MC-z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Zbeacon MC-z control via MQTT"
+description: "Integrate your Zbeacon MC-z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-11-30T20:32:44
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# ZBeacon MC-z
+# Zbeacon MC-z
 
 |     |     |
 |-----|-----|
 | Model | MC-z  |
-| Vendor  | [ZBeacon](/supported-devices/#v=ZBeacon)  |
+| Vendor  | [Zbeacon](/supported-devices/#v=Zbeacon)  |
 | Description | Temperature & Humidity Sensor (pvxx/ZigbeeTLc) |
 | Exposes | temperature, humidity, temperature_calibration, humidity_calibration, measurement_interval, battery, voltage |
-| Picture | ![ZBeacon MC-z](https://www.zigbee2mqtt.io/images/devices/MC-z.png) |
+| Picture | ![Zbeacon MC-z](https://www.zigbee2mqtt.io/images/devices/MC-z.png) |
 
 
 

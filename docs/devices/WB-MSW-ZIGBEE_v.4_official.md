@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WB-MSW-ZIGBEE_v.4_official  |
 | Vendor  | [Wiren Board](/supported-devices/#v=Wiren%20Board)  |
 | Description | Wall-mounted multi sensor with official Wiren Board firmware |
-| Exposes | switch (state), illuminance, temperature, humidity, occupancy, co2, noise_level, noise, noise_threshold, noise_timeout, status_led, connectivity, modbus_slave_id, serial_number, fw_version, fw_signature, boot_version, component_version, component_signature, temperature_offset, occupancy_level, occupancy_sensitivity, occupancy_timeout, voc |
+| Exposes | switch (state), illuminance, temperature, humidity, occupancy, co2, noise_level, noise, noise_threshold, noise_timeout, status_led, connectivity, modbus_slave_id, serial_number, fw_version, fw_signature, boot_version, component_version, component_signature, temperature_offset, occupancy_level, occupancy_sensitivity, occupancy_timeout, voc, ir_rom_id, ir_action |
 | Picture | ![Wiren Board WB-MSW-ZIGBEE_v.4_official](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE_v.4_official.png) |
 
 
@@ -259,4 +259,18 @@ Value can be found in the published state on the `voc` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voc": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `µg/m³`.
+
+### Ir rom id (numeric, ir endpoint)
+Target ROM bank for IR learn/play.
+Value can be found in the published state on the `ir_rom_id_ir` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ir_rom_id_ir": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_rom_id_ir": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `79`.
+
+### Ir action (enum, ir endpoint)
+IR transceiver action for the selected ROM bank.
+Value can be found in the published state on the `ir_action_ir` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ir_action_ir": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_action_ir": NEW_VALUE}`.
+The possible values are: `stop`, `learn_ram`, `learn_rom`, `play_ram`, `play_rom`, `clear_all_rom`.
 

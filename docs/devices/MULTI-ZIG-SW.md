@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MULTI-ZIG-SW  |
 | Vendor  | [smarthjemmet.dk](/supported-devices/#v=smarthjemmet.dk)  |
 | Description | Multi switch from Smarthjemmet.dk |
-| Exposes | switch_type_1, switch_type_2, switch_type_3, switch_type_4, battery, action, voltage |
+| Exposes | switch_type_1, switch_type_2, switch_type_3, switch_type_4, battery, voltage, action |
 | Picture | ![smarthjemmet.dk MULTI-ZIG-SW](https://www.zigbee2mqtt.io/images/devices/MULTI-ZIG-SW.png) |
 
 
@@ -92,15 +92,15 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `triple`, `hold`, `release`.
-
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `triple`, `hold`, `release`.
 

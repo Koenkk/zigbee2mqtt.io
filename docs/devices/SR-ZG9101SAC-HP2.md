@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9101SAC-HP2  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee 2 channel AC phase-cut dimmer |
-| Exposes | light (state, brightness), effect, power_on_behavior |
+| Exposes | light (state, brightness), effect, power_on_behavior, minimum_pwm |
 | Picture | ![Sunricher SR-ZG9101SAC-HP2](https://www.zigbee2mqtt.io/images/devices/SR-ZG9101SAC-HP2.png) |
 
 
@@ -135,4 +135,12 @@ Value can be found in the published state on the `power_on_behavior_l2` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Minimum PWM (numeric)
+Power off the device and wait for 3 seconds before reconnecting to apply the settings..
+Value can be found in the published state on the `minimum_pwm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimum_pwm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_pwm": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `50`.
+The unit of this value is `%`.
 

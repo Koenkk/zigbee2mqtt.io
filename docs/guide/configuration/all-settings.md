@@ -215,7 +215,7 @@ advanced:
 
 ### cache_state
 
-MQTT message payload will contain all attributes, not only changed ones. Has to be true when integrating via Home Assistant
+MQTT message payload will contain all attributes, not only changed ones. Must be true when integrating via Home Assistant
 
 ```yaml
 advanced:
@@ -305,7 +305,7 @@ advanced:
 
 ### output
 
-Examples when 'state' of a device is published json: topic: 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}' attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON' attribute_and_json: both json and attribute (see above)
+How the 'state' of a device is published. json: topic 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}'. attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON'. attribute_and_json: both json and attribute (see above). Home Assistant requires json
 
 ```yaml
 advanced:
@@ -1116,7 +1116,7 @@ Home Assistant integration
 
 ### enabled
 
-Enable Home Assistant integration
+Enable Home Assistant integration. Also check 'cache_state' and 'output' options under 'advanced'.
 
 ```yaml
 homeassistant:
@@ -1166,6 +1166,7 @@ homeassistant:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### experimental_event_entities
 
@@ -1178,6 +1179,7 @@ homeassistant:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ## map_options
 

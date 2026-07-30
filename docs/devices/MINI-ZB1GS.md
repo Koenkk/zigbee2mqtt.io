@@ -77,7 +77,7 @@ If value equals `true` turbo mode is ON, if `false` OFF.
 Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": VALUE, "inching_time": VALUE, "inching_mode": VALUE}}`
 - `inching_control` (binary): Enable/disable inching function. allowed values: `ENABLE` or `DISABLE`
-- `inching_time` (numeric): Delay time for executing a inching action. min value is 0.5, max value is 3599.5, unit is seconds
+- `inching_time` (numeric): Delay time for executing a inching action. min value is 0.5, max value is 86399.5, unit is seconds
 - `inching_mode` (binary): Set inching off or inching on mode. allowed values: `ON` or `OFF`
 
 ### Delayed power on state (binary)

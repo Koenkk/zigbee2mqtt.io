@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SNZB-02B  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, temperature_calibration, humidity_calibration |
+| Exposes | battery, temperature, humidity, dew_point, vpd, temperature_calibration, humidity_calibration |
 | Picture | ![SONOFF SNZB-02B](https://www.zigbee2mqtt.io/images/devices/SNZB-02B.png) |
 
 
@@ -69,6 +69,18 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Dew point (numeric)
+Calculated dew point temperature.
+Value can be found in the published state on the `dew_point` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Vpd (numeric)
+Calculated vapor pressure deficit.
+Value can be found in the published state on the `vpd` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kPa`.
 
 ### Temperature calibration (numeric)
 Offset to add/subtract to the reported temperature. Note: wake up the device by pressing the button on the back before changing this value..

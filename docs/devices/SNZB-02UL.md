@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SNZB-02UL  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | E-ink screen temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, comfort_temperature_min, comfort_temperature_max, temperature_units, comfort_humidity_min, comfort_humidity_max, temperature_calibration, humidity_calibration |
+| Exposes | battery, temperature, humidity, dew_point, vpd, comfort_temperature_min, comfort_temperature_max, temperature_units, comfort_humidity_min, comfort_humidity_max, temperature_calibration, humidity_calibration |
 | Picture | ![SONOFF SNZB-02UL](https://www.zigbee2mqtt.io/images/devices/SNZB-02UL.png) |
 
 
@@ -70,6 +70,18 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The minimal value is `5` and the maximum value is `95`.
 The unit of this value is `%`.
+
+### Dew point (numeric)
+Calculated dew point temperature.
+Value can be found in the published state on the `dew_point` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Vpd (numeric)
+Calculated vapor pressure deficit.
+Value can be found in the published state on the `vpd` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kPa`.
 
 ### Comfort temperature min (numeric)
 Minimum temperature that is considered comfortable. The device will display ❄️ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..

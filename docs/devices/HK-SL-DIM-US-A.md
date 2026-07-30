@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HK-SL-DIM-US-A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Keypad smart dimmer |
-| Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy |
+| Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy, minimum_pwm |
 | Picture | ![Sunricher HK-SL-DIM-US-A](https://www.zigbee2mqtt.io/images/devices/HK-SL-DIM-US-A.png) |
 
 
@@ -131,4 +131,12 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Minimum PWM (numeric)
+Power off the device and wait for 3 seconds before reconnecting to apply the settings..
+Value can be found in the published state on the `minimum_pwm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimum_pwm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_pwm": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `50`.
+The unit of this value is `%`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | M1-PE  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart occupancy sensor |
-| Exposes | battery, occupancy, illuminance, temperature, humidity, target_distance, fault_state, identify, unoccupied_delay, detection_range, illuminance_threshold, pir_sensitivity_level, work_mode, temperature_offset, humidity_offset, learning_control, learning_state, work_indicator, reported_packages, rejoin_count, reboot_count |
+| Exposes | battery, occupancy, illuminance, temperature, humidity, target_distance, fault_state, identify, unoccupied_delay, radar_detection_min_range, radar_detection_max_range, illuminance_threshold, sensitivity_level, work_mode, temperature_offset, humidity_offset, learning_control, learning_state, work_indicator, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman M1-PE](https://www.zigbee2mqtt.io/images/devices/M1-PE.png) |
 
 
@@ -97,7 +97,7 @@ Value can be found in the published state on the `target_distance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"target_distance": ""}`.
 It's not possible to write (`/set`) this value.
 The minimal value is `1` and the maximum value is `10`.
-The unit of this value is `meter(s)`.
+The unit of this value is `m`.
 
 ### Fault state (text)
 device fault state.
@@ -120,12 +120,21 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 
-### Detection range (composite)
-radar detection range.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": {"min_range": VALUE, "max_range": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_range": ""}`.
-- `min_range` (numeric): Minimum detection range of radar unit is cm
-- `max_range` (numeric): The maximum detection range of the radar unit is cm
+### Radar detection min range (numeric)
+The minimum detection range of the radar.
+Value can be found in the published state on the `radar_detection_min_range` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_detection_min_range": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_detection_min_range": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `6`.
+The unit of this value is `m`.
+
+### Radar detection max range (numeric)
+The maximum detection range of the radar.
+Value can be found in the published state on the `radar_detection_max_range` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_detection_max_range": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_detection_max_range": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `6`.
+The unit of this value is `m`.
 
 ### Illuminance threshold (numeric)
 when the illuminance exceeds the threshold, it activates local linkages..
@@ -135,11 +144,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `lx`.
 
-### Pir sensitivity level (enum)
-The sensitivity of PIR Sensor.
-Value can be found in the published state on the `pir_sensitivity_level` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_sensitivity_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity_level": NEW_VALUE}`.
+### Sensitivity level (enum)
+The sensitivity of Sensor.
+Value can be found in the published state on the `sensitivity_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity_level": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Work mode (enum)
@@ -166,7 +175,7 @@ The minimal value is `-15` and the maximum value is `15`.
 ### Learning control (binary)
 Radar learning mode, please wake up the device first..
 Value can be found in the published state on the `learning_control` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"learning_control": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learning_control": NEW_VALUE}`.
 If value equals `start` learning control is ON, if `reset` OFF.
 

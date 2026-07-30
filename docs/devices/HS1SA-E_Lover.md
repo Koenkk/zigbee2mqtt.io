@@ -81,14 +81,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` trouble is ON, if `false` OFF.
 
 ### Trigger selftest (enum)
-Trigger smoke alarm self-check test..
+Trigger alarm self-check..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_selftest": NEW_VALUE}`.
 The possible values are: `test`.
 
 ### Temporary mute (enum)
-temporarily mute smoke alarm but please ensure there is no real fire..
+Silence the alarm temporarily.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mute": NEW_VALUE}`.

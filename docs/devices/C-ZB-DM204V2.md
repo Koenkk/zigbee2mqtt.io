@@ -1,7 +1,7 @@
 ---
 title: "Candeo C-ZB-DM204v2 control via MQTT"
 description: "Integrate your Candeo C-ZB-DM204v2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2026-06-30T19:08:31
+addedAt: 2026-07-30T18:55:55
 pageClass: device-page
 ---
 

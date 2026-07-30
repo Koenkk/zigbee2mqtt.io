@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0726_1_gang  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 gang switch with neutral wire |
-| Exposes | switch (state), power_on_behavior, switch_mode, action, indicator_mode |
+| Exposes | switch (state), power_on_behavior, switch_mode, indicator_mode, action |
 | Picture | ![Tuya TS0726_1_gang](https://www.zigbee2mqtt.io/images/devices/TS0726_1_gang.png) |
 
 
@@ -74,15 +74,16 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
+### Indicator mode (enum)
+Mode of the indicator light.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `none`, `relay`, `pos`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `scene_1`.
-
-### Indicator mode (enum)
-Value can be found in the published state on the `indicator_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-The possible values are: `none`, `relay`, `pos`.
 

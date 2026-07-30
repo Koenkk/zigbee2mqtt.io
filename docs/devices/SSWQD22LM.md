@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SSWQD22LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Spotlight T2 Pro |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature |
+| Exposes | light (state, brightness, color_temp, level_config), power_outage_count, device_temperature, min_brightness, max_brightness |
 | Picture | ![Aqara SSWQD22LM](https://www.zigbee2mqtt.io/images/devices/SSWQD22LM.png) |
+| White-label | Aqara ZNSD07LM, Aqara ZNSD08LM, Aqara ZNSD09LM, Aqara ZNSD10LM |
 
 
 
@@ -48,7 +49,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`, `color_temp`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `level_config`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
                 
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
@@ -103,4 +104,20 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Min brightness (numeric)
+Minimum brightness level.
+Value can be found in the published state on the `min_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `99`.
+The unit of this value is `%`.
+
+### Max brightness (numeric)
+Maximum brightness level.
+Value can be found in the published state on the `max_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
 

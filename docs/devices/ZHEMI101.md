@@ -57,10 +57,10 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Power (numeric)
-Normalized instantaneous demand. Source units such as kW or BTU/h are converted to kW..
+Normalized instantaneous demand. Source units such as kW or BTU/h are converted to W..
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `kW`.
+The unit of this value is `W`.
 
 ### Gas (numeric)
 Normalized cumulative gas volume. Source units are converted to cubic meters..
