@@ -22,11 +22,11 @@
     "dependencies": {
         "@quasar/extras": "2.0.2",
         "core-js": "3.49.0",
-        "quasar": "2.23.1"
+        "quasar": "2.23.3"
     },
     "devDependencies": {
         "@types/json-schema": "^7.0.15",
-        "@types/node": "26.1.1",
+        "@types/node": "26.1.2",
         "@vuepress/bundler-vite": "2.0.0-rc.31",
         "@vuepress/client": "2.0.0-rc.31",
         "@vuepress/plugin-docsearch": "2.0.0-rc.132",
