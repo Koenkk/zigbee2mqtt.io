@@ -24,7 +24,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+The Heiman `HS2SA-1` Zigbee 3.0 smoke detector gets detected as this model, but exposed functions work properly.
+
+### Pairing
+To put the device into Zigbee pairing mode, quickly press the "Test/Hush/Networking" button 3 times within 2 seconds.
+While in pairing mode, the green LED flashes quickly (5 times per second). Pairing success is indicated by the LED lighting green for 3 seconds and then turning off. If pairing fails, the green LED flashes slowly (2 times per second) for 3 seconds, then turns off. Pairing mode stops after 60 seconds.
 
 <!-- Notes END: Do not edit below this line -->
 
