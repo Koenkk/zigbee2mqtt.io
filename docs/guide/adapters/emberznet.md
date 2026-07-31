@@ -54,12 +54,12 @@ Each category is ordered by chip, newer series first.
 
 Chip: [EFR32MG24A420F1536IM40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.EFR32MG24A420F1536IM40?tab=specs)
 
-With external antenna and hardware flow control support. Make sure to set the baudrate to 460800.
+With external antenna and internal hardware flow control (between ESP32-S3 and MG24). Make sure to set the baudrate to 460800.
 
 ```yaml
 serial:
     baudrate: 460800
-    rtscts: true
+    rtscts: false
 ```
 
 - [Product page](https://www.home-assistant.io/connect/zbt-2)
