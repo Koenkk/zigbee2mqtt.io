@@ -81,6 +81,12 @@ Repeat this last step until your device no longer produces log messages like `No
 
 If none of the existing converters fit, you can add custom ones, an example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.mjs).
 
+For manufacturer-specific or custom clusters, generated definitions can also
+read raw attributes by their numeric attribute ID. If the converter defines a
+custom cluster with named attributes, prefer using those names in readback code;
+this keeps generated definitions readable while still supporting devices that
+report numeric raw attribute IDs.
+
 ### 4. Create a pull request
 
 To contribute your new device definition to Zigbee2MQTT such that it will be supported out-of-the-box in the next release, follow these steps:
