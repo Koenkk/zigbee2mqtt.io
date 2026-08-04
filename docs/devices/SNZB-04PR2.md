@@ -24,8 +24,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Potential issues
 
+The sensor might fail to transmit the first action after a few hours of inactivity.  
+Issue was reported by some users [here](https://github.com/Koenkk/zigbee2mqtt/discussions/31618), currently under investigation by the SONOFF team.
 <!-- Notes END: Do not edit below this line -->
 
 
