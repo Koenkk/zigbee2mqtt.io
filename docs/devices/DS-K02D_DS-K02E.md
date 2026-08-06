@@ -80,5 +80,5 @@ If value equals `true` multi click is ON, if `false` OFF.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_top_wireless_button`, `hold_bottom_wireless_button`, `single_top_wireless_button`, `single_bottom_wireless_button`, `double_top_wireless_button`, `double_bottom_wireless_button`, `release_top_wireless_button`, `release_bottom_wireless_button`.
+The possible values are: `button_3_single`, `button_4_single`.
 

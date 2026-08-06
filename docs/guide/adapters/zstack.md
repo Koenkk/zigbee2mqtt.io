@@ -152,6 +152,21 @@ Note before buying that ITead slightly confusingly now sells both the Dongle Plu
 <img src="../../images/sonoff_plus_dongle.png" width="200" />
 :::
 
+::: details SONOFF Dongle Plus CC2674P10 Dongle-PP10
+
+CC2674P10 based USB connected adapter pre-programmed and with enclosure.
+
+Powerful CC2674P10 based Zigbee USB coordinator with external 3 dBi antenna, pre-flashed firmware and ready for Home Assistant, Zigbee2MQTT and ZHA.
+
+- [Chip](https://www.ti.com/product/CC2674P10#features)
+- [Product Page](https://sonoff.tech/products/sonoff-dongle-plus-cc2674p10-zigbee-thread-usb-dongle-dongle-pp10)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-pp10/hardware-specification/)
+- [Buy](https://sonoff.tech/products/sonoff-dongle-plus-cc2674p10-zigbee-thread-usb-dongle-dongle-pp10)
+
+<img src="../../images/Dongle-PP10_600_600.png" width="200" />
+:::
+
 ::: details Vision CC2652 dongle
 
 Adapter or small development board based on CC2652R (VS201) or CC2652P (VS202)  

@@ -1,6 +1,6 @@
 ---
-title: "LYTKO L101Ze-SLN control via MQTT"
-description: "Integrate your LYTKO L101Ze-SLN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Lytko L101Ze-SLN control via MQTT"
+description: "Integrate your Lytko L101Ze-SLN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-11-30T20:32:43
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# LYTKO L101Ze-SLN
+# Lytko L101Ze-SLN
 
 |     |     |
 |-----|-----|
 | Model | L101Ze-SLN  |
-| Vendor  | [LYTKO](/supported-devices/#v=LYTKO)  |
+| Vendor  | [Lytko](/supported-devices/#v=Lytko)  |
 | Description | Single channel thermostat without display |
 | Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_mode), identify, occupied_setback, remote_sensing, sensor_type |
-| Picture | ![LYTKO L101Ze-SLN](https://www.zigbee2mqtt.io/images/devices/L101Ze-SLN.png) |
+| Picture | ![Lytko L101Ze-SLN](https://www.zigbee2mqtt.io/images/devices/L101Ze-SLN.png) |
 
 
 

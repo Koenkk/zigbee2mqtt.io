@@ -84,10 +84,10 @@ Group IDs follow the pattern: `base + (button - 1) × 20`
 ## Exposes
 
 ### Brightness (numeric)
-Brightness level from light mode (1-254).
+Brightness level from light mode (1-255).
 Value can be found in the published state on the `brightness` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `1` and the maximum value is `254`.
+The minimal value is `1` and the maximum value is `255`.
 
 ### Color temp (numeric)
 Color temperature from light mode (mired).

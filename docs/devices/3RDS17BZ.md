@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 3RDS17BZ  |
 | Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Door sensor |
-| Exposes | contact, battery_low, battery, voltage |
+| Exposes | contact, battery_low, battery, voltage, delay_open |
 | Picture | ![Third Reality 3RDS17BZ](https://www.zigbee2mqtt.io/images/devices/3RDS17BZ.png) |
 
 
@@ -60,4 +60,12 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Delay open (numeric)
+Delay open time.
+Value can be found in the published state on the `delay_open` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"delay_open": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_open": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65535`.
+The unit of this value is `s`.
 

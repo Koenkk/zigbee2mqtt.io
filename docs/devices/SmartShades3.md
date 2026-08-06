@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SmartShades3  |
 | Vendor  | [SOMA](/supported-devices/#v=SOMA)  |
 | Description | Smart shades 3 |
-| Exposes | battery, cover (state, position, tilt) |
+| Exposes | battery, cover (state, position) |
 | Picture | ![SOMA SmartShades3](https://www.zigbee2mqtt.io/images/devices/SmartShades3.png) |
 
 
@@ -53,5 +53,4 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
-To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt": VALUE}` where `VALUE` is a number between `0` and `100`.
 

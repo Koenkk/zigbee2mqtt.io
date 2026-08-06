@@ -34,6 +34,7 @@ Add the correct baudrate to the `configuration.yaml` into the serial section.
 The latest stable firmware versions are recommended and listed in the [firmware changelog](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Firmware-Changelog).
 
 - [Coordinator firmware](https://deconz.dresden-elektronik.de/deconz-firmware/)
+- [Flashing tool](https://phoscon.de/updater/#productselect) (Only Conbee 3 and FLS-M)
 - [Flashing](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)
 - [Buy](https://phoscon.de/conbee2#buy) (ConBee II)
 - [Buy](https://phoscon.de/conbee3#buy) (ConBee III)

@@ -1,6 +1,6 @@
 ---
-title: "Adeo SIN-4-1-20_EQU control via MQTT"
-description: "Integrate your Adeo SIN-4-1-20_EQU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "ADEO SIN-4-1-20_EQU control via MQTT"
+description: "Integrate your ADEO SIN-4-1-20_EQU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-09-30T19:37:28
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Adeo SIN-4-1-20_EQU
+# ADEO SIN-4-1-20_EQU
 
 |     |     |
 |-----|-----|
 | Model | SIN-4-1-20_EQU  |
-| Vendor  | [Adeo](/supported-devices/#v=Adeo)  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | Dry contact switch for central heating boilers |
 | Exposes | switch (state), power_on_behavior, action |
-| Picture | ![Adeo SIN-4-1-20_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_EQU.png) |
+| Picture | ![ADEO SIN-4-1-20_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_EQU.png) |
 
 
 

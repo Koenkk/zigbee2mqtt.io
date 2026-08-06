@@ -28,7 +28,6 @@ pageClass: device-page
 
 ### Configuration
 Changing parameters (like the reporting interval) may require waking up the device (by pressing a button) and attempting multiple times.
-
 <!-- Notes END: Do not edit below this line -->
 
 

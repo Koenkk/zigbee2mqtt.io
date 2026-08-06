@@ -63,7 +63,7 @@ Calibrates the motor stroke, or clears the current one..
 Value can be found in the published state on the `motor_travel_calibration_action` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_travel_calibration_action": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_travel_calibration_action": NEW_VALUE}`.
-The possible values are: `start_automatic`, `start_manual`, `clear`, `manual_2_fully_opened`, `manual_3_fully_closed`.
+The possible values are: `none`, `start_automatic`, `start_manual`, `clear`, `manual_2_fully_opened`, `manual_3_fully_closed`.
 
 ### Motor travel calibration status (enum)
 The calibration status of the curtain motor's stroke..

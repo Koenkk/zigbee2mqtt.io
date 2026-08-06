@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | P3Z  |
 | Vendor  | [Nous](/supported-devices/#v=Nous)  |
-| Description | Smart light bulb |
+| Description | E27 RGB light bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
 | Picture | ![Nous P3Z](https://www.zigbee2mqtt.io/images/devices/P3Z.png) |
 

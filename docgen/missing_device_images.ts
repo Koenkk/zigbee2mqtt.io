@@ -128,7 +128,7 @@ async function moveMissing() {
             let source = path.join(missingImagesPath, file);
             // source = await ensurePngWithoutBackground(source);
             const name = path.basename(source);
-            const match = name.match('(.+)_\\d+\\.png');
+            const match = name.match('(.+).png');
             if (!match) throw new Error(`Failed to match '${name}'`);
             const target = path.join(imageBaseDir, `${match[1]}.png`);
             fs.copyFileSync(source, target);

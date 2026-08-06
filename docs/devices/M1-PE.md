@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | M1-PE  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart occupancy sensor |
-| Exposes | battery, occupancy, illuminance, target_distance, fault_state, identify, unoccupied_delay, detection_range, repeated_reporting_duration, illuminance_threshold, pir_sensitivity_level, work_mode, learning_control, learning_state, work_indicator, reported_packages, rejoin_count, reboot_count |
+| Exposes | battery, occupancy, illuminance, temperature, humidity, target_distance, fault_state, identify, unoccupied_delay, radar_detection_min_range, radar_detection_max_range, illuminance_threshold, sensitivity_level, work_mode, temperature_offset, humidity_offset, learning_control, learning_state, work_indicator, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman M1-PE](https://www.zigbee2mqtt.io/images/devices/M1-PE.png) |
 
 
@@ -37,6 +37,14 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
@@ -69,13 +77,27 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `lx`.
 
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `%`.
+
 ### Target distance (numeric)
 The distance of target.
 Value can be found in the published state on the `target_distance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"target_distance": ""}`.
 It's not possible to write (`/set`) this value.
 The minimal value is `1` and the maximum value is `10`.
-The unit of this value is `meter(s)`.
+The unit of this value is `m`.
 
 ### Fault state (text)
 device fault state.
@@ -98,20 +120,21 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 
-### Detection range (composite)
-radar detection range.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": {"min_range": VALUE, "max_range": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_range": ""}`.
-- `min_range` (numeric): Minimum detection range of radar unit is cm
-- `max_range` (numeric): The maximum detection range of the radar unit is cm
+### Radar detection min range (numeric)
+The minimum detection range of the radar.
+Value can be found in the published state on the `radar_detection_min_range` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_detection_min_range": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_detection_min_range": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `6`.
+The unit of this value is `m`.
 
-### Repeated reporting duration (numeric)
-occupied repeated reporting duartion, 65535 indicates forever.
-Value can be found in the published state on the `repeated_reporting_duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"repeated_reporting_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"repeated_reporting_duration": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `65535`.
-The unit of this value is `minute(s)`.
+### Radar detection max range (numeric)
+The maximum detection range of the radar.
+Value can be found in the published state on the `radar_detection_max_range` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_detection_max_range": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_detection_max_range": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `6`.
+The unit of this value is `m`.
 
 ### Illuminance threshold (numeric)
 when the illuminance exceeds the threshold, it activates local linkages..
@@ -121,11 +144,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `lx`.
 
-### Pir sensitivity level (enum)
-The sensitivity of PIR Sensor.
-Value can be found in the published state on the `pir_sensitivity_level` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_sensitivity_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity_level": NEW_VALUE}`.
+### Sensitivity level (enum)
+The sensitivity of Sensor.
+Value can be found in the published state on the `sensitivity_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity_level": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Work mode (enum)
@@ -135,19 +158,33 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_mode": NEW_VALUE}`.
 The possible values are: `pir`, `radar`, `pir_and_radar`.
 
-### Learning control (enum)
+### Temperature offset (numeric)
+used for temperature offset, unit: ℃.
+Value can be found in the published state on the `temperature_offset` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+The minimal value is `-15` and the maximum value is `15`.
+
+### Humidity offset (numeric)
+used for humidity offset, unit: RH%.
+Value can be found in the published state on the `humidity_offset` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
+The minimal value is `-15` and the maximum value is `15`.
+
+### Learning control (binary)
 Radar learning mode, please wake up the device first..
 Value can be found in the published state on the `learning_control` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"learning_control": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learning_control": NEW_VALUE}`.
-The possible values are: `start`, `reset`.
+If value equals `start` learning control is ON, if `reset` OFF.
 
 ### Learning state (enum)
 radar learning state.
 Value can be found in the published state on the `learning_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"learning_state": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `not`, `learning`, `completed`, `failed`.
+The possible values are: `normal`, `learning`, `completed`, `failed`.
 
 ### Work indicator (binary)
 Enable/disable the indicator on product.

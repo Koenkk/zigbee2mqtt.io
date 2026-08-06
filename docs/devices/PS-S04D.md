@@ -131,7 +131,7 @@ Value for delay before the device reports absence when no presence is detected.
 Value can be found in the published state on the `absence_delay_timer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"absence_delay_timer": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_delay_timer": NEW_VALUE}`.
-The minimal value is `10` and the maximum value is `300`.
+The minimal value is `1` and the maximum value is `300`.
 The unit of this value is `sec`.
 
 ### Pir detection interval (numeric)
