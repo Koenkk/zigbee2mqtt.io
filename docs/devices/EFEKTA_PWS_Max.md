@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_PWS_Max](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS_Max.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Plant watering sensor EFEKTA PWS max](http://efektalab.com/PWS_Max)

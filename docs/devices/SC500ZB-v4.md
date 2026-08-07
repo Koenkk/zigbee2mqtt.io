@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SC500ZB-v4  |
 | Vendor  | [LoraTap](/supported-devices/#v=LoraTap)  |
 | Description | Smart curtain/shutter switch |
-| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode |
+| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode, switch_type |
 | Picture | ![LoraTap SC500ZB-v4](https://www.zigbee2mqtt.io/images/devices/SC500ZB-v4.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -86,4 +87,11 @@ Value can be found in the published state on the `switch_type_curtain` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_curtain": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_curtain": NEW_VALUE}`.
 The possible values are: `flip-switch`, `sync-switch`, `button-switch`, `button2-switch`.
+
+### Switch type (enum)
+Type of the installed switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `momentary`, `toggle`.
 

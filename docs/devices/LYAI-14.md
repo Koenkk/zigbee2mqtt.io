@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya LYAI-14](https://www.zigbee2mqtt.io/images/devices/LYAI-14.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Countdown
@@ -39,7 +40,7 @@ Support for the shutoff countdown timer is not currently working. This needs fur
 ## Exposes
 
 ### Countdown (numeric)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.

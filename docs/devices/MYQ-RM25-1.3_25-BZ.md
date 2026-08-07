@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya MYQ-RM25-1.3/25-BZ](https://www.zigbee2mqtt.io/images/devices/MYQ-RM25-1.3-25-BZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tongou TOQCB2-80](https://www.zigbee2mqtt.io/images/devices/TOQCB2-80.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | CZF02  |
 | Vendor  | [Lincukoo](/supported-devices/#v=Lincukoo)  |
 | Description | Finger Robot |
-| Exposes | switch (state), mode, click_sustain_time, arm_down_percent, arm_up_percent, auto_adjustment, set_switch_state, battery |
+| Exposes | switch (state), switch_states, mode, button_hold_duration, auto_adjustment, arm_start_position, arm_end_position, battery |
 | Picture | ![Lincukoo CZF02](https://www.zigbee2mqtt.io/images/devices/CZF02.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,50 +36,50 @@ pageClass: device-page
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+It's not possible to read (`/get`) this value.
+
+### Switch states (enum)
+Changes the displayed state to the opposite state.
+Value can be found in the published state on the `switch_states` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_states": NEW_VALUE}`.
+The possible values are: `SWITCH`.
 
 ### Mode (enum)
-work mode of the finger robot.
+Work mode of the finger robot. Button: press and release, Switch: press.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
-The possible values are: `click`, `long_press`.
+The possible values are: `button`, `switch`.
 
-### Click sustain time (numeric)
-keep times for click.
-Value can be found in the published state on the `click_sustain_time` property.
+### Button hold duration (numeric)
+Sets the press duration for button mode.
+Value can be found in the published state on the `button_hold_duration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_sustain_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_hold_duration": NEW_VALUE}`.
 The minimal value is `0.3` and the maximum value is `10`.
 The unit of this value is `s`.
 
-### Arm down percent (numeric)
-the position for arm moving down.
-Value can be found in the published state on the `arm_down_percent` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"arm_down_percent": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `30`.
-
-### Arm up percent (numeric)
-the position for arm moving up.
-Value can be found in the published state on the `arm_up_percent` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"arm_up_percent": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `30`.
-
-### Auto adjustment (binary)
-auto adjustment the arm position.
+### Auto adjustment (enum)
+Auto select the end position. Slowly lower the arm until it fully presses the button, and save the result.
 Value can be found in the published state on the `auto_adjustment` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_adjustment": NEW_VALUE}`.
-If value equals `ON` auto adjustment is ON, if `OFF` OFF.
+The possible values are: `START`.
 
-### Set switch state (binary)
-set the switch display status.
-Value can be found in the published state on the `set_switch_state` property.
+### Arm start position (numeric)
+Sets arm position when idle.
+Value can be found in the published state on the `arm_start_position` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_switch_state": NEW_VALUE}`.
-If value equals `ON` set switch state is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"arm_start_position": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
+
+### Arm end position (numeric)
+Sets arm position when fully pressed.
+Value can be found in the published state on the `arm_end_position` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"arm_end_position": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.

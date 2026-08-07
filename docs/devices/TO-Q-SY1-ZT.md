@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tongou TO-Q-SY1-ZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SY1-ZT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 It functions as an end-device instead of a router.

@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Xiaomi YTC4042GL, Xiaomi YTC4007CN, Xiaomi YTC4018CN |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

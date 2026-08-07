@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![YOKIS MVR500E-UP](https://www.zigbee2mqtt.io/images/devices/MVR500E-UP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 - [CSA product page](https://csa-iot.org/csa_product/mvr500e-up/)
 <!-- Notes END: Do not edit below this line -->

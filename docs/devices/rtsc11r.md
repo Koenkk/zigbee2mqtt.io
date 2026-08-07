@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya rtsc11r](https://www.zigbee2mqtt.io/images/devices/rtsc11r.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

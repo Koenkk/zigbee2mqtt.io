@@ -1,5 +1,6 @@
 ---
 next: adapter-settings.md
+redirectFrom: /information/configuration.md
 ---
 
 # Configuration

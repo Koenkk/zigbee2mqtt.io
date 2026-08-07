@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya SH-SC07](https://www.zigbee2mqtt.io/images/devices/SH-SC07.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

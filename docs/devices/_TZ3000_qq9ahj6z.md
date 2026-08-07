@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![iHseno _TZ3000_qq9ahj6z](https://www.zigbee2mqtt.io/images/devices/_TZ3000_qq9ahj6z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

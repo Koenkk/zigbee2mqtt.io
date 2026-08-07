@@ -1,4 +1,5 @@
 ---
+redirectFrom: /information/zigbee_network.md
 ---
 
 # Zigbee network

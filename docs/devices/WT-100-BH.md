@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AVATTO WT-100-BH](https://www.zigbee2mqtt.io/images/devices/WT-100-BH.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF ZBCurtain](https://www.zigbee2mqtt.io/images/devices/ZBCurtain.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Pairing

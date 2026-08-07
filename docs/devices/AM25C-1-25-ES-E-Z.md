@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![eWeLink AM25C-1-25-ES-E-Z](https://www.zigbee2mqtt.io/images/devices/AM25C-1-25-ES-E-Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

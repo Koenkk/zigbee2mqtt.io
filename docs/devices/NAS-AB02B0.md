@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![NEO NAS-AB02B0](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B0.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Alarm melodies sounds/tunes:

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZT-B-EU1](https://www.zigbee2mqtt.io/images/devices/ZT-B-EU1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -43,5 +44,5 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `1_single`, `1_double`, `1_hold`.
+The possible values are: `single`, `double`, `hold`.
 

@@ -1,4 +1,5 @@
 ---
+redirectFrom: /information/flashing_the_cc2531.md
 ---
 
 # Flashing the CC2531 USB stick

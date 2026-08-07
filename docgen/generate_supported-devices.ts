@@ -5,7 +5,7 @@ import {promises as fsp} from 'fs';
 import {generatePage, getAddedAt, getImage, normalizeModel, allDefinitions} from './utils';
 import {imageBaseDir} from './constants';
 import {resolveDeviceFile} from './generate_device';
-import {Definition} from 'zigbee-herdsman-converters';
+import {DefinitionWithWhiteLabelOf} from './types';
 
 const vendors = new Set();
 
@@ -15,18 +15,20 @@ export default async function generate_supportedDevices() {
     try {
     } catch (e) {}
 
-    let definitions: (Definition & {isWhiteLabel?: boolean; whiteLabelOf?: Definition})[] = [...allDefinitions];
+    const definitionMap = new Map(allDefinitions.map((d) => [d.model, d]));
+
+    let definitions: DefinitionWithWhiteLabelOf[] = [...allDefinitions];
 
     for (const definition of allDefinitions) {
         if (definition.whiteLabel) {
-            for (const whiteLabel of definition.whiteLabel) {
+            for (const w of definition.whiteLabel) {
                 const whiteLabelDefinition = {
                     ...definition,
-                    model: whiteLabel.model,
-                    vendor: whiteLabel.vendor ?? definition.vendor,
-                    description: whiteLabel.description ?? definition.description,
+                    model: w.model,
+                    vendor: w.vendor ?? definition.vendor,
+                    description: w.description ?? definition.description,
                     isWhiteLabel: true,
-                    whiteLabelOf: definition,
+                    whiteLabelOf: 'whiteLabelOf' in w && w.whiteLabelOf ? definitionMap.get(w.whiteLabelOf) : definition,
                 };
 
                 delete whiteLabelDefinition.whiteLabel;
@@ -57,7 +59,7 @@ export default async function generate_supportedDevices() {
                 const deviceContent = await fsp.readFile(resolveDeviceFile(baseModel), 'utf-8');
                 addedAt = getAddedAt(deviceContent);
             } catch (e) {
-                console.warn(`Could not read addedAt from ${baseModel}`, e.message);
+                console.warn(`Could not read addedAt from ${baseModel}`, (e as Error).message);
             }
 
             vendors.add(d.vendor);
@@ -81,6 +83,7 @@ export default async function generate_supportedDevices() {
 sidebar: false
 editLink: false
 pageClass: supported-devices-page
+redirectFrom: /information/supported_devices.md
 ---
 
 <!-- !!!! -->

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EDP SWITCH EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/SWITCH-EDP-RE-DY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

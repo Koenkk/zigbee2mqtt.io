@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TZE284_cwyqwqbf](https://www.zigbee2mqtt.io/images/devices/TZE284_cwyqwqbf.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

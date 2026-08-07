@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Aqara CM-M01, Aqara CM-M01R |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

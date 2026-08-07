@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ShinaSystem FAM-300Z](https://www.zigbee2mqtt.io/images/devices/FAM-300Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

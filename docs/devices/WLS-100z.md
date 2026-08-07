@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya WLS-100z](https://www.zigbee2mqtt.io/images/devices/WLS-100z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

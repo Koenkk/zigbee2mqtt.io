@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, Oz Smart Things ZM85EL-1Z, Tuya M515EGZT, Tuya DT82LEMA-1.2N, Tuya ZD82TN, Larkkey ZSTY-SM-1SRZG-EU, Zemismart AM43, Zemismart M2805EGBZTN, Zemismart BCM500DS-TYZ, A-OK AM25, Alutech AM/R-Sm, Quoya AT8510-TY |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lilistore TS0601_lilistore](https://www.zigbee2mqtt.io/images/devices/TS0601_lilistore.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

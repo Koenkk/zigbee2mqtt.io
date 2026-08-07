@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Somgoms SM-1CTW-EU](https://www.zigbee2mqtt.io/images/devices/SM-1CTW-EU.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 Press and release the middle (stop) button 5 times and hold for a 6th time until you hear a beep and see the light flashing.

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tongou TOSA1-01WXJAT2A](https://www.zigbee2mqtt.io/images/devices/TOSA1-01WXJAT2A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Moes WS-SY-EURD, Moes WS-SY-EURD-WH-MS |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -41,7 +42,9 @@ To pair the device, the knob must be pressed for 5 sec. Sometimes, the pairing m
 ### Light 
 This light supports the following features: `state`, `brightness`, `min_brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 ### Light type (enum)
 Type of light attached to the device.

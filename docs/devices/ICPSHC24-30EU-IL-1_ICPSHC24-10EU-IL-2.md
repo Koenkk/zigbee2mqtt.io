@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![IKEA ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-30EU-IL-1-ICPSHC24-10EU-IL-2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pair
 To pair this device, push the little hole for a few seconds on the backside of the driver. The on/off sequence you might read about, doesn't work. However, the method suggested [here](https://www.reddit.com/r/tradfri/comments/yifty5/can_you_pair_the_tr%C3%A5dfri_driver_without_pressing/ixmkzd2/) might work for you.
@@ -51,7 +52,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ### Light 
 This light supports the following features: `state`, `brightness`, `level_config`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.

@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 1
+redirectFrom: /information/mqtt_topics_and_message_structure.md
 ---
 
 # MQTT Topics and Messages
@@ -467,22 +468,32 @@ Creates a backup of the `data` folder (without the `data/log` directory). Payloa
 
 Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typically have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
 
+::: tip TIP
+The WindFront frontend does not automatically activate permit joining after adding an install code. This allows you to permit joining on whichever device you want or "all", same as a regular device.
+:::
+
 ### Device
 
 #### zigbee2mqtt/bridge/request/device/remove
 
-Removes a device from the network. Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_bulb"}` or `my_bulb`, response: `{"data":{"id": "my_bulb","block":false,"force":false},"status":"ok"}`.
+Removes a device from the network. Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_bulb"}` or `my_bulb`, response: `{"data":{"id": "my_bulb","block":false,"force":false,"clear_cache":false},"status":"ok"}`.
 
 Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
 Which means that in case a device refuses to respond to this request it is not removed from the network.
 This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
-In case removal fails the response will be e.g. `{"data":{"id": "my_bulb","block":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
+In case removal fails the response will be e.g. `{"data":{"id": "my_bulb","block":false,"force":false,"clear_cache":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
 
 An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
 In case the device did remove itself from the network, you will get a `device_leave` event on `zigbee2mqtt/bridge/event`.
 
 In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
 To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"id":"my_bulb","force":true}`.
+
+To also clear the cache when removing a device add the optional `clear_cache` property (default `false`) to the payload, example: `{"id":"my_bulb","clear_cache":true}`; next join from that device will be from a clean slate (full interview from scratch).
+
+::: tip TIP
+If you are developing a new device (e.g. ESPHome), use `clear_cache` to prevent potentially stale data from being restored on re-pairing.
+:::
 
 In case you also want to block the device the optional `block` property (default `false`) can be added, example: `{"id":"my_bulb","block":true}`. Note that Zigbee doesn't have a block functionality, therefore when a device is blocked, Zigbee2MQTT will immediately request the device to remove itself from the network when it joins.
 
@@ -491,6 +502,10 @@ In case you also want to block the device the optional `block` property (default
 See [OTA updates](./ota_updates.md).
 
 #### zigbee2mqtt/bridge/request/device/ota_update/update
+
+See [OTA updates](./ota_updates.md).
+
+#### zigbee2mqtt/bridge/request/device/ota_update/update/abort
 
 See [OTA updates](./ota_updates.md).
 

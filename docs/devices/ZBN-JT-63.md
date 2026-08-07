@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZBN-JT-63](https://www.zigbee2mqtt.io/images/devices/ZBN-JT-63.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 RMshebei zigbee circuit breaker tuya power meter 220v

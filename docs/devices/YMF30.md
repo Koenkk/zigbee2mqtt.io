@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Yale YMF30](https://www.zigbee2mqtt.io/images/devices/YMF30.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

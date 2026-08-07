@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA Egony_Flower](https://www.zigbee2mqtt.io/images/devices/Egony_Flower.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -115,7 +116,7 @@ Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
-The possible values are: `-4dbm`, `0dbm`, `4dbm`.
+The possible values are: `0dbm`, `4dbm`.
 
 ### Lifetime (numeric)
 Device lifetime in hours.

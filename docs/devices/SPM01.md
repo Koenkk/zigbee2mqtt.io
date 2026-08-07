@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya SPM01](https://www.zigbee2mqtt.io/images/devices/SPM01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

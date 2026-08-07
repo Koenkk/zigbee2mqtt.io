@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Mumubiz TYZGTH1CH-D1RF](https://www.zigbee2mqtt.io/images/devices/TYZGTH1CH-D1RF.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

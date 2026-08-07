@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya Y1_IN](https://www.zigbee2mqtt.io/images/devices/Y1_IN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

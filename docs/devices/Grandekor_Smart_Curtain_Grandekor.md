@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![eWeLink Grandekor Smart Curtain Grandekor](https://www.zigbee2mqtt.io/images/devices/Grandekor-Smart-Curtain-Grandekor.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

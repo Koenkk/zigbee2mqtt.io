@@ -1,3 +1,7 @@
+---
+redirectFrom: /how_tos/how_to_support_new_devices.md
+---
+
 # Support new devices
 
 This page will guide you through the process of adding support for new devices through a temporary [external converter](../../advanced/more/external_converters.md).
@@ -130,7 +134,7 @@ The easiest way to provide the picture for the device is by uploading it using t
 
     The **Create pull request** button should appear afterwards.
 
-      <img width="943" height="264" alt="image" src="https://github.com/user-attachments/assets/e2cd762f-1e85-491b-bd92-9d2f2b82ce64" />
+       <img width="943" height="264" alt="image" src="https://github.com/user-attachments/assets/e2cd762f-1e85-491b-bd92-9d2f2b82ce64" />
 
 9. Provide information for the PR and choose the **Create pull request** button.
 

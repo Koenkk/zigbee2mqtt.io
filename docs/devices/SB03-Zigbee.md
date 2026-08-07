@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![RSH SB03-Zigbee](https://www.zigbee2mqtt.io/images/devices/SB03-Zigbee.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

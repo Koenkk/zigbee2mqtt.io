@@ -1,4 +1,5 @@
 ---
+redirectFrom: /information/groups.md
 ---
 
 # Groups

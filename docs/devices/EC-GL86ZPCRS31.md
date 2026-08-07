@@ -18,13 +18,25 @@ pageClass: device-page
 | Model | EC-GL86ZPCRS31  |
 | Vendor  | [BSEED](/supported-devices/#v=BSEED)  |
 | Description | Curtain/blind switch |
-| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode |
+| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode, switch_type |
 | Picture | ![BSEED EC-GL86ZPCRS31](https://www.zigbee2mqtt.io/images/devices/EC-GL86ZPCRS31.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+Press on stop button for 10 seconds to enter pairing mode
 
+### Calibration
+
+* Press the open button on the switch, wait until the curtains are completely open.
+* Press the pause button on the switch.
+* Put the device into calibration mode, see [below](#calibration-binary).
+* Press the close button on the switch, wait until curtains are fully closed.
+* Press the pause button on the switch.
+* Disable the calibration mode, see [below](#calibration-binary).
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -80,4 +92,11 @@ Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
+
+### Switch type (enum)
+Type of the installed switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `momentary`, `toggle`.
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZB-Sm](https://www.zigbee2mqtt.io/images/devices/ZB-Sm.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

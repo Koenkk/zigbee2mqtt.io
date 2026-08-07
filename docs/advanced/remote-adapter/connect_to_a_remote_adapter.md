@@ -1,3 +1,7 @@
+---
+redirectFrom: /how_tos/how_to_connect_to_a_remote_adapter.md
+---
+
 # Connect to a remote adapter
 
 This how-to explains how to run Zigbee2MQTT with an adapter on a remote location.

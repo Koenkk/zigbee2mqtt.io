@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya HY08WE](https://www.zigbee2mqtt.io/images/devices/HY08WE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

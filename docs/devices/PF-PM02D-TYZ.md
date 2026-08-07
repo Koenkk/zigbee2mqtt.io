@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | PF-PM02D-TYZ  |
 | Vendor  | [IOTPerfect](/supported-devices/#v=IOTPerfect)  |
 | Description | Smart water/gas valve |
-| Exposes | switch (state) |
+| Exposes | switch (state), fault |
 | Picture | ![IOTPerfect PF-PM02D-TYZ](https://www.zigbee2mqtt.io/images/devices/PF-PM02D-TYZ.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,4 +37,10 @@ pageClass: device-page
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
+
+### Fault (binary)
+Indicates whether a fault was detected.
+Value can be found in the published state on the `fault` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` fault is ON, if `false` OFF.
 

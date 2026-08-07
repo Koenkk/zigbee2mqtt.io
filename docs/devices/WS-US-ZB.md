@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nova Digital WS-US-ZB](https://www.zigbee2mqtt.io/images/devices/WS-US-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

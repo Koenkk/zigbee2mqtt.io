@@ -18,34 +18,60 @@ pageClass: device-page
 | Model | S4SW-002P16EU-COVER  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 2PM Gen4 (Cover mode) |
-| Exposes | cover (state, position, tilt), wifi_status, ip_address, dhcp_enabled, wifi_config |
+| Exposes | action, switch_type, cover (state, position, tilt), wifi_status, ip_address, dhcp_enabled, wifi_config |
 | Picture | ![Shelly S4SW-002P16EU-COVER](https://www.zigbee2mqtt.io/images/devices/S4SW-002P16EU-COVER.png) |
 
 
+
+## Firmware
+
+It is recommended to connect Shelly devices by WiFi / Bluetooth, and update their firmware, until they gain support for OTA updates over Zigbee.
+
+The latest firmware fixes known issues like negative power readings on some models.  
+*Note they roll-out updates in phases. Check "beta" channels if you are specifically looking for a fix.*
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-### Device Modes
-The Shelly 2PM Gen4 device operates in two different modes that appear as separate devices in Zigbee2MQTT:
+## Notes
 
-- **Cover Mode** [(`S4SW-002P16EU-COVER`)](/devices/S4SW-002P16EU-COVER.html) - This device supports window covering controls with lift and tilt functionality with power monitoring
-- **Switch Mode** [(`S4SW-002P16EU-SWITCH`)](/devices/S4SW-002P16EU-SWITCH.html) - Provides dual switch functionality with power monitoring
+### Zigbee / Matter mode
+The device ships in Matter mode by default. To use the device with Zigbee2MQTT, switching to Zigbee mode is required. This can either be done via the Web UI, or by pressing the button on the back of the device 5 times. Afterwards, the device will start pairing mode for 3 minutes. To restart pairing mode, press the button three times again.
 
-The device mode is automatically detected based on the endpoint configuration. 
+### Usage scenarios
+The Shelly 2PM Gen4 device allows two different usage scenarios that appear as separate devices in Zigbee2MQTT:
 
-For now, changing modes is only possible through Shelly WebUI.
+- **Cover Control** [(`S4SW-002P16EU-COVER`)](/devices/S4SW-002P16EU-COVER.html) - This device supports window covering controls with lift and tilt functionality with power monitoring
+- **Switch Control** [(`S4SW-002P16EU-SWITCH`)](/devices/S4SW-002P16EU-SWITCH.html) - Provides dual switch functionality with power monitoring
+
+The usage is automatically detected based on the endpoint configuration.  For now, changing usage is only possible through Shelly WebUI.
+
+### Switch inputs
+Zigbee2MQTT exposes switch input type controls for each input endpoint reported by the device. Cover-mode devices normally expose `switch_type_sw1` and `switch_type_sw2`; devices that do not report a second switch input endpoint only expose the available input.
 
 ### Cover Mode Features
 When operating in cover mode, this device provides:
-- Window covering controls (lift and tilt)
+- Window covering controls
 - Position feedback
 - State reporting (OPEN/CLOSE)
 
+Tilt support is only available when slat control is enabled on the Shelly device. The `cover_tilt_enabled` device option controls whether Zigbee2MQTT exposes tilt: `auto` reads the Shelly cover configuration over RPC, while `true` or `false` can be used to override the detected value.
+
 Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
+
+### Maintenance and factory reset
+To enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 5 seconds. Doing so for 10 seconds will trigger a factory reset.
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `cover_tilt_enabled`: Expose tilt/slat controls for covers with Shelly slat control enabled. The value must be one of `auto`, `true`, `false`
+
+* `shelly_wifi_ssid`: Full Wi-Fi SSID to use when the Shelly Wi-Fi setup cluster reports a shortened network name. The value must be textual.
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
@@ -53,6 +79,26 @@ Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/sh
 
 
 ## Exposes
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `input_1_on`, `input_1_off`, `input_1_toggle`, `input_1_single`, `input_1_double`, `input_1_triple`, `input_1_hold`, `input_2_on`, `input_2_off`, `input_2_toggle`, `input_2_single`, `input_2_double`, `input_2_triple`, `input_2_hold`.
+
+### Switch type (enum, sw1 endpoint)
+Switch input type.
+Value can be found in the published state on the `switch_type_sw1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_sw1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_sw1": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
+
+### Switch type (enum, sw2 endpoint)
+Switch input type.
+Value can be found in the published state on the `switch_type_sw2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_sw2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_sw2": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
 
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).

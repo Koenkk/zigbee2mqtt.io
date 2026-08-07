@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Climax KP-23EL-ZBS-ACE](https://www.zigbee2mqtt.io/images/devices/KP-23EL-ZBS-ACE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

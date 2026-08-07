@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sercomm SZ-PIR04N](https://www.zigbee2mqtt.io/images/devices/SZ-PIR04N.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya CTL-R1-TY-Zigbee](https://www.zigbee2mqtt.io/images/devices/CTL-R1-TY-Zigbee.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -74,7 +75,7 @@ The minimal value is `1` and the maximum value is `600`.
 The unit of this value is `s`.
 
 ### Illuminance treshold max (numeric)
-The max illumiance threshold to turn on the light.
+The max illuminance threshold to turn on the light.
 Value can be found in the published state on the `illuminance_treshold_max` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_treshold_max": NEW_VALUE}`.
@@ -82,7 +83,7 @@ The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `lx`.
 
 ### Illuminance treshold min (numeric)
-The min illumiance threshold to turn on the light.
+The min illuminance threshold to turn on the light.
 Value can be found in the published state on the `illuminance_treshold_min` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_treshold_min": NEW_VALUE}`.

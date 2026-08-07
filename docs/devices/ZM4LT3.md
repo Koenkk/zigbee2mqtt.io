@@ -1,7 +1,7 @@
 ---
 title: "Moes ZM4LT3 control via MQTT"
 description: "Integrate your Moes ZM4LT3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2026-01-01T13:27:46
+addedAt: 2026-01-31T13:36:21
 pageClass: device-page
 ---
 
@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZM4LT3  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | 3-gang switch module |
-| Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode, inching_control_set |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode |
 | Picture | ![Moes ZM4LT3](https://www.zigbee2mqtt.io/images/devices/ZM4LT3.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -53,7 +54,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l3": ""}`.
 
 ### Countdown (numeric, l1 endpoint)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown_l1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l1": NEW_VALUE}`.
@@ -61,7 +62,7 @@ The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
 ### Countdown (numeric, l2 endpoint)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown_l2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l2": NEW_VALUE}`.
@@ -69,7 +70,7 @@ The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
 ### Countdown (numeric, l3 endpoint)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown_l3": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l3": NEW_VALUE}`.

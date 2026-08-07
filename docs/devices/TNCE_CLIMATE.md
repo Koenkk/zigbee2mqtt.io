@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![TNCE TNCE_CLIMATE](https://www.zigbee2mqtt.io/images/devices/TNCE_CLIMATE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

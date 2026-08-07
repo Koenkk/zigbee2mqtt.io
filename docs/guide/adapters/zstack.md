@@ -24,6 +24,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
         - Remote devices: access serial, USB, and TCP devices via provided `bridge` (executables, Docker, or HA add-on).
     - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc)
         - Recommended for SLZB adapters, can also flash other adapters
+    - [SONOFF Dongle Flasher](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
 - UI tools
     - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
 - CLI tools (multi platform Python based command line tools)
@@ -34,6 +35,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
         - Bridge add-on for full interaction with remote serial, USB, and TCP devices.
     - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
     - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
+    - [SONOFF Dongle Flasher](https://dongle.sonoff.tech/guide/dongle-lmg21/flash-firmware-via-home-assistant-add-on/)
 
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the web-interface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
 
@@ -150,6 +152,21 @@ Note before buying that ITead slightly confusingly now sells both the Dongle Plu
 <img src="../../images/sonoff_plus_dongle.png" width="200" />
 :::
 
+::: details SONOFF Dongle Plus CC2674P10 Dongle-PP10
+
+CC2674P10 based USB connected adapter pre-programmed and with enclosure.
+
+Powerful CC2674P10 based Zigbee USB coordinator with external 3 dBi antenna, pre-flashed firmware and ready for Home Assistant, Zigbee2MQTT and ZHA.
+
+- [Chip](https://www.ti.com/product/CC2674P10#features)
+- [Product Page](https://sonoff.tech/products/sonoff-dongle-plus-cc2674p10-zigbee-thread-usb-dongle-dongle-pp10)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-pp10/hardware-specification/)
+- [Buy](https://sonoff.tech/products/sonoff-dongle-plus-cc2674p10-zigbee-thread-usb-dongle-dongle-pp10)
+
+<img src="../../images/Dongle-PP10_600_600.png" width="200" />
+:::
+
 ::: details Vision CC2652 dongle
 
 Adapter or small development board based on CC2652R (VS201) or CC2652P (VS202)  
@@ -178,10 +195,11 @@ Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
 
 Powerful, tiny modern design, developed for Zigbee2MQTT, pre-flashed and ready to use Zigbee adapter. Autodiscovery in Home Assistant. AutoBSL (remote update) enabled.  
 Rich packing that includes:
-| Package includes | SLZB-07p7 adapter | +3dB antenna 360° | QR-manual |
-|:-|:-:|:-:|:-:|
-|Quantity: |1 pcs|1 pcs|1 pcs|1 pcs|  
-|Image| <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-adapter.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07x-antenna.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07x-qr.jpg" width="200" /> |
+
+| Package includes |                                                   SLZB-07p7 adapter                                                   |                                                  +3dB antenna 360°                                                   |                                                    QR-manual                                                    |
+| :--------------- | :-------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
+| Quantity:        |                                                         1 pcs                                                         |                                                        1 pcs                                                         |                                                      1 pcs                                                      | 1 pcs |
+| Image            | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-adapter.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07x-antenna.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07x-qr.jpg" width="200" /> |
 
 Remote Zigbee update, autodiscovery, LEDs, and flashing pins. It fits home and business use.
 
@@ -293,10 +311,11 @@ Open source PoE af Coordinator with external antenna on CC2652P
 
 Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter.  
 It supports **Zigbee 3.0**, experimental **Matter-over-Thread** and **Bluetooth**. Connections: Ethernet (+PoE), LAN, USB, and WiFi. Rich packing that includes:
-| Package includes | SLZB-06 adapter | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
-|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|Quantity: |1 pcs|1 pcs|2 pcs|2 pcs|1 pcs|1 pcs|1 pcs|  
-|Image| <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adapter.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr.jpg" width="200" /> |
+
+| Package includes |                                              SLZB-06 adapter                                              |                                             +5dB antenna 360°                                             |                                               Adhesive tape                                                |                                                  Screws                                                  |                                                  Screwdriver                                                  |                                              MicroUSB-Type-C                                               |                                           Screw-fix helper                                           |
+| :--------------- | :-------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| Quantity:        |                                                   1 pcs                                                   |                                                   1 pcs                                                   |                                                   2 pcs                                                    |                                                  2 pcs                                                   |                                                     1 pcs                                                     |                                                   1 pcs                                                    |                                                1 pcs                                                 |
+| Image            | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adapter.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr.jpg" width="200" /> |
 
 Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with users. It fits home and business use.
 
@@ -338,10 +357,11 @@ Open source PoE af Coordinator with external antenna on CC2652P
 
 Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter.  
 It supports Zigbee 3.0, Ethernet, LAN, USB, and WiFi connections. Rich packing that includes:
-| Package includes | SLZB-06p7 adapter | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
-|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|Quantity: |1 pcs|1 pcs|2 pcs|2 pcs|1 pcs|1 pcs|1 pcs|  
-|Image| <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p7-adapter.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr.jpg" width="200" /> |
+
+| Package includes |                                              SLZB-06p7 adapter                                              |                                             +5dB antenna 360°                                             |                                               Adhesive tape                                                |                                                  Screws                                                  |                                                  Screwdriver                                                  |                                              MicroUSB-Type-C                                               |                                           Screw-fix helper                                           |
+| :--------------- | :---------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| Quantity:        |                                                    1 pcs                                                    |                                                   1 pcs                                                   |                                                   2 pcs                                                    |                                                  2 pcs                                                   |                                                     1 pcs                                                     |                                                   1 pcs                                                    |                                                1 pcs                                                 |
+| Image            | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p7-adapter.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr.jpg" width="200" /> |
 
 Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with users. It fits home and business use.
 
@@ -430,11 +450,40 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 
 :::
 
+::: details SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice
+
+**SLZB-Ultima Series** is a multi-radio smart-home gateway, designed for advanced Zigbee2MQTT and multi-protocol deployments.
+
+**Key features**:
+
+- **Dual IEEE 802.15.4 radios (Zigbee + Thread):**
+-   - **CC2674P10** - enables parallel **Zigbee coordinator/router** or **Thread Border Router** operation
+-   - **EFR32MG24** - enables parallel **Zigbee coordinator/router** or **Thread Border Router** operation
+- **Z-Wave** _(optional add-on)_ - Adds support for Z-Wave networks (Z-Wave JS over Ethernet).
+- **4G/LTE** _(optional add-on)_ - Provides mobile internet connectivity for locations without wired Ethernet or Wi-Fi, or as a backup WAN.
+- **Connectivity:** Ethernet + Wi-Fi + USB (Type-C)
+- **USB passthrough over Ethernet:** plug a USB device (with some limitations) into SLZB-Ultima and use that USB device via the network
+- **Power:** USB-C (default), **PoE** _(optional add-on)_ - Power the device over Ethernet using a single cable for clean, professional installations.
+- **IR receiver + IR transmitter:** - Learn and control infrared devices such as TVs, air conditioners, and AV equipment.
+- **Local feedback & interaction:** buzzer, **12× WS2812B RGB LEDs**, buttons, service LEDs
+- **Digital microphone** _(optional add-on)_ - Enables audio input when running ESPHome-based firmware.
+
+Designed for **local, cloud-independent** operation with Home Assistant and Zigbee2MQTT.
+
+|                                       Product functions                                        |                                    Porduct photo                                    |                                  Interface screenshot                                  |
+| :--------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-functions.png" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-fw.jpg" width="200" /> |
+
+- [Product page](https://smlight.tech/global/slzb-ultima)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-ultima), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005010752270531.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010752555288.html).
+
+:::
+
 ### Hub
 
-::: details SMLIGHT SMHUB (Essential/Professional variants)
+::: details SMLIGHT SMHUB (Essential/Premium variants)
 
-SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Professional variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Professional variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
+SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Premium variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Premium variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
 
 |                               Product picture                               |                            Interface screenshot                            |                                               Youtube videoreview                                               |
 | :-------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |

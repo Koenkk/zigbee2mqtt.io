@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Arteco ZS-SF00](https://www.zigbee2mqtt.io/images/devices/ZS-SF00.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -152,6 +153,6 @@ When the soil fertility value is lower than what threshold should a warning be i
 Value can be found in the published state on the `soil_fertility_warning_setting` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_fertility_warning_setting": NEW_VALUE}`.
-The minimal value is `100` and the maximum value is `1800`.
+The minimal value is `100` and the maximum value is `5000`.
 The unit of this value is `μS/cm`.
 

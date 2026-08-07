@@ -22,9 +22,15 @@ pageClass: device-page
 | Picture | ![Aqara WXKG06LM](https://www.zigbee2mqtt.io/images/devices/WXKG06LM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Battery
+Uses a CR2032 battery
 
+### Pairing
+Hold the button for 10s until the LED start to flash.
 <!-- Notes END: Do not edit below this line -->
 
 

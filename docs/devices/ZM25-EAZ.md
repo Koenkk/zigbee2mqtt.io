@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![eWeLink ZM25-EAZ](https://www.zigbee2mqtt.io/images/devices/ZM25-EAZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

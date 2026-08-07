@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![BSEED BSEED_TS0601_cover](https://www.zigbee2mqtt.io/images/devices/BSEED_TS0601_cover.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

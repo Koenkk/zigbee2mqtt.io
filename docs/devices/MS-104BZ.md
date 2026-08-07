@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes MS-104BZ](https://www.zigbee2mqtt.io/images/devices/MS-104BZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Manual in the box with device may have wrong instruction for pairing [see](https://github.com/Koenkk/zigbee2mqtt/discussions/7634).

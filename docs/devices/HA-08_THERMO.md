@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AlecoAir HA-08_THERMO](https://www.zigbee2mqtt.io/images/devices/HA-08_THERMO.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

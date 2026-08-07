@@ -1,5 +1,8 @@
 ---
 sidebarDepth: 0
+redirectFrom:
+    - /guide/installation/20_zigbee2mqtt-fails-to-start.md
+    - /information/zigbee2mqtt_fails_to_start.md
 ---
 
 # Zigbee2MQTT fails to start/crashes runtime

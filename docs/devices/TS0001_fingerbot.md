@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0001_fingerbot](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

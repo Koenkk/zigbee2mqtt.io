@@ -22,9 +22,17 @@ pageClass: device-page
 | Picture | ![Heiman HS2SA-EF-3.0](https://www.zigbee2mqtt.io/images/devices/HS2SA-EF-3.0.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+The Heiman `HS2SA-1` Zigbee 3.0 smoke detector gets detected as this model, but exposed functions work properly.
 
+### Pairing
+To put the device into Zigbee pairing mode, quickly press the "Test/Hush/Networking" button 3 times within 2 seconds.
+While in pairing mode, the green LED flashes quickly (5 times per second). Pairing success is indicated by the LED lighting green for 3 seconds and then turning off. If pairing fails, the green LED flashes slowly (2 times per second) for 3 seconds, then turns off. Pairing mode stops automatically after 60 seconds, or can be stopped by pressing the button again.
+
+After successfully pairing the device to your Zigbee network, initiate the test function of the smoke detector by pushing and holding the "Test/Hush/Networking" button for ~1 second. (Please be prepared for the loud noise!) The device state in Z2M only shows all exposed attributes properly after such a test has been performed.
 <!-- Notes END: Do not edit below this line -->
 
 

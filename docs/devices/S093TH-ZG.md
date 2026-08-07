@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HZC Electric S093TH-ZG](https://www.zigbee2mqtt.io/images/devices/S093TH-ZG.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 The device has an indicator LED (red/orange/green) on the front and a button on the back.

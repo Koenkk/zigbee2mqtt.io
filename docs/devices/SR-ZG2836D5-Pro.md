@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher SR-ZG2836D5-Pro](https://www.zigbee2mqtt.io/images/devices/SR-ZG2836D5-Pro.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Home Assistant
 
@@ -31,7 +32,9 @@ For easy integration with Home Assistant, you can use our blueprint. This bluepr
 - Easily distinguish between buttons in your automations
 - Simplify the automation setup process
 
-<a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fraw.githubusercontent.com%2Fmaginawin%2Fsr_ha_blueprints%2Frefs%2Fheads%2Fmain%2Fblueprints%2FSR-ZG2836D5-Pro%2Fbutton-trigger.yaml"><img src="https://my.home-assistant.io/badges/blueprint_import.svg" width="200"></a>
+[https://github.com/maginawin/sr_ha_blueprints](https://github.com/maginawin/sr_ha_blueprints)
+
+Find the appropriate badge in the link above to import the blueprint into your Home Assistant instance.
 <!-- Notes END: Do not edit below this line -->
 
 
