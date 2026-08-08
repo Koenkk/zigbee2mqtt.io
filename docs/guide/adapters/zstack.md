@@ -215,6 +215,36 @@ Remote Zigbee update, autodiscovery, LEDs, and flashing pins. It fits home and b
 
 :::
 
+::: details Nous E16 dongle (CC2652P)
+
+Small USB adapter with aluminium enclosure and external antenna  
+Pre-flashed with Zigbee Coordinator firmware
+
+|      Zigbee chipset       |  USB serial bridge   |  Baud  |
+| :-----------------------: | :------------------: | :----: |
+| Texas Instruments CC2652P | Silicon Labs CP2102N | 115200 |
+
+Updating the firmware is possible with your preferred software
+
+- Web flasher: [XZG Multi-tool](https://mt.xyzroe.cc/) -> TI CCxx52
+- Zigbee firmware: [CC1352_CC2652P_launchpad_x](https://github.com/Koenkk/Z-Stack-firmware/releases)
+
+Zigbee2MQTT configuration:
+
+```yaml
+serial:
+    port: /dev/ttyUSB0
+    adapter: zstack
+    baudrate: 115200
+    rtscts: false
+```
+
+- Product page: [nous.technology](https://nous.technology/product/e16.html)
+- Store page: [amazon.de](https://www.amazon.de/NOUS-E16-Zigbee2MQTT-Coordinator-Assistant/dp/B0H4QP5422)
+
+<img src="../../images/adapters/Nous/E16.png" width="200" />
+:::
+
 ### Network (TCP)
 
 ::: details Tube's Zigbee Gateways (CC2652P2 variant)
