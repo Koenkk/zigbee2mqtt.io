@@ -45,6 +45,8 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
 
 ### USB
 
+<!-- #region Electrolama zig-a-zig-ah! (zzh!) -->
+
 ::: details Electrolama zig-a-zig-ah! (zzh!)
 
 USB connected adapter with external antenna based on CC2652R chip
@@ -56,6 +58,10 @@ USB connected adapter with external antenna based on CC2652R chip
 
 <img src="../../images/zzh.jpg" width="200" />
 :::
+
+<!-- #endregion Electrolama zig-a-zig-ah! (zzh!) -->
+
+<!-- #region Slaesh's CC2652RB stick -->
 
 ::: details Slaesh's CC2652RB stick
 
@@ -71,6 +77,10 @@ USB connected adapter with external antenna based on CC2652RB chip
 <img src="../../images/slaeshs_cc2652rb_stick.jpg" width="200" />
 :::
 
+<!-- #endregion Slaesh's CC2652RB stick -->
+
+<!-- #region Tube's CC2652P2 USB Coordinator -->
+
 ::: details Tube's CC2652P2 USB Coordinator
 
 Open source hardware CC2652P based USB connected adapter with external antenna and USB extension cable
@@ -82,6 +92,10 @@ Open source hardware CC2652P based USB connected adapter with external antenna a
 
 <img src="../../images/Tubes_USB_Coordinator_CC2652P2_variant.png" width="200" />
 :::
+
+<!-- #endregion Tube's CC2652P2 USB Coordinator -->
+
+<!-- #region Egony Stick V4 -->
 
 ::: details Egony Stick V4
 
@@ -97,6 +111,10 @@ Powerful CC2652P Zigbee USB dongle and Raspberry Pi GPIO module. Available in Eb
 
 :::
 
+<!-- #endregion Egony Stick V4 -->
+
+<!-- #region ZigStar Stick v4 -->
+
 ::: details ZigStar Stick v4
 
 Powerful Open source dongle with external antenna based on CC2652P
@@ -110,6 +128,10 @@ Powerful Open source dongle with external antenna based on CC2652P
 <img src="../../images/ZigStar-USB.png" width="200" />
 :::
 
+<!-- #endregion ZigStar Stick v4 -->
+
+<!-- #region CircuitSetup's CC2652P2 USB Coordinator -->
+
 ::: details CircuitSetup's CC2652P2 USB Coordinator
 
 CC2652P based USB connected adapter pre-programmed with Z-Stack
@@ -121,6 +143,10 @@ CC2652P based USB connected adapter pre-programmed with Z-Stack
 
 <img src="../../images/circset_cc2652.jpg" width="200" />
 :::
+
+<!-- #endregion CircuitSetup's CC2652P2 USB Coordinator -->
+
+<!-- #region SMLIGHT CC2652P Zigbee USB Adapter SLZB-02 -->
 
 ::: details SMLIGHT CC2652P Zigbee USB Adapter SLZB-02
 
@@ -134,6 +160,10 @@ CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldw
 
 <img src="../../images/CC2652P_smartlight_zigbee_coordinator.png" width="200" />
 :::
+
+<!-- #endregion SMLIGHT CC2652P Zigbee USB Adapter SLZB-02 -->
+
+<!-- #region SONOFF Zigbee 3.0 USB Dongle Plus ZBDongle-P -->
 
 ::: details SONOFF Zigbee 3.0 USB Dongle Plus ZBDongle-P
 
@@ -152,6 +182,10 @@ Note before buying that ITead slightly confusingly now sells both the Dongle Plu
 <img src="../../images/sonoff_plus_dongle.png" width="200" />
 :::
 
+<!-- #endregion SONOFF Zigbee 3.0 USB Dongle Plus ZBDongle-P -->
+
+<!-- #region SONOFF Dongle Plus CC2674P10 Dongle-PP10 -->
+
 ::: details SONOFF Dongle Plus CC2674P10 Dongle-PP10
 
 CC2674P10 based USB connected adapter pre-programmed and with enclosure.
@@ -167,6 +201,10 @@ Powerful CC2674P10 based Zigbee USB coordinator with external 3 dBi antenna, pre
 <img src="../../images/Dongle-PP10_600_600.png" width="200" />
 :::
 
+<!-- #endregion SONOFF Dongle Plus CC2674P10 Dongle-PP10 -->
+
+<!-- #region Vision CC2652 dongle -->
+
 ::: details Vision CC2652 dongle
 
 Adapter or small development board based on CC2652R (VS201) or CC2652P (VS202)  
@@ -179,6 +217,10 @@ Router firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/releases/dow
 <img src="../../images/cc26x2r1_dongle.jpg" width="200" />
 :::
 
+<!-- #endregion Vision CC2652 dongle -->
+
+<!-- #region JetHome JetStick Z2/ZB6UX CC2652P1 -->
+
 ::: details JetHome JetStick Z2/ZB6UX CC2652P1
 
 Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
@@ -190,6 +232,10 @@ Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
 
 <img src="../../images/jetstick_z2.png" width="200" />
 :::
+
+<!-- #endregion JetHome JetStick Z2/ZB6UX CC2652P1 -->
+
+<!-- #region SMLIGHT SLZB-07p7 Zigbee USB CC2652P7 adapter -->
 
 ::: details SMLIGHT SLZB-07p7 Zigbee USB CC2652P7 adapter
 
@@ -214,6 +260,10 @@ Remote Zigbee update, autodiscovery, LEDs, and flashing pins. It fits home and b
 | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main1-title.jpg" width="200"> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main2-title.jpg" width="200"> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main3-title.jpg" width="200"> |
 
 :::
+
+<!-- #endregion SMLIGHT SLZB-07p7 Zigbee USB CC2652P7 adapter -->
+
+<!-- #region Nous E16 dongle (CC2652P) -->
 
 ::: details Nous E16 dongle (CC2652P)
 
@@ -245,7 +295,11 @@ serial:
 <img src="../../images/adapters/Nous/E16.png" width="200" />
 :::
 
+<!-- #endregion Nous E16 dongle (CC2652P) -->
+
 ### Network (TCP)
+
+<!-- #region Tube's Zigbee Gateways (CC2652P2 variant) -->
 
 ::: details Tube's Zigbee Gateways (CC2652P2 variant)
 
@@ -260,6 +314,10 @@ Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator (lef
 
 :::
 
+<!-- #endregion Tube's Zigbee Gateways (CC2652P2 variant) -->
+
+<!-- #region cyijun OpenZ3Gateway -->
+
 ::: details cyijun OpenZ3Gateway
 
 An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.
@@ -271,6 +329,10 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 
 <img src="../../images/openz3gateway.jpg" width="200" />
 :::
+
+<!-- #endregion cyijun OpenZ3Gateway -->
+
+<!-- #region XGG 52PZ2MGateway -->
 
 ::: details XGG 52PZ2MGateway
 
@@ -284,6 +346,10 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 <img src="../../images/CC2652P-Z2M.jpg" width="200" />
 :::
 
+<!-- #endregion XGG 52PZ2MGateway -->
+
+<!-- #region SMLIGHT Zigbee LAN Adapter CC2652P Model SLZB-05 -->
+
 ::: details SMLIGHT Zigbee LAN Adapter CC2652P Model SLZB-05
 
 Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6dB antenna, worldwide delivery, Zigbee firmware can be manually updated via USB in 5 easy steps, customer/tech support, fast order processing.
@@ -296,7 +362,11 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 <img src="https://smartlight.me/ebay/images/slzb_05/smartlight-zigbee-lan-slzb-05.jpg" width="200" />
 :::
 
+<!-- #endregion SMLIGHT Zigbee LAN Adapter CC2652P Model SLZB-05 -->
+
 ### Hybrid (USB + Network)
+
+<!-- #region Gio-dot Z-Bee Duo with CC2652P -->
 
 ::: details Gio-dot Z-Bee Duo with CC2652P
 
@@ -311,6 +381,10 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 <img src="../../images/Z-Bee_Duo-ico.jpg" width="200" />
 :::
 
+<!-- #endregion Gio-dot Z-Bee Duo with CC2652P -->
+
+<!-- #region ZigStar LAN Coordinator -->
+
 ::: details ZigStar LAN Coordinator
 
 Powerful Open source LAN Coordinator with external antenna on CC2652P
@@ -324,6 +398,10 @@ Powerful Open source LAN Coordinator with external antenna on CC2652P
 <img src="../../images/ZigStar-LAN.png" width="200" />
 :::
 
+<!-- #endregion ZigStar LAN Coordinator -->
+
+<!-- #region ZigStar PoE Coordinator -->
+
 ::: details ZigStar PoE Coordinator
 
 Open source PoE af Coordinator with external antenna on CC2652P
@@ -336,6 +414,10 @@ Open source PoE af Coordinator with external antenna on CC2652P
 
 <img src="../../images/ZigStar-PoE.png" width="200" />
 :::
+
+<!-- #endregion ZigStar PoE Coordinator -->
+
+<!-- #region SMLIGHT SLZB-06 Zigbee+Matter/Thread+Bluetooth Ethernet USB POE WiFi LAN adapter -->
 
 ::: details SMLIGHT SLZB-06 Zigbee+Matter/Thread+Bluetooth Ethernet USB POE WiFi LAN adapter
 
@@ -366,6 +448,10 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
 
 :::
 
+<!-- #endregion SMLIGHT SLZB-06 Zigbee+Matter/Thread+Bluetooth Ethernet USB POE WiFi LAN adapter -->
+
+<!-- #region ZigStar UZG-01 - Universal Zigbee Gateway -->
+
 ::: details ZigStar UZG-01 - Universal Zigbee Gateway
 
 Open source PoE af Coordinator with external antenna on CC2652P
@@ -382,6 +468,10 @@ Open source PoE af Coordinator with external antenna on CC2652P
 | <img src="../../images/Zigstar-UZG01-1.png" width="200" /> | <img src="../../images/Zigstar-UZG01-2.png" width="200" /> |
 
 :::
+
+<!-- #endregion ZigStar UZG-01 - Universal Zigbee Gateway -->
+
+<!-- #region SMLIGHT SLZB-06p7 Zigbee Ethernet USB POE WiFi LAN adapter -->
 
 ::: details SMLIGHT SLZB-06p7 Zigbee Ethernet USB POE WiFi LAN adapter
 
@@ -412,6 +502,10 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
 
 :::
 
+<!-- #endregion SMLIGHT SLZB-06p7 Zigbee Ethernet USB POE WiFi LAN adapter -->
+
+<!-- #region cod.m Zigbee Coordinator CC2652P7 (CZC-1.0) -->
+
 ::: details cod.m Zigbee Coordinator CC2652P7 (CZC-1.0)
 
 cod.m Zigbee Coordinator (CZC) - Network (LAN/Wi-Fi) with Power over Ethernet (optional) or USB-C.
@@ -438,6 +532,10 @@ Links:
 
 :::
 
+<!-- #endregion cod.m Zigbee Coordinator CC2652P7 (CZC-1.0) -->
+
+<!-- #region SMLIGHT SLZB-MR1 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter -->
+
 ::: details SMLIGHT SLZB-MR1 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
 
 SLZB-MR1 is a compact multi-radio smart home adapter featuring CC2652P7, EFR32MG21 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
@@ -451,6 +549,10 @@ SLZB-MR1 is a compact multi-radio smart home adapter featuring CC2652P7, EFR32MG
   Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr1-zigbee-and-thread-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [CZ](https://www.homebrainz.shop/de/p/smlight-slzb-mr1?srsltid=AfmBOorf9TiY1ZBQD7a7hUwDemKbCFsH_dv8ru9uDCT5yoq19AlyHy6z), [FR+EU](https://www.domadoo.fr/de/smart-home-produkte/7773-smlight-slzb-mr1-usb-ethernet-poe-zigbee-thread-matter-adapter.html), [BE](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [DE](https://mediarath.de/en/products/smlight-slzb-mr1-zigbee-thread-multiradio-cc2652p7-efr32mg21-lan-poe-usb-wifi-adapter), [NL](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [PL](https://pcblab.io/koordynator-slzb-mr1-multiradio-zigbee-thread.html), [SE](https://www.lohelectronics.se/hemautomation/zigbee/controllers-1473/smlight-slzb-mr1-zigbee-3-0-lan-gateway-med-poe-och-z2m), [CH](https://www.swiss-domotique.ch/en/gateways-antennas/2752-smlight-slzb-06-adaptateur-zigbee-ethernet-poe-usb-wifi-2.html), [FI](https://verkkokauppa.nurkantakaa.fi/tuote/smlight-slzb-mr1/), [UK](https://zigbeesmart.com/de-de/products/zigbee-lan-poe-coordinator-smlight-slzb-mr1-multiradio), [US](https://cloudfree.shop/product/smlight-slzb-mr1-zigbee-thread/),
 
 :::
+
+<!-- #endregion SMLIGHT SLZB-MR1 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter -->
+
+<!-- #region SMLIGHT SLZB-MR2 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter -->
 
 ::: details SMLIGHT SLZB-MR2 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
 
@@ -466,6 +568,10 @@ SLZB-MR2 is a compact multi-radio smart home adapter featuring CC2652P, EFR32MG2
 
 :::
 
+<!-- #endregion SMLIGHT SLZB-MR2 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter -->
+
+<!-- #region SMLIGHT SLZB-MR3 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter -->
+
 ::: details SMLIGHT SLZB-MR3 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
 
 SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32MG24 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
@@ -479,6 +585,10 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
   Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr3-zigbee-and-thread-adapter),
 
 :::
+
+<!-- #endregion SMLIGHT SLZB-MR3 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter -->
+
+<!-- #region SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice -->
 
 ::: details SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice
 
@@ -509,7 +619,11 @@ Designed for **local, cloud-independent** operation with Home Assistant and Zigb
 
 :::
 
+<!-- #endregion SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice -->
+
 ### Hub
+
+<!-- #region SMLIGHT SMHUB (Essential/Premium variants) -->
 
 ::: details SMLIGHT SMHUB (Essential/Premium variants)
 
@@ -525,6 +639,10 @@ SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbe
 
 :::
 
+<!-- #endregion SMLIGHT SMHUB (Essential/Premium variants) -->
+
+<!-- #region JetHome JetHub D1+ -->
+
 ::: details JetHome JetHub D1+
 
 Controller with Zigbee module onboard with external antenna.
@@ -539,7 +657,11 @@ Based on TI CC2652P1.
 <img src="../../images/jethub_d1_full.png" width="200" />
 :::
 
+<!-- #endregion JetHome JetHub D1+ -->
+
 ### Custom
+
+<!-- #region cod.m Zigbee CC2652P RPi Module -->
 
 ::: details cod.m Zigbee CC2652P RPi Module
 
@@ -553,6 +675,10 @@ Raspberry Pi GPIO module with CC2652P and integrated power amplifier (+20dBm)
 <img src="../../images/codm-cc2652p-rpi.jpg" width="200" />
 :::
 
+<!-- #endregion cod.m Zigbee CC2652P RPi Module -->
+
+<!-- #region ZigStar ZigiHAT PoE -->
+
 ::: details ZigStar ZigiHAT PoE
 
 Powerful Open source Pi HAT based on CC2652P with PoE,RTC onboard
@@ -565,6 +691,10 @@ Powerful Open source Pi HAT based on CC2652P with PoE,RTC onboard
 
 <img src="../../images/ZigiHAT.png" width="200" />
 :::
+
+<!-- #endregion ZigStar ZigiHAT PoE -->
+
+<!-- #region Texas Instruments LAUNCHXL-CC1352P-2 -->
 
 ::: details Texas Instruments LAUNCHXL-CC1352P-2
 
@@ -580,6 +710,10 @@ An external antenna can be connected which could increase range: [requires resol
 <img src="../../images/cc1352p2.jpg" width="200" />
 :::
 
+<!-- #endregion Texas Instruments LAUNCHXL-CC1352P-2 -->
+
+<!-- #region Texas Instruments LAUNCHXL-CC26X2R1 -->
+
 ::: details Texas Instruments LAUNCHXL-CC26X2R1
 
 USB connected development kit, based on CC2652R chip  
@@ -594,6 +728,10 @@ An external antenna can be connected which could increase range: [requires resol
 <img src="../../images/cc26x2r1.jpg" width="200" />
 :::
 
+<!-- #endregion Texas Instruments LAUNCHXL-CC26X2R1 -->
+
+<!-- #region Texas Instruments LP-CC2652R7 -->
+
 ::: details Texas Instruments LP-CC2652R7
 
 USB connected development kit, based on CC2652R7 chip  
@@ -605,6 +743,10 @@ These devices have two serial devices built in. Make sure you put the right seri
 
 <img src="../../images/CC2652R7.png" width="200" />
 :::
+
+<!-- #endregion Texas Instruments LP-CC2652R7 -->
+
+<!-- #region Texas Instruments LP-CC1352P7 -->
 
 ::: details Texas Instruments LP-CC1352P7
 
@@ -618,7 +760,11 @@ These devices have two serial devices built in. Make sure you put the right seri
 <img src="../../images/LP-CC1352P7.jpg" width="200" />
 :::
 
+<!-- #endregion Texas Instruments LP-CC1352P7 -->
+
 ### Not recommended
+
+<!-- #region Texas Instruments CC2531 -->
 
 ::: details Texas Instruments CC2531
 
@@ -635,6 +781,10 @@ USB connected Zigbee adapter with PCB antenna
 <img src="../../images/cc2531.jpg" width="200" />
 :::
 
+<!-- #endregion Texas Instruments CC2531 -->
+
+<!-- #region Vision CC2538+CC2592 Dongle(VS203) -->
+
 ::: details Vision CC2538+CC2592 Dongle(VS203)
 
 Adapter or small development board based on CC2538 and CC2592 chip
@@ -645,6 +795,10 @@ Adapter or small development board based on CC2538 and CC2592 chip
 
 <img src="../../images/cc2538_cc2592_dongle.jpg" width="200" />
 :::
+
+<!-- #endregion Vision CC2538+CC2592 Dongle(VS203) -->
+
+<!-- #region Texas Instruments CC2530 -->
 
 ::: details Texas Instruments CC2530
 
@@ -661,6 +815,10 @@ Serial connected adapter with external antenna optionally with CC2591 or CC2592 
 <img src="../../images/cc2530.jpg" width="200" />
 :::
 
+<!-- #endregion Texas Instruments CC2530 -->
+
+<!-- #region Texas Instruments CC2538 -->
+
 ::: details Texas Instruments CC2538
 
 Serial connected adapter with CC2592 RF Amplifier
@@ -672,6 +830,10 @@ Serial connected adapter with CC2592 RF Amplifier
 <img src="../../images/cc2538.jpg" width="200" />
 :::
 
+<!-- #endregion Texas Instruments CC2538 -->
+
+<!-- #region XGG gateway -->
+
 ::: details XGG gateway
 
 An open source zigbee gateway powered by ESP8266 and CC2538+CC2592PA (XGG 38PZ2MGateway) or CC2530 (XGG 30Z2MGateway)  
@@ -681,6 +843,10 @@ Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firm
 
 <img src="../../images/CC2652P-Z2M.jpg" width="200" />
 :::
+
+<!-- #endregion XGG gateway -->
+
+<!-- #region Texas Instruments CC2538 HAT -->
 
 ::: details Texas Instruments CC2538 HAT
 
@@ -692,3 +858,5 @@ Raspberry pinout compatible HAT with CC2538 and optional external antenna
 
 <img src="../../images/cc2538hat.jpg" width="200" />
 :::
+
+<!-- #endregion Texas Instruments CC2538 HAT -->
