@@ -2,7 +2,7 @@
 
 Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x, 8.2.x, 9.0.x, 9.1.x
 
-Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
+Firmware release notes: [https://docs.silabs.com/sisdk-release-notes/latest/sisdk-zigbee-release-notes/](https://docs.silabs.com/sisdk-release-notes/latest/sisdk-zigbee-release-notes/)
 
 _Multiprotocol firmware is not supported. The recommended alternative to establish multiple networks is to use one adapter per protocol._
 
