@@ -235,13 +235,6 @@ See [EmberZNet errors](../adapters/emberznet.md#error-level).
 If you have multiple devices connected that are running cheap USB-UART converters (CH341) they may be indistinguishable to your system, since they all possibly have the same idProduct, SerialNumber etc. so they will share the same /dev/serial/by-id.
 The easiest solution is to change one of your devices to something with a different uart-usb converter. The second solution would be swapping the whole converter or adding external EEPROM memory to a chip that does not have one (like CH341) so you would be able to add a serial number.
 
-## MQTT v5 disconnecting
-
-If you use an MQTT broker with version 5 of the MQTT specification, you may get disconnects when something is misbehaving.
-This can happen, for example, when "maximum packet size" is exceeded (large networks).
-
-To remedy that, configure your broker accordingly, and check if Zigbee2MQTT has a corresponding setting to adjust too. See [MQTT configuration](../configuration/mqtt.md#server-connection).
-
 ## Error: `startup failed - configuration-adapter mismatch - see logs above for more information`
 
 This happens when you edit one or more of the `pan_id`, `network_key` or `ext_pan_id` values in `configuration.yml`. If your intent was to do this, the easiest way to resolve this error is to remove the `data/coordinator-backup.json` file and restart again. Note that this will reset your network and **all devices will need to be re-paired!**. Alternatively, you can revert back to the previous value(s). In that case, look a few lines before the error in the log, you'll find something like this:
@@ -328,19 +321,9 @@ As an example, this is the procedure to passthrough the serial device to a Proxm
 Now Zigbee2MQTT is able to reach the dongle through /dev/ttyS0 which is a "real" serial port inside the VM.
 Any issue with the USB device is logged by the host kernel and can be easily spotted with dmesg in this way we isolate them from the issues on the serial device.
 
-## Spammy devices
+## `pnpm`-related error on startup
 
-Devices that spam data reports can quickly crowd the network and reduce the overall stability. Using several devices like that can even go as far as crashing the network on a regular basis. This is a well known problem of brands like Tuya (and derived). Some mmWave sensors have been known to have that problem as well (especially earlier variants).
+Make sure you use the `pnpm` version used by Zigbee2MQTT (at least the same _major_ version):
 
-You can disable or decrease the rate of reports of a device (for all or specific states). If possible, configure [reporting](../usage/mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-device-reporting-configure) to better match your need and fit what your network can handle.
-However, often enough the devices cited above also don't allow proper configuration, in that case, there is no real way to fix them, you can only replace them with better ones.
-
-::: tip TIP
-Several Open Source projects offer alternative Tuya OTA update firmware (be sure to read all associated documentation before using these). Examples:
-
-- [https://github.com/romasku/tuya-zigbee-switch](https://github.com/romasku/tuya-zigbee-switch)
-- [https://github.com/pvvx/ZigbeeTLc](https://github.com/pvvx/ZigbeeTLc)
-- [https://github.com/Andrik45719/ZY-M100](https://github.com/Andrik45719/ZY-M100)
-- [https://github.com/slacky1965](https://github.com/slacky1965)
-
-:::
+- `release` branch: https://github.com/Koenkk/zigbee2mqtt/blob/master/package.json#L7
+- `dev` branch: https://github.com/Koenkk/zigbee2mqtt/blob/dev/package.json#L7
