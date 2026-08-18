@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_cover_9](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_9.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya DCR-CO](https://www.zigbee2mqtt.io/images/devices/DCR-CO.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

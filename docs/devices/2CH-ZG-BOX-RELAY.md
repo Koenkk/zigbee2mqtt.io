@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Envilar 2CH-ZG-BOX-RELAY](https://www.zigbee2mqtt.io/images/devices/2CH-ZG-BOX-RELAY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

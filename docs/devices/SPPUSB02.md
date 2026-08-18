@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Mercator Ikuü SPPUSB02](https://www.zigbee2mqtt.io/images/devices/SPPUSB02.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

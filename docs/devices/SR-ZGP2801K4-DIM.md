@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher SR-ZGP2801K4-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K4-DIM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

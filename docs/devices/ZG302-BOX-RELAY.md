@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Envilar ZG302-BOX-RELAY](https://www.zigbee2mqtt.io/images/devices/ZG302-BOX-RELAY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

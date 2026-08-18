@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya YXZBSL](https://www.zigbee2mqtt.io/images/devices/YXZBSL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

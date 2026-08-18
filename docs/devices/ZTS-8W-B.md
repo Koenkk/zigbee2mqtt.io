@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nova Digital ZTS-8W-B](https://www.zigbee2mqtt.io/images/devices/ZTS-8W-B.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Zemismart ZMS-206US-4](https://www.zigbee2mqtt.io/images/devices/ZMS-206US-4.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

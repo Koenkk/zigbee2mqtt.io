@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tervix _TZE284_6kijc7nd](https://www.zigbee2mqtt.io/images/devices/_TZE284_6kijc7nd.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

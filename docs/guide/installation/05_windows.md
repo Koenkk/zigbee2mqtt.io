@@ -1,5 +1,8 @@
 ---
-next: ../configuration/
+next: 14_securing.md
+redirectFrom:
+    - /information/windows.md
+    - /guide/installation/04_windows.md
 ---
 
 # Windows

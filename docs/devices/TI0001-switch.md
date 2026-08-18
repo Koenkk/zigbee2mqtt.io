@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Livolo TI0001-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-switch.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

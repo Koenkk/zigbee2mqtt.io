@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AXIS GR-ZB01-W](https://www.zigbee2mqtt.io/images/devices/GR-ZB01-W.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

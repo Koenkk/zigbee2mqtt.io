@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya QS-Zigbee-SEC01-U](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC01-U.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

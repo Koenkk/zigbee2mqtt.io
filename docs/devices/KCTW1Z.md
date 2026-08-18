@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya KCTW1Z](https://www.zigbee2mqtt.io/images/devices/KCTW1Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

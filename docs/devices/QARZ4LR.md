@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![QA QARZ4LR](https://www.zigbee2mqtt.io/images/devices/QARZ4LR.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

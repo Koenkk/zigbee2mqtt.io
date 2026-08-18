@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![OpenLumi GWRJN5169](https://www.zigbee2mqtt.io/images/devices/GWRJN5169.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169)

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco FLSZB-110](https://www.zigbee2mqtt.io/images/devices/FLSZB-110.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

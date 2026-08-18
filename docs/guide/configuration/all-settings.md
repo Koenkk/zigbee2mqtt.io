@@ -215,7 +215,7 @@ advanced:
 
 ### cache_state
 
-MQTT message payload will contain all attributes, not only changed ones. Has to be true when integrating via Home Assistant
+MQTT message payload will contain all attributes, not only changed ones. Must be true when integrating via Home Assistant
 
 ```yaml
 advanced:
@@ -291,7 +291,7 @@ advanced:
 
 ### transmit_power
 
-Transmit power of adapter, only available for Z-Stack (CC253\*/CC2652/CC1352) adapters, CC2652 = 5dbm, CC1352 max is = 20dbm (5dbm default)
+Transmit power of adapter, in dBm (max is often 20, refer to chip specifications)
 
 ```yaml
 advanced:
@@ -305,7 +305,7 @@ advanced:
 
 ### output
 
-Examples when 'state' of a device is published json: topic: 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}' attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON' attribute_and_json: both json and attribute (see above)
+How the 'state' of a device is published. json: topic 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}'. attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON'. attribute_and_json: both json and attribute (see above). Home Assistant requires json
 
 ```yaml
 advanced:
@@ -315,6 +315,19 @@ advanced:
 - Type: `string`
 - Default: `"json"`
 - Possible values: `attribute_and_json`, `attribute`, `json`
+
+### enable_external_js
+
+Enable external JavaScript (extensions and converters) that can execute arbitrary user-provided code. WARNING: If unused, it is advised to disable this.
+
+```yaml
+advanced:
+    enable_external_js: true
+```
+
+- Type: `boolean`
+- Default: `true`
+- <span style="color: red">Restart required to be effective</span>
 
     ### log_syslog
 
@@ -550,7 +563,7 @@ availability:
 
 Active
 
-#### timeout <span style="color: red">\*</span>
+#### timeout <span style="color: red">*</span>
 
 Time after which an active device will be marked as offline in minutes
 
@@ -594,7 +607,7 @@ availability:
 
 #### pause_on_backoff_gt
 
-Pause availability pings when backoff reaches over this limit until a new Zigbee message is received from the device. A value of zero disables pausing.
+Pause availability pings when the backoff multiplier reaches over this limit until a new Zigbee message is received from the device. A value of zero disables pausing.
 
 ```yaml
 availability:
@@ -610,7 +623,7 @@ availability:
 
 Passive
 
-#### timeout <span style="color: red">\*</span>
+#### timeout <span style="color: red">*</span>
 
 Time after which an passive device will be marked as offline in minutes
 
@@ -627,7 +640,7 @@ availability:
 
 ## devices
 
-#### friendly_name <span style="color: red">\*</span>
+#### friendly_name <span style="color: red">*</span>
 
 Used in the MQTT topic of a device. By default this is the device ID
 
@@ -646,10 +659,11 @@ Retain MQTT messages of this device
 ```yaml
 devices:
     '0x1234567812345678':
-        retain: true
+        retain: false
 ```
 
 - Type: `boolean`
+- Default: `false`
 
 #### disabled
 
@@ -799,6 +813,19 @@ devices:
 
 - Type: `string`
 
+#### disable_automatic_update_check
+
+Zigbee devices may request a firmware update, and do so frequently, causing Zigbee2MQTT to reach out to third party servers. If you disable these device initiated checks, you can still initiate a firmware update check manually.
+
+```yaml
+devices:
+    '0x1234567812345678':
+        disable_automatic_update_check: false
+```
+
+- Type: `boolean`
+- Default: `false`
+
 #### homeassistant
 
 Home Assistant
@@ -939,7 +966,7 @@ frontend:
 
 ### notification_filter
 
-Hide frontend notifications matching specified regex strings. Example: 'z2m: Failed to ping.\*'
+Hide frontend notifications matching specified regex strings. Example: 'z2m: Failed to ping.*'
 
 ```yaml
 frontend:
@@ -962,7 +989,7 @@ frontend:
 
 ## groups
 
-#### friendly_name <span style="color: red">\*</span>
+#### friendly_name <span style="color: red">*</span>
 
 ```yaml
 groups:
@@ -974,15 +1001,20 @@ groups:
 
 #### retain
 
+Retain MQTT messages of this group
+
 ```yaml
 groups:
     1:
-        retain: true
+        retain: false
 ```
 
 - Type: `boolean`
+- Default: `false`
 
 #### optimistic
+
+Publish the expected state of group members after set
 
 ```yaml
 groups:
@@ -991,6 +1023,7 @@ groups:
 ```
 
 - Type: `boolean`
+- Default: `true`
 
 #### qos
 
@@ -1030,6 +1063,23 @@ groups:
 
 - Type: `array` of `string`
 
+#### homeassistant
+
+Home Assistant
+
+##### name
+
+Name of the group in Home Assistant
+
+```yaml
+groups:
+    1:
+        homeassistant:
+            name: null
+```
+
+- Type: `string,null`
+
 ## health
 
 Health
@@ -1066,7 +1116,7 @@ Home Assistant integration
 
 ### enabled
 
-Enable Home Assistant integration
+Enable Home Assistant integration. Also check 'cache_state' and 'output' options under 'advanced'.
 
 ```yaml
 homeassistant:
@@ -1116,6 +1166,7 @@ homeassistant:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ### experimental_event_entities
 
@@ -1128,6 +1179,7 @@ homeassistant:
 
 - Type: `boolean`
 - Default: `false`
+- <span style="color: red">Restart required to be effective</span>
 
 ## map_options
 
@@ -1266,7 +1318,7 @@ mqtt:
     - `"zigbee2mqtt"`
 - <span style="color: red">Restart required to be effective</span>
 
-### server <span style="color: red">\*</span>
+### server <span style="color: red">*</span>
 
 MQTT server URL (use mqtts:// for SSL/TLS connection)
 
@@ -1390,6 +1442,20 @@ mqtt:
 - Default: `true`
 - <span style="color: red">Restart required to be effective</span>
 
+### server_name
+
+Override the TLS SNI / hostname used for certificate verification when it differs from the host in 'server' (e.g. connecting to an internal service DNS name while validating a public certificate SAN). Leave unset to use the hostname from 'server'.
+
+```yaml
+mqtt:
+    server_name: 'mqtt.example.com'
+```
+
+- Type: `string`
+- Examples:
+    - `"mqtt.example.com"`
+- <span style="color: red">Restart required to be effective</span>
+
 ### include_device_information
 
 Include device information to mqtt messages
@@ -1488,6 +1554,20 @@ ota:
     - `"index.json"`
 - <span style="color: red">Restart required to be effective</span>
 
+### image_block_request_timeout
+
+Timeout (in milliseconds) during OTA updates. You can increase this value if your device is requesting blocks too slowly.
+
+```yaml
+ota:
+    image_block_request_timeout: 150000
+```
+
+- Type: `number`
+- Default: `150000`
+- Minimum: `10000`
+- Maximum: `2147483647`
+
 ### image_block_response_delay
 
 Limits the rate of requests (in milliseconds) during OTA updates to reduce network congestion. You can increase this value if your network appears unstable during OTA.
@@ -1500,7 +1580,6 @@ ota:
 - Type: `number`
 - Default: `250`
 - Minimum: `50`
-- <span style="color: red">Restart required to be effective</span>
 
 ### default_maximum_data_size
 
@@ -1515,7 +1594,6 @@ ota:
 - Default: `50`
 - Minimum: `10`
 - Maximum: `100`
-- <span style="color: red">Restart required to be effective</span>
 
 ## serial
 

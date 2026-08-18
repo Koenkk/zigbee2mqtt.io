@@ -1,5 +1,6 @@
 ---
-next: ../configuration/
+next: 14_securing.md
+redirectFrom: /information/docker.md
 ---
 
 # Docker
@@ -182,5 +183,6 @@ You can optionally skip `zigbee2mqtt` and it will pull any new images for all co
 
 ## Additional links
 
+- [Docker Compose example with EMQX as the MQTT broker](https://www.emqx.com/en/blog/zigbee2mqtt-in-2026#run-zigbee2mqtt-with-emqx)
 - [Docker Stack device mapping](./docker//docker_stack.md)
 - [Docker on Synology DSM 7.0](./docker//docker_synology.md)

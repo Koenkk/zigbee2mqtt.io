@@ -1,6 +1,7 @@
 ---
 sidebarDepth: 1
 next: ../installation/
+redirectFrom: /information/supported_adapters.md
 ---
 
 # Supported Adapters

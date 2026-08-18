@@ -1,4 +1,5 @@
 ---
+redirectFrom: /how_tos/how_to_create_a_cc2530_router.md
 ---
 
 # Create a CC2530 router

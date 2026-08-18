@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![JAVIS JS-MC-SENSOR-ZB](https://www.zigbee2mqtt.io/images/devices/JS-MC-SENSOR-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![KOJIMA KOJIMA-THS-ZG-LCD](https://www.zigbee2mqtt.io/images/devices/KOJIMA-THS-ZG-LCD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

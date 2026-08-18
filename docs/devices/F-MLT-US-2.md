@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SmartThings F-MLT-US-2](https://www.zigbee2mqtt.io/images/devices/F-MLT-US-2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

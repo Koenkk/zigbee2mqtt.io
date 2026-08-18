@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Aqara MFCZQ12LM |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes 
 

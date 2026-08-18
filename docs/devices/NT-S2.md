@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nova Digital NT-S2](https://www.zigbee2mqtt.io/images/devices/NT-S2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,9 +22,23 @@ pageClass: device-page
 | Picture | ![Aqara PS-S04D](https://www.zigbee2mqtt.io/images/devices/PS-S04D.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+If your PS-S04D (FP300) was previously added in Thread/Matter mode and you want to use it with Zigbee2MQTT, a normal reset may not be enough.
 
+Important reset behavior:
+- Press and hold the reset button for 5 seconds: resets network settings and puts the device back into pairing mode.
+- Quickly press the reset button 10 times: performs a full factory reset.
+
+For protocol switching from Thread to Zigbee:
+1. If the PS-S04D (FP300) does not show up correctly in Aqara Home during Bluetooth discovery after using the 5-second reset, perform the full factory reset by pressing the reset button 10 times.
+2. Open Aqara Home and add the PS-S04D (FP300) again.
+3. During setup, choose to switch the device to Zigbee mode.
+4. After the Zigbee firmware/mode change is completed, pair the device with Zigbee2MQTT.
+
+In practice, the 10-press factory reset can be required to make the PS-S04D (FP300) discoverable again in Aqara Home for switching from Thread mode to Zigbee mode.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -117,7 +131,7 @@ Value for delay before the device reports absence when no presence is detected.
 Value can be found in the published state on the `absence_delay_timer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"absence_delay_timer": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_delay_timer": NEW_VALUE}`.
-The minimal value is `10` and the maximum value is `300`.
+The minimal value is `1` and the maximum value is `300`.
 The unit of this value is `sec`.
 
 ### Pir detection interval (numeric)
@@ -221,7 +235,7 @@ Reporting will trigger as humidity change reaches this value when in custom mode
 Value can be found in the published state on the `humidity_reporting_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_reporting_threshold": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_reporting_threshold": NEW_VALUE}`.
-The minimal value is `2` and the maximum value is `10`.
+The minimal value is `2` and the maximum value is `15`.
 The unit of this value is `%`.
 
 ### Humidity report mode (enum)

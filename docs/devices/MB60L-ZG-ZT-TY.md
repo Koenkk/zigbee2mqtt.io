@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Manhot MB60L-ZG-ZT-TY](https://www.zigbee2mqtt.io/images/devices/MB60L-ZG-ZT-TY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

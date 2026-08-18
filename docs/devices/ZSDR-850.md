@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Trust ZSDR-850](https://www.zigbee2mqtt.io/images/devices/ZSDR-850.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

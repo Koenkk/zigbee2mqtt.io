@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Yandex YNDX-00522 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ZYXH TS0601_switch_8](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_8.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![xyzroe ZigUSB_C6](https://www.zigbee2mqtt.io/images/devices/ZigUSB_C6.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF ZBMINIR2](https://www.zigbee2mqtt.io/images/devices/ZBMINIR2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -32,6 +33,11 @@ There are two different options to reset the device and enter pairing mode:
 * switch: Toggle an connected external switch 10 times consecutively. This is especially useful when there is no direct physical access to the button.
 
 The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.
+
+### Turbo Mode
+The Turbo mode increases transmission power and can therefore better bridge thick walls or large distances to the coordinator/next router, but with disadvantages such as 
+unwanted interference with Wi-Fi and other Zigbee networks, asymmetrical connections (end device hears the router well, but the router does not hear the end device) 
+and 'unhealthy Zigbee' network because devices do connect to the “loudest” router, which is not necessarily the closest one.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_eFlora](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlora.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -101,7 +102,7 @@ Lux factor.
 Value can be found in the published state on the `lux_factor` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_factor": NEW_VALUE}`.
-The minimal value is `0.1` and the maximum value is `10`.
+The minimal value is `0.1` and the maximum value is `30`.
 
 ### Reading interval (numeric)
 Setting the time in minutes, by default 10 minutes.

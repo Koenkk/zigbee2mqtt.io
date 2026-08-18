@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Salus Controls FC600NH](https://www.zigbee2mqtt.io/images/devices/FC600NH.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

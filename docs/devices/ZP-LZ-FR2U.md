@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZP-LZ-FR2U](https://www.zigbee2mqtt.io/images/devices/ZP-LZ-FR2U.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

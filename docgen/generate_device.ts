@@ -8,16 +8,18 @@ import {generateExpose} from './device_page_exposes';
 import {generateOptions} from './device_page_options';
 import {devicesBaseDir, imageBaseDir, imageBaseUrl} from './constants';
 import {getNotes} from './device_page_notes';
+import {getWarnings} from './device_page_warnings';
+import {Definition} from 'zigbee-herdsman-converters';
 
-export function resolveDeviceFile(model) {
+export function resolveDeviceFile(model: string) {
     return path.resolve(devicesBaseDir, `${normalizeModel(model)}.md`);
 }
 
-export default async function generateDevice(device) {
+export default async function generateDevice(device: Definition) {
     const deviceFile = resolveDeviceFile(device.model);
     const image = await getImage(device, imageBaseDir, imageBaseUrl);
     const exposes = typeof device.exposes === 'function' ? device.exposes({isDummyDevice: true}, {}) : device.exposes;
-    const exposesDescription = Array.from(new Set(exposes.map((e) => e.name ?? `${e.type} (${e.features.map((f) => f.name).join(', ')})`))).join(
+    const exposesDescription = Array.from(new Set(exposes.map((e) => e.name ?? `${e.type} (${e.features?.map((f) => f.name).join(', ')})`))).join(
         ', ',
     );
 
@@ -67,8 +69,16 @@ pageClass: device-page
 | Description | ${device.description} |
 | Exposes | ${exposesDescription} |
 | Picture | ![${device.vendor} ${device.model}](${image}) |
-${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor} ${d.model}`).join(', ')} |\n` : ''}
+${
+    device.whiteLabel
+        ? `| White-label | ${device.whiteLabel
+              .filter((d) => !('whiteLabelOf' in d) || d.whiteLabelOf === device.model)
+              .map((d) => `${d.vendor ? d.vendor + ' ' : ''}${d.model}`)
+              .join(', ')} |\n`
+        : ''
+}
 
+${getWarnings(device, exposes)}
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ${notes || '\n'}
 <!-- Notes END: Do not edit below this line -->

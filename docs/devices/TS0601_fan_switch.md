@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Lerlink T2-Z67/T2-W67 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

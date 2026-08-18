@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Easyfit by EnOcean EWSxZ, Trio2sys 20020002 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

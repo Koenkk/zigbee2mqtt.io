@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![easyiot ZB-PM01](https://www.zigbee2mqtt.io/images/devices/ZB-PM01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

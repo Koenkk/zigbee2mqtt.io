@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nedis ZBWD20RD](https://www.zigbee2mqtt.io/images/devices/ZBWD20RD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 The inputs of the device are only for toggle switches and do not work with momentary buttons. Therfore only switching the light on and off is possible with the input. Dimming is only available by zigbee commands.
@@ -48,12 +49,16 @@ The possible values are: `off`, `previous`, `on`.
 ### Light (l1 endpoint)
 This light supports the following features: `state`, `brightness`, `min_brightness`, `max_brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l1": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l1": ""}`.
+                
 
 ### Light (l2 endpoint)
 This light supports the following features: `state`, `brightness`, `min_brightness`, `max_brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l2": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l2": ""}`.
+                
 
 ### Switch type (enum, l1 endpoint)
 Type of the switch.

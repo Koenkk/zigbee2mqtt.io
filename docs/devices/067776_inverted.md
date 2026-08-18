@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Legrand 067776_inverted](https://www.zigbee2mqtt.io/images/devices/067776_inverted.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

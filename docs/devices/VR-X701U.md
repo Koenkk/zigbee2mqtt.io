@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Vrey VR-X701U](https://www.zigbee2mqtt.io/images/devices/VR-X701U.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

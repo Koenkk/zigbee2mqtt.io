@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Atlantic Group GW003-AS-IN-TE-FC](https://www.zigbee2mqtt.io/images/devices/GW003-AS-IN-TE-FC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

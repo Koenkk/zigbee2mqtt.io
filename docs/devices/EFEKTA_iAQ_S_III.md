@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_iAQ_S_III](https://www.zigbee2mqtt.io/images/devices/EFEKTA_iAQ_S_III.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

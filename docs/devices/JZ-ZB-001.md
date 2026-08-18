@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LELLKI JZ-ZB-001](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-001.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

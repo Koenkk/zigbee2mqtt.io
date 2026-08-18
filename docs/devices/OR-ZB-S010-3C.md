@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ORVIBO OR-ZB-S010-3C](https://www.zigbee2mqtt.io/images/devices/OR-ZB-S010-3C.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

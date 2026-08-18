@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+redirectFrom: /how_tos/how-to-switch-to-dev-branch.md
 ---
 
 # Switch to the dev branch

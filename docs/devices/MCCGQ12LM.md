@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Aqara DW-S03D, Yandex YNDX-00520 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -45,9 +46,6 @@ E.g. (devices.yaml)
 ```
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 

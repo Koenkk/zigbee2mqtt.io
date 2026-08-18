@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | T2_E27_CCT  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
-| Description | E27 led bulb |
+| Description | E27 CCT led bulb |
 | Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_on_behavior, identify, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration, transition_curve_curvature, transition_initial_brightness |
 | Picture | ![Aqara T2_E27_CCT](https://www.zigbee2mqtt.io/images/devices/T2_E27_CCT.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,8 +52,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ### Light 
 This light supports the following features: `state`, `brightness`, `color_temp`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Honyar U86Z13A16-ZJH(HA)](https://www.zigbee2mqtt.io/images/devices/U86Z13A16-ZJH(HA).png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

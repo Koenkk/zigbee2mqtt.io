@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Niceboy ORBIS Windows & Door Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Windows-&-Door-Sensor.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco SIRZB-111](https://www.zigbee2mqtt.io/images/devices/SIRZB-111.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

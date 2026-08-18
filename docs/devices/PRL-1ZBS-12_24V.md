@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Climax PRL-1ZBS-12/24V](https://www.zigbee2mqtt.io/images/devices/PRL-1ZBS-12-24V.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

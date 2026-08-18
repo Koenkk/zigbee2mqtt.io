@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

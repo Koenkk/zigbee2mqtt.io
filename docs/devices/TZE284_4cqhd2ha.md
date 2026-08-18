@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Girier TZE284_4cqhd2ha](https://www.zigbee2mqtt.io/images/devices/TZE284_4cqhd2ha.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

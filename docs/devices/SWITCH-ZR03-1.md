@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![eWeLink SWITCH-ZR03-1](https://www.zigbee2mqtt.io/images/devices/SWITCH-ZR03-1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

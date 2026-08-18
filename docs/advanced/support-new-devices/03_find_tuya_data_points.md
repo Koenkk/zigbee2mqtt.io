@@ -1,3 +1,7 @@
+---
+redirectFrom: /how_tos/how_to_find_tuya_data_points.md
+---
+
 # Find Tuya Data Points
 
 Tuya devices use a custom `manuSpecificTuya` cluster. Within the reported values of this cluster's data is a dp (so called “Data Point ID”) which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides. The instructions below will help you use the Tuya IoT Platform with a Tuya gateway to determine the functions of the datapoints which, will later assist in the creation of a device converter.

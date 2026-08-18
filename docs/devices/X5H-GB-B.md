@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Beok TGR85-ZB, AVATTO ZWT-100-16A |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

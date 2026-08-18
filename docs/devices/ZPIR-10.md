@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZPIR-10](https://www.zigbee2mqtt.io/images/devices/ZPIR-10.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

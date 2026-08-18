@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZY-M100-L](https://www.zigbee2mqtt.io/images/devices/ZY-M100-L.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

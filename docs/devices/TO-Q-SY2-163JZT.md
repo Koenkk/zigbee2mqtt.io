@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | TO-Q-SY2-163JZT  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Smart circuit breaker |
-| Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy |
+| Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
 | Picture | ![Tongou TO-Q-SY2-163JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SY2-163JZT.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -101,7 +102,7 @@ Over-current threshold.
 Value can be found in the published state on the `over_current_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `64`.
+The minimal value is `1` and the maximum value is `65`.
 The unit of this value is `A`.
 
 ### Over current breaker (binary)
@@ -116,7 +117,7 @@ Over-voltage threshold.
 Value can be found in the published state on the `over_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": NEW_VALUE}`.
-The minimal value is `220` and the maximum value is `265`.
+The minimal value is `90` and the maximum value is `265`.
 The unit of this value is `V`.
 
 ### Over voltage breaker (binary)
@@ -131,7 +132,7 @@ Under-voltage threshold.
 Value can be found in the published state on the `under_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": NEW_VALUE}`.
-The minimal value is `76` and the maximum value is `240`.
+The minimal value is `75` and the maximum value is `240`.
 The unit of this value is `V`.
 
 ### Under voltage breaker (binary)
@@ -147,7 +148,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Countdown (numeric)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
@@ -191,4 +192,11 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 

@@ -18,9 +18,10 @@ pageClass: device-page
 | Model | RMDZB-1PNL63  |
 | Vendor  | [TNCE](/supported-devices/#v=TNCE)  |
 | Description | Zigbee DIN single phase energy meter |
-| Exposes | switch (state), energy, fault, voltage_a, power_a, current_a, temperature, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, high_temperature_breaker, high_temperature_threshold |
+| Exposes | switch (state), energy, faults, voltage_a, power_a, current_a, temperature, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, high_temperature_breaker, high_temperature_threshold |
 | Picture | ![TNCE RMDZB-1PNL63](https://www.zigbee2mqtt.io/images/devices/RMDZB-1PNL63.png) |
 | White-label | TNCE RMDZB-1PNL63 |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -55,11 +56,9 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Fault (enum)
-Fault status of the device (clear = nothing).
-Value can be found in the published state on the `fault` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `clear`, `short_circuit_alarm`, `surge_alarm`, `overload_alarm`, `leakagecurr_alarm`, `temp_dif_fault`, `fire_alarm`, `high_power_alarm`, `self_test_alarm`, `ov_cr`, `unbalance_alarm`, `ov_vol`, `undervoltage_alarm`, `miss_phase_alarm`, `outage_alarm`, `magnetism_alarm`, `credit_alarm`, `no_balance_alarm`.
+### Faults (list)
+List of current faults.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"faults": ["short_circuit", "surge", "overload", "leakage_current", "temperature", "fire", "high_power", "self_test", "over_current", "unbalance", "over_voltage", "under_voltage", "miss_phase", "outage", "magnetism", "credit", "no_balance"]}`
 
 ### Voltage a (numeric)
 Measured electrical potential value (phase A).

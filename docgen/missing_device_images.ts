@@ -52,7 +52,7 @@ export async function downloadMissing() {
         console.log(`Querying '${query}'`);
         // @ts-expect-error
         const images: {url: string}[] = (await gis(`${definition.model} ${definition.vendor}`))
-            .filter((r) => r.url.endsWith('.webp') || r.url.endsWith('.jpg') || r.url.endsWith('.jpeg') || r.url.endsWith('.png'))
+            .filter((r: {url: string}) => r.url.endsWith('.webp') || r.url.endsWith('.jpg') || r.url.endsWith('.jpeg') || r.url.endsWith('.png'))
             .slice(0, 5);
         for (const image of images) {
             let imagePath = path.join(
@@ -128,7 +128,7 @@ async function moveMissing() {
             let source = path.join(missingImagesPath, file);
             // source = await ensurePngWithoutBackground(source);
             const name = path.basename(source);
-            const match = name.match('(.+)_\\d+\\.png');
+            const match = name.match('(.+).png');
             if (!match) throw new Error(`Failed to match '${name}'`);
             const target = path.join(imageBaseDir, `${match[1]}.png`);
             fs.copyFileSync(source, target);

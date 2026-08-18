@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hive SLT3d](https://www.zigbee2mqtt.io/images/devices/SLT3d.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

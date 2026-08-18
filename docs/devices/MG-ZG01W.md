@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya MG-ZG01W](https://www.zigbee2mqtt.io/images/devices/MG-ZG01W.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -53,7 +54,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 It's not possible to read (`/get`) this value.
 
 ### Countdown (numeric)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.

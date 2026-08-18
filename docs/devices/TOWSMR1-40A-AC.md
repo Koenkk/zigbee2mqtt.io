@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tongou TOWSMR1-40A-AC](https://www.zigbee2mqtt.io/images/devices/TOWSMR1-40A-AC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -192,7 +193,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` overpower Recloser is ON, if `OFF` OFF.
 
 ### Leakage current (numeric)
-Current leakage.
+Measured current difference between live and neutral wires.
 Value can be found in the published state on the `leakage_current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mA`.

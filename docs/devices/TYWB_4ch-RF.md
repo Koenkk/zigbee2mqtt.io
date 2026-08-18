@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![MHCOZY TYWB 4ch-RF](https://www.zigbee2mqtt.io/images/devices/TYWB-4ch-RF.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

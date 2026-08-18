@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![THALEOS TWC-R01](https://www.zigbee2mqtt.io/images/devices/TWC-R01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -132,7 +133,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Device mode type (binary)
-Set pilot wire mode to 6 (includes comfort 1 & 2)..
+Set pilot wire mode to 6 modes (includes comfort 1 & 2)..
 Value can be found in the published state on the `device_mode_type` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode_type": NEW_VALUE}`.

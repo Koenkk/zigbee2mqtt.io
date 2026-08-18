@@ -55,11 +55,12 @@ When using this autodetection, the following parameters in `configuration.yaml` 
 :::
 
 List of tested devices supporting mDNS Zeroconf autodiscovery:
-| Device | MDNS service type |
-| :--- | :---: |
-| SLZB-06 | slzb-06 |
-| UZG-01 | uzg-01 |
-| CZC-01 | czc |
+
+| Device  | MDNS service type |
+| :------ | :---------------: |
+| SLZB-06 |      slzb-06      |
+| UZG-01  |      uzg-01       |
+| CZC-01  |        czc        |
 
 ```yaml
 serial:

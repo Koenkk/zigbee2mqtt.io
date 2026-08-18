@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZSS-QY-HP](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-HP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

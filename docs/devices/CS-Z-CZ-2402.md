@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![DNAKE CS-Z-CZ-2402](https://www.zigbee2mqtt.io/images/devices/CS-Z-CZ-2402.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

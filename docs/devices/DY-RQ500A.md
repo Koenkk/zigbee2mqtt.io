@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![DYGSM DY-RQ500A](https://www.zigbee2mqtt.io/images/devices/DY-RQ500A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

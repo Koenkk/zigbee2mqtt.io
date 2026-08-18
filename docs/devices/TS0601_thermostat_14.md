@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AVATTO TS0601_thermostat_14](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_14.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Pairing

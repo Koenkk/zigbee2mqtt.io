@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Konke 2AJZ4KPKEY](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPKEY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

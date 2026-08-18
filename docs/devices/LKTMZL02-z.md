@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya LKTMZL02-z](https://www.zigbee2mqtt.io/images/devices/LKTMZL02-z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

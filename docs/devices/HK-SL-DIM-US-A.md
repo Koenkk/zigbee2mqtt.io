@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | HK-SL-DIM-US-A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Keypad smart dimmer |
-| Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy |
+| Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy, minimum_pwm |
 | Picture | ![Sunricher HK-SL-DIM-US-A](https://www.zigbee2mqtt.io/images/devices/HK-SL-DIM-US-A.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -58,7 +59,9 @@ pageClass: device-page
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -128,4 +131,12 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Minimum PWM (numeric)
+Power off the device and wait for 3 seconds before reconnecting to apply the settings..
+Value can be found in the published state on the `minimum_pwm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimum_pwm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_pwm": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `50`.
+The unit of this value is `%`.
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lincukoo SZLM04U](https://www.zigbee2mqtt.io/images/devices/SZLM04U.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

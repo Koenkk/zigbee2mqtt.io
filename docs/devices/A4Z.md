@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nous A4Z](https://www.zigbee2mqtt.io/images/devices/A4Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

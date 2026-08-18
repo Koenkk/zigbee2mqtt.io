@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya YY-LT500](https://www.zigbee2mqtt.io/images/devices/YY-LT500.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![iHseno TYSCENECUBE](https://www.zigbee2mqtt.io/images/devices/TYSCENECUBE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

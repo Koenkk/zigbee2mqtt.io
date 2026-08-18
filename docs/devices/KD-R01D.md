@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | KD-R01D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Dimmer switch H2 EU |
-| Exposes | power, energy, voltage, current, led_indicator, flip_indicator_light, power_on_behavior, light (state, brightness), effect, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, operation_mode, multi_click, sensitivity, phase, min_brightness, max_brightness, action |
+| Exposes | device_temperature, power, energy, voltage, current, led_indicator, flip_indicator_light, power_on_behavior, light (state, brightness), effect, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, operation_mode, multi_click, sensitivity, phase, min_brightness, max_brightness, action |
 | Picture | ![Aqara KD-R01D](https://www.zigbee2mqtt.io/images/devices/KD-R01D.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,6 +42,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -64,6 +67,12 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 
 ## Exposes
+
+### Device temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -113,7 +122,9 @@ The possible values are: `on`, `previous`, `off`, `inverted`.
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.

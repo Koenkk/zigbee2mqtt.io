@@ -18,13 +18,23 @@ pageClass: device-page
 | Model | MINI-ZBRBS  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart roller shutter switch |
-| Exposes | cover (state, position), motor_travel_calibration_status, motor_run_status, external_trigger_mode |
+| Exposes | cover (state, position), motor_travel_calibration_action, motor_travel_calibration_status, motor_run_status, external_trigger_mode |
 | Picture | ![SONOFF MINI-ZBRBS](https://www.zigbee2mqtt.io/images/devices/MINI-ZBRBS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+- Pairing the device is done by pressing the back button of the device for around 5 seconds.
+- **Automatic calibration** can be triggered via Zigbee2MQTT by setting `motor_travel_calibration_action` to `start_automatic`. Alternatively, it can be initiated physically by holding the device button for around 10 seconds until the LED enters breathing mode; the device will then drive the motor through the full stroke automatically.
+- **Manual calibration** via Zigbee2MQTT:
+  1. Set `motor_travel_calibration_action` to `start_manual` to begin.
+  2. Move the cover to the fully open position, then set `motor_travel_calibration_action` to `manual_2_fully_opened`. The device will automatically start moving the cover toward the closed position.
+  3. Once the cover has reached the fully closed (end) position, set `motor_travel_calibration_action` to `manual_3_fully_closed`. Calibration is now complete.
+- To reset the calibration, set `motor_travel_calibration_action` to `clear`.
+- The current calibration status can be read from `motor_travel_calibration_status` (`Uncalibrated` or `Calibrated`).
+- Percentage-based position control (`position`) requires a completed calibration.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -47,6 +57,13 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Motor travel calibration action (enum)
+Calibrates the motor stroke, or clears the current one..
+Value can be found in the published state on the `motor_travel_calibration_action` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_travel_calibration_action": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_travel_calibration_action": NEW_VALUE}`.
+The possible values are: `none`, `start_automatic`, `start_manual`, `clear`, `manual_2_fully_opened`, `manual_3_fully_closed`.
 
 ### Motor travel calibration status (enum)
 The calibration status of the curtain motor's stroke..

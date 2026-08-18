@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Yushun YS-MT750L](https://www.zigbee2mqtt.io/images/devices/YS-MT750L.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

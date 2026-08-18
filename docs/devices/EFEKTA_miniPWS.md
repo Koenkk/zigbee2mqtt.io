@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_miniPWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Mini plant wattering sensor](http://efektalab.com/miniPWS)

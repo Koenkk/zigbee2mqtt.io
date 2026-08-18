@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TRV603-WZ](https://www.zigbee2mqtt.io/images/devices/TRV603-WZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
