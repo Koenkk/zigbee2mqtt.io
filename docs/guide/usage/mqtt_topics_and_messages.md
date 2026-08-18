@@ -476,18 +476,20 @@ The WindFront frontend does not automatically activate permit joining after addi
 
 #### zigbee2mqtt/bridge/request/device/remove
 
-Removes a device from the network. Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_bulb"}` or `my_bulb`, response: `{"data":{"id": "my_bulb","block":false,"force":false,"clear_cache":false},"status":"ok"}`.
+Removes a device from the network. Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_bulb"}` or `my_bulb`, response: `{"data":{"id": "my_bulb","block":false,"force":false,"keep_config":false,"clear_cache":false},"status":"ok"}`.
 
 Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
 Which means that in case a device refuses to respond to this request it is not removed from the network.
 This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
-In case removal fails the response will be e.g. `{"data":{"id": "my_bulb","block":false,"force":false,"clear_cache":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
+In case removal fails the response will be e.g. `{"data":{"id": "my_bulb","block":false,"force":false,"keep_config":false,"clear_cache":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
 
 An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
 In case the device did remove itself from the network, you will get a `device_leave` event on `zigbee2mqtt/bridge/event`.
 
 In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
 To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"id":"my_bulb","force":true}`.
+
+If you want to keep the device configuration when removing a device add the optional `keep_config` property (default `false`) to the payload, example: `{"id":"my_bulb","keep_config":true}`; the device is removed from the network, but its saved configuration is preserved. Usefull when you know you'll be re-pairing the device later.
 
 To also clear the cache when removing a device add the optional `clear_cache` property (default `false`) to the payload, example: `{"id":"my_bulb","clear_cache":true}`; next join from that device will be from a clean slate (full interview from scratch).
 

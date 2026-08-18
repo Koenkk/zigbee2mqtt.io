@@ -235,6 +235,10 @@ input_boolean:
         name: Zigbee2MQTT Force Remove
         initial: false
         icon: mdi:alert-remove
+    zigbee2mqtt_remove_keep_config:
+        name: Zigbee2MQTT Keep device configuration
+        initial: false
+        icon: mdi:content-save-check
     zigbee2mqtt_remove_clear_cache:
         name: Zigbee2MQTT Remove Clear Cache
         initial: false
@@ -265,6 +269,7 @@ script:
                       {
                         "id": "{{ states('input_select.zigbee2mqtt_remove_select') }}",
                         "force": {{ 'true' if is_state('input_boolean.zigbee2mqtt_force_remove', 'on') else 'false' }}
+                        "keep_config": {{ 'true' if is_state('input_boolean.zigbee2mqtt_remove_keep_config', 'on') else 'false' }}
                         "clear_cache": {{ 'true' if is_state('input_boolean.zigbee2mqtt_remove_clear_cache', 'on') else 'false' }}
                       }
 
@@ -351,6 +356,7 @@ entities:
     - type: divider
     - entity: input_select.zigbee2mqtt_remove_select
     - entity: input_boolean.zigbee2mqtt_force_remove
+    - entity: input_boolean.zigbee2mqtt_remove_keep_config
     - entity: input_boolean.zigbee2mqtt_remove_clear_cache
     - entity: script.zigbee2mqtt_remove
 ```
