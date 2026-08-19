@@ -37,19 +37,29 @@ https://www.shelly.com/blogs/documentation/shelly-blu-h-t-display-zb
 
 ## Device setup
 
-Clock sync does not work over ZigBee.
 
-Update firmware and sync clock:
+## Device setup
+Clock sync over Zigbee now works
+
+Update firmware (tested with 1.2.20):
 1. Use `Shelly BLE Debug` mobile phone app to scan for devices
-1. Click on `Read` in the app
-1. On the device push the button on the backside
-1. To update the firmware click `OTA`, follow instructions
-1. To update the clock enter setup mode on the device (one click, display should say "set")
-1. Press the backside button two times fast (upper left corner of the device should say "sync")
-1. The clock will be synced with timezone GMT+0
-1. Open `Shelly BLE Debug` app
-1. Connect to device with `Read`
-1. Click on `UTC (0 min)` to set your timezone (offset in minutes)
+2. Pair to device
+3. If you cant pair, hit button once to get into setup mode and then 4 times to get pairing active (screen show bLE)
+4. App should offer OTA right away, otherwise click `OTA`, follow instructions (you want stock firmware if asked)
+5. Wait for OTA to finish
+   
+Pair to ZB
+1. Activate ZB by entering Setup
+2. Hold button for 10s
+3. Globe icon will show to indicate ZB is active
+4. Enter setup mode
+5. Press button 5 times rapidly to enter ZB pairing (will show zig on screen)
+6. Set z2m to permit join
+
+Enable ZB Clock sync
+1. Turn off BLE: hit button once to get Set, then press for 5s, check that BT icon disappears - this is critical, if BT is on, it tries BT clock sync
+2. Then enter set again and press button rapidly twice to force clock sync
+
 
 Single Button
 
