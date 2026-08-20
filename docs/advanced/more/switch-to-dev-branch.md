@@ -8,9 +8,8 @@ redirectFrom: /how_tos/how-to-switch-to-dev-branch.md
 The Zigbee2MQTT dev branch contains the latest features, improvements and supported devices.
 In case you want to try this, you can checkout the dev branch.
 
-::: warning
-This branch is a development branch! It could be less stable than the release version!
-:::
+> [!WARNING]
+> This branch is a development branch! It could be less stable than the release version!
 
 ## Linux
 
@@ -53,18 +52,14 @@ Use the [`edge`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) version.
 - If you have any settings in the `Configuration` page of the "regular" add-on, copy them over to that of the `Edge` add-on
 - Start the `Edge` add-on (and configure `Start on boot`, `Watchdog` & `Show in sidebar` as desired)
 
-:::caution CAUTION
-Do not start both add-ons with the same configuration at the same time. That will fail.
-:::
+> [!CAUTION]
+> Do not start both add-ons with the same configuration at the same time. That will fail.
 
-:::tip TIP
-To update the `Edge` add-on, simply uninstall it (**do not delete data**), and re-install it.
-:::
+> [!TIP]
+> To update the `Edge` add-on, simply uninstall it (**do not delete data**), and re-install it.
 
-:::tip TIP
-If you intend to stay on the `Edge` add-on permanently, once you've confirmed that `Edge` is working, you can then uninstall the "regular" add-on (**do not delete data**).
-:::
+> [!TIP]
+> If you intend to stay on the `Edge` add-on permanently, once you've confirmed that `Edge` is working, you can then uninstall the "regular" add-on (**do not delete data**).
 
-:::tip TIP
-When switching add-ons regularly, you might want to always use the `configuration.yaml` directly instead of the add-on `Configuration` page to avoid mismatching settings by mistake. Once settings are successfully moved to the `configuration.yaml`, you can just empty the corresponding boxes (`mqtt`, `serial`) in the add-on `Configuration` page and start Zigbee2MQTT again.
-:::
+> [!TIP]
+> When switching add-ons regularly, you might want to always use the `configuration.yaml` directly instead of the add-on `Configuration` page to avoid mismatching settings by mistake. Once settings are successfully moved to the `configuration.yaml`, you can just empty the corresponding boxes (`mqtt`, `serial`) in the add-on `Configuration` page and start Zigbee2MQTT again.

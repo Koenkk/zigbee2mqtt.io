@@ -15,9 +15,8 @@ serial:
 
 Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
-::: tip TIP
-The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zigbee2mqtt/discussions/21462](https://github.com/Koenkk/zigbee2mqtt/discussions/21462)
-:::
+> [!TIP]
+> The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zigbee2mqtt/discussions/21462](https://github.com/Koenkk/zigbee2mqtt/discussions/21462)
 
 ### Firmware flashing
 
@@ -482,13 +481,12 @@ Analyze log files in your browser and get an automated review of your network.
 
 ## [EXPERT] Customizing stack configuration
 
-::: warning ATTENTION
-This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it. Most networks will be just fine with the defaults.
-:::
+> [!WARNING]
+> This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it.
+> Most networks will be just fine with the defaults.
 
-::: warning ATTENTION
-Do not open a new issue in Zigbee2MQTT before confirming the problem is present with the default configuration.
-:::
+> [!IMPORTANT]
+> Do not open a new issue in Zigbee2MQTT before confirming the problem is present with the default configuration.
 
 You can modify the EmberZNet default stack configuration by creating a file `stack_config.json` in the same folder as your `coordinator_backup.json`. This configuration can only be done manually.
 

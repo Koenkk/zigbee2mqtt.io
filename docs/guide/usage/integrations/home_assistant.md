@@ -92,9 +92,8 @@ automation:
 
 This method works by responding to the state change event of a sensor. For this `homeassistant.legacy_action_sensor: true` needs to be set in your `configuration.yaml`. See the [docs](../../configuration/homeassistant.md) for more info.
 
-::: warning
-Note that this feature is deprecated and will be removed in the future. It's recommended to use the MQTT device trigger instead.
-:::
+> [!WARNING]
+> Note that this feature is deprecated and will be removed in the future. It's recommended to use the MQTT device trigger instead.
 
 ```yaml
 automation:

@@ -6,19 +6,17 @@ redirectFrom: /information/ota_updates.md
 
 This feature allows updating the firmware of Zigbee devices over-the-air.
 
-::: warning
-Firmware updates can provide bug fixes, security updates and other welcomed features.
-However, they can also change device behavior in ways that may affect Zigbee2MQTT compatibility and potentially introduce buggy, or even malicious functionality.
-**Review the release notes before applying a firmware update.**
-:::
+> [!WARNING]
+> Firmware updates can provide bug fixes, security updates and other welcomed features.
+> However, they can also change device behavior in ways that may affect Zigbee2MQTT compatibility and potentially introduce buggy, or even malicious functionality.
+> **Review the release notes before applying a firmware update.**
 
 By default, Zigbee2MQTT matches and retrieves OTA images from the [Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) repository (if it has internet access).
 This repository is a mirror of manufacturer-provided firmware updates, both manually and automatically curated.
 [Using custom/local sources](#using-custom-firmware-files-or-index) is explained further down the page.
 
-::: tip
-Most actions and configurations on this page can be done via the frontend.
-:::
+> [!TIP]
+> Most actions and configurations on this page can be done via the frontend.
 
 ## Update status
 
@@ -75,13 +73,12 @@ If an update is available (`"update_available":true`), the response will also co
 
 ## Starting an update
 
-::: warning WARNINGS
-The update process greatly varies in duration: 10-100 minutes depending on device, settings and network stability. The device is usable during this time, but heavy traffic is added on the network. Therefore, the best practice is to **update one device at a time, while the network is in low demand.**
-
-When uploading the OTA file completes, the device will reboot with the new firmware. **The reboot may cause unwanted interruptions or turn-ons, due to power-on behavior (e.g. light-up in the middle of the night)!**
-
-Since updating can drastically change the device behavior, Zigbee2MQTT treats it similarly to pairing a new device. It will automatically re-interview to detect new capabilities and **re-configure to ensure normal operation (this may overwrite custom reporting intervals with the default values)**
-:::
+> [!WARNING]
+> The update process greatly varies in duration: 10-100 minutes depending on device, settings and network stability. The device is usable during this time, but heavy traffic is added on the network. Therefore, the best practice is to **update one device at a time, while the network is in low demand.**
+>
+> When uploading the OTA file completes, the device will reboot with the new firmware. **The reboot may cause unwanted interruptions or turn-ons, due to power-on behavior (e.g. light-up in the middle of the night)!**
+>
+> Since updating can drastically change the device behavior, Zigbee2MQTT treats it similarly to pairing a new device. It will automatically re-interview to detect new capabilities and **re-configure to ensure normal operation (this may overwrite custom reporting intervals with the default values)**
 
 ### Manual update request
 
@@ -99,9 +96,8 @@ Note that `software_build_id` and `date_code` are **optional** device attributes
 
 It's possible to schedule the update for the next time the device requests an OTA update check.
 
-:::tip TIP
-This can help for battery-powered devices that usually don't respond to [manual update requests](#manual-update-request) unless physically woken up right before triggering. Some brands/models are known to only update this way (e.g. some Legrand devices).
-:::
+> [!TIP]
+> This can help for battery-powered devices that usually don't respond to [manual update requests](#manual-update-request) unless physically woken up right before triggering. Some brands/models are known to only update this way (e.g. some Legrand devices).
 
 To schedule, send a message to `zigbee2mqtt/bridge/request/device/ota_update/schedule` with payload `{"id":"deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example request: `{"id":"my_remote"}`.  
 The same applies for downgrade with topic `zigbee2mqtt/bridge/request/device/ota_update/schedule/downgrade`.
@@ -149,9 +145,8 @@ Zigbee2MQTT will ignore the custom value for some devices and automatically use 
 
 Devices can be updated from custom sources, by supplying the firmware files directly, or by listing them in a custom index.
 
-:::caution CAUTION
-Improper use of custom OTA index or firmware files can brick devices. Due to the nature of "custom firmware", several of the regular OTA constraints are bypassed in this mode. **Use trusted sources!**
-:::
+> [!CAUTION]
+> Improper use of custom OTA index or firmware files can brick devices. Due to the nature of "custom firmware", several of the regular OTA constraints are bypassed in this mode. **Use trusted sources!**
 
 An OTA index file is a list of firmware images available in designated locations. By default, Zigbee2MQTT uses the [upgrade index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json), and the [downgrade index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index1.json) from the [zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) repository.
 
@@ -160,9 +155,8 @@ A custom update index can be supplied globally (by editing `configuration.yaml`)
 The override OTA index file shall have the same structure as the [zigbee-OTA index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json).
 See the [repository README](https://github.com/Koenkk/zigbee-OTA/tree/master?tab=readme-ov-file#notes-for-maintainers--developers) if an image requires extra metadata.
 
-:::tip TIP
-The following tool can generate indexes and do more helpful operations: [https://nerivec.github.io/zigbee-ota-file-editor/](https://nerivec.github.io/zigbee-ota-file-editor/)
-:::
+> [!TIP]
+> The following tool can generate indexes and do more helpful operations: [https://nerivec.github.io/zigbee-ota-file-editor/](https://nerivec.github.io/zigbee-ota-file-editor/)
 
 If the default Zigbee2MQTT index is inaccessible (e.g. air gapped network), only the local OTA index will be used.  
 If both indexes are available, records in the override index will take precedence over the ones in the default index.

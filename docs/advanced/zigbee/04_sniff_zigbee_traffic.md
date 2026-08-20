@@ -30,13 +30,11 @@ Use Adapter for loopback traffic capture. Then set the Zigbee protocol filter: `
 
 Wireshark will start and log the Zigbee messages once the sniffer is started. As these messages are encrypted we need to add 2 encryption keys. The first one is the Trust Center link key, which is the same for (almost) every Zigbee network. The second one is the network encryption key (Transport Key).
 
-::: tip TIP
-If using Wireshark on a different machine (different IP address), depending on your setup, you may get a lot of `ICMP: Destination unreachable (Port unreachable)` during the capture. You can use the filter `udp.port==17754 && !icmp` to get rid of them.
-:::
+> [!TIP]
+> If using Wireshark on a different machine (different IP address), depending on your setup, you may get a lot of `ICMP: Destination unreachable (Port unreachable)` during the capture. You can use the filter `udp.port==17754 && !icmp` to get rid of them.
 
-::: tip TIP
-You can find details on various customizations for Wireshark in the ZSmart Systems sniffer [PDF - page 7](https://www.opensmarthouse.org/files/download/ZigBeeWiresharkSniffer.pdf). **Coloring rules are processed in order until a match is found. You may need to re-order `UDP` to the bottom to get the Zigbee rules to apply properly.**
-:::
+> [!TIP]
+> You can find details on various customizations for Wireshark in the ZSmart Systems sniffer [PDF - page 7](https://www.opensmarthouse.org/files/download/ZigBeeWiresharkSniffer.pdf). **Coloring rules are processed in order until a match is found. You may need to re-order `UDP` to the bottom to get the Zigbee rules to apply properly.**
 
 ### Adding the Trust Center link key
 
@@ -131,15 +129,14 @@ Start wireshark
 sudo whsniff -c ZIGBEE_CHANNEL_NUMBER | wireshark -k -i -
 ```
 
-::: tip TIP
-Depending on your distribution and installed packages, this may result in a broken pipe after some time. You will notice that Wireshark has stopped capturing, and attempting to resume by clicking the shark fin icon will present you with an error `end of file on pipe magic during open`, if this happens you may instead need to start with:
-
-```bash
-wireshark -k -i <( path/to/whsniff -c channel_number )
-```
-
-Alternative uses are detailed on the [whsniff project page](https://github.com/homewsn/whsniff#how-to-use-locally).
-:::
+> [!TIP]
+> Depending on your distribution and installed packages, this may result in a broken pipe after some time. You will notice that Wireshark has stopped capturing, and attempting to resume by clicking the shark fin icon will present you with an error `end of file on pipe magic during open`, if this happens you may instead need to start with:
+>
+> ```bash
+> wireshark -k -i <( path/to/whsniff -c channel_number )
+> ```
+>
+> Alternative uses are detailed on the [whsniff project page](https://github.com/homewsn/whsniff#how-to-use-locally).
 
 If you just want to save the sniffed data for later analysis you can run this command (compression with gzip is optional):
 
@@ -211,9 +208,8 @@ Both Windows and Linux use the same program for sniffing. You can fetch a precom
 
 You can also find a PDF documentation from ZSmart Systems [here](https://www.opensmarthouse.org/files/download/ZigBeeWiresharkSniffer.pdf).
 
-::: tip TIP
-Linux: Some EmberZNet adapters use the exact same USB identifiers as a brltty udev-registered device, so if your EmberZNet USB dongle is not recognized, just disable the rule of brltty for idVendor=1a86, idProduct=7523 (same as the CH340 serial converter used in the EmberZNet adapter). Edit /`usr/lib/udev/rules.d/85-brltty.rules` and comment `# ENV{PRODUCT}=="1a86/7523/*", ENV{BRLTTY_BRAILLE_DRIVER}="bm", GOTO="brltty_usb_run"`. Unplug and replug the EmberZNet adapter.
-:::
+> [!TIP]
+> Linux: Some EmberZNet adapters use the exact same USB identifiers as a brltty udev-registered device, so if your EmberZNet USB dongle is not recognized, just disable the rule of brltty for idVendor=1a86, idProduct=7523 (same as the CH340 serial converter used in the EmberZNet adapter). Edit /`usr/lib/udev/rules.d/85-brltty.rules` and comment `# ENV{PRODUCT}=="1a86/7523/*", ENV{BRLTTY_BRAILLE_DRIVER}="bm", GOTO="brltty_usb_run"`. Unplug and replug the EmberZNet adapter.
 
 #### 2. Sniffing traffic
 
