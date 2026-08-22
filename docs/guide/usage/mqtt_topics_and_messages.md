@@ -11,10 +11,9 @@ This page describes which MQTT topics are used by Zigbee2MQTT. Note that the bas
 
 The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device or group.
 
-::: tip
-You can use the `/` separator in `friendly_name` to structure devices and groups.
-For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
-:::
+> [!TIP]
+> You can use the `/` separator in `friendly_name` to structure devices and groups.
+> For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 
 Published messages are **always** in a JSON format. Each device produces a different JSON message. To see what your device publishes check the "Exposes" section on the device page which can be accessed via ["Supported devices"](../../supported-devices/). Some examples:
 
@@ -468,9 +467,8 @@ Creates a backup of the `data` folder (without the `data/log` directory). Payloa
 
 Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typically have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
 
-::: tip TIP
-The WindFront frontend does not automatically activate permit joining after adding an install code. This allows you to permit joining on whichever device you want or "all", same as a regular device.
-:::
+> [!TIP]
+> The WindFront frontend does not automatically activate permit joining after adding an install code. This allows you to permit joining on whichever device you want or "all", same as a regular device.
 
 ### Device
 
@@ -493,9 +491,8 @@ If you want to keep the device configuration when removing a device add the opti
 
 To also clear the cache when removing a device add the optional `clear_cache` property (default `false`) to the payload, example: `{"id":"my_bulb","clear_cache":true}`; next join from that device will be from a clean slate (full interview from scratch).
 
-::: tip TIP
-If you are developing a new device (e.g. ESPHome), use `clear_cache` to prevent potentially stale data from being restored on re-pairing.
-:::
+> [!TIP]
+> If you are developing a new device (e.g. ESPHome), use `clear_cache` to prevent potentially stale data from being restored on re-pairing.
 
 In case you also want to block the device the optional `block` property (default `false`) can be added, example: `{"id":"my_bulb","block":true}`. Note that Zigbee doesn't have a block functionality, therefore when a device is blocked, Zigbee2MQTT will immediately request the device to remove itself from the network when it joins.
 
@@ -590,9 +587,8 @@ The Minimum Reporting Change is like telling your device to speak up only when s
 If you set a minimum reporting change of 1 degree for a temperature sensor, it means the sensor won't bother you with updates unless the temperature changes by at least 1 degree.
 It's a way to filter out minor fluctuations and focus on important changes in the environment.
 
-::: tip NOTE
-Support for `reportable_change` depends on the type of the attribute. For e.g. a `measure`-type attribute would likely support it, but a `enum`-type attribute would not. If supplied and not supported, it is ignored.
-:::
+> [!TIP]
+> Support for `reportable_change` depends on the type of the attribute. For e.g. a `measure`-type attribute would likely support it, but a `enum`-type attribute would not. If supplied and not supported, it is ignored.
 
 To disable reporting set the `maximum_report_interval` to `65535`.
 
@@ -614,9 +610,8 @@ Example payloads:
 - For multiple attributes: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"},{"attribute":"currentFrequency"}]}`
 - For manufacturer-specific attribute: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"}], "manufacturer_code": 0x1234}`
 
-::: tip
-Reading reporting config will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, reporting config in Zigbee2MQTT should reflect the actual reporting config on the device.
-:::
+> [!TIP]
+> Reading reporting config will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, reporting config in Zigbee2MQTT should reflect the actual reporting config on the device.
 
 ### Group
 
@@ -687,15 +682,13 @@ E.g.:
 
 `{"action":"just_an_example","params":{"abcd": 1, "zyx": "my_device"}}`
 
-::: tip
-Specific up-to-date actions/parameters can be observed directly in the source code [https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts)
-:::
+> [!TIP]
+> Specific up-to-date actions/parameters can be observed directly in the source code [https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts)
 
 ##### Action: `raw`
 
-::: warning
-This allows sending requests that could negatively impact or even break your network. Use with caution!
-:::
+> [!CAUTION]
+> This allows sending requests that could negatively impact or even break your network.
 
 Special action that allows to send entirely custom payloads. The given payload is analyzed to chose the proper method of sending (ZCL, ZDO, etc.).
 See link above for parameters details (beyond the scope of this documentation).

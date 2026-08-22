@@ -5,11 +5,10 @@ redirectFrom: /information/external_extensions.md
 
 # External extensions
 
-:::warning WARNING
-External extensions are disabled by default in new installations in version 2.11.0 and later.
-See [`enable_external_js`](../../guide/configuration/all-settings.md#enable-external-js) to enable it.
-See [more details](../../guide/installation/14_securing.md#external-extensions-and-converters)
-:::
+> [!WARNING]
+> External extensions are disabled by default in new installations in version 2.11.0 and later.
+> See [`enable_external_js`](../../guide/configuration/all-settings.md#enable-external-js) to enable it.
+> See [more details](../../guide/installation/14_securing.md#external-extensions-and-converters)
 
 External extensions provide a way to extend Zigbee2MQTT behavior, they work identically to internal extensions.
 
@@ -17,9 +16,8 @@ To get familiar with the Extension framework, refer to the [source code of inter
 
 External extensions are stored in `data/external_extensions` folder and have to export a JavaScript Class that conforms to the `Extension` base class (see above link).
 
-:::tip TIP
-You can find some ready-made extensions in the following repository [https://github.com/Koenkk/zigbee2mqtt-user-extensions/](https://github.com/Koenkk/zigbee2mqtt-user-extensions/)
-:::
+> [!TIP]
+> You can find some ready-made extensions in the following repository [https://github.com/Koenkk/zigbee2mqtt-user-extensions/](https://github.com/Koenkk/zigbee2mqtt-user-extensions/)
 
 Example:
 

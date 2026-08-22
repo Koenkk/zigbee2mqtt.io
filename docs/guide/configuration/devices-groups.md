@@ -46,14 +46,12 @@ Every Zigbee Device supports the following list of options.
 **`friendly_name`**  
 Used in the MQTT topic of a device. By default, this is the device ID (e.g. `0x00128d0001d9e1d2`).
 
-::: tip
-You can use the `/` separator in `friendly_name` to structure devices.
-For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
-:::
+> [!TIP]
+> You can use the `/` separator in `friendly_name` to structure devices.
+> For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 
-::: warning
-Note that a `friendly_name` is **NOT** allowed to end with `/`, `/` + one of the possible [endpoint names](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/utils.ts#L30) (e.g. `/left`) or `/` + a number (e.g. `/4`).
-:::
+> [!IMPORTANT]
+> A `friendly_name` is **NOT** allowed to end with `/`, `/` + one of the possible [endpoint names](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/utils.ts#L30) (e.g. `/left`) or `/` + a number (e.g. `/4`).
 
 **`description`**  
 Description of this device, e.g. `This device is in the kitchen`, will be shown in the frontend.
@@ -175,9 +173,8 @@ groups:
             icon: mdi:lightbulb-group
 ```
 
-::: warning
-The group key has to be unique and a quoted integer.
-:::
+> [!IMPORTANT]
+> The group key has to be unique and a quoted integer.
 
 **`homeassistant`**  
 Allows overriding the values of the Home Assistant discovery payload for this group. Any Home Assistant MQTT discovery property can be overridden.

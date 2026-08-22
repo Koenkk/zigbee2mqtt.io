@@ -53,7 +53,7 @@ Some TCP adapters also allow you to do that from their own interface.
 **Make sure you have a `coordinator_backup.json` and `configuration.yaml` present in your Zigbee2MQTT data folder before doing this; Zigbee2MQTT will need them to restore the network after the reset.**
 
 > [!TIP]
-> Installation details for `ember-zli` can be found here: https://github.com/Nerivec/ember-zli/wiki#installation
+> Installation details for `ember-zli` can be found here: [https://github.com/Nerivec/ember-zli/wiki#installation](https://github.com/Nerivec/ember-zli/wiki#installation)
 
 > [!IMPORTANT]
 > If you have known-good devices in your network, migrating the IEEE is not usually necessary.
@@ -72,15 +72,13 @@ Devices that spam data reports can quickly crowd the network and reduce the over
 You can disable or decrease the rate of reports of a device (for all or specific states). If possible, configure [reporting](../usage/mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-device-reporting-configure) to better match your need and fit what your network can handle.
 However, often enough the devices cited above also don't allow proper configuration, in that case, there is no real way to fix them, you can only replace them with better ones.
 
-::: tip TIP
-Several Open Source projects offer alternative Tuya OTA update firmware (be sure to read all associated documentation before using these). Examples:
-
-- [https://github.com/romasku/tuya-zigbee-switch](https://github.com/romasku/tuya-zigbee-switch)
-- [https://github.com/pvvx/ZigbeeTLc](https://github.com/pvvx/ZigbeeTLc)
-- [https://github.com/Andrik45719/ZY-M100](https://github.com/Andrik45719/ZY-M100)
-- [https://github.com/slacky1965](https://github.com/slacky1965)
-
-:::
+> [!TIP]
+> Several Open Source projects offer alternative Tuya OTA update firmware (be sure to read all associated documentation before using these). Examples:
+>
+> - [https://github.com/romasku/tuya-zigbee-switch](https://github.com/romasku/tuya-zigbee-switch)
+> - [https://github.com/pvvx/ZigbeeTLc](https://github.com/pvvx/ZigbeeTLc)
+> - [https://github.com/Andrik45719/ZY-M100](https://github.com/Andrik45719/ZY-M100)
+> - [https://github.com/slacky1965](https://github.com/slacky1965)
 
 ## Disconnect with MQTT v5
 

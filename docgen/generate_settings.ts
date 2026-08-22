@@ -221,9 +221,8 @@ pageClass: settings-page
 
 This page contains all currently supported settings in \`configuration.yaml\`.
 
-::: tip NOTE
-The code blocks show an **example value** for each setting (may be the default or any value derived from the possibilities/examples/boundaries).
-:::
+> [!NOTE]
+> The code blocks show an **example value** for each setting (may be the default or any value derived from the possibilities/examples/boundaries).
 
 ${groupProperties(schemaJson.properties, [], schemaJson.required, schemaJson.definitions).sort().join('\r\n')}
 `;
