@@ -1,0 +1,11 @@
+import { P as openBlock, m as createStaticVNode, u as createElementBlock } from "./runtime-core.esm-bundler-D6Jmich1.js";
+import { t as _plugin_vue_export_helper_default } from "./app-BNa26rH9.js";
+//#region docs/devices/929004296801.md
+var _pageData = JSON.parse("{\"path\":\"/devices/929004296801.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"content-page\"},\"git\":{\"updatedTime\":1786727457000,\"contributors\":[{\"name\":\"reeett\",\"username\":\"reeett\",\"email\":\"61587552+reeett@users.noreply.github.com\",\"commits\":1,\"url\":\"https://github.com/reeett\"}],\"changelog\":[{\"hash\":\"91e36b1a0f0b3a0a44c349d9552325a545ce9e4b\",\"time\":1786727457000,\"email\":\"61587552+reeett@users.noreply.github.com\",\"author\":\"Jonas Gade\",\"message\":\"Image and docs note for 929004296801 (#5410)\"}]},\"filePathRelative\":\"devices/929004296801.md\"}");
+var _sfc_main = { name: "929004296801.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [createStaticVNode("<h2 id=\"notes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#notes\"><span>Notes</span></a></h2><ul><li>The switch inputs are hard-wired to their respective relays. The device does emit On/Off commands, but it emits them for every relay change, including ones triggered over MQTT, so they cannot be used to distinguish local operation from remote control. <code>state_l1</code> / <code>state_l2</code> should be used as automation triggers instead.</li><li><code>0xFC00</code> (manuSpecificPhilips) is present on endpoint 1 but appears to be a leftover from the shared firmware base; no button notifications are sent. The Hue app offers no rocker/push-button selection for this device either, so the <code>device_mode</code> attribute used by the RDM001 does not apply here.</li><li><code>genLevelCtrl</code> is present on both output endpoints but this is the on/off variant, not the dimming one.</li></ul>", 2)])]);
+}
+var _929004296801_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+//#endregion
+export { _pageData, _929004296801_default as default };
