@@ -24,8 +24,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Issues
+This series of dimmer switches may exhibit severe issues:
+- [spamming the network](https://github.com/Koenkk/zigbee2mqtt/issues/32815)
+- [randomly leaving the network](https://github.com/Koenkk/zigbee2mqtt/discussions/32873)
 <!-- Notes END: Do not edit below this line -->
 
 
