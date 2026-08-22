@@ -413,6 +413,12 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 
 ### Not recommended
 
+::: details SparkFun MGM240P
+
+Known UART issues; packet drops, stuck baudrate, etc..
+
+:::
+
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 
 Low-resources hardware.
