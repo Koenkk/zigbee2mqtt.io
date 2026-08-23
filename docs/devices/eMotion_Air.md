@@ -24,7 +24,14 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+## Setting for action
+If you want to use the actions in Home Assistant automations, enable Zigbee2MQTT's experimental event entities:
+```yaml
+homeassistant:
+  experimental_event_entities: true
+```
+After restarting Zigbee2MQTT, an event entity will be created for the device. The triggered action is available as the event_type attribute and can be used as a trigger in Home Assistant automations.
+See the [Home Assistant integration documentation](https://www.zigbee2mqtt.io/guide/usage/integrations/home_assistant.html) for details.
 
 <!-- Notes END: Do not edit below this line -->
 
