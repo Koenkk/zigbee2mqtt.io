@@ -24,11 +24,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press and hold button of the device for 15 seconds until the LED starts blinking.
 <!-- Notes END: Do not edit below this line -->
-
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
