@@ -103,8 +103,8 @@ importers:
         specifier: 2.0.0-rc.31
         version: 2.0.0-rc.31(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.1.2)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.0)(jiti@2.7.0)(sass@1.102.0)(terser@5.47.1)(typescript@6.0.3)(webpack@5.106.2(esbuild@0.28.0)(postcss@8.5.23))(yaml@2.9.0))(esbuild@0.28.0)(rolldown@1.2.0)(typescript@6.0.3)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.0)(jiti@2.7.0)(sass@1.102.0)(terser@5.47.1)(yaml@2.9.0))(vue@3.5.40(typescript@6.0.3))(webpack@5.106.2(esbuild@0.28.0)(postcss@8.5.23))
       zigbee-herdsman-converters:
-        specifier: 26.90.0
-        version: 26.90.0
+        specifier: 26.102.0
+        version: 26.102.0
 
 packages:
 
@@ -2603,12 +2603,12 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@26.90.0:
-    resolution: {integrity: sha512-a5yn+ZjWdRenp9ax3hfh+blz5QO4i7WbW7XXygo+Hnz4QG9wp8TkS0zzZbvuQHjhddLzgcBzXMiJl8++Rrpd2Q==}
+  zigbee-herdsman-converters@26.102.0:
+    resolution: {integrity: sha512-OJ4j6/0PlirjQu48RdTocEisuNTQjJyJHNt5j6HPCcoN/dEqBrX8UJc3Vo6EWqIApG3xOb8qek7KAgpFXAj6ew==}
     engines: {node: '>=20.15.0'}
 
-  zigbee-herdsman@10.8.0:
-    resolution: {integrity: sha512-m9bVPYjGVT8kqGWjHCbMfpA4jUuSNAq3kH9Xx6i9Y56OXXg9zpBD+Z6xXDCwZL6VS+iranZAX2d7EwqFSm4JZw==}
+  zigbee-herdsman@10.9.1:
+    resolution: {integrity: sha512-Tq4wSk4JhQgBOhPwlpq/SU1V3tAtd66u/VVhQfnTfcoomvA331JbspmasAsT6Ba5UnASJvXz7jViNHHCicjhRA==}
 
   zigbee-on-host@0.2.4:
     resolution: {integrity: sha512-NIG6CWp+Yfn7PjqEIRvenHqpwT1U7rSkyimnFOUIFpnmxQOJKrmcwWDfn6WjbU/YIYYWSQPlj+g13icu1xwlyg==}
@@ -5306,15 +5306,15 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  zigbee-herdsman-converters@26.90.0:
+  zigbee-herdsman-converters@26.102.0:
     dependencies:
       iconv-lite: 0.7.3
       semver: 7.8.5
-      zigbee-herdsman: 10.8.0
+      zigbee-herdsman: 10.9.1
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-herdsman@10.8.0:
+  zigbee-herdsman@10.9.1:
     dependencies:
       '@date-fns/tz': 1.5.0
       '@serialport/bindings-cpp': 13.0.1

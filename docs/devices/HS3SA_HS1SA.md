@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HS3SA/HS1SA  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
-| Description | Smoke detector |
+| Description | Smart smoke alarm |
 | Exposes | smoke, battery_low, battery, test |
 | Picture | ![Heiman HS3SA/HS1SA](https://www.zigbee2mqtt.io/images/devices/HS3SA-HS1SA.png) |
 

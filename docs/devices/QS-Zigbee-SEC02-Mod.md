@@ -103,14 +103,14 @@ Switch type.
 Value can be found in the published state on the `switch_type_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_1": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`, `light_control`, `light_control_up`, `light_control_down`, `scene`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `light_cct_control`, `light_cct_control_up`, `light_cct_control_down`, `light_rgb_control`, `light_rgb_control_up`, `light_rgb_control_down`, `scene`.
 
 ### Switch type (enum, 2 endpoint)
 Switch type.
 Value can be found in the published state on the `switch_type_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_2": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`, `light_control`, `light_control_up`, `light_control_down`, `scene`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `light_cct_control`, `light_cct_control_up`, `light_cct_control_down`, `light_rgb_control`, `light_rgb_control_up`, `light_rgb_control_down`, `scene`.
 
 ### Operation mode (enum, 1 endpoint)
 Relay decoupled.

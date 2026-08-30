@@ -60,7 +60,7 @@ It's not possible to write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Occupancy timeout (numeric)
-Occupied to unoccupied delay.
+Occupied to Unoccupied Delay (30 s+ recommended to reduce missed detection.).
 Value can be found in the published state on the `pir_o_to_u_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_o_to_u_delay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_o_to_u_delay": NEW_VALUE}`.
