@@ -39,7 +39,51 @@ This device is a
 
 It can display the heating status of associated climate by setting `pi_heating_demand`
 
-It requires a Z-Stack controller (Firmware version > TBD). It is currently not working with zigate and conbee II (maybe supported in further firmware).
+Historically this device was reported to require a Z-Stack controller and to not work with zigate and ConBee II. It has since been confirmed working on an EmberZNet 7.4.4 (EZSP 13) coordinator.
+
+### Setpoint and boost behaviour (hub-less operation)
+
+The thermostat adjusts its setpoint through two mechanisms:
+
+- **+/- buttons**: change the setpoint in 0.5 °C steps (the screen must be
+  awake; the wake press itself does not change the value).
+- **Boost (center button)**: starts a temporary boost. The boost target is the
+  current *room temperature* + 2 °C (adjustable with +/- while the clock icon
+  is shown) and the duration is selected by pressing the center button
+  repeatedly: 30 min, 1 h, 2 h, 3 h; a fifth press cancels. About 8 seconds
+  after the last press the device commits the boost. The clock icon is only a
+  selection indicator and disappears shortly after the commit.
+
+The device itself keeps no boost state: all boost timing is handled by this
+integration (option `boost_auto_honor`, enabled by default). When a boost
+commits, the integration saves the current setpoint, applies the boost
+temperature, and restores the saved setpoint when the boost duration ends or
+when the boost is cancelled on the device. The boost timer survives a
+Zigbee2MQTT restart; a boost that expired during downtime is restored at
+startup.
+
+Any later setpoint change — whether written through software
+(`occupied_heating_setpoint`) or made with the +/- buttons after the boost
+clock has disappeared — cancels the pending restore and becomes the new
+setpoint. In short: the last written setpoint always wins; a boost restore
+never overwrites newer intent.
+
+All events are always published as `action`
+(`button_press_plus_down`/`button_press_minus_down`/`button_press_center_down`,
+`screen_wake`/`screen_sleep`, `boost_set`/`boost_cancel` with
+`boost_duration` and `boost_temperature`), so external automation can
+implement its own boost policy with `boost_auto_honor` disabled.
+
+Further notes:
+
+- The device is a sleepy end device that only reads its display data
+  (setpoint, system mode, heating demand) from the coordinator while its
+  screen is awake; large setpoint changes (>3 °C) may require an extra wake
+  cycle before they render.
+- The flame icon follows `pi_heating_demand` (set it from your automation to
+  reflect actual heating activity).
+- `keypad_lockout` (`lock1`) disables the local UI; button events keep being
+  published while locked.
 <!-- Notes END: Do not edit below this line -->
 
 
