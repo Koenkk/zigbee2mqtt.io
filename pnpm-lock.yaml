@@ -103,8 +103,8 @@ importers:
         specifier: 2.0.0-rc.31
         version: 2.0.0-rc.31(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.1.2)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.0)(jiti@2.7.0)(sass@1.102.0)(terser@5.47.1)(typescript@6.0.3)(webpack@5.106.2(esbuild@0.28.0)(postcss@8.5.23))(yaml@2.9.0))(esbuild@0.28.0)(rolldown@1.2.0)(typescript@6.0.3)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.0)(jiti@2.7.0)(sass@1.102.0)(terser@5.47.1)(yaml@2.9.0))(vue@3.5.40(typescript@6.0.3))(webpack@5.106.2(esbuild@0.28.0)(postcss@8.5.23))
       zigbee-herdsman-converters:
-        specifier: 26.102.0
-        version: 26.102.0
+        specifier: 26.103.0
+        version: 26.103.0
 
 packages:
 
@@ -2603,8 +2603,8 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@26.102.0:
-    resolution: {integrity: sha512-OJ4j6/0PlirjQu48RdTocEisuNTQjJyJHNt5j6HPCcoN/dEqBrX8UJc3Vo6EWqIApG3xOb8qek7KAgpFXAj6ew==}
+  zigbee-herdsman-converters@26.103.0:
+    resolution: {integrity: sha512-G3MK1wJghgkfwH3DH1eVdskK/HGoQaMQR9WXTBrnAN1xgskYK3JLlqHDwFYT4Pt/3LPOVUq38+VHkJSl+txn6Q==}
     engines: {node: '>=20.15.0'}
 
   zigbee-herdsman@10.9.1:
@@ -5306,7 +5306,7 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  zigbee-herdsman-converters@26.102.0:
+  zigbee-herdsman-converters@26.103.0:
     dependencies:
       iconv-lite: 0.7.3
       semver: 7.8.5
