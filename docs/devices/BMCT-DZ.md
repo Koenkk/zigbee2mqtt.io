@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Bosch BMCT-DZ](https://www.zigbee2mqtt.io/images/devices/BMCT-DZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

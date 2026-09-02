@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | EPJ-ZB  |
 | Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | Smart sliding window pusher |
-| Exposes | battery, cover (state, position), charge_state, manual_mode, fault, countdown, motor_direction, mode, fixed_window_sash, window_detection |
+| Exposes | battery, cover (state, position), charge_state, manual_mode, fault, countdown, motor_direction, slow_mode, fixed_window_sash, window_detection |
 | Picture | ![Nova Digital EPJ-ZB](https://www.zigbee2mqtt.io/images/devices/EPJ-ZB.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +29,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -71,18 +77,18 @@ The minimal value is `10` and the maximum value is `90`.
 The unit of this value is `s`.
 
 ### Motor direction (enum)
-Pusher install side.
+Motor side.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
-The possible values are: `Left Side`, `Right Side`.
+The possible values are: `left`, `right`.
 
-### Mode (enum)
-Slow stop mode.
-Value can be found in the published state on the `mode` property.
+### Slow mode (binary)
+Operate the motor slower and quieter than normal.
+Value can be found in the published state on the `slow_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
-The possible values are: `Enable`, `Disable`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"slow_mode": NEW_VALUE}`.
+If value equals `ON` slow mode is ON, if `OFF` OFF.
 
 ### Fixed window sash (enum)
 Button position.

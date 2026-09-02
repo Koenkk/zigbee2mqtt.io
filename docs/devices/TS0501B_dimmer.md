@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0501B_dimmer](https://www.zigbee2mqtt.io/images/devices/TS0501B_dimmer.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -88,7 +89,7 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 ````
 
 ### Do not disturb (binary)
-Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
+Controls state after power outage: false = on, true = restore previous state.
 Value can be found in the published state on the `do_not_disturb` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.

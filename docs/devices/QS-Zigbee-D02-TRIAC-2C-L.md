@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-2C-L](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-2C-L.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | HK-SL-DIM-AU-R-A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee knob smart dimmer |
-| Exposes | identify, power, voltage, current, energy, light (state, brightness), effect, power_on_behavior, external_switch_type |
+| Exposes | identify, power, voltage, current, energy, light (state, brightness), effect, power_on_behavior, external_switch_type, minimum_pwm |
 | Picture | ![Sunricher HK-SL-DIM-AU-R-A](https://www.zigbee2mqtt.io/images/devices/HK-SL-DIM-AU-R-A.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -145,4 +146,12 @@ Value can be found in the published state on the `external_switch_type` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": NEW_VALUE}`.
 The possible values are: `push_button`, `normal_on_off`, `three_way`.
+
+### Minimum PWM (numeric)
+Power off the device and wait for 3 seconds before reconnecting to apply the settings..
+Value can be found in the published state on the `minimum_pwm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimum_pwm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_pwm": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `50`.
+The unit of this value is `%`.
 

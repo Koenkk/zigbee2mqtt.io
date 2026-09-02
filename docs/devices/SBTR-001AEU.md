@@ -18,9 +18,17 @@ pageClass: device-page
 | Model | SBTR-001AEU  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | Thermostatic radiator valve |
-| Exposes | calibration_ok, calibrate, battery, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, unoccupied_heating_setpoint, system_mode, pi_heating_demand), min_heat_setpoint_limit, max_heat_setpoint_limit, manual_mode, valve_position, identify |
+| Exposes | calibration_ok, calibrate, external_temperature, external_occupancy, battery, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, unoccupied_heating_setpoint, system_mode, pi_heating_demand), min_heat_setpoint_limit, max_heat_setpoint_limit, manual_mode, valve_position, identify |
 | Picture | ![Shelly SBTR-001AEU](https://www.zigbee2mqtt.io/images/devices/SBTR-001AEU.png) |
 
+
+
+## Firmware
+
+It is recommended to connect Shelly devices by WiFi / Bluetooth, and update their firmware, until they gain support for OTA updates over Zigbee.
+
+The latest firmware fixes known issues like negative power readings on some models.  
+*Note they roll-out updates in phases. Check "beta" channels if you are specifically looking for a fix.*
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
@@ -51,6 +59,21 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibrate": NEW_VALUE}`.
 The possible values are: `trigger`.
+
+### External temperature (numeric)
+External room temperature used by the thermostat.
+Value can be found in the published state on the `external_temperature` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_temperature": NEW_VALUE}`.
+The minimal value is `-40` and the maximum value is `85`.
+The unit of this value is `°C`.
+
+### External occupancy (binary)
+External occupancy state used to select the occupied or unoccupied heating setpoint.
+Value can be found in the published state on the `external_occupancy` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_occupancy": NEW_VALUE}`.
+If value equals `true` external occupancy is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %.

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ajax Online ZB-CCT_Filament](https://www.zigbee2mqtt.io/images/devices/ZB-CCT_Filament.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

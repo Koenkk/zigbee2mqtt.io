@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![KURVIA ZB-CL01](https://www.zigbee2mqtt.io/images/devices/ZB-CL01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

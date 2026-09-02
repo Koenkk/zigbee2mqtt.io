@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LELLKI WP30-EU](https://www.zigbee2mqtt.io/images/devices/WP30-EU.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

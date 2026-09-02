@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![HOFTRONIC HD300W-ZB](https://www.zigbee2mqtt.io/images/devices/HD300W-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ### Put dimmer into pairing mode
 Remove the device from the previous Zigbee network if it has already been added,

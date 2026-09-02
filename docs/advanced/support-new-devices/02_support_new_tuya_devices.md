@@ -1,3 +1,7 @@
+---
+redirectFrom: /how_tos/how_to_support_new_tuya_devices.md
+---
+
 # Support new Tuya devices
 
 Tuya devices use a custom `manuSpecificTuya` cluster, the instructions below will help you understand it better and provide some tools to ease discovery of their functions

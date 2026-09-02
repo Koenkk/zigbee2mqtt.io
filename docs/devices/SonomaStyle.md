@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Stelpro SonomaStyle](https://www.zigbee2mqtt.io/images/devices/SonomaStyle.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

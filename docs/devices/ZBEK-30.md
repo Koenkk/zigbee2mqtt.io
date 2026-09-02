@@ -1,6 +1,6 @@
 ---
-title: "Adeo ZBEK-30 control via MQTT"
-description: "Integrate your Adeo ZBEK-30 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "ADEO ZBEK-30 control via MQTT"
+description: "Integrate your ADEO ZBEK-30 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-11-30T20:32:43
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Adeo ZBEK-30
+# ADEO ZBEK-30
 
 |     |     |
 |-----|-----|
 | Model | ZBEK-30  |
-| Vendor  | [Adeo](/supported-devices/#v=Adeo)  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN Gdansk |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior |
-| Picture | ![Adeo ZBEK-30](https://www.zigbee2mqtt.io/images/devices/ZBEK-30.png) |
+| Picture | ![ADEO ZBEK-30](https://www.zigbee2mqtt.io/images/devices/ZBEK-30.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

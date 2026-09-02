@@ -18,19 +18,36 @@ pageClass: device-page
 | Model | S4EM-001PXCEU16  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | EM Mini Gen4 |
-| Exposes | power, voltage, ac_frequency, current, energy, produced_energy, wifi_status, ip_address, dhcp_enabled, wifi_config |
+| Exposes | power, voltage, ac_frequency, current, energy, produced_energy, wifi_status, ip_address, dhcp_enabled, wifi_config, identify |
 | Picture | ![Shelly S4EM-001PXCEU16](https://www.zigbee2mqtt.io/images/devices/S4EM-001PXCEU16.png) |
 
 
+
+## Firmware
+
+It is recommended to connect Shelly devices by WiFi / Bluetooth, and update their firmware, until they gain support for OTA updates over Zigbee.
+
+The latest firmware fixes known issues like negative power readings on some models.  
+*Note they roll-out updates in phases. Check "beta" channels if you are specifically looking for a fix.*
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Zigbee / Matter mode & pairing
+The device ships in Matter mode by default. To use the device with Zigbee2MQTT, switching to Zigbee mode is required. This can be done by pressing the button on the back of the device 5 times fast enough (at 0.5 second intervals or so). The blinking red light will pause blinking temporarily. Afterwards, the device will start pairing mode for 2 minutes. To restart pairing mode, press the button three times again.
 
+### Maintenance and factory reset
+In Zigbee mode, to enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 3 seconds. Doing so for 10 seconds will trigger a factory reset.
+
+When the access point is enabled, it exposes a Wifi access point that you can access without password. After connecting, open http://192.168.33.1 in your browser to access the maintenance. Recommend setting a password if you keep the access point enabled. You can also see the current voltage, current & power consumption through this interface.
 <!-- Notes END: Do not edit below this line -->
 
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `shelly_wifi_ssid`: Full Wi-Fi SSID to use when the Shelly Wi-Fi setup cluster reports a shortened network name. The value must be textual.
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -51,6 +68,8 @@ pageClass: device-page
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -126,4 +145,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `net_mask` (text): Subnet mask for the static IP configuration 
 - `gateway` (text): Default gateway address for static IP configuration 
 - `name_server` (text): Name server address for static IP configuration 
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 

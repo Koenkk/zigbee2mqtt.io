@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Acova IHC-Enki](https://www.zigbee2mqtt.io/images/devices/IHC-Enki.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

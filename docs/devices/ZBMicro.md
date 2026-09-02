@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF ZBMicro](https://www.zigbee2mqtt.io/images/devices/ZBMicro.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

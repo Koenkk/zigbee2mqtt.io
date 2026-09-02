@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![OSRAM 73741_LIGHTIFY](https://www.zigbee2mqtt.io/images/devices/73741_LIGHTIFY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

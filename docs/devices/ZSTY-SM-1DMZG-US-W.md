@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Somgoms ZSTY-SM-1DMZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-1DMZG-US-W.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

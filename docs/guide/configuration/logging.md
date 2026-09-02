@@ -1,5 +1,8 @@
 ---
 sidebarDepth: 1
+redirectFrom:
+    - /information/debug.md
+    - /guide/usage/debug.md
 ---
 
 # Logging

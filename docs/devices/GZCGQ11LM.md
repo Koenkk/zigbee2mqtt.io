@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | GZCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light sensor T1 |
-| Exposes | battery, voltage, detection_period, illuminance |
+| Exposes | battery, voltage, detection_period, illuminance, identify |
 | Picture | ![Aqara GZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ11LM.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -37,6 +38,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 * `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
@@ -70,4 +73,11 @@ Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `lx`.
+
+### Identify (enum)
+Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 

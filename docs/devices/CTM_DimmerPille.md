@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CTM Lyng CTM_DimmerPille](https://www.zigbee2mqtt.io/images/devices/CTM_DimmerPille.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

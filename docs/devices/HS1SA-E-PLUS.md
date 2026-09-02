@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | HS1SA-E-PLUS  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
-| Description | Smoke detector |
+| Description | Smart smoke alarm |
 | Exposes | battery, identify, temperature, smoke, battery_low, test, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, smoke_level, smoke_unit, chamber_contamination, link_available, siren_for_automation_only, temperature_offset, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman HS1SA-E-PLUS](https://www.zigbee2mqtt.io/images/devices/HS1SA-E-PLUS.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -97,21 +98,21 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 
 ### Trigger selftest (enum)
-Trigger smoke alarm self-check test..
+Trigger alarm self-check..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_selftest": NEW_VALUE}`.
 The possible values are: `test`.
 
 ### Temporary mute (binary)
-temporarily mute smoke alarm but please ensure there is no real fire..
+Silence the alarm temporarily.
 Value can be found in the published state on the `temporary_mute` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mute": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mute": NEW_VALUE}`.
 If value equals `true` temporary mute is ON, if `false` OFF.
 
 ### Heartbeat indicator (binary)
-active green indicator.
+Enable/disable the indicator on product.
 Value can be found in the published state on the `heartbeat_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"heartbeat_indicator": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heartbeat_indicator": NEW_VALUE}`.
@@ -150,7 +151,7 @@ used for interconnection automation..
 Value can be found in the published state on the `link_available` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"link_available": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `inactive`, `smoke_active`, `co_active`, `heat_active`.
+The possible values are: `inactive`, `smoke_active`, `co_active`, `gas_active`, `heat_active`.
 
 ### Siren for automation only (enum)
 siren effect.
@@ -160,11 +161,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `stop`, `smoke_siren`, `co_siren`.
 
 ### Temperature offset (numeric)
-used for temperature offset, unit: 0.01℃.
+used for temperature offset, unit: ℃.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
-The minimal value is `-1500` and the maximum value is `1500`.
+The minimal value is `-15` and the maximum value is `15`.
 
 ### Reported packages (numeric)
 for diagnostic purpose, how many zigbee packages has the reported in a day..

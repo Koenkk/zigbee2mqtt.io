@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Loginovo ZG-101ZL](https://www.zigbee2mqtt.io/images/devices/ZG-101ZL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Operation mode
 You can switch between the "command" and "event" operation mode with a triple click

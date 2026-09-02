@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit SDM01ZB](https://www.zigbee2mqtt.io/images/devices/SDM01ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

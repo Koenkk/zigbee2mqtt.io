@@ -22,6 +22,14 @@ pageClass: device-page
 | Picture | ![Shelly SBRC-005B-B](https://www.zigbee2mqtt.io/images/devices/SBRC-005B-B.png) |
 
 
+
+## Firmware
+
+It is recommended to connect Shelly devices by WiFi / Bluetooth, and update their firmware, until they gain support for OTA updates over Zigbee.
+
+The latest firmware fixes known issues like negative power readings on some models.  
+*Note they roll-out updates in phases. Check "beta" channels if you are specifically looking for a fix.*
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

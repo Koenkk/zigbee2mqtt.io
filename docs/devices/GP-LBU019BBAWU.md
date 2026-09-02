@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SmartThings GP-LBU019BBAWU](https://www.zigbee2mqtt.io/images/devices/GP-LBU019BBAWU.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

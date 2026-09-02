@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Vesternet VES-ZB-PIR-21](https://www.zigbee2mqtt.io/images/devices/VES-ZB-PIR-21.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

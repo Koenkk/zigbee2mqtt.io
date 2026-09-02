@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EcoSmart A9A19A60WESDZ02](https://www.zigbee2mqtt.io/images/devices/A9A19A60WESDZ02.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

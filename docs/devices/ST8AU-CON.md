@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![OSRAM ST8AU-CON](https://www.zigbee2mqtt.io/images/devices/ST8AU-CON.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) ptvo.switch](https://www.zigbee2mqtt.io/images/devices/ptvo.switch.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Multi-functional device](https://ptvo.info/zigbee-configurable-firmware-features/)

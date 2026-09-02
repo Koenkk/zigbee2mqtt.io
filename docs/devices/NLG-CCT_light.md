@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Paul Neuhaus NLG-CCT light](https://www.zigbee2mqtt.io/images/devices/NLG-CCT-light.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

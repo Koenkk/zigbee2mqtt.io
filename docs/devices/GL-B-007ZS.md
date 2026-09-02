@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Gledopto GL-B-007ZS](https://www.zigbee2mqtt.io/images/devices/GL-B-007ZS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

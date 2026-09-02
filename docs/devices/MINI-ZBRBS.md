@@ -18,15 +18,23 @@ pageClass: device-page
 | Model | MINI-ZBRBS  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart roller shutter switch |
-| Exposes | cover (state, position), motor_travel_calibration_action, motor_travel_calibration_status, motor_run_status, external_trigger_mode |
+| Exposes | cover (state, position), motor_travel_calibration_action, motor_travel_calibration_status, moving, external_trigger_mode |
 | Picture | ![SONOFF MINI-ZBRBS](https://www.zigbee2mqtt.io/images/devices/MINI-ZBRBS.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-- Pairing the device is done by pressing the back button of the device for around 5 seconds
-- Auto calibration is done by pressing the button of the device for around 10 seconds. There is currently no way in Zigbee2Mqtt to auto calibrate the device.
+- Pairing the device is done by pressing the back button of the device for around 5 seconds.
+- **Automatic calibration** can be triggered via Zigbee2MQTT by setting `motor_travel_calibration_action` to `start_automatic`. Alternatively, it can be initiated physically by holding the device button for around 10 seconds until the LED enters breathing mode; the device will then drive the motor through the full stroke automatically.
+- **Manual calibration** via Zigbee2MQTT:
+  1. Set `motor_travel_calibration_action` to `start_manual` to begin.
+  2. Move the cover to the fully open position, then set `motor_travel_calibration_action` to `manual_2_fully_opened`. The device will automatically start moving the cover toward the closed position.
+  3. Once the cover has reached the fully closed (end) position, set `motor_travel_calibration_action` to `manual_3_fully_closed`. Calibration is now complete.
+- To reset the calibration, set `motor_travel_calibration_action` to `clear`.
+- The current calibration status can be read from `motor_travel_calibration_status` (`Uncalibrated` or `Calibrated`).
+- Percentage-based position control (`position`) requires a completed calibration.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -37,7 +45,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
@@ -55,7 +63,7 @@ Calibrates the motor stroke, or clears the current one..
 Value can be found in the published state on the `motor_travel_calibration_action` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_travel_calibration_action": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_travel_calibration_action": NEW_VALUE}`.
-The possible values are: `start_automatic`, `start_manual`, `clear`, `manual_2_fully_opened`, `manual_3_fully_closed`.
+The possible values are: `none`, `start_automatic`, `start_manual`, `clear`, `manual_2_fully_opened`, `manual_3_fully_closed`.
 
 ### Motor travel calibration status (enum)
 The calibration status of the curtain motor's stroke..
@@ -64,12 +72,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The possible values are: `Uncalibrated`, `Calibrated`.
 
-### Motor run status (enum)
+### Moving (enum)
 The motor's current operating status, such as forward rotation, reverse rotation, and stop..
-Value can be found in the published state on the `motor_run_status` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_run_status": ""}`.
+Value can be found in the published state on the `moving` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"moving": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `Stop`, `Forward`, `Reverse`.
+The possible values are: `stop`, `forward`, `reverse`.
 
 ### External trigger mode (enum)
 External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..

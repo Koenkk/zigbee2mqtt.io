@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO BD05C-FL-21-G-ENK](https://www.zigbee2mqtt.io/images/devices/BD05C-FL-21-G-ENK.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

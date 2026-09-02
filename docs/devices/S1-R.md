@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ubisys S1-R](https://www.zigbee2mqtt.io/images/devices/S1-R.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ### Technical Reference
 For further details please take a look at the [ubisys S1-R technical reference manual](https://www.ubisys.de/downloads/ubisys-s1-technical-reference.pdf)
@@ -59,11 +60,11 @@ simulated_brightness:
 
 ## Exposes
 
-### Identify (enum)
+### Identify (enum, l1 endpoint)
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify_l1": NEW_VALUE}`.
 The possible values are: `identify`.
 
 ### Switch 

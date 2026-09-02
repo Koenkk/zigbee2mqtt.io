@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![YOKIS MTV300E-UP](https://www.zigbee2mqtt.io/images/devices/MTV300E-UP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 - [CSA product page](https://csa-iot.org/csa_product/mtv300e-up/)
 <!-- Notes END: Do not edit below this line -->

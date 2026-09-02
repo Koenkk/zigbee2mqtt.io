@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Innr RCL 231 T](https://www.zigbee2mqtt.io/images/devices/RCL-231-T.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

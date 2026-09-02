@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Skydance WZ5_rgbw](https://www.zigbee2mqtt.io/images/devices/WZ5_rgbw.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

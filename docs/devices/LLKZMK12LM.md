@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Aqara DCM-K01 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZC-LP01  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart sliding window pusher |
-| Exposes | cover (state, position), charging, automatic_mode, slow_stop, button_position, battery |
+| Exposes | cover (state, position), charging, automatic_mode, slow_mode, button_position, battery |
 | Picture | ![Moes ZC-LP01](https://www.zigbee2mqtt.io/images/devices/ZC-LP01.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,7 +33,9 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -56,12 +59,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"automatic_mode": NEW_VALUE}`.
 If value equals `ON` automatic mode is ON, if `OFF` OFF.
 
-### Slow stop (binary)
-When set to `ON`, the device decelerates gradually for quieter operation.
-Value can be found in the published state on the `slow_stop` property.
+### Slow mode (binary)
+Operate the motor slower and quieter than normal.
+Value can be found in the published state on the `slow_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"slow_stop": NEW_VALUE}`.
-If value equals `ON` slow stop is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"slow_mode": NEW_VALUE}`.
+If value equals `ON` slow mode is ON, if `OFF` OFF.
 
 ### Button position (enum)
 Swaps the behavior of the device's physical buttons.

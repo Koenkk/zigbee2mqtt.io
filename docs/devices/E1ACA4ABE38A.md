@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sengled E1ACA4ABE38A](https://www.zigbee2mqtt.io/images/devices/E1ACA4ABE38A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

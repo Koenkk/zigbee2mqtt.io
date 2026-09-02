@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Aqara WL-S02D, Yandex YNDX-00521 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

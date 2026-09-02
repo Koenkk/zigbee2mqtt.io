@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZSS-QY-WL-C-MS](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-WL-C-MS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

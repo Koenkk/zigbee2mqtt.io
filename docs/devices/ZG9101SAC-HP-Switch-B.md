@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher ZG9101SAC-HP-Switch-B](https://www.zigbee2mqtt.io/images/devices/ZG9101SAC-HP-Switch-B.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sengled E1G-G8E](https://www.zigbee2mqtt.io/images/devices/E1G-G8E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

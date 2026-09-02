@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nue / 3A MG-AUWS01](https://www.zigbee2mqtt.io/images/devices/MG-AUWS01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

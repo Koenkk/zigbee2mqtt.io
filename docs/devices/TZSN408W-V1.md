@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit TZSN408W-V1](https://www.zigbee2mqtt.io/images/devices/TZSN408W-V1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

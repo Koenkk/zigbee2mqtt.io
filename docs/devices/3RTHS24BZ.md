@@ -22,9 +22,14 @@ pageClass: device-page
 | Picture | ![Third Reality 3RTHS24BZ](https://www.zigbee2mqtt.io/images/devices/3RTHS24BZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+Press and hold the side button for 5 seconds and release to put the sensor into pairing mode. The blinking cloud icon on the LCD screen indicates the sensor is in pairing mode. Once the cloud icon on the LCD screen gets solid, the pairing process is successfully completed.
 
+###
 <!-- Notes END: Do not edit below this line -->
 
 

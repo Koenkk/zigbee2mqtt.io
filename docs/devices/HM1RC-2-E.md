@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman HM1RC-2-E](https://www.zigbee2mqtt.io/images/devices/HM1RC-2-E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

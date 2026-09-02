@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Cigol Electronics Cigol Connect](https://www.zigbee2mqtt.io/images/devices/Cigol-Connect.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

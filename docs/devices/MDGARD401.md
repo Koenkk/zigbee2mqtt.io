@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Müller Licht MDGARD401](https://www.zigbee2mqtt.io/images/devices/MDGARD401.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

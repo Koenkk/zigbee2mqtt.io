@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ORVIBO DD10Z](https://www.zigbee2mqtt.io/images/devices/DD10Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

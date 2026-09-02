@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | HS1SA-E  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
-| Description | Smoke detector |
+| Description | Smart smoke alarm |
 | Exposes | smoke, battery_low, battery, test |
 | Picture | ![Heiman HS1SA-E](https://www.zigbee2mqtt.io/images/devices/HS1SA-E.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

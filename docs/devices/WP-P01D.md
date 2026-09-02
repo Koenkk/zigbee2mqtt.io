@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara WP-P01D](https://www.zigbee2mqtt.io/images/devices/WP-P01D.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

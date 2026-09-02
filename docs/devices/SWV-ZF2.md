@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SWV-ZF2  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee dual-channel smart water valve |
-| Exposes | battery, switch (state), child_lock, valve_abnormal_state, manual_default_settings, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_plan_removed_report, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, valve_alarm_settings, real_time_irrigation_duration, real_time_irrigation_volume, hour_irrigation_duration, hour_irrigation_volume, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
+| Exposes | battery, switch (state), child_lock, valve_abnormal_state, water_flow_unit, manual_default_settings, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_plan_removed_report, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, valve_alarm_settings, real_time_irrigation_duration, real_time_irrigation_volume, hour_irrigation_duration, hour_irrigation_volume, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
 | Picture | ![SONOFF SWV-ZF2](https://www.zigbee2mqtt.io/images/devices/SWV-ZF2.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -83,19 +84,25 @@ Value can be found in the published state on the `valve_abnormal_state` property
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `normal`, `water_shortage_channel_1`, `water_leakage`, `water_shortage_channel_1,water_leakage`, `fail_safe_channel_1`, `water_shortage_channel_1,fail_safe_channel_1`, `water_leakage,fail_safe_channel_1`, `water_shortage_channel_1,water_leakage,fail_safe_channel_1`, `water_shortage_channel_2`, `water_shortage_channel_1,water_shortage_channel_2`, `water_leakage,water_shortage_channel_2`, `water_shortage_channel_1,water_leakage,water_shortage_channel_2`, `fail_safe_channel_1,water_shortage_channel_2`, `water_shortage_channel_1,fail_safe_channel_1,water_shortage_channel_2`, `water_leakage,fail_safe_channel_1,water_shortage_channel_2`, `water_shortage_channel_1,water_leakage,fail_safe_channel_1,water_shortage_channel_2`, `fail_safe_channel_2`, `water_shortage_channel_1,fail_safe_channel_2`, `water_leakage,fail_safe_channel_2`, `water_shortage_channel_1,water_leakage,fail_safe_channel_2`, `fail_safe_channel_1,fail_safe_channel_2`, `water_shortage_channel_1,fail_safe_channel_1,fail_safe_channel_2`, `water_leakage,fail_safe_channel_1,fail_safe_channel_2`, `water_shortage_channel_1,water_leakage,fail_safe_channel_1,fail_safe_channel_2`, `water_shortage_channel_2,fail_safe_channel_2`, `water_shortage_channel_1,water_shortage_channel_2,fail_safe_channel_2`, `water_leakage,water_shortage_channel_2,fail_safe_channel_2`, `water_shortage_channel_1,water_leakage,water_shortage_channel_2,fail_safe_channel_2`, `fail_safe_channel_1,water_shortage_channel_2,fail_safe_channel_2`, `water_shortage_channel_1,fail_safe_channel_1,water_shortage_channel_2,fail_safe_channel_2`, `water_leakage,fail_safe_channel_1,water_shortage_channel_2,fail_safe_channel_2`, `water_shortage_channel_1,water_leakage,fail_safe_channel_1,water_shortage_channel_2,fail_safe_channel_2`.
 
+### Water flow unit (enum)
+Unified water flow unit.
+Value can be found in the published state on the `water_flow_unit` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"water_flow_unit": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_flow_unit": NEW_VALUE}`.
+The possible values are: `liter`, `us_gallon`, `imperial_gallon`.
+
 ### Manual default settings (composite)
 Single irrigation settings.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_default_settings": {"irrigation_duration": VALUE, "irrigation_mode": VALUE, "irrigation_amount_unit": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_default_settings": {"irrigation_duration": VALUE, "irrigation_mode": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_default_settings": ""}`.
 - `irrigation_duration` (numeric): Irrigation duration min value is 1, max value is 719, unit is min
 - `irrigation_mode` (enum): Irrigation mode: duration or capacity allowed values: `duration`, `capacity`
-- `irrigation_amount_unit` (enum): Capacity unit allowed values: `US gallon`, `liter`
 - `irrigation_amount` (numeric): Irrigation volume max value is 10000
 - `fail_safe` (numeric): Safety protection timeout max value is 719, unit is min
 
 ### Irrigation plan settings (composite, 1 endpoint)
 Set irrigation plan.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_settings_1": {"plan_index": VALUE, "enable_state": VALUE, "loop_type_mode": VALUE, "loop_type_interval_days": VALUE, "loop_type_week_days": VALUE, "enable_date": VALUE, "start_time": VALUE, "irrigation_mode": VALUE, "irrigation_total_duration": VALUE, "irrigation_duration": VALUE, "interval_duration": VALUE, "irrigation_amount_unit": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE, "create_datetime": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_settings_1": {"plan_index": VALUE, "enable_state": VALUE, "loop_type_mode": VALUE, "loop_type_interval_days": VALUE, "loop_type_week_days": VALUE, "enable_date": VALUE, "start_time": VALUE, "irrigation_mode": VALUE, "irrigation_total_duration": VALUE, "irrigation_duration": VALUE, "interval_duration": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE, "create_datetime": VALUE}}`
 - `plan_index` (numeric): Plan index max value is 5
 - `enable_state` (binary) allowed values: `true` or `false`
 - `loop_type_mode` (enum) allowed values: `odd_days`, `even_days`, `day_interval`, `weekdays`
@@ -107,14 +114,13 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irri
 - `irrigation_total_duration` (numeric) max value is 719, unit is min
 - `irrigation_duration` (numeric) min value is 1, max value is 60, unit is min
 - `interval_duration` (numeric) min value is 1, max value is 60, unit is min
-- `irrigation_amount_unit` (enum) allowed values: `US gallon`, `liter`
 - `irrigation_amount` (numeric) min value is 1, max value is 10000
 - `fail_safe` (numeric) max value is 719, unit is min
 - `create_datetime` (text): Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
 
 ### Irrigation plan settings (composite, 2 endpoint)
 Set irrigation plan.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_settings_2": {"plan_index": VALUE, "enable_state": VALUE, "loop_type_mode": VALUE, "loop_type_interval_days": VALUE, "loop_type_week_days": VALUE, "enable_date": VALUE, "start_time": VALUE, "irrigation_mode": VALUE, "irrigation_total_duration": VALUE, "irrigation_duration": VALUE, "interval_duration": VALUE, "irrigation_amount_unit": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE, "create_datetime": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_settings_2": {"plan_index": VALUE, "enable_state": VALUE, "loop_type_mode": VALUE, "loop_type_interval_days": VALUE, "loop_type_week_days": VALUE, "enable_date": VALUE, "start_time": VALUE, "irrigation_mode": VALUE, "irrigation_total_duration": VALUE, "irrigation_duration": VALUE, "interval_duration": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE, "create_datetime": VALUE}}`
 - `plan_index` (numeric): Plan index max value is 5
 - `enable_state` (binary) allowed values: `true` or `false`
 - `loop_type_mode` (enum) allowed values: `odd_days`, `even_days`, `day_interval`, `weekdays`
@@ -126,7 +132,6 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irri
 - `irrigation_total_duration` (numeric) max value is 719, unit is min
 - `irrigation_duration` (numeric) min value is 1, max value is 60, unit is min
 - `interval_duration` (numeric) min value is 1, max value is 60, unit is min
-- `irrigation_amount_unit` (enum) allowed values: `US gallon`, `liter`
 - `irrigation_amount` (numeric) min value is 1, max value is 10000
 - `fail_safe` (numeric) max value is 719, unit is min
 - `create_datetime` (text): Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
@@ -144,7 +149,7 @@ Irrigation plan report.
 - `irrigation_total_duration` (numeric) 
 - `irrigation_duration` (numeric) 
 - `interval_duration` (numeric) 
-- `irrigation_amount_unit` (enum) allowed values: `US gallon`, `liter`
+- `irrigation_amount_unit` (enum) allowed values: `us_gallon`, `liter`, `imperial_gallon`
 - `irrigation_amount` (numeric) 
 - `fail_safe` (numeric) 
 - `create_datetime` (text): Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
@@ -162,7 +167,7 @@ Irrigation plan report.
 - `irrigation_total_duration` (numeric) 
 - `irrigation_duration` (numeric) 
 - `interval_duration` (numeric) 
-- `irrigation_amount_unit` (enum) allowed values: `US gallon`, `liter`
+- `irrigation_amount_unit` (enum) allowed values: `us_gallon`, `liter`, `imperial_gallon`
 - `irrigation_amount` (numeric) 
 - `fail_safe` (numeric) 
 - `create_datetime` (text): Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
@@ -199,7 +204,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `start_time` (text): Schedule start time 
 - `expected_end_time` (text): Expected end time 
 - `actual_end_time` (text): Actual end time 
-- `irrigation_amount_unit` (enum): Irrigation amount unit allowed values: `US gallon`, `liter`
+- `irrigation_amount_unit` (enum): Irrigation amount unit allowed values: `us_gallon`, `liter`, `imperial_gallon`
 - `expected_irrigation_amount` (numeric): Expected irrigation amount 
 - `actual_irrigation_amount` (numeric): Actual irrigation amount 
 
@@ -213,7 +218,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `start_time` (text): Schedule start time 
 - `expected_end_time` (text): Expected end time 
 - `actual_end_time` (text): Actual end time 
-- `irrigation_amount_unit` (enum): Irrigation amount unit allowed values: `US gallon`, `liter`
+- `irrigation_amount_unit` (enum): Irrigation amount unit allowed values: `us_gallon`, `liter`, `imperial_gallon`
 - `expected_irrigation_amount` (numeric): Expected irrigation amount 
 - `actual_irrigation_amount` (numeric): Actual irrigation amount 
 

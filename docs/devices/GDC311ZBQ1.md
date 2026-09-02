@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | LoraTap GDC311ZBQ1 |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

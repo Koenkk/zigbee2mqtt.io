@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![TCI TCI - Mini ZLL I](https://www.zigbee2mqtt.io/images/devices/TCI---Mini-ZLL-I.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

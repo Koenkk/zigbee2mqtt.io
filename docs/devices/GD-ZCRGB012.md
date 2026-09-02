@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![GIDERWEL GD-ZCRGB012](https://www.zigbee2mqtt.io/images/devices/GD-ZCRGB012.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

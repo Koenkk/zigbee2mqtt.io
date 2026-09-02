@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF MINI-ZBD](https://www.zigbee2mqtt.io/images/devices/MINI-ZBD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

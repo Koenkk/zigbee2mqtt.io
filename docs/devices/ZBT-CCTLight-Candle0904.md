@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Leedarson ZBT-CCTLight-Candle0904](https://www.zigbee2mqtt.io/images/devices/ZBT-CCTLight-Candle0904.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Inovelli VZM30-SN](https://www.zigbee2mqtt.io/images/devices/VZM30-SN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

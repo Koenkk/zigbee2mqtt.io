@@ -22,11 +22,15 @@ pageClass: device-page
 | Picture | ![Aqara UT-A01E](https://www.zigbee2mqtt.io/images/devices/UT-A01E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

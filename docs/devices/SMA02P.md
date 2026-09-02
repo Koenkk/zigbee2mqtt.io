@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Mercator Ikuü SMA02P](https://www.zigbee2mqtt.io/images/devices/SMA02P.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

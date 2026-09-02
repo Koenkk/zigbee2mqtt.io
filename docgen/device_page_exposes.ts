@@ -1,3 +1,8 @@
+import {Definition, Expose} from 'zigbee-herdsman-converters/lib/types';
+import {Composite, Feature} from 'zigbee-herdsman-converters/lib/exposes';
+import {DefinitionWithWhiteLabelOf} from './types';
+import assert from 'node:assert';
+
 const access = {
     STATE: 1,
     SET: 2,
@@ -7,7 +12,7 @@ const access = {
     ALL: 7,
 };
 
-export function generateExpose(definition) {
+export function generateExpose(definition: DefinitionWithWhiteLabelOf) {
     const manufacturerName = definition.whiteLabelFingerprint?.[0].manufacturerName;
     return `
 ## Exposes
@@ -16,15 +21,15 @@ ${(typeof definition.exposes === 'function' ? definition.exposes({isDummyDevice:
 `;
 }
 
-function capitalizeFirstLetter(string) {
+function capitalizeFirstLetter(string: string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function uncapitalizeFirstLetter(string) {
+function uncapitalizeFirstLetter(string: string) {
     return string.charAt(0).toLowerCase() + string.slice(1);
 }
 
-function compositeDocs(composite) {
+function compositeDocs(composite: Composite) {
     const value = `{${composite.features.map((e) => `"${e.property}": VALUE`).join(', ')}}`;
     const note: string[] = [];
 
@@ -45,7 +50,7 @@ function compositeDocs(composite) {
         } else if (feature.type === 'text' || feature.type === 'list' || feature.type === 'composite') {
             // do nothing on purpose
         } else {
-            throw new Error(`Unsupported composite feature: ${feature.type}`);
+            throw new Error(`Unsupported composite feature type`);
         }
 
         note.push(`- \`${feature.name}\` (${feature.type})${feature.description ? ': ' + feature.description + '' : ''} ${ft}`);
@@ -53,7 +58,7 @@ function compositeDocs(composite) {
     return {value, note};
 }
 
-function getExposeDocs(expose, definition) {
+function getExposeDocs(expose: Expose, definition: Definition) {
     const lines: string[] = [];
     const title: string[] = [];
 
@@ -128,14 +133,21 @@ function getExposeDocs(expose, definition) {
             lines.push(`The possible values are: ${expose.values.map((e) => `\`${e}\``).join(', ')}.`);
         }
     } else if (['switch', 'lock', 'cover', 'fan'].includes(expose.type)) {
+        assert(expose.features, `${expose.type} expose should have features`);
         const state = expose.features.find((e) => e.name === 'state');
         if (state) {
-            const stateStr =
-                expose.type === 'cover' ? `(value is \`OPEN\` or \`CLOSE\`)` : `(value is \`${state.value_on}\` or \`${state.value_off}\`)`;
+            let stateStr: string;
+            if (expose.type === 'cover') {
+                stateStr = `(value is \`OPEN\` or \`CLOSE\`)`;
+            } else {
+                assert(state.type === 'binary', `state feature of ${expose.type} expose should be binary`);
+                stateStr = `(value is \`${state.value_on}\` or \`${state.value_off}\`)`;
+            }
             lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property ${stateStr}.`);
 
             if (state.access & access.SET) {
                 if (expose.type === 'switch') {
+                    assert(state.type === 'binary', `state feature of switch expose should be binary`);
                     lines.push(
                         `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`,
                     );
@@ -144,6 +156,7 @@ function getExposeDocs(expose, definition) {
                         `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload ${state.values.map((v) => `\`{"${state.property}": "${v}"}\``).join(', ')}.`,
                     );
                 } else {
+                    assert(state.type === 'binary', `state feature of ${expose.type} expose should be binary or enum`);
                     lines.push(
                         `To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\` or \`{"${state.property}": "${state.value_off}"}\`.`,
                     );
@@ -162,12 +175,16 @@ function getExposeDocs(expose, definition) {
         }
 
         const on_time = definition.toZigbee.find((t) => t.key?.includes('on_time'));
-        if (on_time && expose.type === 'switch' && state.access & access.SET) {
-            onWithTimedOff();
+        if (on_time && expose.type === 'switch') {
+            assert(state, 'state feature should be present for on_time to work');
+            if (state.access & access.SET) {
+                onWithTimedOff();
+            }
         }
 
         if (expose.type === 'cover') {
             for (const e of expose.features.filter((e) => e.name === 'position' || e.name === 'tilt')) {
+                assert(e.type === 'numeric', `cover position/tilt feature should be numeric`);
                 lines.push(
                     `To change the ${uncapitalizeFirstLetter(e.label)} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${e.property}": VALUE}\` where \`VALUE\` is a number between \`${e.value_min}\` and \`${e.value_max}\`.`,
                 );
@@ -177,6 +194,7 @@ function getExposeDocs(expose, definition) {
         if (expose.type === 'fan') {
             const mode = expose.features.find((e) => e.name === 'mode');
             if (mode) {
+                assert(mode.type === 'enum', `fan mode feature should be enum`);
                 lines.push(
                     `To change the mode publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${mode.property}": VALUE}\` where \`VALUE\` can be: ${mode.values.map((e) => `\`${e}\``).join(', ')}.`,
                 );
@@ -186,6 +204,7 @@ function getExposeDocs(expose, definition) {
         if (expose.type === 'lock') {
             const lockState = expose.features.find((e) => e.name === 'lock_state');
             if (lockState) {
+                assert(lockState.type === 'enum', `lock lock_state feature should be enum`);
                 lines.push(
                     `This lock exposes a lock state which can be found in the published state under the \`lock_state\` property. It's not possible to read (\`/get\`) or write (\`/set\`) this value. The possible values are: ${lockState.values.map((e) => `\`${e}\``).join(', ')}.`,
                 );
@@ -200,18 +219,22 @@ function getExposeDocs(expose, definition) {
         const colorHS = expose.features.find((e) => e.name === 'color_hs');
         lines.push(`This light supports the following features: ${expose.features.map((e) => `\`${e.name}\``).join(', ')}.`);
         if (state) {
+            assert(state.type === 'binary', `light state feature should be binary`);
             lines.push(
                 `- \`state\`: To control the state publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`. To read the state send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${state.property}": ""}\`.
                 `,
             );
         }
         if (brightness) {
+            assert(brightness.type === 'numeric', `light brightness feature should be numeric`);
             lines.push(
                 `- \`brightness\`: To control the brightness publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${brightness.property}": VALUE}\` where \`VALUE\` is a number between \`${brightness.value_min}\` and \`${brightness.value_max}\`. To read the brightness send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${brightness.property}": ""}\`.
                 `,
             );
         }
         if (colorTemp) {
+            assert(colorTemp.type === 'numeric', `light color_temp feature should be numeric`);
+            assert(colorTemp.presets, `color_temp presets should be defined on the expose, not the feature`);
             const presets = `Besides the numeric values the following values are accepted: ${colorTemp.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
             lines.push(
                 `- \`color_temp\`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTemp.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTemp.value_min}\` and \`${colorTemp.value_max}\`, the higher the warmer the color. To read the color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTemp.property}": ""}\`. ${presets}
@@ -219,6 +242,8 @@ function getExposeDocs(expose, definition) {
             );
         }
         if (colorTempStartup) {
+            assert(colorTempStartup.type === 'numeric', `light color_temp_startup feature should be numeric`);
+            assert(colorTempStartup.presets, `color_temp_startup presets should be defined on the expose, not the feature`);
             const presets = `Besides the numeric values the following values are accepted: ${colorTempStartup.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
             lines.push(
                 `- \`color_temp_startup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}
@@ -313,7 +338,7 @@ function getExposeDocs(expose, definition) {
             lines.push(`\`\`\`\``);
         }
     } else if (expose.type === 'climate') {
-        const readGet = (expose) => {
+        const readGet = (expose: Feature) => {
             if (expose.access & access.GET) {
                 return `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${expose.property}": ""}\`.`;
             } else {
@@ -325,6 +350,7 @@ function getExposeDocs(expose, definition) {
         for (const f of expose.features.filter((e) =>
             ['occupied_heating_setpoint', 'occupied_cooling_setpoint', 'current_heating_setpoint', 'pi_heating_demand'].includes(e.name),
         )) {
+            assert(f.type === 'numeric', `climate setpoint feature should be numeric`);
             let line = `- \`${f.name}\`: ${f.description}.`;
             if (f.access & access.SET) {
                 line += ` To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`.`;
@@ -337,10 +363,12 @@ function getExposeDocs(expose, definition) {
 
         const localTemperature = expose.features.find((e) => e.name === 'local_temperature');
         if (localTemperature) {
+            assert(localTemperature.type === 'numeric', `climate local_temperature feature should be numeric`);
             lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}). ${readGet(localTemperature)}`);
         }
 
         for (const f of expose.features.filter((e) => ['system_mode', 'preset', 'mode'].includes(e.name))) {
+            assert(f.type === 'enum', `climate system_mode/preset/mode feature should be enum`);
             let line = `- \`${f.name}\`: ${f.description}.`;
             if (f.access & access.SET) {
                 line += ` To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}.`;
@@ -353,6 +381,7 @@ function getExposeDocs(expose, definition) {
 
         const runningState = expose.features.find((e) => e.name === 'running_state');
         if (runningState) {
+            assert(runningState.type === 'enum', `climate running_state feature should be enum`);
             lines.push(
                 `- \`${runningState.name}\`: ${runningState.description}. Possible values are: ${runningState.values.map((v) => `\`${v}\``).join(', ')}. ${readGet(runningState)}`,
             );
@@ -360,6 +389,8 @@ function getExposeDocs(expose, definition) {
 
         const localTemperatureCalibration = expose.features.find((e) => e.name === 'local_temperature_calibration');
         if (localTemperatureCalibration) {
+            assert(localTemperature, `climate local_temperature feature should be present when local_temperature_calibration is present`);
+            assert(localTemperatureCalibration.type === 'numeric', `climate local_temperature_calibration feature should be numeric`);
             let line = `- \`${localTemperatureCalibration.name}\`: ${localTemperatureCalibration.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${localTemperatureCalibration.property}": VALUE}.\``;
             if (localTemperature.access & access.GET) {
                 line += `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`;

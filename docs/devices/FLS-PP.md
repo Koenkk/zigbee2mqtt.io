@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Dresden Elektronik FLS-PP](https://www.zigbee2mqtt.io/images/devices/FLS-PP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

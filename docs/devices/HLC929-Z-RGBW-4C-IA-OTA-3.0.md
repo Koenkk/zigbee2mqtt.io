@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Letsleds HLC929-Z-RGBW-4C-IA-OTA-3.0](https://www.zigbee2mqtt.io/images/devices/HLC929-Z-RGBW-4C-IA-OTA-3.0.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

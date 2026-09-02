@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Slacky-DIY Smoke Sensor TLSR8258](https://www.zigbee2mqtt.io/images/devices/Smoke-Sensor-TLSR8258.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

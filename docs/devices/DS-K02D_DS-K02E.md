@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara DS-K02D/DS-K02E](https://www.zigbee2mqtt.io/images/devices/DS-K02D-DS-K02E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -41,7 +42,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
@@ -79,5 +80,5 @@ If value equals `true` multi click is ON, if `false` OFF.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_top_wireless_button`, `hold_bottom_wireless_button`, `single_top_wireless_button`, `single_bottom_wireless_button`, `double_top_wireless_button`, `double_bottom_wireless_button`, `release_top_wireless_button`, `release_bottom_wireless_button`.
+The possible values are: `button_3_single`, `button_4_single`.
 

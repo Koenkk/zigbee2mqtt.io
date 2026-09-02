@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SNZB-02M  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, pressure, temperature_calibration, humidity_calibration, pressure_calibration |
+| Exposes | battery, temperature, humidity, pressure, dew_point, vpd, temperature_calibration, humidity_calibration, pressure_calibration |
 | Picture | ![SONOFF SNZB-02M](https://www.zigbee2mqtt.io/images/devices/SNZB-02M.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -80,12 +81,24 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `hPa`.
 
+### Dew point (numeric)
+Calculated dew point temperature.
+Value can be found in the published state on the `dew_point` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Vpd (numeric)
+Calculated vapor pressure deficit.
+Value can be found in the published state on the `vpd` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kPa`.
+
 ### Temperature calibration (numeric)
 Calibrated temperature target value (supports 0.1°C step). Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `temperature_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
-The minimal value is `-20` and the maximum value is `60`.
+The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
 ### Humidity calibration (numeric)
@@ -93,7 +106,7 @@ Calibrated relative humidity target value (supports 0.1% step). Note: wake up th
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `95`.
+The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
 ### Pressure calibration (numeric)
@@ -101,6 +114,6 @@ Pressure compensation offset applied directly to pressure reading in hPa (positi
 Value can be found in the published state on the `pressure_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_calibration": NEW_VALUE}`.
-The minimal value is `-400` and the maximum value is `400`.
+The minimal value is `-200` and the maximum value is `200`.
 The unit of this value is `hPa`.
 

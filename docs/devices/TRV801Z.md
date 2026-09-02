@@ -22,12 +22,18 @@ pageClass: device-page
 | Picture | ![Moes TRV801Z](https://www.zigbee2mqtt.io/images/devices/TRV801Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Binding
 Mount the valve on a radiator so the motor can detect resistance or simulate resistence manually. Perform a factory reset (hold main button while inserting the last battery until FAC blinks). After the motor self-test, hold the main button again until the display blinks continuously to enter pairing mode.
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "2000". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes

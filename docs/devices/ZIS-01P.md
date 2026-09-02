@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZIS-01P  |
 | Vendor  | [Novato](/supported-devices/#v=Novato)  |
 | Description | Dual-tech presence sensor (PIR + radar) |
-| Exposes | occupancy, illuminance, battery, presence_distance, presence_sensitivity, radar_switch, pir_sensitivity, delay_time, led_switch |
+| Exposes | occupancy, illuminance, battery, presence_distance, presence_sensitivity, radar_switch, pir_sensitivity, delay_time, led_switch, radar_threshold, pir_threshold |
 | Picture | ![Novato ZIS-01P](https://www.zigbee2mqtt.io/images/devices/ZIS-01P.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,6 +32,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -57,12 +60,11 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Presence distance (numeric)
-Maximum detection distance.
+Maximum detection distance (1=~2m, 2=~4m, 3=~6m).
 Value can be found in the published state on the `presence_distance` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_distance": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `3`.
-The unit of this value is `m`.
 
 ### Presence sensitivity (numeric)
 Radar presence detection sensitivity (1=Low, 2=Medium, 3=High).
@@ -86,11 +88,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `3`.
 
 ### Delay time (numeric)
-Time delay before reporting no presence.
+Time delay before reporting no presence (factory default: 30 s).
 Value can be found in the published state on the `delay_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": NEW_VALUE}`.
-The minimal value is `10` and the maximum value is `600`.
+The minimal value is `10` and the maximum value is `9600`.
 The unit of this value is `s`.
 
 ### Led switch (binary)
@@ -99,4 +101,18 @@ Value can be found in the published state on the `led_switch` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch": NEW_VALUE}`.
 If value equals `ON` led switch is ON, if `OFF` OFF.
+
+### Radar threshold (numeric)
+Radar detection threshold, advanced calibration (factory default: 15; manufacturer-recommended range: 10-15).
+Value can be found in the published state on the `radar_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_threshold": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `255`.
+
+### Pir threshold (numeric)
+PIR detection threshold, advanced calibration (factory default: 20).
+Value can be found in the published state on the `pir_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_threshold": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `250`.
 

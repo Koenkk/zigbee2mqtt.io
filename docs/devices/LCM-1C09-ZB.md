@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EuControls LCM-1C09-ZB](https://www.zigbee2mqtt.io/images/devices/LCM-1C09-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

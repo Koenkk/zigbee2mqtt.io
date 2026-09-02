@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZWV-YC](https://www.zigbee2mqtt.io/images/devices/ZWV-YC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

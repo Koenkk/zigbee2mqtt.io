@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SR-ZG2835PAC-AU  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee push button smart dimmer |
-| Exposes | light (state, brightness), effect, power_on_behavior, external_switch_type, power, voltage, current, energy |
+| Exposes | light (state, brightness), effect, power_on_behavior, external_switch_type, power, voltage, current, energy, minimum_pwm |
 | Picture | ![Sunricher SR-ZG2835PAC-AU](https://www.zigbee2mqtt.io/images/devices/SR-ZG2835PAC-AU.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -136,4 +137,12 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Minimum PWM (numeric)
+Power off the device and wait for 3 seconds before reconnecting to apply the settings..
+Value can be found in the published state on the `minimum_pwm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimum_pwm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_pwm": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `50`.
+The unit of this value is `%`.
 

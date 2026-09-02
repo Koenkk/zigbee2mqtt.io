@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 1
+redirectFrom: /information/exposes.md
 ---
 
 # Exposes

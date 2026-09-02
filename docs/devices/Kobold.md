@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Dresden Elektronik Kobold](https://www.zigbee2mqtt.io/images/devices/Kobold.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

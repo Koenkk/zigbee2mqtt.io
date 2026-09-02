@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZMP1  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Blind driver |
-| Exposes | cover (state, position), work_state, battery, motor_direction |
+| Exposes | cover (state, position), motor_state, battery, motor_direction |
 | Picture | ![Zemismart ZMP1](https://www.zigbee2mqtt.io/images/devices/ZMP1.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,7 +33,9 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -43,9 +46,11 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Work state (text)
-Value can be found in the published state on the `work_state` property.
+### Motor state (enum)
+Current motor movement status.
+Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `opening`, `closing`, `stopped`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
@@ -55,7 +60,7 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Motor direction (enum)
-Motor direction.
+Motor rotation direction.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.

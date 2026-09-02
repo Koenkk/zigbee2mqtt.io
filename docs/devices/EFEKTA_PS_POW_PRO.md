@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_PS_POW_PRO](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PS_POW_PRO.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

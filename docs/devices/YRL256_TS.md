@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Yale YRL256 TS](https://www.zigbee2mqtt.io/images/devices/YRL256-TS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

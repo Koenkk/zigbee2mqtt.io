@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Envilar ZG102-BOX-UNIDIM](https://www.zigbee2mqtt.io/images/devices/ZG102-BOX-UNIDIM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

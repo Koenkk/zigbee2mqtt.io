@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara WXKG06LM](https://www.zigbee2mqtt.io/images/devices/WXKG06LM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

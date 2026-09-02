@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ynoa LA-5KEY-RGBW](https://www.zigbee2mqtt.io/images/devices/LA-5KEY-RGBW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

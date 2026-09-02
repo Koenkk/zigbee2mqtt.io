@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heimgard Technologies HT-MOT-2](https://www.zigbee2mqtt.io/images/devices/HT-MOT-2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

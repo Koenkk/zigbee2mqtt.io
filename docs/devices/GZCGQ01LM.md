@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Xiaomi YTC4043GL |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

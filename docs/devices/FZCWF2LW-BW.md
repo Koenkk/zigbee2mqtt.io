@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit FZCWF2LW-BW](https://www.zigbee2mqtt.io/images/devices/FZCWF2LW-BW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

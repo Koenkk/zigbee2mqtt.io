@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA zFlora_X_Max](https://www.zigbee2mqtt.io/images/devices/zFlora_X_Max.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

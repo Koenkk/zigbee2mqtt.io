@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA zFlora_S](https://www.zigbee2mqtt.io/images/devices/zFlora_S.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

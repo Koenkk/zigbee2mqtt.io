@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ltech TY-75-24-G2Z2_CCT](https://www.zigbee2mqtt.io/images/devices/TY-75-24-G2Z2_CCT.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

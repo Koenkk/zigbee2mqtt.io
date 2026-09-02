@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 1
+redirectFrom: /information/frontend.md
 ---
 
 # Frontend
@@ -51,9 +52,8 @@ To specify the `auth_token` in a different file set e.g. `auth_token: '!secret.y
 
 You can change the package used for frontend (requires a restart of Zigbee2MQTT). This will change the web-based UI of Zigbee2MQTT accordingly.
 
-::: warning IMPORTANT
-The features, links and general design in each package will vary.
-:::
+> [!IMPORTANT]
+> The features, links and general design in each package will vary.
 
 ##### zigbee2mqtt-windfront
 

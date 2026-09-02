@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya gq8b1uv](https://www.zigbee2mqtt.io/images/devices/gq8b1uv.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

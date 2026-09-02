@@ -17,10 +17,16 @@ pageClass: device-page
 |-----|-----|
 | Model | LED2402C3NA  |
 | Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
-| Description | KAJPLATS E12 bulb, white spectrum, candle, clear, 450 lm |
+| Description | KAJPLATS E12 bulb, white spectrum, candle, clear, 450 lm (Matter) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, level_config), effect, power_on_behavior, identify |
 | Picture | ![IKEA LED2402C3NA](https://www.zigbee2mqtt.io/images/devices/LED2402C3NA.png) |
 
+
+
+## Unofficial support
+**This device is part of the IKEA Matter/Thread line-up.**  
+The hidden Zigbee mode is not officially supported by IKEA. It exists mainly to keep backwards compatibility via Touchlink.  
+As a result, the Zigbee firmware is stripped-down to the essentials, and could even be removed in OTA updates.
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
@@ -29,7 +35,6 @@ pageClass: device-page
 
 - [FCC - emissions and teardown](https://apps.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=0RhiFi1AgPpUH1D8gXZJww%3D%3D&fcc_id=FHO-LED2402C3NA)
 <!-- Notes END: Do not edit below this line -->
-
 
 ## Related
 - [KAJPLATS color/white spectrum](./KAJPLATS_CWS.md)
@@ -41,8 +46,8 @@ pageClass: device-page
 
 1. **Power-cycle the lamp 6 times** to factory reset ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
    
-2. **Power-cycle the lamp 15 times** (easier with a smart plug) to start Zigbee pairing.  
-   The light will flash white.
+2. **Power-cycle the lamp 12 times** (or 15, depending on model) to start Zigbee pairing.  
+   When successful, the light will flash white. *Tip: Use a smart plug*
 
 If the device flashes, but does not join, this may help:
 - Use a default Zigbee channel (11, 15, 20, 25)
@@ -60,9 +65,10 @@ The device does not support OTA updates via Zigbee. Instead, updates are provide
 View available updates [here](https://webui.dcl.csa-iot.org/models) (search *KAJPLATS* or *4476*).
 
 ## Issues
-- The device may come with null model and manufacturer attributes. In this case, Zigbee2MQTT will recognize it generically. A firmware update may fix it
+- The device may come with null model and manufacturer attributes. In this case, Zigbee2MQTT will recognize it generically. A firmware update may fix it. Alternatively, edit `database.db` manually, as described in [this issue](https://github.com/Koenkk/zigbee-herdsman-converters/issues/11939#issuecomment-4239257579)
 - Power-on behavior may not work, only in Zigbee mode, on some models (at least one variant of [LED2401G5](./LED2401G5.md))
 - Scenes, groups and the *OffWithEffect* command may fail, with the INSUFFICIENT_SPACE error. See more info and workaround in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/30211#issuecomment-4019236515)
+- The device may not announce itself on power restore. As a result, it can be unreachable after being powered off for a long time. Discussion in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/32115)
 
 
 

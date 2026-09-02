@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | P3Z  |
 | Vendor  | [Nous](/supported-devices/#v=Nous)  |
-| Description | Smart light bulb |
+| Description | E27 RGB light bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
 | Picture | ![Nous P3Z](https://www.zigbee2mqtt.io/images/devices/P3Z.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -104,7 +105,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Do not disturb (binary)
-Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
+Controls state after power outage: false = on, true = restore previous state.
 Value can be found in the published state on the `do_not_disturb` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.

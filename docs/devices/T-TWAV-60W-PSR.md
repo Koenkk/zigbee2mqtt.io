@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Task Lighting T-TWAV-60W-PSR](https://www.zigbee2mqtt.io/images/devices/T-TWAV-60W-PSR.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

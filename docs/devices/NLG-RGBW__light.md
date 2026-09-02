@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Paul Neuhaus NLG-RGBW__light](https://www.zigbee2mqtt.io/images/devices/NLG-RGBW__light.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

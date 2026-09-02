@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman D1-EFA](https://www.zigbee2mqtt.io/images/devices/D1-EFA.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

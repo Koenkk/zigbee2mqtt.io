@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Envilar ZG50CC-CCT-DRIVER](https://www.zigbee2mqtt.io/images/devices/ZG50CC-CCT-DRIVER.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

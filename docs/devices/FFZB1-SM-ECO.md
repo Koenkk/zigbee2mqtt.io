@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ecolink FFZB1-SM-ECO](https://www.zigbee2mqtt.io/images/devices/FFZB1-SM-ECO.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

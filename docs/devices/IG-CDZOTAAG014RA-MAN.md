@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO IG-CDZOTAAG014RA-MAN](https://www.zigbee2mqtt.io/images/devices/IG-CDZOTAAG014RA-MAN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

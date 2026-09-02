@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Airzone AZAI6ZBEMHI](https://www.zigbee2mqtt.io/images/devices/AZAI6ZBEMHI.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

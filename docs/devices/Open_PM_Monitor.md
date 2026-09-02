@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA Open_PM_Monitor](https://www.zigbee2mqtt.io/images/devices/Open_PM_Monitor.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

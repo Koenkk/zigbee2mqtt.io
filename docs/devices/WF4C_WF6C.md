@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Acuity Brands Lighting (ABL) WF4C_WF6C](https://www.zigbee2mqtt.io/images/devices/WF4C_WF6C.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

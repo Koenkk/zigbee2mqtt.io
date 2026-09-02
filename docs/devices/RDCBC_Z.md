@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SOHAN Electric RDCBC/Z](https://www.zigbee2mqtt.io/images/devices/RDCBC-Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

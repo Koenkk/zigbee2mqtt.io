@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CTM Lyng mkomfy25](https://www.zigbee2mqtt.io/images/devices/mkomfy25.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

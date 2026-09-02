@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sercomm SZ-DWS08](https://www.zigbee2mqtt.io/images/devices/SZ-DWS08.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

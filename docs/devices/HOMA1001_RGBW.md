@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shenzhen Homa HOMA1001_RGBW](https://www.zigbee2mqtt.io/images/devices/HOMA1001_RGBW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

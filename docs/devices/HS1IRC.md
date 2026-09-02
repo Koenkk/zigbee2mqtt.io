@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman HS1IRC](https://www.zigbee2mqtt.io/images/devices/HS1IRC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

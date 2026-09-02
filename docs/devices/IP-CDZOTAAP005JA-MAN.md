@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO IP-CDZOTAAP005JA-MAN](https://www.zigbee2mqtt.io/images/devices/IP-CDZOTAAP005JA-MAN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

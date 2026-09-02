@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_smart_scene_knob](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_scene_knob.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -79,14 +80,19 @@ Group IDs follow the pattern: `base + (button - 1) × 20`
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
 
 ## Exposes
 
 ### Brightness (numeric)
-Brightness level from light mode (1-254).
+Brightness level from light mode (1-255).
 Value can be found in the published state on the `brightness` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `1` and the maximum value is `254`.
+The minimal value is `1` and the maximum value is `255`.
 
 ### Color temp (numeric)
 Color temperature from light mode (mired).

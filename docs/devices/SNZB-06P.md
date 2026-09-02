@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF SNZB-06P](https://www.zigbee2mqtt.io/images/devices/SNZB-06P.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Firmware 1.0.3 can be misbehaving, as of December 2023 upgrade to 1.0.5 is recommended.

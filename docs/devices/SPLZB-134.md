@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco SPLZB-134](https://www.zigbee2mqtt.io/images/devices/SPLZB-134.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Silabs Silabs series 2 router](https://www.zigbee2mqtt.io/images/devices/Silabs-series-2-router.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

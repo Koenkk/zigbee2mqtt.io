@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![YOKIS TLC8-UP](https://www.zigbee2mqtt.io/images/devices/TLC8-UP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

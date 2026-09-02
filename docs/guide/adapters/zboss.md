@@ -1,28 +1,23 @@
 # ZBOSS adapters
 
-::: warning ATTENTION
+> [!WARNING]
+> Support for this adapter is **experimental**, not yet recommended for production setups
 
-Support for this adapter is **experimental**, not recommended yet for production setups
-
-:::
+> [!WARNING]
+> Currently, this adapter does not support various functions, so if you depend on these functions, consider using a different adapter.
+>
+> - [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
+> - Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
+> - [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
+> - Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
 
 The adapter for the ZBOSS protocol is based on the example of ZBOSS NCP Host [Zigbee NCP (Network Co-Processor)](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/samples/zigbee/ncp/README.html) for Nordic Semiconductor chips, such as nRF5340, nRF52840, nRF52833, nRF21540.
 
-Also, thanks to the special firmware https://github.com/andryblack/esp-coordinator, ZBOSS protocol can be used to interact with the Espressif ESP32-C6/H2 chips.
+Also, thanks to the special firmware https://github.com/tostmann/esp-coordinator, ZBOSS protocol can be used to interact with the Espressif ESP32-C6/H2 chips.
 
 The interaction between the chip and the host occurs according to [ZBOSS NCP Serial Protocol](https://cloud.dsr-corporation.com/index.php/s/BAn4LtRWbJjFiAm).
 
 The adapter code is based on the [zigpy-zboss library](https://github.com/kardia-as/zigpy-zboss).
-
-::: warning ATTENTION
-Currently, this adapter does not support various functions, so if you depend on these functions, consider using a different adapter.
-
-- [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
-- Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
-- [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
-- Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
-
-:::
 
 ### Configuration
 
@@ -45,8 +40,6 @@ Currently tested on nRF52840 Dongle, Nice!Nano v2 (nRF52840) and ESP32-C6/H2 dev
 
 <img alt="Nice!Nano v2" src="https://github.com/user-attachments/assets/db2f3041-e36c-4921-b078-7cf0236eeae3" width="75" />
 
-- [Experimental ESP32-C6 firmware](https://github.com/andryblack/esp-coordinator)
-
-    More recent build with stability fixes [Updated ESP32-C6 firmware](https://github.com/diepeterpan/esp-coordinator)
+- [ESP32-C6 firmware](https://github.com/tostmann/esp-coordinator) — actively maintained successor of the original `andryblack/esp-coordinator` (which is archived and points there); a [browser-based web flasher](https://install.busware.de/zboss/) is available
 
 <img src="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/_images/esp32-c6-devkitc-1-isometric_v1.2.png" width="200" />

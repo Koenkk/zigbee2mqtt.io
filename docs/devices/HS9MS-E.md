@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | HS9MS-E  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart motion sensor |
-| Exposes | occupancy, tamper, battery_low, battery, camera_test_trigger, camera_active_trigger, ambient_light, wifi_ssid, wifi_password, wifi_ssid_candidate, wifi_password_candidate, server_url, server_url_candidate, picture_quantity, picture_quality, sensor_armed, wifi_status, wifi_candidate_status, server_status, server_candidate_status, camera_ready, wifi_rssi |
+| Exposes | occupancy, tamper, battery_low, battery, camera_test_trigger, camera_active_trigger, ambient_light, wifi_ssid, wifi_password, wifi_ssid_candidate, wifi_password_candidate, server_url, server_url_candidate, picture_quantity, picture_quality, mcu_software_version, illuminance_threshold, sensor_armed, pir_sensitivity_level, wifi_status, wifi_candidate_status, server_status, server_candidate_status, camera_ready, wifi_rssi |
 | Picture | ![Heiman HS9MS-E](https://www.zigbee2mqtt.io/images/devices/HS9MS-E.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -129,12 +130,34 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"picture_quality": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
+### Mcu software version (numeric)
+version of mcu.
+Value can be found in the published state on the `mcu_software_version` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mcu_software_version": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+
+### Illuminance threshold (numeric)
+when the illuminance exceeds the threshold, it activates local linkages..
+Value can be found in the published state on the `illuminance_threshold` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_threshold": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `1000`.
+The unit of this value is `Lx`.
+
 ### Sensor armed (binary)
 armed.
 Value can be found in the published state on the `sensor_armed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_armed": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_armed": NEW_VALUE}`.
 If value equals `Armed` sensor armed is ON, if `Disarmed` OFF.
+
+### Pir sensitivity level (enum)
+The sensitivity of PIR Sensor.
+Value can be found in the published state on the `pir_sensitivity_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_sensitivity_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity_level": NEW_VALUE}`.
+The possible values are: `disabled`, `low`, `medium`, `high`.
 
 ### Wifi status (enum)
 wifi status.

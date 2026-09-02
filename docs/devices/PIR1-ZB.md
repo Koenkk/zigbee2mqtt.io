@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![MiBoxer PIR1-ZB](https://www.zigbee2mqtt.io/images/devices/PIR1-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

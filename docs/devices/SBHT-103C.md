@@ -18,9 +18,17 @@ pageClass: device-page
 | Model | SBHT-103C  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | BLU H&T display Zigbee |
-| Exposes | battery, temperature, humidity, light_level, dark_threshold, bright_threshold |
+| Exposes | battery, temperature, humidity, light_level, dark_threshold, bright_threshold, identify |
 | Picture | ![Shelly SBHT-103C](https://www.zigbee2mqtt.io/images/devices/SBHT-103C.png) |
 
+
+
+## Firmware
+
+It is recommended to connect Shelly devices by WiFi / Bluetooth, and update their firmware, until they gain support for OTA updates over Zigbee.
+
+The latest firmware fixes known issues like negative power readings on some models.  
+*Note they roll-out updates in phases. Check "beta" channels if you are specifically looking for a fix.*
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
@@ -29,19 +37,29 @@ https://www.shelly.com/blogs/documentation/shelly-blu-h-t-display-zb
 
 ## Device setup
 
-Clock sync does not work over ZigBee.
 
-Update firmware and sync clock:
+## Device setup
+Clock sync over Zigbee now works
+
+Update firmware (tested with 1.2.20):
 1. Use `Shelly BLE Debug` mobile phone app to scan for devices
-1. Click on `Read` in the app
-1. On the device push the button on the backside
-1. To update the firmware click `OTA`, follow instructions
-1. To update the clock enter setup mode on the device (one click, display should say "set")
-1. Press the backside button two times fast (upper left corner of the device should say "sync")
-1. The clock will be synced with timezone GMT+0
-1. Open `Shelly BLE Debug` app
-1. Connect to device with `Read`
-1. Click on `UTC (0 min)` to set your timezone (offset in minutes)
+2. Pair to device
+3. If you cant pair, hit button once to get into setup mode and then 4 times to get pairing active (screen show bLE)
+4. App should offer OTA right away, otherwise click `OTA`, follow instructions (you want stock firmware if asked)
+5. Wait for OTA to finish
+   
+Pair to ZB
+1. Activate ZB by entering Setup
+2. Hold button for 10s
+3. Globe icon will show to indicate ZB is active
+4. Enter setup mode
+5. Press button 5 times rapidly to enter ZB pairing (will show zig on screen)
+6. Set z2m to permit join
+
+Enable ZB Clock sync
+1. Turn off BLE: hit button once to get Set, then press for 5s, check that BT icon disappears - this is critical, if BT is on, it tries BT clock sync
+2. Then enter set again and press button rapidly twice to force clock sync
+
 
 Single Button
 
@@ -82,6 +100,8 @@ Single Button
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -130,4 +150,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bright_threshold": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `lx`.
+
+### Identify (enum)
+Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 

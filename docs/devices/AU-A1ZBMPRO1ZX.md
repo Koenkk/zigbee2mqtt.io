@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aurora Lighting AU-A1ZBMPRO1ZX](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBMPRO1ZX.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

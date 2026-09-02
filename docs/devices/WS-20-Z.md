@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hommyn WS-20-Z](https://www.zigbee2mqtt.io/images/devices/WS-20-Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

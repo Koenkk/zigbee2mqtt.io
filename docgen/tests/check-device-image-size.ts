@@ -7,7 +7,7 @@ const ignore = ['.DS_Store'];
 const allowedDimensions = ['150x150', '512x512'];
 export async function checkDeviceImageSize() {
     console.log(`* Test if device images has ${allowedDimensions.join(' or ')}  dimensions...`);
-    const invalid = {};
+    const invalid: Record<string, string> = {};
     const images = (await fsp.readdir(imageBaseDir)).filter((f) => !ignore.includes(f));
     await Promise.all(
         images.map(async (img) => {

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher SR-ZG9002K16-Pro](https://www.zigbee2mqtt.io/images/devices/SR-ZG9002K16-Pro.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Home Assistant
 

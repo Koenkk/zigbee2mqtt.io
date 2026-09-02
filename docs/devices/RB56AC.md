@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Acuity Brands Lighting (ABL) RB56AC](https://www.zigbee2mqtt.io/images/devices/RB56AC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

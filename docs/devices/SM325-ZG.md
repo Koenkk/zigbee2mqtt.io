@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Samotech SM325-ZG](https://www.zigbee2mqtt.io/images/devices/SM325-ZG.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

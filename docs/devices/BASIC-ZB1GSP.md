@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | BASIC-ZB1GSP  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart plug with power monitoring |
-| Exposes | switch (state), power_on_behavior, inching_control_set, network_indicator, power, current, voltage, total_energy_consumption, energy_today, energy_month, energy_yesterday, outlet_control_protect, ac_current_max_overload_enable, ac_current_max_overload, ac_voltage_max_overload_enable, ac_voltage_max_overload, ac_power_max_overload_enable, ac_power_max_overload, consumption_records, consumption_records_dst, read_consumption_records, clear_history |
+| Exposes | switch (state), power_on_behavior, inching_control_set, network_indicator, power, current, voltage, energy_today, output_energy_today, energy_month, output_energy_month, energy_yesterday, total_energy, total_output_energy, outlet_control_protect, ac_current_max_overload_enable, ac_current_max_overload, ac_voltage_max_overload_enable, ac_voltage_max_overload, ac_power_max_overload_enable, ac_power_max_overload, consumption_records, consumption_records_dst, read_consumption_records, read_electricity_records, read_all_electricity_records, electricity_records, all_electricity_records, clear_history |
 | Picture | ![SONOFF BASIC-ZB1GSP](https://www.zigbee2mqtt.io/images/devices/BASIC-ZB1GSP.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -105,13 +106,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `V`.
 
-### Total energy consumption (numeric)
-CurrentSummationDelivered.
-Value can be found in the published state on the `total_energy_consumption` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"total_energy_consumption": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `kWh`.
-
 ### Energy today (numeric)
 Electricity consumption for the day.
 Value can be found in the published state on the `energy_today` property.
@@ -119,10 +113,24 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Energy month (numeric)
+### Export energy today (numeric)
+Energy fed back today through the plug..
+Value can be found in the published state on the `output_energy_today` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_energy_today": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Energy this month (numeric)
 Electricity consumption for the month.
 Value can be found in the published state on the `energy_month` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_month": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Export energy this month (numeric)
+Energy fed back this month through the plug..
+Value can be found in the published state on the `output_energy_month` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_energy_month": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
@@ -130,6 +138,20 @@ The unit of this value is `kWh`.
 Electricity consumption for the yesterday.
 Value can be found in the published state on the `energy_yesterday` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_yesterday": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Total energy (numeric)
+Total energy used since the device started..
+Value can be found in the published state on the `total_energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"total_energy": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Total export energy (numeric)
+Total energy fed back through the plug..
+Value can be found in the published state on the `total_output_energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"total_output_energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
@@ -199,6 +221,36 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read
 - `type` (enum): Record type: get24Hours, get30Days or get180Days. allowed values: `get24Hours`, `get30Days`, `get180Days`
 - `index` (numeric): Block index: 24h => 0/1/240(DST), 30d => 0/1, 180d => 0. For 24h/30d, index=0 auto-fetches block 0+1. max value is 240
 - `offset` (numeric): Offset: 24h => 0..6(days), 30d => 0..5(months), 180d => 0. max value is 6
+
+### Read electricity records (composite)
+Read electricity or power history records from the plug..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_electricity_records": {"type": VALUE, "page": VALUE, "with_energy": VALUE, "with_reverse_energy": VALUE, "with_timestamp": VALUE, "start_time": VALUE, "end_time": VALUE}}`
+- `type` (enum): History record type to read. allowed values: `hour`, `day`, `month`, `year`
+- `page` (numeric): History page index. Used only by energy_record_24h reads. max value is 65535
+- `with_energy` (binary): Request consumed energy. Used by hour/day/month/year reads. allowed values: `true` or `false`
+- `with_reverse_energy` (binary): Request reverse energy. Used by hour/day/month/year reads. allowed values: `true` or `false`
+- `with_timestamp` (binary): Request the last timestamp in the response package. allowed values: `true` or `false`
+- `start_time` (text): Record start time in ISO 8601 format with timezone. Example: 2026-05-20T12:00:00+08:00. 
+- `end_time` (text): Record end time in ISO 8601 format with timezone. Example: 2026-05-21T12:00:00+08:00. 
+
+### Read all electricity records (composite)
+Read one page of full electricity or reverse energy history records from the plug..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_all_electricity_records": {"type": VALUE, "page": VALUE, "with_energy": VALUE, "with_reverse_energy": VALUE, "with_timestamp": VALUE}}`
+- `type` (enum): Full history record type to read. allowed values: `hour`, `day`
+- `page` (numeric): History page index to read. max value is 65535
+- `with_energy` (binary): Request consumed energy. allowed values: `true` or `false`
+- `with_reverse_energy` (binary): Request reverse energy. allowed values: `true` or `false`
+- `with_timestamp` (binary): Request the last timestamp in the response package. allowed values: `true` or `false`
+
+### Electricity records (text)
+Last electricity history response as JSON..
+Value can be found in the published state on the `electricity_records` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### All electricity records (text)
+Last full electricity history page response as JSON..
+Value can be found in the published state on the `all_electricity_records` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Clear history (enum)
 Clear historical electricity data..

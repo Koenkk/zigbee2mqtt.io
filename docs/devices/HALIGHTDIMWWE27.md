@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hive HALIGHTDIMWWE27](https://www.zigbee2mqtt.io/images/devices/HALIGHTDIMWWE27.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

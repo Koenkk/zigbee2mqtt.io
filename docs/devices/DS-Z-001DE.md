@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![DIRECTSIGNS DS-Z-001DE](https://www.zigbee2mqtt.io/images/devices/DS-Z-001DE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

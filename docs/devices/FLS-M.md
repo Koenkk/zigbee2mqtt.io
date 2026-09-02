@@ -22,9 +22,11 @@ pageClass: device-page
 | Picture | ![Dresden Elektronik FLS-M](https://www.zigbee2mqtt.io/images/devices/FLS-M.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+This device exposes different endpoints, depending on the DIP switch configuration when it powers on. For further details about the configuration, read the device's [documentation](https://phoscon.de/en/flsm/config).
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -20,7 +20,8 @@ pageClass: device-page
 | Description | LED with adjustable color temp on main ring; extra RGB strip for full colors. |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior, action |
 | Picture | ![AwoX EBF_RGB_Zm](https://www.zigbee2mqtt.io/images/devices/EBF_RGB_Zm.png) |
-| White-label | EGLO 900566 |
+| White-label | EGLO 900566, EGLO 901463 |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara JWSP001A](https://www.zigbee2mqtt.io/images/devices/JWSP001A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

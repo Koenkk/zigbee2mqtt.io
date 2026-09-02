@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Universal Electronics Inc XHK1-UE](https://www.zigbee2mqtt.io/images/devices/XHK1-UE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

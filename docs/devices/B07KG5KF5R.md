@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![GMY Smart Bulb B07KG5KF5R](https://www.zigbee2mqtt.io/images/devices/B07KG5KF5R.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

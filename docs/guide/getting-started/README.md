@@ -1,6 +1,7 @@
 ---
 sidebarDepth: 1
 next: ../usage/
+redirectFrom: /getting_started/what_do_i_need.md
 ---
 
 # Getting started
@@ -17,10 +18,9 @@ In order to use Zigbee2MQTT we need the following hardware:
 
 3. <img src="../../images/xiaomi_sensors.jpg" title="Zigbee devices" class="float-left" /> One or more **Zigbee devices** which will be paired with Zigbee2MQTT. <br class="clear" />
 
-::: tip TIP
-<img alt="USB Cable" src="../../images/usb_extension_cable.jpg" class="float-left" /> To improve network range and stability use a USB extension cable. If you experience ANY trouble with device (timeouts, not pairing, devices unreachable, devices dropping from the network, etc.) this is the first thing to do to avoid interference.
-See [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md). <br class="clear" />
-:::
+> [!TIP]
+> <img alt="USB Cable" src="../../images/usb_extension_cable.jpg" class="float-left" /> To improve network range and stability use a USB extension cable. If you experience ANY trouble with device (timeouts, not pairing, devices unreachable, devices dropping from the network, etc.) this is the first thing to do to avoid interference.
+> See [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md). <br class="clear" />
 
 ## Installation
 
@@ -36,25 +36,21 @@ The onboarding page, by default, is reachable at the same URL as the frontend (`
 
 If the `adapter type` is unknown by the discovery process, you can find a list of the most common adapters in the corresponding pages: [zstack](../adapters/zstack.md), [ember](../adapters/emberznet.md), [deconz](../adapters/deconz.md), [zigate](../adapters/zigate.md), [zboss](../adapters/zboss.md).
 
-:::tip TIP
-The adapter discovery process will try to find serial and mDNS-discoverable devices.
-Refreshing the page will re-execute the discovery process.
-
-_Note: This may not be available on all setups. If not, you will have to enter the adapter path and type manually._
-:::
+> [!NOTE]
+> The adapter discovery process will try to find serial and mDNS-discoverable devices. Refreshing the page will re-execute the discovery process.
+>
+> _This may not be available on all setups. If not, you will have to enter the adapter path and type manually._
 
 If Zigbee2MQTT fails validation after submitting the configuration, the page will show the error details.
 
 If Zigbee2MQTT fails to start after submitting the initial configuration (due to something like a wrong adapter path), the onboarding will be executed again on the following start.
 
-:::tip TIP
-Onboarding failure pages will hold the `node` process from exiting until the page's `Close` button is triggered or the process is manually exited.
-:::
+> [!IMPORTANT]
+> Onboarding failure pages will hold the `node` process from exiting until the page's `Close` button is triggered or the process is manually exited.
 
-:::tip TIP
-You can also force the onboarding to run later (if configuration needs changing) with the environment variable `Z2M_ONBOARD_FORCE_RUN=1`.
-Depending on your setup, this may be offered in form of a toggle (Home Assistant add-on for example), or you may have to set it manually for the `node` process.
-:::
+> [!TIP]
+> You can also force the onboarding to run later (if configuration needs changing) with the environment variable `Z2M_ONBOARD_FORCE_RUN=1`.
+> Depending on your setup, this may be offered in form of a toggle (Home Assistant add-on for example), or you may have to set it manually for the `node` process.
 
 :::details Environment variables available to customize the onboarding process
 The following environment variables are available, if your setup requires customizing the onboarding server:

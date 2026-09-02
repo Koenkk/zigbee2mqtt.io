@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Brun Holding Fire Fence](https://www.zigbee2mqtt.io/images/devices/Fire-Fence.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

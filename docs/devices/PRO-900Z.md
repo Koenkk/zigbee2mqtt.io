@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ElectSmart PRO-900Z](https://www.zigbee2mqtt.io/images/devices/PRO-900Z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 With the device in the 'on' state, press and hold the control knob to turn the unit off. While the knob is pressed, press and hold the 'clock' button for 8 seconds. The device will now enter the pairing mode, and the zigbee signal indicator will start flashing on the display.
@@ -29,6 +30,11 @@ With the device in the 'on' state, press and hold the control knob to turn the u
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "2000". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
