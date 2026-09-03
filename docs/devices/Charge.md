@@ -26,14 +26,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Pairing
-To pair this device, send a Bluetooth command to the charger. A successful Bluetooth connection is indicated by a clockwise-rotating orange light with a solid blue light at the bottom.
 
 You can initiate pairing mode using *one* of the following methods:
 
-* **Futurehome Hub:** Use the hub to put the charger into pairing mode.
+* **Futurehome Hub:** Use the hub to put the charger into pairing mode, and then press "Permit join" in the Zigbee2MQTT UI.
 * **Home Assistant:** Ensure the Bluetooth integration is enabled. Install ![Futurehome Charge – Trigger Zigbee Pairing](https://github.com/svhelge/homeassistant-fh-charge_trigger_zigbee_pairing) via HACS, review the documentation, and run the required action to activate pairing mode.
 * **Python Script:** Execute the code from the ![Futurehome Charge Zigbee repository](https://github.com/tobijanto/Futurehome-charge-zigbee).
 
+A successful Bluetooth connection is indicated by a clockwise-rotating orange light with a solid blue light at the bottom.
 
 <!-- Notes END: Do not edit below this line -->
 
