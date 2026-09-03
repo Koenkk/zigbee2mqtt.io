@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | FK-BV05  |
 | Vendor  | [FrankEver](/supported-devices/#v=FrankEver)  |
 | Description | Zigbee smart water valve with flow meter and temperature sensor |
-| Exposes | switch (state), threshold, position, power_off_state, weather_delay, countdown, water_temperature, water_consumed_last, water_consumed_total, water_leakage_state, single_irrigation_switch, single_irrigation_set, day_irrigation_switch, day_irrigation_set, water_volume_alarm_switch, water_volume_alarm_set, water_temp_alarm_switch, water_temp_alarm_max, water_temp_alarm_min, creep_switch |
+| Exposes | switch (state), threshold, position, power_off_state, weather_delay, countdown, water_temperature, water_consumed_last, water_consumed_total, water_leakage_state, single_irrigation_switch, single_irrigation_set, day_irrigation_switch, day_irrigation_set, water_volume_alarm_switch, water_volume_alarm_set, water_temp_alarm_switch, water_temp_alarm_max, water_temp_alarm_min, water_volume_alarm, water_temp_alarm, creep_switch, fault |
 | Picture | ![FrankEver FK-BV05](https://www.zigbee2mqtt.io/images/devices/FK-BV05.png) |
 
 
@@ -29,6 +29,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -81,13 +86,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Water consumed last (numeric)
-Single water consumption (Last irrigation).
+Single water consumption (last irrigation).
 Value can be found in the published state on the `water_consumed_last` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `L`.
 
 ### Water consumed total (numeric)
-Daily water consumption total.
+Total water consumption.
 Value can be found in the published state on the `water_consumed_total` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `L`.
@@ -166,10 +172,28 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `120`.
 The unit of this value is `°C`.
 
+### Water volume alarm (binary)
+Water volume alarm is active (configured volume exceeded).
+Value can be found in the published state on the `water_volume_alarm` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` water volume alarm is ON, if `false` OFF.
+
+### Water temp alarm (binary)
+Water temperature alarm is active (configured range exceeded).
+Value can be found in the published state on the `water_temp_alarm` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` water temp alarm is ON, if `false` OFF.
+
 ### Creep switch (binary)
 Peristaltic function switch (Auto cycle anti-calc) - KEEP OFF for normal use.
 Value can be found in the published state on the `creep_switch` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"creep_switch": NEW_VALUE}`.
 If value equals `ON` creep switch is ON, if `OFF` OFF.
+
+### Fault (binary)
+Indicates whether a fault was detected.
+Value can be found in the published state on the `fault` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` fault is ON, if `false` OFF.
 

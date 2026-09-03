@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SNZB-02UL  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | E-ink screen temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, dew_point, vpd, comfort_temperature_min, comfort_temperature_max, temperature_units, comfort_humidity_min, comfort_humidity_max, temperature_calibration, humidity_calibration |
+| Exposes | battery, temperature, humidity, dew_point, vpd, remote_sensors_state, remote_temperature, remote_humidity, remote_pressure, weather, comfort_temperature_min, comfort_temperature_max, temperature_units, comfort_humidity_min, comfort_humidity_max, temperature_calibration, humidity_calibration |
 | Picture | ![SONOFF SNZB-02UL](https://www.zigbee2mqtt.io/images/devices/SNZB-02UL.png) |
 
 
@@ -60,7 +60,6 @@ Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
 It's not possible to write (`/set`) this value.
-The minimal value is `0` and the maximum value is `50`.
 The unit of this value is `°C`.
 
 ### Humidity (numeric)
@@ -68,7 +67,6 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
 It's not possible to write (`/set`) this value.
-The minimal value is `5` and the maximum value is `95`.
 The unit of this value is `%`.
 
 ### Dew point (numeric)
@@ -83,8 +81,46 @@ Value can be found in the published state on the `vpd` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kPa`.
 
+### Remote sensors state (enum)
+The remote temperature‑humidity source shares the same display area with the date. When the remote temperature‑humidity source is enabled, the date will no longer be shown. Note: wake up the device by pressing the button on the back before changing this value..
+Value can be found in the published state on the `remote_sensors_state` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_sensors_state": NEW_VALUE}`.
+The possible values are: `enable`, `disable`.
+
+### Remote temperature (numeric)
+Remote temperature value displayed on the E-ink screen. Note: wake up the device by pressing the button on the back before changing this value..
+Value can be found in the published state on the `remote_temperature` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_temperature": NEW_VALUE}`.
+The minimal value is `-20` and the maximum value is `60`.
+The unit of this value is `°C`.
+
+### Remote humidity (numeric)
+Remote humidity value displayed on the E-ink screen. Note: wake up the device by pressing the button on the back before changing this value..
+Value can be found in the published state on the `remote_humidity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_humidity": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `95`.
+The unit of this value is `%`.
+
+### Remote pressure (numeric)
+Remote atmospheric pressure value displayed on the E-ink screen. Note: wake up the device by pressing the button on the back before changing this value..
+Value can be found in the published state on the `remote_pressure` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_pressure": NEW_VALUE}`.
+The minimal value is `700` and the maximum value is `1100`.
+The unit of this value is `hPa`.
+
+### Weather (enum)
+Weather shown on the E-ink screen. Selecting a value sends the default coordinates to the device and is applied on its next weather request. Note: wake up the device by pressing the button on the back before changing this value..
+Value can be found in the published state on the `weather` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather": NEW_VALUE}`.
+The possible values are: `sunny`, `partly_cloudy`, `overcast`, `rain`, `snow`, `windy`.
+
 ### Comfort temperature min (numeric)
-Minimum temperature that is considered comfortable. The device will display ❄️ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..
+Minimum temperature that is considered comfortable. The device will display a snowflake icon❄ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `comfort_temperature_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_min": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_min": NEW_VALUE}`.
@@ -92,7 +128,7 @@ The minimal value is `0` and the maximum value is `50`.
 The unit of this value is `°C`.
 
 ### Comfort temperature max (numeric)
-Maximum temperature that is considered comfortable. The device will display 🔥 when the temperature is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..
+Maximum temperature that is considered comfortable. The device will display a flame icon🔥 when the temperature is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `comfort_temperature_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_max": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_max": NEW_VALUE}`.
@@ -107,7 +143,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Comfort humidity min (numeric)
-Minimum relative humidity that is considered comfortable. The device will display ☀️ when the humidity is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..
+Minimum humidity that is considered comfortable. The device will display an empty droplet icon💧 when the humidity is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `comfort_humidity_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_min": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_min": NEW_VALUE}`.
@@ -115,7 +151,7 @@ The minimal value is `5` and the maximum value is `95`.
 The unit of this value is `%`.
 
 ### Comfort humidity max (numeric)
-Maximum relative humidity that is considered comfortable. The device will display 💧 when the humidity is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..
+Maximum humidity that is considered comfortable. The device will display a half‑filled droplet icon💧 when the humidity is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `comfort_humidity_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_max": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_max": NEW_VALUE}`.
@@ -135,6 +171,6 @@ Calibrated relative humidity target value (supports 0.1% step). Note: wake up th
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
-The minimal value is `-95` and the maximum value is `95`.
+The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 

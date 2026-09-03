@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-002P16EU-COVER  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 2PM Gen4 (Cover mode) |
-| Exposes | action, switch_type, cover (state, position, tilt), wifi_status, ip_address, dhcp_enabled, wifi_config |
+| Exposes | action, switch_type, cover (state, position, tilt), wifi_status, ip_address, dhcp_enabled, wifi_config, identify |
 | Picture | ![Shelly S4SW-002P16EU-COVER](https://www.zigbee2mqtt.io/images/devices/S4SW-002P16EU-COVER.png) |
 
 
@@ -73,9 +73,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `shelly_wifi_ssid`: Full Wi-Fi SSID to use when the Shelly Wi-Fi setup cluster reports a shortened network name. The value must be textual.
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -136,4 +138,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `net_mask` (text): Subnet mask for the static IP configuration 
 - `gateway` (text): Default gateway address for static IP configuration 
 - `name_server` (text): Name server address for static IP configuration 
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
