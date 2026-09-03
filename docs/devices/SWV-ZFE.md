@@ -26,6 +26,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Home Assistant valve discovery
+The main `state` property opens and closes the valve. Zigbee2MQTT exposes this property as an MQTT switch, and Home Assistant discovery can map it to a valve entity when the converter marks the device as a water valve.
+
+### Partial watering settings
+The watering composites support partial updates in Zigbee2MQTT. When only one field is sent, Zigbee2MQTT merges it with the current device state before writing the full vendor payload. For `irrigation_plan_settings`, read `irrigation_plan_report` first if Zigbee2MQTT has not received the current plan state yet.
+
 ### Valve abnormal state does not update (firmware 1.0.7)
 
 On firmware 1.0.7 (build 4103) the `valve_abnormal_state` property never leaves `normal`, even though the underlying protections work: in controlled tests, a water-shortage auto-close (5 minutes of zero flow with the alarm enabled) and a fail-safe cutoff both closed the valve correctly, yet no anomaly was ever reported. The firmware also rejects `configureReporting` for the underlying attribute (`UNSUPPORTED_ATTRIBUTE`), and direct attribute reads return `normal` even seconds after a shortage-triggered auto-close.
@@ -233,4 +239,3 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read
 - `type` (enum): Reading type allowed values: `24_hours`, `30_days`, `6_months`
 - `time_start` (text): Start time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
 - `time_end` (text): End time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
-
