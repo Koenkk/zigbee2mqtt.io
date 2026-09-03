@@ -34,7 +34,6 @@ You can initiate pairing mode using *one* of the following methods:
 * **Python Script:** Execute the code from the ![Futurehome Charge Zigbee repository](https://github.com/tobijanto/Futurehome-charge-zigbee).
 
 A successful Bluetooth connection is indicated by a clockwise-rotating orange light with a solid blue light at the bottom.
-
 <!-- Notes END: Do not edit below this line -->
 
 

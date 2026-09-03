@@ -1,7 +1,7 @@
 ---
-title: "Rti-Tek STH1Z control via MQTT"
-description: "Integrate your Rti-Tek STH1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2026-08-30T18:06:52
+title: "Rti-Tek STHZB control via MQTT"
+description: "Integrate your Rti-Tek STHZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-09-03T18:55:25
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Rti-Tek STH1Z
+# Rti-Tek STHZB
 
 |     |     |
 |-----|-----|
-| Model | STH1Z  |
+| Model | STHZB  |
 | Vendor  | [Rti-Tek](/supported-devices/#v=Rti-Tek)  |
 | Description | Temperature and humidity sensor |
-| Exposes | temperature, humidity, battery, temperature_unit, internal_temperature_calibration, internal_humidity_calibration, sample_interval, temperature_alarm_upper, temperature_alarm_lower, humidity_alarm_upper, humidity_alarm_lower, temperature_alarm_status, humidity_alarm_status, fault_status, dew_point, vpd, humidity_comfort, comfort_humidity_lower_limit, comfort_humidity_upper_limit, comfort_temperature_lower_limit, comfort_temperature_upper_limit |
-| Picture | ![Rti-Tek STH1Z](https://www.zigbee2mqtt.io/images/devices/STH1Z.png) |
+| Exposes | temperature, humidity, battery, dew_point, vpd, humidity_comfort, comfort_humidity_lower_limit, comfort_humidity_upper_limit, comfort_temperature_lower_limit, comfort_temperature_upper_limit, product_name, temperature_unit, internal_temperature_calibration, internal_humidity_calibration, sample_interval, temperature_alarm_upper, temperature_alarm_lower, humidity_alarm_upper, humidity_alarm_lower, fault_status, temperature_alarm_status, humidity_alarm_status |
+| Picture | ![Rti-Tek STHZB](https://www.zigbee2mqtt.io/images/devices/STHZB.png) |
 
 
 
@@ -66,6 +66,54 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Dew point (numeric)
+Value can be found in the published state on the `dew_point` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Vpd (numeric)
+Value can be found in the published state on the `vpd` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kPa`.
+
+### Humidity comfort (enum)
+Value can be found in the published state on the `humidity_comfort` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `dry`, `comfort`, `wet`, `normal`.
+
+### Comfort humidity lower limit (numeric)
+Value can be found in the published state on the `comfort_humidity_lower_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_lower_limit": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Comfort humidity upper limit (numeric)
+Value can be found in the published state on the `comfort_humidity_upper_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_upper_limit": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Comfort temperature lower limit (numeric)
+Value can be found in the published state on the `comfort_temperature_lower_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_lower_limit": NEW_VALUE}`.
+The minimal value is `-20` and the maximum value is `60`.
+The unit of this value is `°C`.
+
+### Comfort temperature upper limit (numeric)
+Value can be found in the published state on the `comfort_temperature_upper_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_upper_limit": NEW_VALUE}`.
+The minimal value is `-20` and the maximum value is `60`.
+The unit of this value is `°C`.
+
+### Product name (text)
+Value can be found in the published state on the `product_name` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"product_name": ""}`.
+It's not possible to write (`/set`) this value.
 
 ### Temperature unit (enum)
 Value can be found in the published state on the `temperature_unit` property.
@@ -122,6 +170,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
+### Fault status (text)
+Value can be found in the published state on the `fault_status` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fault_status": ""}`.
+It's not possible to write (`/set`) this value.
+
 ### Temperature alarm status (enum)
 Value can be found in the published state on the `temperature_alarm_status` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_alarm_status": ""}`.
@@ -133,52 +186,4 @@ Value can be found in the published state on the `humidity_alarm_status` propert
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_alarm_status": ""}`.
 It's not possible to write (`/set`) this value.
 The possible values are: `normal`, `low`, `high`.
-
-### Fault status (text)
-Value can be found in the published state on the `fault_status` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fault_status": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Dew point (numeric)
-Value can be found in the published state on the `dew_point` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Vpd (numeric)
-Value can be found in the published state on the `vpd` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `kPa`.
-
-### Humidity comfort (enum)
-Value can be found in the published state on the `humidity_comfort` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `dry`, `comfort`, `wet`, `normal`.
-
-### Comfort humidity lower limit (numeric)
-Value can be found in the published state on the `comfort_humidity_lower_limit` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_lower_limit": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
-### Comfort humidity upper limit (numeric)
-Value can be found in the published state on the `comfort_humidity_upper_limit` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_upper_limit": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
-### Comfort temperature lower limit (numeric)
-Value can be found in the published state on the `comfort_temperature_lower_limit` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_lower_limit": NEW_VALUE}`.
-The minimal value is `-20` and the maximum value is `60`.
-The unit of this value is `°C`.
-
-### Comfort temperature upper limit (numeric)
-Value can be found in the published state on the `comfort_temperature_upper_limit` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_upper_limit": NEW_VALUE}`.
-The minimal value is `-20` and the maximum value is `60`.
-The unit of this value is `°C`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NTZB-02  |
 | Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | 2 switches and 1 socket with backlight |
-| Exposes | switch (state), countdown, backlight_mode, indicator_mode, inching_control_set |
+| Exposes | switch (state), countdown, power_on_behavior, backlight_mode, indicator_mode, inching_control_set |
 | Picture | ![Nova Digital NTZB-02](https://www.zigbee2mqtt.io/images/devices/NTZB-02.png) |
 
 
