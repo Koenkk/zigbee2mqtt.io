@@ -21,13 +21,13 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@quasar/extras": "2.0.2",
-        "core-js": "3.49.0",
-        "quasar": "2.23.3"
+        "@quasar/extras": "2.0.4",
+        "core-js": "3.50.0",
+        "quasar": "2.28.0"
     },
     "devDependencies": {
         "@types/json-schema": "^7.0.15",
-        "@types/node": "26.1.2",
+        "@types/node": "26.4.0",
         "@vuepress/bundler-vite": "2.0.0-rc.31",
         "@vuepress/client": "2.0.0-rc.31",
         "@vuepress/plugin-docsearch": "2.0.0-rc.132",
@@ -46,13 +46,13 @@
         "prettier": "3.9.6",
         "pug": "3.0.4",
         "pug-plain-loader": "1.1.0",
-        "sass": "1.102.0",
-        "sass-loader": "17.0.0",
+        "sass": "1.103.1",
+        "sass-loader": "17.0.1",
         "throat": "6.0.2",
         "ts-node": "10.9.2",
         "typescript": "6.0.3",
-        "vite": "8.1.5",
-        "vue": "3.5.40",
+        "vite": "8.2.2",
+        "vue": "3.5.42",
         "vuepress": "2.0.0-rc.31",
         "zigbee-herdsman-converters": "26.105.0"
     },
