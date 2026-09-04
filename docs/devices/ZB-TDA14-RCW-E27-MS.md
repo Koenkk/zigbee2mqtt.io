@@ -24,8 +24,21 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+Notes
+Power-on behaviour
+This bulb does not expose the standard power_on_behavior  attribute. On/off memory after
+a power cut is controlled by do_not_disturb :
+do_not_disturb: true  — bulb that was OFF before the power cut stays OFF; bulb that
+was ON comes back ON.
+do_not_disturb: false  — bulb always comes back ON after a power cut.
+color_power_on_behavior  controls only colour/brightness on restore and is independent of
+do_not_disturb . Setting it to previous  without do_not_disturb: true  will not keep an
+OFF bulb off.
+Verified on firmware V1.2.9 ( _TZ3210_dkul5xix ), see zigbee2mqtt#30070 for details.
+Colour mode switching
+When switching from white ( color_temp ) to colour ( color_xy ) mode, the first command is
+occasionally ignored by the bulb. Sending the same command a second time works.
+Automations that rely on the colour change may want to repeat the command once.
 <!-- Notes END: Do not edit below this line -->
 
 
