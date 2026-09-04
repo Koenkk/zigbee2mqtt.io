@@ -1,0 +1,45 @@
+import { K as withCtx, P as openBlock, R as resolveComponent, g as createVNode, h as createTextVNode, m as createStaticVNode, s as createBaseVNode, u as createElementBlock } from "./runtime-core.esm-bundler-D6Jmich1.js";
+import { t as _plugin_vue_export_helper_default } from "./app-BG4Tt9eu.js";
+//#region docs/devices/ZWPM16-2.md
+var _pageData = JSON.parse("{\"path\":\"/devices/ZWPM16-2.html\",\"title\":\"AVATTO ZWPM16-2 control via MQTT\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"device-page\",\"title\":\"AVATTO ZWPM16-2 control via MQTT\",\"description\":\"Integrate your AVATTO ZWPM16-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway.\",\"addedAt\":\"2025-02-06T19:24:12.000Z\"},\"git\":{\"updatedTime\":1788114020000,\"contributors\":[{\"name\":\"Koen Kanters\",\"username\":\"\",\"email\":\"koenkanters94@gmail.com\",\"commits\":3}],\"changelog\":[{\"hash\":\"029056389b989133936323c6e894744b0ad8d048\",\"time\":1788114020000,\"email\":\"koenkanters94@gmail.com\",\"author\":\"Koen Kanters\",\"message\":\"Bump zhc\"},{\"hash\":\"418544c6755785747a937feb1d71964b20cc22d2\",\"time\":1780255998000,\"email\":\"koenkanters94@gmail.com\",\"author\":\"Koen Kanters\",\"message\":\"Bump zhc\"},{\"hash\":\"40db2ea06f0af61bb7e313a288d2766c8bd13ab6\",\"time\":1738870110000,\"email\":\"koenkanters94@gmail.com\",\"author\":\"Koen Kanters\",\"message\":\"Updates\"}]},\"filePathRelative\":\"devices/ZWPM16-2.md\"}");
+var _sfc_main = { name: "ZWPM16-2.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	const _component_RouteLink = resolveComponent("RouteLink");
+	return openBlock(), createElementBlock("div", null, [
+		_cache[8] || (_cache[8] = createBaseVNode("h1", {
+			id: "avatto-zwpm16-2",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#avatto-zwpm16-2"
+		}, [createBaseVNode("span", null, "AVATTO ZWPM16-2")])], -1)),
+		createBaseVNode("table", null, [_cache[6] || (_cache[6] = createBaseVNode("thead", null, [createBaseVNode("tr", null, [createBaseVNode("th"), createBaseVNode("th")])], -1)), createBaseVNode("tbody", null, [
+			_cache[2] || (_cache[2] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Model"), createBaseVNode("td", null, "ZWPM16-2")], -1)),
+			createBaseVNode("tr", null, [_cache[1] || (_cache[1] = createBaseVNode("td", null, "Vendor", -1)), createBaseVNode("td", null, [createVNode(_component_RouteLink, { to: "/supported-devices/#v=AVATTO" }, {
+				default: withCtx(() => [..._cache[0] || (_cache[0] = [createTextVNode("AVATTO", -1)])]),
+				_: 1
+			})])]),
+			_cache[3] || (_cache[3] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Description"), createBaseVNode("td", null, "Zigbee smart energy meter 80A/2CH")], -1)),
+			_cache[4] || (_cache[4] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Exposes"), createBaseVNode("td", null, "voltage_l1, power_l1, current_l1, energy_l1, daily_energy_l1, voltage_l2, power_l2, current_l2, energy_l2, daily_energy_l2")], -1)),
+			_cache[5] || (_cache[5] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Picture"), createBaseVNode("td", null, [createBaseVNode("img", {
+				src: "https://www.zigbee2mqtt.io/images/devices/ZWPM16-2.png",
+				alt: "AVATTO ZWPM16-2"
+			})])], -1))
+		])]),
+		_cache[9] || (_cache[9] = createBaseVNode("h2", {
+			id: "options",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#options"
+		}, [createBaseVNode("span", null, "Options")])], -1)),
+		createBaseVNode("p", null, [createBaseVNode("em", null, [createVNode(_component_RouteLink, { to: "/guide/configuration/devices-groups.html#specific-device-options" }, {
+			default: withCtx(() => [..._cache[7] || (_cache[7] = [createTextVNode("How to use device type specific configuration", -1)])]),
+			_: 1
+		})])]),
+		_cache[10] || (_cache[10] = createStaticVNode("<ul><li><code>time_start</code>: Reply to Tuya-specific time synchronization requests: &quot;1970&quot; - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), &quot;2000&quot; - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), &quot;off&quot; - Don&#39;t reply (use if replying causes too much traffic). Default for this device: &quot;off&quot;. The value must be one of <code>1970</code>, <code>2000</code>, <code>off</code></li></ul><h2 id=\"exposes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#exposes\"><span>Exposes</span></a></h2><h3 id=\"voltage-l1-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#voltage-l1-numeric\"><span>Voltage l1 (numeric)</span></a></h3><p>Measured electrical potential value (phase L1). Value can be found in the published state on the <code>voltage_l1</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>V</code>.</p><h3 id=\"power-l1-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#power-l1-numeric\"><span>Power l1 (numeric)</span></a></h3><p>Instantaneous measured power (phase L1). Value can be found in the published state on the <code>power_l1</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>W</code>.</p><h3 id=\"current-l1-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#current-l1-numeric\"><span>Current l1 (numeric)</span></a></h3><p>Instantaneous measured electrical current (phase L1). Value can be found in the published state on the <code>current_l1</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>A</code>.</p><h3 id=\"energy-l1-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#energy-l1-numeric\"><span>Energy l1 (numeric)</span></a></h3><p>Sum of consumed energy (phase L1). Value can be found in the published state on the <code>energy_l1</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>kWh</code>.</p><h3 id=\"daily-energy-l1-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#daily-energy-l1-numeric\"><span>Daily energy l1 (numeric)</span></a></h3><p>Daily energy L1. Value can be found in the published state on the <code>daily_energy_l1</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>kWh</code>.</p><h3 id=\"voltage-l2-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#voltage-l2-numeric\"><span>Voltage l2 (numeric)</span></a></h3><p>Measured electrical potential value (phase L2). Value can be found in the published state on the <code>voltage_l2</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>V</code>.</p><h3 id=\"power-l2-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#power-l2-numeric\"><span>Power l2 (numeric)</span></a></h3><p>Instantaneous measured power (phase L2). Value can be found in the published state on the <code>power_l2</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>W</code>.</p><h3 id=\"current-l2-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#current-l2-numeric\"><span>Current l2 (numeric)</span></a></h3><p>Instantaneous measured electrical current (phase L2). Value can be found in the published state on the <code>current_l2</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>A</code>.</p><h3 id=\"energy-l2-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#energy-l2-numeric\"><span>Energy l2 (numeric)</span></a></h3><p>Sum of consumed energy (phase L2). Value can be found in the published state on the <code>energy_l2</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>kWh</code>.</p><h3 id=\"daily-energy-l2-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#daily-energy-l2-numeric\"><span>Daily energy l2 (numeric)</span></a></h3><p>Daily energy L2. Value can be found in the published state on the <code>daily_energy_l2</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>kWh</code>.</p>", 22))
+	]);
+}
+var ZWPM16_2_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+//#endregion
+export { _pageData, ZWPM16_2_default as default };
