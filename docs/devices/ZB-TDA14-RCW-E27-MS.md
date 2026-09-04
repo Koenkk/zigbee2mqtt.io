@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-Notes
-Power-on behaviour
+## Notes
+### Power-on behaviour
 This bulb does not expose the standard power_on_behavior  attribute. On/off memory after
 a power cut is controlled by do_not_disturb :
 do_not_disturb: true  — bulb that was OFF before the power cut stays OFF; bulb that
