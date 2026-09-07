@@ -77,14 +77,14 @@ Motion detection sensitivity.
 Value can be found in the published state on the `motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `5`.
+The minimal value is `0` and the maximum value is `5` where 0 is least sensitive and 5 is most sensitive.
 
 ### Static detection sensitivity (numeric)
 Static detection sensitivity.
 Value can be found in the published state on the `static_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `5`.
+The minimal value is `0` and the maximum value is `5` where 0 is least sensitive and 5 is most sensitive.
 
 ### Fading time (numeric)
 Time after which the device will check again for presence.
