@@ -122,11 +122,6 @@ The entity `object_id` is the part used in the Home Assistant discovery payload,
 Device-specific overrides are applied after Zigbee2MQTT's built-in compatibility mappings, so they can be used to remove or adjust discovery properties that do not match your installation.
 Set a discovery property to `null` to remove it from the Home Assistant discovery payload.
 
-The override can also change the discovery `type` (for example, from `switch` to
-`light`), replace the `schema` used by the entity, or set `value_template` and
-other discovery fields such as `valueTemplate` supported by the selected schema.
-Use the exact property names from the Home Assistant MQTT discovery payload; the
-override is merged into that payload after Zigbee2MQTT's built-in mappings.
 
 ### Changing `supported_color_modes`
 
@@ -207,18 +202,6 @@ devices:
             climate:
                 modes: ['off', 'heat', 'auto']
 ```
-
-### Composite controls
-
-When a Zigbee2MQTT expose is a settable composite with numeric or enum child features, Zigbee2MQTT also creates dedicated Home Assistant `number` or `select` entities for those child features. The original composite sensor remains available for viewing the full object.
-
-For example, a composite property named `manual_default_settings` with a numeric child property named `irrigation_duration` is discovered as a Home Assistant number entity using the object ID `manual_default_settings_irrigation_duration`. When changed from Home Assistant it publishes only the changed child field:
-
-```json
-{"manual_default_settings": {"irrigation_duration": 30}}
-```
-
-If a device requires the full composite object when setting a child field, its converter must merge this partial payload with the current state or expose a non-composite control instead.
 
 ### Changing device properties
 
