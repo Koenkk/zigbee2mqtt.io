@@ -122,6 +122,12 @@ The entity `object_id` is the part used in the Home Assistant discovery payload,
 Device-specific overrides are applied after Zigbee2MQTT's built-in compatibility mappings, so they can be used to remove or adjust discovery properties that do not match your installation.
 Set a discovery property to `null` to remove it from the Home Assistant discovery payload.
 
+The override can also change the discovery `type` (for example, from `switch` to
+`light`), replace the `schema` used by the entity, or set `value_template` and
+other discovery fields such as `valueTemplate` supported by the selected schema.
+Use the exact property names from the Home Assistant MQTT discovery payload; the
+override is merged into that payload after Zigbee2MQTT's built-in mappings.
+
 ### Changing `supported_color_modes`
 
 This is useful for switching light bulbs from reporting values from X/Y (which is the default) to reporting in hue / saturation (which is what bulbs report color in when changing via hue or saturation, such as with the `hue_move` and `saturation_move` commands).
