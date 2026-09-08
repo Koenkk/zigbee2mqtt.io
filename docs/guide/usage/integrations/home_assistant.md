@@ -118,10 +118,11 @@ Group discovery properties can be overridden via `groups.<id>.homeassistant` in 
 Any Home Assistant MQTT discovery property can be overridden on a device. Two examples are shown below. For a full and current list of discovery properties, see [the Home Assistant MQTT Discovery integration](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) and [the Home Assistant extension](https://github.com/Koenkk/zigbee2mqtt/blob/03ba647dc6b5f299f8f3ab441712999fcb3a253e/lib/extension/homeassistant.ts) in the Zigbee2MQTT source code.
 
 Overrides can be set at the device level or for a specific discovered entity under its `object_id`.
-The entity `object_id` is the part used in the Home Assistant discovery payload, for example `light`, `cover`, `climate`, `temperature`, or a generated composite child such as `manual_default_settings_irrigation_duration`.
+The entity `object_id` is the part used in the Home Assistant discovery payload, for example `light`, `cover`, `climate`, or `temperature`.
 Device-specific overrides are applied after Zigbee2MQTT's built-in compatibility mappings, so they can be used to remove or adjust discovery properties that do not match your installation.
 Set a discovery property to `null` to remove it from the Home Assistant discovery payload.
 
+Converter authors can also set `homeassistant` metadata on an expose: `type` selects the discovery component, `schema` sets the discovery payload's `schema`, and `valueTemplate` sets its `value_template` (`null` removes that template). These are converter metadata fields; user configuration overrides use the MQTT discovery property names, such as `value_template`, rather than `valueTemplate`.
 
 ### Changing `supported_color_modes`
 
