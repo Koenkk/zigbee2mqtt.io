@@ -24,7 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+## Notes
+![Original product description](https://github.com/pirsasha/esp32-midea-ac)
 
 <!-- Notes END: Do not edit below this line -->
 
