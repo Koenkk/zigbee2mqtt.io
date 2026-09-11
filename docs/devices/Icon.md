@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Icon  |
 | Vendor  | [Danfoss](/supported-devices/#v=Danfoss)  |
 | Description | Icon Main Controller with Zigbee Module, Room Thermostat |
-| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), abs_min_heat_setpoint_limit, abs_max_heat_setpoint_limit, min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, room_floor_sensor_mode, floor_min_setpoint, floor_max_setpoint, temperature, system_status_code, system_status_water, multimaster_role |
+| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), abs_min_heat_setpoint_limit, abs_max_heat_setpoint_limit, min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, room_floor_sensor_mode, floor_min_setpoint, floor_max_setpoint, temperature, system_status_code, system_status_water, multimaster_role, icon_application |
 | Picture | ![Danfoss Icon](https://www.zigbee2mqtt.io/images/devices/Icon.png) |
 
 
@@ -1427,4 +1427,11 @@ Value can be found in the published state on the `multimaster_role_l16` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multimaster_role_l16": ""}`.
 It's not possible to write (`/set`) this value.
 The possible values are: `invalid_unused`, `master`, `slave_1`, `slave_2`.
+
+### Icon application (enum, l16 endpoint)
+Main Controller application.
+Value can be found in the published state on the `icon_application_l16` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon_application_l16": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`.
 

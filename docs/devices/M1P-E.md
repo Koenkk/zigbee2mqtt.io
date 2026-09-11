@@ -1,7 +1,7 @@
 ---
-title: "Heiman M1-PE control via MQTT"
-description: "Integrate your Heiman M1-PE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2026-05-31T19:17:58
+title: "Heiman M1P-E control via MQTT"
+description: "Integrate your Heiman M1P-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-08-30T18:06:52
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Heiman M1-PE
+# Heiman M1P-E
 
 |     |     |
 |-----|-----|
-| Model | M1-PE  |
+| Model | M1P-E  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart occupancy sensor |
 | Exposes | battery, occupancy, illuminance, temperature, humidity, target_distance, fault_state, identify, unoccupied_delay, radar_detection_min_range, radar_detection_max_range, illuminance_threshold, sensitivity_level, work_mode, temperature_offset, humidity_offset, learning_control, learning_state, work_indicator, reported_packages, rejoin_count, reboot_count |
-| Picture | ![Heiman M1-PE](https://www.zigbee2mqtt.io/images/devices/M1-PE.png) |
+| Picture | ![Heiman M1P-E](https://www.zigbee2mqtt.io/images/devices/M1P-E.png) |
 
 
 

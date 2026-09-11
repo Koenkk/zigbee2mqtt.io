@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PSE03-V1.1.0  |
 | Vendor  | [EVOLOGY](/supported-devices/#v=EVOLOGY)  |
 | Description | Sound and flash siren |
-| Exposes | warning |
+| Exposes | warning, max_duration |
 | Picture | ![EVOLOGY PSE03-V1.1.0](https://www.zigbee2mqtt.io/images/devices/PSE03-V1.1.0.png) |
 
 
@@ -38,4 +38,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warn
 - `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
 - `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
 - `duration` (numeric): Duration in seconds of the alarm unit is s
+
+### Max duration (numeric)
+Maximum time that the alarm will be active.
+Value can be found in the published state on the `max_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65534`.
+The unit of this value is `s`.
 

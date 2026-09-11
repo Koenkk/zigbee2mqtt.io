@@ -5,11 +5,10 @@ redirectFrom: /information/external_converters.md
 
 # External converters
 
-:::warning WARNING
-External converters are disabled by default in new installations in version 2.11.0 and later.
-See [`enable_external_js`](../../guide/configuration/all-settings.md#enable-external-js) to enable it.
-See [more details](../../guide/installation/14_securing.md#external-extensions-and-converters)
-:::
+> [!WARNING]
+> External converters are disabled by default in new installations in version 2.11.0 and later.
+> See [`enable_external_js`](../../guide/configuration/all-settings.md#enable-external-js) to enable it.
+> See [more details](../../guide/installation/14_securing.md#external-extensions-and-converters)
 
 Zigbee2MQTT uses [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) to parse messages to and from devices.
 
@@ -17,13 +16,11 @@ External converters provide a way to test support for new devices, they work ide
 
 External converters are stored in the `external_converters` folder (at the same level in the file system as the Zigbee2MQTT configuration.yaml file). They have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
 
-:::tip TIP
-Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just delete the external converter.
-:::
+> [!TIP]
+> Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just > delete the external converter.
 
-:::tip TIP
-The easiest way to develop is by using the [external converter development environment](https://github.com/Nerivec/z2m-external-converter-dev?tab=readme-ov-file#how-to-use)
-:::
+> [!TIP]
+> The easiest way to develop is by using the [external converter development environment](https://github.com/Nerivec/z2m-external-converter-dev?tab=readme-ov-file#how-to-use)
 
 Example:
 
@@ -83,9 +80,8 @@ import {presets, access} from 'zigbee-herdsman-converters/lib/exposes';
 
 When Zigbee2MQTT starts it publishes `zigbee2mqtt/bridge/converters` with payload `[{"name": "my-first-converter.js": "code": <HERE COMES YOUR CONVERTER CODE>}]` containing all the converters loaded from the file system. The same message is also published when a converter changes at runtime (from one of the below actions), with the appropriately updated payload.
 
-:::tip TIP
-Via the Zigbee2MQTT front end in Home Assistant, you can add or update external converters via Settings > Dev console > External converters.
-:::
+> [!TIP]
+> Via the Zigbee2MQTT front end in Home Assistant, you can add or update external converters via Settings > Dev console > External converters.
 
 ## Save converter
 

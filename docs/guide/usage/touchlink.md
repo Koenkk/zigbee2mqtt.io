@@ -30,14 +30,12 @@ Other adapters/drivers are currently **not supported**.
 
 Compatible devices expose the `Touchlink` cluster, which includes most Philips and IKEA devices, some Tuya light bulbs, Namron relays and more.
 
-::: warning
-Some devices may disable Touchlink after a few minutes! _(security measure)_  
-Power-cycle the device to make sure it's active.
-:::
+> [!IMPORTANT]
+> Some devices may disable Touchlink after a few minutes! _(security measure)_  
+> Power-cycle the device to make sure it's active.
 
-::: tip
-All commands below can also be executed via the frontend _Touchlink_ tab.
-:::
+> [!TIP]
+> All commands below can also be executed via the frontend _Touchlink_ tab.
 
 ## Scan
 

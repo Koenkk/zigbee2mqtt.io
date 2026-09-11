@@ -9,11 +9,10 @@ redirectFrom:
 
 These instructions explain how to run Zigbee2MQTT on Windows.
 
-::: tip TIP
-Before starting make sure you have an MQTT broker installed on your system.
-There are many tutorials available on how to do this, [example](https://cedalo.com/blog/how-to-install-mosquitto-mqtt-broker-on-windows/).
-Mosquitto is the recommended MQTT broker but others should also work fine.
-:::
+> [!TIP]
+> Before starting make sure you have an MQTT broker installed on your system.
+> There are many tutorials available on how to do this, [example](https://cedalo.com/blog/how-to-install-mosquitto-mqtt-broker-on-windows/).
+> Mosquitto is the recommended MQTT broker but others should also work fine.
 
 ## Install a USB-to-UART Bridge Virtual COM Port driver
 
@@ -70,22 +69,19 @@ Zigbee2MQTT:info 2019-10-18 10:56:24 PM Coordinator firmware version: '20190608'
 
 Zigbee2MQTT can be stopped anytime by pressing `CTRL + C` and then confirming with `Y`.
 
-::: warning ATTENTION
-
-In case Zigbee2MQTT fails to start with `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.`, we need to configure the `serial` section in the `configuration.yaml`.
-
-First determine which COM port is assigned to your device:
-
-1. Open up Start menu and start typing `Device Manager`
-1. Expand `Ports (COM & LPT)`
-1. Look for a node similar to `USB Serial Device (COM4)`
-
-![Device Manager](../../images/devicemanager.png)
-
-For the example above, we would use `port: COM4` in the `configuration.yaml`.
-Next configure the `serial` section as described [here](../configuration/adapter-settings.md).
-
-:::
+> [!IMPORTANT]
+> In case Zigbee2MQTT fails to start with `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.`, we need to configure the `serial` section in the `configuration.yaml`.
+>
+> First determine which COM port is assigned to your device:
+>
+> 1. Open up Start menu and start typing `Device Manager`
+> 1. Expand `Ports (COM & LPT)`
+> 1. Look for a node similar to `USB Serial Device (COM4)`
+>
+> ![Device Manager](../../images/devicemanager.png)
+>
+> For the example above, we would use `port: COM4` in the `configuration.yaml`.
+> Next configure the `serial` section as described [here](../configuration/adapter-settings.md).
 
 ## Updating Zigbee2MQTT
 

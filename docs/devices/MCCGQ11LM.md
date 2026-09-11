@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Door and window sensor |
-| Exposes | battery, contact, device_temperature, voltage, power_outage_count, trigger_count |
+| Exposes | battery, contact, device_temperature, voltage, power_outage_count, trigger_count, identify |
 | Picture | ![Aqara MCCGQ11LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.png) |
 
 
@@ -67,6 +67,8 @@ E.g. (devices.yaml)
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
 
 ## Exposes
 
@@ -104,4 +106,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Indicates how many times the sensor was triggered (since last scheduled report).
 Value can be found in the published state on the `trigger_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Identify (enum)
+Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 

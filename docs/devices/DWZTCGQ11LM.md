@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DWZTCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Multi-state sensor P100 |
-| Exposes | battery, voltage, device_mode, door_window_type, sensitivity, report_interval, orientation_detection, movement_detection, fall_detection, vibration_detection, triple_tap_detection, orientation, contact, device_posture, action |
+| Exposes | battery, voltage, device_mode, door_window_type, sensitivity, report_interval, orientation_detection, movement_detection, fall_detection, vibration_detection, triple_tap_detection, orientation, contact, device_posture, identify, action |
 | Picture | ![Aqara DWZTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/DWZTCGQ11LM.png) |
 
 
@@ -49,6 +49,11 @@ When using the device in object mode, the sensor should be calibrated before use
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -147,6 +152,13 @@ Door/window mounting orientation check — 'abnormal' if the sensor is incorrect
 Value can be found in the published state on the `device_posture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `normal`, `abnormal`.
+
+### Identify (enum)
+Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

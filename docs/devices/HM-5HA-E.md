@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HM-5HA-E  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
-| Description | Heat detector |
+| Description | Smart heat alarm |
 | Exposes | battery, identify, temperature, alarm, battery_low, test, tamper, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, siren_for_automation_only, temperature_offset, link_available, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman HM-5HA-E](https://www.zigbee2mqtt.io/images/devices/HM-5HA-E.png) |
 
@@ -111,7 +111,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `test`.
 
 ### Temporary mute (binary)
-temporarily mute smoke alarm but please ensure there is no real fire..
+Silence the alarm temporarily.
 Value can be found in the published state on the `temporary_mute` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mute": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mute": NEW_VALUE}`.
@@ -136,7 +136,7 @@ siren effect.
 Value can be found in the published state on the `siren_for_automation_only` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_for_automation_only": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_for_automation_only": NEW_VALUE}`.
-The possible values are: `stop`, `smoke_siren`, `co_siren`.
+The possible values are: `stop`, `smoke_siren`, `co_siren`, `heat_siren`.
 
 ### Temperature offset (numeric)
 used for temperature offset, unit: ℃.
@@ -150,7 +150,7 @@ used for interconnection automation..
 Value can be found in the published state on the `link_available` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"link_available": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `inactive`, `smoke_active`, `co_active`, `heat_active`.
+The possible values are: `inactive`, `smoke_active`, `co_active`, `gas_active`, `heat_active`.
 
 ### Reported packages (numeric)
 for diagnostic purpose, how many zigbee packages has the reported in a day..

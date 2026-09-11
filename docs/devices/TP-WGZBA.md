@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TP-WGZBA  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee thermostat panel |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), child_lock, open_window, open_window_detected, frost_protection_temperature, schedule_active_group, schedule_group_to_edit, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, temporary_mode, temperature_sensor_select, external_temperature_input, temperature_hysteresis, hydronic_underfloor_heating_relay_output, boiler_dry_contact_output, ntc_temperature, ntc_overheat_protection, ntc_overheat_protection_temperature, radar_detection, radar_sensitivity, radar_do_not_disturb, radar_do_not_disturb_period, standby_brightness, active_brightness, night_mode, night_mode_period, night_brightness, bluetooth_pairing, read_temperature_control_history, temperature_control_history, factory_reset |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), child_lock, open_window, open_window_detected, frost_protection_temperature, schedule_active_group, schedule_group_to_edit, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, temporary_mode, temperature_sensor_select, external_temperature_input, hysteresis_low, hysteresis_high, hydronic_underfloor_heating_relay_output, boiler_dry_contact_output, ntc_temperature, ntc_overheat_protection, ntc_overheat_protection_temperature, radar_detection, radar_sensitivity, radar_do_not_disturb, radar_do_not_disturb_period, standby_brightness, active_brightness, night_mode, night_mode_period, night_brightness, bluetooth_pairing, read_temperature_control_history, temperature_control_history, factory_reset |
 | Picture | ![SONOFF TP-WGZBA](https://www.zigbee2mqtt.io/images/devices/TP-WGZBA.png) |
 
 
@@ -156,12 +156,21 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `99.9`.
 The unit of this value is `°C`.
 
-### Temperature hysteresis (composite)
-Temperature hysteresis thresholds..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_hysteresis": {"low_threshold": VALUE, "high_threshold": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_hysteresis": ""}`.
-- `low_threshold` (numeric): Heating starts when the room temperature falls below the target temperature plus this offset. min value is -2.6, max value is -0.2, unit is °C
-- `high_threshold` (numeric): Heating stops when the room temperature rises above the target temperature plus this offset. max value is 2.6, unit is °C
+### Minimum heating start threshold (numeric)
+Heating starts when the room temperature falls below the target temperature plus this offset..
+Value can be found in the published state on the `hysteresis_low` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hysteresis_low": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hysteresis_low": NEW_VALUE}`.
+The minimal value is `-2.6` and the maximum value is `-0.2`.
+The unit of this value is `°C`.
+
+### Maximum heating stop threshold (numeric)
+Heating stops when the room temperature rises above the target temperature plus this offset..
+Value can be found in the published state on the `hysteresis_high` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hysteresis_high": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hysteresis_high": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `2.6`.
+The unit of this value is `°C`.
 
 ### Hydronic underfloor heating relay output (enum)
 Select how the 3 A relay operates. Normally open (NO): The output is powered during heating and unpowered when heating stops. Normally closed (NC): The output is unpowered during heating and powered when heating stops..
@@ -218,12 +227,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_do_not_disturb": NEW_VALUE}`.
 If value equals `enable` radar do not disturb is ON, if `disable` OFF.
 
-### Radar do not disturb period (composite)
-During the scheduled period, presence detection will not wake the screen automatically..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_do_not_disturb_period": {"start": VALUE, "end": VALUE}}`
+### Radar do not disturb period (text)
+During the scheduled period, presence detection will not wake the screen automatically. Format: HH:mm-HH:mm, e.g. 00:00-06:00..
+Value can be found in the published state on the `radar_do_not_disturb_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_do_not_disturb_period": ""}`.
-- `start` (text): Start time in HH:mm. 
-- `end` (text): End time in HH:mm. 
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_do_not_disturb_period": NEW_VALUE}`.
 
 ### Standby brightness (numeric)
 Screen brightness when the device is idle..
@@ -246,12 +254,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_mode": NEW_VALUE}`.
 If value equals `enable` night mode is ON, if `disable` OFF.
 
-### Night mode period (composite)
-Period during which night mode brightness is used..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_mode_period": {"start": VALUE, "end": VALUE}}`
+### Night mode period (text)
+Period during which night mode brightness is used. Format: HH:mm-HH:mm, e.g. 00:00-06:00..
+Value can be found in the published state on the `night_mode_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"night_mode_period": ""}`.
-- `start` (text): Start time in HH:mm. 
-- `end` (text): End time in HH:mm. 
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_mode_period": NEW_VALUE}`.
 
 ### Night brightness (numeric)
 Adjusts the screen brightness when the device is in standby during the scheduled period..

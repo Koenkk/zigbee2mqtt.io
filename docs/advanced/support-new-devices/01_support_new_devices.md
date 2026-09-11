@@ -23,9 +23,8 @@ Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc1
 Zigbee2MQTT:warn  2019-11-09T12:19:56: Device '0x00158d0001dc126a' with Zigbee model 'lumi.sens' and manufacturer name 'some_name' is NOT supported, please follow https://www.zigbee2mqtt.io/how-tos/support_new_devices.html
 ```
 
-::: tip
-Make sure that joining is enabled, otherwise new devices cannot join the network.
-:::
+> [!TIP]
+> Make sure that joining is enabled, otherwise new devices cannot join the network.
 
 ### 2. Creating the external definition
 
@@ -40,10 +39,9 @@ By default, the external definition will map exposed Zigbee clusters to features
 If all features work and all expected features are present, you are lucky and can skip to step 3.
 If not, you will have to extend the external definition.
 
-::: tip
-Depending on the device, it may be possible to extend the definition using other modern extends.
-This is the recommended process as it is generally easier.
-:::
+> [!TIP]
+> Depending on the device, it may be possible to extend the definition using other modern extends.
+> This is the recommended process as it is generally easier.
 
 ### 3. Extending the generated external definition
 
@@ -51,17 +49,15 @@ To extend the generated external definition, you can either save the code in a f
 
 Add and/or configure the appropriate modern extends for the device (see previous link).
 
-::: tip
-The `Clusters` tab of the device, in frontend, lists supported clusters for further analysis.
-:::
+> [!TIP]
+> The `Clusters` tab of the device, in frontend, lists supported clusters for further analysis.
 
 Once done, trigger actions on the device.
 
 If your device is not reporting anything, it could be that this device requires additional configuration. This can be done by adding a `configure:` section. _It may help to look at similar [devices](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/devices)._
 
-::: tip
-If your device is advertised as Tuya compatible or reports anything with `manuSpecificTuya`, additional instructions for adding your device can be found [here](./02_support_new_tuya_devices.md).
-:::
+> [!TIP]
+> If your device is advertised as Tuya compatible or reports anything with `manuSpecificTuya`, additional instructions for adding your device can be found [here](./02_support_new_tuya_devices.md).
 
 If you still see messages like below after adding and configuring all appropriate modern extends, you may need to add specific converters that modern extends do not provide. Existing converters can probably be reused, those can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/fromZigbee.ts).
 

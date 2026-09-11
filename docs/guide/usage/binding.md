@@ -16,9 +16,8 @@ A use case for binding is, for example, the TRADFRI wireless dimmer. Binding the
 
 ## Commands
 
-::: tip
-All commands below can also be executed via the frontend, click on your device and go to the _Bind_ tab.
-:::
+> [!TIP]
+> All commands below can also be executed via the frontend, click on your device and go to the _Bind_ tab.
 
 Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","from_endpoint":"default","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
 
@@ -38,9 +37,8 @@ If wanting to bind to specific endpoints instead of the default ones, specify th
 
 `SOURCE_ENDPOINT` and `TARGET_ENDPOINT` are optional. `SOURCE_ENDPOINT` will default to the default endpoint for the `SOURCE` device if not supplied. `TARGET_ENDPOINT` behaves the same, but is only used if `TARGET` is a device.
 
-::: tip
-The default endpoint for a device is the first registered endpoint (most often endpoint ID 1).
-:::
+> [!TIP]
+> The default endpoint for a device is the first registered endpoint (most often endpoint ID 1).
 
 ### Binding a remote to a group
 
@@ -65,9 +63,8 @@ To clear all bindings, just send the topic with the payload e.g. `{"target": "my
 
 To selectively clear bindings by IEEE address, send the topic with the payload e.g. `{"target": "my_deivce", "ieee_list": ["0xa1a2a3a4a5a6a7a8", "0xb1b2b3b4b5b6b7b8"]}`.
 
-::: tip
-Clearing bindings will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, bindings in Zigbee2MQTT should reflect actual bindings on the device.
-:::
+> [!TIP]
+> Clearing bindings will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, bindings in Zigbee2MQTT should reflect actual bindings on the device.
 
 ## Devices
 

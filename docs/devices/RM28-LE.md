@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RM28-LE  |
 | Vendor  | [Ronco](/supported-devices/#v=Ronco)  |
 | Description | Zigbee roller shade motor |
-| Exposes | cover (state, position), mode, motor_direction, auto_power, work_state, countdown, countdown_left, time_total, situation_set, motor_fault, battery, border, position_best, click_control |
+| Exposes | cover (state, position), slow_mode, motor_direction, auto_power, motor_state, countdown, countdown_left, time_total, situation_set, motor_fault, battery, cover_limit, favorite_position, click_control |
 | Picture | ![Ronco RM28-LE](https://www.zigbee2mqtt.io/images/devices/RM28-LE.png) |
 
 
@@ -40,7 +40,9 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -51,19 +53,19 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Mode (enum)
-Operating mode. morning=normal, night=slower and quieter.
-Value can be found in the published state on the `mode` property.
+### Slow mode (binary)
+Operate the motor slower and quieter than normal.
+Value can be found in the published state on the `slow_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
-The possible values are: `morning`, `night`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"slow_mode": NEW_VALUE}`.
+If value equals `ON` slow mode is ON, if `OFF` OFF.
 
 ### Motor direction (enum)
-Motor rotation direction. Change if blind moves wrong way.
+Motor rotation direction.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
-The possible values are: `forward`, `back`.
+The possible values are: `normal`, `reversed`.
 
 ### Auto power (binary)
 Auto-complete open/close when curtain is manually pulled.
@@ -72,11 +74,11 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_power": NEW_VALUE}`.
 If value equals `true` auto power is ON, if `false` OFF.
 
-### Work state (enum)
+### Motor state (enum)
 Current motor movement status.
-Value can be found in the published state on the `work_state` property.
+Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `opening`, `closing`.
+The possible values are: `opening`, `closing`, `stopped`.
 
 ### Countdown (enum)
 Countdown timer to trigger open/close.
@@ -116,24 +118,24 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Border (enum)
-Set or clear motor travel limits.
-Value will **not** be published in the state.
+### Cover limit (enum)
+Set current position as the limit position.
+Value can be found in the published state on the `cover_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": NEW_VALUE}`.
-The possible values are: `up`, `down`, `up_delete`, `down_delete`, `remove_top_bottom`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_limit": NEW_VALUE}`.
+The possible values are: `set_up`, `set_down`, `delete_up`, `delete_down`, `delete_both`.
 
-### Position best (numeric)
-Saved favourite position.
-Value can be found in the published state on the `position_best` property.
+### Favorite position (numeric)
+Store the preferred cover position.
+Value can be found in the published state on the `favorite_position` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position_best": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"favorite_position": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Click control (enum)
-Single jog step up or down.
-Value will **not** be published in the state.
+Step control.
+Value can be found in the published state on the `click_control` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_control": NEW_VALUE}`.
 The possible values are: `up`, `down`.

@@ -45,6 +45,8 @@ After this, `switch_mode: scene` will emit `scene_1` actions that can be used in
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 

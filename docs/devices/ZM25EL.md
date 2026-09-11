@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM25EL  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Cover motor |
-| Exposes | battery, cover (state, position), reverse_direction, border, click_control, motor_fault |
+| Exposes | battery, cover (state, position), reverse_direction, cover_limit, click_control, motor_fault |
 | Picture | ![Zemismart ZM25EL](https://www.zigbee2mqtt.io/images/devices/ZM25EL.png) |
 
 
@@ -33,7 +33,9 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -58,14 +60,15 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
 The possible values are: `forward`, `back`.
 
-### Border (enum)
-Value can be found in the published state on the `border` property.
+### Cover limit (enum)
+Set current position as the limit position.
+Value can be found in the published state on the `cover_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": NEW_VALUE}`.
-The possible values are: `up`, `down`, `up_delete`, `down_delete`, `remove_top_bottom`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_limit": NEW_VALUE}`.
+The possible values are: `set_up`, `set_down`, `delete_up`, `delete_down`, `delete_both`.
 
 ### Click control (enum)
-Single motor steps.
+Step control.
 Value can be found in the published state on the `click_control` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_control": NEW_VALUE}`.

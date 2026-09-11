@@ -6,9 +6,8 @@ redirectFrom: /information/groups.md
 
 Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
 
-::: tip
-Groups are much more efficient than controlling devices separately as it significantly reduces the stress on a network when controlling multiple devices at once.
-:::
+> [!TIP]
+> Groups are much more efficient than controlling devices separately as it significantly reduces the stress on a network when controlling multiple devices at once.
 
 ## Creating a group
 

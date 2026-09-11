@@ -15,10 +15,9 @@ The following tags are available:
 - Latest dev version (based on [`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) branch): `latest-dev`
 - Specific release version, e.g: `2.0.0`, `2.0`, `2`
 
-::: warning
-For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
-Before running the container pull the correct image with `docker pull ghcr.io/koenkk/zigbee2mqtt --platform linux/arm/v6`.
-:::
+> [!WARNING]
+> For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
+> Before running the container pull the correct image with `docker pull ghcr.io/koenkk/zigbee2mqtt --platform linux/arm/v6`.
 
 ## Running the container
 
@@ -48,10 +47,9 @@ $ docker run \
 - `-e TZ=Europe/Amsterdam`: configure the timezone
 - `-p 8080:8080`: port forwarding from inside Docker container to host (for the frontend)
 
-::: tip
-If you run the MQTT-Server on the same host (localhost) you could use the IP
-of the `docker0` bridge to establish the connection: `server: mqtt://172.17.0.1`.
-:::
+> [!TIP]
+> If you run the MQTT-Server on the same host (localhost) you could use the IP
+> of the `docker0` bridge to establish the connection: `server: mqtt://172.17.0.1`.
 
 On first start, Zigbee2MQTT will start the onboarding on port 8080.
 Navigate to this board and configure accordingly.
@@ -115,9 +113,10 @@ $ podman run \
    ghcr.io/koenkk/zigbee2mqtt
 ```
 
-::: tip
-With SELinux enabled you may need to append a `:z` suffix to the volume mount: `-v $(pwd)/data:/app/data:z`
 :::
+
+> [!TIP]
+> With SELinux enabled you may need to append a `:z` suffix to the volume mount: `-v $(pwd)/data:/app/data:z`
 
 ### Updating
 

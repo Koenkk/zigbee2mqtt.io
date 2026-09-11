@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_cover_13  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Curtain motor |
-| Exposes | cover (state, position), motor_direction, work_state, total_time, situation_set, auto_power, fault |
+| Exposes | cover (state, position), motor_direction, motor_state, total_time, situation_set, auto_power, fault |
 | Picture | ![Tuya TS0601_cover_13](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_13.png) |
 
 
@@ -30,6 +30,11 @@ pageClass: device-page
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
 
 ## Exposes
 
@@ -40,17 +45,17 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Motor direction (enum)
-Motor direction.
+Motor rotation direction.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
-The possible values are: `forward`, `back`.
+The possible values are: `normal`, `reversed`.
 
-### Work state (enum)
-Current work state.
-Value can be found in the published state on the `work_state` property.
+### Motor state (enum)
+Current motor movement status.
+Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `opening`, `closing`.
+The possible values are: `opening`, `closing`, `stopped`.
 
 ### Total time (numeric)
 Total running time in milliseconds.

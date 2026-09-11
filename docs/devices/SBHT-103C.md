@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SBHT-103C  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | BLU H&T display Zigbee |
-| Exposes | battery, temperature, humidity, light_level, dark_threshold, bright_threshold |
+| Exposes | battery, temperature, humidity, light_level, dark_threshold, bright_threshold, identify |
 | Picture | ![Shelly SBHT-103C](https://www.zigbee2mqtt.io/images/devices/SBHT-103C.png) |
 
 
@@ -101,6 +101,8 @@ Single Button
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
 
 ## Exposes
 
@@ -148,4 +150,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bright_threshold": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `lx`.
+
+### Identify (enum)
+Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 

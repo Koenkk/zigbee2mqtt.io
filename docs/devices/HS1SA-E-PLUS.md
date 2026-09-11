@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HS1SA-E-PLUS  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
-| Description | Smoke detector |
+| Description | Smart smoke alarm |
 | Exposes | battery, identify, temperature, smoke, battery_low, test, fault_state, muted, trigger_selftest, temporary_mute, heartbeat_indicator, interconnectable, smoke_level, smoke_unit, chamber_contamination, link_available, siren_for_automation_only, temperature_offset, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman HS1SA-E-PLUS](https://www.zigbee2mqtt.io/images/devices/HS1SA-E-PLUS.png) |
 
@@ -105,7 +105,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `test`.
 
 ### Temporary mute (binary)
-temporarily mute smoke alarm but please ensure there is no real fire..
+Silence the alarm temporarily.
 Value can be found in the published state on the `temporary_mute` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mute": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mute": NEW_VALUE}`.
@@ -151,7 +151,7 @@ used for interconnection automation..
 Value can be found in the published state on the `link_available` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"link_available": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `inactive`, `smoke_active`, `co_active`, `heat_active`.
+The possible values are: `inactive`, `smoke_active`, `co_active`, `gas_active`, `heat_active`.
 
 ### Siren for automation only (enum)
 siren effect.

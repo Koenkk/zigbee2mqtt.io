@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BTH-RM230Z  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Room thermostat II 230V |
-| Exposes | switch (state), operating_mode, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, occupied_cooling_setpoint, system_mode, running_state, control_sequence_of_operation, schedule), setpoint_change_source, humidity, heater_type, valve_type, cable_sensor_mode, cable_sensor_temperature, window_detection, boost_heating, child_lock, display_brightness, display_switch_on_duration, activity_led, error_state |
+| Exposes | switch (state), operating_mode, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, occupied_cooling_setpoint, system_mode, running_state, control_sequence_of_operation, schedule), setpoint_change_source, humidity, heater_type, valve_type, cable_sensor_mode, cable_sensor_temperature, window_detection, boost_heating, child_lock, display_brightness, display_switch_on_duration, activity_led, error_state, humidity_alarm_led |
 | Picture | ![Bosch BTH-RM230Z](https://www.zigbee2mqtt.io/images/devices/BTH-RM230Z.png) |
 
 
@@ -173,4 +173,11 @@ Indicates whether the device encounters any errors or not.
 Value can be found in the published state on the `error_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"error_state": ""}`.
 It's not possible to write (`/set`) this value.
+
+### Humidity alarm led (binary)
+Enables/disables the LED warning when measured humidity is outside the comfortable range (below 30% or above 70%). Only the two observed raw values (0x07 on / 0x06 off) are supported; the meaning of the other bits of this attribute is not confirmed. The attribute is present on firmware 0x03086a90 (0.3.8) as well (confirmed by reading it on an unupgraded device); seemd the Bosch app only added a UI toggle for it in 0x03096a90 (0.3.9)..
+Value can be found in the published state on the `humidity_alarm_led` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_alarm_led": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_alarm_led": NEW_VALUE}`.
+If value equals `ON` humidity alarm led is ON, if `OFF` OFF.
 

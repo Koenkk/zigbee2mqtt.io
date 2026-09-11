@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPM02V1-GT  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 3P+N system |
-| Exposes | voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, power_factor, power, energy, produced_energy, energy_a, energy_b, energy_c, energy_produced_a, energy_produced_b, energy_produced_c, power_factor_a, power_factor_b, power_factor_c, update_frequency, device_locating |
+| Exposes | voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, power_factor, power, ac_frequency, energy, produced_energy, energy_a, energy_b, energy_c, energy_produced_a, energy_produced_b, energy_produced_c, power_factor_a, power_factor_b, power_factor_c, update_frequency, device_locating |
 | Picture | ![Tuya SPM02V1-GT](https://www.zigbee2mqtt.io/images/devices/SPM02V1-GT.png) |
 
 
@@ -33,9 +33,15 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
+
+* `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -109,6 +115,12 @@ Total active power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
+
+### AC frequency (numeric)
+Measured electrical AC frequency.
+Value can be found in the published state on the `ac_frequency` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `Hz`.
 
 ### Energy (numeric)
 Total forward active energy.

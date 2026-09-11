@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIRZB-111  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Customizable siren |
-| Exposes | battery_low, test, warning, squawk, max_duration, alarm, battery, voltage |
+| Exposes | battery_low, test, warning, squawk, alarm, max_duration, battery, voltage |
 | Picture | ![Develco SIRZB-111](https://www.zigbee2mqtt.io/images/devices/SIRZB-111.png) |
 
 
@@ -60,20 +60,20 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"squa
 - `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
 - `strobe` (binary): Turn on/off the strobe (light) for Squawk allowed values: `true` or `false`
 
-### Max duration (numeric)
-Max duration of the siren.
-Value can be found in the published state on the `max_duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `900`.
-The unit of this value is `s`.
-
 ### Alarm (binary)
 Manual start of the siren.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
 If value equals `START` alarm is ON, if `OFF` OFF.
+
+### Max duration (numeric)
+Maximum time that the alarm will be active.
+Value can be found in the published state on the `max_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65534`.
+The unit of this value is `s`.
 
 ### Battery (numeric)
 Remaining battery in %.

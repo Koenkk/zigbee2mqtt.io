@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ADCBZI01  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Curtain Robot |
-| Exposes | cover (state, position), position, battery, illuminance, work_state, total_time, situation_set, fault, charging_status, open_threshold, close_threshold, curtain_status, total_distance, factory_test, custom_week_prog_1, custom_week_prog_2, custom_week_prog_3, custom_week_prog_4 |
+| Exposes | cover (state, position), position, battery, illuminance, work_state, total_time, situation_set, fault, charging_status, open_threshold, close_threshold, curtain_status, total_distance, factory_test, custom_week_prog_1, custom_week_prog_2, custom_week_prog_3, custom_week_prog_4, calibration |
 | Picture | ![Moes ADCBZI01](https://www.zigbee2mqtt.io/images/devices/ADCBZI01.png) |
 
 
@@ -35,7 +35,7 @@ pageClass: device-page
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
@@ -154,4 +154,11 @@ Custom week program 4.
 Value can be found in the published state on the `custom_week_prog_4` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_4": NEW_VALUE}`.
+
+### Calibration (enum)
+Travel-range calibration. With the curtain fully closed, set 'calibrate' and the motor free-runs toward open; at the fully-open end set 'stop' to halt it and store the limit. Use 'calibrate_reverse' if it runs the wrong way. Always start fully closed, otherwise the open/close commands end up reversed..
+Value can be found in the published state on the `calibration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
+The possible values are: `stop`, `calibrate`, `calibrate_reverse`.
 

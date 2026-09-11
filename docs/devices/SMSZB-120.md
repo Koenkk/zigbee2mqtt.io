@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SMSZB-120  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Smoke detector with siren |
-| Exposes | smoke, battery_low, test, max_duration, alarm, reliability, fault, temperature, battery, voltage |
+| Exposes | smoke, battery_low, test, alarm, reliability, fault, max_duration, temperature, battery, voltage |
 | Picture | ![Develco SMSZB-120](https://www.zigbee2mqtt.io/images/devices/SMSZB-120.png) |
 | White-label | Frient 94430, Cavius 2103 |
 
@@ -93,14 +93,6 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Max duration (numeric)
-Duration of Siren.
-Value can be found in the published state on the `max_duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `600`.
-The unit of this value is `s`.
-
 ### Alarm (binary)
 Manual Start of Siren.
 Value will **not** be published in the state.
@@ -119,6 +111,14 @@ Indicates whether the device are in fault state.
 Value can be found in the published state on the `fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` fault is ON, if `false` OFF.
+
+### Max duration (numeric)
+Maximum time that the alarm will be active.
+Value can be found in the published state on the `max_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65534`.
+The unit of this value is `s`.
 
 ### Temperature (numeric)
 Measured temperature value.
