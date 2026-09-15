@@ -29,7 +29,35 @@ pageClass: device-page
 ### Displaying readings from an external sensor
 
 This device can show temperature and humidity coming from another sensor instead
-of its own built-in sensor (for example showing an outdoor sensor on the screen).
+of its own built-in sensor (for example, showing an outdoor sensor on the screen).
+
+#### Firmware 1.0.5 and later
+
+With firmware `1.0.5`, the remote temperature and humidity configuration has changed.
+The previous `temperature_sensor_select` / `external_temperature` /
+`external_humidity` approach is no longer used.
+
+The device now supports up to two remote temperature/humidity sources.
+
+1. Set `remote_source_status` to `using` to enable remote sources.
+2. Configure the corresponding `source_1_*` and/or `source_2_*` temperature and
+   humidity values (e.g. `source_1_temperature: 25.5`,
+   `source_1_humidity: 60`).
+
+For Home Assistant users, SONOFF provides an official blueprint for the new
+configuration:
+https://help.sonoff.tech/docs/SNZB02DR2#Home_Assistant
+
+For other platforms, the properties can be set directly via MQTT or the
+platform's equivalent mechanism.
+
+The device screen updates from configured remote sources automatically every
+30 minutes, or manually by briefly pressing the button on the back.
+
+Note: this is a battery-powered sleepy device, so writes are applied on the next
+poll/check-in. Press the button on the back to wake it for an immediate update.
+
+#### Firmware 1.0.4 and earlier
 
 1. Set `temperature_sensor_select` to `external` to switch the display to the
    external source (set it back to `internal` to show the built-in sensor with
@@ -37,10 +65,11 @@ of its own built-in sensor (for example showing an outdoor sensor on the screen)
 2. Push readings to `external_temperature` and `external_humidity`. Values are in
    °C / % (e.g. `external_temperature: 25.5`, `external_humidity: 88`).
 
-Notes:
-- Humidity on the external display requires device firmware `1.0.4` or later.
-- This is a battery-powered sleepy device, so writes are applied on the next
-  poll/check-in; press the button on the back to wake it for an immediate update.
+Note:
+
+* Humidity on the external display requires device firmware `1.0.4`.
+* This is a battery-powered sleepy device, so writes are applied on the next
+  poll/check-in. Press the button on the back to wake it for an immediate update.
 
 Example Home Assistant automation mirroring another sensor onto the display:
 
