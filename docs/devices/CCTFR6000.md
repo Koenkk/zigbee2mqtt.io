@@ -24,8 +24,18 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### How the relays are driven
+This controller is a time-proportional actuator. Each channel has a `demand_percentage` (share of the `cycle_time` during which the relay is closed) in addition to its On/Off `state`. **A relay only closes while `state` is ON and `demand_percentage` is above 0**; setting `state` to ON alone does nothing on firmware 0.32.2 (`4f014cd`). For plain relay behaviour set `demand_percentage` to 100 once and switch the channel with `state`.
 
+The default `cycle_time` is 1800 s for the six heating channels and 600 s for endpoint 7 (pump) and endpoint 8 (boiler); the device accepts 300 to 3200 s. Endpoints 7 and 8 come with a demand of 100 from the factory.
+
+### No fail-safe on communication loss
+A demand value stays in place until it is overwritten (it was verified to persist for over 40 minutes without any refresh). A channel left ON keeps heating if Zigbee2MQTT or the automation controlling it stops. Make sure whatever regulates the channels also switches them OFF, or use `on_time`.
+
+### Pairing
+Hold the setup gear button for more than 15 seconds until the LED flashes red, keep holding until the flashing stops, then hold setup again until the LED flashes green. Keep in mind that a reset unpairs the whole controller (all channels) from the Wiser hub.
 <!-- Notes END: Do not edit below this line -->
 
 
