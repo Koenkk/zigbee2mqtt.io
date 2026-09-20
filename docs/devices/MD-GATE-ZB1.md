@@ -9,6 +9,20 @@ DIY ESP32-H2 gate controller with voltage-free relay outputs and position inputs
 
 The original firmware provides the main pulse on GPIO10. Firmware 1.7.0-rc1 adds an independent pedestrian pulse on GPIO11 (Zigbee endpoint 5). Firmware 1.7.0-rc1 LOW has been compiled and flashed to an ESP32-H2. The owner confirmed on a test bench that both main and pedestrian relay commands and open/closed position reporting work. An initially unresponsive pedestrian relay was traced to a cold solder joint; it worked after the hardware connection was corrected. This is a bench functional check, not completed validation on both gate installations. The pedestrian command also requires a matching converter; it is not a claim that released Zigbee2MQTT versions already support it.
 
+### Firmware download and flashing
+
+[Download the LOW firmware ZIP and complete illustrated instructions](https://github.com/ShifuEst/zigbee2mqtt.io/releases/tag/md-gate-zb1-v1.7.0-rc1). Select `MD-GATE-ZB1-1.7.0-rc1-LOW.zip` under Assets, not the automatically generated source archives. This is a MakeDIY pre-release, not an official Zigbee2MQTT release.
+
+The ZIP includes the precompiled firmware, portable Windows flasher, matching external converter, exact firmware sources, SHA256 checksums and an English README with both wiring diagrams. No Arduino compilation is required.
+
+1. Extract the entire ZIP into a writable folder. Install Python 3.11 or newer with the Python launcher from python.org.
+2. Disconnect the gate COM/NO wires and relay inputs. Connect the ESP32-H2 by USB data cable, using USB power only, and close serial monitors.
+3. Run `FLASH.cmd`. Internet access is needed to install esptool 5.4.0 into a local virtual environment. Select the correct port and type `FLASH` to confirm. This replaces the firmware, pairing and settings. The flasher checks the image hash, ESP32-H2 chip and 4 MB flash size before writing.
+4. Wait for successful writing and verification. Press RESET if necessary. Follow the included README to install `md-gate-zb1.mjs` through Zigbee2MQTT Settings > Dev console > External converters, save and restart Zigbee2MQTT.
+5. Enable Permit join, hold BOOT for 3 seconds and release; wait 10 seconds, then bench-test both relay channels and the position contacts before connecting the gate.
+
+If no serial port appears, hold BOOT while connecting USB, release and retry. A failed flash must be rewritten completely before use. The included converter retains the tested Estonian state labels, explained in the English README.
+
 ### ESP32 wiring
 
 | ESP32 pin | Connection |
