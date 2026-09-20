@@ -5,7 +5,7 @@
 
 ### Hardware and firmware
 
-DIY ESP32-H2 gate controller with voltage-free relay outputs and position inputs. One controller operates one gate automation. The same hardware interface can be wired to Sommer twist 350 / 350 rapido (DTA-1) or Proteco Q80S. Relay polarity must match the installed module; it is not selected by gate brand.
+DIY ESP32-H2 gate controller with voltage-free relay outputs and position inputs. One controller operates one gate automation. The same hardware interface can be wired to Sommer twist 350 / 350 rapido (DTA-1) or Proteco Q80S. This package is LOW-trigger only for both gate brands. Both relay channels must be LOW-trigger modules compatible with 3.3 V control. The flasher selects LOW automatically; no HIGH build is included.
 
 The original firmware provides the main pulse on GPIO10. Firmware 1.7.0-rc1 adds an independent pedestrian pulse on GPIO11 (Zigbee endpoint 5). This release candidate is still undergoing compilation and hardware validation. The pedestrian command also requires a matching converter; it is not a claim that released Zigbee2MQTT versions already support it.
 
@@ -21,7 +21,7 @@ The original firmware provides the main pulse on GPIO10. Firmware 1.7.0-rc1 adds
 | GPIO14 | Optional open-position contact to GND |
 | GPIO12 | Unused |
 
-Relay inputs must explicitly support 3.3 V logic. A 5 V coil or a LOW-trigger label alone does not establish compatibility. Never apply 5 V or gate-controller voltage to an ESP32 GPIO. Both channels use the same firmware-selected LOW/HIGH polarity. For LOW, each relay GPIO uses its own 10 kOhm pull-up to 3.3 V; for HIGH, each uses a pull-down to GND instead. These resistors are not voltage converters and do not guarantee safe behavior for every relay module. Verify that neither relay operates during power-up, reset or pairing before connecting the gate.
+Relay inputs must explicitly support 3.3 V logic. A 5 V coil or a LOW-trigger label alone does not establish compatibility. Never apply 5 V or gate-controller voltage to an ESP32 GPIO. Both channels are active LOW: idle HIGH, pulse LOW. Each relay GPIO uses its own 10 kOhm pull-up to 3.3 V. These resistors are not voltage converters and do not guarantee safe behavior for every relay module. Verify that neither relay operates during power-up, reset or pairing before connecting the gate.
 
 Use NO and COM relay contacts; leave NC unused. Do not power the ESP32 simultaneously from external 5 V and USB unless the development board explicitly supports it.
 
@@ -85,4 +85,3 @@ Disconnect mains before wiring inside the gate enclosure. First test the control
 - [Proteco PQSB02: parallel limit-switch reading, section 2.5](https://www.proteco.net/sites/default/files/products-attached-manual/pqsb02_03_06_2025_gb.pdf)
 
 <!-- Notes END -->
-
