@@ -27,6 +27,10 @@ Use NO and COM relay contacts; leave NC unused. Do not power the ESP32 simultane
 
 ### Sommer twist 350 / 350 rapido, DTA-1
 
+![Complete Sommer wiring: ESP32, LOW relay module, power converter, position contact and DIP switches](../images/MD-GATE-ZB1-sommer.png)
+
+The diagram shows electrical connections, not the physical positions of terminals. Match the printed terminal numbers on your controller.
+
 ```text
 ESP32 GPIO10 -> relay IN1     COM1 -> 21 PULSE
                               NO1 -> 22 PULSE
@@ -41,6 +45,10 @@ WALK operates the M2 pedestrian leaf. The controller determines the command sequ
 For power from the controller, terminal 35 (+24 V) and 36 (GND) feed a suitable 24-to-5 V DC/DC converter. Set and measure 5.0 V at its output before connecting the ESP32 and relay. The 35/36 accessory output is limited to 100 mA at 24 V, shared with existing loads; verify available power or use a separate regulated supply.
 
 ### Proteco Q80S
+
+![Complete Proteco Q80S wiring: ESP32, LOW relay module, separate 5 V supply and position contacts](../images/MD-GATE-ZB1-proteco.png)
+
+The diagram shows electrical connections, not the physical positions of terminals. The two relay COM contacts connect to the same Q80S terminal 4. Existing JP8 limit-switch monitoring is not yet validated; use the separate dry contacts shown until the interface has been verified.
 
 ```text
 ESP32 GPIO10 -> relay IN1     COM1 -> 4 COMMON
