@@ -7,7 +7,7 @@
 
 DIY ESP32-H2 gate controller with voltage-free relay outputs and position inputs. One controller operates one gate automation. The same hardware interface can be wired to Sommer twist 350 / 350 rapido (DTA-1) or Proteco Q80S. This package is LOW-trigger only for both gate brands. Both relay channels must be LOW-trigger modules compatible with 3.3 V control. The flasher selects LOW automatically; no HIGH build is included.
 
-The original firmware provides the main pulse on GPIO10. Firmware 1.7.0-rc1 adds an independent pedestrian pulse on GPIO11 (Zigbee endpoint 5). This release candidate is still undergoing compilation and hardware validation. The pedestrian command also requires a matching converter; it is not a claim that released Zigbee2MQTT versions already support it.
+The original firmware provides the main pulse on GPIO10. Firmware 1.7.0-rc1 adds an independent pedestrian pulse on GPIO11 (Zigbee endpoint 5). Firmware 1.7.0-rc1 LOW has been compiled and flashed to an ESP32-H2. The owner confirmed on a test bench that both main and pedestrian relay commands and open/closed position reporting work. An initially unresponsive pedestrian relay was traced to a cold solder joint; it worked after the hardware connection was corrected. This is a bench functional check, not completed validation on both gate installations. The pedestrian command also requires a matching converter; it is not a claim that released Zigbee2MQTT versions already support it.
 
 ### ESP32 wiring
 
@@ -73,6 +73,10 @@ Enable joining in Zigbee2MQTT, hold BOOT for 3 seconds, then release. Allow 10 s
 Both pulse commands share the pulse duration (0–1000 ms, default 300 ms) and a one-second cooldown. Zero disables pulses. Commands received during an active pulse or cooldown are discarded, not queued. Sensor-mode changes must not activate a relay.
 
 Until compatible built-in support is merged, released and installed, use the matching external converter once per Zigbee2MQTT server. Pairing alone does not install an external converter. This guide does not establish ZHA support.
+
+### Troubleshooting a relay that does not respond
+
+If position reporting works but one relay does not, check that the matching converter exposes both commands and that IN1 is connected to GPIO10 and IN2 to GPIO11, with a common relay/ESP32 GND. Disconnect power before inspecting wiring, connector seating and solder joints. On the bench with the gate disconnected, use the same known-working relay channel and lead to isolate a channel or wiring fault. A pulse-start/pulse-end firmware log confirms command processing, not electrical switching at the relay. Do not assume that reflashing will repair a bad connection.
 
 ### Commissioning
 
