@@ -23,6 +23,10 @@ The ZIP includes the precompiled firmware, portable Windows flasher, matching ex
 
 If no serial port appears, hold BOOT while connecting USB, release and retry. A failed flash must be rewritten completely before use. The included converter retains the tested Estonian state labels, explained in the English README.
 
+### Device image
+
+The device image is submitted with this documentation as `public/images/devices/MD-GATE-ZB1.png`. Until the documentation/image change is merged and deployed, set the device Settings > icon to `https://raw.githubusercontent.com/ShifuEst/zigbee2mqtt.io/add-md-gate-zb1-image/public/images/devices/MD-GATE-ZB1.png`. After the official image is available, this custom override can be cleared. Firmware flashing does not install frontend images.
+
 ### ESP32 wiring
 
 | ESP32 pin | Connection |
@@ -92,7 +96,7 @@ Use independent voltage-free contacts that close at the corresponding end positi
 
 Enable joining in Zigbee2MQTT, hold BOOT for 3 seconds, then release. Allow 10 seconds after joining before testing relay commands. A short BOOT press is not a gate command. After upgrading to firmware that adds endpoint 5, perform a fresh interview; re-pair if necessary.
 
-Both pulse commands share the pulse duration (0–1000 ms, default 300 ms) and a one-second cooldown. Zero disables pulses. Commands received during an active pulse or cooldown are discarded, not queued. Sensor-mode changes must not activate a relay.
+Both pulse commands use the configured pulse duration (0–1000 ms, default 300 ms). Zero disables pulses. The downloadable 1.7.0-rc1 firmware has a shared one-second cooldown after each pulse. The 1.7.0-rc2 source change removes only this extra cooldown; its binary and hardware validation are still pending. It does not change pulse length. Commands during an active pulse are discarded, not queued; changing a converter alone does not remove the firmware cooldown. Sensor-mode changes must not activate a relay.
 
 Until compatible built-in support is merged, released and installed, use the matching external converter once per Zigbee2MQTT server. Pairing alone does not install an external converter. This guide does not establish ZHA support.
 
