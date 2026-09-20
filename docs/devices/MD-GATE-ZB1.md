@@ -114,4 +114,34 @@ Disconnect mains before wiring inside the gate enclosure. First test the control
 - [Proteco Q80S manual](https://www.proteco.net/sites/default/files/products-attached-manual/q80s_gb.pdf)
 - [Proteco PQSB02: parallel limit-switch reading, section 2.5](https://www.proteco.net/sites/default/files/products-attached-manual/pqsb02_03_06_2025_gb.pdf)
 
+
+
+## Parts used
+
+| Quantity | Part | Requirement |
+| --- | --- | --- |
+| 1 | ESP32-H2 development board | 4 MB flash; GPIO10/11/13/14 accessible |
+| 1 | Two-channel 5 V LOW relay module | Explicit 3.3 V input compatibility; two voltage-free COM/NO outputs. Tested module manufacturer/model not confirmed |
+| 2 | 10 kΩ resistors | GPIO10 to 3.3 V and GPIO11 to 3.3 V; not level converters |
+| 1 | Regulated 5 V supply | Supplies the ESP32 board and relays |
+| Optional | 24 V to 5 V DC step-down converter | For Sommer auxiliary power; verify input rating, transients and shared 100 mA limit on 35/36. No specific converter model has been validated |
+| 1 | USB data cable | Programming and bench testing |
+| As needed | Insulated wires, terminals and enclosure | Separate low-voltage wiring from mains |
+| Optional | One or two voltage-free position contacts | GPIO13 closed, GPIO14 open; other side to ESP32 GND |
+| 1 | Zigbee coordinator and Zigbee2MQTT server | Required for pairing and control |
+
+A LOW or 5 V label alone does not establish 3.3 V logic compatibility. Do not connect a relay input that rises to 5 V directly to an ESP32 GPIO. Proteco JP8 requires a verified isolated sensing interface; it is not a validated direct GPIO connection.
+
+Software: Arduino-ESP32 3.3.12 with the Espressif Zigbee library, ESP-IDF RMT for bounded pulses, Zigbee2MQTT, the MD-GATE-ZB1 converter, Python 3.11+ and esptool 5.4.0 for portable flashing.
+
+## Feature icons
+
+The frontend derives small feature icons from expose names. The converter uses door, pedestrian movement, duration, door state and mode presentation names with explicit labels, while preserving the MQTT properties `pulse`, `walk`, `pulse_duration`, `gate_state` and `sensor_mode`. Existing automations retain their command keys. Home Assistant icon metadata is supplied separately.
+
+### Alternative gate picture
+
+![MD-GATE-ZB1 gate illustration](../images/MD-GATE-ZB1-gate.png)
+
+To use this gate illustration as the device picture, set the device Icon option to `https://raw.githubusercontent.com/ShifuEst/zigbee2mqtt.io/add-md-gate-zb1-image/docs/images/MD-GATE-ZB1-gate.png`.
+
 <!-- Notes END -->
