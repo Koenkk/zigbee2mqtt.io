@@ -28,11 +28,11 @@ pageClass: device-page
 
 ### Firmware
 
-This is a Texas Instruments CC1352P, CC1352P7, CC2652P, CC2652R, CC2652RB or CC2652R7 board flashed with the Z-Stack 3.x.0 router firmware from the [Z-Stack-firmware releases](https://github.com/Koenkk/Z-Stack-firmware/releases) (`Z-Stack_3.x.0_router_*`). Pick the build for your adapter from the hardware table in the [coordinator firmware README](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0#readme); the router zips are named the same way. The SONOFF ZBDongle-P (CC2652P) for example uses `CC1352P2_CC2652P_launchpad_router_*.zip`. Boards flashed with this firmware all report the same Zigbee model `ti.router`, so Zigbee2MQTT cannot tell them apart. The firmware build is shown as *Firmware ID* on the device's *About* page in Zigbee2MQTT (for example `20221102`).
+This is a Texas Instruments CC1352P, CC1352P7, CC2652P, CC2652R, CC2652RB or CC2652R7 board flashed with the Z-Stack 3.x.0 router firmware from the [Z-Stack-firmware releases](https://github.com/Koenkk/Z-Stack-firmware/releases) (`Z-Stack_3.x.0_router_*`). Pick the build for your adapter from the hardware table in the [coordinator firmware README](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0#readme); the router zips are named the same way. The SONOFF ZBDongle-P (CC2652P) for example uses `CC1352P2_CC2652P_launchpad_router_*.zip`. Boards flashed with this firmware all report the same Zigbee model `ti.router`, so Zigbee2MQTT cannot tell them apart. The firmware build is shown as *Firmware ID* on the device's *About* page in Zigbee2MQTT (for example `20250403`). After flashing a newer build the page keeps showing the old value until you press *Interview* on that page and reload.
 
 ### Transmit power
 
-`transmit_power` requires router firmware 20221102 or newer; on older firmware reading it fails with `UNSUPPORTED_ATTRIBUTE`.
+`transmit_power` requires router firmware 20221102 or newer; on older firmware reading it fails with `UNSUPPORTED_ATTRIBUTE`. The default is 9 dBm on CC1352P/CC2652P boards such as the ZBDongle-P; the maximum is 20 dBm there and 5 dBm on CC2652R/CC2652RB.
 
 ### LED
 

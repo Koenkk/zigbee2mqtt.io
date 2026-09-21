@@ -38,7 +38,7 @@ Enable permit join in Zigbee2MQTT, then put the bridge into pairing mode: briefl
 
 ### LED
 
-The LEDs belong to Tasmota, not to the radio: the blue LED is the Wi-Fi/MQTT link indicator and the green LED follows *Toggle 1*. Neither indicates Zigbee network state; in normal operation both are off.
+The LEDs belong to Tasmota, not to the radio: the blue LED is the Wi-Fi/MQTT link indicator and the green LED follows *Toggle 1*. Neither indicates Zigbee network state. At power-up both flash briefly, then the blue LED stays on and blinks while Tasmota connects to Wi-Fi and MQTT and goes off once connected; in normal operation both are off.
 <!-- Notes END: Do not edit below this line -->
 
 
