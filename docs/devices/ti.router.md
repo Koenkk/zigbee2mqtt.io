@@ -26,9 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-
 ### Firmware
-This is a Texas Instruments CC1352P-2, CC2652RB or CC2652R flashed with the following firmware: https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0/bin
+
+This is a Texas Instruments CC1352P, CC1352P7, CC2652P, CC2652R, CC2652RB or CC2652R7 board flashed with the Z-Stack 3.x.0 router firmware from the [Z-Stack-firmware releases](https://github.com/Koenkk/Z-Stack-firmware/releases) (`Z-Stack_3.x.0_router_*`). Pick the build for your adapter from the hardware table in the [coordinator firmware README](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0#readme); the router zips are named the same way. The SONOFF ZBDongle-P (CC2652P) for example uses `CC1352P2_CC2652P_launchpad_router_*.zip`. Boards flashed with this firmware all report the same Zigbee model `ti.router`, so Zigbee2MQTT cannot tell them apart. The firmware build is shown as *Firmware ID* on the device's *About* page in Zigbee2MQTT (for example `20250403`). After flashing a newer build the page keeps showing the old value until you press *Interview* on that page and reload.
+
+### Transmit power
+
+`transmit_power` requires router firmware 20221102 or newer; on older firmware reading it fails with `UNSUPPORTED_ATTRIBUTE`. The default is 9 dBm on CC1352P/CC2652P boards such as the ZBDongle-P; the maximum is 20 dBm there and 5 dBm on CC2652R/CC2652RB.
+
+### LED
+
+The router firmware provides no LED status indication. If your board's LED is lit, it is a hardware power indicator, and Zigbee2MQTT cannot switch a router's LED off (`disable_led` only applies to the coordinator). On the SONOFF ZBDongle-P the red LED is such a power indicator; the firmware's LED pin (DIO_7) is not populated on this dongle, per the Z-Stack-firmware hardware table.
 <!-- Notes END: Do not edit below this line -->
 
 
