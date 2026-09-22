@@ -1,0 +1,11 @@
+import { P as openBlock, m as createStaticVNode, u as createElementBlock } from "./runtime-core.esm-bundler-D6Jmich1.js";
+import { t as _plugin_vue_export_helper_default } from "./app-DRb3XOJL.js";
+//#region docs/devices/LR-ZHWG11LM.md
+var _pageData = JSON.parse("{\"path\":\"/devices/LR-ZHWG11LM.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"content-page\"},\"git\":{\"updatedTime\":1789494558000,\"contributors\":[{\"name\":\"igorlistopad\",\"username\":\"igorlistopad\",\"email\":\"31544843+igorlistopad@users.noreply.github.com\",\"commits\":1,\"url\":\"https://github.com/igorlistopad\"}],\"changelog\":[{\"hash\":\"ca3ef220ffe7896c1cc3aac66f24aeeda5aec3fe\",\"time\":1789494558000,\"email\":\"31544843+igorlistopad@users.noreply.github.com\",\"author\":\"Igor Listopad\",\"message\":\"docs: add OpenLumi LR-DGNWG05LM and LR-ZHWG11LM documentation (#5523)\"}]},\"filePathRelative\":\"devices/LR-ZHWG11LM.md\"}");
+var _sfc_main = { name: "LR-ZHWG11LM.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [createStaticVNode("<h2 id=\"notes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#notes\"><span>Notes</span></a></h2><p>This device is an <strong>Aqara ZHWG11LM</strong> gateway with its JN5169 Zigbee module flashed with Lumi Router firmware, allowing it to operate as a Zigbee router.</p><h3 id=\"firmware\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#firmware\"><span>Firmware</span></a></h3><p>Open source firmware and flashing instructions are available on <a href=\"https://github.com/igorlistopad/Lumi-Router-JN5169\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.</p><h3 id=\"pairing\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#pairing\"><span>Pairing</span></a></h3><p>See the <a href=\"https://github.com/igorlistopad/Lumi-Router-JN5169#reset-and-pairing\" target=\"_blank\" rel=\"noopener noreferrer\">reset and pairing instructions</a>.</p>", 6)])]);
+}
+var LR_ZHWG11LM_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+//#endregion
+export { _pageData, LR_ZHWG11LM_default as default };
