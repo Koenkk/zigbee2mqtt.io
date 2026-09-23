@@ -30,6 +30,11 @@ pageClass: device-page
 
 Press and hold the button on the device until the blue light starts blinking, release it and the pairing should begin.
 If you're having problems pairing, try keeping the device alive (press the button every second) after pairing started, until pairing completed
+
+### Configuration issues
+
+The device may pair successfully and report button/rotation events, but configuration is unreliable.
+Zigbee2MQTT may report `Device has no input cluster manuSpecificLumi` and reading or changing the `operation_mode` or `sensitivity` settings may time out; see [issue 29505](https://github.com/Koenkk/zigbee2mqtt/issues/29505).
 <!-- Notes END: Do not edit below this line -->
 
 
