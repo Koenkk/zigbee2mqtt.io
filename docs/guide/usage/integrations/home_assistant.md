@@ -47,7 +47,9 @@ To respond to button actions you can use one of the following Home Assistant con
 
 ### Via MQTT device trigger (recommended)
 
-The [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/) are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
+The actions get discovered by Home Assistant as [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger_.mqtt/) after the device generates them at least once. **Press each button on the physical device to have all the actions available in Home Assistant**.
+
+#### YAML
 
 ```yaml
 automation:
@@ -63,6 +65,23 @@ automation:
             target:
                 entity_id: light.bedroom
 ```
+
+#### Visual editor
+
+1. Add trigger  
+   ![device_trigger_1](../../../images/guide/usage/integrations/home_assistant/device_trigger_1.png)
+
+2. Filter "By type"  
+   ![device_trigger_2](../../../images/guide/usage/integrations/home_assistant/device_trigger_2.png)
+
+3. Scroll down to "Generic -> Device"  
+   ![device_trigger_3](../../../images/guide/usage/integrations/home_assistant/device_trigger_3.png)
+
+4. Select "Device" trigger  
+   ![device_trigger_4](../../../images/guide/usage/integrations/home_assistant/device_trigger_4.png)
+
+5. Pick your button/remote and its action  
+   ![device_trigger_5](../../../images/guide/usage/integrations/home_assistant/device_trigger_5.png)
 
 ### Via Home Assistant `event` entity (experimental)
 
