@@ -9,16 +9,17 @@ import {generateOptions} from './device_page_options';
 import {devicesBaseDir, imageBaseDir, imageBaseUrl} from './constants';
 import {getNotes} from './device_page_notes';
 import {getWarnings} from './device_page_warnings';
-import {Definition} from 'zigbee-herdsman-converters';
+import {DefinitionWithWhiteLabelOf} from './types';
 
 export function resolveDeviceFile(model: string) {
     return path.resolve(devicesBaseDir, `${normalizeModel(model)}.md`);
 }
 
-export default async function generateDevice(device: Definition) {
+export default async function generateDevice(device: DefinitionWithWhiteLabelOf) {
     const deviceFile = resolveDeviceFile(device.model);
     const image = await getImage(device, imageBaseDir, imageBaseUrl);
-    const exposes = typeof device.exposes === 'function' ? device.exposes({isDummyDevice: true}, {}) : device.exposes;
+    const manufacturerName = device.whiteLabelFingerprint?.[0].manufacturerName;
+    const exposes = typeof device.exposes === 'function' ? device.exposes({isDummyDevice: true, manufacturerName}, {}) : device.exposes;
     const exposesDescription = Array.from(new Set(exposes.map((e) => e.name ?? `${e.type} (${e.features?.map((f) => f.name).join(', ')})`))).join(
         ', ',
     );
