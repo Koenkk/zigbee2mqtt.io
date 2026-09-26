@@ -25,12 +25,6 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-## Notes
-
-- Zigbee2MQTT exposes this device as a switch.
-- The observed Tuya datapoint is DP 1, which reports the relay state as on/off.
-- No metering datapoints were observed during testing; current, voltage, power, and energy are not exposed.
-
 <!-- Notes END: Do not edit below this line -->
 
 
