@@ -116,6 +116,13 @@ Group discovery properties can be overridden via `groups.<id>.homeassistant` in 
 
 Any Home Assistant MQTT discovery property can be overridden on a device. Two examples are shown below. For a full and current list of discovery properties, see [the Home Assistant MQTT Discovery integration](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) and [the Home Assistant extension](https://github.com/Koenkk/zigbee2mqtt/blob/03ba647dc6b5f299f8f3ab441712999fcb3a253e/lib/extension/homeassistant.ts) in the Zigbee2MQTT source code.
 
+Overrides can be set at the device level or for a specific discovered entity under its `object_id`.
+The entity `object_id` is the part used in the Home Assistant discovery payload, for example `light`, `cover`, `climate`, or `temperature`.
+Device-specific overrides are applied after Zigbee2MQTT's built-in compatibility mappings, so they can be used to remove or adjust discovery properties that do not match your installation.
+Set a discovery property to `null` to remove it from the Home Assistant discovery payload.
+
+Converter authors can also set `homeassistant` metadata on an expose: `type` selects the discovery component, `schema` sets the discovery payload's `schema`, and `valueTemplate` sets its `value_template` (`null` removes that template). These are converter metadata fields; user configuration overrides use the MQTT discovery property names, such as `value_template`, rather than `valueTemplate`.
+
 ### Changing `supported_color_modes`
 
 This is useful for switching light bulbs from reporting values from X/Y (which is the default) to reporting in hue / saturation (which is what bulbs report color in when changing via hue or saturation, such as with the `hue_move` and `saturation_move` commands).
@@ -162,6 +169,38 @@ devices:
                 name: my_switch_right
                 value_template: null
                 state_value_template: '{{ value_json.state_right }}'
+```
+
+### Removing unsupported capabilities
+
+Some devices expose generic capabilities that are not useful for every installation. For example, a cover controller can expose tilt controls even when it is connected to a roller blind without slats, or a thermostat discovery payload can expose modes that should not be offered in Home Assistant. These can be adjusted with per-entity discovery overrides.
+
+This example removes the Home Assistant tilt command/status properties from a discovered cover:
+
+```yaml
+devices:
+    '0x12345678':
+        friendly_name: living_room_blind
+        homeassistant:
+            cover:
+                tilt_command_topic: null
+                tilt_status_topic: null
+                tilt_status_template: null
+                tilt_min: null
+                tilt_max: null
+                tilt_closed_value: null
+                tilt_opened_value: null
+```
+
+This example limits a climate entity to the modes that should be offered by Home Assistant:
+
+```yaml
+devices:
+    '0x12345678':
+        friendly_name: hallway_thermostat
+        homeassistant:
+            climate:
+                modes: ['off', 'heat', 'auto']
 ```
 
 ### Changing device properties
