@@ -41,6 +41,10 @@ without having to restart Home Assistant. It also makes it possible to show whic
 
 The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/devices-groups.html#specific-device-options) for the available options.
 
+## Configuration state readback
+
+Some configuration entities are only useful in Home Assistant after Zigbee2MQTT knows their current state. Zigbee2MQTT reads back selected known configuration exposes when a device reconnects or is reconfigured, so newly discovered config controls do not stay `unknown` until the device reports them by itself.
+
 ## Responding to button actions
 
 To respond to button actions you can use one of the following Home Assistant configurations.
