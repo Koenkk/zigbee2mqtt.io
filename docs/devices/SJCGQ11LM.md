@@ -45,7 +45,6 @@ Pairing difficulties have been reported on networks with a large number of devic
 - Disable joining for all devices, then use the frontend's permit-join dropdown to enable joining through a specific nearby router instead of **All**. This does not guarantee the sensor will choose that router as its parent.
 - Successful joins have been reported through Philips Hue lights and a Sengled plug, while attempts through an older SONOFF ZBMINI have failed. Compatibility may vary by router model and firmware; if one router does not work, try another.
 - Place the sensor right beside the selected router while pairing. After joining, it may work farther away, but successful pairing does not guarantee reliable operation at the final location. Check that water-leak and clear reports arrive after moving it.
-
 <!-- Notes END: Do not edit below this line -->
 
 

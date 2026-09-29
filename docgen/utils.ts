@@ -46,7 +46,7 @@ export async function getImage(definition: DefinitionWithWhiteLabelOf, imageBase
 }
 
 export function getAddedAt(deviceContent: string) {
-    const addedAtMatch = deviceContent.match(/^addedAt: (20[\dT:Z-]+)/m);
+    const addedAtMatch = deviceContent.match(/^addedAt: (20[\dT:.Z-]+)/m);
     if (addedAtMatch) {
         return addedAtMatch[1];
     }

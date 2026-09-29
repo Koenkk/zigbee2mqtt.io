@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | CCTFR6000  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
-| Description | 6 Channel Boiler Actuator |
-| Exposes | switch (state) |
+| Description | Wiser underfloor heating controller |
+| Exposes | switch (state), demand_percentage, cycle_time |
 | Picture | ![Schneider Electric CCTFR6000](https://www.zigbee2mqtt.io/images/devices/CCTFR6000.png) |
+| White-label | Schneider Electric CCTFR6600, Schneider Electric CCTFR6610 |
 
 
 
@@ -135,4 +136,132 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Demand percentage (numeric, 1 endpoint)
+Heating demand as share of the cycle time. The relay only closes while the channel state is ON and the demand is above 0; 100 keeps the relay closed permanently..
+Value can be found in the published state on the `demand_percentage_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"demand_percentage_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"demand_percentage_1": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Demand percentage (numeric, 2 endpoint)
+Heating demand as share of the cycle time. The relay only closes while the channel state is ON and the demand is above 0; 100 keeps the relay closed permanently..
+Value can be found in the published state on the `demand_percentage_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"demand_percentage_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"demand_percentage_2": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Demand percentage (numeric, 3 endpoint)
+Heating demand as share of the cycle time. The relay only closes while the channel state is ON and the demand is above 0; 100 keeps the relay closed permanently..
+Value can be found in the published state on the `demand_percentage_3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"demand_percentage_3": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"demand_percentage_3": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Demand percentage (numeric, 4 endpoint)
+Heating demand as share of the cycle time. The relay only closes while the channel state is ON and the demand is above 0; 100 keeps the relay closed permanently..
+Value can be found in the published state on the `demand_percentage_4` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"demand_percentage_4": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"demand_percentage_4": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Demand percentage (numeric, 5 endpoint)
+Heating demand as share of the cycle time. The relay only closes while the channel state is ON and the demand is above 0; 100 keeps the relay closed permanently..
+Value can be found in the published state on the `demand_percentage_5` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"demand_percentage_5": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"demand_percentage_5": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Demand percentage (numeric, 6 endpoint)
+Heating demand as share of the cycle time. The relay only closes while the channel state is ON and the demand is above 0; 100 keeps the relay closed permanently..
+Value can be found in the published state on the `demand_percentage_6` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"demand_percentage_6": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"demand_percentage_6": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Demand percentage (numeric, 7 endpoint)
+Heating demand as share of the cycle time. The relay only closes while the channel state is ON and the demand is above 0; 100 keeps the relay closed permanently..
+Value can be found in the published state on the `demand_percentage_7` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"demand_percentage_7": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"demand_percentage_7": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Demand percentage (numeric, 8 endpoint)
+Heating demand as share of the cycle time. The relay only closes while the channel state is ON and the demand is above 0; 100 keeps the relay closed permanently..
+Value can be found in the published state on the `demand_percentage_8` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"demand_percentage_8": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"demand_percentage_8": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Cycle time (numeric, 1 endpoint)
+Length of the time-proportional switching cycle (factory default 1800 s for heating channels, 600 s for pump and boiler)..
+Value can be found in the published state on the `cycle_time_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cycle_time_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_time_1": NEW_VALUE}`.
+The minimal value is `300` and the maximum value is `3200`.
+The unit of this value is `s`.
+
+### Cycle time (numeric, 2 endpoint)
+Length of the time-proportional switching cycle (factory default 1800 s for heating channels, 600 s for pump and boiler)..
+Value can be found in the published state on the `cycle_time_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cycle_time_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_time_2": NEW_VALUE}`.
+The minimal value is `300` and the maximum value is `3200`.
+The unit of this value is `s`.
+
+### Cycle time (numeric, 3 endpoint)
+Length of the time-proportional switching cycle (factory default 1800 s for heating channels, 600 s for pump and boiler)..
+Value can be found in the published state on the `cycle_time_3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cycle_time_3": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_time_3": NEW_VALUE}`.
+The minimal value is `300` and the maximum value is `3200`.
+The unit of this value is `s`.
+
+### Cycle time (numeric, 4 endpoint)
+Length of the time-proportional switching cycle (factory default 1800 s for heating channels, 600 s for pump and boiler)..
+Value can be found in the published state on the `cycle_time_4` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cycle_time_4": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_time_4": NEW_VALUE}`.
+The minimal value is `300` and the maximum value is `3200`.
+The unit of this value is `s`.
+
+### Cycle time (numeric, 5 endpoint)
+Length of the time-proportional switching cycle (factory default 1800 s for heating channels, 600 s for pump and boiler)..
+Value can be found in the published state on the `cycle_time_5` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cycle_time_5": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_time_5": NEW_VALUE}`.
+The minimal value is `300` and the maximum value is `3200`.
+The unit of this value is `s`.
+
+### Cycle time (numeric, 6 endpoint)
+Length of the time-proportional switching cycle (factory default 1800 s for heating channels, 600 s for pump and boiler)..
+Value can be found in the published state on the `cycle_time_6` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cycle_time_6": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_time_6": NEW_VALUE}`.
+The minimal value is `300` and the maximum value is `3200`.
+The unit of this value is `s`.
+
+### Cycle time (numeric, 7 endpoint)
+Length of the time-proportional switching cycle (factory default 1800 s for heating channels, 600 s for pump and boiler)..
+Value can be found in the published state on the `cycle_time_7` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cycle_time_7": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_time_7": NEW_VALUE}`.
+The minimal value is `300` and the maximum value is `3200`.
+The unit of this value is `s`.
+
+### Cycle time (numeric, 8 endpoint)
+Length of the time-proportional switching cycle (factory default 1800 s for heating channels, 600 s for pump and boiler)..
+Value can be found in the published state on the `cycle_time_8` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cycle_time_8": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_time_8": NEW_VALUE}`.
+The minimal value is `300` and the maximum value is `3200`.
+The unit of this value is `s`.
 

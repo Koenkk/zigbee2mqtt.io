@@ -42,7 +42,7 @@ pageClass: device-page
 Alarm status.
 Value can be found in the published state on the `alarm_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `alarm_sound`, `alarm_light`, `alarm_sound_light`, `normal`.
+The possible values are: `alarm_sound`, `alarm_light`, `alarm_sound_light`, `no_alarm`.
 
 ### Alarm switch (binary)
 Enable alarm.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TZE284_cwyqwqbf  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity sensor with LCD clock |
-| Exposes | temperature, humidity, temperature_unit, max_temperature_alarm, min_temperature_alarm, max_humidity_alarm, min_humidity_alarm, temperature_alarm, humidity_alarm, temperature_periodic_report, humidity_periodic_report, temperature_sensitivity, humidity_sensitivity, battery |
+| Exposes | temperature, humidity, temperature_unit, max_temperature_alarm, min_temperature_alarm, max_humidity_alarm, min_humidity_alarm, temperature_alarm, humidity_alarm, temperature_periodic_report, humidity_periodic_report, temperature_sensitivity, humidity_sensitivity, battery_state |
 | Picture | ![Tuya TZE284_cwyqwqbf](https://www.zigbee2mqtt.io/images/devices/TZE284_cwyqwqbf.png) |
 
 

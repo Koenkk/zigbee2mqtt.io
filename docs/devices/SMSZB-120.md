@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SMSZB-120  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Smoke detector with siren |
-| Exposes | smoke, battery_low, test, alarm, reliability, fault, max_duration, temperature, battery, voltage |
+| Exposes | reliability, fault, temperature, battery, voltage, smoke, battery_low, supervision_reports, restore_reports, test, warning, max_duration |
 | Picture | ![Develco SMSZB-120](https://www.zigbee2mqtt.io/images/devices/SMSZB-120.png) |
 | White-label | Frient 94430, Cavius 2103 |
 
@@ -75,31 +75,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Smoke (binary)
-Indicates whether the device detected smoke.
-Value can be found in the published state on the `smoke` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` smoke is ON, if `false` OFF.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
-### Test (binary)
-Indicates whether the device is being tested.
-Value can be found in the published state on the `test` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` test is ON, if `false` OFF.
-
-### Alarm (binary)
-Manual Start of Siren.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
-If value equals `START` alarm is ON, if `OFF` OFF.
-
 ### Reliability (enum)
 Indicates reason if any fault.
 Value can be found in the published state on the `reliability` property.
@@ -111,14 +86,6 @@ Indicates whether the device are in fault state.
 Value can be found in the published state on the `fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` fault is ON, if `false` OFF.
-
-### Max duration (numeric)
-Maximum time that the alarm will be active.
-Value can be found in the published state on the `max_duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `65534`.
-The unit of this value is `s`.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -141,4 +108,51 @@ Value can be found in the published state on the `voltage` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Smoke (binary)
+Indicates whether the device detected smoke.
+Value can be found in the published state on the `smoke` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` smoke is ON, if `false` OFF.
+
+### Battery low (binary)
+Indicates whether the battery of the device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
+
+### Supervision reports (binary)
+Indicates whether the device issues reports on zone operational status.
+Value can be found in the published state on the `supervision_reports` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` supervision reports is ON, if `false` OFF.
+
+### Restore reports (binary)
+Indicates whether the device issues reports on alarm no longer being present.
+Value can be found in the published state on the `restore_reports` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` restore reports is ON, if `false` OFF.
+
+### Test (binary)
+Indicates whether the device is currently performing a test.
+Value can be found in the published state on the `test` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` test is ON, if `false` OFF.
+
+### Warning (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe_level": VALUE, "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
+- `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
+- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe_level` (enum): Intensity of the strobe allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) during warning allowed values: `true` or `false`
+- `strobe_duty_cycle` (numeric): Length of the flash cycle max value is 10
+- `duration` (numeric): Duration in seconds of the alarm unit is s
+
+### Max duration (numeric)
+Max duration in seconds of the alarm.
+Value can be found in the published state on the `max_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `600`.
+The unit of this value is `s`.
 

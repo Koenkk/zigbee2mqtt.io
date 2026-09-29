@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIRZB-111  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Customizable siren |
-| Exposes | battery_low, test, warning, squawk, alarm, max_duration, battery, voltage |
+| Exposes | battery, voltage, smoke, battery_low, supervision_reports, restore_reports, test, warning, max_duration, squawk |
 | Picture | ![Develco SIRZB-111](https://www.zigbee2mqtt.io/images/devices/SIRZB-111.png) |
 
 
@@ -32,48 +32,6 @@ pageClass: device-page
 
 
 ## Exposes
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
-### Test (binary)
-Indicates whether the device is being tested.
-Value can be found in the published state on the `test` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` test is ON, if `false` OFF.
-
-### Warning (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe_level": VALUE, "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
-- `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
-- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
-- `strobe_level` (enum): Intensity of the strobe allowed values: `low`, `medium`, `high`, `very_high`
-- `strobe` (binary): Turn on/off the strobe (light) during warning allowed values: `true` or `false`
-- `strobe_duty_cycle` (numeric): Length of the flash cycle max value is 10
-- `duration` (numeric): Duration in seconds of the alarm unit is s
-
-### Squawk (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"squawk": {"state": VALUE, "level": VALUE, "strobe": VALUE}}`
-- `state` (enum): Set Squawk state allowed values: `system_is_armed`, `system_is_disarmed`
-- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
-- `strobe` (binary): Turn on/off the strobe (light) for Squawk allowed values: `true` or `false`
-
-### Alarm (binary)
-Manual start of the siren.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
-If value equals `START` alarm is ON, if `OFF` OFF.
-
-### Max duration (numeric)
-Maximum time that the alarm will be active.
-Value can be found in the published state on the `max_duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `65534`.
-The unit of this value is `s`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -89,4 +47,57 @@ Value can be found in the published state on the `voltage` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Smoke (binary)
+Indicates whether the device detected smoke.
+Value can be found in the published state on the `smoke` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` smoke is ON, if `false` OFF.
+
+### Battery low (binary)
+Indicates whether the battery of the device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
+
+### Supervision reports (binary)
+Indicates whether the device issues reports on zone operational status.
+Value can be found in the published state on the `supervision_reports` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` supervision reports is ON, if `false` OFF.
+
+### Restore reports (binary)
+Indicates whether the device issues reports on alarm no longer being present.
+Value can be found in the published state on the `restore_reports` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` restore reports is ON, if `false` OFF.
+
+### Test (binary)
+Indicates whether the device is currently performing a test.
+Value can be found in the published state on the `test` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` test is ON, if `false` OFF.
+
+### Warning (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe_level": VALUE, "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
+- `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
+- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe_level` (enum): Intensity of the strobe allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) during warning allowed values: `true` or `false`
+- `strobe_duty_cycle` (numeric): Length of the flash cycle max value is 10
+- `duration` (numeric): Duration in seconds of the alarm unit is s
+
+### Max duration (numeric)
+Max duration in seconds of the alarm.
+Value can be found in the published state on the `max_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `900`.
+The unit of this value is `s`.
+
+### Squawk (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"squawk": {"state": VALUE, "level": VALUE, "strobe": VALUE}}`
+- `state` (enum): Set Squawk state allowed values: `system_is_armed`, `system_is_disarmed`
+- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) for Squawk allowed values: `true` or `false`
 

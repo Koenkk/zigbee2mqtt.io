@@ -1,7 +1,7 @@
 ---
 title: "AutomatOn CH8Z control via MQTT"
 description: "Integrate your AutomatOn CH8Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2026-09-29T18:28:03
 pageClass: device-page
 ---
 
@@ -24,7 +24,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 ### Pairing
@@ -62,7 +61,6 @@ The installation manual describes removing an internal jumper to turn channel 5 
 The controller does not send a Zigbee device announcement when it is powered back on, and it does not report its datapoints on boot. After a power cut Zigbee2MQTT therefore keeps showing the state from before the cut.
 
 The controller does report changes as they happen, but each report carries only the datapoint that changed, so switching one channel refreshes that channel alone and leaves the others stale. To refresh everything at once, run **Reconfigure** on the device in Zigbee2MQTT, which queries all datapoints.
-
 <!-- Notes END: Do not edit below this line -->
 
 

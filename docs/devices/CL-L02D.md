@@ -213,11 +213,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `flow1`, `flow2`, `fading`, `hopping`, `breathing`, `rolling`.
 
 ### Effect speed (numeric)
-RGB dynamic effect speed (1-100%).
+RGB dynamic effect speed (0-100%, 0 when no effect is active).
 Value can be found in the published state on the `effect_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"effect_speed": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_speed": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Effect colors (list)

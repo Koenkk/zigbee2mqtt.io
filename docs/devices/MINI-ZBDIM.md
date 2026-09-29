@@ -170,7 +170,7 @@ Calibration status..
 Value can be found in the published state on the `calibration_status` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_status": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `uncalibrate`, `cailbrating`, `calibration_failed`, `calibrated`.
+The possible values are: `uncalibrated`, `calibrating`, `calibration_failed`, `calibrated`.
 
 ### Calibration progress (numeric)
 Calibration progress..

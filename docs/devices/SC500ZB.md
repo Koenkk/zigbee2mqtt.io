@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SC500ZB  |
 | Vendor  | [LoraTap](/supported-devices/#v=LoraTap)  |
 | Description | Smart curtain/shutter switch |
-| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode, switch_type |
+| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, switch_type |
 | Picture | ![LoraTap SC500ZB](https://www.zigbee2mqtt.io/images/devices/SC500ZB.png) |
 
 
@@ -36,7 +36,7 @@ Power-on behavior: according to position of the physical switch connected to it,
 
 * `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
-* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the reported cover position and the state derived from it, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 

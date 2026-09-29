@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TRV-ZBT  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee thermostatic radiator valve |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, fault_code, screen_direction, child_lock, open_window, frost_protection_temperature, temperature_sensor_select, external_temperature_input, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, heating_valve_position, idle_valve_position, temperature_accuracy, smart_temperature_control, temporary_mode, low_battery_valve_state, schedule_active_group, schedule_group_to_edit, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, open_window_detected, heat_percentage_hour, valve_travel_calibration, motor_travel_calibration_status, bluetooth_pairing, bluetooth_pairing_status, read_temperature_control_history, temperature_control_history |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, fault_status, screen_direction, child_lock, open_window, frost_protection_temperature, temperature_sensor_select, external_temperature_input, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, heating_valve_position, idle_valve_position, temperature_accuracy, smart_temperature_control, temporary_mode_mode, temporary_mode_duration, temporary_mode_target_temperature, low_battery_valve_state, schedule_active_group, schedule_group_to_edit, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, remote_temperature_linkage, remote_setpoint_temperature, open_window_detected, heat_percentage_hour, valve_travel_calibration, motor_travel_calibration_status, bluetooth_pairing, bluetooth_pairing_status, read_temperature_control_history, temperature_control_history |
 | Picture | ![SONOFF TRV-ZBT](https://www.zigbee2mqtt.io/images/devices/TRV-ZBT.png) |
 
 
@@ -56,10 +56,10 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Fault code (text)
-Device fault code decoded from the TRV-ZBT fault bitmask..
-Value can be found in the published state on the `fault_code` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fault_code": ""}`.
+### Fault status (text)
+Reports the current device fault condition..
+Value can be found in the published state on the `fault_status` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fault_status": ""}`.
 It's not possible to write (`/set`) this value.
 
 ### Screen direction (enum)
@@ -92,11 +92,11 @@ The minimal value is `5` and the maximum value is `15`.
 The unit of this value is `°C`.
 
 ### Temperature sensor (enum)
-Whether to use the value of the internal temperature sensor or an external temperature sensor for the perceived local temperature. Using an external sensor does not require local temperature calibration..
+Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor.When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor..
 Value can be found in the published state on the `temperature_sensor_select` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
-The possible values are: `internal`, `external`, `external_2`, `external_3`.
+The possible values are: `local_temperature`, `remote_temperature`, `remote_source_offline`.
 
 ### External temperature (numeric)
 The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Zigbee2MQTT..
@@ -170,13 +170,28 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_temperature_control": NEW_VALUE}`.
 If value equals `ON` smart temperature control is ON, if `OFF` OFF.
 
-### Temporary mode (composite)
-Temporary temperature mode settings..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode": {"mode": VALUE, "duration": VALUE, "target_temperature": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode": ""}`.
-- `mode` (enum): Temporary mode. allowed values: `boost`, `timer`
-- `duration` (numeric): Boost Mode: Sets maximum TRV temperature for up to 180 minutes.Timer Mode: Customizes temperature and duration, up to 24 hours. max value is 1440, unit is minutes
-- `target_temperature` (numeric): Target temperature used in timer mode. min value is 5, max value is 30, unit is °C
+### Temporary mode mode (enum)
+Temporary mode: Boost heats at 30°C; Timer uses a custom temperature and duration..
+Value can be found in the published state on the `temporary_mode_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_mode": NEW_VALUE}`.
+The possible values are: `disabled`, `timer`, `boost`.
+
+### Temporary mode duration (numeric)
+Boost Mode: Sets maximum TRV temperature for up to 180 minutes. Timer Mode: Customizes temperature and duration, up to 24 hours..
+Value can be found in the published state on the `temporary_mode_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_duration": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `1440`.
+The unit of this value is `minutes`.
+
+### Temporary mode target temperature (numeric)
+Target temperature used in timer mode..
+Value can be found in the published state on the `temporary_mode_target_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode_target_temperature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_target_temperature": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `30`.
+The unit of this value is `°C`.
 
 ### Low battery valve state (enum)
 Fixed valve opening percentage used when the battery is too low to operate..
@@ -240,6 +255,21 @@ The preset heating schedule to use when the system mode is set to "auto" (indica
 Value can be found in the published state on the `weekly_schedule_saturday` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_saturday": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_saturday": NEW_VALUE}`.
+
+### Thermostat Linkage (binary)
+Enables or disables target temperature linkage with the thermostat..
+Value can be found in the published state on the `remote_temperature_linkage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"remote_temperature_linkage": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_temperature_linkage": NEW_VALUE}`.
+If value equals `ON` thermostat Linkage is ON, if `OFF` OFF.
+
+### Thermostat Linkage Target Temperature (numeric)
+Target temperature received from the thermostat while linkage is enabled..
+Value can be found in the published state on the `remote_setpoint_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"remote_setpoint_temperature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_setpoint_temperature": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `30`.
+The unit of this value is `°C`.
 
 ### Open window detected (binary)
 Indicates whether open window detection was triggered..

@@ -84,7 +84,7 @@ Select the alarm sound preset..
 Value can be found in the published state on the `alarm_sound_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_sound_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_sound_type": NEW_VALUE}`.
-The possible values are: `siren_classic`, `siren_steady`, `siren_rising`, `siren_warning`, `siren_rapid`, `siren_emergency`, `tone_chirp`, `tone_hi_lo`, `tone_intermittent`, `tone_pulse`.
+The possible values are: `siren_classic`, `siren_steady`, `siren_rising`, `siren_warning`, `siren_rapid`, `siren_emergency`, `tone_chirp`, `tone_hi_lo`, `tone_intermittent`, `tone_pulse`, `chime_doorbell`, `chime_classic_clock`, `chime_electronic_clock`, `chime_bright`, `chime_soft`.
 
 ### Alarm volume level (enum)
 Set the alarm sound volume level..

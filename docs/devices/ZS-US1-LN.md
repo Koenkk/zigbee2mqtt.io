@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZS-US1-LN  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart light switch - 1 gang |
-| Exposes | switch (state) |
+| Exposes | switch (state), power_on_behavior, switch_type, backlight_mode |
 | Picture | ![Moes ZS-US1-LN](https://www.zigbee2mqtt.io/images/devices/ZS-US1-LN.png) |
 
 

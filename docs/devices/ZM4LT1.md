@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM4LT1  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | 1-gang switch module |
-| Exposes | switch (state), countdown, power_outage_memory, switch_type, indicator_mode |
+| Exposes | switch (state), countdown, power_outage_memory, switch_type, indicator_mode, inching_control_set |
 | Picture | ![Moes ZM4LT1](https://www.zigbee2mqtt.io/images/devices/ZM4LT1.png) |
 
 

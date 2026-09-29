@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TOWSMR1-20A-AC  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Single-phase multifunction RCBO (DIN Module) |
-| Exposes | switch (state), temperature, current, power, voltage, energy, event, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, auto_reclosing, restore_default, overcurrent_recloser, leakage_recloser, overpower_recloser |
+| Exposes | switch (state), temperature, current, power, voltage, energy, event, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, auto_reclosing, restore_default, overcurrent_recloser, leakage_recloser, overpower_recloser, leakage_current, over_current_setting, over_current_threshold, leakage_setting, leakage_threshold |
 | Picture | ![Tongou TOWSMR1-20A-AC](https://www.zigbee2mqtt.io/images/devices/TOWSMR1-20A-AC.png) |
 
 

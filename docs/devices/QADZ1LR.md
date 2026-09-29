@@ -1,0 +1,76 @@
+---
+title: "QA QADZ1LR control via MQTT"
+description: "Integrate your QA QADZ1LR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-09-29T18:29:03.120Z
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# QA QADZ1LR
+
+|     |     |
+|-----|-----|
+| Model | QADZ1LR  |
+| Vendor  | [QA](/supported-devices/#v=QA)  |
+| Description | 1 channel long range dimmer module |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, switch_type, dimming_time |
+| Picture | ![QA QADZ1LR](https://www.zigbee2mqtt.io/images/devices/QADZ1LR.png) |
+
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
+
+## Exposes
+
+### Light 
+This light supports the following features: `state`, `brightness`, `min_brightness`, `max_brightness`.
+- `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
+- `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
+
+### Countdown (numeric)
+Toggle the device after a set duration (one time action).
+Value can be found in the published state on the `countdown` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
+
+### Power on behavior (enum)
+Value can be found in the published state on the `power_on_behavior` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `previous`.
+
+### Switch type (enum)
+Type of the external switch.
+Value can be found in the published state on the `switch_type` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
+
+### Dimming time (numeric)
+Dimming transition time.
+Value can be found in the published state on the `dimming_time` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_time": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `15`.
+The unit of this value is `s`.
+

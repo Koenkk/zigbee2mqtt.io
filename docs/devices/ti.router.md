@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Texas Instruments router |
 | Exposes | transmit_power |
 | Picture | ![Custom devices (DiY) ti.router](https://www.zigbee2mqtt.io/images/devices/ti.router.png) |
+| White-label | SONOFF ZBDongle-P |
 
 
 
@@ -45,7 +46,7 @@ The router firmware provides no LED status indication. If your board's LED is li
 ## Exposes
 
 ### Transmit power (numeric)
-Transmit power, supported from firmware 20221102. The max for CC1352 is 20 dBm and 5 dBm for CC2652 (any higher value is converted to 5dBm).
+Transmit power, supported from firmware 20221102. The max is 20 dBm for CC1352P/CC2652P (default 9 dBm) and 5 dBm for CC2652R/CC2652RB (any higher value is converted to 5 dBm).
 Value can be found in the published state on the `transmit_power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"transmit_power": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transmit_power": NEW_VALUE}`.

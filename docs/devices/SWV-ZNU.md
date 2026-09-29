@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SWV-ZNU  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart water valve |
-| Exposes | battery, switch (state), child_lock, manual_default_settings, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, real_time_irrigation_duration, hour_irrigation_duration, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
+| Exposes | battery, switch (state), child_lock, irrigation_duration, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, real_time_irrigation_duration, hour_irrigation_duration, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
 | Picture | ![SONOFF SWV-ZNU](https://www.zigbee2mqtt.io/images/devices/SWV-ZNU.png) |
 
 
@@ -67,11 +67,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
-### Manual default settings (composite)
-Single irrigation settings.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_default_settings": {"irrigation_duration": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_default_settings": ""}`.
-- `irrigation_duration` (numeric): Irrigation duration min value is 1, max value is 719, unit is min
+### Irrigation duration (numeric)
+Default duration for manual irrigation.
+Value can be found in the published state on the `irrigation_duration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_duration": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `719`.
+The unit of this value is `min`.
 
 ### Irrigation plan settings (composite)
 Set irrigation plan.

@@ -118,7 +118,7 @@ It's not possible to write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Illuminance (numeric, 3 endpoint)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_3": ""}`.
 It's not possible to write (`/set`) this value.

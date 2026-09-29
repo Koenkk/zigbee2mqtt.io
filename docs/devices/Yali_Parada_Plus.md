@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | Yali Parada Plus  |
 | Vendor  | [Purmo/Radson](/supported-devices/#v=Purmo%2FRadson)  |
 | Description | Electric oil-filled radiator |
-| Exposes | climate (occupied_heating_setpoint, unoccupied_heating_setpoint, system_mode, local_temperature, local_temperature_calibration, running_state, running_mode), max_heat_setpoint_limit |
+| Exposes | climate (occupied_heating_setpoint, unoccupied_heating_setpoint, system_mode, local_temperature, local_temperature_calibration, running_state, running_mode), max_heat_setpoint_limit, keypad_lockout |
 | Picture | ![Purmo/Radson Yali Parada Plus](https://www.zigbee2mqtt.io/images/devices/Yali-Parada-Plus.png) |
+| White-label | Purmo/Radson Yali Digital Plus, LVI Yali Digital Plus |
 
 
 
@@ -53,4 +54,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit": NEW_VALUE}`.
 The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
+
+### Keypad lockout (enum)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `keypad_lockout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": NEW_VALUE}`.
+The possible values are: `unlock`, `lock1`, `lock2`.
 

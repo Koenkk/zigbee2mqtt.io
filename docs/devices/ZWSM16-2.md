@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZWSM16-2  |
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
 | Description | 2 gang switch module |
-| Exposes | switch (state), countdown, switch_type, backlight_mode, indicator_mode |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type, backlight_mode, indicator_mode |
 | Picture | ![AVATTO ZWSM16-2](https://www.zigbee2mqtt.io/images/devices/ZWSM16-2.png) |
 
 

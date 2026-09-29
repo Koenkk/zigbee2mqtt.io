@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZIS-04  |
 | Vendor  | [Novato](/supported-devices/#v=Novato)  |
 | Description | 24 GHz radar human presence sensor with relay output |
-| Exposes | presence, illuminance, radar, detection_range, sensitivity, detection_area, fading_time, indicator, presence_switch, compensation_coefficient, state_reversal |
+| Exposes | presence, illuminance, detection_distance, radar, detection_range, sensitivity, detection_area, fading_time, indicator, presence_switch, compensation_coefficient, state_reversal |
 | Picture | ![Novato ZIS-04](https://www.zigbee2mqtt.io/images/devices/ZIS-04.png) |
 
 

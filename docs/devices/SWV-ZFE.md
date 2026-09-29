@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SWV-ZFE  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart water valve |
-| Exposes | battery, switch (state), child_lock, valve_abnormal_state, water_flow_unit, manual_default_settings, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, valve_alarm_settings, real_time_irrigation_duration, real_time_irrigation_volume, hour_irrigation_duration, hour_irrigation_volume, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
+| Exposes | battery, switch (state), child_lock, valve_abnormal_state, water_flow_unit, irrigation_duration, irrigation_mode, irrigation_amount, fail_safe, irrigation_plan_settings, irrigation_plan_report, irrigation_plan_remove, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment, valve_alarm_settings, real_time_irrigation_duration, real_time_irrigation_volume, hour_irrigation_duration, hour_irrigation_volume, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records |
 | Picture | ![SONOFF SWV-ZFE](https://www.zigbee2mqtt.io/images/devices/SWV-ZFE.png) |
 
 
@@ -85,14 +85,35 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_flow_unit": NEW_VALUE}`.
 The possible values are: `liter`, `us_gallon`, `imperial_gallon`.
 
-### Manual default settings (composite)
-Single irrigation settings.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_default_settings": {"irrigation_duration": VALUE, "irrigation_mode": VALUE, "irrigation_amount": VALUE, "fail_safe": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_default_settings": ""}`.
-- `irrigation_duration` (numeric): Irrigation duration min value is 1, max value is 719, unit is min
-- `irrigation_mode` (enum): Irrigation mode: duration or capacity allowed values: `duration`, `capacity`
-- `irrigation_amount` (numeric): Irrigation volume max value is 10000
-- `fail_safe` (numeric): Safety protection timeout max value is 719, unit is min
+### Irrigation duration (numeric)
+Default duration for manual irrigation.
+Value can be found in the published state on the `irrigation_duration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_duration": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `719`.
+The unit of this value is `min`.
+
+### Irrigation mode (enum)
+Default mode for manual irrigation.
+Value can be found in the published state on the `irrigation_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_mode": NEW_VALUE}`.
+The possible values are: `duration`, `capacity`.
+
+### Irrigation amount (numeric)
+Default manual irrigation amount.
+Value can be found in the published state on the `irrigation_amount` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_amount": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10000`.
+
+### Fail safe (numeric)
+Manual irrigation safety timeout.
+Value can be found in the published state on the `fail_safe` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fail_safe": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `719`.
+The unit of this value is `min`.
 
 ### Irrigation plan settings (composite)
 Set irrigation plan.

@@ -161,7 +161,7 @@ Device Address.
 Value can be found in the published state on the `device_address_preset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_address_preset": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `9999999`.
+The minimal value is `1` and the maximum value is `99999999`.
 
 ### Device password preset (text)
 Meter Password.

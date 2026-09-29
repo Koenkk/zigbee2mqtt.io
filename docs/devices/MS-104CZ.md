@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MS-104CZ  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | 3 gang switch module |
-| Exposes | switch (state), countdown, power_on_behavior, backlight_mode, indicator_mode, inching_control_set |
+| Exposes | switch (state), power_on_behavior, switch_type |
 | Picture | ![Moes MS-104CZ](https://www.zigbee2mqtt.io/images/devices/MS-104CZ.png) |
 
 

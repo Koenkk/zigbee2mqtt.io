@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | FK-BV05  |
 | Vendor  | [FrankEver](/supported-devices/#v=FrankEver)  |
 | Description | Zigbee smart water valve with flow meter and temperature sensor |
-| Exposes | switch (state), threshold, position, power_off_state, weather_delay, countdown, water_temperature, water_consumed_last, water_consumed_total, water_leakage_state, single_irrigation_switch, single_irrigation_set, day_irrigation_switch, day_irrigation_set, water_volume_alarm_switch, water_volume_alarm_set, water_temp_alarm_switch, water_temp_alarm_max, water_temp_alarm_min, water_volume_alarm, water_temp_alarm, creep_switch, fault |
+| Exposes | switch (state), threshold, position, power_off_state, weather_delay, countdown, water_temperature, water_consumed_last, water_consumed, water_leakage_state, single_irrigation_switch, single_irrigation_set, day_irrigation_switch, day_irrigation_set, water_volume_alarm_switch, water_volume_alarm_set, water_temp_alarm_switch, water_temp_alarm_max, water_temp_alarm_min, water_volume_alarm, water_temp_alarm, creep_switch, fault |
 | Picture | ![FrankEver FK-BV05](https://www.zigbee2mqtt.io/images/devices/FK-BV05.png) |
 
 
@@ -92,9 +92,9 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `L`.
 
-### Water consumed total (numeric)
+### Water consumed (numeric)
 Total water consumption.
-Value can be found in the published state on the `water_consumed_total` property.
+Value can be found in the published state on the `water_consumed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `L`.
 

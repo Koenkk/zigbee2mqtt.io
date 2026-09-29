@@ -1,0 +1,83 @@
+---
+title: "Moes MG-BJQ002 control via MQTT"
+description: "Integrate your Moes MG-BJQ002 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-09-29T18:29:03.100Z
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Moes MG-BJQ002
+
+|     |     |
+|-----|-----|
+| Model | MG-BJQ002  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
+| Description | Plug-in smart siren alarm with RGB night light |
+| Exposes | alarm, duration, volume, ringtone, night_light, light_mode |
+| Picture | ![Moes MG-BJQ002](https://www.zigbee2mqtt.io/images/devices/MG-BJQ002.png) |
+
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
+
+## Exposes
+
+### Alarm (enum)
+Trigger the alarm (sound, light or both) for the configured duration, or stop it with 'off'.
+Value can be found in the published state on the `alarm` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
+The possible values are: `sound`, `light`, `sound_light`, `off`.
+
+### Duration (numeric)
+How long the alarm sounds for when triggered.
+Value can be found in the published state on the `duration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `1800`.
+The unit of this value is `s`.
+
+### Volume (enum)
+Alarm volume.
+Value can be found in the published state on the `volume` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`, `mute`.
+
+### Ringtone (enum)
+Alarm melody.
+Value can be found in the published state on the `ringtone` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ringtone": NEW_VALUE}`.
+The possible values are: `ringtone 1`, `ringtone 2`, `ringtone 3`, `ringtone 4`, `ringtone 5`, `ringtone 6`, `ringtone 7`, `ringtone 8`, `ringtone 9`, `ringtone 10`, `ringtone 11`, `ringtone 12`, `ringtone 13`, `ringtone 14`, `ringtone 15`, `ringtone 16`, `ringtone 17`, `ringtone 18`, `ringtone 19`, `ringtone 20`, `ringtone 21`, `ringtone 22`, `ringtone 23`, `ringtone 24`, `ringtone 25`, `ringtone 26`, `ringtone 27`, `ringtone 28`, `ringtone 29`, `ringtone 30`, `ringtone 31`, `ringtone 32`.
+
+### Night light (binary)
+Night light.
+Value can be found in the published state on the `night_light` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_light": NEW_VALUE}`.
+If value equals `ON` night light is ON, if `OFF` OFF.
+
+### Light mode (enum)
+RGB light mode.
+Value can be found in the published state on the `light_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": NEW_VALUE}`.
+The possible values are: `rainbow`, `red_flash`, `night_light`.
+
