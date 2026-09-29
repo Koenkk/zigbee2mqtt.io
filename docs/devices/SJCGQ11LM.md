@@ -31,12 +31,21 @@ Uses CR2032 battery.
 
 ### Pairing
 Press and hold the reset button by pressing hard on the top of the device (water drop logo) for +- 5 seconds (until the blue light inside the device, under the water drop starts blinking). After this the device will automatically join.
-In some cases, the sensor may not want to pair. Remove the battery and while you put it back in, keep the reset button pressed until the paring is complete.
+In some cases, the sensor may not want to pair. Remove the battery and while you put it back in, keep the reset button pressed until the pairing is complete.
 
 > [!NOTE]
 > In case you experience pairing issues:
 > - Try to press the reset button +-5 seconds until it flashes, wait 1 second, push the button short 2x times to enforce communication.
 > - If migrating the device from another network, turn off the old network before pairing with the new one.
+
+### Pairing through a router
+
+Pairing difficulties have been reported on networks with a large number of devices, although network size has not been established as the cause. If the reset procedures above do not help:
+
+- Disable joining for all devices, then use the frontend's permit-join dropdown to enable joining through a specific nearby router instead of **All**. This does not guarantee the sensor will choose that router as its parent.
+- Successful joins have been reported through Philips Hue lights and a Sengled plug, while attempts through an older SONOFF ZBMINI have failed. Compatibility may vary by router model and firmware; if one router does not work, try another.
+- Place the sensor right beside the selected router while pairing. After joining, it may work farther away, but successful pairing does not guarantee reliable operation at the final location. Check that water-leak and clear reports arrive after moving it.
+
 <!-- Notes END: Do not edit below this line -->
 
 
