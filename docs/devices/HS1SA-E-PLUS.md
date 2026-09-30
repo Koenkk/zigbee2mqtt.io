@@ -25,6 +25,45 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+### Exposed values and controls
+
+`muted` is a **read-only silencing status**, not a switch for disabling smoke detection.
+`normal` means no mute flags are set. Otherwise, the converter reports one or more of
+`muted` (general), `alarm_muted`, `fault_muted`, `low_battery_muted`, `endoflife_muted`,
+and `warning_muted`, separated by ` | `. These distinguish which sounds are silenced;
+they do not mean the detector is permanently disabled. Not every firmware necessarily
+reports every flag.
+
+`temporary_mute` is the separate remote hush control. Heiman confirms that, on
+HS1SA-E-PLUS firmware 2.2.0, it only works while a smoke alarm is active: requesting
+it while idle does not pre-emptively silence a future alarm. Use it after confirming
+that an alarm is false. The converter writes `true` as 1 and `false` as 0 to the
+mute-control attribute, but an explicit unmute action for `false` is not confirmed
+for this firmware; use `muted` to check the actual silencing status. The physical
+test/mute button also provides hush, but identical remote/button timing, the hush
+duration, and when persistent smoke makes the alarm sound again are not confirmed
+for this model.
+
+| Entity | Meaning and use |
+|--------|-----------------|
+| `trigger_selftest`, `test` | Request the built-in alarm self-check; `test` reports whether a test is running. This can exercise an interconnection automation as well. Test beeps have been observed on PLUS samples, but the complete internal checks are undocumented; a successful self-test alone does not establish smoke-sensing performance. |
+| `heartbeat_indicator` | Controls the periodic heartbeat LED indication during normal operation, useful for avoiding flashes in a bedroom. It is not a smoke-detection or sound control. Whether this setting also changes alarm/test LED indications is not confirmed. |
+| `interconnectable`, `link_available` | Read-only triggers for propagating this detector's event through an automation, not a capability or configuration switch. Both represent the same attribute: `interconnectable` is false for zero and true for a nonzero value; `link_available` identifies the event type. `inactive` means no linkage event; `smoke_active`, `co_active`, `gas_active`, and `heat_active` identify smoke, CO, gas, and heat events respectively in the shared protocol. These enum choices do not imply that this smoke-only model detects all four hazards. |
+| `siren_for_automation_only` | Lets an automation use the detector as a remotely triggered sounder: `smoke_siren` and `co_siren` select the built-in smoke and CO sound profiles; `stop` stops the automation siren. The CO profile does not add CO detection. This control is for sounding other alarms in response to an originating detector's linkage event. |
+| `smoke_level`, `smoke_unit` | Manufacturer-reported optical smoke level. The converter divides the reported level by 100 and exposes its unit separately: `dB/m` means optical attenuation in decibels per metre; `%ft OBS` means percent light obscuration per foot. These describe light loss through smoke, not a percentage of smoke in the air. The exposed 0–20 range is not a documented alarm threshold. No model-specific calibration, threshold, or guarantee of a strictly increasing response is documented; treat the level as diagnostic/trend information and use `smoke` for the detector's alarm decision. |
+| `chamber_contamination` | The detector's estimate of contamination in its optical sensing chamber: `normal`, then increasing severity from `light_contamination` through `medium_contamination` to `critical_contamination`. Deposits such as cooking grease and smoke particles can reduce sensitivity and increase false alarms. Useful for maintenance alerts; Heiman has not specified cleaning/replacement actions for each exposed level in the available PLUS documentation. Follow the supplied maintenance instructions. |
+| `fault_state` | `normal` means no mapped fault bits are set. The converter can report `fault` (general), `open_circuit_fault`, `short_circuit_fault`, and `pollution_fault` (contamination), joining simultaneous faults with ` \| `. These are fault categories, not identification of a particular failed component; which bits this firmware uses is undocumented. |
+| `temperature_offset` | A calibration offset in °C stored on the detector for its own temperature reporting. This is separate from Zigbee2MQTT's `temperature_calibration` option, which adjusts received readings in software. |
+| `reported_packages`, `rejoin_count`, `reboot_count` | Device diagnostic counters for reported Zigbee packets, network rejoins, and restarts. The converter describes `reported_packages` as a daily count, but does not define the day's boundary or reset rules. The time span, persistence, and reset rules of the other counters are also undocumented. Watch changes: repeated rejoins can help investigate connectivity, while unexpected restarts can help investigate power/device problems. |
+
+Heiman describes interconnection on this model as **Home Assistant/Zigbee2MQTT
+automation**, rather than detectors directly triggering one another over Zigbee.
+The linkage triggers activate during self-test and real alarms, and become inactive
+when the originating alarm is hushed. An automation can use these transitions to
+start and stop the other detectors' `siren_for_automation_only` controls. Receiving
+a remote siren command does not itself establish local smoke or CO detection.
 
 <!-- Notes END: Do not edit below this line -->
 
