@@ -1,7 +1,7 @@
 ---
 title: "Tervix Pro Line X10 control via MQTT"
 description: "Integrate your Tervix Pro Line X10 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2026-10-01T20:03:32.094Z
 pageClass: device-page
 ---
 

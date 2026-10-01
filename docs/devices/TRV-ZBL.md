@@ -1,7 +1,7 @@
 ---
 title: "SONOFF TRV-ZBL control via MQTT"
 description: "Integrate your SONOFF TRV-ZBL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2026-10-01T20:03:32.038Z
 pageClass: device-page
 ---
 
