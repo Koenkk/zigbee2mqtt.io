@@ -1,7 +1,7 @@
 ---
 title: "Tuya ZY-N1 control via MQTT"
 description: "Integrate your Tuya ZY-N1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2026-10-01T20:03:32.122Z
 pageClass: device-page
 ---
 
