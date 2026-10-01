@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_TH_POW  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Temperature and humidity smart monitor with voltage detector |
-| Exposes | identify, temperature, humidity, mains_voltage, battery, battery_low, lifetime, reading_interval, heater, tx_radio_power, config_report_enable, comparison_previous_data, enabling_temperature_control, temperature_actions, high_temperature, low_temperature, enabling_humidity_control, humidity_actions, high_humidity, low_humidity |
+| Exposes | identify, temperature, humidity, mains_voltage, battery, battery_low, lifetime, dew_point, air_enthalpy, vpd, reading_interval, heater, tx_radio_power, config_report_enable, comparison_previous_data, enabling_temperature_control, temperature_actions, high_temperature, low_temperature, enabling_humidity_control, humidity_actions, high_humidity, low_humidity |
 | Picture | ![EFEKTA EFEKTA_TH_POW](https://www.zigbee2mqtt.io/images/devices/EFEKTA_TH_POW.png) |
 
 
@@ -91,6 +91,24 @@ Uptime.
 Value can be found in the published state on the `lifetime` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hours`.
+
+### Dew point (numeric)
+Dew point calculated from built-in sensor data.
+Value can be found in the published state on the `dew_point` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Air enthalpy (numeric)
+Air enthalpy derived from built-in sensor.
+Value can be found in the published state on the `air_enthalpy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kJ/kg`.
+
+### Vpd (numeric)
+Vapor Pressure Deficit (VPD) from built-in sensor.
+Value can be found in the published state on the `vpd` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kPa`.
 
 ### Reading interval (numeric)
 Setting the sensor reading interval in seconds, by default 5 seconds.

@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-204ZL control via MQTT"
-description: "Integrate your Tuya ZG-204ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-204ZL control via MQTT"
+description: "Integrate your HOBEIAN ZG-204ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-05-07T18:17:42
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-204ZL
+# HOBEIAN ZG-204ZL
 
 |     |     |
 |-----|-----|
 | Model | ZG-204ZL  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Luminance motion sensor |
 | Exposes | occupancy, illuminance, battery, sensitivity, keep_time, illuminance_interval |
-| Picture | ![Tuya ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png) |
+| Picture | ![HOBEIAN ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png) |
 
 
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_AQ_Smart_Monitor  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | EFEKTA CO2 & VOC Index Smart Monitor, rgb indicator, can control the relay, binding |
-| Exposes | co2, temperature, humidity, voc_index, reading_interval, light_indicator, light_indicator_level, set_altitude, temperature_offset, humidity_offset, automatic_calibrations, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_co2_gas, high_co2_gas, low_co2_gas, enable_voc, high_voc, low_voc |
+| Exposes | identify, co2, temperature, humidity, voc_index, reading_interval, light_indicator, light_indicator_level, set_altitude, temperature_offset, humidity_offset, automatic_calibrations, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_co2_gas, high_co2_gas, low_co2_gas, enable_voc, high_voc, low_voc |
 | Picture | ![EFEKTA EFEKTA_AQ_Smart_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_AQ_Smart_Monitor.png) |
 
 
@@ -43,8 +43,17 @@ pageClass: device-page
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
 
 ## Exposes
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### CO2 (numeric)
 Measured value.

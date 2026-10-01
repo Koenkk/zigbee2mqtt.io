@@ -56,10 +56,10 @@ Value can be found in the published state on the `fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` fault is ON, if `false` OFF.
 
-### Temperature (numeric, 38 endpoint)
+### Temperature (numeric)
 Measured temperature value.
-Value can be found in the published state on the `temperature_38` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_38": ""}`.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 

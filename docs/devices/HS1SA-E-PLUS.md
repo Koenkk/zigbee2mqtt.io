@@ -24,7 +24,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 ### Exposed values and controls
@@ -64,7 +63,6 @@ The linkage triggers activate during self-test and real alarms, and become inact
 when the originating alarm is hushed. An automation can use these transitions to
 start and stop the other detectors' `siren_for_automation_only` controls. Receiving
 a remote siren command does not itself establish local smoke or CO detection.
-
 <!-- Notes END: Do not edit below this line -->
 
 
