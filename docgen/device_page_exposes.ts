@@ -29,13 +29,14 @@ function uncapitalizeFirstLetter(string: string) {
     return string.charAt(0).toLowerCase() + string.slice(1);
 }
 
-// Enum and text values are JSON strings, so their placeholder is quoted; numeric and binary ones are not.
-function valuePlaceholder(type: string) {
-    return type === 'enum' || type === 'text' ? '"VALUE"' : 'VALUE';
+// Enum, text and string-valued binary (e.g. ON/OFF) values are JSON strings, so their placeholder is quoted; numeric and boolean ones are not.
+function valuePlaceholder(feature: {type: string; value_on?: string | boolean}) {
+    const isString = feature.type === 'enum' || feature.type === 'text' || (feature.type === 'binary' && typeof feature.value_on === 'string');
+    return isString ? '"VALUE"' : 'VALUE';
 }
 
 function compositeDocs(composite: Composite) {
-    const value = `{${composite.features.map((e) => `"${e.property}": ${valuePlaceholder(e.type)}`).join(', ')}}`;
+    const value = `{${composite.features.map((e) => `"${e.property}": ${valuePlaceholder(e)}`).join(', ')}}`;
     const note: string[] = [];
 
     for (const feature of composite.features) {
@@ -107,7 +108,7 @@ function getExposeDocs(expose: Expose, definition: Definition) {
             }
             if (expose.access & access.SET) {
                 lines.push(
-                    `To write (\`/set\`) a value publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${expose.property}": ${valuePlaceholder(expose.type)}}\`.`,
+                    `To write (\`/set\`) a value publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${expose.property}": ${valuePlaceholder(expose)}}\`.`,
                 );
             } else {
                 lines.push(`It's not possible to write (\`/set\`) this value.`);
@@ -201,7 +202,7 @@ function getExposeDocs(expose: Expose, definition: Definition) {
             if (mode) {
                 assert(mode.type === 'enum', `fan mode feature should be enum`);
                 lines.push(
-                    `To change the mode publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${mode.property}": ${valuePlaceholder(mode.type)}}\` where \`VALUE\` can be: ${mode.values.map((e) => `\`${e}\``).join(', ')}.`,
+                    `To change the mode publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${mode.property}": ${valuePlaceholder(mode)}}\` where \`VALUE\` can be: ${mode.values.map((e) => `\`${e}\``).join(', ')}.`,
                 );
             }
         }
@@ -376,7 +377,7 @@ function getExposeDocs(expose: Expose, definition: Definition) {
             assert(f.type === 'enum', `climate system_mode/preset/mode feature should be enum`);
             let line = `- \`${f.name}\`: ${f.description}.`;
             if (f.access & access.SET) {
-                line += ` To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": ${valuePlaceholder(f.type)}}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}.`;
+                line += ` To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": ${valuePlaceholder(f)}}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}.`;
             } else {
                 line += ` Writing (\`/set\`) this attribute is not possible.`;
             }
