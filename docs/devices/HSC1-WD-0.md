@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ROOME HSC1-WD-0](https://www.zigbee2mqtt.io/images/devices/HSC1-WD-0.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

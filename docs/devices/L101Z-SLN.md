@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lytko L101Z-SLN](https://www.zigbee2mqtt.io/images/devices/L101Z-SLN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

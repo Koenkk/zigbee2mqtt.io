@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![TubesZB tubeszb.router](https://www.zigbee2mqtt.io/images/devices/tubeszb.router.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [CC2652 Router](https://github.com/tube0013/tube_gateways/tree/main/tube_cc_router)

@@ -32,6 +32,8 @@ devices:
         # Device type specific examples
         occupancy_timeout: 120
         no_occupancy_since: [10, 600]
+        # Ignore update check requests from the device (Zigbee2MQTT will always reply "no image available")
+        disable_automatic_update_check: true
     # Another device
     '0x000d6ffffee405eb':
         friendly_name: 'Kitchen bulb'
@@ -44,14 +46,12 @@ Every Zigbee Device supports the following list of options.
 **`friendly_name`**  
 Used in the MQTT topic of a device. By default, this is the device ID (e.g. `0x00128d0001d9e1d2`).
 
-::: tip
-You can use the `/` separator in `friendly_name` to structure devices.
-For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
-:::
+> [!TIP]
+> You can use the `/` separator in `friendly_name` to structure devices.
+> For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 
-::: warning
-Note that a `friendly_name` is **NOT** allowed to end with `/`, `/` + one of the possible [endpoint names](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/utils.ts#L30) (e.g. `/left`) or `/` + a number (e.g. `/4`).
-:::
+> [!IMPORTANT]
+> A `friendly_name` is **NOT** allowed to end with `/`, `/` + one of the possible [endpoint names](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/utils.ts#L30) (e.g. `/left`) or `/` + a number (e.g. `/4`).
 
 **`description`**  
 Description of this device, e.g. `This device is in the kitchen`, will be shown in the frontend.
@@ -167,11 +167,17 @@ groups:
         transition: 2
         # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
         optimistic: true
+        # Optional: Override Home Assistant discovery properties for this group
+        homeassistant:
+            name: Kitchen Lights
+            icon: mdi:lightbulb-group
 ```
 
-::: warning
-The group key has to be unique and a quoted integer.
-:::
+> [!IMPORTANT]
+> The group key has to be unique and a quoted integer.
+
+**`homeassistant`**  
+Allows overriding the values of the Home Assistant discovery payload for this group. Any Home Assistant MQTT discovery property can be overridden.
 
 ## Extract config to separate files
 

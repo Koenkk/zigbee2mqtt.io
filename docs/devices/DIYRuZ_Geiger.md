@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | DIYRuZ_Geiger  |
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | DiY Geiger counter |
-| Exposes | action, radioactive_events_per_minute, radiation_dose_per_hour, led_feedback, buzzer_feedback, alert_threshold, sensors_type, sensors_count, sensitivity |
+| Exposes | radioactive_events_per_minute, radiation_dose_per_hour, led_feedback, buzzer_feedback, alert_threshold, sensors_type, sensors_count, sensitivity, action |
 | Picture | ![DIYRuZ DIYRuZ_Geiger](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_Geiger.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,12 +32,6 @@ pageClass: device-page
 
 
 ## Exposes
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`.
 
 ### Radioactive events per minute (numeric)
 Current count radioactive pulses per minute.
@@ -92,4 +87,10 @@ Value can be found in the published state on the `sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `on`, `off`.
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Yale YRD246HA20BP](https://www.zigbee2mqtt.io/images/devices/YRD246HA20BP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

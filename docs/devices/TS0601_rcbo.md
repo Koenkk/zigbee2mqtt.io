@@ -18,9 +18,10 @@ pageClass: device-page
 | Model | TS0601_rcbo  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | DIN mount RCBO with smart energy metering |
-| Exposes | meter_number, state, alarm, trip, child_lock, power_on_behavior, countdown_timer, voltage_rms, current, current_average, power, voltage, energy, temperature, power_l1, power_l2, power_l3, energy_consumed, clear_device_data |
+| Exposes | meter_number, state, alarm, trip, child_lock, power_on_behavior, countdown_timer, voltage_rms, current, current_average, power, voltage, energy, temperature, power_l1, power_l2, power_l3, energy_consumed, clear_device_data, self_test_auto_days, self_test_auto_hours, self_test_auto, self_test, over_temperature_threshold, over_temperature_trip, over_temperature_alarm, over_voltage_threshold, over_voltage_trip, over_voltage_alarm, under_voltage_threshold, under_voltage_trip, under_voltage_alarm, over_current_threshold, over_current_trip, over_current_alarm, over_leakage_current_threshold, over_leakage_current_trip, over_leakage_current_alarm |
 | Picture | ![Tuya TS0601_rcbo](https://www.zigbee2mqtt.io/images/devices/TS0601_rcbo.png) |
 | White-label | HOCH ZJSBL7-100Z, WDYK ZJSBL7-100Z |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -174,4 +175,138 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"clear_device_data": NEW_VALUE}`.
 The possible values are: ``.
+
+### Self test auto days (numeric)
+Days between automatic self tests.
+Value can be found in the published state on the `self_test_auto_days` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `d`.
+
+### Self test auto hours (numeric)
+Hour of the day at which the automatic self test runs.
+Value can be found in the published state on the `self_test_auto_hours` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `h`.
+
+### Self test auto (binary)
+Automatic self test enabled.
+Value can be found in the published state on the `self_test_auto` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `ON` self test auto is ON, if `OFF` OFF.
+
+### Self test (binary)
+Self test running.
+Value can be found in the published state on the `self_test` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `test` self test is ON, if `clear` OFF.
+
+### Over temperature threshold (numeric)
+Over temperature threshold.
+Value can be found in the published state on the `over_temperature_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_temperature_threshold": NEW_VALUE}`.
+The minimal value is `30` and the maximum value is `100`.
+The unit of this value is `°C`.
+
+### Over temperature trip (binary)
+Trip on over temperature.
+Value can be found in the published state on the `over_temperature_trip` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_temperature_trip": NEW_VALUE}`.
+If value equals `ON` over temperature trip is ON, if `OFF` OFF.
+
+### Over temperature alarm (binary)
+Alarm on over temperature.
+Value can be found in the published state on the `over_temperature_alarm` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_temperature_alarm": NEW_VALUE}`.
+If value equals `ON` over temperature alarm is ON, if `OFF` OFF.
+
+### Over voltage threshold (numeric)
+Over voltage threshold.
+Value can be found in the published state on the `over_voltage_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": NEW_VALUE}`.
+The minimal value is `200` and the maximum value is `300`.
+The unit of this value is `V`.
+
+### Over voltage trip (binary)
+Trip on over voltage.
+Value can be found in the published state on the `over_voltage_trip` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_trip": NEW_VALUE}`.
+If value equals `ON` over voltage trip is ON, if `OFF` OFF.
+
+### Over voltage alarm (binary)
+Alarm on over voltage.
+Value can be found in the published state on the `over_voltage_alarm` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_alarm": NEW_VALUE}`.
+If value equals `ON` over voltage alarm is ON, if `OFF` OFF.
+
+### Under voltage threshold (numeric)
+Under voltage threshold.
+Value can be found in the published state on the `under_voltage_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": NEW_VALUE}`.
+The minimal value is `100` and the maximum value is `215`.
+The unit of this value is `V`.
+
+### Under voltage trip (binary)
+Trip on under voltage.
+Value can be found in the published state on the `under_voltage_trip` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_trip": NEW_VALUE}`.
+If value equals `ON` under voltage trip is ON, if `OFF` OFF.
+
+### Under voltage alarm (binary)
+Alarm on under voltage.
+Value can be found in the published state on the `under_voltage_alarm` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_alarm": NEW_VALUE}`.
+If value equals `ON` under voltage alarm is ON, if `OFF` OFF.
+
+### Over current threshold (numeric)
+Over current threshold.
+Value can be found in the published state on the `over_current_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `A`.
+
+### Over current trip (binary)
+Trip on over current.
+Value can be found in the published state on the `over_current_trip` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_trip": NEW_VALUE}`.
+If value equals `ON` over current trip is ON, if `OFF` OFF.
+
+### Over current alarm (binary)
+Alarm on over current.
+Value can be found in the published state on the `over_current_alarm` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_alarm": NEW_VALUE}`.
+If value equals `ON` over current alarm is ON, if `OFF` OFF.
+
+### Over leakage current threshold (numeric)
+Over leakage current threshold.
+Value can be found in the published state on the `over_leakage_current_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_leakage_current_threshold": NEW_VALUE}`.
+The minimal value is `10` and the maximum value is `100`.
+The unit of this value is `mA`.
+
+### Over leakage current trip (binary)
+Trip on over leakage current.
+Value can be found in the published state on the `over_leakage_current_trip` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_leakage_current_trip": NEW_VALUE}`.
+If value equals `ON` over leakage current trip is ON, if `OFF` OFF.
+
+### Over leakage current alarm (binary)
+Alarm on over leakage current.
+Value can be found in the published state on the `over_leakage_current_alarm` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_leakage_current_alarm": NEW_VALUE}`.
+If value equals `ON` over leakage current alarm is ON, if `OFF` OFF.
 

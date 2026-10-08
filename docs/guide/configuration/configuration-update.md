@@ -8,17 +8,14 @@ Starting with v2.0.0 Zigbee2MQTT includes an automatic settings migration system
 
 The migration system will automatically make a backup of your current `data/configuration.yaml` before starting a migration. The backup file will be named according to its version, for example `data/configuration_backup_v1.yaml`.
 
-:::warning IMPORTANT
-Configuration values set through Home Assistant add-on configuration page, or through [environment variables](./README.md#environment-variables) are not persisted to the `configuration.yaml`. As such, they cannot be processed by the migration system and will require your intervention if a migration is required for any of them.
-:::
+> [!IMPORTANT]
+> Configuration values set through Home Assistant add-on configuration page, or through [environment variables](./README.md#environment-variables) are not persisted to the `configuration.yaml`. As such, they cannot be processed by the migration system and will require your intervention if a migration is required for any of them.
 
-:::warning IMPORTANT
-While this automatically migrates Zigbee2MQTT settings, it **cannot** migrate side-effects on third parties (like Home Assistant). Make sure you go over the [migration notes](#migration-notes) and the link given to adjust things accordingly on that front.
-:::
+> [!IMPORTANT]
+> While this automatically migrates Zigbee2MQTT settings, it **cannot** migrate side-effects on third parties (like Home Assistant). Make sure you go over the [migration notes](#migration-notes) and the link given to adjust things accordingly on that front.
 
-:::caution CAUTION
-Do not edit the `version` setting manually. If you do, you run the risk of corrupting your `configuration.yaml`, the migration system may no longer work properly.
-:::
+> [!CAUTION]
+> Do not edit the `version` setting manually. If you do, you run the risk of corrupting your `configuration.yaml`, the migration system may no longer work properly.
 
 ## Migration notes
 

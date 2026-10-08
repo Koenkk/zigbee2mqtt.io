@@ -18,9 +18,10 @@ pageClass: device-page
 | Model | WXKG15LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch H1 (double rocker) |
-| Exposes | battery, voltage, click_mode, operation_mode, action |
+| Exposes | battery, voltage, click_mode, operation_mode, identify, action |
 | Picture | ![Aqara WXKG15LM](https://www.zigbee2mqtt.io/images/devices/WXKG15LM.png) |
 | White-label | Aqara WRS-R02 |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,6 +37,11 @@ Please note, that currently you will only get one endpoint for binding even thou
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 
 ## Exposes
@@ -66,6 +72,13 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
+
+### Identify (enum)
+Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

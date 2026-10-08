@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Niceboy ORBIS Vibration Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Vibration-Sensor.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -1,4 +1,5 @@
 ---
+redirectFrom: /getting_started/pairing_devices.md
 ---
 
 # Allowing devices to join

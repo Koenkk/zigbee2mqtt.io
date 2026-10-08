@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Slacky-DIY ElectricityMeter-ABC-DIY](https://www.zigbee2mqtt.io/images/devices/ElectricityMeter-ABC-DIY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://slacky1965.github.io/electricity_meter_abc_zrd)
 <!-- Notes END: Do not edit below this line -->
@@ -226,7 +227,7 @@ Device Address.
 Value can be found in the published state on the `device_address_preset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_address_preset": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `9999999`.
+The minimal value is `1` and the maximum value is `99999999`.
 
 ### Device password preset (text)
 Meter Password.
@@ -244,7 +245,7 @@ The minimal value is `1` and the maximum value is `255`.
 ### Device model preset (enum)
 Device Model.
 Value can be found in the published state on the `device_model_preset` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_model_preset": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_model_preset": NEW_VALUE}`.
 The possible values are: `no_device`, `NARTIS-I300`.
 

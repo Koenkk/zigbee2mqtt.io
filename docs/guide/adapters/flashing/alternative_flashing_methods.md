@@ -1,4 +1,5 @@
 ---
+redirectFrom: /information/alternative_flashing_methods.md
 ---
 
 # Alternative flashing methods

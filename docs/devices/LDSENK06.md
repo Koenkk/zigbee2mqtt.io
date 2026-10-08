@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO LDSENK06](https://www.zigbee2mqtt.io/images/devices/LDSENK06.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

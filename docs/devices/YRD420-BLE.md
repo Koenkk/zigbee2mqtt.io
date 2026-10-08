@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Yale YRD420-BLE](https://www.zigbee2mqtt.io/images/devices/YRD420-BLE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

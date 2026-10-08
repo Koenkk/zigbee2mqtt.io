@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nue / 3A HGZB-1S](https://www.zigbee2mqtt.io/images/devices/HGZB-1S.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

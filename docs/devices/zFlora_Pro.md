@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | zFlora_Pro  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Plant watering sensor zFlora_Pro |
-| Exposes | identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_offset, temperature_compensation |
+| Exposes | identify, soil_moisture, vpd, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_compensation |
 | Picture | ![EFEKTA zFlora_Pro](https://www.zigbee2mqtt.io/images/devices/zFlora_Pro.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -66,6 +67,12 @@ Value can be found in the published state on the `soil_moisture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
+### Vpd (numeric)
+Vapor Pressure Deficit (VPD) from built-in sensor.
+Value can be found in the published state on the `vpd` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kPa`.
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
@@ -100,7 +107,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -110,7 +117,7 @@ Lux factor.
 Value can be found in the published state on the `lux_factor` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_factor": NEW_VALUE}`.
-The minimal value is `0.1` and the maximum value is `10`.
+The minimal value is `0.1` and the maximum value is `30`.
 
 ### Reading interval (numeric)
 Setting the time in minutes, by default 3 minutes.
@@ -155,14 +162,6 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_level": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Temperature offset (numeric)
-Adjust temperature.
-Value can be found in the published state on the `temperature_offset` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
-The minimal value is `-50` and the maximum value is `50`.
-The unit of this value is `°C`.
 
 ### Temperature compensation (binary)
 Temperature compensation.

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sercomm AL-PIR02](https://www.zigbee2mqtt.io/images/devices/AL-PIR02.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

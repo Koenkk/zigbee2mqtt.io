@@ -22,13 +22,14 @@ pageClass: device-page
 | Picture | ![Stelpro STZB402](https://www.zigbee2mqtt.io/images/devices/STZB402.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Setting outdoor temperature
-To set _outdoor temperature_, you need to send the value to the following MQTT topic:
+To set *outdoor temperature*, you need to send the value to the following MQTT topic:
 ```
-zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_outdoor_temperature
+zigbee2mqtt/<FRIENDLY_NAME>/set/outdoor_temperature_display
 ```
 
 If you want to automate the publishing of the outdoor temperature using Home Assistant, you may create an automation like this:
@@ -44,7 +45,7 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
     - service: mqtt.publish
       data_template:
       payload: '{{ states(trigger.entity_id) }}'
-      topic: 'zigbee2mqtt/THERMOSTAT_FRIENDLY_NAME/set/thermostat_outdoor_temperature'
+      topic: 'zigbee2mqtt/THERMOSTAT_FRIENDLY_NAME/set/outdoor_temperature_display'
 ```
 
 **IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the `EXT` display will be cleared on the thermostat.

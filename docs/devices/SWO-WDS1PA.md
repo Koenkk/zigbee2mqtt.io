@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Swann SWO-WDS1PA](https://www.zigbee2mqtt.io/images/devices/SWO-WDS1PA.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

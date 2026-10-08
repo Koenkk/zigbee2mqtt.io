@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

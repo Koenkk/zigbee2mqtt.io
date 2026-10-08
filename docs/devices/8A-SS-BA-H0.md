@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Leedarson 8A-SS-BA-H0](https://www.zigbee2mqtt.io/images/devices/8A-SS-BA-H0.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

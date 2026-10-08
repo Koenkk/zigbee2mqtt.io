@@ -1,4 +1,5 @@
 ---
+redirectFrom: /how_tos/how_to_improve_network_range_and_stability.md
 ---
 
 # Improve network range and stability

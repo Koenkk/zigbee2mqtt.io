@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {useDarkMode} from '@vuepress/theme-default/lib/client/composables/useDarkMode.js';
+import {useDarkMode} from '@vuepress/theme-default/client';
 import Dark from 'quasar/src/plugins/dark/Dark';
 import SessionStorage from 'quasar/src/plugins/storage/SessionStorage';
 import {onMounted, ref, watch} from 'vue';

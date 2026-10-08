@@ -1,4 +1,5 @@
 ---
+redirectFrom: /getting_started/running_zigbee2mqtt.md
 ---
 
 # Installation

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara WS-USC02](https://www.zigbee2mqtt.io/images/devices/WS-USC02.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![NEO NAS-TH07B2](https://www.zigbee2mqtt.io/images/devices/NAS-TH07B2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Qingping CGDK2](https://www.zigbee2mqtt.io/images/devices/CGDK2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

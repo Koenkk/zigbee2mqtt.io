@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![D-Link DCH-B112](https://www.zigbee2mqtt.io/images/devices/DCH-B112.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

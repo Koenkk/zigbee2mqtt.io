@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZBSM10WT  |
 | Vendor  | [Nedis](/supported-devices/#v=Nedis)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, battery, voltage, tamper |
+| Exposes | occupancy, battery_low, battery, voltage |
 | Picture | ![Nedis ZBSM10WT](https://www.zigbee2mqtt.io/images/devices/ZBSM10WT.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

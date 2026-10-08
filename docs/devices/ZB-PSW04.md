@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![easyiot ZB-PSW04](https://www.zigbee2mqtt.io/images/devices/ZB-PSW04.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

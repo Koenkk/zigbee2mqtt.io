@@ -1,4 +1,5 @@
 ---
+redirectFrom: /information/flashing_the_cc2538.md
 ---
 
 # Flashing the firmware on the CC2538 MODULE

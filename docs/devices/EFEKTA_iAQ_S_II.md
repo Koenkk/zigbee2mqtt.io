@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_iAQ_S_II](https://www.zigbee2mqtt.io/images/devices/EFEKTA_iAQ_S_II.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -90,7 +91,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kPa`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.

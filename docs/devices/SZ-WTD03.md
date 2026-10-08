@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sercomm SZ-WTD03](https://www.zigbee2mqtt.io/images/devices/SZ-WTD03.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK](https://www.zigbee2mqtt.io/images/devices/HGZB-42-UK---HGZB-41---HGZB-41-UK.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

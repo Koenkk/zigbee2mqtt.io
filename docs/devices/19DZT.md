@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | 19DZT  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Door sensor |
-| Exposes | contact, battery, voltage, tamper, battery_low |
+| Exposes | contact, battery, voltage, battery_low |
 | Picture | ![Tuya 19DZT](https://www.zigbee2mqtt.io/images/devices/19DZT.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

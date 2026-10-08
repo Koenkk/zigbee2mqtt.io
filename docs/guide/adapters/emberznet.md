@@ -1,8 +1,8 @@
 # EmberZNet adapters (Silicon Labs)
 
-Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x, 8.2.x
+Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x, 8.2.x, 9.0.x, 9.1.x
 
-Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
+Firmware release notes: [https://docs.silabs.com/sisdk-release-notes/latest/sisdk-zigbee-release-notes/](https://docs.silabs.com/sisdk-release-notes/latest/sisdk-zigbee-release-notes/)
 
 _Multiprotocol firmware is not supported. The recommended alternative to establish multiple networks is to use one adapter per protocol._
 
@@ -15,9 +15,8 @@ serial:
 
 Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
-::: tip TIP
-The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zigbee2mqtt/discussions/21462](https://github.com/Koenkk/zigbee2mqtt/discussions/21462)
-:::
+> [!TIP]
+> The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zigbee2mqtt/discussions/21462](https://github.com/Koenkk/zigbee2mqtt/discussions/21462)
 
 ### Firmware flashing
 
@@ -36,6 +35,10 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 - Command-line based:
     - Multi-devices by [@NabuCasa](https://github.com/NabuCasa) using Python: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
+- Home Assistant addon
+    - [XZG Multi-Tool](https://github.com/xyzroe/XZG-MT)
+        - Bridge add-on for full interaction with remote serial, USB, and TCP devices.
+    - [SONOFF Dongle Flasher](https://dongle.sonoff.tech/guide/dongle-lmg21/flash-firmware-via-home-assistant-add-on/)
 - Other:
     - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
@@ -209,6 +212,25 @@ Note: can also be powered via USB (with a special case) and used with a simple E
 
 :::
 
+::: details Zbgw_pro EFR32 LAN
+
+Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
+
+```yaml
+serial:
+    port: tcp://zbgw_efr32_pro.local:6638
+    adapter: ember
+```
+
+Note: You can also use TCP with either `zbgw_efr32_pro.local:6638` or `<gateway-ip>:6638`.
+
+- [Product page](https://shop68536829.taobao.com)
+- [Buy](https://shop68536829.taobao.com)
+
+<img src="../../images/zbgw_pro.jpg" width="200" />
+
+:::
+
 ### Hybrid (USB + Network)
 
 ::: details SMLIGHT SLZB-Ultima - Multi-radio gateway for Zigbee, Thread, Z-Wave, 4G/LTE, IR, Ethernet/Wi-Fi, Voice
@@ -242,7 +264,7 @@ Designed for **local, cloud-independent** operation with Home Assistant and Zigb
 
 ::: details SMLIGHT SLZB-MR Series (MR1/MR2/MR3/MR4) MultiRadio Zigbee + Matter-over-Thread Ethernet USB POE Wi-Fi BLE LAN adapter
 
-SLZB-MRx Series are the compact multi-radio smart home adapter featuring Silicon Labs **EFR32MG26**/EFR32MG24/EFR32MG21 and Texas Instruments CC2674P10/CC2652P7/CC2652P for MR4/MR3/MR2/MR1, respectivelly (two Zigbee/Thread radios), and and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs, alongsie with Ethernet, Wi-Fi, or USB. Devices support PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, DDNS, Wireguard VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
+SLZB-MRx Series is a compact multi-radio smart home adapter featuring Silicon Labs **EFR32MG26**/EFR32MG24/EFR32MG21 and Texas Instruments CC2674P10/CC2652P7/CC2652P for MR4/MR3/MR2/MR1, respectively (two Zigbee/Thread radios), and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread running on different SoCs, alongside Ethernet, Wi-Fi, or USB. Devices support PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, DDNS, WireGuard VPN, HA integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
 
 | Parameter                        |                                                                 **SLZB-MR4**                                                                  |                                                             **SLZB-MR3**                                                             |                                                                   **SLZB-MR2**                                                                    |                                                            **SLZB-MR1**                                                            |
 | :------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
@@ -258,13 +280,28 @@ SLZB-MRx Series are the compact multi-radio smart home adapter featuring Silicon
 Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr3-zigbee-and-thread-adapter), [CH](https://www.swiss-domotique.ch/en/actuators-modules/smlight-usb-ethernet-poe-adapter-zigbee-and-thread-cc2674p10-efr32mg26), [FR](https://www.domadoo.fr/fr/produits-de-domotique/8369-smlight-adaptateur-usb-ethernet-poe-zigbee-et-thread-cc2674p10-efr32mg26-slzb-mr4.html), [PL](https://pcblab.io/adapter-slzbmr4-zigbee-thread-cc2674p10-efr32mg26-poe-usb-wifi-esp32-lan.html), [UK](https://zigbeesmart.com/de-de/products/smlight-slzb-mr4-dual-radio-zigbee-thread-ethernet-coordinator?_pos=6&_sid=04f161c3b&_ss=r)
 
 **SLZB-MR3 buy**: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr3-multiradio-adapter), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
- Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr3-zigbee-and-thread-adapter), [CH](https://www.swiss-domotique.ch/en/actuators-modules/smlight-zigbee-poe-ethernet-usb-adapter), [CZ](https://www.homebrainz.shop/p/smlight-slzb-mr3), [DE](https://mediarath.de/en/products/smlight-slzb-mr3-zigbee-thread-multiradio-cc2652p10-efr32mg24-lan-poe-usb-wifi-adapter), [FR](https://www.domadoo.fr/fr/produits-de-domotique/8031-smlight-adaptateur-usb-ethernet-poe-zigbee-et-thread-cc2674p10-efr32mg24-slzb-mr3.html), [PL](https://pcblab.io/multi-adapter-slzb-mr3-zigbee-thread-matter-esp32-cc2674p10-mg24-poe-wifi.html), [UK](https://zigbeesmart.com/de-de/products/smlight-slzb-mr3-multiradio-coordinator)
+Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr3-zigbee-and-thread-adapter), [CH](https://www.swiss-domotique.ch/en/actuators-modules/smlight-zigbee-poe-ethernet-usb-adapter), [CZ](https://www.homebrainz.shop/p/smlight-slzb-mr3), [DE](https://mediarath.de/en/products/smlight-slzb-mr3-zigbee-thread-multiradio-cc2652p10-efr32mg24-lan-poe-usb-wifi-adapter), [FR](https://www.domadoo.fr/fr/produits-de-domotique/8031-smlight-adaptateur-usb-ethernet-poe-zigbee-et-thread-cc2674p10-efr32mg24-slzb-mr3.html), [PL](https://pcblab.io/multi-adapter-slzb-mr3-zigbee-thread-matter-esp32-cc2674p10-mg24-poe-wifi.html), [UK](https://zigbeesmart.com/de-de/products/smlight-slzb-mr3-multiradio-coordinator)
 
 **SLZB-MR2 buy**: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr2-multiradio-adapter), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
 Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr2-zigbee-and-thread-adapter), [CZ](https://www.homebrainz.shop/p/smlight-slzb-mr2), [DE](https://mediarath.de/en/products/smlight-slzb-mr2-zigbee-thread-multiradio-cc2652p-efr32mg21-lan-poe-usb-wifi-adapter), [FR](https://www.domadoo.fr/fr/produits-de-domotique/8030-smlight-adaptateur-usb-ethernet-poe-zigbee-et-thread-cc2652p-efr32mg21-slzb-mr2.html), [PL](https://pcblab.io/adapter-slzb-mr2-zigbee-thread-matter-esp32-cc2652p-efr32mg21-poe-wifi-lan.html), [UK](https://zigbeesmart.com/de-de/products/zigbee-lan-poe-coordinator-smlight-slzb-mr2-multiradio?_pos=13&_sid=04f161c3b&_ss=r)
 
 **SLZB-MR1 buy**: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr1-multiradio-coordinator), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005004942648430.html).  
- Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr1-zigbee-and-thread-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [CZ](https://www.homebrainz.shop/de/p/smlight-slzb-mr1?srsltid=AfmBOorf9TiY1ZBQD7a7hUwDemKbCFsH_dv8ru9uDCT5yoq19AlyHy6z), [FR+EU](https://www.domadoo.fr/de/smart-home-produkte/7773-smlight-slzb-mr1-usb-ethernet-poe-zigbee-thread-matter-adapter.html), [BE](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [DE](https://mediarath.de/en/products/smlight-slzb-mr1-zigbee-thread-multiradio-cc2652p7-efr32mg21-lan-poe-usb-wifi-adapter), [NL](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [PL](https://pcblab.io/koordynator-slzb-mr1-multiradio-zigbee-thread.html), [SE](https://www.lohelectronics.se/hemautomation/zigbee/controllers-1473/smlight-slzb-mr1-zigbee-3-0-lan-gateway-med-poe-och-z2m), [CH](https://www.swiss-domotique.ch/en/gateways-antennas/2752-smlight-slzb-06-adaptateur-zigbee-ethernet-poe-usb-wifi-2.html), [FI](https://verkkokauppa.nurkantakaa.fi/tuote/smlight-slzb-mr1/), [UK](https://zigbeesmart.com/de-de/products/zigbee-lan-poe-coordinator-smlight-slzb-mr1-multiradio), [US](https://cloudfree.shop/product/smlight-slzb-mr1-zigbee-thread/).
+Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr1-zigbee-and-thread-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [CZ](https://www.homebrainz.shop/de/p/smlight-slzb-mr1?srsltid=AfmBOorf9TiY1ZBQD7a7hUwDemKbCFsH_dv8ru9uDCT5yoq19AlyHy6z), [FR+EU](https://www.domadoo.fr/de/smart-home-produkte/7773-smlight-slzb-mr1-usb-ethernet-poe-zigbee-thread-matter-adapter.html), [BE](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [DE](https://mediarath.de/en/products/smlight-slzb-mr1-zigbee-thread-multiradio-cc2652p7-efr32mg21-lan-poe-usb-wifi-adapter), [NL](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [PL](https://pcblab.io/koordynator-slzb-mr1-multiradio-zigbee-thread.html), [SE](https://www.lohelectronics.se/hemautomation/zigbee/controllers-1473/smlight-slzb-mr1-zigbee-3-0-lan-gateway-med-poe-och-z2m), [CH](https://www.swiss-domotique.ch/en/gateways-antennas/2752-smlight-slzb-06-adaptateur-zigbee-ethernet-poe-usb-wifi-2.html), [FI](https://verkkokauppa.nurkantakaa.fi/tuote/smlight-slzb-mr1/), [UK](https://zigbeesmart.com/de-de/products/zigbee-lan-poe-coordinator-smlight-slzb-mr1-multiradio), [US](https://cloudfree.shop/product/smlight-slzb-mr1-zigbee-thread/).
+
+:::
+
+::: details SONOFF Dongle-M
+
+Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
+
+The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two external antennas, supports PoE power supply, has a built-in web console(http://Dongle-M.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB.
+
+- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
+- [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+
+<img src="../../images/Dongle-M_600_600.jpg" width="200" />
 
 :::
 
@@ -376,22 +413,9 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 
 ### Not recommended
 
-::: details Sonoff Dongle-M (A.K.A Max)
+::: details SparkFun MGM240P
 
-"Core" firmware issues as of 2025-12-12.
-Several undesired behaviors consistently reported by users.
-WiFi does not seem to be properly disabled after requested.
-
-Chip: [efr32mg24a420f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a420f1536im48?tab=specs)
-
-The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two external antennas, supports PoE power supply, has a built-in web console(http://Dongle-M.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB.
-
-- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
-- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
-- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
-- [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
-
-<img src="../../images/Dongle-M_600_600.jpg" width="200" />
+Known UART issues; packet drops, stuck baudrate, etc..
 
 :::
 
@@ -463,13 +487,12 @@ Analyze log files in your browser and get an automated review of your network.
 
 ## [EXPERT] Customizing stack configuration
 
-::: warning ATTENTION
-This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it. Most networks will be just fine with the defaults.
-:::
+> [!WARNING]
+> This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it.
+> Most networks will be just fine with the defaults.
 
-::: warning ATTENTION
-Do not open a new issue in Zigbee2MQTT before confirming the problem is present with the default configuration.
-:::
+> [!IMPORTANT]
+> Do not open a new issue in Zigbee2MQTT before confirming the problem is present with the default configuration.
 
 You can modify the EmberZNet default stack configuration by creating a file `stack_config.json` in the same folder as your `coordinator_backup.json`. This configuration can only be done manually.
 
@@ -487,7 +510,8 @@ Format, available and default values are as below:
     "TRANSIENT_DEVICE_TIMEOUT": 10000,
     "END_DEVICE_POLL_TIMEOUT": 8,
     "TRANSIENT_KEY_TIMEOUT_S": 300,
-    "CCA_MODE": null
+    "CCA_MODE": null,
+    "DEFAULT_MANUFACTURER_CODE": 4169
 }
 ```
 
@@ -497,21 +521,25 @@ Documentation on these values and their behavior can be found in [SiLabs UG100 -
 
 The driver further restricts values to the below:
 
-- CONCENTRATOR_RAM_TYPE: "high" or "low"
-- CONCENTRATOR_MIN_TIME: min 1, max 60
-- CONCENTRATOR_MAX_TIME: min 30, max 300
-- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min 1, max 100
-- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
-- CONCENTRATOR_MAX_HOPS: min 0, max 30
-- MAX_END_DEVICE_CHILDREN: min 6, max 64
-- TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
-- END_DEVICE_POLL_TIMEOUT: min 0, max 14
-- TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
-- CCA_MODE: defaults to undefined (i.e. left to firmware default), possible values:
-    - "RSSI": RSSI-based CCA. CCA reports a busy medium upon detecting any energy above -75 (default).
-    - "SIGNAL": Signal Identifier-based CCA. CCA reports a busy medium only upon the detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "SIGNAL_OR_RSSI": RSSI or signal identifier-based CCA. CCA reports a busy medium on either detecting any energy above -75 (default) or detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "SIGNAL_AND_RSSI": RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "ALWAYS_TRANSMIT": ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
+- CONCENTRATOR_RAM_TYPE: `"high"` or `"low"`
+- CONCENTRATOR_MIN_TIME: min `1`, max `60`
+- CONCENTRATOR_MAX_TIME: min `30`, max `300`
+- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min `1`, max `100`
+- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min `1`, max `100`
+- CONCENTRATOR_MAX_HOPS: min `0`, max `30`
+- MAX_END_DEVICE_CHILDREN: min `6`, max `64`
+- TRANSIENT_DEVICE_TIMEOUT: min `0`, max `65535`
+- END_DEVICE_POLL_TIMEOUT: min `0`, max `14`
+- TRANSIENT_KEY_TIMEOUT_S: min `0`, max `65535`
+- CCA_MODE: default `undefined` (i.e. left to firmware default), possible values:
+    - `"RSSI"`: RSSI-based CCA. CCA reports a busy medium upon detecting any energy above -75 (default).
+    - `"SIGNAL"`: Signal Identifier-based CCA. CCA reports a busy medium only upon the detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"SIGNAL_OR_RSSI"`: RSSI or signal identifier-based CCA. CCA reports a busy medium on either detecting any energy above -75 (default) or detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"SIGNAL_AND_RSSI"`: RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"ALWAYS_TRANSMIT"`: ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
+- DEFAULT_MANUFACTURER_CODE: min `0`, max `65535`
+    - Default of `4169` is `SILICON_LABORATORIES`. See full list [here](https://github.com/Koenkk/zigbee-herdsman/blob/master/src/zspec/zcl/definition/manufacturerCode.ts) (convert value from hexadecimal to decimal before using in JSON).
+    - WARNING: setting this may allow some devices with vendor lock-in to behave better but may break others.
+    - NOTE: may be temporarily overridden during joins for devices with known quirks.
 
 **Note that some values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**

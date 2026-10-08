@@ -22,13 +22,11 @@ advanced:
     network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
 ```
 
-::: tip
-Set `network_key: GENERATE` to let Zigbee2MQTT generate a new random key on the first start. The `configuration.yml` gets updated with the new key. Changing the network_key requires re-pairing of all devices.
-:::
+> [!TIP]
+> Set `network_key: GENERATE` to let Zigbee2MQTT generate a new random key on the first start. The `configuration.yml` gets updated with the new key. Changing the network_key requires re-pairing of all devices.
 
-::: tip
-[Reduce Wi-Fi interference by changing the Zigbee channel](../../advanced/zigbee/02_improve_network_range_and_stability.md#reduce-wi-fi-interference-by-changing-the-zigbee-channel)
-:::
+> [!TIP]
+> [Reduce Wi-Fi interference by changing the Zigbee channel](../../advanced/zigbee/02_improve_network_range_and_stability.md#reduce-wi-fi-interference-by-changing-the-zigbee-channel)
 
 ### Configurator
 
@@ -38,13 +36,11 @@ Set `network_key: GENERATE` to let Zigbee2MQTT generate a new random key on the 
 
 Changing the channel of an existing Zigbee network is supported. In Zigbee, this is done by broadcasting a network update indicating the channel change. Devices that are asleep during the broadcast (usually battery powered end devices) will not switch immediately, but the next time they wake-up. It is therefore advised to trigger them after the channel change.
 
-::: warning
-Some Zigbee devices do not support changing channels. In case a device remains unresponsive several minutes after the change, and after having been triggered/woken up, you may have to re-pair it manually.
-:::
+> [!WARNING]
+> Some Zigbee devices do not support changing channels. In case a device remains unresponsive several minutes after the change, and after having been triggered/woken up, you may have to re-pair it manually.
 
-::: warning
-Changing channels is only supported for the `zstack` and `ember` adapter.
-:::
+> [!WARNING]
+> Changing channels is only supported for the `zstack` and `ember` adapter.
 
 Zigbee2MQTT will send this broadcast during startup if the channel in the configuration has been changed. The following logging will be produced:
 

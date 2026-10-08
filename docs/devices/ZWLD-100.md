@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Trust ZWLD-100](https://www.zigbee2mqtt.io/images/devices/ZWLD-100.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

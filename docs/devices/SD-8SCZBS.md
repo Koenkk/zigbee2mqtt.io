@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Climax SD-8SCZBS](https://www.zigbee2mqtt.io/images/devices/SD-8SCZBS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

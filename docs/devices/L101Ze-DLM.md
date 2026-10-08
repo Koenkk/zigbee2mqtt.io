@@ -1,6 +1,6 @@
 ---
-title: "LYTKO L101Ze-DLM control via MQTT"
-description: "Integrate your LYTKO L101Ze-DLM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Lytko L101Ze-DLM control via MQTT"
+description: "Integrate your Lytko L101Ze-DLM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-11-30T20:32:43
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# LYTKO L101Ze-DLM
+# Lytko L101Ze-DLM
 
 |     |     |
 |-----|-----|
 | Model | L101Ze-DLM  |
-| Vendor  | [LYTKO](/supported-devices/#v=LYTKO)  |
+| Vendor  | [Lytko](/supported-devices/#v=Lytko)  |
 | Description | Dual channel thermostat without display |
 | Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_mode), identify, occupied_setback, remote_sensing, sensor_type, power_apparent, current, energy |
-| Picture | ![LYTKO L101Ze-DLM](https://www.zigbee2mqtt.io/images/devices/L101Ze-DLM.png) |
+| Picture | ![Lytko L101Ze-DLM](https://www.zigbee2mqtt.io/images/devices/L101Ze-DLM.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

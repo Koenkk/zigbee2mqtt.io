@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![DIYRuZ FreePad_LeTV_8](https://www.zigbee2mqtt.io/images/devices/FreePad_LeTV_8.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [LeTV 8key FreePad mod](https://modkam.ru/?p=1791)

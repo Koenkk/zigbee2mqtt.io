@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hej BDS03G2](https://www.zigbee2mqtt.io/images/devices/BDS03G2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nyce NCZ-3043-HA](https://www.zigbee2mqtt.io/images/devices/NCZ-3043-HA.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

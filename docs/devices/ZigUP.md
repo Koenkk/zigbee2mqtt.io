@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) ZigUP](https://www.zigbee2mqtt.io/images/devices/ZigUP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [CC2530 based Zigbee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/)

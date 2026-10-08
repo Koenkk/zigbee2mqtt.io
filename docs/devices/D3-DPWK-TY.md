@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya D3-DPWK-TY](https://www.zigbee2mqtt.io/images/devices/D3-DPWK-TY.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

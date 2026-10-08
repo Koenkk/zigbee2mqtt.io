@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SMLIGHT SLZB-MR3](https://www.zigbee2mqtt.io/images/devices/SLZB-MR3.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

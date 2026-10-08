@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_air_quality_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_air_quality_sensor.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 * This device exposes a CO2 value, but [does not contain a CO2 sensor](https://community.home-assistant.io/t/blitzwolf-bw-ar01-air-quality-meter/338396). The CO2 value seems to be calculated from the VOC value and is completely wrong when compared to a real CO2 sensor.

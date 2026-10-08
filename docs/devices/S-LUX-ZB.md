@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya S-LUX-ZB](https://www.zigbee2mqtt.io/images/devices/S-LUX-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

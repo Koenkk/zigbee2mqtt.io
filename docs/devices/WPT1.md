@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Hive WPT1](https://www.zigbee2mqtt.io/images/devices/WPT1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

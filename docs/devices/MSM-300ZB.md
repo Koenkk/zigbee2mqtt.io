@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ShinaSystem MSM-300ZB](https://www.zigbee2mqtt.io/images/devices/MSM-300ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

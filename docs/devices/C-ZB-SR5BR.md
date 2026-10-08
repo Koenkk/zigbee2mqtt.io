@@ -22,9 +22,12 @@ pageClass: device-page
 | Picture | ![Candeo C-ZB-SR5BR](https://www.zigbee2mqtt.io/images/devices/C-ZB-SR5BR.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+To pair, press the centre button 5 times quickly, followed by a long 6th press (3 seconds). The device will reset and then remain in pairing mode for 3 minutes, during which time the LED will flash red.
 <!-- Notes END: Do not edit below this line -->
 
 

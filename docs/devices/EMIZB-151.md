@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Frient EMIZB-151](https://www.zigbee2mqtt.io/images/devices/EMIZB-151.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 Steps for resetting
 1. Open the casing of the device

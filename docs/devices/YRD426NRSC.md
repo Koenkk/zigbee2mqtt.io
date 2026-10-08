@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Yale YRD426NRSC](https://www.zigbee2mqtt.io/images/devices/YRD426NRSC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

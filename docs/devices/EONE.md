@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ENGO EONE](https://www.zigbee2mqtt.io/images/devices/EONE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -33,6 +34,8 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `expose_device_state`: Expose device power state as a separate property when enabled. The value must be `true` or `false`
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "1970". The value must be one of `1970`, `2000`, `off`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
@@ -131,12 +134,12 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `30`.
 The unit of this value is `day`.
 
-### Valve protection (binary)
+### Valve Protection (binary)
 Prevents valve blockage during long periods of inactivity..
 Value can be found in the published state on the `valve_protection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_protection": NEW_VALUE}`.
-If value equals `ON` valve protection is ON, if `OFF` OFF.
+If value equals `ON` valve Protection is ON, if `OFF` OFF.
 
 ### Warm floor (enum)
 Automatically warms the floor every 60 minutes..

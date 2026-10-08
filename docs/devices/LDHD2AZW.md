@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Leedarson LDHD2AZW](https://www.zigbee2mqtt.io/images/devices/LDHD2AZW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

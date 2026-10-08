@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![YOKIS E2BPA-UP](https://www.zigbee2mqtt.io/images/devices/E2BPA-UP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 - [CSA product page](https://csa-iot.org/csa_product/e2bpa-up/)
 <!-- Notes END: Do not edit below this line -->

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Amina Distribution AS amina S](https://www.zigbee2mqtt.io/images/devices/amina-S.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ### Notes on OTA updates
 

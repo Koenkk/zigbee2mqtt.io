@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Leedarson 6ARCZABZH](https://www.zigbee2mqtt.io/images/devices/6ARCZABZH.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

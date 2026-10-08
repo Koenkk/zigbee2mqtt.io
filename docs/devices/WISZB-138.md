@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco WISZB-138](https://www.zigbee2mqtt.io/images/devices/WISZB-138.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

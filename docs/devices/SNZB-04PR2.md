@@ -22,9 +22,14 @@ pageClass: device-page
 | Picture | ![SONOFF SNZB-04PR2](https://www.zigbee2mqtt.io/images/devices/SNZB-04PR2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Potential issues
 
+The sensor might fail to transmit the first action after a few hours of inactivity.  
+Issue was reported by some users [here](https://github.com/Koenkk/zigbee2mqtt/discussions/31618), currently under investigation by the SONOFF team.
 <!-- Notes END: Do not edit below this line -->
 
 

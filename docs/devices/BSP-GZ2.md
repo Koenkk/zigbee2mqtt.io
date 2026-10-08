@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Bosch BSP-GZ2](https://www.zigbee2mqtt.io/images/devices/BSP-GZ2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

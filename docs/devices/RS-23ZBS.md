@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Climax RS-23ZBS](https://www.zigbee2mqtt.io/images/devices/RS-23ZBS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

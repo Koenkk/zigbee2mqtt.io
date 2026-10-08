@@ -20,7 +20,8 @@ pageClass: device-page
 | Description | Wiser power micromodule |
 | Exposes | switch (state), power_on_behavior, power, energy, identify |
 | Picture | ![Schneider Electric CCTFR6730](https://www.zigbee2mqtt.io/images/devices/CCTFR6730.png) |
-| White-label | Elko EKO20004 |
+| White-label | ELKO EKO20004 |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

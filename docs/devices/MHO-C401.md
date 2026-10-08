@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![MiaoMiaoCe MHO-C401](https://www.zigbee2mqtt.io/images/devices/MHO-C401.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Originally this device does not support Zigbee (only Bluetooth).

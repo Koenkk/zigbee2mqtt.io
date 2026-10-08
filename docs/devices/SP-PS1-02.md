@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Spotmau SP-PS1-02](https://www.zigbee2mqtt.io/images/devices/SP-PS1-02.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

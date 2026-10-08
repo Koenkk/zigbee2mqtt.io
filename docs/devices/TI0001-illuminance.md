@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Livolo TI0001-illuminance](https://www.zigbee2mqtt.io/images/devices/TI0001-illuminance.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend

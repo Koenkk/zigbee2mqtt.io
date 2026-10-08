@@ -121,7 +121,7 @@ export default defineComponent({
 
                 // XXX: version should be kept in sync with Z2M's (updated with every release)
                 configurationKey.value = `
-version: 4
+version: 5
 mqtt:
     base_topic: zigbee2mqtt
     server: ${mqttServer}

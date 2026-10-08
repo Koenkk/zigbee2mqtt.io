@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya RB-SRAIN01](https://www.zigbee2mqtt.io/images/devices/RB-SRAIN01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -36,6 +37,7 @@ pageClass: device-page
 Raw measured illuminance.
 Value can be found in the published state on the `illuminance_raw` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Illuminance average 20min (numeric)
 Illuminance average for the last 20 minutes.

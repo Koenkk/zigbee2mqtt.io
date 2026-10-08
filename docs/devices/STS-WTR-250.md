@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SmartThings STS-WTR-250](https://www.zigbee2mqtt.io/images/devices/STS-WTR-250.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

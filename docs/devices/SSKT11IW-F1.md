@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit SSKT11IW-F1](https://www.zigbee2mqtt.io/images/devices/SSKT11IW-F1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

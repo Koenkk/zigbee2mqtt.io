@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZM25TQ  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Tubular motor |
-| Exposes | cover (state, position) |
+| Exposes | cover (state, position), upper_stroke_limit, middle_stroke_limit, lower_stroke_limit |
 | Picture | ![Zemismart ZM25TQ](https://www.zigbee2mqtt.io/images/devices/ZM25TQ.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,7 +33,9 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
+* `invert_cover`: Inverts the reported cover position and the state derived from it, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -42,4 +45,25 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Upper stroke limit (enum)
+Set / Reset the upper stroke limit.
+Value can be found in the published state on the `upper_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
+
+### Middle stroke limit (enum)
+Set / Reset the middle stroke limit.
+Value can be found in the published state on the `middle_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"middle_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
+
+### Lower stroke limit (enum)
+Set / Reset the lower stroke limit.
+Value can be found in the published state on the `lower_stroke_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lower_stroke_limit": NEW_VALUE}`.
+The possible values are: `SET`, `RESET`.
 

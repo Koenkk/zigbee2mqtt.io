@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | TRVZB  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee thermostatic radiator valve |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, timer_mode_target_temp, temporary_mode_duration, temporary_mode_select, child_lock, open_window, frost_protection_temperature, temperature_sensor_select, external_temperature_input, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, valve_opening_degree, valve_closing_degree, temperature_accuracy, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, timer_mode_target_temp, temporary_mode_duration, temporary_mode_select, child_lock, open_window, frost_protection_temperature, temperature_sensor_select, external_temperature_input, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, valve_opening_degree, valve_closing_degree, temperature_accuracy, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, smart_temperature_control |
 | Picture | ![SONOFF TRVZB](https://www.zigbee2mqtt.io/images/devices/TRVZB.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -111,11 +112,11 @@ The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
 ### Temperature sensor (enum)
-Whether to use the value of the internal temperature sensor or an external temperature sensor for the perceived local temperature. Using an external sensor does not require local temperature calibration..
+Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor.When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor..
 Value can be found in the published state on the `temperature_sensor_select` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
-The possible values are: `internal`, `external`, `external_2`, `external_3`.
+The possible values are: `local_temperature`, `remote_temperature`, `remote_source_offline`.
 
 ### External temperature (numeric)
 The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Zigbee2MQTT..
@@ -223,4 +224,11 @@ The preset heating schedule to use when the system mode is set to "auto" (indica
 Value can be found in the published state on the `weekly_schedule_saturday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_saturday": NEW_VALUE}`.
+
+### Smart temperature control (binary)
+Enable adaptive valve control using a PID algorithm. When enabled, "Valve Opening Percentage" and "Temperature Accuracy" are unavailable..
+Value can be found in the published state on the `smart_temperature_control` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smart_temperature_control": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_temperature_control": NEW_VALUE}`.
+If value equals `true` smart temperature control is ON, if `false` OFF.
 

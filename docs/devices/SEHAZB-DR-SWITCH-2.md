@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SolarEdge SEHAZB-DR-SWITCH-2](https://www.zigbee2mqtt.io/images/devices/SEHAZB-DR-SWITCH-2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | KD-R01D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Dimmer switch H2 EU |
-| Exposes | device_temperature, power, energy, voltage, current, led_indicator, flip_indicator_light, power_on_behavior, light (state, brightness), effect, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, operation_mode, multi_click, sensitivity, phase, min_brightness, max_brightness, action |
+| Exposes | device_temperature, power, energy, voltage, current, led_indicator, flip_indicator_light, power_on_behavior, light (state, brightness, level_config), effect, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, operation_mode, multi_click, sensitivity, phase, min_brightness, max_brightness, action |
 | Picture | ![Aqara KD-R01D](https://www.zigbee2mqtt.io/images/devices/KD-R01D.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -119,9 +120,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `on`, `previous`, `off`, `inverted`.
 
 ### Light 
-This light supports the following features: `state`, `brightness`.
+This light supports the following features: `state`, `brightness`, `level_config`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.

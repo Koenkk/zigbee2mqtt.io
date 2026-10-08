@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Visonic MCT-370 SMA](https://www.zigbee2mqtt.io/images/devices/MCT-370-SMA.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![IMOU ZE1-EN](https://www.zigbee2mqtt.io/images/devices/ZE1-EN.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

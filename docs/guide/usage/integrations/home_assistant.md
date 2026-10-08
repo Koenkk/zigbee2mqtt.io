@@ -47,7 +47,9 @@ To respond to button actions you can use one of the following Home Assistant con
 
 ### Via MQTT device trigger (recommended)
 
-The [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/) are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
+The actions get discovered by Home Assistant as [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger_.mqtt/) after the device generates them at least once. **Press each button on the physical device to have all the actions available in Home Assistant**.
+
+#### YAML
 
 ```yaml
 automation:
@@ -63,6 +65,23 @@ automation:
             target:
                 entity_id: light.bedroom
 ```
+
+#### Visual editor
+
+1. Add trigger  
+   ![device_trigger_1](../../../images/guide/usage/integrations/home_assistant/device_trigger_1.png)
+
+2. Filter "By type"  
+   ![device_trigger_2](../../../images/guide/usage/integrations/home_assistant/device_trigger_2.png)
+
+3. Scroll down to "Generic -> Device"  
+   ![device_trigger_3](../../../images/guide/usage/integrations/home_assistant/device_trigger_3.png)
+
+4. Select "Device" trigger  
+   ![device_trigger_4](../../../images/guide/usage/integrations/home_assistant/device_trigger_4.png)
+
+5. Pick your button/remote and its action  
+   ![device_trigger_5](../../../images/guide/usage/integrations/home_assistant/device_trigger_5.png)
 
 ### Via Home Assistant `event` entity (experimental)
 
@@ -92,9 +111,8 @@ automation:
 
 This method works by responding to the state change event of a sensor. For this `homeassistant.legacy_action_sensor: true` needs to be set in your `configuration.yaml`. See the [docs](../../configuration/homeassistant.md) for more info.
 
-::: warning
-Note that this feature is deprecated and will be removed in the future. It's recommended to use the MQTT device trigger instead.
-:::
+> [!WARNING]
+> Note that this feature is deprecated and will be removed in the future. It's recommended to use the MQTT device trigger instead.
 
 ```yaml
 automation:
@@ -111,6 +129,7 @@ automation:
 ## Groups
 
 Groups discovery is supported for groups of lights, switches, locks and covers. For other types you have to manually create a config in the Home Assistant `configuration.yaml`.
+Group discovery properties can be overridden via `groups.<id>.homeassistant` in the Zigbee2MQTT configuration.
 
 ## Overriding discovery properties
 
@@ -234,6 +253,14 @@ input_boolean:
         name: Zigbee2MQTT Force Remove
         initial: false
         icon: mdi:alert-remove
+    zigbee2mqtt_remove_keep_config:
+        name: Zigbee2MQTT Keep device configuration
+        initial: false
+        icon: mdi:content-save-check
+    zigbee2mqtt_remove_clear_cache:
+        name: Zigbee2MQTT Remove Clear Cache
+        initial: false
+        icon: mdi:trash-can
 
 # Scripts for renaming & removing devices
 script:
@@ -260,6 +287,8 @@ script:
                       {
                         "id": "{{ states('input_select.zigbee2mqtt_remove_select') }}",
                         "force": {{ 'true' if is_state('input_boolean.zigbee2mqtt_force_remove', 'on') else 'false' }}
+                        "keep_config": {{ 'true' if is_state('input_boolean.zigbee2mqtt_remove_keep_config', 'on') else 'false' }}
+                        "clear_cache": {{ 'true' if is_state('input_boolean.zigbee2mqtt_remove_clear_cache', 'on') else 'false' }}
                       }
 
 automation:
@@ -345,6 +374,8 @@ entities:
     - type: divider
     - entity: input_select.zigbee2mqtt_remove_select
     - entity: input_boolean.zigbee2mqtt_force_remove
+    - entity: input_boolean.zigbee2mqtt_remove_keep_config
+    - entity: input_boolean.zigbee2mqtt_remove_clear_cache
     - entity: script.zigbee2mqtt_remove
 ```
 

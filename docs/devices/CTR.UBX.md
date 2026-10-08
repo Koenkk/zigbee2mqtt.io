@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Airam CTR.UBX](https://www.zigbee2mqtt.io/images/devices/CTR.UBX.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

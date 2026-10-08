@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Alecto SMART-SMOKE10](https://www.zigbee2mqtt.io/images/devices/SMART-SMOKE10.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

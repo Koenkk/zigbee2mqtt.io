@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 1
+redirectFrom: /information/binding.md
 ---
 
 # Binding
@@ -15,9 +16,8 @@ A use case for binding is, for example, the TRADFRI wireless dimmer. Binding the
 
 ## Commands
 
-::: tip
-All commands below can also be executed via the frontend, click on your device and go to the _Bind_ tab.
-:::
+> [!TIP]
+> All commands below can also be executed via the frontend, click on your device and go to the _Bind_ tab.
 
 Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","from_endpoint":"default","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
 
@@ -37,9 +37,8 @@ If wanting to bind to specific endpoints instead of the default ones, specify th
 
 `SOURCE_ENDPOINT` and `TARGET_ENDPOINT` are optional. `SOURCE_ENDPOINT` will default to the default endpoint for the `SOURCE` device if not supplied. `TARGET_ENDPOINT` behaves the same, but is only used if `TARGET` is a device.
 
-::: tip
-The default endpoint for a device is the first registered endpoint (most often endpoint ID 1).
-:::
+> [!TIP]
+> The default endpoint for a device is the first registered endpoint (most often endpoint ID 1).
 
 ### Binding a remote to a group
 
@@ -64,9 +63,8 @@ To clear all bindings, just send the topic with the payload e.g. `{"target": "my
 
 To selectively clear bindings by IEEE address, send the topic with the payload e.g. `{"target": "my_deivce", "ieee_list": ["0xa1a2a3a4a5a6a7a8", "0xb1b2b3b4b5b6b7b8"]}`.
 
-::: tip
-Clearing bindings will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, bindings in Zigbee2MQTT should reflect actual bindings on the device.
-:::
+> [!TIP]
+> Clearing bindings will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, bindings in Zigbee2MQTT should reflect actual bindings on the device.
 
 ## Devices
 
@@ -78,19 +76,19 @@ When a devices is being bound to, Zigbee2MQTT will automatically configure repor
 
 In order for this feature to work, the device has to support it. As devices from the same manufacturer (mostly) have the same features the table below might help to find out if your device supports it.
 
-| Brand            | On/Off | Brightness | Color | Color temperature | Color Mode |
-| :--------------- | :----: | :--------: | :---: | :---------------: | :--------: |
-| Philips Hue      |  N(1)  |    N(2)    |   N   |         N         |     N      |
-| Philips Hue (BT) |   Y    |     Y      |   Y   |         Y         |     N      |
-| Trådfri(3)       |   Y    |     Y      |   Y   |         N         |     Y      |
-| Innr             |   Y    |     Y      |   Y   |         Y         |     Y      |
-| GLEDOPTO         |   N    |     N      |   N   |         N         |     N      |
-| OSRAM            |   Y    |     Y      |   N   |         N         |     Y      |
-| Müller Licht     |   N    |     N      |   N   |         N         |     Y      |
+| Brand              | On/Off | Brightness | Color | Color temperature | Color mode |
+| :----------------- | :----: | :--------: | :---: | :---------------: | :--------: |
+| Philips Hue (old)  |   N¹   |     N²     |   N   |         N         |     N      |
+| Philips Hue (new³) |   Y    |     Y      |   Y   |         Y         |     N      |
+| IKEA               |   Y    |     Y      |   Y   |         Y         |     Y      |
+| Innr               |   Y    |     Y      |   Y   |         Y         |     Y      |
+| GLEDOPTO           |   N    |     N      |   N   |         N         |     N      |
+| OSRAM              |   Y    |     Y      |   N   |         N         |     Y      |
+| Müller Licht       |   N    |     N      |   N   |         N         |     Y      |
 
 1. Bulbs on old firmware (date 20170908 or older) do report On/Off
 2. Zigbee2MQTT will manual poll for change if a binding updates the bulb.
-3. The color/brightness of a Trådfri bulb can be changed while the state=off, it also reports back the change.
+3. Lamps & bulbs released starting around 2019
 
 If your devices do **not** support reporting put the device in a group and bind the remote to the group instead of directly to the device. This will make Zigbee2MQTT poll the device for updates when the bound remote controls the device. To minimize traffic this has not been enabled for all devices. If this does not work please create an issue for it [here](https://github.com/Koenkk/zigbee2mqtt/issues).
 
