@@ -22,9 +22,21 @@ pageClass: device-page
 | Picture | ![Tuya TS0601_co2_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_co2_sensor.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+### Device type
+Active device with router functionality.
 
+### Physical size
+100x100x35 mm.
 
+### Power requirements
+Requires external power source, DC 5V1A.
+In december 2025, the device was equipped with a Micro USB connector.
+
+### Pairing
+There is a button underneath the device to activate the pairing activity.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi LYWSD03MMC-z](https://www.zigbee2mqtt.io/images/devices/LYWSD03MMC-z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Go [here (pvvx github)](https://github.com/pvvx/ATC_MiThermometer) for the firmware file & instructions on how to flash
@@ -134,7 +135,7 @@ Configure sensor measurement interval (default 10 seconds)..
 Value can be found in the published state on the `measurement_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"measurement_interval": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_interval": NEW_VALUE}`.
-The minimal value is `3` and the maximum value is `30`.
+The minimal value is `3` and the maximum value is `255`.
 The unit of this value is `s`.
 
 ### Battery (numeric)

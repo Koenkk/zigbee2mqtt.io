@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![YOKIS TLM4TNO-UP](https://www.zigbee2mqtt.io/images/devices/TLM4TNO-UP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

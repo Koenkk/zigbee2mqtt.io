@@ -18,16 +18,15 @@ pageClass: device-page
 | Model | BSD-2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Smoke alarm II |
-| Exposes | smoke, smoke_alarm_silenced, button_pushed, manual_smoke_alarm, manual_burglar_alarm, broadcast_alarms, test_mode, test_mode_timeout, battery, battery_low |
+| Exposes | smoke, smoke_alarm_silenced, button_pushed, alarm_control, broadcast_alarms, test_mode, test_mode_timeout, battery, battery_low |
 | Picture | ![Bosch BSD-2](https://www.zigbee2mqtt.io/images/devices/BSD-2.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Pairing
-- Before starting the pairing process the device's install code needs to be added to Zigbee2MQTT. Scan the QR code printed on the bottom of the device with the camera of your mobile phone and copy the received value (Attention: The install code printed in plain text on the device is not sufficient!) 
-- The install code can be found inside the device before attaching it to the mounting plate
-- Add this install code under Settings -> Tools -> Add install code
+This device needs to be paired using the installation code, which can be obtained by scanning the QR-code on the device with your smartphone (Attention: The install code printed in plain text on the device is not sufficient!) . In zigbee2mqtt, navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
 
 ### Factory resetting
 To factory reset the device remove the battery and wait 20 seconds or briefly press the device's main button. While pressing and holding the device's main button, insert the battery back. As soon as the device's LED on the front is starting to blink red, release the device's main button and press and hold it again until the device beeps. The device will reboot, which can take up to a minute. [Watch on Youtube](https://www.youtube.com/watch?v=PRAIsw4PoqE)
@@ -56,19 +55,12 @@ Value can be found in the published state on the `button_pushed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` button pushed is ON, if `false` OFF.
 
-### Manual smoke alarm (binary)
-Indicates whether the smoke alarm siren is being manually activated on the device.
-Value can be found in the published state on the `manual_smoke_alarm` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_smoke_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_smoke_alarm": NEW_VALUE}`.
-If value equals `ON` manual smoke alarm is ON, if `OFF` OFF.
-
-### Manual burglar alarm (binary)
-Indicates whether the burglar alarm siren is being manually activated on the device.
-Value can be found in the published state on the `manual_burglar_alarm` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_burglar_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_burglar_alarm": NEW_VALUE}`.
-If value equals `ON` manual burglar alarm is ON, if `OFF` OFF.
+### Alarm control (enum)
+Manually controls the alarm siren of the device. Set to 'smoke' or 'burglar' to activate the respective alarm, or 'off' to deactivate it..
+Value can be found in the published state on the `alarm_control` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_control": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_control": NEW_VALUE}`.
+The possible values are: `off`, `smoke`, `burglar`.
 
 ### Broadcast alarms (binary)
 Broadcast manual alarm state changes to all BSD-2 devices on the network. Please keep in mind that a detected smoke alarm is not being transmitted automatically to other devices. To achieve that, you must set up an automation, e.g., in Home Assistant..

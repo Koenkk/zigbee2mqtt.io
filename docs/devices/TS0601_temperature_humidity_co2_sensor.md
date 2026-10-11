@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | TS0601_temperature_humidity_co2_sensor  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | NDIR co2 sensor |
+| Description | CO2 sensor |
 | Exposes | temperature, humidity, co2 |
 | Picture | ![Tuya TS0601_temperature_humidity_co2_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_co2_sensor.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

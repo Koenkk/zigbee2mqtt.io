@@ -1,0 +1,120 @@
+---
+title: "Heiman HS1RM-E control via MQTT"
+description: "Integrate your Heiman HS1RM-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-06-30T19:08:31
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Heiman HS1RM-E
+
+|     |     |
+|-----|-----|
+| Model | HS1RM-E  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
+| Description | Smart relay module - 2 gang with neutral wire |
+| Exposes | switch (state), power_on_behavior, identify, device_intenal_temperature, switch_type_l1, switch_type_l2, switch_actions_l1, switch_actions_l2 |
+| Picture | ![Heiman HS1RM-E](https://www.zigbee2mqtt.io/images/devices/HS1RM-E.png) |
+
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+
+## Exposes
+
+### Switch (l1 endpoint)
+The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Switch (l2 endpoint)
+The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Power-on behavior (enum, l1 endpoint)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l1": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Power-on behavior (enum, l2 endpoint)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
+
+### Device intenal temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_intenal_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_intenal_temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Switch type l1 (enum, l1 endpoint)
+Switch input type for l1..
+Value can be found in the published state on the `switch_type_l1_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l1_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1_l1": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
+
+### Switch type l2 (enum, l2 endpoint)
+Switch input type for l2..
+Value can be found in the published state on the `switch_type_l2_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l2_l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l2_l2": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
+
+### Switch actions l1 (enum, l1 endpoint)
+Actions for switch 1.
+Value can be found in the published state on the `switch_actions_l1_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l1_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l1_l1": NEW_VALUE}`.
+The possible values are: `on_off`, `off_on`, `toggle`.
+
+### Switch actions l2 (enum, l2 endpoint)
+Actions for switch 2.
+Value can be found in the published state on the `switch_actions_l2_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l2_l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l2_l2": NEW_VALUE}`.
+The possible values are: `on_off`, `off_on`, `toggle`.
+

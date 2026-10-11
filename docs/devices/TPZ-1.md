@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | TPZ-1  |
 | Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | Topazio smart switch 1 gang |
-| Exposes | backlight_mode, switch (state), countdown, momentary_1, power_on_behavior, mode, induction_mode, vibration_mode, action |
+| Exposes | backlight_mode, switch (state), countdown, momentary_1, power_on_behavior, mode, indicator_status, induction_mode, vibration_mode, action |
 | Picture | ![Nova Digital TPZ-1](https://www.zigbee2mqtt.io/images/devices/TPZ-1.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +29,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "1970". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -45,7 +51,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 It's not possible to read (`/get`) this value.
 
 ### Countdown (numeric, l1 endpoint)
-Countdown to turn device off after a certain time.
+Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l1` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l1": NEW_VALUE}`.
@@ -73,6 +79,13 @@ Value can be found in the published state on the `mode_l1` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l1": NEW_VALUE}`.
 The possible values are: `switch_1`, `scene_1`.
+
+### Indicator status (enum)
+Indicator status.
+Value can be found in the published state on the `indicator_status` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_status": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_status": NEW_VALUE}`.
+The possible values are: `off`, `relay`, `invert`.
 
 ### Induction mode (enum)
 Induction mode.

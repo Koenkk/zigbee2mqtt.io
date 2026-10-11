@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Bacchus Flower_Sensor_v2](https://www.zigbee2mqtt.io/images/devices/Flower_Sensor_v2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/Bacchus777/Flower-Sensor-v2)
 <!-- Notes END: Do not edit below this line -->
@@ -59,7 +60,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.

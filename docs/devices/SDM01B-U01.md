@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![BITUO TECHNIK SDM01B-U01](https://www.zigbee2mqtt.io/images/devices/SDM01B-U01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

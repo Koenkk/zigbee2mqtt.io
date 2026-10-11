@@ -1,5 +1,8 @@
 ---
 sidebarDepth: 1
+redirectFrom:
+    - /information/debug.md
+    - /guide/usage/debug.md
 ---
 
 # Logging
@@ -84,6 +87,15 @@ First enable debug logging by adding the following in your `configuration.yaml`:
 ```yaml
 advanced:
     log_level: debug
+```
+
+If you are debugging an issue and want complete logs from Zigbee2MQTT startup, remember to turn off `log_rotation` and turn on logging to file by adding the following in your `configuration.yaml`:
+
+```yaml
+advanced:
+    log_rotation: false
+    log_output:
+        - file
 ```
 
 In the logging you will see the following abbreviations:

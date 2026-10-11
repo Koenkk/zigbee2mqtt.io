@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) LYWSD03MMC](https://www.zigbee2mqtt.io/images/devices/LYWSD03MMC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

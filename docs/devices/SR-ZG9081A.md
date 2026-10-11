@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SR-ZG9081A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee curtain control module |
-| Exposes | cover (state, position, tilt), power, voltage, current, energy, dev_mode, curtain_type, calibrate, identify |
+| Exposes | cover (state, position, tilt), power, voltage, current, energy, curtain_type, calibrate, identify |
 | Picture | ![Sunricher SR-ZG9081A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9081A.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,7 +49,7 @@ pageClass: device-page
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the reported cover position and the state derived from it, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
@@ -91,13 +92,6 @@ Value can be found in the published state on the `energy_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_3": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Dev mode (enum)
-Set device type (curtain or light).
-Value can be found in the published state on the `dev_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dev_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dev_mode": NEW_VALUE}`.
-The possible values are: `curtain`, `light`.
 
 ### Curtain type (enum)
 Configure curtain type.

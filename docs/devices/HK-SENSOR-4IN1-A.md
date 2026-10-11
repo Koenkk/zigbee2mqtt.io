@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher HK-SENSOR-4IN1-A](https://www.zigbee2mqtt.io/images/devices/HK-SENSOR-4IN1-A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -44,7 +45,7 @@ pageClass: device-page
 
 * `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be sent after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
 
 * `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
@@ -88,7 +89,7 @@ It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Slacky-DIY THERM_SLACKY_DIY_R0A](https://www.zigbee2mqtt.io/images/devices/THERM_SLACKY_DIY_R0A.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/slacky1965/tuya_thermostat_zrd)
 <!-- Notes END: Do not edit below this line -->
@@ -46,7 +47,7 @@ Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
-If value equals `Lock` child lock is ON, if `Unlock` OFF.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Programming operation mode (enum)
 Setpoint or Schedule mode.

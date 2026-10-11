@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Oujiabao CR701-YZ](https://www.zigbee2mqtt.io/images/devices/CR701-YZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara SP-EUC01](https://www.zigbee2mqtt.io/images/devices/SP-EUC01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Issues with inadvertent state toggling by control switches

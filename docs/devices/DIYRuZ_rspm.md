@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![DIYRuZ DIYRuZ_rspm](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_rspm.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [DIYRuZ relay switch power meter](https://modkam.ru/?p=1309)

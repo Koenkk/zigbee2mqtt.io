@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sercomm XHS2-SE](https://www.zigbee2mqtt.io/images/devices/XHS2-SE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

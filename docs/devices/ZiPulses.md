@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![LiXee ZiPulses](https://www.zigbee2mqtt.io/images/devices/ZiPulses.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

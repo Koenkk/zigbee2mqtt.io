@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Bosch BSP-FD](https://www.zigbee2mqtt.io/images/devices/BSP-FD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

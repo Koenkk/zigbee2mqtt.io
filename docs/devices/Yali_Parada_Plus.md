@@ -18,8 +18,10 @@ pageClass: device-page
 | Model | Yali Parada Plus  |
 | Vendor  | [Purmo/Radson](/supported-devices/#v=Purmo%2FRadson)  |
 | Description | Electric oil-filled radiator |
-| Exposes | climate (occupied_heating_setpoint, unoccupied_heating_setpoint, system_mode, local_temperature, local_temperature_calibration, running_state, running_mode), max_heat_setpoint_limit |
+| Exposes | climate (occupied_heating_setpoint, unoccupied_heating_setpoint, system_mode, local_temperature, local_temperature_calibration, running_state, running_mode), max_heat_setpoint_limit, keypad_lockout |
 | Picture | ![Purmo/Radson Yali Parada Plus](https://www.zigbee2mqtt.io/images/devices/Yali-Parada-Plus.png) |
+| White-label | Purmo/Radson Yali Digital Plus, LVI Yali Digital Plus |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,7 +45,7 @@ This climate device supports the following features: `occupied_heating_setpoint`
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`, `off`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
-- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-12.8` and the maximum value is `12.7` with a step size of `0.1`.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-2.5` and the maximum value is `2.5` with a step size of `0.1`.
 
 ### Max heat setpoint limit (numeric)
 Maximum Heating set point limit.
@@ -52,4 +54,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit": NEW_VALUE}`.
 The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
+
+### Keypad lockout (enum)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `keypad_lockout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": NEW_VALUE}`.
+The possible values are: `unlock`, `lock1`, `lock2`.
 

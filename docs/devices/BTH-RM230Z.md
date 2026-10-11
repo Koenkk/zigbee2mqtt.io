@@ -18,13 +18,20 @@ pageClass: device-page
 | Model | BTH-RM230Z  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Room thermostat II 230V |
-| Exposes | switch (state), custom_system_mode, operating_mode, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, occupied_cooling_setpoint, system_mode, running_state), setpoint_change_source, humidity, heater_type, valve_type, cable_sensor_mode, cable_sensor_temperature, window_open_mode, boost_heating, child_lock, display_brightness, display_switch_on_duration, activity_led, error_state |
+| Exposes | switch (state), operating_mode, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, occupied_cooling_setpoint, system_mode, running_state, control_sequence_of_operation, schedule), setpoint_change_source, humidity, heater_type, valve_type, cable_sensor_mode, cable_sensor_temperature, window_detection, boost_heating, child_lock, display_brightness, display_switch_on_duration, activity_led, error_state, humidity_alarm_led |
 | Picture | ![Bosch BTH-RM230Z](https://www.zigbee2mqtt.io/images/devices/BTH-RM230Z.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
-To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the back of the cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
+To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the back of the cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+
+## Optional relay
+The thermostat can be used as a thermostat-only device or with its relay exposed as a switch. Zigbee2MQTT exposes the relay switch by default; disable the `expose_relay` device option if the installation should only expose thermostat controls.
+
+### Home Assistant discovery
+This thermostat is normally used as a heat-only thermostat. Zigbee2MQTT suppresses Home Assistant cooling mode by default; set the `homeassistant_climate_modes` device option to `cool` or `heat_cool` only for installations that actually support cooling. The raw MQTT climate expose can still show cooling-oriented cluster fields reported by the firmware.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -34,6 +41,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `homeassistant_climate_modes`: Controls which modes are exposed in Home Assistant climate discovery (default heat). The value must be one of `heat`, `cool`, `heat_cool`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
@@ -57,26 +66,19 @@ Additionally an `off_wait_time` property can be added to the payload to specify 
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Available system modes (enum)
-Select if the thermostat is connected to a heating or a cooling device.
-Value can be found in the published state on the `custom_system_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"custom_system_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_system_mode": NEW_VALUE}`.
-The possible values are: `heat`, `cool`.
-
 ### Operating mode (enum)
-Bosch-specific operating mode. This is being used as mode on the exposed thermostat when using Home Assistant..
+Bosch-specific operating mode.
 Value can be found in the published state on the `operating_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
 The possible values are: `schedule`, `manual`, `pause`.
 
 ### Climate 
-This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`, `occupied_cooling_setpoint`, `system_mode`, `running_state`.
+This climate device supports the following features: `local_temperature`, `local_temperature_calibration`, `occupied_heating_setpoint`, `occupied_cooling_setpoint`, `system_mode`, `running_state`, `control_sequence_of_operation`, `schedule`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `occupied_cooling_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_cooling_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_cooling_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
 
@@ -122,12 +124,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Window open mode (binary)
+### Window detection (binary)
 Activates the window open mode, where the thermostat disables any heating/cooling to prevent unnecessary energy consumption. Please keep in mind that the device itself does not detect any open windows!.
-Value can be found in the published state on the `window_open_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_open_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_mode": NEW_VALUE}`.
-If value equals `ON` window open mode is ON, if `OFF` OFF.
+Value can be found in the published state on the `window_detection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
+If value equals `ON` window detection is ON, if `OFF` OFF.
 
 ### Activate boost heating (binary)
 Activate boost heating (opens TRV for 5 minutes).
@@ -171,4 +173,11 @@ Indicates whether the device encounters any errors or not.
 Value can be found in the published state on the `error_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"error_state": ""}`.
 It's not possible to write (`/set`) this value.
+
+### Humidity alarm led (binary)
+Enables/disables the LED warning when measured humidity is outside the comfortable range (below 30% or above 70%). Only the two observed raw values (0x07 on / 0x06 off) are supported; the meaning of the other bits of this attribute is not confirmed. The attribute is present on firmware 0x03086a90 (0.3.8) as well (confirmed by reading it on an unupgraded device); seemd the Bosch app only added a UI toggle for it in 0x03096a90 (0.3.9)..
+Value can be found in the published state on the `humidity_alarm_led` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_alarm_led": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_alarm_led": NEW_VALUE}`.
+If value equals `ON` humidity alarm led is ON, if `OFF` OFF.
 

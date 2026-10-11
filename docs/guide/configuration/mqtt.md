@@ -12,6 +12,7 @@ Zigbee2MQTT requires a MQTT-Server connection to operate.
 # Required: MQTT settings
 mqtt:
     # Required: MQTT server URL (use mqtts:// for SSL/TLS connection)
+    # Example: 'localhost', when using the Mosquito HA addon use 'core-mosquitto'
     server: 'mqtt://localhost:1883'
     # Optional: MQTT base topic for Zigbee2MQTT MQTT messages (default: zigbee2mqtt)
     base_topic: zigbee2mqtt
@@ -28,6 +29,10 @@ mqtt:
     client_id: 'MY_CLIENT_ID'
     # Optional: disable self-signed SSL certificates (default: true)
     reject_unauthorized: true
+    # Optional: override the TLS SNI / hostname used for certificate verification when it differs
+    # from the host in 'server', e.g. connecting to an internal hostname while validating a public
+    # certificate SAN. Leave unset to use the hostname from 'server'. (default: nothing)
+    server_name: 'mqtt.example.com'
     # Optional: Include device information to mqtt messages (default: false)
     include_device_information: true
     # Optional: MQTT keepalive in seconds (default: 60)

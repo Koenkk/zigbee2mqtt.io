@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Legrand ZLGP14/ZLGP15/ZLGP16](https://www.zigbee2mqtt.io/images/devices/ZLGP14-ZLGP15-ZLGP16.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -44,9 +45,6 @@ For further details, please refer to manufacturer documentation below.
 - ZLGP16 [EN](https://www.admin.legrandoc.com/files/documents/S000113317EN-00.pdf) [FR](https://www.admin.legrandoc.com/files/documents/S000113317FR-00.pdf)
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 

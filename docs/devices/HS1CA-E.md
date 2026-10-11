@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | HS1CA-E  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
-| Description | Smart carbon monoxide sensor |
+| Description | Smart carbon monoxide alarm |
 | Exposes | carbon_monoxide, battery_low, battery |
 | Picture | ![Heiman HS1CA-E](https://www.zigbee2mqtt.io/images/devices/HS1CA-E.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

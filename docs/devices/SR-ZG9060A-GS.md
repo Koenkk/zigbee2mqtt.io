@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher SR-ZG9060A-GS](https://www.zigbee2mqtt.io/images/devices/SR-ZG9060A-GS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

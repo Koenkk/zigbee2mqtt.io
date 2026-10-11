@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CASAIA CSAC451-WTC-E](https://www.zigbee2mqtt.io/images/devices/CSAC451-WTC-E.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -1,5 +1,8 @@
 ---
 sidebarDepth: 0
+redirectFrom:
+    - /guide/installation/20_zigbee2mqtt-fails-to-start.md
+    - /information/zigbee2mqtt_fails_to_start.md
 ---
 
 # Zigbee2MQTT fails to start/crashes runtime
@@ -26,6 +29,21 @@ Common reasons for this error:
 6. Your network Zigbee adapter is not accessible over the LAN network.
 7. Another software on your machine (including Home Assistant integration) is interfering with USB devices (example: [HA EDL21 integration](https://www.home-assistant.io/integrations/edl21) trying to find a USB device).
 
+## Error: `ERROR_EXCEEDED_MAXIMUM_ACK_TIMEOUT_COUNT` for EmberZNet
+
+Common sources:
+
+- Interference at USB or in 2.4GHz
+    - refer to various guides to reduce interference
+- Improper / unstable power source (USB, POE...)
+    - verify cabling, and power ratings, replace dubious hardware
+- Spikes in resource usage on the machine running Zigbee2MQTT (disk, CPU or RAM) - more prominent on low spec machines
+    - if necessary upgrade components or allocate more resources (for virtualized environments)
+- Spikes in resource usage on "core" chip (for TCP adapters)
+    - verify availability of new "core" firmware that may fix known bugs
+- [Spammy devices](#spammy-devices) (particularly Tuya & co)
+    - use coordinator firmware 8.0.2 and later from [darkxst](https://github.com/darkxst/silabs-firmware-builder/releases) or [Nerivec](https://github.com/Nerivec/silabs-firmware-builder/releases), and 7.4.4.5 or later from [Nabu Casa](https://github.com/NabuCasa/silabs-firmware-builder/releases)
+
 ## Verify that you put the correct port in configuration.yaml
 
 Execute the following command to find out the correct path:
@@ -37,6 +55,8 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ```
 
 In this example the correct `port` would be `/dev/ttyACM0`.
+
+You can also force [onboarding](../getting-started/README.md#onboarding) to re-do the configuration
 
 ### Which port should I use for Texas Instruments LAUNCHXL-CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?
 
@@ -215,13 +235,6 @@ See [EmberZNet errors](../adapters/emberznet.md#error-level).
 If you have multiple devices connected that are running cheap USB-UART converters (CH341) they may be indistinguishable to your system, since they all possibly have the same idProduct, SerialNumber etc. so they will share the same /dev/serial/by-id.
 The easiest solution is to change one of your devices to something with a different uart-usb converter. The second solution would be swapping the whole converter or adding external EEPROM memory to a chip that does not have one (like CH341) so you would be able to add a serial number.
 
-## MQTT v5 disconnecting
-
-If you use an MQTT broker with version 5 of the MQTT specification, you may get disconnects when something is misbehaving.
-This can happen, for example, when "maximum packet size" is exceeded (large networks).
-
-To remedy that, configure your broker accordingly, and check if Zigbee2MQTT has a corresponding setting to adjust too. See [MQTT configuration](../configuration/mqtt.md#server-connection).
-
 ## Error: `startup failed - configuration-adapter mismatch - see logs above for more information`
 
 This happens when you edit one or more of the `pan_id`, `network_key` or `ext_pan_id` values in `configuration.yml`. If your intent was to do this, the easiest way to resolve this error is to remove the `data/coordinator-backup.json` file and restart again. Note that this will reset your network and **all devices will need to be re-paired!**. Alternatively, you can revert back to the previous value(s). In that case, look a few lines before the error in the log, you'll find something like this:
@@ -307,3 +320,10 @@ As an example, this is the procedure to passthrough the serial device to a Proxm
 
 Now Zigbee2MQTT is able to reach the dongle through /dev/ttyS0 which is a "real" serial port inside the VM.
 Any issue with the USB device is logged by the host kernel and can be easily spotted with dmesg in this way we isolate them from the issues on the serial device.
+
+## `pnpm`-related error on startup
+
+Make sure you use the `pnpm` version used by Zigbee2MQTT (at least the same _major_ version):
+
+- `release` branch: https://github.com/Koenkk/zigbee2mqtt/blob/master/package.json#L7
+- `dev` branch: https://github.com/Koenkk/zigbee2mqtt/blob/dev/package.json#L7

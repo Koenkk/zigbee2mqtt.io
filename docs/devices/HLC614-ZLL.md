@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Shenzhen Homa HLC614-ZLL](https://www.zigbee2mqtt.io/images/devices/HLC614-ZLL.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

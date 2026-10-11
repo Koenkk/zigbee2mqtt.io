@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Frient HMSZB-120](https://www.zigbee2mqtt.io/images/devices/HMSZB-120.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

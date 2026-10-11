@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![xyzroe ZigDC](https://www.zigbee2mqtt.io/images/devices/ZigDC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [xyzroe ZigDC](https://xyzroe.cc/ZigDC)

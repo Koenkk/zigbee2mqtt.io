@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Aqara ZNQBKG39LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG39LM.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -168,5 +169,5 @@ The possible values are: `fast`, `multi`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_top`, `single_bottom`.
+The possible values are: `hold_top`, `hold_bottom`, `single_top`, `single_bottom`, `double_top`, `double_bottom`, `release_top`, `release_bottom`.
 

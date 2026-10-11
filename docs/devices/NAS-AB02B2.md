@@ -22,12 +22,18 @@ pageClass: device-page
 | Picture | ![NEO NAS-AB02B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Alarm melodies sounds/tunes: 1 - fuer elise 2 - big ben 3 - ring ring 4 - lone ranger 5 - turkish march 6 - high pitch siren 7 - red alert 8 - cricket 9 - beep beep 10 - dogs 11 - police 12 - chime 13 - phone ring 14 - firetruck 15 - clock chime 16 - alarm clock 17 - psycho 18 - doorbell
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes

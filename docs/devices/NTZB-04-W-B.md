@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | NTZB-04-W-B  |
 | Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | 4 gang switch with 2 gang socket 4x4 |
-| Exposes | switch (state) |
+| Exposes | switch (state), power_on_behavior, indicator_mode |
 | Picture | ![Nova Digital NTZB-04-W-B](https://www.zigbee2mqtt.io/images/devices/NTZB-04-W-B.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +29,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -61,4 +67,18 @@ It's not possible to read (`/get`) this value.
 The current state of this switch is in the published state under the `state_l6` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l6": "ON"}`, `{"state_l6": "OFF"}` or `{"state_l6": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
+
+### Power on behavior (enum)
+Power on behavior state.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `previous`.
+
+### Indicator mode (enum)
+Mode of the indicator light.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `none`, `relay`, `pos`.
 

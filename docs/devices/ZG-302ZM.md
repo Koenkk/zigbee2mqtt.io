@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZG-302ZM  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Motion sensing switch |
-| Exposes | presence, switch1, switch2, switch3, sensitivity, backlight, trigger_hold, power_outage_memory, auto_on, auto_off, trigger_switch |
+| Exposes | presence, switch1, switch2, switch3, distance, sensitivity, backlight, trigger_hold, power_outage_memory, auto_on, auto_off, trigger_switch |
 | Picture | ![HOBEIAN ZG-302ZM](https://www.zigbee2mqtt.io/images/devices/ZG-302ZM.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +29,11 @@ The power must be disconnected during installation
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes
@@ -59,13 +65,20 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3": NEW_VALUE}`.
 If value equals `ON` switch3 is ON, if `OFF` OFF.
 
+### Distance (numeric)
+detection distance.
+Value can be found in the published state on the `distance` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"distance": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `6`.
+The unit of this value is `m`.
+
 ### Sensitivity (numeric)
 detection sensitivity.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `19`.
-The unit of this value is `x`.
 
 ### Backlight (binary)
 backlight.

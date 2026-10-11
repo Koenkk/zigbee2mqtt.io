@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EssentielB EB-SB-1B](https://www.zigbee2mqtt.io/images/devices/EB-SB-1B.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

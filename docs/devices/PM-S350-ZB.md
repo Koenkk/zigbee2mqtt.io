@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Dawon DNS PM-S350-ZB](https://www.zigbee2mqtt.io/images/devices/PM-S350-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Lorenz Brun FanBee](https://www.zigbee2mqtt.io/images/devices/FanBee.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 The design is open-source, docs for building and using this can be found at https://github.com/lorenz/fanbee.

@@ -1,3 +1,7 @@
+---
+redirectFrom: /information/flashing_via_uniflash.md
+---
+
 # Flashing via UNIFLASH
 
 UNIFLASH can be used to flash certain Texas Instruments MCUs (e.g. CC26X2R1 and CC1352P-2). It runs on Windows, macOS and Linux.

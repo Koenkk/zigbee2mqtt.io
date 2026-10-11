@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![QOTO QT-05M](https://www.zigbee2mqtt.io/images/devices/QT-05M.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

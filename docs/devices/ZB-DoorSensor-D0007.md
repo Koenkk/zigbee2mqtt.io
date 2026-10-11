@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO ZB-DoorSensor-D0007](https://www.zigbee2mqtt.io/images/devices/ZB-DoorSensor-D0007.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

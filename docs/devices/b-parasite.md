@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) b-parasite](https://www.zigbee2mqtt.io/images/devices/b-parasite.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [b-parasite open source soil moisture sensor](https://github.com/rbaron/b-parasite)
@@ -79,7 +80,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.

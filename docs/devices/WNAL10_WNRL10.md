@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Legrand WNAL10/WNRL10](https://www.zigbee2mqtt.io/images/devices/WNAL10-WNRL10.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

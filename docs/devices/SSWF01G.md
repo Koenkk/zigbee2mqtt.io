@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Mercator Ikuü SSWF01G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

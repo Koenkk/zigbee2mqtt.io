@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 1
+redirectFrom: /information/mqtt_topics_and_message_structure.md
 ---
 
 # MQTT Topics and Messages
@@ -10,10 +11,9 @@ This page describes which MQTT topics are used by Zigbee2MQTT. Note that the bas
 
 The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device or group.
 
-::: tip
-You can use the `/` separator in `friendly_name` to structure devices and groups.
-For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
-:::
+> [!TIP]
+> You can use the `/` separator in `friendly_name` to structure devices and groups.
+> For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 
 Published messages are **always** in a JSON format. Each device produces a different JSON message. To see what your device publishes check the "Exposes" section on the device page which can be accessed via ["Supported devices"](../../supported-devices/). Some examples:
 
@@ -467,22 +467,32 @@ Creates a backup of the `data` folder (without the `data/log` directory). Payloa
 
 Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typically have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
 
+> [!TIP]
+> The WindFront frontend does not automatically activate permit joining after adding an install code. This allows you to permit joining on whichever device you want or "all", same as a regular device.
+
 ### Device
 
 #### zigbee2mqtt/bridge/request/device/remove
 
-Removes a device from the network. Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_bulb"}` or `my_bulb`, response: `{"data":{"id": "my_bulb","block":false,"force":false},"status":"ok"}`.
+Removes a device from the network. Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_bulb"}` or `my_bulb`, response: `{"data":{"id": "my_bulb","block":false,"force":false,"keep_config":false,"clear_cache":false},"status":"ok"}`.
 
 Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
 Which means that in case a device refuses to respond to this request it is not removed from the network.
 This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
-In case removal fails the response will be e.g. `{"data":{"id": "my_bulb","block":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
+In case removal fails the response will be e.g. `{"data":{"id": "my_bulb","block":false,"force":false,"keep_config":false,"clear_cache":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
 
 An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
 In case the device did remove itself from the network, you will get a `device_leave` event on `zigbee2mqtt/bridge/event`.
 
 In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
 To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"id":"my_bulb","force":true}`.
+
+If you want to keep the device configuration when removing a device add the optional `keep_config` property (default `false`) to the payload, example: `{"id":"my_bulb","keep_config":true}`; the device is removed from the network, but its saved configuration is preserved. Usefull when you know you'll be re-pairing the device later.
+
+To also clear the cache when removing a device add the optional `clear_cache` property (default `false`) to the payload, example: `{"id":"my_bulb","clear_cache":true}`; next join from that device will be from a clean slate (full interview from scratch).
+
+> [!TIP]
+> If you are developing a new device (e.g. ESPHome), use `clear_cache` to prevent potentially stale data from being restored on re-pairing.
 
 In case you also want to block the device the optional `block` property (default `false`) can be added, example: `{"id":"my_bulb","block":true}`. Note that Zigbee doesn't have a block functionality, therefore when a device is blocked, Zigbee2MQTT will immediately request the device to remove itself from the network when it joins.
 
@@ -491,6 +501,10 @@ In case you also want to block the device the optional `block` property (default
 See [OTA updates](./ota_updates.md).
 
 #### zigbee2mqtt/bridge/request/device/ota_update/update
+
+See [OTA updates](./ota_updates.md).
+
+#### zigbee2mqtt/bridge/request/device/ota_update/update/abort
 
 See [OTA updates](./ota_updates.md).
 
@@ -542,7 +556,13 @@ See [Binding](./binding.md).
 
 See [Binding](./binding.md).
 
-#### zigbee2mqtt/bridge/request/device/configure_reporting
+#### zigbee2mqtt/bridge/request/device/binds/clear
+
+See [Binding](./binding.md).
+
+#### zigbee2mqtt/bridge/request/device/reporting/configure
+
+_Alias: `zigbee2mqtt/bridge/request/device/configure_reporting` (deprecated)_
 
 Allows to send a Zigbee configure reporting command to a device. Zigbee devices often have attributes that can report changes in their state, such as temperature, humidity, battery level, etc. Attribute reporting allows these devices to automatically send updates when there is a change in the values of these attributes.
 One example is when you change brightness of a bulb with its remote instead of Zigbee2MQTT, the state becomes out of sync.
@@ -567,6 +587,9 @@ The Minimum Reporting Change is like telling your device to speak up only when s
 If you set a minimum reporting change of 1 degree for a temperature sensor, it means the sensor won't bother you with updates unless the temperature changes by at least 1 degree.
 It's a way to filter out minor fluctuations and focus on important changes in the environment.
 
+> [!TIP]
+> Support for `reportable_change` depends on the type of the attribute. For e.g. a `measure`-type attribute would likely support it, but a `enum`-type attribute would not. If supplied and not supported, it is ignored.
+
 To disable reporting set the `maximum_report_interval` to `65535`.
 
 Notes:
@@ -575,6 +598,20 @@ Notes:
 - If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
 - The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
 - To specify options, e.g. the manufacturerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
+
+#### zigbee2mqtt/bridge/request/device/reporting/read
+
+Allows to read the reporting configuration registered on a device.
+Attributes must of course be reportable, an error status will be returned for any attribute in the request that is not.
+
+Example payloads:
+
+- For one attribute: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"}]}`
+- For multiple attributes: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"},{"attribute":"currentFrequency"}]}`
+- For manufacturer-specific attribute: `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","configs":[{"attribute":"currentLevel"}], "manufacturer_code": 0x1234}`
+
+> [!TIP]
+> Reading reporting config will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, reporting config in Zigbee2MQTT should reflect the actual reporting config on the device.
 
 ### Group
 
@@ -629,3 +666,29 @@ See [Touchlink](./touchlink.md).
 #### zigbee2mqtt/bridge/request/touchlink/identify
 
 See [Touchlink](./touchlink.md).
+
+### Action
+
+#### zigbee2mqtt/bridge/request/action
+
+Allows to call specific pre-defined actions, usually manufacturer-specific.
+All action names are published in `zigbee2mqtt/bridge/definitions` under `actions`.
+
+The payload for this topic takes the following form (refer to specific actions docs for what `params` should contain):
+
+`{"action":"<action_name>","params":{/* action-specific parameters here */}}`
+
+E.g.:
+
+`{"action":"just_an_example","params":{"abcd": 1, "zyx": "my_device"}}`
+
+> [!TIP]
+> Specific up-to-date actions/parameters can be observed directly in the source code [https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/actions.ts)
+
+##### Action: `raw`
+
+> [!CAUTION]
+> This allows sending requests that could negatively impact or even break your network.
+
+Special action that allows to send entirely custom payloads. The given payload is analyzed to chose the proper method of sending (ZCL, ZDO, etc.).
+See link above for parameters details (beyond the scope of this documentation).

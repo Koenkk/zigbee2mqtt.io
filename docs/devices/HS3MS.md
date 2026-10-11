@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman HS3MS](https://www.zigbee2mqtt.io/images/devices/HS3MS.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

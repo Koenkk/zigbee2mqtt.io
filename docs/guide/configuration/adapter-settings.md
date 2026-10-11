@@ -4,9 +4,8 @@ sidebarDepth: 1
 
 # Adapter settings
 
-::: warning ATTENTION
-Not all features are supported for every adapter, to see what's supported, go to your [adapter page](../../guide/adapters/README.md).
-:::
+> [!WARNING]
+> Not all features are supported for every adapter, to see what's supported, go to your [adapter page](../../guide/adapters/README.md).
 
 ## Basic configuration
 
@@ -50,16 +49,16 @@ Zigbee2MQTT supports automatic discovery of Zigbee network Adapters. In order to
 
 If you have a more than 1 device with the same mDNS service type (name), Zigbee2MQTT with autodiscover option will connect to the random one. So for proper use we recommend to have only one physically connected network adapter with the same mDNS service type (name). Otherwise, please set-up a settings over IP address and port, as described on the passage above.
 
-::: warning ATTENTION
-When using this autodetection, the following parameters in `configuration.yaml` will be ignored: `adapter`, `baudrate`
-:::
+> [!IMPORTANT]
+> When using this autodetection, the following parameters in `configuration.yaml` will be ignored: `adapter`, `baudrate`.
 
 List of tested devices supporting mDNS Zeroconf autodiscovery:
-| Device | MDNS service type |
-| :--- | :---: |
-| SLZB-06 | slzb-06 |
-| UZG-01 | uzg-01 |
-| CZC-01 | czc |
+
+| Device  | MDNS service type |
+| :------ | :---------------: |
+| SLZB-06 |      slzb-06      |
+| UZG-01  |      uzg-01       |
+| CZC-01  |        czc        |
 
 ```yaml
 serial:
@@ -94,6 +93,5 @@ advanced:
 
 <!-- TODO: some notes about rtscts? Is it useful, which adapter supports it? -->
 
-::: tip
-It's also possible to connect USB Adapters over TCP. See how to connect a [remote adapter](../../advanced/remote-adapter/connect_to_a_remote_adapter.md).
-:::
+> [!TIP]
+> It's also possible to connect USB Adapters over TCP. See how to connect a [remote adapter](../../advanced/remote-adapter/connect_to_a_remote_adapter.md).

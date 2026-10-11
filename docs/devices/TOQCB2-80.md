@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | TOQCB2-80  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Smart circuit breaker |
-| Exposes | switch (state), energy, power, voltage, current, temperature, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, last_event, over_current_setting, current_threshold, under_voltage_setting, under_voltage_threshold, over_voltage_setting, over_voltage_threshold, over_power_setting, over_power_threshold, temperature_setting, temperature_threshold, clear_fault, factory_reset |
+| Exposes | switch (state), energy, power, voltage, current, temperature, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, last_event, over_current_setting, current_threshold, under_voltage_setting, under_voltage_threshold, over_voltage_setting, over_voltage_threshold, over_power_setting, over_power_threshold, temperature_setting, temperature_threshold, clear_fault, factory_reset, auto_reclosing |
 | Picture | ![Tongou TOQCB2-80](https://www.zigbee2mqtt.io/images/devices/TOQCB2-80.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,6 +32,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -238,4 +241,11 @@ Value can be found in the published state on the `factory_reset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
 If value equals `ON` factory reset is ON, if `OFF` OFF.
+
+### Auto-Reclosing (binary)
+When the circuit breaker trips due to voltage protection, it will automatically close when the circuit voItage returns to normal.(Note: For safety reasons, this function only applies to trips caused by voltage).
+Value can be found in the published state on the `auto_reclosing` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_reclosing": NEW_VALUE}`.
+If value equals `ON` auto-Reclosing is ON, if `OFF` OFF.
 

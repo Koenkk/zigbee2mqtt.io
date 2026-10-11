@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![YOKIS MTR1300EB-UP](https://www.zigbee2mqtt.io/images/devices/MTR1300EB-UP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

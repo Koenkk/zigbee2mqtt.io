@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CLEODE ZPLUG_Boost](https://www.zigbee2mqtt.io/images/devices/ZPLUG_Boost.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | HS15A-M  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
-| Description | Smoke detector relabeled for zipato |
+| Description | Smart smoke alarm relabeled for zipato |
 | Exposes | smoke, tamper, battery_low, battery, warning |
 | Picture | ![Heiman HS15A-M](https://www.zigbee2mqtt.io/images/devices/HS15A-M.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

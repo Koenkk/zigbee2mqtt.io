@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![ORVIBO CR11S8UZ](https://www.zigbee2mqtt.io/images/devices/CR11S8UZ.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

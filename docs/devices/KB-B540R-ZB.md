@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Dawon DNS KB-B540R-ZB](https://www.zigbee2mqtt.io/images/devices/KB-B540R-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

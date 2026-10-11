@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SONOFF Dongle-LMG21](https://www.zigbee2mqtt.io/images/devices/Dongle-LMG21.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

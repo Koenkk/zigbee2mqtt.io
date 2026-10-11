@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | ME-1-ZB-S  |
 | Vendor  | [ONOKOM](/supported-devices/#v=ONOKOM)  |
-| Description | ONOKOM-AIR-ME-1-MB-B (Adapter for household and semi-industrial Mitsubishi Electric systems) |
+| Description | Adapter for household and semi-industrial Mitsubishi Electric systems |
 | Exposes | ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode |
 | Picture | ![ONOKOM ME-1-ZB-S](https://www.zigbee2mqtt.io/images/devices/ME-1-ZB-S.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -58,7 +59,7 @@ Support depends on the switch firmware. Some devices might require both `on_time
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Current temperature (numeric)
-Current temperature.
+Indoor air temperature.
 Value can be found in the published state on the `current_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
@@ -79,7 +80,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `off`, `auto`, `cool`, `heat`, `fan_only`, `dry`.
 
 ### Mode (enum)
-Modes.
+Mode.
 Value can be found in the published state on the `mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.

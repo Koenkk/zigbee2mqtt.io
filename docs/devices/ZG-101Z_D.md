@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-101Z/D control via MQTT"
-description: "Integrate your Tuya ZG-101Z/D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-101Z/D control via MQTT"
+description: "Integrate your HOBEIAN ZG-101Z/D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-05-01T17:56:32
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-101Z/D
+# HOBEIAN ZG-101Z/D
 
 |     |     |
 |-----|-----|
 | Model | ZG-101Z/D  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Smart knob |
 | Exposes | operation_mode, battery, action |
-| Picture | ![Tuya ZG-101Z/D](https://www.zigbee2mqtt.io/images/devices/ZG-101Z-D.png) |
+| Picture | ![HOBEIAN ZG-101Z/D](https://www.zigbee2mqtt.io/images/devices/ZG-101Z-D.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +29,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes

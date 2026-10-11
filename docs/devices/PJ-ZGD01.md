@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![MatSee Plus PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

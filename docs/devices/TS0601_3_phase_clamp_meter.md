@@ -23,13 +23,14 @@ pageClass: device-page
 | White-label | MatSee Plus PC321-Z-TY, OWON PC321-Z-TY |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 Device is powered through wire A/L1.
 
 
-The device can be <ins>**modified**</ins> to work in systems <ins>**without a neutral**</ins>, like the Norwegian <ins>**IT-system**</ins> (isolé-terre).
+The device can be **modified** to work in systems **without a neutral**, like the Norwegian **IT-system** (isolé-terre).
 This modification should only be conducted by someone with knowledge about mains electricity. All three phases have to be connected to ensure propper function and avoid short circuits. Make 100% sure that you have no more than 240 V between any two phases. 
 
 First, the voltage sensing transformers (VT) have to be isolated from the common neutral line (N) by scratching away the copper traces:
@@ -52,6 +53,8 @@ Here is a circuit diagram, created with TinyCAD (https://www.tinycad.net), compa
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
 

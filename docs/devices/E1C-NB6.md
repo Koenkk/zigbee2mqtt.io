@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sengled E1C-NB6](https://www.zigbee2mqtt.io/images/devices/E1C-NB6.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

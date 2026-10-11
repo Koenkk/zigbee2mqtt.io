@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+redirectFrom: /information/3d_cases.md
 ---
 
 # 3D cases

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![AVATTO ME168_AVATTO](https://www.zigbee2mqtt.io/images/devices/ME168_AVATTO.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Pairing
@@ -32,6 +33,11 @@ You can pair this device by setting device to manual mode by short press rotary 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "2000". The value must be one of `1970`, `2000`, `off`
 
 
 ## Exposes

@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-204ZL control via MQTT"
-description: "Integrate your Tuya ZG-204ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-204ZL control via MQTT"
+description: "Integrate your HOBEIAN ZG-204ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-05-07T18:17:42
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-204ZL
+# HOBEIAN ZG-204ZL
 
 |     |     |
 |-----|-----|
 | Model | ZG-204ZL  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Luminance motion sensor |
 | Exposes | occupancy, illuminance, battery, sensitivity, keep_time, illuminance_interval |
-| Picture | ![Tuya ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png) |
+| Picture | ![HOBEIAN ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,6 +44,8 @@ or set values (i.e. `sensitivity` or `keep_time`) will only work when the sensor
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 

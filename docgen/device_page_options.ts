@@ -1,12 +1,13 @@
 import {strict as assert} from 'assert';
+import {Definition, Option} from 'zigbee-herdsman-converters';
 
 function addTrailingDot(text: string) {
     text = text.trim();
     return text.endsWith('.') || text.endsWith('`') ? text : text + '.';
 }
 
-export function generateOptions(definition) {
-    if (definition.options.length == 0) return '';
+export function generateOptions(definition: Definition) {
+    if (!definition.options || definition.options.length == 0) return '';
     return `
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -15,7 +16,7 @@ ${definition.options.map((e) => getOptionDocs(e)).join('\n\n')}
 `;
 }
 
-function getOptionDocs(option) {
+function getOptionDocs(option: Option) {
     let extra: string | undefined;
 
     if (option.type === 'numeric') {

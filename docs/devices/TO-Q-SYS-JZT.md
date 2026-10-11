@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | TO-Q-SYS-JZT  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Din rail smart meter |
-| Exposes | switch (state), power, current, voltage, energy, ac_frequency, power_factor, temperature, event, over_current_setting, over_current_threshold, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, test1, test5 |
+| Exposes | switch (state), power, current, voltage, energy, ac_frequency, power_factor, temperature, event, control_mode, over_current_setting, over_current_threshold, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, current_recloser, power_recloser, voltage_recloser, lcd_backlight_off, lcd_brightness, lcd_rotation |
 | Picture | ![Tongou TO-Q-SYS-JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SYS-JZT.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,6 +32,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -112,6 +115,13 @@ Value can be found in the published state on the `event` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `normal`, `over_current_trip`, `over_power_trip`, `high_temp_trip`, `over_voltage_trip`, `under_voltage_trip`, `over_current_alarm`, `over_power_alarm`, `high_temp_alarm`, `over_voltage_alarm`, `under_voltage_alarm`, `remote_on`, `remote_off`, `manual_on`, `manual_off`, `leakage_trip`, `leakage_alarm`, `restore_default`, `automatic_closing`, `electricity_shortage`, `electricity_shortage_alarm`, `timing_switch_On`, `timing_switch_off`.
 
+### Control mode (enum)
+Device control mode.
+Value can be found in the published state on the `control_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_mode": NEW_VALUE}`.
+The possible values are: `local_lock`, `local_mode`, `remote_mode`, `full_control`.
+
 ### Over current setting (enum)
 Over current setting.
 Value can be found in the published state on the `over_current_setting` property.
@@ -187,11 +197,46 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1000` and the maximum value is `26000`.
 The unit of this value is `W`.
 
-### Test1 (numeric)
-Value can be found in the published state on the `test1` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+### Current recloser (binary)
+Current recloser.
+Value can be found in the published state on the `current_recloser` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_recloser": NEW_VALUE}`.
+If value equals `ON` current recloser is ON, if `OFF` OFF.
 
-### Test5 (numeric)
-Value can be found in the published state on the `test5` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+### Power recloser (binary)
+Power recloser.
+Value can be found in the published state on the `power_recloser` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_recloser": NEW_VALUE}`.
+If value equals `ON` power recloser is ON, if `OFF` OFF.
+
+### Voltage recloser (binary)
+Voltage recloser.
+Value can be found in the published state on the `voltage_recloser` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_recloser": NEW_VALUE}`.
+If value equals `ON` voltage recloser is ON, if `OFF` OFF.
+
+### Lcd backlight off (binary)
+LCD Backlight OFF.
+Value can be found in the published state on the `lcd_backlight_off` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_backlight_off": NEW_VALUE}`.
+If value equals `ON` lcd backlight off is ON, if `OFF` OFF.
+
+### Lcd brightness (numeric)
+LCD brightness.
+Value can be found in the published state on the `lcd_brightness` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Lcd rotation (enum)
+LCD Rotation.
+Value can be found in the published state on the `lcd_rotation` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_rotation": NEW_VALUE}`.
+The possible values are: `FWD`, `REV`.
 

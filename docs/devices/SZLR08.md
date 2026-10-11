@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | SZLR08  |
 | Vendor  | [Lincukoo](/supported-devices/#v=Lincukoo)  |
 | Description | 24GHz millimeter wave radar |
-| Exposes | presence, illuminance, installation_height, radar_sensitivity, fading_time, relay_switch, radar_switch, indicator, relay_mode, radar_mode |
+| Exposes | presence, detection_distance, illuminance, installation_height, radar_sensitivity, fading_time, relay_switch, radar_switch, indicator, relay_mode, radar_mode |
 | Picture | ![Lincukoo SZLR08](https://www.zigbee2mqtt.io/images/devices/SZLR08.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +33,8 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
@@ -42,6 +45,13 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
+
+### Detection distance (numeric)
+Distance of detected person.
+Value can be found in the published state on the `detection_distance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `1000`.
+The unit of this value is `cm`.
 
 ### Illuminance (numeric)
 Measured illuminance.

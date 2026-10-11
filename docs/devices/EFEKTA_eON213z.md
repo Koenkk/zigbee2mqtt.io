@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_eON213z](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON213z.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Temperature and humidity sensor with e-ink2.13](http://efektalab.com/eON213z)

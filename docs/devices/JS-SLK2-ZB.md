@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![JAVIS JS-SLK2-ZB](https://www.zigbee2mqtt.io/images/devices/JS-SLK2-ZB.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

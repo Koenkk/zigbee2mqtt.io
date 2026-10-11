@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Candeo C-ZB-SETE](https://www.zigbee2mqtt.io/images/devices/C-ZB-SETE.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

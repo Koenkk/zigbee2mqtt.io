@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![SmartThings F-APP-UK-V2](https://www.zigbee2mqtt.io/images/devices/F-APP-UK-V2.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
 In order to pair the device to your zigbee coordinator, first press the "Permit Join" button in the Zigbee2MQTT screen. While the device is unplugged, press and hold one of the buttons on the side. While holding the button, plug the device in. Once plugged into the power socket, release the button. The blue LED will flash briefly and the device will begin pairing.

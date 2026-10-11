@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![EFEKTA EFEKTA_eON29wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON29wz.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Mini weather station, barometer, forecast, charts, temperature, humidity, light](http://efektalab.com/eON290wz)
@@ -71,7 +72,7 @@ It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.

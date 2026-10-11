@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Livolo TI0001-pir](https://www.zigbee2mqtt.io/images/devices/TI0001-pir.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

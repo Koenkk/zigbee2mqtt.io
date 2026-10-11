@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco SMRZB-143](https://www.zigbee2mqtt.io/images/devices/SMRZB-143.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

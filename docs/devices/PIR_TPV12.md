@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman PIR_TPV12](https://www.zigbee2mqtt.io/images/devices/PIR_TPV12.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Stelpro SMT402AD](https://www.zigbee2mqtt.io/images/devices/SMT402AD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

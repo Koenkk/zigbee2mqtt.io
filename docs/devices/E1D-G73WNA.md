@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Sengled E1D-G73WNA](https://www.zigbee2mqtt.io/images/devices/E1D-G73WNA.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

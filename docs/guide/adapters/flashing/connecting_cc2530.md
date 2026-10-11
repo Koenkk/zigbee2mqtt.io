@@ -1,4 +1,5 @@
 ---
+redirectFrom: /information/connecting_cc2530.md
 ---
 
 # Connecting the CC2530

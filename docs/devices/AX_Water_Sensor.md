@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![CTM Lyng AX_Water_Sensor](https://www.zigbee2mqtt.io/images/devices/AX_Water_Sensor.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

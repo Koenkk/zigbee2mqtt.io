@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![GS SRHMP-I1](https://www.zigbee2mqtt.io/images/devices/SRHMP-I1.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

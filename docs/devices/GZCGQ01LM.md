@@ -23,6 +23,7 @@ pageClass: device-page
 | White-label | Xiaomi YTC4043GL |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -71,7 +72,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.

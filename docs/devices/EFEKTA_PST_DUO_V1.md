@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | EFEKTA_PST_DUO_V1  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Water, gas smart pressure monitor with two sensors |
-| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, raw_temperature_cal, battery, voltage, battery_low, uptime, reading_interval, smart_sleep, config_report_enable, comparison_previous_data |
+| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, range, raw_temperature_cal, battery, voltage, battery_low, uptime, reading_interval, smart_sleep, config_report_enable, comparison_previous_data, overheating |
 | Picture | ![EFEKTA EFEKTA_PST_DUO_V1](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_DUO_V1.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -73,7 +74,7 @@ Value can be found in the published state on the `pressure_offset_1` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset_1": NEW_VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Raw temperature calibration (numeric, 1 endpoint)
 Adjust first temperature sensor.
@@ -82,6 +83,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_calibration_1": NEW_VALUE}`.
 The minimal value is `-8192` and the maximum value is `8192`.
 The unit of this value is `raw unit`.
+
+### Range (enum, 1 endpoint)
+Measuring range of the first sensor.
+Value can be found in the published state on the `range_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"range_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range_1": NEW_VALUE}`.
+The possible values are: `0-10 Bar`, `0-16 Bar`.
 
 ### Pressure (numeric, 2 endpoint)
 Measured pressure value оf the second sensor in kPa.
@@ -113,7 +121,7 @@ Value can be found in the published state on the `pressure_offset_2` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset_2": NEW_VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Raw temperature cal (numeric, 2 endpoint)
 Adjust second temperature sensor.
@@ -122,6 +130,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_cal_2": NEW_VALUE}`.
 The minimal value is `-8192` and the maximum value is `8192`.
 The unit of this value is `raw unit`.
+
+### Range (enum, 2 endpoint)
+Measuring range of the first sensor.
+Value can be found in the published state on the `range_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"range_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range_2": NEW_VALUE}`.
+The possible values are: `0-10 Bar`, `0-16 Bar`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -178,4 +193,16 @@ Value can be found in the published state on the `comparison_previous_data` prop
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
+
+### Overheating (enum, 1 endpoint)
+Sensor overheating detection.
+Value can be found in the published state on the `overheating_1` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `FALSE`, `TRUE`.
+
+### Overheating (enum, 2 endpoint)
+Sensor overheating detection.
+Value can be found in the published state on the `overheating_2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `FALSE`, `TRUE`.
 

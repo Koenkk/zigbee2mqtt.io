@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Technicolor XHK1-TC](https://www.zigbee2mqtt.io/images/devices/XHK1-TC.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

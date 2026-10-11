@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya TS0222_solar_light](https://www.zigbee2mqtt.io/images/devices/TS0222_solar_light.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
@@ -40,7 +41,7 @@ pageClass: device-page
 ## Exposes
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.

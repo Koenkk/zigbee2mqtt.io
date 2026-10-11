@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | T2_E27_CCT  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
-| Description | E27 led bulb |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_on_behavior, identify |
+| Description | E27 CCT led bulb |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_on_behavior, identify, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration, transition_curve_curvature, transition_initial_brightness |
 | Picture | ![Aqara T2_E27_CCT](https://www.zigbee2mqtt.io/images/devices/T2_E27_CCT.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,8 +52,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ### Light 
 This light supports the following features: `state`, `brightness`, `color_temp`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+                
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+                
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+                
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -115,4 +119,51 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
+
+### Dimming range minimum (numeric)
+Minimum allowed dimming value.
+Value can be found in the published state on the `dimming_range_minimum` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_range_minimum": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_minimum": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `99`.
+The unit of this value is `%`.
+
+### Dimming range maximum (numeric)
+Maximum allowed dimming value.
+Value can be found in the published state on the `dimming_range_maximum` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_range_maximum": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_maximum": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Off on duration (numeric)
+Duration for light to gradually brighten when turning on.
+Value can be found in the published state on the `off_on_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"off_on_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_on_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `s`.
+
+### On off duration (numeric)
+Duration for light to gradually dim when turning off.
+Value can be found in the published state on the `on_off_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"on_off_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_off_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `s`.
+
+### Transition curve curvature (numeric)
+Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast).
+Value can be found in the published state on the `transition_curve_curvature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"transition_curve_curvature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transition_curve_curvature": NEW_VALUE}`.
+The minimal value is `0.2` and the maximum value is `6`.
+
+### Transition initial brightness (numeric)
+Starting brightness level when light turns on before transition.
+Value can be found in the published state on the `transition_initial_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"transition_initial_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transition_initial_brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `50`.
+The unit of this value is `%`.
 

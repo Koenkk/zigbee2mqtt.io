@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | TS0601_cover_9  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Cover motor |
-| Exposes | cover (state, position), battery |
+| Exposes | cover (state, position), motor_direction, battery |
 | Picture | ![Tuya TS0601_cover_9](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_9.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,6 +30,11 @@ pageClass: device-page
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
 
 ## Exposes
 
@@ -37,6 +43,13 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Motor direction (enum)
+Motor rotation direction.
+Value can be found in the published state on the `motor_direction` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+The possible values are: `normal`, `reversed`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.

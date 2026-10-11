@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | PIR313-E  |
 | Vendor  | [OWON](/supported-devices/#v=OWON)  |
 | Description | Motion sensor |
-| Exposes | occupancy, tamper, battery_low, temperature, humidity, illuminance |
+| Exposes | occupancy, tamper, battery_low, battery, temperature, humidity, illuminance |
 | Picture | ![OWON PIR313-E](https://www.zigbee2mqtt.io/images/devices/PIR313-E.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -65,6 +66,13 @@ Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
@@ -78,7 +86,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.

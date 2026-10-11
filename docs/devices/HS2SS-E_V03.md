@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Heiman HS2SS-E_V03](https://www.zigbee2mqtt.io/images/devices/HS2SS-E_V03.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

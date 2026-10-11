@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | FK_V02  |
 | Vendor  | [FrankEver](/supported-devices/#v=FrankEver)  |
 | Description | Zigbee smart water valve |
-| Exposes | switch (state), threshold, timer |
+| Exposes | switch (state), power_off_state, set_valve_position, countdown |
 | Picture | ![FrankEver FK_V02](https://www.zigbee2mqtt.io/images/devices/FK_V02.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,6 +30,11 @@ pageClass: device-page
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
 
 ## Exposes
 
@@ -37,19 +43,25 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Threshold (numeric)
-Valve open percentage (multiple of 10).
-Value can be found in the published state on the `threshold` property.
+### Power off state (enum)
+Power-off status behavior.
+Value can be found in the published state on the `power_off_state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_off_state": NEW_VALUE}`.
+The possible values are: `off`, `on`, `maintain`.
+
+### Set valve position (numeric)
+Value can be found in the published state on the `set_valve_position` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_valve_position": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Timer (numeric)
-Countdown timer in minutes.
-Value can be found in the published state on the `timer` property.
+### Countdown (numeric)
+Countdown timer in seconds.
+Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `600`.
-The unit of this value is `min`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
 

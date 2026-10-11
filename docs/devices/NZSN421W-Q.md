@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Feibit NZSN421W-Q](https://www.zigbee2mqtt.io/images/devices/NZSN421W-Q.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Tuya _TZ3000_h1ipgkwn](https://www.zigbee2mqtt.io/images/devices/_TZ3000_h1ipgkwn.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

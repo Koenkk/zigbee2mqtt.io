@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco SBTZB-110](https://www.zigbee2mqtt.io/images/devices/SBTZB-110.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 

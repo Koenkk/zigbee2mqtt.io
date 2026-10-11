@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Ynoa LA-PLUG-10Amp](https://www.zigbee2mqtt.io/images/devices/LA-PLUG-10Amp.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

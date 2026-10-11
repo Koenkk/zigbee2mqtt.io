@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | ZG-204ZH  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | PIR 24Ghz human presence sensor |
-| Exposes | presence, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, static_detection_distance, static_detection_sensitivity, motion_detection_mode |
+| Exposes | presence, motion_state, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, static_detection_distance, static_detection_sensitivity, motion_detection_mode, motion_detection_sensitivity |
 | Picture | ![HOBEIAN ZG-204ZH](https://www.zigbee2mqtt.io/images/devices/ZG-204ZH.png) |
+
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,6 +32,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -50,6 +53,12 @@ Indicates whether the device detected presence.
 Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
+
+### Motion state (enum)
+Motion state.
+Value can be found in the published state on the `motion_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `none`, `large`, `small`, `static`.
 
 ### Illuminance (numeric)
 Measured illuminance.
@@ -136,7 +145,6 @@ Value can be found in the published state on the `static_detection_sensitivity` 
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
-The unit of this value is `x`.
 
 ### Motion detection mode (enum)
 Motion detection mode.
@@ -144,4 +152,11 @@ Value can be found in the published state on the `motion_detection_mode` propert
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": NEW_VALUE}`.
 The possible values are: `pir_and_radar`, `pir_or_radar`, `only_radar`.
+
+### Motion detection sensitivity (numeric)
+Radar Motion detection sensitivity.
+Value can be found in the published state on the `motion_detection_sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
 

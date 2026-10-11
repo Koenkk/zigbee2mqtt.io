@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![Schneider Electric 41ECSFWMZ-VW](https://www.zigbee2mqtt.io/images/devices/41ECSFWMZ-VW.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 

@@ -22,11 +22,17 @@ pageClass: device-page
 | Picture | ![SONOFF SNZB-02WD](https://www.zigbee2mqtt.io/images/devices/SNZB-02WD.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Battery
+Uses a CR2477 battery
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

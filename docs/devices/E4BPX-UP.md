@@ -22,6 +22,7 @@ pageClass: device-page
 | Picture | ![YOKIS E4BPX-UP](https://www.zigbee2mqtt.io/images/devices/E4BPX-UP.png) |
 
 
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
