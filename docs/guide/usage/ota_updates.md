@@ -87,7 +87,7 @@ When a **downgrade** is available, start it by sending the message to `zigbee2mq
 You can abort a running update by sending a message to `zigbee2mqtt/bridge/request/device/ota_update/update/abort` with payload `{"id":"deviceID"}` (same as above).
 
 If the device does not respond, wake it up (e.g. push a button) right before starting, or [schedule](#scheduling-update-on-next-device-request) the update.  
-The progress is published to the respective device topic, as described [above](#device-state).
+The progress is published to the respective device topic, as described [above](#update-status).
 
 Once the update is completed, a response is sent, example response: `{"data":{"id":"my_remote","from":{"file_version":5,"software_build_id":1,"date_code":"20190101"},"to":{"file_version":10,"software_build_id":2,"date_code":"20190102"}},"status":"ok"}`.  
 Note that `software_build_id` and `date_code` are **optional** device attributes, some devices may have them, others not (even same model can differ, since this is firmware-dependent).
