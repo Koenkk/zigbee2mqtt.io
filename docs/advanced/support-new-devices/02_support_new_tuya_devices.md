@@ -146,4 +146,4 @@ In case your device is fully working but it has the wrong picture and/or descrip
     - `DESCRIPTION`: A description of the device
     - `MANUFACTURER_NAME`: Can be retrieved from the frontend -> device -> about page -> below _Zigbee Model_, e.g. `_TZ3000_cphmq0q7` or `_TZE200_eegnwoyw`.
 1. Commit changes and [Create a pull request](./01_support_new_devices.md#4-create-a-pull-request)
-1. Submit a picture for the docs ([guide](./01_support_new_devices.md#5-add-device-picture-to-zigbee2mqttio-documentation))
+1. Submit a picture for the docs ([guide](./01_support_new_devices.md#5-add-device-picture-to-zigbee2mqtt-io-documentation))
