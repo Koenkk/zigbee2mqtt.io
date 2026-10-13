@@ -21,7 +21,7 @@ The following tags are available:
 
 ## Running the container
 
-Start by figuring out the location of your adapter as explained [here](../configuration/adapter-settings.md#determine-location-of-the-adapter).
+Start by figuring out the location of your adapter as explained [here](../configuration/adapter-settings.md#basic-configuration).
 
 Execute the following command, update the `--device` parameter to match the location of your adapter.
 

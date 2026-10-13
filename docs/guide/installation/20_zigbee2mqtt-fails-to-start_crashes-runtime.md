@@ -41,7 +41,7 @@ Common sources:
     - if necessary upgrade components or allocate more resources (for virtualized environments)
 - Spikes in resource usage on "core" chip (for TCP adapters)
     - verify availability of new "core" firmware that may fix known bugs
-- [Spammy devices](#spammy-devices) (particularly Tuya & co)
+- [Spammy devices](../usage/troubleshooting.md#spammy-devices) (particularly Tuya & co)
     - use coordinator firmware 8.0.2 and later from [darkxst](https://github.com/darkxst/silabs-firmware-builder/releases) or [Nerivec](https://github.com/Nerivec/silabs-firmware-builder/releases), and 7.4.4.5 or later from [Nabu Casa](https://github.com/NabuCasa/silabs-firmware-builder/releases)
 
 ## Verify that you put the correct port in configuration.yaml

@@ -7,8 +7,8 @@
 > Currently, this adapter does not support various functions, so if you depend on these functions, consider using a different adapter.
 >
 > - [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
-> - Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
-> - [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
+> - Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-install-code-add), which is required to pair some devices.
+> - [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-backup)
 > - Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
 
 The adapter for the ZBOSS protocol is based on the example of ZBOSS NCP Host [Zigbee NCP (Network Co-Processor)](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/samples/zigbee/ncp/README.html) for Nordic Semiconductor chips, such as nRF5340, nRF52840, nRF52833, nRF21540.
