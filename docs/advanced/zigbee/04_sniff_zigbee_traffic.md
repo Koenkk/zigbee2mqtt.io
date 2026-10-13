@@ -151,7 +151,7 @@ Run the ZBOSS executable in `gui\zboss_sniffer.exe`, enter the path to your Wire
 #### Troubleshooting
 
 - If you get `couldn't run /usr/bin/dumpcap in child process: permission denied` when running whsniff, check if /usr/bin/dumpcap is executable for everyone. Or `chmod 755 /usr/bin/dumpcap`.
-- You may need to remove `modemmanager` as this has been known to cause issues. [Howto](../../guide/faq/README.md#modemmanager-is-installed)
+- You may need to remove `modemmanager` as this has been known to cause issues. [Howto](../../guide/installation/20_zigbee2mqtt-fails-to-start_crashes-runtime.md#modemmanager-is-installed)
 
 ## With EmberZNet and HUSBZB-1 adapters
 
