@@ -1687,7 +1687,7 @@ Main Controller application.
 Value can be found in the published state on the `icon_application_232` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"icon_application_232": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`.
+The possible values are: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`.
 
 ### Icon forced heating cooling (enum, 232 endpoint)
 Main Controller application.

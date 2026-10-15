@@ -122,6 +122,17 @@ export async function prepareMissing() {
     console.log(`Done! Filter and update all the files under '${missingImagesPath}', execute 'pnpm run move-missing-device-images'`);
 }
 
+export async function copyMissing() {
+    const source = path.join(imageBaseDir, 'no_image_available.png');
+    const missing = await getMissing();
+
+    for (const definition of missing) {
+        fs.copyFileSync(source, definition.image);
+    }
+
+    console.log(`Copied '${source}' to ${missing.length} missing device images.`);
+}
+
 async function moveMissing() {
     for (const file of fs.readdirSync(missingImagesPath)) {
         try {
@@ -152,6 +163,8 @@ if (require.main === module) {
             await downloadMissing();
         } else if (arg === 'prepare') {
             await prepareMissing();
+        } else if (arg === 'copy') {
+            await copyMissing();
         } else if (arg === 'move') {
             await moveMissing();
         } else {

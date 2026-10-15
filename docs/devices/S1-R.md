@@ -60,11 +60,11 @@ simulated_brightness:
 
 ## Exposes
 
-### Identify (enum)
+### Identify (enum, l1 endpoint)
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify_l1": NEW_VALUE}`.
 The possible values are: `identify`.
 
 ### Switch 

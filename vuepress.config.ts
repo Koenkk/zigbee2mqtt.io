@@ -5,6 +5,7 @@ import {defaultTheme} from '@vuepress/theme-default';
 import viteBundler from '@vuepress/bundler-vite';
 import {googleAnalyticsPlugin} from '@vuepress/plugin-google-analytics';
 import {sitemapPlugin} from '@vuepress/plugin-sitemap';
+import {markdownHintPlugin} from '@vuepress/plugin-markdown-hint';
 import {redirectPlugin} from '@vuepress/plugin-redirect';
 import {docsearchPlugin} from '@vuepress/plugin-docsearch';
 import {registerComponentsPlugin} from '@vuepress/plugin-register-components';
@@ -183,6 +184,10 @@ const conf = defineUserConfig({
             },
         },
         redirectPlugin(),
+        markdownHintPlugin({
+            // Enable gfm alert
+            alert: true,
+        }),
     ],
 });
 

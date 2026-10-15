@@ -1,6 +1,6 @@
 ---
-title: "Moes ZG-101ZD control via MQTT"
-description: "Integrate your Moes ZG-101ZD via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-101ZD control via MQTT"
+description: "Integrate your HOBEIAN ZG-101ZD via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-08-01T15:19:08
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Moes ZG-101ZD
+# HOBEIAN ZG-101ZD
 
 |     |     |
 |-----|-----|
 | Model | ZG-101ZD  |
-| Vendor  | [Moes](/supported-devices/#v=Moes)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Smart knob |
 | Exposes | action_brightness_delta, action_step_size, action_color_temperature_delta, action_transition_time, action_rate, battery, operation_mode, action |
-| Picture | ![Moes ZG-101ZD](https://www.zigbee2mqtt.io/images/devices/ZG-101ZD.png) |
+| Picture | ![HOBEIAN ZG-101ZD](https://www.zigbee2mqtt.io/images/devices/ZG-101ZD.png) |
 
 
 
@@ -32,6 +32,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
 ```yaml

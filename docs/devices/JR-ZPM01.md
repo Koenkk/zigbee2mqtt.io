@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JR-ZPM01  |
 | Vendor  | [Girier](/supported-devices/#v=Girier)  |
 | Description | Smart Plug |
-| Exposes | switch (state), countdown, power_outage_memory, switch_type_button, indicator_mode, power, current, voltage, energy, child_lock, identify |
+| Exposes | switch (state), countdown, power_outage_memory, switch_type_button, power, current, voltage, energy, child_lock, identify |
 | Picture | ![Girier JR-ZPM01](https://www.zigbee2mqtt.io/images/devices/JR-ZPM01.png) |
 
 
@@ -35,6 +35,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 

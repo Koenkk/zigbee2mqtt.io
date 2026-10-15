@@ -112,11 +112,11 @@ The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
 ### Temperature sensor (enum)
-Whether to use the value of the internal temperature sensor or an external temperature sensor for the perceived local temperature. Using an external sensor does not require local temperature calibration..
+Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor.When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor..
 Value can be found in the published state on the `temperature_sensor_select` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
-The possible values are: `internal`, `external`, `external_2`, `external_3`.
+The possible values are: `local_temperature`, `remote_temperature`, `remote_source_offline`.
 
 ### External temperature (numeric)
 The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Zigbee2MQTT..

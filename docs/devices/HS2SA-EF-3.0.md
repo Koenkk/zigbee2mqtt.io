@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | HS2SA-EF-3.0  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
-| Description | Smoke detector |
+| Description | Smart smoke alarm |
 | Exposes | smoke, battery_low, battery, test |
 | Picture | ![Heiman HS2SA-EF-3.0](https://www.zigbee2mqtt.io/images/devices/HS2SA-EF-3.0.png) |
 

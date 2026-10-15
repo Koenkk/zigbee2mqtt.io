@@ -125,5 +125,5 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inch
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `toggle`.
+The possible values are: `toggle`, `double_click`, `long_press`.
 

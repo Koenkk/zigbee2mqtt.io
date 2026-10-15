@@ -78,7 +78,7 @@ Switch type.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `toggle`, `momentary`, `multifunction`, `light_control`, `scene`.
+The possible values are: `toggle`, `momentary`, `multifunction`, `light_cct_control`, `light_rgb_control`, `scene`.
 
 ### Operation mode (enum)
 Relay decoupled.

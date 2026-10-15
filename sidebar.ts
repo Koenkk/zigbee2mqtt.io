@@ -51,6 +51,7 @@ export const sidebar: SidebarOptions = {
                 '/guide/usage/mqtt_topics_and_messages.md',
                 '/guide/usage/exposes.md',
                 '/guide/usage/health.md',
+                '/guide/usage/troubleshooting.md',
             ],
         },
         {

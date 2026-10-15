@@ -15,9 +15,8 @@ serial:
 
 Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
-::: tip TIP
-The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zigbee2mqtt/discussions/21462](https://github.com/Koenkk/zigbee2mqtt/discussions/21462)
-:::
+> [!TIP]
+> The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zigbee2mqtt/discussions/21462](https://github.com/Koenkk/zigbee2mqtt/discussions/21462)
 
 ### Firmware flashing
 
@@ -414,6 +413,12 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 
 ### Not recommended
 
+::: details SparkFun MGM240P
+
+Known UART issues; packet drops, stuck baudrate, etc..
+
+:::
+
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 
 Low-resources hardware.
@@ -482,13 +487,12 @@ Analyze log files in your browser and get an automated review of your network.
 
 ## [EXPERT] Customizing stack configuration
 
-::: warning ATTENTION
-This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it. Most networks will be just fine with the defaults.
-:::
+> [!WARNING]
+> This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it.
+> Most networks will be just fine with the defaults.
 
-::: warning ATTENTION
-Do not open a new issue in Zigbee2MQTT before confirming the problem is present with the default configuration.
-:::
+> [!IMPORTANT]
+> Do not open a new issue in Zigbee2MQTT before confirming the problem is present with the default configuration.
 
 You can modify the EmberZNet default stack configuration by creating a file `stack_config.json` in the same folder as your `coordinator_backup.json`. This configuration can only be done manually.
 
@@ -506,7 +510,8 @@ Format, available and default values are as below:
     "TRANSIENT_DEVICE_TIMEOUT": 10000,
     "END_DEVICE_POLL_TIMEOUT": 8,
     "TRANSIENT_KEY_TIMEOUT_S": 300,
-    "CCA_MODE": null
+    "CCA_MODE": null,
+    "DEFAULT_MANUFACTURER_CODE": 4169
 }
 ```
 
@@ -516,21 +521,25 @@ Documentation on these values and their behavior can be found in [SiLabs UG100 -
 
 The driver further restricts values to the below:
 
-- CONCENTRATOR_RAM_TYPE: "high" or "low"
-- CONCENTRATOR_MIN_TIME: min 1, max 60
-- CONCENTRATOR_MAX_TIME: min 30, max 300
-- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min 1, max 100
-- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
-- CONCENTRATOR_MAX_HOPS: min 0, max 30
-- MAX_END_DEVICE_CHILDREN: min 6, max 64
-- TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
-- END_DEVICE_POLL_TIMEOUT: min 0, max 14
-- TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
-- CCA_MODE: defaults to undefined (i.e. left to firmware default), possible values:
-    - "RSSI": RSSI-based CCA. CCA reports a busy medium upon detecting any energy above -75 (default).
-    - "SIGNAL": Signal Identifier-based CCA. CCA reports a busy medium only upon the detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "SIGNAL_OR_RSSI": RSSI or signal identifier-based CCA. CCA reports a busy medium on either detecting any energy above -75 (default) or detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "SIGNAL_AND_RSSI": RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "ALWAYS_TRANSMIT": ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
+- CONCENTRATOR_RAM_TYPE: `"high"` or `"low"`
+- CONCENTRATOR_MIN_TIME: min `1`, max `60`
+- CONCENTRATOR_MAX_TIME: min `30`, max `300`
+- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min `1`, max `100`
+- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min `1`, max `100`
+- CONCENTRATOR_MAX_HOPS: min `0`, max `30`
+- MAX_END_DEVICE_CHILDREN: min `6`, max `64`
+- TRANSIENT_DEVICE_TIMEOUT: min `0`, max `65535`
+- END_DEVICE_POLL_TIMEOUT: min `0`, max `14`
+- TRANSIENT_KEY_TIMEOUT_S: min `0`, max `65535`
+- CCA_MODE: default `undefined` (i.e. left to firmware default), possible values:
+    - `"RSSI"`: RSSI-based CCA. CCA reports a busy medium upon detecting any energy above -75 (default).
+    - `"SIGNAL"`: Signal Identifier-based CCA. CCA reports a busy medium only upon the detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"SIGNAL_OR_RSSI"`: RSSI or signal identifier-based CCA. CCA reports a busy medium on either detecting any energy above -75 (default) or detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"SIGNAL_AND_RSSI"`: RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"ALWAYS_TRANSMIT"`: ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
+- DEFAULT_MANUFACTURER_CODE: min `0`, max `65535`
+    - Default of `4169` is `SILICON_LABORATORIES`. See full list [here](https://github.com/Koenkk/zigbee-herdsman/blob/master/src/zspec/zcl/definition/manufacturerCode.ts) (convert value from hexadecimal to decimal before using in JSON).
+    - WARNING: setting this may allow some devices with vendor lock-in to behave better but may break others.
+    - NOTE: may be temporarily overridden during joins for devices with known quirks.
 
 **Note that some values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**

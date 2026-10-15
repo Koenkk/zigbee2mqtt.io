@@ -34,7 +34,7 @@ pageClass: device-page
 ## Exposes
 
 ### Learn ir code (binary)
-Turn on to learn new IR code.
+Turn on to learn a new IR code, turn off to stop learning.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": NEW_VALUE}`.

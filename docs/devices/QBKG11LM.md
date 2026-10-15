@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch (with neutral, single rocker) |
-| Exposes | switch (state), power, device_temperature, energy, operation_mode, action |
+| Exposes | switch (state), power, device_temperature, energy, operation_mode, power_outage_memory, action |
 | Picture | ![Aqara QBKG11LM](https://www.zigbee2mqtt.io/images/devices/QBKG11LM.png) |
 
 
@@ -105,6 +105,13 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Power outage memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_PST_V1_LR  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Water, gas smart pressure monitor with signal amplifier |
-| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, raw_temperature, raw_temperature_recalibrated, range, battery, voltage, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
+| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, raw_temperature, raw_temperature_recalibrated, range, battery, voltage, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data, overheating |
 | Picture | ![EFEKTA EFEKTA_PST_V1_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_V1_LR.png) |
 
 
@@ -165,4 +165,10 @@ Value can be found in the published state on the `comparison_previous_data` prop
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
+
+### Overheating (enum)
+Sensor overheating detection.
+Value can be found in the published state on the `overheating` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `FALSE`, `TRUE`.
 

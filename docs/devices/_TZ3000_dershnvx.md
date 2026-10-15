@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | _TZ3000_dershnvx  |
 | Vendor  | [Rely Electronics](/supported-devices/#v=Rely%20Electronics)  |
 | Description | 2 gang, no neutral, switch with backlight |
-| Exposes | switch (state), countdown, switch_type, backlight_mode, indicator_mode |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode |
 | Picture | ![Rely Electronics _TZ3000_dershnvx](https://www.zigbee2mqtt.io/images/devices/_TZ3000_dershnvx.png) |
 
 
@@ -32,6 +32,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WS-K08E  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light switch H2 EU (double rocker) |
-| Exposes | power, current, energy, led_indicator, flip_indicator_light, switch (state), device_temperature, power_outage_count, power_on_behavior, operation_mode, lock_relay, multi_click, action |
+| Exposes | power, current, energy, led_indicator, flip_indicator_light, switch (state), device_temperature, power_outage_count, power_on_behavior, operation_mode, lock_relay, multi_click, identify, action |
 | Picture | ![Aqara WS-K08E](https://www.zigbee2mqtt.io/images/devices/WS-K08E.png) |
 | White-label | Aqara WS-K08D |
 
@@ -50,6 +50,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -172,6 +174,13 @@ Value can be found in the published state on the `multi_click_right_down` proper
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click_right_down": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_right_down": NEW_VALUE}`.
 If value equals `true` multi click is ON, if `false` OFF.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

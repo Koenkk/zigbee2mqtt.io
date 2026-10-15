@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SNZB-02DR2  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor with display and relay control |
-| Exposes | battery, voltage, temperature, humidity, temperature_sensor_select, external_temperature, external_humidity, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, temperature_units, temperature_calibration, humidity_calibration |
+| Exposes | battery, voltage, temperature, humidity, remote_source_status, source_1_temperature, source_1_temperature_state, source_1_humidity, source_1_humidity_state, source_2_temperature, source_2_temperature_state, source_2_humidity, source_2_humidity_state, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, temperature_units, temperature_calibration, humidity_calibration |
 | Picture | ![SONOFF SNZB-02DR2](https://www.zigbee2mqtt.io/images/devices/SNZB-02DR2.png) |
 
 
@@ -29,7 +29,35 @@ pageClass: device-page
 ### Displaying readings from an external sensor
 
 This device can show temperature and humidity coming from another sensor instead
-of its own built-in sensor (for example showing an outdoor sensor on the screen).
+of its own built-in sensor (for example, showing an outdoor sensor on the screen).
+
+#### Firmware 1.0.5 and later
+
+With firmware `1.0.5`, the remote temperature and humidity configuration has changed.
+The previous `temperature_sensor_select` / `external_temperature` /
+`external_humidity` approach is no longer used.
+
+The device now supports up to two remote temperature/humidity sources.
+
+1. Set `remote_source_status` to `using` to enable remote sources.
+2. Configure the corresponding `source_1_*` and/or `source_2_*` temperature and
+   humidity values (e.g. `source_1_temperature: 25.5`,
+   `source_1_humidity: 60`).
+
+For Home Assistant users, SONOFF provides an official blueprint for the new
+configuration:
+https://help.sonoff.tech/docs/SNZB02DR2#Home_Assistant
+
+For other platforms, the properties can be set directly via MQTT or the
+platform's equivalent mechanism.
+
+The device screen updates from configured remote sources automatically every
+30 minutes, or manually by briefly pressing the button on the back.
+
+Note: this is a battery-powered sleepy device, so writes are applied on the next
+poll/check-in. Press the button on the back to wake it for an immediate update.
+
+#### Firmware 1.0.4 and earlier
 
 1. Set `temperature_sensor_select` to `external` to switch the display to the
    external source (set it back to `internal` to show the built-in sensor with
@@ -37,10 +65,11 @@ of its own built-in sensor (for example showing an outdoor sensor on the screen)
 2. Push readings to `external_temperature` and `external_humidity`. Values are in
    °C / % (e.g. `external_temperature: 25.5`, `external_humidity: 88`).
 
-Notes:
-- Humidity on the external display requires device firmware `1.0.4` or later.
-- This is a battery-powered sleepy device, so writes are applied on the next
-  poll/check-in; press the button on the back to wake it for an immediate update.
+Note:
+
+* Humidity on the external display requires device firmware `1.0.4`.
+* This is a battery-powered sleepy device, so writes are applied on the next
+  poll/check-in. Press the button on the back to wake it for an immediate update.
 
 Example Home Assistant automation mirroring another sensor onto the display:
 
@@ -118,28 +147,72 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### Temperature sensor select (enum)
-Data source shown on the display. Set to 'external' to enable the external display and show the values written to external_temperature and external_humidity; set to 'internal' to show the built-in sensor again..
-Value can be found in the published state on the `temperature_sensor_select` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
-The possible values are: `internal`, `external`.
+### Remote source status (enum)
+Overall remote source status. Setting unbound clears all items, offline marks every bound item offline..
+Value can be found in the published state on the `remote_source_status` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"remote_source_status": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_source_status": NEW_VALUE}`.
+The possible values are: `unbound`, `using`, `offline`.
 
-### External temperature (numeric)
-Temperature value to display when temperature_sensor_select is set to 'external'. Push readings here from another sensor (e.g. via an automation)..
-Value can be found in the published state on the `external_temperature` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_temperature": NEW_VALUE}`.
-The minimal value is `-50` and the maximum value is `125`.
+### Source 1 temperature (numeric)
+Displays the bound remote sensor's temperature on the device screen, updating automatically every 30 minutes or manually by briefly pressing the button on the back of the SNZB-02DR2..
+Value can be found in the published state on the `source_1_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_1_temperature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_temperature": NEW_VALUE}`.
+The minimal value is `-20` and the maximum value is `60`.
 The unit of this value is `°C`.
 
-### External humidity (numeric)
-Relative humidity value to display when temperature_sensor_select is set to 'external'. Push readings here from another sensor. Requires device firmware 1.0.4 or later..
-Value can be found in the published state on the `external_humidity` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_humidity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
+### Source 1 temperature state (enum)
+State of the source 1 temperature item. State-only online/restored updates do not overwrite the stored measurement..
+Value can be found in the published state on the `source_1_temperature_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_1_temperature_state": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_temperature_state": NEW_VALUE}`.
+The possible values are: `unbound`, `online`, `offline`, `restored`.
+
+### Source 1 humidity (numeric)
+Displays the bound remote sensor's humidity on the device screen, updating automatically every 30 minutes or manually by briefly pressing the button on the back of the SNZB-02DR2..
+Value can be found in the published state on the `source_1_humidity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_1_humidity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_humidity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `99.9`.
 The unit of this value is `%`.
+
+### Source 1 humidity state (enum)
+State of the source 1 humidity item. State-only online/restored updates do not overwrite the stored measurement..
+Value can be found in the published state on the `source_1_humidity_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_1_humidity_state": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_humidity_state": NEW_VALUE}`.
+The possible values are: `unbound`, `online`, `offline`, `restored`.
+
+### Source 2 temperature (numeric)
+Displays the bound remote sensor's temperature on the device screen, updating automatically every 30 minutes or manually by briefly pressing the button on the back of the SNZB-02DR2..
+Value can be found in the published state on the `source_2_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_2_temperature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_temperature": NEW_VALUE}`.
+The minimal value is `-20` and the maximum value is `60`.
+The unit of this value is `°C`.
+
+### Source 2 temperature state (enum)
+State of the source 2 temperature item. State-only online/restored updates do not overwrite the stored measurement..
+Value can be found in the published state on the `source_2_temperature_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_2_temperature_state": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_temperature_state": NEW_VALUE}`.
+The possible values are: `unbound`, `online`, `offline`, `restored`.
+
+### Source 2 humidity (numeric)
+Displays the bound remote sensor's humidity on the device screen, updating automatically every 30 minutes or manually by briefly pressing the button on the back of the SNZB-02DR2..
+Value can be found in the published state on the `source_2_humidity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_2_humidity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_humidity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `99.9`.
+The unit of this value is `%`.
+
+### Source 2 humidity state (enum)
+State of the source 2 humidity item. State-only online/restored updates do not overwrite the stored measurement..
+Value can be found in the published state on the `source_2_humidity_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_2_humidity_state": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_humidity_state": NEW_VALUE}`.
+The possible values are: `unbound`, `online`, `offline`, `restored`.
 
 ### Comfort temperature min (numeric)
 Minimum temperature that is considered comfortable. The device will display ❄️ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..

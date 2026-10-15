@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZSM-01  |
 | Vendor  | [Novato](/supported-devices/#v=Novato)  |
 | Description | Curtain motor |
-| Exposes | cover (state, position), control_back_mode, click_control, position_best |
+| Exposes | cover (state, position), motor_direction, click_control, favorite_position |
 | Picture | ![Novato ZSM-01](https://www.zigbee2mqtt.io/images/devices/ZSM-01.png) |
 
 
@@ -30,6 +30,11 @@ pageClass: device-page
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
 
 ## Exposes
 
@@ -39,25 +44,25 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Control back mode (enum)
-Motor direction.
-Value can be found in the published state on the `control_back_mode` property.
+### Motor direction (enum)
+Motor rotation direction.
+Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_back_mode": NEW_VALUE}`.
-The possible values are: `forward`, `back`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+The possible values are: `normal`, `reversed`.
 
 ### Click control (enum)
-Step control (up/down).
+Step control.
 Value can be found in the published state on the `click_control` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_control": NEW_VALUE}`.
 The possible values are: `up`, `down`.
 
-### Position best (numeric)
-Preferred position.
-Value can be found in the published state on the `position_best` property.
+### Favorite position (numeric)
+Store the preferred cover position.
+Value can be found in the published state on the `favorite_position` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position_best": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"favorite_position": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 

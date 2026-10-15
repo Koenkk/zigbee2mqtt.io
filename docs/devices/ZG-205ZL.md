@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-205ZL control via MQTT"
-description: "Integrate your Tuya ZG-205ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-205ZL control via MQTT"
+description: "Integrate your HOBEIAN ZG-205ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-19T9:25:00
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-205ZL
+# HOBEIAN ZG-205ZL
 
 |     |     |
 |-----|-----|
 | Model | ZG-205ZL  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | 24Ghz/5.8GHz human presence sensor |
 | Exposes | presence, motion_state, illuminance, fading_time, large_motion_detection_distance, large_motion_detection_sensitivity, small_motion_detection_distance, small_motion_detection_sensitivity, static_detection_distance, static_detection_sensitivity, mode, alarm_volume, alarm_time, light_mode |
-| Picture | ![Tuya ZG-205ZL](https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.png) |
+| Picture | ![HOBEIAN ZG-205ZL](https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.png) |
 
 
 
@@ -36,6 +36,8 @@ pairing process is in progress.
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 

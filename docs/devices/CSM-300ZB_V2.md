@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CSM-300ZB_V2  |
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS multipurpose ToF sensor |
-| Exposes | battery, voltage, status, people, rf_pairing_on, counting_freeze, tof_init, led_state, rf_state, transaction, fast_in, fast_out |
+| Exposes | battery, voltage, status, people, rf_pairing_on, counting_freeze, tof_init, led_state, rf_state, transaction_interval, fast_in, fast_out |
 | Picture | ![ShinaSystem CSM-300ZB_V2](https://www.zigbee2mqtt.io/images/devices/CSM-300ZB_V2.png) |
 
 
@@ -97,11 +97,11 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rf_state": NEW_VALUE}`.
 If value equals `enable` rf state is ON, if `disable` OFF.
 
-### Transaction (enum)
+### Transaction interval (enum)
 Transaction interval, default : 400ms.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transaction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transaction_interval": NEW_VALUE}`.
 The possible values are: `0ms`, `200ms`, `400ms`, `600ms`, `800ms`, `1,000ms`.
 
 ### Fast in (binary)
