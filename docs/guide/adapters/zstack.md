@@ -809,7 +809,7 @@ Serial connected adapter with external antenna optionally with CC2591 or CC2592 
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin)
-- [Flashing instructions](../../advanced/zigbee/05_create_a_cc2530_router.md#2-flashing-the-cc2530)
+- [Flashing instructions](../../advanced/zigbee/05_create_a_cc2530_router.md#flashing-the-cc2530)
 - [Connecting](./flashing/connecting_cc2530.md)
 - Buy: [AliExpress](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530) [GBAN](http://www.gban.cn/en/product_show.asp?id=43) [Tindie](https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/)
 

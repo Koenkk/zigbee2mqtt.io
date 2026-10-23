@@ -107,6 +107,19 @@ automation:
                 entity_id: light.bedroom
 ```
 
+For some multi-button devices, the event entity splits the raw action into an event type and an additional `button` attribute. For example, `1_single` becomes `event_type: single` with `button: '1'`, and `up_double` becomes `event_type: double` with `button: up`. Check the event entity's attributes in Home Assistant's Developer tools after pressing the button.
+
+In the automation above, keep the state trigger and the first condition that ignores recovery from `unavailable`. Replace the second condition with a check of both attributes:
+
+```yaml
+- condition: template
+  value_template: >-
+      {{ trigger.to_state.attributes.event_type == 'single'
+         and trigger.to_state.attributes.button | default('') == '1' }}
+```
+
+Existing automations that match the full action in `event_type` need to use the split attributes when the event entity reports them. The raw MQTT `action` value remains unchanged; the [MQTT device trigger](#via-mqtt-device-trigger-recommended) is another way to target it.
+
 ### Via Home Assistant action sensor (deprecated)
 
 This method works by responding to the state change event of a sensor. For this `homeassistant.legacy_action_sensor: true` needs to be set in your `configuration.yaml`. See the [docs](../../configuration/homeassistant.md) for more info.
