@@ -13,6 +13,7 @@
 - [HomeSeer](https://shop.homeseer.com/products/homeseer-zigbee-plus-plugin-for-hs4)
 - [Matterbridge Zigbee2MQTT Plugin](https://github.com/Luligu/matterbridge-zigbee2mqtt) (Apple HomeKit and Google Home)
 - [Zigbee2MQTT Automations](https://github.com/Luligu/zigbee2mqtt-automations)
+- [ZigDash](https://zigdash.app) (Android dashboard app)
 
 This list gives only a narrow overview. To use Zigbee2MQTT with other systems it's not
 mandatory to have a _native_ integration but support for MQTT. A native integration just makes things more easy and "clickable".
