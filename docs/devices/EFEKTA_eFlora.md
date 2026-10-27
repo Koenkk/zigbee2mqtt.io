@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eFlora  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Plant Wattering Sensor with e-ink display 1.02 |
+| Description | Plant Watering Sensor with e-ink display 1.02 |
 | Exposes | soil_moisture, vpd, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, lower_level, upper_level, invert, temperature_compensation |
 | Picture | ![EFEKTA EFEKTA_eFlora](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlora.png) |
 

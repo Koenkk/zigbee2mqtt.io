@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eFlora_Max_Pro  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Plant Wattering Sensor with e-ink display 2.13 with signal amplifier |
+| Description | Plant Watering Sensor with e-ink display 2.13 with signal amplifier |
 | Exposes | soil_moisture, vpd, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, tx_radio_power, invert, fastmode, lower_level, upper_level, temperature_compensation |
 | Picture | ![EFEKTA EFEKTA_eFlora_Max_Pro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlora_Max_Pro.png) |
 
