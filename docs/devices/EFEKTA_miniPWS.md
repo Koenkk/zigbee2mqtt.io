@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_miniPWS  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Mini plant wattering sensor |
+| Description | Mini plant watering sensor |
 | Exposes | soil_moisture, battery, voltage, report_delay |
 | Picture | ![EFEKTA EFEKTA_miniPWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.png) |
 
@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-[Mini plant wattering sensor](http://efektalab.com/miniPWS)
+[Mini plant watering sensor](http://efektalab.com/miniPWS)
 
 
 ### Build guide
