@@ -32,7 +32,7 @@ sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
 corepack enable
 
 # Verify that the correct Node.js version has been installed
-node --version  # Should output V20.x, V22.X
+node --version  # Should output v20.x.x or higher
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
 sudo mkdir /opt/zigbee2mqtt
