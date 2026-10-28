@@ -4,77 +4,147 @@ redirectFrom: /how_tos/how_to_find_tuya_data_points.md
 
 # Find Tuya Data Points
 
-Tuya devices use a custom `manuSpecificTuya` cluster. Within the reported values of this cluster's data is a dp (so called “Data Point ID”) which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides. The instructions below will help you use the Tuya IoT Platform with a Tuya gateway to determine the functions of the datapoints which, will later assist in the creation of a device converter.
+## Introduction
 
-## Requirements and caveats
+Some Tuya devices (typically `TS0601`) use a custom `manuSpecificTuya` cluster.  
+Each device function is mapped to a datapoint ID, reported through this cluster.  
+(More info on the previous page: [Support new Tuya devices](./02_support_new_tuya_devices.md))
 
-1. You will need an up-to-date version of Google Chrome (other browsers may work but, instructions may differ)
-2. You will require basic knowledge of using Chrome and its Dev Tools
-3. You will need to sign up for the Tuya IoT Platform and bind your accounts (more details below)
-4. You will require a Tuya Zigbee Gateway
-5. You will need the Tuya app (with the orange icon) installed on your mobile device
+**The instructions below will help you use the Tuya IoT Platform to obtain the feature schema of a product**: the list of datapoints (features), with their respective IDs and data types. This schema is required to fully support the device.
 
-## Instructions
+_Alternatively, you can ask the manufacturer / vendor for the "UART protocol" or "serial protocol" of the device._
 
-### 1. Standard part of the setup
+## Requirements
 
-Ensure that you have set up a Tuya account and bound your Zigbee device to the Tuya gateway (these instructions will assume this has already been done).
+1. modern browser with Internet access (instructions are for Chrome, desktop)
+2. access to the browser console / dev tools
+3. mobile Tuya app (stock app or vendor clone)
+4. Tuya account (logged in to the app)
+5. Tuya developer account (logged in to the website)
+6. One of the following:
+    - physical access to a Tuya Zigbee gateway and the device in question
+    - or just the product ID (last 8 chars of the Zigbee manufacturer)  
+      e.g: `TS0601` `_TZE284_0kihjsys` -> PID is `0kihjsys`
 
-### 2. Signin up for Tuya IoT Platform
+## Set-up mobile app and web platform
 
-The Tuya IoT Platform is the backbone for how internet connected Tuya devices communicate back to the Tuya platform. It contains a suite of Application Programming Interfaces (API's) which allow for developers to embed the Tuya functionality within their own platforms.
+### 1. Install the mobile app
 
-Visit [Tuya IoT Platform](https://iot.tuya.com/) and sign up for a new account (if you don't already have one):
+Download the Tuya app, create an account and log in.
 
-![01_sign_up](../../images/how_tos/tuya_dp/01_sign_up.png)
+### 2. Sign up for Tuya IoT Platform
 
-### 3. Login
+The Tuya IoT Platform is the backbone for how internet-connected Tuya devices communicate back to the Tuya platform.  
+It contains a suite of Application Programming Interfaces (APIs) which allow for developers to embed the Tuya functionality within their own platforms.
 
-Use your new credentials to login to the Tuya IoT Platform. You will be greeted with a first time tutorial showing you around the platform. At the end of the tutorial select `Individual Developer`. If you miss this, click on the `person` icon in the right-top -> `Account` and set `Account Type` to `Individual Developer`.
+**Visit [Tuya IoT Platform](https://iot.tuya.com/) and sign up** for a developer account.  
+_This is a different account than what the mobile apps use._
+
+### 3. Log in as Individual Developer
+
+Use your new credentials to **login to the Tuya IoT Platform**. You will be greeted with a first time tutorial showing you around the platform.  
+At the end of the tutorial select **Individual Developer**. If you miss this, click on the person icon in the top-right -> **Account** and set **Account Type** to **Individual Developer**.
 
 ### 4. Create a cloud project
 
-Click on `Cloud` in the side menu, `Development` in the sub-menu and then click on `Create Cloud Project`.
+Click on **Cloud** in the side menu -> **Project Management**. On this page click on **Create Cloud Project**.
 
 ![04_create_cloud_project](../../images/how_tos/tuya_dp/04_create_cloud_project.png)
 
-In the newly opened dialog box, fill in the details as required, enduring that the Development Method is selected as Smart Home, and the Data Center corresponds to the region that your Tuya account is associated with.
+In the newly opened dialog box, fill in the details as required, enduring that the **Development Method is selected as Smart Home**, and the **Data Center corresponds to the region that your Tuya account is associated with.**
 
 ![05_project_creation](../../images/how_tos/tuya_dp/05_project_creation.png)
 
-Once confirmed, a new dialog box will open. Next to `Select API Services`, click `All`, click `Authorize`.
+The next page is Configuration Wizard. Click **Select API Services** -> **All**, then **Authorize**.
 
-### 5. Link your Tuya account with your new Tuya project
+![06_configuration_wizard](../../images/how_tos/tuya_dp/06_configuration_wizard.png)
 
-Once confirmed, you should be taken to your new Tuya project. Click on, `Devices`, `Link Tuya App Account`, then `Add App Account`.
+Once confirmed, you should be taken to your new Tuya project.
+
+### 5. Link the app with the cloud project
+
+Click on **Devices** -> **Link App Account** -> **Add App Account** -> **Tuya App Account Authorization**.
 
 ![07_link_tuya_account](../../images/how_tos/tuya_dp/07_link_tuya_account.png)
 
-This should bring up a QR code. Go in to the Tuya app on your mobile device, click on `[+]` (as id you are adding a new device). At the top of the screen, you will see a scan barcode button `[-]`. Click the `[-]` button and give permissions to use the camera (if prompted). Scan the QR code with your mobile device, and press `Confirm login`. On your computer a pop-up `Link Tuya App Account` will be shown. Set `Device Linking Method` to `Automatic Link`, `Device Permission` to `Read, write, and Manage` and click `Ok`. You will get a pop-up showing the amount of devices was added, close this.
+This should bring up a QR code.  
+On the Tuya mobile app, tap on `+` **Add** -> `[-]` **Scan**. Give camera permissions, scan the code, and press **Confirm login**.  
+On your computer, a **Link App Account** window will pop-up. Set **Device Linking Method** to **Automatic Link** and click **Ok**. (If prompted, set Device Permission to: Read, write, and Manage).  
+When successful, You will see a lits the of devices already added, close it.
 
-### 6. Find your devices
+## Add devices
 
-Click on the `All Devices` and find the device in-which you wish to find the Data Points. Click on `Debug Device`. If you do not find your device in the list, or the list is empty, please check your project's region.
+Click on **Devices** -> **All Devices**.  
+Now there are multiple ways of adding devices to the cloud project.
+
+_If the following methods don't work (the device list remains empty), check the project region._
+
+### Real device
+
+If you have a Tuya gateway and the physical device:
+
+1. Download the Tuya app, create an account and log in
+2. Set-up the Zigbee gateway and pair the device normally
+3. Refresh the web page
+
+### Virtual device
+
+Without a Tuya gateway, we can create virtual devices.  
+**We only need the product ID.**
+
+1. Pair the device to Zigbee2MQTT to get the **Zigbee manufacturer**
+
+2. Obtain its **product ID** by taking the last 8 characters of the Zigbee manufacturer  
+   e.g: `TS0601` `_TZE284_0kihjsys` -> PID is `0kihjsys`
+
+3. Click **Add Device** -> **Add Virtual Device**
+
+    ![add_virtual_device](../../images/how_tos/tuya_dp/add_virtual_device.png)
+
+4. Select a random product and click **Add Virtual Devices**
+
+    ![add_virtual_devices](../../images/how_tos/tuya_dp/add_virtual_devices.png)
+
+5. Navigate to **Add to Tuya App Account**
+
+6. Scan the QR code with a normal scanner and copy the output.  
+   It looks like this _(and it's tied to your account)_:
+
+    `tuyaSmart--addVirtualDev?productId=abcdefgh&token=...&biz=spider`
+
+7. Edit the text: Replace the selected PID with the one of your device, e.g:
+
+    `productId=abcdefgh` -> `productId=0kihjsys`
+
+8. Generate a new QR code with the resulted text
+
+9. Finally scan the new QR code with the Tuya app: Tap on `+` **Add** -> `[-]` **Scan**. The device should appear immediately
+
+10. On the computer, go back to the device list and refresh the page if needed
+
+## Debug device
+
+Now that you have the device in the cloud project, you can "debug" it:  
+In **Devices** -> **All Devices**, click on **Debug Device**.
 
 ![08_devices](../../images/how_tos/tuya_dp/08_devices.png)
 
-### 7. Display device logs
+1. In the **Device Debugging** tab, you will see the _(usually incomplete)_ schema, under **Standard Instruction Set** _(read-write)_ and **Standard Status Set** _(read-only)_. This gives you the type, scale and range of some data, but it's missing the datapoint IDs
 
-Click on the `Device Logs` tab, and you will see a list of all events that the device has sent to the Tuya platform. Ignore the Event Details section as this appears to be garbage.
+2. In the **Device Logs** tab, you will see list of all events the device has sent to the Tuya platform. The source code of this tab includes the datapoints IDs
 
-![09_device_logs](../../images/how_tos/tuya_dp/09_device_logs.png)
+_Note the exact feature naming usually differs from one tab to the other._
 
-### 8. Find your Data Point!!
+### Export the IDs automatically
 
-#### **Automatic**
-
-Once on the `Device Logs` tab, open up Dev Tools by pressing `ctrl` + `shift` + `i` (Windows) or `cmd` + `alt` + `i` (macOS) on your keyboard, or going to the `3-dot menu` at the top-right of the Chrome window->`More Tools`->`Dev Tools`. When Dev Tools is open, click on the `Console` Tab, then paste the [code below](#automatic-script) in to the console and press `Enter` on your keyboard. Next, open the `DP ID` drop-down list and hover over each item. The running code will automatically fetch the data point ID for each item. Once you have finished, run `export_codes()` in the console. This will output the data point ID-Name correspondences.
+On the **Device Logs** tab, open the **browser menu** -> **More tools** -> **Dev tools** -> **Console**. Paste the [code below](#automatic-script) and press `Enter`. Next, open the **Select DP ID** drop-down list and hover over each item. The running code will automatically read the datapoint ID for each item. When finished, run `export_codes()` in the console. This will output the feature×ID mapping.
 
 ![11_automatic_data_points_fetch](../../images/how_tos/tuya_dp/11_automatic_data_points_fetch.gif)
 
-##### _Automatic script_
+#### Automatic script
 
-> WARNING: Never run code that you do not understand. It is your responsibility to ensure that you understand what the code is doing before running it.
+> [!WARNING]
+> Never run code that you do not understand. It is your responsibility to ensure that you understand what the code is doing before running it.
 
 The code of the selected/hovered data point ID in the drop-down list as well as the previous and the next IDs are stored in the DOM under `<div id="code_list">`. The code below fetches these three codes each time the div is updated and stores them in the dictionary `codes`.
 
@@ -122,14 +192,14 @@ function export_codes() {
 }
 ```
 
-#### **Manual**
+### Find the IDs manually
 
-Select the Data Point for-which you wish to find the ID for in the drop-down list above the events table. Open up Dev Tools by pressing `ctrl` + `shift` + `i` (Windows) or `cmd` + `alt` + `i` (macOS) on your keyboard, or going to the `3-dot menu` at the top-right of the Chrome window->`More Tools`->`Dev Tools`. When Dev Tools is open, click on the `Network` Tab, then click the `Search` button in the Tuya IoT Platform window.
+On the **Device Logs** tab, select a datapoint in the drop-down list, above the events table.  
+Open the **browser menu** -> **More tools** -> **Dev tools** -> **Network**.  
+Then click the **Search** button in the Tuya IoT Platform window.
 
 ![10_dev_tools](../../images/how_tos/tuya_dp/10_dev_tools.png)
 
-You should see a number of calls appear in the `Name` section of Dev Tools. The call that we are interested in it `list`. Click this, and scroll down in the right-hand pane until you see the `Request Payload` section. Within there, is a json encoded object which contains all of the data sent from the search function. One of the keys is labelled `code`. This `code` i.e. 112 is the value for your Data Point ID!
-
-### 9. Rinse, and repeat!
-
-You should now iterate through each of the Data Points that are available in the drop-down list. Once finished, follow the other How-To guides to map these Data Point's into converters.
+You should see a number of calls appear in the **Name** section.  
+Click the `list` call -> **Payload** -> **Request Payload**. There is a json object which contains all data sent by the search function. The key labelled `code` is the datapoint ID!  
+Repeat for all datapoints in the drop-down list.
