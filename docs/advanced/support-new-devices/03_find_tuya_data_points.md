@@ -6,7 +6,7 @@ redirectFrom: /how_tos/how_to_find_tuya_data_points.md
 
 ## Introduction
 
-Some Tuya devices (typically `TS0601`) use a custom `manuSpecificTuya` cluster.  
+Some Tuya devices (typically `TS0601`) work entirely through the custom `manuSpecificTuya` cluster.  
 Each device function is mapped to a datapoint ID, reported through this cluster.  
 (More info on the previous page: [Support new Tuya devices](./02_support_new_tuya_devices.md))
 
@@ -70,7 +70,7 @@ Click on **Devices** -> **Link App Account** -> **Add App Account** -> **Tuya Ap
 This should bring up a QR code.  
 On the Tuya mobile app, tap on `+` **Add** -> `[-]` **Scan**. Give camera permissions, scan the code, and press **Confirm login**.  
 On your computer, a **Link App Account** window will pop-up. Set **Device Linking Method** to **Automatic Link** and click **Ok**. (If prompted, set Device Permission to: Read, write, and Manage).  
-When successful, You will see a lits the of devices already added, close it.
+When successful, you will see a list of already-added devices; close it.
 
 ## Add devices
 
@@ -105,7 +105,8 @@ Without a Tuya gateway, we can create virtual devices.
 
     ![add_virtual_devices](../../images/how_tos/tuya_dp/add_virtual_devices.png)
 
-5. Navigate to **Add to Tuya App Account**
+5. Click on **Add to Tuya App Account** tab.  
+   This generates a temporary QR code for that device.
 
 6. Scan the QR code with a normal scanner and copy the output.  
    It looks like this _(and it's tied to your account)_:
@@ -116,11 +117,14 @@ Without a Tuya gateway, we can create virtual devices.
 
     `productId=abcdefgh` -> `productId=0kihjsys`
 
-8. Generate a new QR code with the resulted text
+8. Generate a new QR code with the resulted text:
 
-9. Finally scan the new QR code with the Tuya app: Tap on `+` **Add** -> `[-]` **Scan**. The device should appear immediately
+    `tuyaSmart--addVirtualDev?productId=0kihjsys&token=...&biz=spider`
 
-10. On the computer, go back to the device list and refresh the page if needed
+9. Finally scan the new QR code with the Tuya app:  
+   Tap on `+` **Add** -> `[-]` **Scan**. The device should appear immediately
+
+10. On the computer, go back to the device list, and refresh the page if needed
 
 ## Debug device
 
@@ -133,11 +137,12 @@ In **Devices** -> **All Devices**, click on **Debug Device**.
 
 2. In the **Device Logs** tab, you will see list of all events the device has sent to the Tuya platform. The source code of this tab includes the datapoints IDs
 
-_Note the exact feature naming usually differs from one tab to the other._
+_Note the exact feature naming usually differs from one tab to the other._  
+_And sometimes it must be translated from Chinese_
 
 ### Export the IDs automatically
 
-On the **Device Logs** tab, open the **browser menu** -> **More tools** -> **Dev tools** -> **Console**. Paste the [code below](#automatic-script) and press `Enter`. Next, open the **Select DP ID** drop-down list and hover over each item. The running code will automatically read the datapoint ID for each item. When finished, run `export_codes()` in the console. This will output the feature×ID mapping.
+On the **Device Logs** tab, open the **browser menu** -> **More tools** -> **Dev tools** -> **Console**. Paste the [code below](#automatic-script) and press `Enter`. Next, open the **Select DP ID** drop-down list and hover over each item. The running code will automatically read the datapoint ID for each item. When finished, run `export_codes()` in the console. This will output the feature-ID mapping.
 
 ![11_automatic_data_points_fetch](../../images/how_tos/tuya_dp/11_automatic_data_points_fetch.gif)
 

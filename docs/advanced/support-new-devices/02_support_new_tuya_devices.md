@@ -12,7 +12,7 @@ Tuya devices are easily recognizable by their reported identifiers _(which look 
   It indicates the firmware type running on the Zigbee module, e.g:
     - `TS000n`: wall switch with n gangs (1-4)
     - `TS011F`: socket / power strip / breaker
-    - `TS0505`: lights
+    - `TS0505`: light
     - `TS0601`: universal bridge to Tuya MCU
 
 - **Zigbee manufacturer** is composed of a common prefix + unique product ID (last 8 chars), e.g:
@@ -108,7 +108,7 @@ data: Buffer;
 
 - `dp` is the numeric ID of the datapoint (feature)
 - `datatype` can be 0-5: raw, bool, number, string, enum, bitmap ([source](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/tuya.ts#L329-336))
-- `data` is the actual data, with the above datatype
+- `data` is the actual data, with the above type
 
 Some datapoints are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). Data points are not unified across all Tuya devices so they can differ per device.
 
@@ -161,7 +161,7 @@ The reasoning behind this protocol is flexibility/scalability for Tuya.
 These devices have 2 microcontrollers inside:
 
 - a Tuya module running the main device logic
-- a radio module with common firmware (Zigbee, Thread, WiFi..), just for networking
+- a radio module with common firmware (Zigbee, Thread, WiFi..) just for networking
 
 You can read more about how the modules communicate in the [official Tuya documentation](https://developer.tuya.com/en/docs/iot/device-development/access-mode-mcu/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty)
 
