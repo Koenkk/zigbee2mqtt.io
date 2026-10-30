@@ -14,7 +14,10 @@ Zigbee2MQTT uses [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-h
 
 External converters provide a way to test support for new devices, they work identically to internal converters.
 
-External converters are stored in the `external_converters` folder (at the same level in the file system as the Zigbee2MQTT configuration.yaml file). They have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
+External converters are stored in the `external_converters` folder (at the same level in the file system as the Zigbee2MQTT configuration.yaml file).
+
+> [!IMPORTANT]
+> Upgrading from 1.x: the `external_converters` option in configuration.yaml no longer exists. Z2M 2.x loads every file from the `external_converters` folder next to configuration.yaml automatically. Move your converter files into that folder and remove the option from your configuration, otherwise your converters silently stop loading. They have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
 
 > [!TIP]
 > Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just > delete the external converter.
