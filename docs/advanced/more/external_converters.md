@@ -16,8 +16,11 @@ External converters provide a way to test support for new devices, they work ide
 
 External converters are stored in the `external_converters` folder (at the same level in the file system as the Zigbee2MQTT configuration.yaml file). They have to export a JavaScript Object or Array of Object matching the type [`DefinitionWithExtend`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/lib/types.ts). Refer to [existing converters](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) to get familiar with the framework.
 
+> [!IMPORTANT]
+> Upgrading from 1.x: Zigbee2MQTT 2.11.0 and later loads only `.js`, `.cjs` and `.mjs` files from the `external_converters` folder described above, and only when `advanced.enable_external_js` is enabled (see the warning above; in 2.0 to 2.10 the converters load without any setting). The automatic settings migration removes the old `external_converters` option from configuration.yaml on first start and records it in `data/migration-1-to-2.log`, so the action that matters is moving your converter files into that folder. While you are at it, check whether your device is now supported out of the box, external converters are not meant for long term usage. Details in the [configuration update guide](../../guide/configuration/configuration-update.md).
+
 > [!TIP]
-> Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just > delete the external converter.
+> Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just delete the external converter.
 
 > [!TIP]
 > The easiest way to develop is by using the [external converter development environment](https://github.com/Nerivec/z2m-external-converter-dev?tab=readme-ov-file#how-to-use)
