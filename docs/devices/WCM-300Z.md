@@ -153,27 +153,27 @@ The unit of this value is `kWh`.
 Enables/disables the physical input lock for Button 1..
 Value can be found in the published state on the `button_lock_mode_p1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_lock_mode_p1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock_mode_p1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock_mode_p1": "VALUE"}`.
 If value equals `lock` button lock mode is ON, if `unlock` OFF.
 
 ### Button lock mode (binary, p2 endpoint)
 Enables/disables the physical input lock for Button 2..
 Value can be found in the published state on the `button_lock_mode_p2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_lock_mode_p2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock_mode_p2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock_mode_p2": "VALUE"}`.
 If value equals `lock` button lock mode is ON, if `unlock` OFF.
 
 ### Button lock mode (binary, p3 endpoint)
 Enables/disables the physical input lock for Button 3..
 Value can be found in the published state on the `button_lock_mode_p3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_lock_mode_p3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock_mode_p3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock_mode_p3": "VALUE"}`.
 If value equals `lock` button lock mode is ON, if `unlock` OFF.
 
 ### Button lock mode (binary, p4 endpoint)
 Enables/disables the physical input lock for Button 4..
 Value can be found in the published state on the `button_lock_mode_p4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_lock_mode_p4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock_mode_p4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock_mode_p4": "VALUE"}`.
 If value equals `lock` button lock mode is ON, if `unlock` OFF.
 

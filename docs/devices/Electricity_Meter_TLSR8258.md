@@ -160,26 +160,26 @@ If value equals `true` battery low is ON, if `false` OFF.
 Device Address.
 Value can be found in the published state on the `device_address_preset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_address_preset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_address_preset": VALUE}`.
 The minimal value is `1` and the maximum value is `99999999`.
 
 ### Device password preset (text)
 Meter Password.
 Value can be found in the published state on the `device_password_preset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_password_preset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_password_preset": "VALUE"}`.
 
 ### Device measurement preset (numeric)
 Measurement Period.
 Value can be found in the published state on the `device_measurement_preset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_measurement_preset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_measurement_preset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_measurement_preset": VALUE}`.
 The minimal value is `1` and the maximum value is `255`.
 
 ### Device model preset (enum)
 Device Model.
 Value can be found in the published state on the `device_model_preset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_model_preset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_model_preset": "VALUE"}`.
 The possible values are: `no_device`, `KASKAD-1-MT (MIRTEK)`, `KASKAD-11-C1`, `MERCURY-206`, `ENERGOMERA-CE102M`, `ENERGOMERA-CE208BY`, `NEVA-MT124`, `NARTIS-100`, `NARTIS-I100`.
 

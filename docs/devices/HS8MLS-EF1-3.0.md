@@ -65,14 +65,14 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Enable indicator (binary)
 active green indicator.
 Value can be found in the published state on the `enable_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_indicator": VALUE}`.
 If value equals `true` enable indicator is ON, if `false` OFF.
 
 ### Ambient light (numeric)
@@ -86,13 +86,13 @@ The unit of this value is `Lx`.
 Occupied to unoccupied delay.
 Value can be found in the published state on the `radar_delay_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_delay_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_delay_time": VALUE}`.
 The minimal value is `60` and the maximum value is `3600`.
 
 ### Sensitivity (enum)
 sensitivity for PIR sensor.
 Value can be found in the published state on the `sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `high`, `medium`, `low`.
 

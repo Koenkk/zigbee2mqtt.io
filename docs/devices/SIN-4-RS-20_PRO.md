@@ -62,7 +62,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 Manuel calibration: Set vertical run time up of the roller shutter. Do not change it if your roller shutter is already calibrated..
 Value can be found in the published state on the `calibration_vertical_run_time_up` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_vertical_run_time_up": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_vertical_run_time_up": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_vertical_run_time_up": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `10 ms`.
 
@@ -70,7 +70,7 @@ The unit of this value is `10 ms`.
 Manuel calibration: Set vertical run time down of the roller shutter. Do not change it if your roller shutter is already calibrated..
 Value can be found in the published state on the `calibration_vertical_run_time_down` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_vertical_run_time_down": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_vertical_run_time_down": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_vertical_run_time_down": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `10 ms`.
 
@@ -78,7 +78,7 @@ The unit of this value is `10 ms`.
 Manuel calibration: Set rotation run time up of the roller shutter. Do not change it if your roller shutter is already calibrated..
 Value can be found in the published state on the `calibration_rotation_run_time_up` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_rotation_run_time_up": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_rotation_run_time_up": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_rotation_run_time_up": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `ms`.
 
@@ -86,7 +86,7 @@ The unit of this value is `ms`.
 Manuel calibration: Set rotation run time down of the roller shutter. Do not change it if your roller shutter is already calibrated..
 Value can be found in the published state on the `calibration_rotation_run_time_down` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_rotation_run_time_down": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_rotation_run_time_down": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_rotation_run_time_down": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `ms`.
 

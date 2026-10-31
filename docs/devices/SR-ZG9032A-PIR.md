@@ -91,14 +91,14 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Triggers an effect on the light (e.g. make light blink for a few seconds).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_1": "VALUE"}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power-on behavior (enum, 1 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_1": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Occupancy (binary, 2 endpoint)
@@ -119,35 +119,35 @@ The unit of this value is `lx`.
 Dimming brightness curve. Options: linear, gamma 1.5, gamma 1.8. Default: linear..
 Value can be found in the published state on the `dimming_brightness_curve` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_brightness_curve": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_brightness_curve": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_brightness_curve": "VALUE"}`.
 The possible values are: `linear`, `gamma_1_5`, `gamma_1_8`.
 
 ### Motion sensor lux threshold (numeric)
 Daylight sensor lux threshold. When the measured lux is below this value, the light is allowed to turn on. Set to minimum value to disable this function. Default: disabled..
 Value can be found in the published state on the `motion_sensor_lux_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensor_lux_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensor_lux_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensor_lux_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### Motion sensor sensitivity (numeric)
 Motion sensor sensitivity. 0 is highest sensitivity, 15 is lowest. Default: 1..
 Value can be found in the published state on the `motion_sensor_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensor_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensor_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensor_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `15`.
 
 ### Brightness module enable (enum)
 Enable or disable the brightness module. Options: enabled, disabled. Default: enabled..
 Value can be found in the published state on the `brightness_module_enable` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_module_enable": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_module_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_module_enable": "VALUE"}`.
 The possible values are: `disabled`, `enabled`.
 
 ### Light on time (numeric)
 Light on time (first delay). When motion is detected and then the area is vacated, this is the time the light stays on. Unit: seconds. Default: 60 seconds..
 Value can be found in the published state on the `light_on_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_on_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_on_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_on_time": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `s`.
 
@@ -155,7 +155,7 @@ The unit of this value is `s`.
 Brightness value for PWM output when motion is detected. 0 disables this function. Default: disabled..
 Value can be found in the published state on the `pwm_brightness_value` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pwm_brightness_value": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pwm_brightness_value": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pwm_brightness_value": VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `lux`.
 
@@ -163,7 +163,7 @@ The unit of this value is `lux`.
 PWM output percentage when motion is detected. Range: 0-100%. Default: 100%..
 Value can be found in the published state on the `pwm_output_percentage` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pwm_output_percentage": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pwm_output_percentage": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pwm_output_percentage": VALUE}`.
 The minimal value is `0` and the maximum value is `254`.
 The unit of this value is `%`.
 
@@ -171,7 +171,7 @@ The unit of this value is `%`.
 Light status after the first delay expires, during the second delay. Range: 0-100%. Default: 0% (off)..
 Value can be found in the published state on the `light_status_after_first_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_status_after_first_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_status_after_first_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_status_after_first_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `254`.
 The unit of this value is `%`.
 
@@ -179,7 +179,7 @@ The unit of this value is `%`.
 Duration of the second delay after the first delay expires. Unit: seconds. Default: 60 seconds..
 Value can be found in the published state on the `second_delay_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"second_delay_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"second_delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"second_delay_time": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `s`.
 
@@ -187,7 +187,7 @@ The unit of this value is `s`.
 Light status after the second delay expires. Range: 0-100%. Default: 0% (off)..
 Value can be found in the published state on the `light_status_after_second_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_status_after_second_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_status_after_second_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_status_after_second_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `254`.
 The unit of this value is `%`.
 
@@ -195,14 +195,14 @@ The unit of this value is `%`.
 Linearity error ratio coefficient for LUX measurement. 1000 means 1000‰ (default). Increasing this value magnifies the LUX measurement linearly, decreasing minifies it..
 Value can be found in the published state on the `linearity_error_ratio_lux` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linearity_error_ratio_lux": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linearity_error_ratio_lux": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linearity_error_ratio_lux": VALUE}`.
 The minimal value is `100` and the maximum value is `10000`.
 
 ### Fixed deviation lux (numeric)
 Fixed deviation of LUX measurement. Positive value increases, negative value decreases the measured LUX..
 Value can be found in the published state on the `fixed_deviation_lux` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fixed_deviation_lux": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fixed_deviation_lux": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fixed_deviation_lux": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 
 ### Action (enum)

@@ -45,7 +45,7 @@ For details: https://github.com/Koenkk/zigbee2mqtt/issues/27364
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `previous`, `on`.
 
 ### Light (l1 endpoint)
@@ -66,13 +66,13 @@ This light supports the following features: `state`, `brightness`, `min_brightne
 Type of the switch.
 Value can be found in the published state on the `switch_type_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1": "VALUE"}`.
 The possible values are: `toggle`, `state`, `momentary`.
 
 ### Switch type (enum, l2 endpoint)
 Type of the switch.
 Value can be found in the published state on the `switch_type_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l2": "VALUE"}`.
 The possible values are: `toggle`, `state`, `momentary`.
 

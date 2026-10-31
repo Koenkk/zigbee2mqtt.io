@@ -56,21 +56,21 @@ The unit of this value is `lx`.
 Keep sensitivity.
 Value can be found in the published state on the `keep_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keep_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keep_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Trigger sensitivity (numeric)
 Trigger sensitivity.
 Value can be found in the published state on the `trigger_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `20`.
 
 ### Fading time (numeric)
 Presence timeout.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `1` and the maximum value is `60`.
 The unit of this value is `s`.
 

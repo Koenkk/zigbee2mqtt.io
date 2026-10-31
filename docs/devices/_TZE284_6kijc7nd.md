@@ -46,7 +46,7 @@ pageClass: device-page
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Local temperature (numeric)
@@ -58,14 +58,14 @@ The unit of this value is `°C`.
 ### Mode (enum)
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "VALUE"}`.
 The possible values are: `manual`, `program`.
 
 ### Run mode (enum)
 Operation mode of the thermostat (heat or cool)..
 Value can be found in the published state on the `run_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"run_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"run_mode": "VALUE"}`.
 The possible values are: `heat_mode`, `cool_mode`.
 
 ### Week program periods (enum)
@@ -78,14 +78,14 @@ The possible values are: `periods_4`.
 WARNING: Restores the device to factory settings. All configurations will be lost..
 Value can be found in the published state on the `factory_reset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": "VALUE"}`.
 If value equals `ON` factory reset is ON, if `OFF` OFF.
 
 ### Child lock (binary)
 Enables or disables the child lock feature..
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `ON` child lock is ON, if `OFF` OFF.
 
 ### Window state (enum)
@@ -104,28 +104,28 @@ The possible values are: `Keeping Warm`, `Working`.
 Checks whether the window is open or closed..
 Value can be found in the published state on the `window_check` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_check": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_check": "VALUE"}`.
 If value equals `ON` window check is ON, if `OFF` OFF.
 
 ### Frost protection (binary)
 Enables frost protection mode..
 Value can be found in the published state on the `frost_protection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection": "VALUE"}`.
 If value equals `ON` frost protection is ON, if `OFF` OFF.
 
 ### Sensor choose (enum)
 Selects between internal or external temperature sensors..
 Value can be found in the published state on the `sensor_choose` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_choose": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_choose": "VALUE"}`.
 The possible values are: `in`, `out`.
 
 ### Humidity control (binary)
 Controls the humidity protection feature..
 Value can be found in the published state on the `humidity_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_control": "VALUE"}`.
 If value equals `ON` humidity control is ON, if `OFF` OFF.
 
 ### Humidity (numeric)
@@ -138,13 +138,13 @@ The unit of this value is `%`.
 Weekly schedule: structured format like - Monday: [{"time":"06:30","temp":20.0},...]..
 Value can be found in the published state on the `week_schedule` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"week_schedule": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"week_schedule": "VALUE"}`.
 
 ### Window open detection time (numeric)
 Window open detection threshold in minutes..
 Value can be found in the published state on the `window_open_detection_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_detection_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_detection_time": VALUE}`.
 The minimal value is `2` and the maximum value is `30`.
 The unit of this value is `min`.
 
@@ -152,7 +152,7 @@ The unit of this value is `min`.
 Temperature threshold for window open detection..
 Value can be found in the published state on the `window_open_detection_temp` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_detection_temp": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_detection_temp": VALUE}`.
 The minimal value is `2` and the maximum value is `4`.
 The unit of this value is `°C`.
 
@@ -160,7 +160,7 @@ The unit of this value is `°C`.
 Delay time for triggering window open detection (minutes)..
 Value can be found in the published state on the `window_open_delay_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open_delay_time": VALUE}`.
 The minimal value is `10` and the maximum value is `60`.
 The unit of this value is `min`.
 
@@ -168,7 +168,7 @@ The unit of this value is `min`.
 Set the upper temperature limit.
 Value can be found in the published state on the `upper_temp` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_temp": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_temp": VALUE}`.
 The minimal value is `35` and the maximum value is `95`.
 The unit of this value is `°C`.
 
@@ -176,7 +176,7 @@ The unit of this value is `°C`.
 Temperature calibration adjustment..
 Value can be found in the published state on the `temperature_correction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_correction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_correction": VALUE}`.
 The minimal value is `-9` and the maximum value is `9`.
 The unit of this value is `°C`.
 
@@ -184,7 +184,7 @@ The unit of this value is `°C`.
 Temperature difference threshold to trigger switching..
 Value can be found in the published state on the `switch_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_sensitivity": VALUE}`.
 The minimal value is `0.5` and the maximum value is `5`.
 The unit of this value is `°C`.
 
@@ -192,7 +192,7 @@ The unit of this value is `°C`.
 Maximum allowed floor temperature for protection..
 Value can be found in the published state on the `floor_temp_protection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_temp_protection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_temp_protection": VALUE}`.
 The minimal value is `5` and the maximum value is `60`.
 The unit of this value is `°C`.
 
@@ -200,7 +200,7 @@ The unit of this value is `°C`.
 Minimum allowed floor temperature for protection..
 Value can be found in the published state on the `floor_low_protection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_low_protection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_low_protection": VALUE}`.
 The minimal value is `10` and the maximum value is `30`.
 The unit of this value is `°C`.
 

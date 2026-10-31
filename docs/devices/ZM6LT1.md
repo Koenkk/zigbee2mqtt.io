@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM6LT1  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart 1-phase energy power meter with CT sensor clamp |
-| Exposes | energy, voltage, current, power, ac_frequency, reverse_energy, active_energy, fault, clear_event, online_state, countdown_1, device_restart |
+| Exposes | energy, voltage, current, power, ac_frequency, reverse_energy, fault, over_current_threshold, clear_event, refresh_measurements |
 | Picture | ![Moes ZM6LT1](https://www.zigbee2mqtt.io/images/devices/ZM6LT1.png) |
 
 
@@ -94,42 +94,30 @@ Value can be found in the published state on the `reverse_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Active energy (numeric)
-Total active energy.
-Value can be found in the published state on the `active_energy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `kWh`.
-
 ### Fault (numeric)
 Fault status.
 Value can be found in the published state on the `fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Clear event (binary)
-Clear event.
+### Over current threshold (numeric)
+Overcurrent alarm threshold.
+Value can be found in the published state on the `over_current_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": VALUE}`.
+The minimal value is `1` and the maximum value is `120`.
+The unit of this value is `A`.
+
+### Clear accumulated energy (binary)
+Clear accumulated energy.
 Value can be found in the published state on the `clear_event` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"clear_event": NEW_VALUE}`.
-If value equals `ON` clear event is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"clear_event": "VALUE"}`.
+If value equals `ON` clear accumulated energy is ON, if `OFF` OFF.
 
-### Online state (enum)
-Online state.
-Value can be found in the published state on the `online_state` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `offline`, `online`.
-
-### Countdown 1 (numeric)
-Countdown timer.
-Value can be found in the published state on the `countdown_1` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_1": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `2000`.
-The unit of this value is `s`.
-
-### Device restart (binary)
-Device restart.
+### Refresh measurements (enum)
+Trigger fast measurement updates.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_restart": NEW_VALUE}`.
-If value equals `ON` device restart is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh_measurements": "VALUE"}`.
+The possible values are: `press`.
 

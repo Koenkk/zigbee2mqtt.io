@@ -100,7 +100,7 @@ The possible values are: `safe`, `pre_smoke`, `smoke`, `carbon_monoxide`, `weath
 Spoken room name used in Halo announcements.
 Value can be found in the published state on the `room` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"room": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"room": "VALUE"}`.
 The possible values are: `none`, `basement`, `bedroom`, `den`, `dining_room`, `downstairs`, `entryway`, `family_room`, `game_room`, `guest_bedroom`, `hallway`, `kids_bedroom`, `living_room`, `master_bedroom`, `office`, `study`, `upstairs`, `workout_room`.
 
 ### Halo test result (enum)
@@ -131,14 +131,14 @@ If value equals `true` hush active is ON, if `false` OFF.
 Start or cancel hush mode.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hush": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hush": "VALUE"}`.
 The possible values are: `start`, `stop`.
 
 ### Test cycle (enum)
 Start or cancel the built-in test.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_cycle": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_cycle": "VALUE"}`.
 The possible values are: `start`, `cancel`.
 
 ### Co ppm (numeric)
@@ -224,7 +224,7 @@ The measured atmospheric pressure.
 Value can be found in the published state on the `pressure` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure": ""}`.
 It's not possible to write (`/set`) this value.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Weather alert (binary)
 Indicates an active NOAA/SAME weather alert.
@@ -246,13 +246,13 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weat
 SAME location code (000000-999999) announced by the weather radio.
 Value can be found in the published state on the `weather_location` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_location": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_location": "VALUE"}`.
 
 ### Weather station (numeric)
 Weather radio preset (1-7).
 Value can be found in the published state on the `weather_station` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_station": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_station": VALUE}`.
 The minimal value is `1` and the maximum value is `7`.
 
 ### Weather frequency (text)
@@ -270,6 +270,6 @@ The possible values are: `quiet`, `playing`.
 Start or stop the weather radio audio.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_playback": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_playback": "VALUE"}`.
 The possible values are: `play`, `stop`.
 

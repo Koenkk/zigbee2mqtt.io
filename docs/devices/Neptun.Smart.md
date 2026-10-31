@@ -45,56 +45,56 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Modbus device address.
 Value can be found in the published state on the `modbus_address` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"modbus_address": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"modbus_address": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"modbus_address": VALUE}`.
 The minimal value is `1` and the maximum value is `247`.
 
 ### Uart baud rate (enum)
 MODBUS RTU baud rate.
 Value can be found in the published state on the `uart_baud_rate` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"uart_baud_rate": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uart_baud_rate": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uart_baud_rate": "VALUE"}`.
 The possible values are: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`.
 
 ### Wireless sensor pairing (binary)
 Enable pairing of wireless sensors.
 Value can be found in the published state on the `wireless_sensor_pairing` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wireless_sensor_pairing": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wireless_sensor_pairing": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wireless_sensor_pairing": VALUE}`.
 If value equals `true` wireless sensor pairing is ON, if `false` OFF.
 
 ### Child lock (binary)
 Lock physical buttons.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": VALUE}`.
 If value equals `true` child lock is ON, if `false` OFF.
 
 ### Zone count (enum)
 Operation mode.
 Value can be found in the published state on the `zone_count` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_count": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_count": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_count": "VALUE"}`.
 The possible values are: `Single-zone`, `Dual-zone`.
 
 ### Close valves if sensor lost (binary)
 Close valves if sensors are lost.
 Value can be found in the published state on the `close_valves_if_sensor_lost` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"close_valves_if_sensor_lost": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_valves_if_sensor_lost": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_valves_if_sensor_lost": VALUE}`.
 If value equals `true` close valves if sensor lost is ON, if `false` OFF.
 
 ### Switch relay on alarm (enum)
 Switch relay on alarm mode.
 Value can be found in the published state on the `switch_relay_on_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_relay_on_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_relay_on_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_relay_on_alarm": "VALUE"}`.
 The possible values are: `Dont switch`, `On first zone alarm`, `On second zone alarm`, `On any zone alarm`.
 
 ### Switch relay on valve closing (enum)
 Switch relay on valve closing.
 Value can be found in the published state on the `switch_relay_on_valve_closing` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_relay_on_valve_closing": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_relay_on_valve_closing": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_relay_on_valve_closing": "VALUE"}`.
 The possible values are: `Dont switch`, `On first zone`, `On second zone`, `On any zone`.
 
 ### Rf sensor count (numeric)
@@ -107,21 +107,21 @@ It's not possible to write (`/set`) this value.
 Enable monitoring of wired sensors.
 Value can be found in the published state on the `wired_sensor_feedback` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wired_sensor_feedback": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wired_sensor_feedback": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wired_sensor_feedback": VALUE}`.
 If value equals `true` wired sensor feedback is ON, if `false` OFF.
 
 ### Count wired sensors (binary)
 Detect the amount of wired sensors.
 Value can be found in the published state on the `count_wired_sensors` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"count_wired_sensors": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"count_wired_sensors": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"count_wired_sensors": VALUE}`.
 If value equals `true` count wired sensors is ON, if `false` OFF.
 
 ### Alarm duration (numeric)
 Duration of alarm sound.
 Value can be found in the published state on the `alarm_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_duration": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `min`.
 
@@ -163,7 +163,7 @@ The possible values are: `Unknown`, `Ok`, `Open circuit`, `Valve stuck`.
 Enable floor washing mode.
 Value can be found in the published state on the `floor_washing_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_washing_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_washing_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_washing_mode": VALUE}`.
 If value equals `true` floor washing mode is ON, if `false` OFF.
 
 ### Switch (valve_group_1 endpoint)
@@ -192,14 +192,14 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Type of device connected to line 1.
 Value can be found in the published state on the `type_wire_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"type_wire_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type_wire_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type_wire_1": "VALUE"}`.
 The possible values are: `Water leak sensor`, `Button (falling edge trigger)`, `Switch (switch valve on signal level)`.
 
 ### Zone assignment (enum, wire_1 endpoint)
 Line 1 zone assignment.
 Value can be found in the published state on the `zone_assignment_wire_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_assignment_wire_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_assignment_wire_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_assignment_wire_1": "VALUE"}`.
 The possible values are: `Close valves in zone 1`, `Close valves in zone 2`, `Close valves in both zones`.
 
 ### Status (enum, wire_1 endpoint)
@@ -219,14 +219,14 @@ It's not possible to write (`/set`) this value.
 Type of device connected to line 2.
 Value can be found in the published state on the `type_wire_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"type_wire_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type_wire_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type_wire_2": "VALUE"}`.
 The possible values are: `Water leak sensor`, `Button (falling edge trigger)`, `Switch (switch valve on signal level)`.
 
 ### Zone assignment (enum, wire_2 endpoint)
 Line 2 zone assignment.
 Value can be found in the published state on the `zone_assignment_wire_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_assignment_wire_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_assignment_wire_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_assignment_wire_2": "VALUE"}`.
 The possible values are: `Close valves in zone 1`, `Close valves in zone 2`, `Close valves in both zones`.
 
 ### Status (enum, wire_2 endpoint)
@@ -246,14 +246,14 @@ It's not possible to write (`/set`) this value.
 Type of device connected to line 3.
 Value can be found in the published state on the `type_wire_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"type_wire_3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type_wire_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type_wire_3": "VALUE"}`.
 The possible values are: `Water leak sensor`, `Button (falling edge trigger)`, `Switch (switch valve on signal level)`.
 
 ### Zone assignment (enum, wire_3 endpoint)
 Line 3 zone assignment.
 Value can be found in the published state on the `zone_assignment_wire_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_assignment_wire_3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_assignment_wire_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_assignment_wire_3": "VALUE"}`.
 The possible values are: `Close valves in zone 1`, `Close valves in zone 2`, `Close valves in both zones`.
 
 ### Status (enum, wire_3 endpoint)
@@ -273,14 +273,14 @@ It's not possible to write (`/set`) this value.
 Type of device connected to line 4.
 Value can be found in the published state on the `type_wire_4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"type_wire_4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type_wire_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type_wire_4": "VALUE"}`.
 The possible values are: `Water leak sensor`, `Button (falling edge trigger)`, `Switch (switch valve on signal level)`.
 
 ### Zone assignment (enum, wire_4 endpoint)
 Line 4 zone assignment.
 Value can be found in the published state on the `zone_assignment_wire_4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_assignment_wire_4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_assignment_wire_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_assignment_wire_4": "VALUE"}`.
 The possible values are: `Close valves in zone 1`, `Close valves in zone 2`, `Close valves in both zones`.
 
 ### Status (enum, wire_4 endpoint)

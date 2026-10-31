@@ -38,7 +38,7 @@ pageClass: device-page
 Trigger the door movement.
 Value can be found in the published state on the `trigger` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger": VALUE}`.
 If value equals `true` trigger is ON, if `false` OFF.
 
 ### Garage door contact (binary)

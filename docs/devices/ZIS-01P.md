@@ -63,35 +63,35 @@ The unit of this value is `%`.
 Maximum detection distance (1=~2m, 2=~4m, 3=~6m).
 Value can be found in the published state on the `presence_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_distance": VALUE}`.
 The minimal value is `1` and the maximum value is `3`.
 
 ### Presence sensitivity (numeric)
 Radar presence detection sensitivity (1=Low, 2=Medium, 3=High).
 Value can be found in the published state on the `presence_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `3`.
 
 ### Radar switch (binary)
 Enable or disable radar detection.
 Value can be found in the published state on the `radar_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": "VALUE"}`.
 If value equals `ON` radar switch is ON, if `OFF` OFF.
 
 ### Pir sensitivity (numeric)
 PIR motion sensor sensitivity (1=Low, 2=Medium, 3=High).
 Value can be found in the published state on the `pir_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `3`.
 
 ### Delay time (numeric)
 Time delay before reporting no presence (factory default: 30 s).
 Value can be found in the published state on the `delay_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": VALUE}`.
 The minimal value is `10` and the maximum value is `9600`.
 The unit of this value is `s`.
 
@@ -99,20 +99,20 @@ The unit of this value is `s`.
 Enable or disable LED indicator.
 Value can be found in the published state on the `led_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch": "VALUE"}`.
 If value equals `ON` led switch is ON, if `OFF` OFF.
 
 ### Radar threshold (numeric)
 Radar detection threshold, advanced calibration (factory default: 15; manufacturer-recommended range: 10-15).
 Value can be found in the published state on the `radar_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_threshold": VALUE}`.
 The minimal value is `5` and the maximum value is `255`.
 
 ### Pir threshold (numeric)
 PIR detection threshold, advanced calibration (factory default: 20).
 Value can be found in the published state on the `pir_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `250`.
 

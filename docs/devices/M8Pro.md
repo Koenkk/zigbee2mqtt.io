@@ -62,111 +62,111 @@ It's not possible to read (`/get`) this value.
 Name for Switch 1.
 Value can be found in the published state on the `name_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name_l1": "VALUE"}`.
 
 ### Name (text, l2 endpoint)
 Name for Switch 2.
 Value can be found in the published state on the `name_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name_l2": "VALUE"}`.
 
 ### Name (text, l3 endpoint)
 Name for Switch 3.
 Value can be found in the published state on the `name_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name_l3": "VALUE"}`.
 
 ### Name (text, l4 endpoint)
 Name for Switch 4.
 Value can be found in the published state on the `name_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name_l4": "VALUE"}`.
 
 ### Scene name (text, l1 endpoint)
 Name for Scene 1.
 Value can be found in the published state on the `scene_name_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l1": "VALUE"}`.
 
 ### Scene name (text, l2 endpoint)
 Name for Scene 2.
 Value can be found in the published state on the `scene_name_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l2": "VALUE"}`.
 
 ### Scene name (text, l3 endpoint)
 Name for Scene 3.
 Value can be found in the published state on the `scene_name_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l3": "VALUE"}`.
 
 ### Scene name (text, l4 endpoint)
 Name for Scene 4.
 Value can be found in the published state on the `scene_name_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l4": "VALUE"}`.
 
 ### Mode (enum, l1 endpoint)
 Switch1 mode.
 Value can be found in the published state on the `mode_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l1": "VALUE"}`.
 The possible values are: `switch_1`, `scene_1`, `smart_light_1`.
 
 ### Mode (enum, l2 endpoint)
 Switch2 mode.
 Value can be found in the published state on the `mode_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l2": "VALUE"}`.
 The possible values are: `switch_1`, `scene_1`, `smart_light_1`.
 
 ### Mode (enum, l3 endpoint)
 Switch3 mode.
 Value can be found in the published state on the `mode_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l3": "VALUE"}`.
 The possible values are: `switch_1`, `scene_1`, `smart_light_1`.
 
 ### Mode (enum, l4 endpoint)
 Switch4 mode.
 Value can be found in the published state on the `mode_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_l4": "VALUE"}`.
 The possible values are: `switch_1`, `scene_1`, `smart_light_1`.
 
 ### Backlight (binary)
 Backlight.
 Value can be found in the published state on the `backlight` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": "VALUE"}`.
 If value equals `ON` backlight is ON, if `OFF` OFF.
 
 ### Indicator switch (enum)
 Indicator switch.
 Value can be found in the published state on the `indicator_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_switch": "VALUE"}`.
 The possible values are: `status`, `switch_position`, `off`.
 
 ### Backlight switch (binary)
 Backlight switch.
 Value can be found in the published state on the `backlight_switch` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_switch": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": "VALUE"}`.
 If value equals `ON` backlight switch is ON, if `OFF` OFF.
 
 ### Temperature 1 (numeric)
 Temperature.
 Value can be found in the published state on the `temperature_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_1": VALUE}`.
 The minimal value is `-65` and the maximum value is `99`.
 
 ### Condition 1 (enum)
 Weather condition.
 Value can be found in the published state on the `condition_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"condition_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"condition_1": "VALUE"}`.
 The possible values are: `sunny`, `heavy_rain`, `cloudy`, `sandstorm`, `light_snow`, `snow`, `freezing_fog`, `rainstorm`, `shower`, `dust`, `spit`, `sleet`, `yin`, `freezing_rain`, `rain`, `fog`, `heavy_shower`, `heavy_snow`, `heavy_downpour`, `blizzard`, `hailstone`, `snow_shower`, `haze`, `thunder_shower`.
 
 ### Action (enum)

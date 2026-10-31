@@ -58,7 +58,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ### Occupancy timeout (numeric)
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": VALUE}`.
 The minimal value is `5` and the maximum value is `65535`.
 The unit of this value is `s`.
 
@@ -66,7 +66,7 @@ The unit of this value is `s`.
 Control LED indicator usage..
 Value can be found in the published state on the `led_control` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_control": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_control": "VALUE"}`.
 The possible values are: `off`, `fault_only`, `motion_only`, `both`.
 
 ### Temperature (numeric)

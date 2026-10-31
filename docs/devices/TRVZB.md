@@ -55,7 +55,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `4` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `system_mode`: Mode of the thermostat. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `system_mode`: Mode of the thermostat. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-12.7` and the maximum value is `12.7` with a step size of `0.2`.
 
@@ -70,7 +70,7 @@ The unit of this value is `%`.
 In timer mode, the temperature can be set to 4-35 ℃..
 Value can be found in the published state on the `timer_mode_target_temp` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"timer_mode_target_temp": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer_mode_target_temp": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer_mode_target_temp": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -78,7 +78,7 @@ The unit of this value is `°C`.
 Boost Mode: Sets maximum TRV temperature for up to 180 minutes.Timer Mode: Customizes temperature and duration, up to 24 hours..
 Value can be found in the published state on the `temporary_mode_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_duration": VALUE}`.
 The minimal value is `0` and the maximum value is `1440`.
 The unit of this value is `minutes`.
 
@@ -86,28 +86,28 @@ The unit of this value is `minutes`.
 Boost mode: Activates maximum TRV temperature for a user-defined duration, enabling rapid heating. Timer Mode: Allows customization of temperature and duration for precise heating control.After the set duration, the system will return to its previous normal mode and temperature..
 Value can be found in the published state on the `temporary_mode_select` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode_select": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_select": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_select": "VALUE"}`.
 The possible values are: `boost`, `timer`.
 
 ### Child lock (binary)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Open window (binary)
 Automatically turns off the radiator when local temperature drops by more than 1.5°C in 4.5 minutes..
 Value can be found in the published state on the `open_window` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"open_window": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window": "VALUE"}`.
 If value equals `ON` open window is ON, if `OFF` OFF.
 
 ### Frost protection temperature (numeric)
 Minimum temperature at which to automatically turn on the radiator, if system mode is off, to prevent pipes freezing..
 Value can be found in the published state on the `frost_protection_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"frost_protection_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection_temperature": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -115,14 +115,14 @@ The unit of this value is `°C`.
 Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor.When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor..
 Value can be found in the published state on the `temperature_sensor_select` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": "VALUE"}`.
 The possible values are: `local_temperature`, `remote_temperature`, `remote_source_offline`.
 
 ### External temperature (numeric)
 The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Zigbee2MQTT..
 Value can be found in the published state on the `external_temperature_input` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_temperature_input": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_temperature_input": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_temperature_input": VALUE}`.
 The minimal value is `0` and the maximum value is `99.9`.
 The unit of this value is `°C`.
 
@@ -163,7 +163,7 @@ The unit of this value is `mV`.
 Valve open position (percentage) control. If the opening degree is set to 100%, the valve is fully open when it is opened. If the opening degree is set to 0%, the valve is fully closed when it is opened, and the default value is 100%. Note: only version v1.1.4 or higher is supported..
 Value can be found in the published state on the `valve_opening_degree` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_opening_degree": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_opening_degree": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_opening_degree": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -171,7 +171,7 @@ The unit of this value is `%`.
 Valve closed position (percentage) control. If the closing degree is set to 100%, the valve is fully closed when it is closed. If the closing degree is set to 0%, the valve is fully opened when it is closed, and the default value is 100%. Note: Only version v1.1.4 or higher is supported..
 Value can be found in the published state on the `valve_closing_degree` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_closing_degree": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_closing_degree": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_closing_degree": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -179,7 +179,7 @@ The unit of this value is `%`.
 Temperature control accuracy. The range is -0.2 ~ -1°C, with an interval of 0.2, and the default is -1. If the temperature control accuracy is selected as -1°C (default value) and the target temperature is 26 degrees, then TRVZB will close the valve when the room temperature reaches 26 degrees and open the valve at 25 degrees. If -0.4°C is chosen as the temperature control accuracy, then the valve will close when the room temperature reaches 26 degrees and open at 25.6 degrees.Note: Only version v1.3.0 or higher is supported..
 Value can be found in the published state on the `temperature_accuracy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_accuracy": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_accuracy": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_accuracy": VALUE}`.
 The minimal value is `-1` and the maximum value is `-0.2`.
 The unit of this value is `°C`.
 
@@ -187,48 +187,48 @@ The unit of this value is `°C`.
 The preset heating schedule to use when the system mode is set to "auto" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..
 Value can be found in the published state on the `weekly_schedule_sunday` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_sunday": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_sunday": "VALUE"}`.
 
 ### Weekly schedule monday (text)
 The preset heating schedule to use when the system mode is set to "auto" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..
 Value can be found in the published state on the `weekly_schedule_monday` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_monday": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_monday": "VALUE"}`.
 
 ### Weekly schedule tuesday (text)
 The preset heating schedule to use when the system mode is set to "auto" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..
 Value can be found in the published state on the `weekly_schedule_tuesday` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_tuesday": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_tuesday": "VALUE"}`.
 
 ### Weekly schedule wednesday (text)
 The preset heating schedule to use when the system mode is set to "auto" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..
 Value can be found in the published state on the `weekly_schedule_wednesday` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_wednesday": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_wednesday": "VALUE"}`.
 
 ### Weekly schedule thursday (text)
 The preset heating schedule to use when the system mode is set to "auto" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..
 Value can be found in the published state on the `weekly_schedule_thursday` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_thursday": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_thursday": "VALUE"}`.
 
 ### Weekly schedule friday (text)
 The preset heating schedule to use when the system mode is set to "auto" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..
 Value can be found in the published state on the `weekly_schedule_friday` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_friday": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_friday": "VALUE"}`.
 
 ### Weekly schedule saturday (text)
 The preset heating schedule to use when the system mode is set to "auto" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..
 Value can be found in the published state on the `weekly_schedule_saturday` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_saturday": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_saturday": "VALUE"}`.
 
 ### Smart temperature control (binary)
 Enable adaptive valve control using a PID algorithm. When enabled, "Valve Opening Percentage" and "Temperature Accuracy" are unavailable..
 Value can be found in the published state on the `smart_temperature_control` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smart_temperature_control": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_temperature_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_temperature_control": VALUE}`.
 If value equals `true` smart temperature control is ON, if `false` OFF.
 

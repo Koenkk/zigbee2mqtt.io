@@ -57,6 +57,6 @@ The unit of this value is `%`.
 Data reporting interval.
 Value can be found in the published state on the `report_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_interval": "VALUE"}`.
 The possible values are: `5m`, `10m`, `15m`, `20m`, `30m`, `1h`.
 

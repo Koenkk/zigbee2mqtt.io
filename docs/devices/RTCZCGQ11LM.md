@@ -113,28 +113,28 @@ The possible values are: `enter`, `leave`, `left_enter`, `right_leave`, `right_e
 Monitoring mode with or without considering right and left sides.
 Value can be found in the published state on the `monitoring_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"monitoring_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"monitoring_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"monitoring_mode": "VALUE"}`.
 The possible values are: `undirected`, `left_right`.
 
 ### Approach distance (enum)
 The distance at which the sensor detects approaching.
 Value can be found in the published state on the `approach_distance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"approach_distance": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"approach_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"approach_distance": "VALUE"}`.
 The possible values are: `far`, `medium`, `near`.
 
 ### Motion sensitivity (enum)
 Different sensitivities means different static human body recognition rate and response speed of occupied.
 Value can be found in the published state on the `motion_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Reset nopresence status (enum)
 Reset the status of no presence.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_nopresence_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_nopresence_status": "VALUE"}`.
 The possible values are: ``.
 
 ### Configured regions (text)

@@ -50,7 +50,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 ### Motor working mode (enum)
 Value can be found in the published state on the `motor_working_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_working_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_working_mode": "VALUE"}`.
 The possible values are: `continuous`, `intermittently`.
 
 ### Percent state (numeric)
@@ -62,18 +62,18 @@ The unit of this value is `%`.
 ### Mode (enum)
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "VALUE"}`.
 The possible values are: `morning`, `night`.
 
 ### Motor direction (enum)
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": "VALUE"}`.
 The possible values are: `forward`, `back`.
 
 ### Border (enum)
 Value can be found in the published state on the `border` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": "VALUE"}`.
 The possible values are: `up`, `down`, `down_delete`.
 

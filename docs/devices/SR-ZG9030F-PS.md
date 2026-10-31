@@ -60,14 +60,14 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Enable/disable the LED indicator.
 Value can be found in the published state on the `indicator_light` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_light": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_light": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_light": "VALUE"}`.
 The possible values are: `on`, `off`.
 
 ### Detection area (numeric)
 Detection area range (default: 50%).
 Value can be found in the published state on the `detection_area` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_area": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_area": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_area": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -75,7 +75,7 @@ The unit of this value is `%`.
 Illuminance threshold for triggering (default: 100).
 Value can be found in the published state on the `illuminance_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": VALUE}`.
 The minimal value is `10` and the maximum value is `100`.
 The unit of this value is `lx`.
 

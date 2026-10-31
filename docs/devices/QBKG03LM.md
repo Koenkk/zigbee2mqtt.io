@@ -100,14 +100,14 @@ The unit of this value is `°C`.
 Operation mode for left button.
 Value can be found in the published state on the `operation_mode_left` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": "VALUE"}`.
 The possible values are: `control_left_relay`, `control_right_relay`, `decoupled`.
 
 ### Operation mode (enum, right endpoint)
 Operation mode for right button.
 Value can be found in the published state on the `operation_mode_right` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": "VALUE"}`.
 The possible values are: `control_left_relay`, `control_right_relay`, `decoupled`.
 
 ### Action (enum)

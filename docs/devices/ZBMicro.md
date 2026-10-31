@@ -74,19 +74,19 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Rf turbo mode (binary)
 Enable/disable Radio power turbo mode.
 Value can be found in the published state on the `rf_turbo_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"rf_turbo_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rf_turbo_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rf_turbo_mode": VALUE}`.
 If value equals `true` rf turbo mode is ON, if `false` OFF.
 
 ### Inching control set (composite)
 Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": VALUE, "inching_time": VALUE, "inching_mode": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": "VALUE", "inching_time": VALUE, "inching_mode": "VALUE"}}`
 - `inching_control` (binary): Enable/disable inching function. allowed values: `ENABLE` or `DISABLE`
 - `inching_time` (numeric): Delay time for executing a inching action. min value is 0.5, max value is 3599.5, unit is seconds
 - `inching_mode` (binary): Set inching off or inching on mode. allowed values: `ON` or `OFF`

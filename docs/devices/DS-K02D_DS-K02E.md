@@ -66,19 +66,19 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Multi-click mode for top wireless button.
 Value can be found in the published state on the `multi_click_top_wireless_button` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click_top_wireless_button": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_top_wireless_button": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_top_wireless_button": VALUE}`.
 If value equals `true` multi click is ON, if `false` OFF.
 
 ### Multi click (binary, bottom_wireless_button endpoint)
 Multi-click mode for bottom wireless button.
 Value can be found in the published state on the `multi_click_bottom_wireless_button` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click_bottom_wireless_button": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_bottom_wireless_button": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_bottom_wireless_button": VALUE}`.
 If value equals `true` multi click is ON, if `false` OFF.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `button_3_single`, `button_4_single`.
+The possible values are: `hold_top_wireless_button`, `hold_bottom_wireless_button`, `single_top_wireless_button`, `single_bottom_wireless_button`, `double_top_wireless_button`, `double_bottom_wireless_button`, `release_top_wireless_button`, `release_bottom_wireless_button`.
 

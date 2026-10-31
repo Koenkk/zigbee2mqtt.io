@@ -83,7 +83,7 @@ The unit of this value is `s`.
 Situation control.
 Value can be found in the published state on the `situation_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"situation_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"situation_set": "VALUE"}`.
 The possible values are: `fully_open`, `fully_close`.
 
 ### Fault (enum)
@@ -102,21 +102,21 @@ The possible values are: `none`, `uncharged`, `charging`, `charged`.
 Light threshold for opening.
 Value can be found in the published state on the `open_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### Close threshold (numeric)
 Light threshold for closing.
 Value can be found in the published state on the `close_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### Curtain status (numeric)
 Curtain status.
 Value can be found in the published state on the `curtain_status` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"curtain_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"curtain_status": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Total distance (numeric)
@@ -135,30 +135,30 @@ The minimal value is `0` and the maximum value is `100`.
 Custom week program 1.
 Value can be found in the published state on the `custom_week_prog_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_1": "VALUE"}`.
 
 ### Custom week prog 2 (text)
 Custom week program 2.
 Value can be found in the published state on the `custom_week_prog_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_2": "VALUE"}`.
 
 ### Custom week prog 3 (text)
 Custom week program 3.
 Value can be found in the published state on the `custom_week_prog_3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_3": "VALUE"}`.
 
 ### Custom week prog 4 (text)
 Custom week program 4.
 Value can be found in the published state on the `custom_week_prog_4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"custom_week_prog_4": "VALUE"}`.
 
 ### Calibration (enum)
 Travel-range calibration. With the curtain fully closed, set 'calibrate' and the motor free-runs toward open; at the fully-open end set 'stop' to halt it and store the limit. Use 'calibrate_reverse' if it runs the wrong way. Always start fully closed, otherwise the open/close commands end up reversed..
 Value can be found in the published state on the `calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": "VALUE"}`.
 The possible values are: `stop`, `calibrate`, `calibrate_reverse`.
 

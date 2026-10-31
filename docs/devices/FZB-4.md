@@ -67,14 +67,14 @@ It's not possible to read (`/get`) this value.
 Mode of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": "VALUE"}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Countdown (numeric, l1 endpoint)
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l1": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -82,7 +82,7 @@ The unit of this value is `s`.
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l2": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -90,7 +90,7 @@ The unit of this value is `s`.
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l3": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -98,7 +98,7 @@ The unit of this value is `s`.
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l4": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -106,6 +106,6 @@ The unit of this value is `s`.
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 

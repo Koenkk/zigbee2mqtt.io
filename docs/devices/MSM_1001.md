@@ -77,6 +77,6 @@ If value equals `true` battery low is ON, if `false` OFF.
 Sensitivity of the pir detector.
 Value can be found in the published state on the `sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 

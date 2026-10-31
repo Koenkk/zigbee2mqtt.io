@@ -43,13 +43,13 @@ pageClass: device-page
 button clicks or data from/to UART.
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"action": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"action": "VALUE"}`.
 
 ### Calibrate (enum, l2 endpoint)
 Calibration.
 Value can be found in the published state on the `calibrate_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibrate_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibrate_l2": "VALUE"}`.
 The possible values are: `ZERO`, `SPAN`.
 
 ### CO2 (numeric)

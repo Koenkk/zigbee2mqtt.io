@@ -78,14 +78,14 @@ The unit of this value is `%`.
 Current display unit.
 Value can be found in the published state on the `temperature_unit_convert` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit_convert": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit_convert": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Co2 alarm value (numeric)
 CO2 alarm value.
 Value can be found in the published state on the `co2_alarm_value` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_alarm_value": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_alarm_value": VALUE}`.
 The minimal value is `1000` and the maximum value is `10000`.
 The unit of this value is `ppm`.
 
@@ -93,7 +93,7 @@ The unit of this value is `ppm`.
 PM2.5 alarm value.
 Value can be found in the published state on the `pm25_alarm_value` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pm25_alarm_value": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pm25_alarm_value": VALUE}`.
 The minimal value is `10` and the maximum value is `1000`.
 The unit of this value is `ug/m3`.
 
@@ -101,7 +101,7 @@ The unit of this value is `ug/m3`.
 alarm_ringtone.
 Value can be found in the published state on the `alarm_ringtone` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": "VALUE"}`.
 The possible values are: `mute`, `ringtone_1`, `ringtone_2`, `ringtone_3`.
 
 ### Alarm state (enum)

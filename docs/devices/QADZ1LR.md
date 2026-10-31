@@ -49,28 +49,28 @@ This light supports the following features: `state`, `brightness`, `min_brightne
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
 ### Power on behavior (enum)
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Switch type (enum)
 Type of the external switch.
 Value can be found in the published state on the `switch_type` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": "VALUE"}`.
 The possible values are: `toggle`, `momentary`.
 
 ### Dimming time (numeric)
 Dimming transition time.
 Value can be found in the published state on the `dimming_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_time": VALUE}`.
 The minimal value is `5` and the maximum value is `15`.
 The unit of this value is `s`.
 

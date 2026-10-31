@@ -45,7 +45,7 @@ pageClass: device-page
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Cover 
@@ -58,35 +58,35 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Define the device behavior after power failure.
 Value can be found in the published state on the `power_failure_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_failure_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_failure_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_failure_mode": "VALUE"}`.
 The possible values are: `last_state`, `off`, `on`, `blink`.
 
 ### Reset to factory settings (enum)
 Reset setting depending on RESET ACTION value.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_to_factory_settings": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_to_factory_settings": "VALUE"}`.
 The possible values are: `factory_reset`, `configuration_reset`, `network_reset`.
 
 ### Relaunch ble advert (enum)
 Relaunch BLE advertising for 15 minutes.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relaunch_ble_advert": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relaunch_ble_advert": "VALUE"}`.
 The possible values are: `relaunch_ble_advert`.
 
 ### Input mode (enum)
 Indicate how the input should be handled.
 Value can be found in the published state on the `input_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_mode": "VALUE"}`.
 The possible values are: `unknown`, `push_button`, `switch`, `relay`, `fp_in`.
 
 ### Contact mode (enum)
 Indicate the contact nature of the entry.
 Value can be found in the published state on the `contact_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"contact_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"contact_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"contact_mode": "VALUE"}`.
 The possible values are: `nc`, `no`.
 
 ### Last local command state (binary)
@@ -107,42 +107,42 @@ If value equals `PRESSED` last bp connect state is ON, if `RELEASED` OFF.
 Send to the server cluster a button press.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_press": "VALUE"}`.
 The possible values are: `SendPress`.
 
 ### Send release (enum)
 Send to the server cluster a button release.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_release": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_release": "VALUE"}`.
 The possible values are: `SendRelease`.
 
 ### Select input mode (enum)
 Change the Input mode to use switch input, wired relay or simple push button.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"select_input_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"select_input_mode": "VALUE"}`.
 The possible values are: `unknown`, `push_button`, `switch`, `relay`, `fp_in`.
 
 ### Enable short press (binary)
 Use to enable short press action.
 Value can be found in the published state on the `enable_short_press` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_short_press": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_short_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_short_press": "VALUE"}`.
 If value equals `ON` enable short press is ON, if `OFF` OFF.
 
 ### Enable long press (binary)
 Use to enable long press action.
 Value can be found in the published state on the `enable_long_press` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_long_press": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_long_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_long_press": "VALUE"}`.
 If value equals `ON` enable long press is ON, if `OFF` OFF.
 
 ### Long press duration (numeric)
 Define long Press duration in milliseconds.
 Value can be found in the published state on the `long_press_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"long_press_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"long_press_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"long_press_duration": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `ms`.
 
@@ -150,7 +150,7 @@ The unit of this value is `ms`.
 Define the maximum time between 2 press to keep in a sequence (In milliseconds).
 Value can be found in the published state on the `time_between_press` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"time_between_press": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_between_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_between_press": VALUE}`.
 The minimal value is `100` and the maximum value is `600`.
 The unit of this value is `ms`.
 
@@ -158,14 +158,14 @@ The unit of this value is `ms`.
 Enable R12M Long Press action.
 Value can be found in the published state on the `enable_R12M_long_press` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_R12M_long_press": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_R12M_long_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_R12M_long_press": "VALUE"}`.
 If value equals `ON` enable R12M long press is ON, if `OFF` OFF.
 
 ### Enable local config lock (binary)
 Disable local configuration.
 Value can be found in the published state on the `enable_local_config_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_local_config_lock": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_local_config_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_local_config_lock": "VALUE"}`.
 If value equals `ON` enable local config lock is ON, if `OFF` OFF.
 
 ### Action (enum)

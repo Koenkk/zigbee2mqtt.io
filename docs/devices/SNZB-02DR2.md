@@ -151,14 +151,14 @@ The unit of this value is `%`.
 Overall remote source status. Setting unbound clears all items, offline marks every bound item offline..
 Value can be found in the published state on the `remote_source_status` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"remote_source_status": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_source_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_source_status": "VALUE"}`.
 The possible values are: `unbound`, `using`, `offline`.
 
 ### Source 1 temperature (numeric)
 Displays the bound remote sensor's temperature on the device screen, updating automatically every 30 minutes or manually by briefly pressing the button on the back of the SNZB-02DR2..
 Value can be found in the published state on the `source_1_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_1_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_temperature": VALUE}`.
 The minimal value is `-20` and the maximum value is `60`.
 The unit of this value is `°C`.
 
@@ -166,14 +166,14 @@ The unit of this value is `°C`.
 State of the source 1 temperature item. State-only online/restored updates do not overwrite the stored measurement..
 Value can be found in the published state on the `source_1_temperature_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_1_temperature_state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_temperature_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_temperature_state": "VALUE"}`.
 The possible values are: `unbound`, `online`, `offline`, `restored`.
 
 ### Source 1 humidity (numeric)
 Displays the bound remote sensor's humidity on the device screen, updating automatically every 30 minutes or manually by briefly pressing the button on the back of the SNZB-02DR2..
 Value can be found in the published state on the `source_1_humidity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_1_humidity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_humidity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_humidity": VALUE}`.
 The minimal value is `0` and the maximum value is `99.9`.
 The unit of this value is `%`.
 
@@ -181,14 +181,14 @@ The unit of this value is `%`.
 State of the source 1 humidity item. State-only online/restored updates do not overwrite the stored measurement..
 Value can be found in the published state on the `source_1_humidity_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_1_humidity_state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_humidity_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_1_humidity_state": "VALUE"}`.
 The possible values are: `unbound`, `online`, `offline`, `restored`.
 
 ### Source 2 temperature (numeric)
 Displays the bound remote sensor's temperature on the device screen, updating automatically every 30 minutes or manually by briefly pressing the button on the back of the SNZB-02DR2..
 Value can be found in the published state on the `source_2_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_2_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_temperature": VALUE}`.
 The minimal value is `-20` and the maximum value is `60`.
 The unit of this value is `°C`.
 
@@ -196,14 +196,14 @@ The unit of this value is `°C`.
 State of the source 2 temperature item. State-only online/restored updates do not overwrite the stored measurement..
 Value can be found in the published state on the `source_2_temperature_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_2_temperature_state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_temperature_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_temperature_state": "VALUE"}`.
 The possible values are: `unbound`, `online`, `offline`, `restored`.
 
 ### Source 2 humidity (numeric)
 Displays the bound remote sensor's humidity on the device screen, updating automatically every 30 minutes or manually by briefly pressing the button on the back of the SNZB-02DR2..
 Value can be found in the published state on the `source_2_humidity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_2_humidity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_humidity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_humidity": VALUE}`.
 The minimal value is `0` and the maximum value is `99.9`.
 The unit of this value is `%`.
 
@@ -211,14 +211,14 @@ The unit of this value is `%`.
 State of the source 2 humidity item. State-only online/restored updates do not overwrite the stored measurement..
 Value can be found in the published state on the `source_2_humidity_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"source_2_humidity_state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_humidity_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"source_2_humidity_state": "VALUE"}`.
 The possible values are: `unbound`, `online`, `offline`, `restored`.
 
 ### Comfort temperature min (numeric)
 Minimum temperature that is considered comfortable. The device will display ❄️ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `comfort_temperature_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_min": VALUE}`.
 The minimal value is `-10` and the maximum value is `60`.
 The unit of this value is `°C`.
 
@@ -226,7 +226,7 @@ The unit of this value is `°C`.
 Maximum temperature that is considered comfortable. The device will display 🔥 when the temperature is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `comfort_temperature_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_max": VALUE}`.
 The minimal value is `-10` and the maximum value is `60`.
 The unit of this value is `°C`.
 
@@ -234,7 +234,7 @@ The unit of this value is `°C`.
 Minimum relative humidity that is considered comfortable. The device will display ☀️ when the humidity is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `comfort_humidity_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_min": VALUE}`.
 The minimal value is `5` and the maximum value is `95`.
 The unit of this value is `%`.
 
@@ -242,7 +242,7 @@ The unit of this value is `%`.
 Maximum relative humidity that is considered comfortable. The device will display 💧 when the humidity is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `comfort_humidity_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_max": VALUE}`.
 The minimal value is `5` and the maximum value is `95`.
 The unit of this value is `%`.
 
@@ -250,14 +250,14 @@ The unit of this value is `%`.
 The unit of the temperature displayed on the device screen. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `temperature_units` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_units": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_units": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_units": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Temperature calibration (numeric)
 Offset to add/subtract to the reported temperature.
 Value can be found in the published state on the `temperature_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
@@ -265,7 +265,7 @@ The unit of this value is `°C`.
 Offset to add/subtract to the reported relative humidity.
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 

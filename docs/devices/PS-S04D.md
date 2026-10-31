@@ -75,7 +75,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Presence Detection Sensitivity..
 Value can be found in the published state on the `motion_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Battery (numeric)
@@ -109,28 +109,28 @@ If value equals `true` pir detection is ON, if `false` OFF.
 Presence detection sensor type.
 Value can be found in the published state on the `presence_detection_options` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"presence_detection_options": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_detection_options": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_detection_options": "VALUE"}`.
 The possible values are: `both`, `mmwave`, `pir`.
 
 ### Ai interference source selfidentification (binary)
 AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources.
 Value can be found in the published state on the `ai_interference_source_selfidentification` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ai_interference_source_selfidentification": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_interference_source_selfidentification": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_interference_source_selfidentification": "VALUE"}`.
 If value equals `ON` ai interference source selfidentification is ON, if `OFF` OFF.
 
 ### Ai sensitivity adaptive (binary)
 Adaptive sensitivity switch function..
 Value can be found in the published state on the `ai_sensitivity_adaptive` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ai_sensitivity_adaptive": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_sensitivity_adaptive": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_sensitivity_adaptive": "VALUE"}`.
 If value equals `ON` ai sensitivity adaptive is ON, if `OFF` OFF.
 
 ### Absence delay timer (numeric)
 Value for delay before the device reports absence when no presence is detected.
 Value can be found in the published state on the `absence_delay_timer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"absence_delay_timer": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_delay_timer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_delay_timer": VALUE}`.
 The minimal value is `1` and the maximum value is `300`.
 The unit of this value is `sec`.
 
@@ -138,7 +138,7 @@ The unit of this value is `sec`.
 Higher detection frequency results in higher accuracy but lower battery life..
 Value can be found in the published state on the `pir_detection_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_detection_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_detection_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_detection_interval": VALUE}`.
 The minimal value is `2` and the maximum value is `300`.
 The unit of this value is `sec`.
 
@@ -167,35 +167,35 @@ The unit of this value is `°C`.
 Initiate AI Spatial Learning..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"spatial_learning": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"spatial_learning": "VALUE"}`.
 The possible values are: `Start Learning`.
 
 ### Restart device (enum)
 Restarts the device..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_device": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_device": "VALUE"}`.
 The possible values are: `Restart Device`.
 
 ### Identify (enum)
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Temp and humidity sampling (enum)
 Sampling time frequency, increasing affects battery life. Setting to custom allows specifying period, interval & threshold..
 Value can be found in the published state on the `temp_and_humidity_sampling` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_and_humidity_sampling": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_and_humidity_sampling": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_and_humidity_sampling": "VALUE"}`.
 The possible values are: `off`, `low`, `medium`, `high`, `custom`.
 
 ### Temp and humidity sampling period (numeric)
 How often temp & humidity readings are taken on the device when in custom mode..
 Value can be found in the published state on the `temp_and_humidity_sampling_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_and_humidity_sampling_period": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_and_humidity_sampling_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_and_humidity_sampling_period": VALUE}`.
 The minimal value is `0.5` and the maximum value is `3600`.
 The unit of this value is `sec`.
 
@@ -203,7 +203,7 @@ The unit of this value is `sec`.
 Custom time interval for temperature data reporting..
 Value can be found in the published state on the `temp_reporting_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_reporting_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_reporting_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_reporting_interval": VALUE}`.
 The minimal value is `600` and the maximum value is `3600`.
 The unit of this value is `sec`.
 
@@ -211,7 +211,7 @@ The unit of this value is `sec`.
 Reporting will trigger as temperature change reaches this value when in custom mode..
 Value can be found in the published state on the `temp_reporting_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_reporting_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_reporting_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_reporting_threshold": VALUE}`.
 The minimal value is `0.2` and the maximum value is `3`.
 The unit of this value is `°C`.
 
@@ -219,14 +219,14 @@ The unit of this value is `°C`.
 Temperature reporting type when in custom mode..
 Value can be found in the published state on the `temp_reporting_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temp_reporting_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_reporting_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_reporting_mode": "VALUE"}`.
 The possible values are: `threshold`, `reporting interval`, `threshold and interval`.
 
 ### Humidity reporting interval (numeric)
 Custom time interval for humidity data reporting..
 Value can be found in the published state on the `humidity_reporting_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_reporting_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_reporting_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_reporting_interval": VALUE}`.
 The minimal value is `600` and the maximum value is `3600`.
 The unit of this value is `sec`.
 
@@ -234,7 +234,7 @@ The unit of this value is `sec`.
 Reporting will trigger as humidity change reaches this value when in custom mode..
 Value can be found in the published state on the `humidity_reporting_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_reporting_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_reporting_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_reporting_threshold": VALUE}`.
 The minimal value is `2` and the maximum value is `15`.
 The unit of this value is `%`.
 
@@ -242,21 +242,21 @@ The unit of this value is `%`.
 Humidity reporting type when in custom mode..
 Value can be found in the published state on the `humidity_report_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_report_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_report_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_report_mode": "VALUE"}`.
 The possible values are: `threshold`, `reporting interval`, `threshold and interval`.
 
 ### Light sampling (enum)
 Sampling time frequency, increasing affects battery life. Setting to custom allows specifying period, interval & threshold..
 Value can be found in the published state on the `light_sampling` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_sampling": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_sampling": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_sampling": "VALUE"}`.
 The possible values are: `off`, `low`, `medium`, `high`, `custom`.
 
 ### Light sampling period (numeric)
 How often illumination readings are taken on the device when in custom mode..
 Value can be found in the published state on the `light_sampling_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_sampling_period": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_sampling_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_sampling_period": VALUE}`.
 The minimal value is `0.5` and the maximum value is `3600`.
 The unit of this value is `sec`.
 
@@ -264,7 +264,7 @@ The unit of this value is `sec`.
 Custom interval for illumination data reporting..
 Value can be found in the published state on the `light_reporting_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_reporting_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_reporting_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_reporting_interval": VALUE}`.
 The minimal value is `20` and the maximum value is `3600`.
 The unit of this value is `sec`.
 
@@ -272,7 +272,7 @@ The unit of this value is `sec`.
 Reporting will trigger as illumination percentage change reaches this value when in custom mode..
 Value can be found in the published state on the `light_reporting_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_reporting_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_reporting_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_reporting_threshold": VALUE}`.
 The minimal value is `3` and the maximum value is `20`.
 The unit of this value is `%`.
 
@@ -280,14 +280,14 @@ The unit of this value is `%`.
 illumination reporting type when in custom mode..
 Value can be found in the published state on the `light_report_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_report_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_report_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_report_mode": "VALUE"}`.
 The possible values are: `threshold`, `reporting interval`, `threshold and interval`.
 
 ### Track target distance (enum)
 Initiate current target distance tracking..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"track_target_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"track_target_distance": "VALUE"}`.
 The possible values are: `start_tracking_distance`.
 
 ### Target distance (numeric)
@@ -301,7 +301,7 @@ The unit of this value is `m`.
 Specifies the range that is being detected. Requires mmWave radar mode. Press the on-device button to wake the device up and refresh its' settings..
 Value can be found in the published state on the `detection_range` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_range": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": VALUE}`.
 The minimal value is `0` and the maximum value is `16777215`.
 
 ### Detection range composite (composite)
@@ -337,18 +337,18 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 Enables/disables LED indicator at night.
 Value can be found in the published state on the `led_disabled_night` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": VALUE}`.
 If value equals `true` led disabled night is ON, if `false` OFF.
 
 ### Schedule start time (text)
 LED disable schedule start time (HH:MM format).
 Value can be found in the published state on the `schedule_start_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_start_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_start_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_start_time": "VALUE"}`.
 
 ### Schedule end time (text)
 LED disable schedule end time (HH:MM format).
 Value can be found in the published state on the `schedule_end_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_end_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_end_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_end_time": "VALUE"}`.
 

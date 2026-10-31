@@ -61,13 +61,13 @@ The possible values are: `low`, `middle`, `high`.
 Enable the alarm.
 Value can be found in the published state on the `alarm` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": VALUE}`.
 If value equals `true` alarm is ON, if `false` OFF.
 
 ### Silence siren (binary)
 Silence the siren.
 Value can be found in the published state on the `silence_siren` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence_siren": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence_siren": VALUE}`.
 If value equals `true` silence siren is ON, if `false` OFF.
 

@@ -57,14 +57,14 @@ It's not possible to read (`/get`) this value.
 Backlight master switch.
 Value can be found in the published state on the `backlight_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": "VALUE"}`.
 If value equals `ON` backlight switch is ON, if `OFF` OFF.
 
 ### Backlight (numeric)
 Backlight brightness percentage.
 Value can be found in the published state on the `backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -72,42 +72,42 @@ The unit of this value is `%`.
 LED indicator mode.
 Value can be found in the published state on the `indicator_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": "VALUE"}`.
 The possible values are: `off`, `on_off_status`, `switch_position`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `previous`, `on`.
 
 ### Child lock (binary)
 Child lock.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `ON` child lock is ON, if `OFF` OFF.
 
 ### On color (enum)
 ON color.
 Value can be found in the published state on the `on_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_color": "VALUE"}`.
 The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`, `warm_white`, `warm_yellow`.
 
 ### Off color (enum)
 OFF color.
 Value can be found in the published state on the `off_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_color": "VALUE"}`.
 The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`, `warm_white`, `warm_yellow`.
 
 ### Countdown l1 (numeric)
 Countdown for l1.
 Value can be found in the published state on the `countdown_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l1": VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
@@ -115,7 +115,7 @@ The unit of this value is `s`.
 Countdown for l2.
 Value can be found in the published state on the `countdown_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l2": VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 

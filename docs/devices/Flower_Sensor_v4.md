@@ -69,7 +69,7 @@ The unit of this value is `lx`.
 Reporting interval.
 Value can be found in the published state on the `report_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"report_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `600`.
 The unit of this value is `min`.
 
@@ -77,7 +77,7 @@ The unit of this value is `min`.
 Reporting interval.
 Value can be found in the published state on the `threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -85,21 +85,21 @@ The unit of this value is `%`.
 Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": "VALUE"}`.
 The possible values are: `10dbm`, `19dbm`.
 
 ### Smart sleep (binary)
 Enable Smart Sleep, short wakeup every 6 seconds.
 Value can be found in the published state on the `smart_sleep` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": "VALUE"}`.
 If value equals `ON` smart sleep is ON, if `OFF` OFF.
 
 ### Thermal compensation (binary)
 Thermal compensation.
 Value can be found in the published state on the `thermal_compensation` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"thermal_compensation": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"thermal_compensation": "VALUE"}`.
 If value equals `ON` thermal compensation is ON, if `OFF` OFF.
 
 ### Battery (numeric)

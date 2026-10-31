@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BTH-RA  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Radiator thermostat II |
-| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state, pi_heating_demand), setpoint_change_source, operating_mode, window_detection, boost_heating, remote_temperature, child_lock, display_brightness, display_switch_on_duration, display_orientation, displayed_temperature, valve_adapt_status, automatic_valve_adapt, valve_adapt_process, error_state, battery, battery_low |
+| Exposes | climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state, pi_heating_demand), setpoint_change_source, operating_mode, window_detection, boost_heating, remote_temperature, child_lock, display_brightness, display_switch_on_duration, display_orientation, displayed_temperature, valve_adapt_status, automatic_valve_adapt, valve_adapt_process, error_state, battery, battery_low, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, weekly_schedule_sunday |
 | Picture | ![Bosch BTH-RA](https://www.zigbee2mqtt.io/images/devices/BTH-RA.png) |
 
 
@@ -67,7 +67,7 @@ This climate device supports the following features: `local_temperature`, `local
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `pi_heating_demand`: Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pi_heating_demand": VALUE}` where `VALUE` is the % between `0` and `100`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pi_heating_demand": ""}`.
 - `local_temperature`: Temperature used by the heating algorithm. This is the temperature measured on the device (by default) or the remote temperature (if set within the last 30 min). (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
 
@@ -82,28 +82,28 @@ The possible values are: `manual`, `schedule`, `externally`.
 Bosch-specific operating mode.
 Value can be found in the published state on the `operating_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": "VALUE"}`.
 The possible values are: `schedule`, `manual`, `pause`.
 
 ### Window detection (binary)
 Activates the window open mode, where the thermostat disables any heating/cooling to prevent unnecessary energy consumption. Please keep in mind that the device itself does not detect any open windows!.
 Value can be found in the published state on the `window_detection` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "VALUE"}`.
 If value equals `ON` window detection is ON, if `OFF` OFF.
 
 ### Activate boost heating (binary)
 Activate boost heating (opens TRV for 5 minutes).
 Value can be found in the published state on the `boost_heating` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"boost_heating": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating": "VALUE"}`.
 If value equals `ON` activate boost heating is ON, if `OFF` OFF.
 
 ### Remote temperature (numeric)
 Input for remote temperature sensor. Required at least every 30 minutes to prevent fallback to the internal sensor!.
 Value can be found in the published state on the `remote_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"remote_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_temperature": VALUE}`.
 The minimal value is `0` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -111,14 +111,14 @@ The unit of this value is `°C`.
 Enables/disables physical input on the thermostat.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Display brightness (numeric)
 Sets brightness of the display.
 Value can be found in the published state on the `display_brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_brightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -126,7 +126,7 @@ The unit of this value is `%`.
 Sets the time before the display is automatically switched off.
 Value can be found in the published state on the `display_switch_on_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_switch_on_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_switch_on_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_switch_on_duration": VALUE}`.
 The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `s`.
 
@@ -134,14 +134,14 @@ The unit of this value is `s`.
 You can rotate the display content by 180° here. This is recommended if your thermostat is fitted vertically, for instance..
 Value can be found in the published state on the `display_orientation` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_orientation": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_orientation": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_orientation": "VALUE"}`.
 The possible values are: `standard_arrangement`, `rotated_by_180_degrees`.
 
 ### Displayed temperature (enum)
 Select which temperature should be displayed on your radiator thermostat display.
 Value can be found in the published state on the `displayed_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"displayed_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"displayed_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"displayed_temperature": "VALUE"}`.
 The possible values are: `set_temperature`, `measured_temperature`.
 
 ### Valve adaptation status (enum)
@@ -162,7 +162,7 @@ If value equals `true` automatic valve adaptation requested is ON, if `false` OF
 Trigger the valve adaptation process. Only possible when the adaptation status is 'ready_to_calibrate' or 'error'..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_adapt_process": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_adapt_process": "VALUE"}`.
 The possible values are: `adapt`.
 
 ### Error state (text)
@@ -184,4 +184,39 @@ Empty battery indicator.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
+
+### Weekly schedule monday (text)
+Value can be found in the published state on the `weekly_schedule_monday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_monday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_monday": "VALUE"}`.
+
+### Weekly schedule tuesday (text)
+Value can be found in the published state on the `weekly_schedule_tuesday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_tuesday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_tuesday": "VALUE"}`.
+
+### Weekly schedule wednesday (text)
+Value can be found in the published state on the `weekly_schedule_wednesday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_wednesday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_wednesday": "VALUE"}`.
+
+### Weekly schedule thursday (text)
+Value can be found in the published state on the `weekly_schedule_thursday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_thursday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_thursday": "VALUE"}`.
+
+### Weekly schedule friday (text)
+Value can be found in the published state on the `weekly_schedule_friday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_friday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_friday": "VALUE"}`.
+
+### Weekly schedule saturday (text)
+Value can be found in the published state on the `weekly_schedule_saturday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_saturday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_saturday": "VALUE"}`.
+
+### Weekly schedule sunday (text)
+Value can be found in the published state on the `weekly_schedule_sunday` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_sunday": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_sunday": "VALUE"}`.
 

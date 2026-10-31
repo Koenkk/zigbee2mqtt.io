@@ -56,7 +56,7 @@ The unit of this value is `lx`.
 Maximum detection distance.
 Value can be found in the published state on the `detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": VALUE}`.
 The minimal value is `1` and the maximum value is `6`.
 The unit of this value is `m`.
 
@@ -64,7 +64,7 @@ The unit of this value is `m`.
 Presence keep time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `10` and the maximum value is `180`.
 The unit of this value is `s`.
 
@@ -78,14 +78,14 @@ The possible values are: `pir`, `none`.
 Static detection sensitivity.
 Value can be found in the published state on the `static_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Motion detection sensitivity (numeric)
 Motion detection sensitivity.
 Value can be found in the published state on the `motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Battery (numeric)

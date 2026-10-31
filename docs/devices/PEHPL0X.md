@@ -55,7 +55,7 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 ### Default on off state (enum)
 Value can be found in the published state on the `default_on_off_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"default_on_off_state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"default_on_off_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"default_on_off_state": "VALUE"}`.
 The possible values are: `on`, `off`, `previous`.
 
 ### Rms voltage (numeric)
@@ -80,56 +80,56 @@ The unit of this value is `Wh`.
 Indicates if the alarm is triggered on the voltage drop below the limit, allows to reset alarms.
 Value can be found in the published state on the `alarm_voltage_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_voltage_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_voltage_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_voltage_min": VALUE}`.
 If value equals `true` alarm voltage min is ON, if `false` OFF.
 
 ### Alarm voltage max (binary)
 Indicates if the alarm is triggered on the voltage rise above the limit, allows to reset alarms.
 Value can be found in the published state on the `alarm_voltage_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_voltage_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_voltage_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_voltage_max": VALUE}`.
 If value equals `true` alarm voltage max is ON, if `false` OFF.
 
 ### Alarm power max (binary)
 Indicates if the alarm is triggered on the active power rise above the limit, allows to reset alarms.
 Value can be found in the published state on the `alarm_power_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_power_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_power_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_power_max": VALUE}`.
 If value equals `true` alarm power max is ON, if `false` OFF.
 
 ### Alarm consumed energy (binary)
 Indicates if the alarm is triggered when the consumption energy limit is reached, allows to reset alarms.
 Value can be found in the published state on the `alarm_consumed_energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_consumed_energy": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_consumed_energy": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_consumed_energy": VALUE}`.
 If value equals `true` alarm consumed energy is ON, if `false` OFF.
 
 ### Voltage min (numeric)
 Minimum allowable voltage limit for alarms..
 Value can be found in the published state on the `voltage_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_min": VALUE}`.
 The minimal value is `0` and the maximum value is `253`.
 
 ### Voltage max (numeric)
 Maximum allowable voltage limit for alarms..
 Value can be found in the published state on the `voltage_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_max": VALUE}`.
 The minimal value is `0` and the maximum value is `253`.
 
 ### Power max (numeric)
 Maximum allowable power limit for alarms..
 Value can be found in the published state on the `power_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_max": VALUE}`.
 The minimal value is `0` and the maximum value is `65534`.
 
 ### Consumed energy limit (numeric)
 Limit of electric energy consumption in kW*h. 0 value represents no limit.
 Value can be found in the published state on the `consumed_energy_limit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"consumed_energy_limit": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"consumed_energy_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"consumed_energy_limit": VALUE}`.
 The minimal value is `0` and the maximum value is `65534`.
 
 ### Rssi (numeric)

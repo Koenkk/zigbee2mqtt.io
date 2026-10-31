@@ -56,21 +56,21 @@ Press and hold button of the device for 15 seconds until the LED starts blinking
 Radar frequency band index (0..4).
 Value can be found in the published state on the `freq` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"freq": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"freq": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"freq": VALUE}`.
 The minimal value is `0` and the maximum value is `4`.
 
 ### Trith (numeric)
 Radar trigger threshold (1..10).
 Value can be found in the published state on the `trith` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"trith": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trith": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trith": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Absence timeout (numeric)
 Absence timeout / HOLD time in seconds (0..510, 2s steps).
 Value can be found in the published state on the `absence_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"absence_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `510`.
 The unit of this value is `s`.
 
@@ -78,14 +78,14 @@ The unit of this value is `s`.
 Enable mmWave radar sensing.
 Value can be found in the published state on the `radar_enable` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_enable": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_enable": VALUE}`.
 If value equals `true` radar enable is ON, if `false` OFF.
 
 ### Lx interval (numeric)
 Illuminance sample interval.
 Value can be found in the published state on the `lx_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lx_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_interval": VALUE}`.
 The minimal value is `2` and the maximum value is `60000`.
 The unit of this value is `s`.
 
@@ -93,7 +93,7 @@ The unit of this value is `s`.
 Temperature/humidity sample interval.
 Value can be found in the published state on the `sht_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sht_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sht_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sht_interval": VALUE}`.
 The minimal value is `10` and the maximum value is `60000`.
 The unit of this value is `s`.
 
@@ -101,14 +101,14 @@ The unit of this value is `s`.
 Illuminance threshold 1 (must be < lx_thread2).
 Value can be found in the published state on the `lx_thread1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lx_thread1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_thread1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_thread1": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### Lx thread2 (numeric)
 Illuminance threshold 2 (must be > lx_thread1).
 Value can be found in the published state on the `lx_thread2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lx_thread2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_thread2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_thread2": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### Temperature (numeric)

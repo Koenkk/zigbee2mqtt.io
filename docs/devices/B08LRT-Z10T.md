@@ -76,21 +76,21 @@ The unit of this value is `%`.
 Scene switch click.
 Value can be found in the published state on the `scene_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_switch": "VALUE"}`.
 The possible values are: `single_click`, `double_click`, `long_press`.
 
 ### Radar switch (binary)
 Radar switch.
 Value can be found in the published state on the `radar_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": "VALUE"}`.
 If value equals `ON` radar switch is ON, if `OFF` OFF.
 
 ### Scan environment (enum)
 Set no one environment.
 Value can be found in the published state on the `scan_environment` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scan_environment": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scan_environment": "VALUE"}`.
 The possible values are: `start`.
 
 ### Scan result (enum)
@@ -103,7 +103,7 @@ The possible values are: `normal`, `scanning`, `scan_success`, `scan_failure`, `
 Detection distance.
 Value can be found in the published state on the `set_detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_detection_distance": VALUE}`.
 The minimal value is `3` and the maximum value is `6`.
 The unit of this value is `m`.
 
@@ -111,7 +111,7 @@ The unit of this value is `m`.
 Hold time.
 Value can be found in the published state on the `hold_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hold_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hold_time": VALUE}`.
 The minimal value is `10` and the maximum value is `60`.
 The unit of this value is `s`.
 
@@ -119,7 +119,7 @@ The unit of this value is `s`.
 Temperature unit.
 Value can be found in the published state on the `temp_unit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temp_unit": "VALUE"}`.
 The possible values are: `c`, `f`.
 
 ### Battery state (enum)

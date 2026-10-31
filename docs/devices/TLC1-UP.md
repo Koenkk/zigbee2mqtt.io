@@ -54,7 +54,7 @@ simulated_brightness:
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Temperature (numeric)
@@ -98,7 +98,7 @@ The unit of this value is `°C`.
 Represent the offset applicated to the temperature measured..
 Value can be found in the published state on the `offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"offset": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
@@ -106,7 +106,7 @@ The unit of this value is `°C`.
 Represent the sampling period used to process the temperature measurement..
 Value can be found in the published state on the `samplingPeriod` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"samplingPeriod": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"samplingPeriod": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"samplingPeriod": VALUE}`.
 The minimal value is `1` and the maximum value is `120`.
 The unit of this value is `s`.
 
@@ -114,14 +114,14 @@ The unit of this value is `s`.
 Represents the sampling number to sense per sampling period defined before..
 Value can be found in the published state on the `samplingNumber` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"samplingNumber": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"samplingNumber": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"samplingNumber": VALUE}`.
 The minimal value is `1` and the maximum value is `20`.
 
 ### DeltaTemp (numeric)
 Represents the temperature variation to request a new temperature sending through reports..
 Value can be found in the published state on the `deltaTemp` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"deltaTemp": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deltaTemp": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deltaTemp": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `°C`.
 
@@ -129,14 +129,14 @@ The unit of this value is `°C`.
 Represents the minimal sending period that the device must respect before sending a new value through reporting..
 Value can be found in the published state on the `minimalSendingPeriod` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimalSendingPeriod": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimalSendingPeriod": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimalSendingPeriod": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### MaximalSendingPeriod (numeric)
 Represents the maximal sending period. The device must send a new value through reporting before the end of this period..
 Value can be found in the published state on the `maximalSendingPeriod` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"maximalSendingPeriod": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximalSendingPeriod": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximalSendingPeriod": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### Action (enum)

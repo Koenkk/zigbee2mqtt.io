@@ -43,28 +43,28 @@ If value equals `true` occupancy is ON, if `false` OFF.
 O-Sensitivity mode.
 Value can be found in the published state on the `o_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"o_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"o_sensitivity": "VALUE"}`.
 The possible values are: `sensitive`, `normal`, `cautious`.
 
 ### V sensitivity (enum)
 V-Sensitivity mode.
 Value can be found in the published state on the `v_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"v_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"v_sensitivity": "VALUE"}`.
 The possible values are: `speed_priority`, `normal_priority`, `accuracy_priority`.
 
 ### Led status (enum)
 Led status switch.
 Value can be found in the published state on the `led_status` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_status": "VALUE"}`.
 The possible values are: `ON`, `OFF`.
 
 ### Vacancy delay (numeric)
 Vacancy delay.
 Value can be found in the published state on the `vacancy_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vacancy_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vacancy_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `sec`.
 
@@ -72,21 +72,21 @@ The unit of this value is `sec`.
 Light-On luminance prefer.
 Value can be found in the published state on the `light_on_luminance_prefer` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_on_luminance_prefer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_on_luminance_prefer": VALUE}`.
 The minimal value is `0` and the maximum value is `10000`.
 
 ### Light off luminance prefer (numeric)
 Light-Off luminance prefer.
 Value can be found in the published state on the `light_off_luminance_prefer` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_off_luminance_prefer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_off_luminance_prefer": VALUE}`.
 The minimal value is `0` and the maximum value is `10000`.
 
 ### Mode (enum)
 Working mode.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "VALUE"}`.
 The possible values are: `general_model`, `temporaty_stay`, `basic_detection`, `sensor_test`.
 
 ### Luminance level (numeric)

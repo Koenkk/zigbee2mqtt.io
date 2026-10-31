@@ -48,14 +48,14 @@ If value equals `true` occupancy is ON, if `false` OFF.
 PIR sensitivity (0=high, 1=low).
 Value can be found in the published state on the `pir_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity": "VALUE"}`.
 The possible values are: `high`, `low`.
 
 ### Alarm time (numeric)
 Alarm time.
 Value can be found in the published state on the `alarm_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_time": VALUE}`.
 The minimal value is `1` and the maximum value is `180`.
 The unit of this value is `s`.
 
@@ -63,7 +63,7 @@ The unit of this value is `s`.
 Alarm work mode.
 Value can be found in the published state on the `alarm_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_mode": "VALUE"}`.
 The possible values are: `arm`, `silent`, `disarm`.
 
 ### Battery (numeric)

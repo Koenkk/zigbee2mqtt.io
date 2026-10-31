@@ -75,28 +75,28 @@ The unit of this value is `%`.
 The units of the temperature displayed on the device screen..
 Value can be found in the published state on the `temperature_display_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_display_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_mode": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Show smiley (binary)
 Whether to show a smiley on the device screen..
 Value can be found in the published state on the `show_smiley` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"show_smiley": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"show_smiley": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"show_smiley": "VALUE"}`.
 If value equals `SHOW` show smiley is ON, if `HIDE` OFF.
 
 ### Enable display (binary)
 Whether to turn display on/off..
 Value can be found in the published state on the `enable_display` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_display": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_display": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_display": "VALUE"}`.
 If value equals `ON` enable display is ON, if `OFF` OFF.
 
 ### Temperature calibration (numeric)
 The temperature calibration offset is set in 0.01° steps..
 Value can be found in the published state on the `temperature_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 The unit of this value is `°C`.
 
@@ -104,7 +104,7 @@ The unit of this value is `°C`.
 The humidity calibration offset is set in 0.01 % steps..
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -112,7 +112,7 @@ The unit of this value is `%`.
 Comfort parameters/Temperature minimum, in 0.01°C steps..
 Value can be found in the published state on the `comfort_temperature_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_min": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 The unit of this value is `°C`.
 
@@ -120,7 +120,7 @@ The unit of this value is `°C`.
 Comfort parameters/Temperature maximum, in 0.01°C steps..
 Value can be found in the published state on the `comfort_temperature_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_temperature_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature_max": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 The unit of this value is `°C`.
 
@@ -128,7 +128,7 @@ The unit of this value is `°C`.
 Comfort parameters/Humidity minimum, in 0.01% steps..
 Value can be found in the published state on the `comfort_humidity_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_min": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -136,7 +136,7 @@ The unit of this value is `%`.
 Comfort parameters/Humidity maximum, in 0.01% steps..
 Value can be found in the published state on the `comfort_humidity_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_max": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 

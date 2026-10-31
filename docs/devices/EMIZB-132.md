@@ -112,7 +112,7 @@ The unit of this value is `VAr`.
 Specifies the configuration of the external HAN port interface..
 Value can be found in the published state on the `interface_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"interface_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interface_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interface_mode": "VALUE"}`.
 The possible values are: `norwegian_han`, `norwegian_han_extra_load`, `aidon_meter`, `kaifa_and_kamstrup`.
 
 ### Voltage (numeric)

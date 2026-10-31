@@ -43,7 +43,7 @@ pageClass: device-page
 Light switch.
 Value can be found in the published state on the `status_indication` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_indication": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_indication": "VALUE"}`.
 If value equals `ON` status indication is ON, if `OFF` OFF.
 
 ### Switch 
@@ -55,13 +55,13 @@ It's not possible to read (`/get`) this value.
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `OFF`, `ON`.
 
 ### Fan speed (enum)
 Speed of the fan.
 Value can be found in the published state on the `fan_speed` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_speed": "VALUE"}`.
 The possible values are: `minimum`, `medium`, `maximum`.
 

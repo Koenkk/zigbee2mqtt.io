@@ -42,7 +42,7 @@ pageClass: device-page
 Watering countdown to turn device off after a certain time.
 Value can be found in the published state on the `water_countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_countdown": VALUE}`.
 The minimal value is `1` and the maximum value is `1440`.
 The unit of this value is `minute`.
 

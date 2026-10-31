@@ -138,7 +138,7 @@ The unit of this value is `Hz`.
 Locate device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_locating": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_locating": "VALUE"}`.
 If value equals `ON` device locating is ON, if `OFF` OFF.
 
 ### Energy a (numeric)
@@ -197,7 +197,7 @@ The unit of this value is `%`.
 
 ### Alarm set 1 (composite)
 Configuration for RS485 wired communication (if supported by device) and high power alarm.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_1": {"rs485_baud_rate_enabled": VALUE, "rs485_baud_rate": VALUE, "rs485_address_enabled": VALUE, "rs485_address": VALUE, "rs485_data_format_enabled": VALUE, "rs485_data_format": VALUE, "high_power_alarm": VALUE, "high_power_threshold": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_1": {"rs485_baud_rate_enabled": "VALUE", "rs485_baud_rate": "VALUE", "rs485_address_enabled": "VALUE", "rs485_address": VALUE, "rs485_data_format_enabled": "VALUE", "rs485_data_format": "VALUE", "high_power_alarm": "VALUE", "high_power_threshold": VALUE}}`
 - `rs485_baud_rate_enabled` (binary) allowed values: `ON` or `OFF`
 - `rs485_baud_rate` (enum) allowed values: `2400`, `4800`, `9600`, `19200`, `38400`
 - `rs485_address_enabled` (binary) allowed values: `ON` or `OFF`
@@ -209,7 +209,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alar
 
 ### Alarm set 2 (composite)
 Configuration for alarms and reporting frequency.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_2": {"over_current_alarm": VALUE, "over_current_threshold": VALUE, "over_voltage_alarm": VALUE, "over_voltage_threshold": VALUE, "under_voltage_alarm": VALUE, "under_voltage_threshold": VALUE, "unbalanced_load_alarm": VALUE, "unbalanced_load_threshold": VALUE, "phase_loss_alarm": VALUE, "negative_active_power_alarm": VALUE, "custom_data_reporting_interval": VALUE, "data_reporting_interval": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_2": {"over_current_alarm": "VALUE", "over_current_threshold": VALUE, "over_voltage_alarm": "VALUE", "over_voltage_threshold": VALUE, "under_voltage_alarm": "VALUE", "under_voltage_threshold": VALUE, "unbalanced_load_alarm": "VALUE", "unbalanced_load_threshold": VALUE, "phase_loss_alarm": "VALUE", "negative_active_power_alarm": "VALUE", "custom_data_reporting_interval": "VALUE", "data_reporting_interval": VALUE}}`
 - `over_current_alarm` (binary): Trigger alarm when current is higher than the limit (Default OFF) allowed values: `ON` or `OFF`
 - `over_current_threshold` (numeric): Current upper limit (Default 100A) max value is 65535, unit is A
 - `over_voltage_alarm` (binary): Trigger alarm when the voltage is above the limit (Default ON) allowed values: `ON` or `OFF`
@@ -227,7 +227,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alar
 Update frequency.
 Value can be found in the published state on the `update_frequency` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": VALUE}`.
 The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 Besides the numeric values the following values are accepted: `default`.

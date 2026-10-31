@@ -47,13 +47,13 @@ It's not possible to read (`/get`) this value.
 Power-off status behavior.
 Value can be found in the published state on the `power_off_state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_off_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_off_state": "VALUE"}`.
 The possible values are: `off`, `on`, `maintain`.
 
 ### Set valve position (numeric)
 Value can be found in the published state on the `set_valve_position` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_valve_position": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_valve_position": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -61,7 +61,7 @@ The unit of this value is `%`.
 Countdown timer in seconds.
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 

@@ -60,6 +60,6 @@ The unit of this value is `min`.
 Turns the onboard LED on or off.
 Value can be found in the published state on the `led_state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_state": VALUE}`.
 If value equals `true` led state is ON, if `false` OFF.
 

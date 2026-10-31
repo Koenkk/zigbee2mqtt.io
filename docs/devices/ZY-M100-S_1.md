@@ -62,14 +62,14 @@ The unit of this value is `m`.
 sensitivity of the radar.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `9`.
 
 ### Minimum range (numeric)
 Minimum range.
 Value can be found in the published state on the `minimum_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_range": VALUE}`.
 The minimal value is `0` and the maximum value is `9.5`.
 The unit of this value is `m`.
 
@@ -77,7 +77,7 @@ The unit of this value is `m`.
 Maximum range.
 Value can be found in the published state on the `maximum_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximum_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximum_range": VALUE}`.
 The minimal value is `0` and the maximum value is `9.5`.
 The unit of this value is `m`.
 
@@ -85,7 +85,7 @@ The unit of this value is `m`.
 Detection delay.
 Value can be found in the published state on the `detection_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
@@ -93,7 +93,7 @@ The unit of this value is `s`.
 Fading time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `0.5` and the maximum value is `1500`.
 The unit of this value is `s`.
 

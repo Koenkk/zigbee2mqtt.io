@@ -56,7 +56,7 @@ If value equals `true` presence is ON, if `false` OFF.
 Max detection distance.
 Value can be found in the published state on the `detection_distance_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance_max": VALUE}`.
 The minimal value is `0` and the maximum value is `840`.
 The unit of this value is `cm`.
 
@@ -64,7 +64,7 @@ The unit of this value is `cm`.
 Min detection distance.
 Value can be found in the published state on the `detection_distance_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance_min": VALUE}`.
 The minimal value is `0` and the maximum value is `840`.
 The unit of this value is `cm`.
 
@@ -78,7 +78,7 @@ The unit of this value is `cm`.
 Delay time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `1` and the maximum value is `59`.
 The unit of this value is `s`.
 
@@ -86,13 +86,13 @@ The unit of this value is `s`.
 Presence sensitivity.
 Value can be found in the published state on the `presence_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Indicator (binary)
 LED Indicator.
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 

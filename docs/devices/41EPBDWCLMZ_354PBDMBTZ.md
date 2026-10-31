@@ -64,20 +64,20 @@ Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1
 Specifies the minimum light output of the ballast.
 Value can be found in the published state on the `ballast_minimum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_minimum_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_minimum_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_minimum_level": VALUE}`.
 The minimal value is `1` and the maximum value is `254`.
 
 ### Ballast maximum level (numeric)
 Specifies the maximum light output of the ballast.
 Value can be found in the published state on the `ballast_maximum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_maximum_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": VALUE}`.
 The minimal value is `1` and the maximum value is `254`.
 
 ### Indicator mode (enum, smart endpoint)
 Set Indicator Mode for smart switch..
 Value can be found in the published state on the `indicator_mode_smart` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode_smart": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode_smart": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode_smart": "VALUE"}`.
 The possible values are: `reverse_with_load`, `consistent_with_load`, `always_off`, `always_on`, `flash_on_click`.
 

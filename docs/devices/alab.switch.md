@@ -86,28 +86,28 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Input state.
 Value can be found in the published state on the `input_state_in1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_state_in1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_state_in1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_state_in1": VALUE}`.
 The minimal value is `0` and the maximum value is `1`.
 
 ### Input state (numeric, in2 endpoint)
 Input state.
 Value can be found in the published state on the `input_state_in2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_state_in2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_state_in2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_state_in2": VALUE}`.
 The minimal value is `0` and the maximum value is `1`.
 
 ### Input state (numeric, in3 endpoint)
 Input state.
 Value can be found in the published state on the `input_state_in3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_state_in3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_state_in3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_state_in3": VALUE}`.
 The minimal value is `0` and the maximum value is `1`.
 
 ### Input state (numeric, in4 endpoint)
 Input state.
 Value can be found in the published state on the `input_state_in4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_state_in4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_state_in4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_state_in4": VALUE}`.
 The minimal value is `0` and the maximum value is `1`.
 
 ### Action (enum)

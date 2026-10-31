@@ -56,35 +56,35 @@ The unit of this value is `lx`.
 Enable/disable radar detection.
 Value can be found in the published state on the `radar` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar": "VALUE"}`.
 If value equals `ON` radar is ON, if `OFF` OFF.
 
 ### Detection range (numeric)
 Detection range level (1=closest, 7=furthest).
 Value can be found in the published state on the `detection_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": VALUE}`.
 The minimal value is `1` and the maximum value is `7`.
 
 ### Sensitivity (enum)
 Radar sensitivity.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`, `max`.
 
 ### Detection area (enum)
 Active detection zone.
 Value can be found in the published state on the `detection_area` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_area": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_area": "VALUE"}`.
 The possible values are: `all`, `left`, `right`.
 
 ### Fading time (numeric)
 Delay before reporting absence (s).
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `2` and the maximum value is `3600`.
 The unit of this value is `s`.
 
@@ -92,27 +92,27 @@ The unit of this value is `s`.
 LED status indicator.
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 
 ### Presence switch (binary)
 Presence relay output (relay variants only).
 Value can be found in the published state on the `presence_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_switch": "VALUE"}`.
 If value equals `ON` presence switch is ON, if `OFF` OFF.
 
 ### Compensation coefficient (numeric)
 Illuminance compensation multiplier (1x-10x).
 Value can be found in the published state on the `compensation_coefficient` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"compensation_coefficient": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"compensation_coefficient": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### State reversal (binary)
 Invert the presence output signal.
 Value can be found in the published state on the `state_reversal` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_reversal": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_reversal": "VALUE"}`.
 If value equals `ON` state reversal is ON, if `OFF` OFF.
 

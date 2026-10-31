@@ -97,7 +97,7 @@ The unit of this value is `kPa`.
 Calibrated temperature target value (supports 0.1°C step). Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `temperature_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
@@ -105,7 +105,7 @@ The unit of this value is `°C`.
 Calibrated relative humidity target value (supports 0.1% step). Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
@@ -113,7 +113,7 @@ The unit of this value is `%`.
 Pressure compensation offset applied directly to pressure reading in hPa (positive adds, negative subtracts). Range: -400 to 400 hPa. Note: wake up the device by pressing the button on the back before changing this value..
 Value can be found in the published state on the `pressure_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_calibration": VALUE}`.
 The minimal value is `-200` and the maximum value is `200`.
 The unit of this value is `hPa`.
 

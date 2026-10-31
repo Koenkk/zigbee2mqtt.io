@@ -77,7 +77,7 @@ The possible values are: `normal_state`, `water_shortage`, `water_leakage`, `wat
 Automatically shut down the water valve after the water shortage exceeds 30 minutes. Requires firmware version 1.0.4 or later!.
 Value can be found in the published state on the `auto_close_when_water_shortage` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_close_when_water_shortage": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_close_when_water_shortage": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_close_when_water_shortage": "VALUE"}`.
 If value equals `ENABLE` auto close when water shortage is ON, if `DISABLE` OFF.
 
 ### Cyclic timed irrigation (composite)

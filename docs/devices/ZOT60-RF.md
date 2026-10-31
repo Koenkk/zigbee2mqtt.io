@@ -63,7 +63,7 @@ It's not possible to read (`/get`) this value.
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -89,7 +89,7 @@ The unit of this value is `V`.
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy": VALUE}`.
 The minimal value is `0` and the maximum value is `100000`.
 The unit of this value is `kWh`.
 
@@ -97,13 +97,13 @@ The unit of this value is `kWh`.
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `previous`, `on`.
 
 ### Backlight mode (binary)
 Mode of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": "VALUE"}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
 

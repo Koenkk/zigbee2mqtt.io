@@ -43,28 +43,28 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Detection range in meters (0.7 - 10.0, step 0.1).
 Value can be found in the published state on the `detection_range` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_range": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": VALUE}`.
 The minimal value is `0.7` and the maximum value is `10`.
 
 ### Pir u2o delay (numeric)
 PIR unoccupied to occupied delay in seconds.
 Value can be found in the published state on the `pir_u2o_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_u2o_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_u2o_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_u2o_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `65534`.
 
 ### Ultrasonic o2u delay (numeric)
 Ultrasonic occupied to unoccupied delay in seconds.
 Value can be found in the published state on the `ultrasonic_o2u_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ultrasonic_o2u_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ultrasonic_o2u_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ultrasonic_o2u_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `65534`.
 
 ### Ultrasonic u2o delay (numeric)
 Ultrasonic unoccupied to occupied delay in seconds.
 Value can be found in the published state on the `ultrasonic_u2o_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ultrasonic_u2o_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ultrasonic_u2o_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ultrasonic_u2o_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `65534`.
 
 ### Auto calibration (composite)
@@ -84,6 +84,6 @@ The minimal value is `0` and the maximum value is `100`.
 Work mode: pirOnly/radarOnly/pirRadarAnd/occupied_first/unoccupied_first.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_mode": "VALUE"}`.
 The possible values are: `pirOnly`, `radarOnly`, `pirRadarAnd`, `occupied_first`, `unoccupied_first`.
 

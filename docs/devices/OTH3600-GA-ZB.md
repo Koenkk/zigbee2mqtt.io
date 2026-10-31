@@ -64,14 +64,14 @@ pageClass: device-page
 Displays the outdoor temperature and then returns to the set point in "auto" mode, or clears in "outdoor temp" mode when expired..
 Value can be found in the published state on the `second_display_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"second_display_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"second_display_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"second_display_mode": "VALUE"}`.
 The possible values are: `auto`, `setpoint`, `outdoor temp`.
 
 ### Thermostat outdoor temperature (numeric)
 Outdoor temperature for the secondary display.
 Value can be found in the published state on the `thermostat_outdoor_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"thermostat_outdoor_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"thermostat_outdoor_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"thermostat_outdoor_temperature": VALUE}`.
 The minimal value is `-99.5` and the maximum value is `99.5`.
 The unit of this value is `°C`.
 
@@ -79,7 +79,7 @@ The unit of this value is `°C`.
 Time in seconds after which the outdoor temperature is considered to have expired.
 Value can be found in the published state on the `outdoor_temperature_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"outdoor_temperature_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outdoor_temperature_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outdoor_temperature_timeout": VALUE}`.
 The minimal value is `30` and the maximum value is `64800`.
 The unit of this value is `s`.
 Besides the numeric values the following values are accepted: `15 min`, `30 min`, `1 hour`.
@@ -116,7 +116,7 @@ The possible values are: `idle`, `heat`.
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Climate 
@@ -124,20 +124,20 @@ This climate device supports the following features: `local_temperature`, `occup
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `7` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `pi_heating_demand`: Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open. Writing (`/set`) this attribute is not possible. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pi_heating_demand": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 
 ### Temperature display mode (enum)
 Temperature display mode.
 Value can be found in the published state on the `temperature_display_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_display_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_mode": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Keypad lockout (enum)
 Keypad lockout mode.
 Value can be found in the published state on the `keypad_lockout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": "VALUE"}`.
 The possible values are: `unlock`, `lock1`, `lock2`, `lock3`, `lock4`, `lock5`.
 
 ### Temperature (numeric)

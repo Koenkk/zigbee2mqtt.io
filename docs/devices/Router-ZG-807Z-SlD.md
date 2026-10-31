@@ -67,13 +67,13 @@ The unit of this value is `sec`.
 Rf power config.
 Value can be found in the published state on the `tx_power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"tx_power": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_power": "VALUE"}`.
 The possible values are: `0 dBm`, `5 dBm`, `10 dBm`.
 
 ### Switch actions (enum)
 Actions switch.
 Value can be found in the published state on the `switch_actions` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions": "VALUE"}`.
 The possible values are: `on_off`, `off_on`, `toggle`.
 

@@ -72,7 +72,7 @@ The unit of this value is `°C`.
 Adjust pressure sensor.
 Value can be found in the published state on the `pressure_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `hPa`.
 
@@ -80,7 +80,7 @@ The unit of this value is `hPa`.
 Adjust temperature sensor.
 Value can be found in the published state on the `temperature_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-25` and the maximum value is `25`.
 The unit of this value is `°C`.
 
@@ -108,7 +108,7 @@ If value equals `true` battery low is ON, if `false` OFF.
 Setting the sensor reading interval in seconds, by default 20 seconds.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": VALUE}`.
 The minimal value is `10` and the maximum value is `300`.
 The unit of this value is `sec`.
 
@@ -116,34 +116,34 @@ The unit of this value is `sec`.
 Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": "VALUE"}`.
 The possible values are: `4`, `19`.
 
 ### Sensor type (enum)
 Set sensor type.
 Value can be found in the published state on the `sensor_type` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_type": "VALUE"}`.
 The possible values are: `0-1bar`, `0-5bar`, `0-6bar`, `0-8bar`, `0-10bar`, `0-12bar`.
 
 ### Comparison previous data (binary)
 Enable сontrol of comparison with previous data.
 Value can be found in the published state on the `comparison_previous_data` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": "VALUE"}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
 
 ### Invert (enum)
 Invert display color.
 Value can be found in the published state on the `invert` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert": "VALUE"}`.
 The possible values are: `BW`, `WB`.
 
 ### Fastmode (enum)
 Display refresh mode.
 Value can be found in the published state on the `fastmode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fastmode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fastmode": "VALUE"}`.
 The possible values are: `Fast`, `Ultra Fast`.
 

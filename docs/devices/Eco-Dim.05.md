@@ -112,13 +112,13 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_left` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_left": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_left": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_left": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Power-on behavior (enum, right endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_right` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_right": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_right": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_right": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 

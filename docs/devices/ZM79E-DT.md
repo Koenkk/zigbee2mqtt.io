@@ -52,27 +52,27 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Opening mode.
 Value can be found in the published state on the `opening_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"opening_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"opening_mode": "VALUE"}`.
 The possible values are: `tilt`, `lift`.
 
 ### Motor direction (enum)
 Motor side.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": "VALUE"}`.
 The possible values are: `left`, `right`.
 
 ### Set upper limit (enum)
 Learning.
 Value can be found in the published state on the `set_upper_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_upper_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_upper_limit": "VALUE"}`.
 The possible values are: `start`, `stop`.
 
 ### Factory reset (enum)
 Remove limits.
 Value can be found in the published state on the `factory_reset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": "VALUE"}`.
 The possible values are: `SET`.
 

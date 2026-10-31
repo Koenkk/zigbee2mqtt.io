@@ -63,26 +63,26 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 OFF time.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_l1": VALUE}`.
 The minimal value is `1` and the maximum value is `30`.
 The unit of this value is `seconds`.
 
 ### Button mode (enum, l1 endpoint)
 Value can be found in the published state on the `button_mode_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_mode_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_mode_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_mode_l1": "VALUE"}`.
 The possible values are: `single_click`, `multi_click`.
 
 ### Link to output (enum, l1 endpoint)
 Value can be found in the published state on the `link_to_output_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"link_to_output_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"link_to_output_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"link_to_output_l1": "VALUE"}`.
 The possible values are: `no`, `yes`.
 
 ### Bind command (enum, l1 endpoint)
 Value can be found in the published state on the `bind_command_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"bind_command_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_command_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_command_l1": "VALUE"}`.
 The possible values are: `on/off`, `toggle`, `change_level_up`, `change_level_down`, `change_level_up_with_off`, `change_level_down_with_off`, `recall_scene_0`, `recall_scene_1`, `recall_scene_2`, `recall_scene_3`, `recall_scene_4`, `recall_scene_5`.
 
 ### Action (enum)
@@ -113,7 +113,7 @@ The unit of this value is `W`.
 Reporting interval.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interval_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interval_l2": VALUE}`.
 The minimal value is `1` and the maximum value is `3600`.
 The unit of this value is `sec`.
 

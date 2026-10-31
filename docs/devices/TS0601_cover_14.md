@@ -48,7 +48,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Motor rotation direction.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": "VALUE"}`.
 The possible values are: `normal`, `reversed`.
 
 ### Motor state (enum)
@@ -67,7 +67,7 @@ The unit of this value is `ms`.
 Set fully open or fully close position.
 Value can be found in the published state on the `situation_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"situation_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"situation_set": "VALUE"}`.
 The possible values are: `fully_close`, `fully_open`.
 
 ### Fault (text)
@@ -79,7 +79,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Store the preferred cover position.
 Value can be found in the published state on the `favorite_position` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"favorite_position": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"favorite_position": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 

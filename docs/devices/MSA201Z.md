@@ -67,7 +67,7 @@ Delay (seconds) before switching from Presence to Absence after no motion is det
             Recommended ≥ 15s to avoid premature Absence switching..
 Value can be found in the published state on the `hold_delay_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hold_delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hold_delay_time": VALUE}`.
 The minimal value is `0` and the maximum value is `300`.
 The unit of this value is `s`.
 
@@ -80,14 +80,14 @@ The unit of this value is `s`.
           .
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Trigger distance (numeric)
 Distance within which the sensor detects motion, adjustable from 0.5m to 4m, in 0.5m steps..
 Value can be found in the published state on the `trigger_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_distance": VALUE}`.
 The minimal value is `0.5` and the maximum value is `4`.
 The unit of this value is `m`.
 
@@ -95,7 +95,7 @@ The unit of this value is `m`.
 Distance from the sensor within which motion is ignored to prevent false detection (0-1.8m)..
 Value can be found in the published state on the `forbidden_area` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"forbidden_area": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"forbidden_area": VALUE}`.
 The minimal value is `0` and the maximum value is `1.8`.
 The unit of this value is `m`.
 
@@ -105,7 +105,7 @@ AI self-learning to help the sensor ignore non-human motion in the environment.
             during this time..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_self_learning": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_self_learning": "VALUE"}`.
 The possible values are: `AI self-learning`.
 
 ### Fast setting (enum)
@@ -117,14 +117,14 @@ The possible values are: `AI self-learning`.
           .
 Value can be found in the published state on the `fast_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fast_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fast_setting": "VALUE"}`.
 The possible values are: `small`, `medium`, `large`.
 
 ### LED indicator (binary)
 LED indicator providing a visual signal when motion is detected or the sensor changes state..
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` lED indicator is ON, if `OFF` OFF.
 
 ### Sensor mode (enum)
@@ -135,7 +135,7 @@ If value equals `ON` lED indicator is ON, if `OFF` OFF.
           .
 Value can be found in the published state on the `sensor_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_mode": "VALUE"}`.
 The possible values are: `presence`, `motion`.
 
 ### Single mode (binary)
@@ -143,7 +143,7 @@ Suitable for spaces where only one person is present at a time. The sensor maint
             while the person is within range and automatically switches to Absence 15 seconds after they leave..
 Value can be found in the published state on the `single_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"single_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"single_mode": "VALUE"}`.
 If value equals `ON` single mode is ON, if `OFF` OFF.
 
 ### Absence circling report (binary)
@@ -151,14 +151,14 @@ Periodic reporting of the Absence state after the sensor switches to Absence, it
             send regular status updates automatically..
 Value can be found in the published state on the `absence_circling_report` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_circling_report": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_circling_report": "VALUE"}`.
 If value equals `ON` absence circling report is ON, if `OFF` OFF.
 
 ### Absence circling interval (numeric)
 Interval (minutes) between periodic Absence reports after switching to Absence..
 Value can be found in the published state on the `absence_circling_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_circling_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_circling_interval": VALUE}`.
 The minimal value is `2` and the maximum value is `30`.
 The unit of this value is `min`.
 
@@ -166,21 +166,21 @@ The unit of this value is `min`.
 Indicator LED flashes to help locate the sensor..
 Value can be found in the published state on the `find_device` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"find_device": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"find_device": "VALUE"}`.
 If value equals `ON` find device is ON, if `OFF` OFF.
 
 ### Enable sensor (binary)
 Enable or disable the sensor..
 Value can be found in the published state on the `enable_sensor` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_sensor": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_sensor": "VALUE"}`.
 If value equals `ON` enable sensor is ON, if `OFF` OFF.
 
 ### Factory reset (enum)
 Restores factory defaults, removing all customized settings..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": "VALUE"}`.
 The possible values are: `factory reset`.
 
 ### Lux mode (enum)
@@ -191,7 +191,7 @@ The possible values are: `factory reset`.
           .
 Value can be found in the published state on the `lux_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_mode": "VALUE"}`.
 The possible values are: `threshold`, `report`.
 
 ### Daylight threshold (numeric)
@@ -199,7 +199,7 @@ Lux level defining sufficient natural light (daylight), applicable only when Lux
             Threshold..
 Value can be found in the published state on the `daylight_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"daylight_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"daylight_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `3000`.
 The unit of this value is `lux`.
 
@@ -211,14 +211,14 @@ The unit of this value is `lux`.
           .
 Value can be found in the published state on the `lux_report_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_report_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_report_mode": "VALUE"}`.
 The possible values are: `timed`, `difference`.
 
 ### Lux timed interval (numeric)
 Interval (seconds) for timed lux reports when Lux report mode is set to Timed..
 Value can be found in the published state on the `lux_timed_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_timed_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_timed_interval": VALUE}`.
 The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 
@@ -229,7 +229,7 @@ The unit of this value is `s`.
           .
 Value can be found in the published state on the `lux_difference_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_difference_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_difference_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `2000`.
 The unit of this value is `lux`.
 

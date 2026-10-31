@@ -138,84 +138,84 @@ The unit of this value is `A`.
 LED indicator.
 Value can be found in the published state on the `led_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": "VALUE"}`.
 If value equals `ON` led indicator is ON, if `OFF` OFF.
 
 ### Flip indicator light (binary)
 After turn on, the indicator light turns on while switch is off, and vice versa.
 Value can be found in the published state on the `flip_indicator_light` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": "VALUE"}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
 
 ### Mode switch (enum)
 Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster..
 Value can be found in the published state on the `mode_switch` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": "VALUE"}`.
 The possible values are: `quick_mode`, `anti_flicker_mode`.
 
 ### Operation mode (enum, power endpoint)
 Decoupled mode for the load relay (decoupling power disables bright/dim buttons).
 Value can be found in the published state on the `operation_mode_power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_power": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_power": "VALUE"}`.
 The possible values are: `decoupled`, `control_relay`.
 
 ### Operation mode (enum, bright endpoint)
 Decoupled mode for the brightness up button (disabled when power is decoupled).
 Value can be found in the published state on the `operation_mode_bright` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_bright": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_bright": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_bright": "VALUE"}`.
 The possible values are: `decoupled`, `control_relay`.
 
 ### Operation mode (enum, dim endpoint)
 Decoupled mode for the brightness down button (disabled when power is decoupled).
 Value can be found in the published state on the `operation_mode_dim` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_dim": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_dim": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_dim": "VALUE"}`.
 The possible values are: `decoupled`, `control_relay`.
 
 ### Power on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `on`, `previous`, `off`, `inverted`.
 
 ### Multi click (binary, power endpoint)
 Multi-click mode for power button.
 Value can be found in the published state on the `multi_click_power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click_power": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_power": VALUE}`.
 If value equals `true` multi click is ON, if `false` OFF.
 
 ### Multi click (binary, bright endpoint)
 Multi-click mode for brightness up button.
 Value can be found in the published state on the `multi_click_bright` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click_bright": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_bright": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_bright": VALUE}`.
 If value equals `true` multi click is ON, if `false` OFF.
 
 ### Multi click (binary, dim endpoint)
 Multi-click mode for brightness down button.
 Value can be found in the published state on the `multi_click_dim` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click_dim": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_dim": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_dim": VALUE}`.
 If value equals `true` multi click is ON, if `false` OFF.
 
 ### Phase (enum)
 Dimming phase.
 Value can be found in the published state on the `phase` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"phase": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"phase": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"phase": "VALUE"}`.
 The possible values are: `forward`, `reverse`.
 
 ### Min brightness (numeric)
 Minimum brightness level.
 Value can be found in the published state on the `min_brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.
 
@@ -223,7 +223,7 @@ The unit of this value is `%`.
 Maximum brightness level.
 Value can be found in the published state on the `max_brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 

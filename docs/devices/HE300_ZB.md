@@ -65,20 +65,20 @@ The unit of this value is `lx`.
 Motion Range Detection (meter).
 Value can be found in the published state on the `occupancy_distance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_distance": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_distance": VALUE}`.
 The minimal value is `2` and the maximum value is `6`.
 
 ### Unmanned duration (numeric)
 Ultrasonic occupied to unoccupied delay (seconds).
 Value can be found in the published state on the `unmanned_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"unmanned_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unmanned_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unmanned_duration": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### Sensitivity (enum)
 Sensitivity of human presence detection.
 Value can be found in the published state on the `sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 

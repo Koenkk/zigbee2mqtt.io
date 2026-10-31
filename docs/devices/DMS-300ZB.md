@@ -81,7 +81,7 @@ If value equals `true` occupancy and is ON, if `false` OFF.
 ### Occupancy timeout (numeric)
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 

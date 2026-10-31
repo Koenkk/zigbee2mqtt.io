@@ -63,28 +63,28 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Set the DI(Digital Input) type to either a button or door sensor(latch) type.
 Value can be found in the published state on the `di_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"di_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"di_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"di_type": "VALUE"}`.
 The possible values are: `Button`, `Door`.
 
 ### Do type (enum)
 Set the DO(Digital Output) type to either a pulse or latch type.
 Value can be found in the published state on the `do_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"do_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_type": "VALUE"}`.
 The possible values are: `Pulse`, `Latch`.
 
 ### Di do link (enum)
 Configure DO linkage according to DI status. When set to ON, DO is output according to the DI input..
 Value can be found in the published state on the `di_do_link` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"di_do_link": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"di_do_link": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"di_do_link": "VALUE"}`.
 The possible values are: `Off`, `On`.
 
 ### Do pulse time (numeric)
 When the DO output is set to pulse type, you can set the DO pulse time. The unit is milliseconds..
 Value can be found in the published state on the `do_pulse_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"do_pulse_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_pulse_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_pulse_time": VALUE}`.
 The minimal value is `100` and the maximum value is `3000`.
 The unit of this value is `ms`.
 

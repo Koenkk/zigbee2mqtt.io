@@ -56,44 +56,44 @@ The possible values are: `UP`, `STOP`, `DOWN`.
 ### Motor reversal (binary)
 Value can be found in the published state on the `motor_reversal` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": "VALUE"}`.
 If value equals `ON` motor reversal is ON, if `OFF` OFF.
 
 ### Calibration to open (binary)
 Value can be found in the published state on the `calibration_to_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_to_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_open": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_open": "VALUE"}`.
 If value equals `ON` calibration to open is ON, if `OFF` OFF.
 
 ### Calibration to close (binary)
 Value can be found in the published state on the `calibration_to_close` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_to_close": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_close": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_close": "VALUE"}`.
 If value equals `ON` calibration to close is ON, if `OFF` OFF.
 
 ### Calibration time to open (numeric)
 Value can be found in the published state on the `calibration_time_to_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_to_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_open": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_open": VALUE}`.
 The unit of this value is `s`.
 
 ### Calibration time to close (numeric)
 Value can be found in the published state on the `calibration_time_to_close` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_to_close": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_close": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_close": VALUE}`.
 The unit of this value is `s`.
 
 ### Switch type curtain (enum)
 External switch type.
 Value can be found in the published state on the `switch_type_curtain` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_curtain": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_curtain": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_curtain": "VALUE"}`.
 The possible values are: `flip-switch`, `sync-switch`, `button-switch`, `button2-switch`.
 
 ### Switch type (enum)
 Type of the installed switch.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": "VALUE"}`.
 The possible values are: `momentary`, `toggle`.
 

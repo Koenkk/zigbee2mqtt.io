@@ -64,20 +64,20 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Irrigation duration (numeric)
 Default duration for manual irrigation.
 Value can be found in the published state on the `irrigation_duration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_duration": VALUE}`.
 The minimal value is `1` and the maximum value is `719`.
 The unit of this value is `min`.
 
 ### Irrigation plan settings (composite)
 Set irrigation plan.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_settings": {"plan_index": VALUE, "enable_state": VALUE, "loop_type_mode": VALUE, "loop_type_interval_days": VALUE, "loop_type_week_days": VALUE, "enable_date": VALUE, "start_time": VALUE, "irrigation_mode": VALUE, "irrigation_total_duration": VALUE, "irrigation_duration": VALUE, "interval_duration": VALUE, "create_datetime": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"irrigation_plan_settings": {"plan_index": VALUE, "enable_state": VALUE, "loop_type_mode": "VALUE", "loop_type_interval_days": VALUE, "loop_type_week_days": VALUE, "enable_date": "VALUE", "start_time": "VALUE", "irrigation_mode": "VALUE", "irrigation_total_duration": VALUE, "irrigation_duration": VALUE, "interval_duration": VALUE, "create_datetime": "VALUE"}}`
 - `plan_index` (numeric): Plan index max value is 5
 - `enable_state` (binary) allowed values: `true` or `false`
 - `loop_type_mode` (enum) allowed values: `odd_days`, `even_days`, `day_interval`, `weekdays`
@@ -126,7 +126,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 Schedule delay end time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00), or "0" to disable.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rain_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rain_delay": "VALUE"}`.
 
 ### Rain delay end datetime (text)
 User triggered delay end time..
@@ -178,7 +178,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Read irrigation history (composite)
 Read irrigation duration in the past 24 hours, 30 days, and 6 months..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_swvzf_records": {"type": VALUE, "time_start": VALUE, "time_end": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_swvzf_records": {"type": "VALUE", "time_start": "VALUE", "time_end": "VALUE"}}`
 - `type` (enum): Reading type allowed values: `24_hours`, `30_days`, `6_months`
 - `time_start` (text): Start time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 
 - `time_end` (text): End time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00) 

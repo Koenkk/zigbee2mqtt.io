@@ -228,7 +228,7 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Time in seconds after which noise is cleared after detecting it (default: 60).
 Value can be found in the published state on the `noise_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
 
@@ -236,7 +236,7 @@ The unit of this value is `s`.
 Time in seconds after which occupancy is cleared after detecting it (default: 60).
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
 
@@ -244,7 +244,7 @@ The unit of this value is `s`.
 Self-heating compensation. The compensation value is subtracted from the measured temperature.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `°C`.
 
@@ -252,14 +252,14 @@ The unit of this value is `°C`.
 If the sensor is triggered by the slightest movement, reduce the sensitivity, otherwise increase it (default: 50).
 Value can be found in the published state on the `occupancy_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 
 ### Noise detect level (numeric)
 The minimum noise level at which the detector will work (default: 50).
 Value can be found in the published state on the `noise_detect_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_detect_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_detect_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_detect_level": VALUE}`.
 The minimal value is `0` and the maximum value is `150`.
 The unit of this value is `dBA`.
 
@@ -267,21 +267,21 @@ The unit of this value is `dBA`.
 Automatic calibration of the CO2 sensor. If ON, the CO2 sensor will automatically calibrate every 7 days. (MH-Z19B sensor).
 Value can be found in the published state on the `co2_autocalibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_autocalibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_autocalibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_autocalibration": "VALUE"}`.
 The possible values are: `OFF`, `ON`.
 
 ### Co2 manual calibration (enum)
 Ventilate the room for 20 minutes, turn on manual calibration, and turn it off after one second. After about 5 minutes the CO2 sensor will show 400ppm. Calibration completed. (MH-Z19B sensor).
 Value can be found in the published state on the `co2_manual_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_manual_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_manual_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_manual_calibration": "VALUE"}`.
 The possible values are: `OFF`, `ON`.
 
 ### Th heater (enum)
 Turn on when working in conditions of high humidity (more than 70 %, RH) or condensation, if the sensor shows 0 or 100 %..
 Value can be found in the published state on the `th_heater` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"th_heater": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"th_heater": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"th_heater": "VALUE"}`.
 The possible values are: `OFF`, `ON`.
 
 ### Illuminance (numeric)

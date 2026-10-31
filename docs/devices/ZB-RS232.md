@@ -45,11 +45,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Send data.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_command": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_command": "VALUE"}`.
 
 ### Rs232 config (composite)
 RS232 serial port configuration.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rs232_config": {"baud_rate": VALUE, "parity": VALUE, "stop_bits": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rs232_config": {"baud_rate": "VALUE", "parity": "VALUE", "stop_bits": "VALUE"}}`
 - `baud_rate` (enum): Baud rate (bps) allowed values: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`, `230400`, `460800`, `921600`
 - `parity` (enum): Parity (none / even / odd) allowed values: `none`, `even`, `odd`
 - `stop_bits` (enum): Stop bits (1 / 1.5 / 2) allowed values: `1`, `1.5`, `2`

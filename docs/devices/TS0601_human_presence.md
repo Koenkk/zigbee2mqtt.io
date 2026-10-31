@@ -55,13 +55,13 @@ The unit of this value is `%`.
 Sensor sensitivity.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `low`, `middle`, `high`.
 
 ### Delay time (enum)
 Delay time in seconds.
 Value can be found in the published state on the `delay_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": "VALUE"}`.
 The possible values are: `15s`, `30s`, `60s`.
 

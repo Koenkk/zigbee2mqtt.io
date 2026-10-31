@@ -47,26 +47,26 @@ If value equals `true` battery low is ON, if `false` OFF.
 ### Alarm (binary)
 Value can be found in the published state on the `alarm` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": VALUE}`.
 If value equals `true` alarm is ON, if `false` OFF.
 
 ### Melody (enum)
 Value can be found in the published state on the `melody` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"melody": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"melody": "VALUE"}`.
 The possible values are: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`.
 
 ### Duration (numeric)
 Value can be found in the published state on the `duration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": VALUE}`.
 The minimal value is `0` and the maximum value is `1800`.
 The unit of this value is `s`.
 
 ### Volume (enum)
 Value can be found in the published state on the `volume` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Battpercentage (numeric)

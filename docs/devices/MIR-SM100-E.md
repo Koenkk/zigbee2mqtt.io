@@ -37,7 +37,7 @@ pageClass: device-page
 After enabling mute, it will return to detection state after 90 seconds..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": "VALUE"}`.
 The possible values are: `ON`.
 
 ### Battery (numeric)

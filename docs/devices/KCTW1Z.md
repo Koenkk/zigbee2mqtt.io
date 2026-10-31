@@ -77,6 +77,6 @@ The unit of this value is `mV`.
 Current display unit.
 Value can be found in the published state on the `temperature_unit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 

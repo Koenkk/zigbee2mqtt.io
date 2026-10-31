@@ -54,27 +54,27 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 ### Set limits (enum)
 Value can be found in the published state on the `set_limits` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_limits": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_limits": "VALUE"}`.
 The possible values are: `up`, `down`, `reset`.
 
 ### Motor direction (enum)
 Motor rotation direction.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": "VALUE"}`.
 The possible values are: `normal`, `reversed`.
 
 ### Tilt mode (binary)
 Step movement.
 Value can be found in the published state on the `tilt_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt_mode": "VALUE"}`.
 If value equals `ON` tilt mode is ON, if `OFF` OFF.
 
 ### Child lock (binary)
 Child Lock.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `ON` child lock is ON, if `OFF` OFF.
 

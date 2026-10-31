@@ -78,13 +78,13 @@ The unit of this value is `%`.
 Pulses per kwh. Default 1000 imp/kWh. Range 0 to 65535.
 Value can be found in the published state on the `pulse_configuration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pulse_configuration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulse_configuration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulse_configuration": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### Current summation (numeric)
 Current summation value sent to the display. e.g. 570 = 0,570 kWh.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_summation": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_summation": VALUE}`.
 The minimal value is `0` and the maximum value is `268435455`.
 

@@ -54,7 +54,7 @@ The possible values are: `none`, `small`, `large`.
 Presence Time.
 Value can be found in the published state on the `departure_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"departure_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"departure_delay": VALUE}`.
 The minimal value is `3` and the maximum value is `600`.
 The unit of this value is `s`.
 
@@ -62,7 +62,7 @@ The unit of this value is `s`.
 Motion Range Detection.
 Value can be found in the published state on the `radar_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_range": VALUE}`.
 The minimal value is `150` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -70,14 +70,14 @@ The unit of this value is `cm`.
 Motion Detection Sensitivity.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `7`.
 
 ### Presence sensitivity (numeric)
 Motionless Detection Sensitivity.
 Value can be found in the published state on the `presence_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `7`.
 
 ### Current distance (numeric)

@@ -59,7 +59,7 @@ If value equals `true` charge state is ON, if `false` OFF.
 ### Manual mode (enum)
 Value can be found in the published state on the `manual_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_mode": "VALUE"}`.
 The possible values are: `Enable`, `Disable`.
 
 ### Fault (enum)
@@ -72,7 +72,7 @@ The possible values are: `Normal`, `None`, `Fault`.
 Motor timeout.
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `10` and the maximum value is `90`.
 The unit of this value is `s`.
 
@@ -80,21 +80,21 @@ The unit of this value is `s`.
 Motor side.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": "VALUE"}`.
 The possible values are: `left`, `right`.
 
 ### Slow mode (binary)
 Operate the motor slower and quieter than normal.
 Value can be found in the published state on the `slow_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"slow_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"slow_mode": "VALUE"}`.
 If value equals `ON` slow mode is ON, if `OFF` OFF.
 
 ### Fixed window sash (enum)
 Button position.
 Value can be found in the published state on the `fixed_window_sash` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fixed_window_sash": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fixed_window_sash": "VALUE"}`.
 The possible values are: `Up`, `Down`.
 
 ### Window detection (enum)

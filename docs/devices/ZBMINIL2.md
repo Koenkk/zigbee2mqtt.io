@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZBMINIL2  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart switch (no neutral) |
-| Exposes | switch (state), power_on_behavior |
+| Exposes | switch (state), power_on_behavior, external_trigger_mode |
 | Picture | ![SONOFF ZBMINIL2](https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.png) |
 
 
@@ -68,6 +68,13 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### External trigger mode (enum)
+External trigger mode, which can be one of edge, pulse. The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..
+Value can be found in the published state on the `external_trigger_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_trigger_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_trigger_mode": "VALUE"}`.
+The possible values are: `edge`, `pulse`.
 

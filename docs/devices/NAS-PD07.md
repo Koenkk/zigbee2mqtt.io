@@ -90,14 +90,14 @@ The possible values are: `over_temperature`, `over_humidity`, `below_min_tempera
 ### Temperature min (numeric)
 Value can be found in the published state on the `temperature_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_min": VALUE}`.
 The minimal value is `-20` and the maximum value is `80`.
 The unit of this value is `°C`.
 
 ### Temperature max (numeric)
 Value can be found in the published state on the `temperature_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_max": VALUE}`.
 The minimal value is `-20` and the maximum value is `80`.
 The unit of this value is `°C`.
 
@@ -105,20 +105,20 @@ The unit of this value is `°C`.
 Temperature scale (°F/°C).
 Value can be found in the published state on the `temperature_scale` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_scale": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_scale": "VALUE"}`.
 If value equals `°C` temperature scale is ON, if `°F` OFF.
 
 ### Humidity min (numeric)
 Value can be found in the published state on the `humidity_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_min": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Humidity max (numeric)
 Value can be found in the published state on the `humidity_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_max": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 

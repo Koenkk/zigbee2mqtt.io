@@ -46,7 +46,7 @@ pageClass: device-page
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Temperature (numeric)
@@ -79,7 +79,7 @@ The unit of this value is `Hours`.
 Setting the sensor reading interval in seconds, by default 5 seconds.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": VALUE}`.
 The minimal value is `3` and the maximum value is `300`.
 The unit of this value is `sec`.
 
@@ -87,28 +87,28 @@ The unit of this value is `sec`.
 Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": "VALUE"}`.
 The possible values are: `4dbm`, `19dbm`.
 
 ### Smart sleep (binary)
 Enable Smart Sleep, short wakeup every 7 seconds.
 Value can be found in the published state on the `smart_sleep` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": "VALUE"}`.
 If value equals `ON` smart sleep is ON, if `OFF` OFF.
 
 ### Config report enable (binary)
 Enable reporting based on reporting configuration.
 Value can be found in the published state on the `config_report_enable` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_report_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_report_enable": "VALUE"}`.
 If value equals `ON` config report enable is ON, if `OFF` OFF.
 
 ### Comparison previous data (binary)
 Enable сontrol of comparison with previous data.
 Value can be found in the published state on the `comparison_previous_data` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": "VALUE"}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
 
 ### Ntc status (enum)
@@ -121,28 +121,28 @@ The possible values are: `NTC_OK`, `OPEN_CIRCUIT`, `SHORT_CIRCUIT`.
 Setting beta coefficient .
 Value can be found in the published state on the `b_coefficient` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"b_coefficient": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"b_coefficient": VALUE}`.
 The minimal value is `2000` and the maximum value is `5000`.
 
 ### Enabling temperature control (binary)
 Enables/disables Tempearure control.
 Value can be found in the published state on the `enabling_temperature_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_temperature_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_temperature_control": "VALUE"}`.
 If value equals `ON` enabling temperature control is ON, if `OFF` OFF.
 
 ### Temperature actions (enum)
 Heat or cool.
 Value can be found in the published state on the `temperature_actions` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_actions": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_actions": "VALUE"}`.
 The possible values are: `HEAT`, `COOL`.
 
 ### High temperature (numeric)
 Setting High Temperature Border.
 Value can be found in the published state on the `high_temperature` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature": VALUE}`.
 The minimal value is `-40` and the maximum value is `90`.
 The unit of this value is `°C`.
 
@@ -150,7 +150,7 @@ The unit of this value is `°C`.
 Setting Low Temperature Border.
 Value can be found in the published state on the `low_temperature` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_temperature": VALUE}`.
 The minimal value is `-40` and the maximum value is `90`.
 The unit of this value is `°C`.
 

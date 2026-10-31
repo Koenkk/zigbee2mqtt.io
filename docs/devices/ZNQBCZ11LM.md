@@ -63,7 +63,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Control both relay and usb or only the relay with the physical switch button.
 Value can be found in the published state on the `button_switch_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_switch_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_switch_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_switch_mode": "VALUE"}`.
 The possible values are: `relay`, `relay_and_usb`.
 
 ### Switch (relay endpoint)
@@ -103,14 +103,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `on`, `previous`, `off`, `inverted`.
 
 ### Led disabled night (binary)
 Enables/disables LED indicator at night.
 Value can be found in the published state on the `led_disabled_night` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": VALUE}`.
 If value equals `true` led disabled night is ON, if `false` OFF.
 
 ### Power (numeric)
@@ -141,7 +141,7 @@ The unit of this value is `A`.
 Maximum allowed load, turns off if exceeded.
 Value can be found in the published state on the `overload_protection` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overload_protection": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": VALUE}`.
 The minimal value is `100` and the maximum value is `3840`.
 The unit of this value is `W`.
 
@@ -149,6 +149,6 @@ The unit of this value is `W`.
 Disables the physical switch button.
 Value can be found in the published state on the `button_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_lock": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock": "VALUE"}`.
 If value equals `ON` button lock is ON, if `OFF` OFF.
 

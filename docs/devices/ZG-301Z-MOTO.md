@@ -55,21 +55,21 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Curtain calibration.
 Value can be found in the published state on the `cur_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cur_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cur_calibration": "VALUE"}`.
 The possible values are: `start`, `end`.
 
 ### Control back (enum)
 Set curtain control back.
 Value can be found in the published state on the `control_back` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_back": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_back": "VALUE"}`.
 The possible values are: `forward`, `back`.
 
 ### Tr timecon (numeric)
 Quick Calibrate.
 Value can be found in the published state on the `tr_timecon` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tr_timecon": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tr_timecon": VALUE}`.
 The minimal value is `0` and the maximum value is `120`.
 The unit of this value is `s`.
 
@@ -77,13 +77,13 @@ The unit of this value is `s`.
 Set curtain controller switch type.
 Value can be found in the published state on the `switch_type` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": "VALUE"}`.
 The possible values are: `flip_switch`, `sync_switch`, `button_switch`.
 
 ### Indicator mode (enum)
 Set Controller indicator mode.
 Value can be found in the published state on the `indicator_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": "VALUE"}`.
 The possible values are: `relay`, `pos`, `none`.
 

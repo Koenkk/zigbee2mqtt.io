@@ -67,7 +67,7 @@ The unit of this value is `°C`.
 Water tank height in cm.
 Value can be found in the published state on the `tank_height` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tank_height": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tank_height": VALUE}`.
 The minimal value is `0` and the maximum value is `450`.
 The unit of this value is `cm`.
 
@@ -75,7 +75,7 @@ The unit of this value is `cm`.
 Min threshold for alarm binding.
 Value can be found in the published state on the `alarm_min_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_min_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_min_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -83,7 +83,7 @@ The unit of this value is `%`.
 Max threshold for alarm binding.
 Value can be found in the published state on the `alarm_max_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_max_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_max_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -91,14 +91,14 @@ The unit of this value is `%`.
 Invert thresholds for on and off commands.
 Value can be found in the published state on the `invert_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_threshold": "VALUE"}`.
 If value equals `True` invert threshold is ON, if `False` OFF.
 
 ### Measurment period (numeric)
 Max threshold for alarm binding.
 Value can be found in the published state on the `measurment_period` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurment_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurment_period": VALUE}`.
 The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `min`.
 

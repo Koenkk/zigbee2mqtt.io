@@ -107,49 +107,49 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `on`, `previous`, `off`, `inverted`.
 
 ### Operation mode (enum, top endpoint)
 Decoupled mode for top button.
 Value can be found in the published state on the `operation_mode_top` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_top": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_top": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_top": "VALUE"}`.
 The possible values are: `decoupled`, `control_relay`.
 
 ### Operation mode (enum, center endpoint)
 Decoupled mode for center button.
 Value can be found in the published state on the `operation_mode_center` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_center": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_center": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_center": "VALUE"}`.
 The possible values are: `decoupled`, `control_relay`.
 
 ### Operation mode (enum, bottom endpoint)
 Decoupled mode for bottom button.
 Value can be found in the published state on the `operation_mode_bottom` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_bottom": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_bottom": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_bottom": "VALUE"}`.
 The possible values are: `decoupled`, `control_relay`.
 
 ### Lock relay (binary, top endpoint)
 Locks top relay and prevents it from operating.
 Value can be found in the published state on the `lock_relay_top` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lock_relay_top": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_top": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_top": VALUE}`.
 If value equals `true` lock relay is ON, if `false` OFF.
 
 ### Lock relay (binary, center endpoint)
 Locks center relay and prevents it from operating.
 Value can be found in the published state on the `lock_relay_center` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lock_relay_center": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_center": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_center": VALUE}`.
 If value equals `true` lock relay is ON, if `false` OFF.
 
 ### Lock relay (binary, bottom endpoint)
 Locks bottom relay and prevents it from operating.
 Value can be found in the published state on the `lock_relay_bottom` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lock_relay_bottom": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_bottom": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_bottom": VALUE}`.
 If value equals `true` lock relay is ON, if `false` OFF.
 
 ### Energy (numeric)
@@ -180,14 +180,14 @@ The unit of this value is `W`.
 Enables/disables LED indicator at night.
 Value can be found in the published state on the `led_disabled_night` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": VALUE}`.
 If value equals `true` led disabled night is ON, if `false` OFF.
 
 ### Click mode (enum)
 Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks..
 Value can be found in the published state on the `click_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"click_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_mode": "VALUE"}`.
 The possible values are: `fast`, `multi`.
 
 ### Action (enum)

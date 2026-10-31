@@ -56,7 +56,7 @@ If value equals `true` presence is ON, if `false` OFF.
 Presence sensitivity.
 Value can be found in the published state on the `presence_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -64,7 +64,7 @@ The unit of this value is `%`.
 Detection range.
 Value can be found in the published state on the `detection_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": VALUE}`.
 The minimal value is `1.5` and the maximum value is `4.5`.
 The unit of this value is `m`.
 
@@ -72,7 +72,7 @@ The unit of this value is `m`.
 Presence detection delay.
 Value can be found in the published state on the `detection_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `600`.
 The unit of this value is `s`.
 
@@ -80,7 +80,7 @@ The unit of this value is `s`.
 The max illuminance threshold to turn on the light.
 Value can be found in the published state on the `illuminance_treshold_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_treshold_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_treshold_max": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `lx`.
 
@@ -88,7 +88,7 @@ The unit of this value is `lx`.
 The min illuminance threshold to turn on the light.
 Value can be found in the published state on the `illuminance_treshold_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_treshold_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_treshold_min": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `lx`.
 
@@ -96,7 +96,7 @@ The unit of this value is `lx`.
 Whether to enable 'light_switch' illumination is between min/max threshold.
 Value can be found in the published state on the `presence_illuminance_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_illuminance_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_illuminance_switch": VALUE}`.
 If value equals `true` presence illuminance switch is ON, if `false` OFF.
 
 ### Light switch (binary)
@@ -109,27 +109,27 @@ If value equals `ON` light switch is ON, if `OFF` OFF.
 Light linkage.
 Value can be found in the published state on the `light_linkage` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_linkage": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_linkage": VALUE}`.
 If value equals `true` light linkage is ON, if `false` OFF.
 
 ### Detection method (enum)
 When 'only_move' is used, presence will only be triggered when there is movement.
 Value can be found in the published state on the `detection_method` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_method": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_method": "VALUE"}`.
 The possible values are: `only_move`, `exist_move`.
 
 ### Indicator light (enum)
 Controls when the indicator light is turned on.
 Value can be found in the published state on the `indicator_light` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_light": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_light": "VALUE"}`.
 The possible values are: `presence`, `off`, `on`.
 
 ### Identify (binary)
 After turning on, the indicator light quickly flashes, used to locate devices.
 Value can be found in the published state on the `identify` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": VALUE}`.
 If value equals `true` identify is ON, if `false` OFF.
 

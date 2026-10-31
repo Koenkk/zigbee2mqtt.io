@@ -40,7 +40,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Turn the siren alarm on or off.
 Value can be found in the published state on the `alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": VALUE}`.
 If value equals `true` alarm is ON, if `false` OFF.
 
 ### Battery low (binary)
@@ -61,7 +61,7 @@ The unit of this value is `%`.
 Duration in seconds of the alarm.
 Value can be found in the published state on the `alarm_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_duration": VALUE}`.
 The minimal value is `1` and the maximum value is `1800`.
 The unit of this value is `s`.
 
@@ -69,13 +69,13 @@ The unit of this value is `s`.
 Indoor siren volume level.
 Value can be found in the published state on the `volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"volume": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": VALUE}`.
 The minimal value is `0` and the maximum value is `15`.
 
 ### Melody (enum)
 Alarm melody.
 Value can be found in the published state on the `melody` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"melody": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"melody": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"melody": "VALUE"}`.
 The possible values are: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`.
 

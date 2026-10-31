@@ -46,8 +46,8 @@ pageClass: device-page
 This climate device supports the following features: `system_mode`, `preset`, `local_temperature`, `local_temperature_calibration`, `running_state`, `current_heating_setpoint`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Whether the thermostat is turned on or off. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `user`, `home`, `away`, `auto`. Reading (`/get`) this attribute is not possible.
+- `system_mode`: Whether the thermostat is turned on or off. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": "VALUE"}` where `VALUE` is one of: `user`, `home`, `away`, `auto`. Reading (`/get`) this attribute is not possible.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-9` and the maximum value is `9` with a step size of `1`.
 
@@ -57,7 +57,7 @@ Max guard. Floor sensor must be installed. The thermostat will regulate accordin
 There is also a maximum guard when the thermostat is set to floor sensor. The thermostat regulates according to the floor sensor, but will interrupt heating if the floor sensor exceeds the maximum guard temperature. Standard is 27°C..
 Value can be found in the published state on the `sensor` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": "VALUE"}`.
 The possible values are: `air_sensor`, `floor_sensor`, `max_guard`.
 
 ### Local temperature floor (numeric)
@@ -70,7 +70,7 @@ The unit of this value is `°C`.
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Window detection (switch)
@@ -88,7 +88,7 @@ The unit of this value is `kWh`.
 The offset from the target temperature in which the temperature has to change for the heating state to change. This is to prevent erratically turning on/off when the temperature is close to the target..
 Value can be found in the published state on the `hysteresis` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hysteresis": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hysteresis": VALUE}`.
 The minimal value is `1` and the maximum value is `9`.
 The unit of this value is `°C`.
 
@@ -96,7 +96,7 @@ The unit of this value is `°C`.
 Max guarding temperature.
 Value can be found in the published state on the `max_temperature_protection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature_protection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature_protection": VALUE}`.
 The minimal value is `20` and the maximum value is `95`.
 The unit of this value is `°C`.
 

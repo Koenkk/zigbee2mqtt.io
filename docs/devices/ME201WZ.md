@@ -84,7 +84,7 @@ The unit of this value is `V`.
 Liquid maximum percentage.
 Value can be found in the published state on the `max_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_set": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -92,7 +92,7 @@ The unit of this value is `%`.
 Liquid minimum percentage.
 Value can be found in the published state on the `min_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_set": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -100,26 +100,26 @@ The unit of this value is `%`.
 Distance from sensor to liquid surface.
 Value can be found in the published state on the `liquid_depth_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"liquid_depth_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"liquid_depth_max": VALUE}`.
 The minimal value is `0.1` and the maximum value is `10`.
 The unit of this value is `m`.
 
 ### Relay switch (binary)
 Value can be found in the published state on the `relay_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_switch": "VALUE"}`.
 If value equals `ON` relay switch is ON, if `OFF` OFF.
 
 ### Pump mode (enum)
 Value can be found in the published state on the `pump_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pump_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pump_mode": "VALUE"}`.
 The possible values are: `supply`, `drainage`.
 
 ### Pump control (enum)
 Value can be found in the published state on the `pump_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pump_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pump_control": "VALUE"}`.
 The possible values are: `auto`, `manual`.
 
 ### Version (text)

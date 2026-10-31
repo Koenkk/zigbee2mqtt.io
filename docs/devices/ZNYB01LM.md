@@ -51,7 +51,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Light 
@@ -106,7 +106,7 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 This climate device supports the following features: `local_temperature`, `current_heating_setpoint`, `system_mode`, `running_state`, `fan_mode`, `swing_mode`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `16` and `45`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `dry`, `fan_only`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}` where `VALUE` is one of: `off`, `heat`, `dry`, `fan_only`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`, `fan_only`. Reading (`/get`) this attribute is not possible.
 
 ### Heater power (binary)
@@ -120,39 +120,39 @@ If value equals `true` heater power is ON, if `false` OFF.
 Bathroom heater operating mode.
 Value can be found in the published state on the `operating_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operating_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operating_mode": "VALUE"}`.
 The possible values are: `off`, `warm`, `dry`, `fan_only`, `exhaust`.
 
 ### Night light mode (binary)
 Enable scheduled night-light mode.
 Value can be found in the published state on the `night_light_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"night_light_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_light_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_light_mode": "VALUE"}`.
 If value equals `ON` night light mode is ON, if `OFF` OFF.
 
 ### Mute prompt tone (binary)
 Mute device operation prompt tones.
 Value can be found in the published state on the `mute_prompt_tone` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mute_prompt_tone": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mute_prompt_tone": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mute_prompt_tone": "VALUE"}`.
 If value equals `ON` mute prompt tone is ON, if `OFF` OFF.
 
 ### Mute prompt start time (text)
 Prompt-tone mute start time in HH:MM format.
 Value can be found in the published state on the `mute_prompt_start_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mute_prompt_start_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mute_prompt_start_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mute_prompt_start_time": "VALUE"}`.
 
 ### Mute prompt end time (text)
 Prompt-tone mute end time in HH:MM format.
 Value can be found in the published state on the `mute_prompt_end_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mute_prompt_end_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mute_prompt_end_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mute_prompt_end_time": "VALUE"}`.
 
 ### Constant temperature mode (binary)
 Automatically regulate warm-air speed at the target temperature.
 Value can be found in the published state on the `constant_temperature_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"constant_temperature_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"constant_temperature_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"constant_temperature_mode": "VALUE"}`.
 If value equals `ON` constant temperature mode is ON, if `OFF` OFF.
 

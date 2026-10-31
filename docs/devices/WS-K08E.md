@@ -83,14 +83,14 @@ The unit of this value is `kWh`.
 LED indicator.
 Value can be found in the published state on the `led_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": "VALUE"}`.
 If value equals `ON` led indicator is ON, if `OFF` OFF.
 
 ### Flip indicator light (binary)
 After turn on, the indicator light turns on while switch is off, and vice versa.
 Value can be found in the published state on the `flip_indicator_light` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": "VALUE"}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
 
 ### Switch (left endpoint)
@@ -130,56 +130,56 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `on`, `previous`, `off`, `inverted`.
 
 ### Operation mode (enum, left endpoint)
 Decoupled mode for left switch.
 Value can be found in the published state on the `operation_mode_left` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_left": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": "VALUE"}`.
 The possible values are: `decoupled`, `control_relay`.
 
 ### Operation mode (enum, right endpoint)
 Decoupled mode for right switch.
 Value can be found in the published state on the `operation_mode_right` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": "VALUE"}`.
 The possible values are: `decoupled`, `control_relay`.
 
 ### Lock relay (binary, left endpoint)
 Lock left switch.
 Value can be found in the published state on the `lock_relay_left` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lock_relay_left": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_left": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_left": VALUE}`.
 If value equals `true` lock relay is ON, if `false` OFF.
 
 ### Lock relay (binary, right endpoint)
 Lock right switch.
 Value can be found in the published state on the `lock_relay_right` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lock_relay_right": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_right": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_right": VALUE}`.
 If value equals `true` lock relay is ON, if `false` OFF.
 
 ### Multi click (binary, left_down endpoint)
 Multi-click mode for left down button.
 Value can be found in the published state on the `multi_click_left_down` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click_left_down": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_left_down": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_left_down": VALUE}`.
 If value equals `true` multi click is ON, if `false` OFF.
 
 ### Multi click (binary, right_down endpoint)
 Multi-click mode for right down button.
 Value can be found in the published state on the `multi_click_right_down` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"multi_click_right_down": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_right_down": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multi_click_right_down": VALUE}`.
 If value equals `true` multi click is ON, if `false` OFF.
 
 ### Identify (enum)
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Action (enum)

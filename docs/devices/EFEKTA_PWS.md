@@ -80,7 +80,7 @@ The unit of this value is `°C`.
 Adjust Report Delay. Setting the time in minutes, by default 15 minutes.
 Value can be found in the published state on the `report_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"report_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
 

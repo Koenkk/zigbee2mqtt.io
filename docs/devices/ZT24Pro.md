@@ -82,21 +82,21 @@ The unit of this value is `%`.
 Mobility sensitivity.
 Value can be found in the published state on the `move_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Presence sensitivity (numeric)
 Presence sensitivity.
 Value can be found in the published state on the `presence_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Presence timeout (numeric)
 Presence state timeout time.
 Value can be found in the published state on the `presence_timeout` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_timeout": VALUE}`.
 The minimal value is `1` and the maximum value is `600`.
 The unit of this value is `s`.
 
@@ -104,7 +104,7 @@ The unit of this value is `s`.
 Maximum detection distance.
 Value can be found in the published state on the `detection_distance_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance_max": VALUE}`.
 The minimal value is `0.75` and the maximum value is `9`.
 The unit of this value is `m`.
 
@@ -112,7 +112,7 @@ The unit of this value is `m`.
 temperature_correction.
 Value can be found in the published state on the `temperature_correction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_correction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_correction": VALUE}`.
 The minimal value is `-1.5` and the maximum value is `1.5`.
 The unit of this value is `℃`.
 
@@ -120,7 +120,7 @@ The unit of this value is `℃`.
 humidity_correction.
 Value can be found in the published state on the `humidity_correction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_correction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_correction": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `%`.
 
@@ -128,41 +128,41 @@ The unit of this value is `%`.
 Function.
 Value can be found in the published state on the `state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "VALUE"}`.
 If value equals `ON` state is ON, if `OFF` OFF.
 
 ### Living room (binary)
 Living room.
 Value can be found in the published state on the `living_room` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"living_room": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"living_room": "VALUE"}`.
 If value equals `ON` living room is ON, if `OFF` OFF.
 
 ### Bedroom (binary)
 Bedroom.
 Value can be found in the published state on the `bedroom` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bedroom": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bedroom": "VALUE"}`.
 If value equals `ON` bedroom is ON, if `OFF` OFF.
 
 ### Bathroom (binary)
 Bathroom.
 Value can be found in the published state on the `bathroom` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bathroom": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bathroom": "VALUE"}`.
 If value equals `ON` bathroom is ON, if `OFF` OFF.
 
 ### Sleep (binary)
 Sleep.
 Value can be found in the published state on the `sleep` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sleep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sleep": "VALUE"}`.
 If value equals `ON` sleep is ON, if `OFF` OFF.
 
 ### Radar switch (binary)
 Radar switch.
 Value can be found in the published state on the `radar_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": "VALUE"}`.
 If value equals `ON` radar switch is ON, if `OFF` OFF.
 

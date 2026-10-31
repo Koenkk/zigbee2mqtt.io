@@ -60,14 +60,14 @@ pageClass: device-page
 Change the type of external switch connected to the device (momentary or toggle).  Power cycle the device after changing this setting to ensure it takes effect..
 Value can be found in the published state on the `external_switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_switch_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": "VALUE"}`.
 The possible values are: `momentary`, `toggle`.
 
 ### Minimum brightness level (numeric)
 Set the minimum brightness level for the device (0 - 50, 0 = do not use a minimum brightness level).  Power cycle the device after changing this setting to ensure it takes effect..
 Value can be found in the published state on the `minimum_brightness_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimum_brightness_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_brightness_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_brightness_level": VALUE}`.
 The minimal value is `0` and the maximum value is `50`.
 The unit of this value is `%`.
 
@@ -109,7 +109,7 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Power (numeric)

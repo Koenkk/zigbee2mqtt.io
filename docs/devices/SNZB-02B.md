@@ -83,18 +83,18 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kPa`.
 
 ### Temperature calibration (numeric)
-Offset to add/subtract to the reported temperature. Note: wake up the device by pressing the button on the back before changing this value..
+Offset to add/subtract to the reported temperature. Note: wake up the device by pressing the button on the top before changing this value..
 Value can be found in the published state on the `temperature_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
 ### Humidity calibration (numeric)
-Offset to add/subtract to the reported relative humidity. Note: wake up the device by pressing the button on the back before changing this value..
+Offset to add/subtract to the reported relative humidity. Note: wake up the device by pressing the button on the top before changing this value..
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 

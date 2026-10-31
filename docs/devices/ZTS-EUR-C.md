@@ -57,18 +57,18 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 ### Backlight (enum)
 Value can be found in the published state on the `backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": "VALUE"}`.
 The possible values are: `OFF`, `ON`.
 
 ### Calibration (enum)
 Value can be found in the published state on the `calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": "VALUE"}`.
 The possible values are: `OFF`, `ON`.
 
 ### Motor reversal (enum)
 Value can be found in the published state on the `motor_reversal` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": "VALUE"}`.
 The possible values are: `OFF`, `ON`.
 

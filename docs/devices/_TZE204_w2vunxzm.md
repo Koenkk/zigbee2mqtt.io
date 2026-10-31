@@ -62,6 +62,6 @@ The unit of this value is `°C`.
 Display brightness level (0 = off).
 Value can be found in the published state on the `display_brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `8`.
 

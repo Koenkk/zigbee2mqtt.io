@@ -54,28 +54,28 @@ If value equals `true` tamper is ON, if `false` OFF.
 In case of an water leak, you can mute and unmute the audible alarm here.
 Value can be found in the published state on the `water_leak_alarm_control` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"water_leak_alarm_control": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_leak_alarm_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_leak_alarm_control": "VALUE"}`.
 If value equals `MUTED` mute water leak alarm is ON, if `UNMUTED` OFF.
 
 ### Alarm on motion (binary)
 If your water alarm is moved, an acoustic signal sounds.
 Value can be found in the published state on the `alarm_on_motion` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_on_motion": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_on_motion": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_on_motion": "VALUE"}`.
 If value equals `ON` alarm on motion is ON, if `OFF` OFF.
 
 ### Test mode (binary)
 Activates the test mode. In this mode, the device acts like it would when detecting any water to verify the installation. Please keep in mind that it can take up to 10 seconds for the test mode to be activated..
 Value can be found in the published state on the `test_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"test_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode": "VALUE"}`.
 If value equals `ON` test mode is ON, if `OFF` OFF.
 
 ### Test mode timeout (numeric)
 Determines how long the test mode should be activated. The default length is 3 seconds..
 Value can be found in the published state on the `test_mode_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"test_mode_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode_timeout": VALUE}`.
 The minimal value is `1` and the maximum value is `255`.
 The unit of this value is `seconds`.
 

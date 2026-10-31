@@ -59,7 +59,7 @@ The possible values are: `astro_clock`, `timer`, `daily_timer`, `weekly_timer`.
 Turn the device on or off.
 Value can be found in the published state on the `device_enabled` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_enabled": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_enabled": "VALUE"}`.
 If value equals `ON` device enabled is ON, if `OFF` OFF.
 
 ### Child lock (binary)

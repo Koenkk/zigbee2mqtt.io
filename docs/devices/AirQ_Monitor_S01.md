@@ -89,7 +89,7 @@ The measured atmospheric pressure.
 Value can be found in the published state on the `pressure` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure": ""}`.
 It's not possible to write (`/set`) this value.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Illuminance (numeric)
 Measured illuminance. 0 = too low to be measured.
@@ -102,28 +102,28 @@ The unit of this value is `lx`.
 Display orientation (horizontal/vertical).
 Value can be found in the published state on the `display_rotate` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_rotate": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_rotate": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_rotate": "VALUE"}`.
 The possible values are: `horizontal`, `vertical`.
 
 ### Display inversion (enum)
 Display inversion (black on white/white on black).
 Value can be found in the published state on the `display_inversion` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_inversion": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_inversion": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_inversion": "VALUE"}`.
 The possible values are: `black_on_white`, `white_on_black`.
 
 ### Temperature display mode (enum)
 The units of the temperature displayed on the device screen.
 Value can be found in the published state on the `temperature_display_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_display_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_mode": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Temperature offset (numeric)
 Offset to add/subtract to the inside temperature.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-5` and the maximum value is `5`.
 The unit of this value is `°C`.
 
@@ -131,7 +131,7 @@ The unit of this value is `°C`.
 Sensors reading period.
 Value can be found in the published state on the `read_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"read_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_interval": VALUE}`.
 The minimal value is `5` and the maximum value is `600`.
 The unit of this value is `Sec`.
 
@@ -139,14 +139,14 @@ The unit of this value is `Sec`.
 Enables/disables CO2 control.
 Value can be found in the published state on the `enabling_co2_control` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enabling_co2_control": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_co2_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_co2_control": "VALUE"}`.
 If value equals `ON` enabling co2 control is ON, if `OFF` OFF.
 
 ### Low co2 (numeric)
 CO2 low turn-off limit.
 Value can be found in the published state on the `low_co2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_co2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_co2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_co2": VALUE}`.
 The minimal value is `400` and the maximum value is `2000`.
 The unit of this value is `ppm`.
 
@@ -154,7 +154,7 @@ The unit of this value is `ppm`.
 CO2 high turn-on limit.
 Value can be found in the published state on the `high_co2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_co2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_co2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_co2": VALUE}`.
 The minimal value is `400` and the maximum value is `2000`.
 The unit of this value is `ppm`.
 
@@ -162,14 +162,14 @@ The unit of this value is `ppm`.
 Enables/disables VOC control.
 Value can be found in the published state on the `enabling_voc_control` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enabling_voc_control": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_voc_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_voc_control": "VALUE"}`.
 If value equals `ON` enabling voc control is ON, if `OFF` OFF.
 
 ### Low voc (numeric)
 VOC low turn-off limit.
 Value can be found in the published state on the `low_voc` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_voc": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_voc": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_voc": VALUE}`.
 The minimal value is `1` and the maximum value is `500`.
 The unit of this value is `VOC index points`.
 
@@ -177,7 +177,7 @@ The unit of this value is `VOC index points`.
 VOC high turn-on limit.
 Value can be found in the published state on the `high_voc` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_voc": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_voc": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_voc": VALUE}`.
 The minimal value is `1` and the maximum value is `500`.
 The unit of this value is `VOC index points`.
 
@@ -185,21 +185,21 @@ The unit of this value is `VOC index points`.
 Actions switch.
 Value can be found in the published state on the `switch_actions` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions": "VALUE"}`.
 The possible values are: `off`, `on`.
 
 ### Brightness (numeric)
 LED brightness.
 Value can be found in the published state on the `brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Enabling sound (binary)
 Enables/disables sound.
 Value can be found in the published state on the `enabling_sound` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enabling_sound": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_sound": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_sound": "VALUE"}`.
 If value equals `ON` enabling sound is ON, if `OFF` OFF.
 
 ### Frc co2 correction (numeric)
@@ -210,7 +210,7 @@ It's not possible to write (`/set`) this value.
 The unit of this value is `ppm`.
 
 ### Features sensors (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"features_sensors": {"features": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"features_sensors": {"features": "VALUE"}}`
 - `features` (enum) allowed values: `nothing`, `co2_forced_calibration`, `co2_factory_reset`, `bind_reset`, ``
 
 ### Life time (numeric)

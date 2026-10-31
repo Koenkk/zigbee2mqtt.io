@@ -133,35 +133,35 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Bind all buttons to Scene mode (red LED).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_all_scene": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_all_scene": "VALUE"}`.
 The possible values are: `bind`.
 
 ### Bind all light (enum)
 Bind all buttons to Light mode (green LED).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_all_light": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_all_light": "VALUE"}`.
 The possible values are: `bind`.
 
 ### Bind all curtain (enum)
 Bind all buttons to Curtain mode (blue LED).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_all_curtain": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_all_curtain": "VALUE"}`.
 The possible values are: `bind`.
 
 ### Assign button 1 (enum)
 Start assignment: press button 1 after clicking.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"assign_button_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"assign_button_1": "VALUE"}`.
 The possible values are: `assign`.
 
 ### Set base group id (numeric)
 Manually set base Group ID (advanced).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_base_group_id": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_base_group_id": VALUE}`.
 The minimal value is `1` and the maximum value is `65000`.
 
 ### Action (enum)

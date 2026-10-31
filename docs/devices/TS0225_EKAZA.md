@@ -49,7 +49,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Delay before reporting absence after presence is no longer detected.
 Value can be found in the published state on the `presence_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `300`.
 The unit of this value is `s`.
 
@@ -63,7 +63,7 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Maximum detection distance.
 Value can be found in the published state on the `detection_distance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_distance": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": VALUE}`.
 The minimal value is `1` and the maximum value is `6`.
 The unit of this value is `m`.
 

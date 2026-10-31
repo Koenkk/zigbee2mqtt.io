@@ -49,7 +49,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Sounds the doorbell buzzer.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doorbell": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doorbell": "VALUE"}`.
 The possible values are: `ring`.
 
 ### Switch (socket endpoint)
@@ -121,19 +121,19 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Triggers an effect on the light (e.g. make light blink for a few seconds).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_led": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_led": "VALUE"}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Power-on behavior (enum, led endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_led` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_led": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_led": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_led": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_up_button_1`, `single_up_button_2`, `double_up_button_1`, `double_up_button_2`, `release_up_button_1`, `release_up_button_2`, `hold_up_button_1`, `hold_up_button_2`, `single_down_button_1`, `single_down_button_2`, `double_down_button_1`, `double_down_button_2`, `release_down_button_1`, `release_down_button_2`, `hold_down_button_1`, `hold_down_button_2`, `single_doorbell_button`, `double_doorbell_button`, `release_doorbell_button`, `hold_doorbell_button`.
+The possible values are: `single_up_button_1`, `single_up_button_2`, `single_up_doorbell_button`, `double_up_button_1`, `double_up_button_2`, `double_up_doorbell_button`, `release_up_button_1`, `release_up_button_2`, `release_up_doorbell_button`, `hold_up_button_1`, `hold_up_button_2`, `hold_up_doorbell_button`, `single_down_button_1`, `single_down_button_2`, `single_down_doorbell_button`, `double_down_button_1`, `double_down_button_2`, `double_down_doorbell_button`, `release_down_button_1`, `release_down_button_2`, `release_down_doorbell_button`, `hold_down_button_1`, `hold_down_button_2`, `hold_down_doorbell_button`.
 

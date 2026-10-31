@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | amina S  |
 | Vendor  | [Amina Distribution AS](/supported-devices/#v=Amina%20Distribution%20AS)  |
 | Description | Amina S EV Charger |
-| Exposes | ev_status, alarms, ev_connected, charging, derated, alarm_active, charge_limit_with_on_off, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
+| Exposes | ev_status, alarms, ev_connected, charging, derated, alarm_active, charge_limit_with_on_off, switch (state), charge_limit, hardware_current_limit, total_active_power, total_active_energy, last_session_energy, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
 | Picture | ![Amina Distribution AS amina S](https://www.zigbee2mqtt.io/images/devices/amina-S.png) |
 
 
@@ -120,7 +120,7 @@ If value equals `true` alarm active is ON, if `false` OFF.
 Sets the maximum charge amperage and turns charging on/off..
 Value can be found in the published state on the `charge_limit_with_on_off` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charge_limit_with_on_off": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charge_limit_with_on_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charge_limit_with_on_off": VALUE}`.
 The minimal value is `0` and the maximum value is `32`.
 The unit of this value is `A`.
 
@@ -139,7 +139,15 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Maximum allowed amperage draw.
 Value can be found in the published state on the `charge_limit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charge_limit": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charge_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charge_limit": VALUE}`.
+The minimal value is `6` and the maximum value is `32`.
+The unit of this value is `A`.
+
+### Hardware current limit (numeric)
+Maximum charging current allowed by the hardware setting.
+Value can be found in the published state on the `hardware_current_limit` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hardware_current_limit": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `6` and the maximum value is `32`.
 The unit of this value is `A`.
 
@@ -238,21 +246,21 @@ The unit of this value is `A`.
 Enable single phase charging. A restart of charging is required for the change to take effect..
 Value can be found in the published state on the `single_phase` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"single_phase": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"single_phase": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"single_phase": "VALUE"}`.
 If value equals `enable` single phase is ON, if `disable` OFF.
 
 ### Enable offline (binary)
 Enable offline mode when connection to the network is lost.
 Value can be found in the published state on the `enable_offline` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_offline": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_offline": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_offline": "VALUE"}`.
 If value equals `enable` enable offline is ON, if `disable` OFF.
 
 ### Time to offline (numeric)
 Time until charger will behave as offline after connection has been lost.
 Value can be found in the published state on the `time_to_offline` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"time_to_offline": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_to_offline": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_to_offline": VALUE}`.
 The minimal value is `0` and the maximum value is `60`.
 The unit of this value is `s`.
 
@@ -260,7 +268,7 @@ The unit of this value is `s`.
 Maximum allowed amperage draw when device is offline.
 Value can be found in the published state on the `offline_current` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"offline_current": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"offline_current": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"offline_current": VALUE}`.
 The minimal value is `6` and the maximum value is `32`.
 The unit of this value is `A`.
 
@@ -268,6 +276,6 @@ The unit of this value is `A`.
 Use single phase charging when device is offline.
 Value can be found in the published state on the `offline_single_phase` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"offline_single_phase": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"offline_single_phase": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"offline_single_phase": "VALUE"}`.
 If value equals `enable` offline single phase is ON, if `disable` OFF.
 

@@ -47,14 +47,14 @@ It's not possible to read (`/get`) this value.
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `previous`, `on`.
 
 ### Countdown (numeric)
 Countdown to turn off.
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
@@ -62,19 +62,19 @@ The unit of this value is `s`.
 Mode of the indicator light.
 Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": "VALUE"}`.
 The possible values are: `none`, `relay`, `pos`.
 
 ### Backlight mode (binary)
 Backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": "VALUE"}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Inching (composite)
 Inching configuration.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching": {"state": VALUE, "minutes": VALUE, "seconds": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching": {"state": "VALUE", "minutes": VALUE, "seconds": VALUE}}`
 - `state` (binary): Whenever the device is switched ON, switch it OFF automatically after the configured delay allowed values: `ON` or `OFF`
 - `minutes` (numeric): Minutes component of the delay duration max value is 1440, unit is m
 - `seconds` (numeric): Seconds component of the delay duration max value is 59, unit is s
@@ -83,27 +83,27 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inch
 ON Color.
 Value can be found in the published state on the `on_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_color": "VALUE"}`.
 The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`.
 
 ### Off color (enum)
 OFF Color.
 Value can be found in the published state on the `off_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_color": "VALUE"}`.
 The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`.
 
 ### Backlight brightness (numeric)
 Backlight Brightness.
 Value can be found in the published state on the `backlight_brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### Child lock (binary)
 Child Lock.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `ON` child lock is ON, if `OFF` OFF.
 

@@ -117,70 +117,70 @@ The unit of this value is `V`.
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Backlight (binary)
 Indicator backlight.
 Value can be found in the published state on the `backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": "VALUE"}`.
 If value equals `ON` backlight is ON, if `OFF` OFF.
 
 ### Indicator (binary)
 LED indicator.
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 
 ### Power on behavior (enum)
 Power on behavior state.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Power on behavior 1 (enum)
 Button 1 power-on behavior.
 Value can be found in the published state on the `power_on_behavior_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_1": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Power on behavior 2 (enum)
 Button 2 power-on behavior.
 Value can be found in the published state on the `power_on_behavior_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_2": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Power on behavior 3 (enum)
 Button 3 power-on behavior.
 Value can be found in the published state on the `power_on_behavior_3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_3": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Power on behavior 4 (enum)
 Button 4 power-on behavior.
 Value can be found in the published state on the `power_on_behavior_4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_4": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Power on behavior 5 (enum)
 Button 5 power-on behavior.
 Value can be found in the published state on the `power_on_behavior_5` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_5": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Power on behavior 6 (enum)
 Button 6 power-on behavior.
 Value can be found in the published state on the `power_on_behavior_6` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_6": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Color (composite, button_1 endpoint)
@@ -191,14 +191,14 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"colo
 ### On brightness (numeric, button_1 endpoint)
 Value can be found in the published state on the `brightness_on_button_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_1": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Off brightness (numeric, button_1 endpoint)
 Value can be found in the published state on the `brightness_off_button_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_1": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -210,14 +210,14 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"colo
 ### On brightness (numeric, button_2 endpoint)
 Value can be found in the published state on the `brightness_on_button_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_2": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Off brightness (numeric, button_2 endpoint)
 Value can be found in the published state on the `brightness_off_button_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_2": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -229,14 +229,14 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"colo
 ### On brightness (numeric, button_3 endpoint)
 Value can be found in the published state on the `brightness_on_button_3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_3": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Off brightness (numeric, button_3 endpoint)
 Value can be found in the published state on the `brightness_off_button_3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_3": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -248,14 +248,14 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"colo
 ### On brightness (numeric, button_4 endpoint)
 Value can be found in the published state on the `brightness_on_button_4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_4": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Off brightness (numeric, button_4 endpoint)
 Value can be found in the published state on the `brightness_off_button_4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_4": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -267,14 +267,14 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"colo
 ### On brightness (numeric, button_5 endpoint)
 Value can be found in the published state on the `brightness_on_button_5` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_5": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Off brightness (numeric, button_5 endpoint)
 Value can be found in the published state on the `brightness_off_button_5` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_5": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -286,14 +286,14 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"colo
 ### On brightness (numeric, button_6 endpoint)
 Value can be found in the published state on the `brightness_on_button_6` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_on_button_6": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Off brightness (numeric, button_6 endpoint)
 Value can be found in the published state on the `brightness_off_button_6` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_off_button_6": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 

@@ -57,7 +57,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Temperature (numeric)
@@ -93,7 +93,7 @@ The unit of this value is `%`.
 Defines how often the device performs measurements.
 Value can be found in the published state on the `measurement_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"measurement_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_interval": VALUE}`.
 The minimal value is `5` and the maximum value is `14400`.
 The unit of this value is `s`.
 
@@ -101,7 +101,7 @@ The unit of this value is `s`.
 Soil moisture measurement mode: Volumetric Water Content (VWC) (0-45 %) or linear (0-100 %).
 Value can be found in the published state on the `linear_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linear_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linear_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linear_mode": "VALUE"}`.
 If value equals `linear` linear mode is ON, if `VWC` OFF.
 
 ### Illuminance (numeric)

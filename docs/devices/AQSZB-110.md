@@ -54,6 +54,7 @@ Measured VOC value.
 Value can be found in the published state on the `voc` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voc": ""}`.
 It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `270000`.
 The unit of this value is `µg/m³`.
 
 ### Air quality (enum)

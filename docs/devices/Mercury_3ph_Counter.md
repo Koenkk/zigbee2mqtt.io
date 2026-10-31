@@ -177,7 +177,7 @@ The unit of this value is `kWh`.
 Measurement Period.
 Value can be found in the published state on the `measurement_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"measurement_period": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_period": VALUE}`.
 The minimal value is `10` and the maximum value is `600`.
 The unit of this value is `sec`.
 
@@ -185,7 +185,7 @@ The unit of this value is `sec`.
 Device Address.
 Value can be found in the published state on the `device_address` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_address": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_address": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_address": VALUE}`.
 The minimal value is `0` and the maximum value is `99999999`.
 
 ### Temperature (numeric)

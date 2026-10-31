@@ -103,14 +103,14 @@ The unit of this value is `°C`.
 Prepaid Function Switch.
 Value can be found in the published state on the `switch_prepayment` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_prepayment": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_prepayment": "VALUE"}`.
 If value equals `ON` switch prepayment is ON, if `OFF` OFF.
 
 ### Clear energy (binary)
 Clear Remaining Available Energy.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"clear_energy": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"clear_energy": "VALUE"}`.
 If value equals `ON` clear energy is ON, if `OFF` OFF.
 
 ### Balance energy (numeric)
@@ -123,7 +123,7 @@ The unit of this value is `kWh`.
 Energy Recharge.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charge_energy": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charge_energy": VALUE}`.
 The minimal value is `0` and the maximum value is `999999`.
 The unit of this value is `kWh`.
 
@@ -131,14 +131,14 @@ The unit of this value is `kWh`.
 Overcurrent Alarm Enabled.
 Value can be found in the published state on the `over_current_breaker` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"over_current_breaker": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_breaker": "VALUE"}`.
 If value equals `ON` over current breaker is ON, if `OFF` OFF.
 
 ### Over current threshold (numeric)
 Overcurrent Threshold.
 Value can be found in the published state on the `over_current_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"over_current_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": VALUE}`.
 The minimal value is `10` and the maximum value is `63`.
 The unit of this value is `A`.
 
@@ -146,14 +146,14 @@ The unit of this value is `A`.
 Overvoltage Alarm Enabled.
 Value can be found in the published state on the `over_voltage_breaker` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"over_voltage_breaker": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_breaker": "VALUE"}`.
 If value equals `ON` over voltage breaker is ON, if `OFF` OFF.
 
 ### Over voltage threshold (numeric)
 Overvoltage Threshold.
 Value can be found in the published state on the `over_voltage_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"over_voltage_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": VALUE}`.
 The minimal value is `240` and the maximum value is `260`.
 The unit of this value is `V`.
 
@@ -161,14 +161,14 @@ The unit of this value is `V`.
 Undervoltage Alarm Enabled.
 Value can be found in the published state on the `under_voltage_breaker` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"under_voltage_breaker": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_breaker": "VALUE"}`.
 If value equals `ON` under voltage breaker is ON, if `OFF` OFF.
 
 ### Under voltage threshold (numeric)
 Undervoltage Threshold.
 Value can be found in the published state on the `under_voltage_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"under_voltage_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": VALUE}`.
 The minimal value is `195` and the maximum value is `220`.
 The unit of this value is `V`.
 
@@ -182,14 +182,14 @@ The unit of this value is `mA`.
 Leakage Current Alarm Enabled.
 Value can be found in the published state on the `leakage_breaker` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"leakage_breaker": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_breaker": "VALUE"}`.
 If value equals `ON` leakage breaker is ON, if `OFF` OFF.
 
 ### Leakage delay (numeric)
 Leakage Delay.
 Value can be found in the published state on the `leakage_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `9999`.
 The unit of this value is `s`.
 
@@ -197,7 +197,7 @@ The unit of this value is `s`.
 Leakage Current Threshold.
 Value can be found in the published state on the `leakage_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"leakage_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_threshold": VALUE}`.
 The minimal value is `10` and the maximum value is `99`.
 The unit of this value is `mA`.
 
@@ -205,14 +205,14 @@ The unit of this value is `mA`.
 Temperature Alarm Enabled.
 Value can be found in the published state on the `high_temperature_breaker` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_temperature_breaker": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_breaker": "VALUE"}`.
 If value equals `ON` high temperature breaker is ON, if `OFF` OFF.
 
 ### High temperature threshold (numeric)
 Temperature Threshold.
 Value can be found in the published state on the `high_temperature_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_temperature_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_threshold": VALUE}`.
 The minimal value is `10` and the maximum value is `85`.
 The unit of this value is `°C`.
 
@@ -220,7 +220,7 @@ The unit of this value is `°C`.
 Countdown Timer.
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -228,7 +228,7 @@ The unit of this value is `s`.
 Power-On Delay Energization Time.
 Value can be found in the published state on the `power_on_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `9999`.
 The unit of this value is `s`.
 
@@ -236,14 +236,14 @@ The unit of this value is `s`.
 Reclosing Attempt Limit.
 Value can be found in the published state on the `recover_count` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"recover_count": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"recover_count": VALUE}`.
 The minimal value is `0` and the maximum value is `999`.
 
 ### Recover enable (binary)
 Reclosing Enable.
 Value can be found in the published state on the `recover_enable` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"recover_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"recover_enable": "VALUE"}`.
 If value equals `ON` recover enable is ON, if `OFF` OFF.
 
 ### Fault (enum)
@@ -256,6 +256,6 @@ The possible values are: `clear`, `short_circuit_alarm`, `surge_alarm`, `overloa
 Relay Power-On State Setting.
 Value can be found in the published state on the `relay_power_on_state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_power_on_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_power_on_state": "VALUE"}`.
 The possible values are: `Off`, `On`, `Restore`.
 

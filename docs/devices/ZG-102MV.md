@@ -61,6 +61,6 @@ The unit of this value is `%`.
 Vibration sensitivity.
 Value can be found in the published state on the `vibration_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `50`.
 

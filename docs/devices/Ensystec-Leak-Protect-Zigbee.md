@@ -76,21 +76,21 @@ The possible values are: `unknown`, `mains (single phase)`, `mains (3 phase)`, `
 Reset alarm.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_reset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_reset": "VALUE"}`.
 The possible values are: `reset`.
 
 ### Force open (enum, 6 endpoint)
 Force open electric valves.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"force_open_6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"force_open_6": "VALUE"}`.
 The possible values are: `Force open`.
 
 ### Input 1 water meter (numeric, 7 endpoint)
 Water meter on input 1.
 Value can be found in the published state on the `input_1_water_meter_7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_1_water_meter_7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_1_water_meter_7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_1_water_meter_7": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -98,21 +98,21 @@ The unit of this value is `m3`.
 Divisor of water meter 1.
 Value can be found in the published state on the `input_1_divisor_7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_1_divisor_7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_1_divisor_7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_1_divisor_7": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 1 multiplier (numeric, 7 endpoint)
 Multiplier of water meter 1.
 Value can be found in the published state on the `input_1_multiplier_7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_1_multiplier_7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_1_multiplier_7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_1_multiplier_7": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 2 water meter (numeric, 8 endpoint)
 Water meter on input 2.
 Value can be found in the published state on the `input_2_water_meter_8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_2_water_meter_8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_2_water_meter_8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_2_water_meter_8": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -120,21 +120,21 @@ The unit of this value is `m3`.
 Divisor of water meter 2.
 Value can be found in the published state on the `input_2_divisor_8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_2_divisor_8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_2_divisor_8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_2_divisor_8": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 2 multiplier (numeric, 8 endpoint)
 Multiplier of water meter 2.
 Value can be found in the published state on the `input_2_multiplier_8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_2_multiplier_8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_2_multiplier_8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_2_multiplier_8": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 3 water meter (numeric, 9 endpoint)
 Water meter on input 3.
 Value can be found in the published state on the `input_3_water_meter_9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_3_water_meter_9": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_3_water_meter_9": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_3_water_meter_9": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -142,21 +142,21 @@ The unit of this value is `m3`.
 Divisor of water meter 3.
 Value can be found in the published state on the `input_3_divisor_9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_3_divisor_9": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_3_divisor_9": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_3_divisor_9": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 3 multiplier (numeric, 9 endpoint)
 Multiplier of water meter 3.
 Value can be found in the published state on the `input_3_multiplier_9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_3_multiplier_9": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_3_multiplier_9": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_3_multiplier_9": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 4 water meter (numeric, 10 endpoint)
 Water meter on input 4.
 Value can be found in the published state on the `input_4_water_meter_10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_4_water_meter_10": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_4_water_meter_10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_4_water_meter_10": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -164,21 +164,21 @@ The unit of this value is `m3`.
 Divisor of water meter 4.
 Value can be found in the published state on the `input_4_divisor_10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_4_divisor_10": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_4_divisor_10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_4_divisor_10": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 4 multiplier (numeric, 10 endpoint)
 Multiplier of water meter 4.
 Value can be found in the published state on the `input_4_multiplier_10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_4_multiplier_10": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_4_multiplier_10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_4_multiplier_10": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 5 water meter (numeric, 11 endpoint)
 Water meter on input 5.
 Value can be found in the published state on the `input_5_water_meter_11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_5_water_meter_11": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_5_water_meter_11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_5_water_meter_11": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -186,21 +186,21 @@ The unit of this value is `m3`.
 Divisor of water meter 5.
 Value can be found in the published state on the `input_5_divisor_11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_5_divisor_11": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_5_divisor_11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_5_divisor_11": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 5 multiplier (numeric, 11 endpoint)
 Multiplier of water meter 5.
 Value can be found in the published state on the `input_5_multiplier_11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_5_multiplier_11": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_5_multiplier_11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_5_multiplier_11": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 6 water meter (numeric, 12 endpoint)
 Water meter on input 6.
 Value can be found in the published state on the `input_6_water_meter_12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_6_water_meter_12": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_6_water_meter_12": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_6_water_meter_12": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -208,21 +208,21 @@ The unit of this value is `m3`.
 Divisor of water meter 6.
 Value can be found in the published state on the `input_6_divisor_12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_6_divisor_12": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_6_divisor_12": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_6_divisor_12": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 6 multiplier (numeric, 12 endpoint)
 Multiplier of water meter 6.
 Value can be found in the published state on the `input_6_multiplier_12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_6_multiplier_12": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_6_multiplier_12": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_6_multiplier_12": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 7 water meter (numeric, 13 endpoint)
 Water meter on input 7.
 Value can be found in the published state on the `input_7_water_meter_13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_7_water_meter_13": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_7_water_meter_13": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_7_water_meter_13": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -230,21 +230,21 @@ The unit of this value is `m3`.
 Divisor of water meter 7.
 Value can be found in the published state on the `input_7_divisor_13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_7_divisor_13": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_7_divisor_13": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_7_divisor_13": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 7 multiplier (numeric, 13 endpoint)
 Multiplier of water meter 7.
 Value can be found in the published state on the `input_7_multiplier_13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_7_multiplier_13": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_7_multiplier_13": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_7_multiplier_13": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 8 water meter (numeric, 14 endpoint)
 Water meter on input 8.
 Value can be found in the published state on the `input_8_water_meter_14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_8_water_meter_14": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_8_water_meter_14": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_8_water_meter_14": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -252,21 +252,21 @@ The unit of this value is `m3`.
 Divisor of water meter 8.
 Value can be found in the published state on the `input_8_divisor_14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_8_divisor_14": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_8_divisor_14": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_8_divisor_14": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 8 multiplier (numeric, 14 endpoint)
 Multiplier of water meter 8.
 Value can be found in the published state on the `input_8_multiplier_14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_8_multiplier_14": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_8_multiplier_14": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_8_multiplier_14": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 9 water meter (numeric, 15 endpoint)
 Water meter on input 9.
 Value can be found in the published state on the `input_9_water_meter_15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_9_water_meter_15": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_9_water_meter_15": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_9_water_meter_15": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -274,21 +274,21 @@ The unit of this value is `m3`.
 Divisor of water meter 9.
 Value can be found in the published state on the `input_9_divisor_15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_9_divisor_15": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_9_divisor_15": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_9_divisor_15": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 9 multiplier (numeric, 15 endpoint)
 Multiplier of water meter 9.
 Value can be found in the published state on the `input_9_multiplier_15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_9_multiplier_15": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_9_multiplier_15": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_9_multiplier_15": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 10 water meter (numeric, 16 endpoint)
 Water meter on input 10.
 Value can be found in the published state on the `input_10_water_meter_16` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_10_water_meter_16": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_10_water_meter_16": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_10_water_meter_16": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 The unit of this value is `m3`.
 
@@ -296,14 +296,14 @@ The unit of this value is `m3`.
 Divisor of water meter 10.
 Value can be found in the published state on the `input_10_divisor_16` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_10_divisor_16": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_10_divisor_16": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_10_divisor_16": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Input 10 multiplier (numeric, 16 endpoint)
 Multiplier of water meter 10.
 Value can be found in the published state on the `input_10_multiplier_16` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_10_multiplier_16": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_10_multiplier_16": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_10_multiplier_16": VALUE}`.
 The minimal value is `1` and the maximum value is `16777215`.
 
 ### Switch (2 endpoint)
@@ -360,70 +360,70 @@ If value equals `Connected` electric valve connection out2 is ON, if `Not connec
 Input 1 configuration.
 Value can be found in the published state on the `input_1_config_7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_1_config_7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_1_config_7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_1_config_7": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 2 config (enum, 8 endpoint)
 Input 2 configuration.
 Value can be found in the published state on the `input_2_config_8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_2_config_8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_2_config_8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_2_config_8": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 3 config (enum, 9 endpoint)
 Input 3 configuration.
 Value can be found in the published state on the `input_3_config_9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_3_config_9": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_3_config_9": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_3_config_9": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 4 config (enum, 10 endpoint)
 Input 4 configuration.
 Value can be found in the published state on the `input_4_config_10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_4_config_10": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_4_config_10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_4_config_10": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 5 config (enum, 11 endpoint)
 Input 5 configuration.
 Value can be found in the published state on the `input_5_config_11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_5_config_11": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_5_config_11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_5_config_11": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 6 config (enum, 12 endpoint)
 Input 6 configuration.
 Value can be found in the published state on the `input_6_config_12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_6_config_12": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_6_config_12": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_6_config_12": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 7 config (enum, 13 endpoint)
 Input 7 configuration.
 Value can be found in the published state on the `input_7_config_13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_7_config_13": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_7_config_13": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_7_config_13": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 8 config (enum, 14 endpoint)
 Input 8 configuration.
 Value can be found in the published state on the `input_8_config_14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_8_config_14": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_8_config_14": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_8_config_14": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 9 config (enum, 15 endpoint)
 Input 9 configuration.
 Value can be found in the published state on the `input_9_config_15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_9_config_15": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_9_config_15": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_9_config_15": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 10 config (enum, 16 endpoint)
 Input 10 configuration.
 Value can be found in the published state on the `input_10_config_16` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"input_10_config_16": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_10_config_16": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"input_10_config_16": "VALUE"}`.
 The possible values are: `deactivated`, `sensor`, `meter`.
 
 ### Input 1 leak detect (binary, 7 endpoint)

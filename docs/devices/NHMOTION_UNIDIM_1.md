@@ -38,6 +38,9 @@ Short press (less than 0.5 seconds) the dimmer button 3 times, then press the di
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -93,14 +96,14 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Specifies the minimum light output of the ballast.
 Value can be found in the published state on the `ballast_minimum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_minimum_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_minimum_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_minimum_level": VALUE}`.
 The minimal value is `1` and the maximum value is `254`.
 
 ### Ballast maximum level (numeric)
 Specifies the maximum light output of the ballast.
 Value can be found in the published state on the `ballast_maximum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_maximum_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": VALUE}`.
 The minimal value is `1` and the maximum value is `254`.
 
 ### Illuminance (numeric)
@@ -121,7 +124,7 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Time in seconds before occupancy is cleared after the last detected movement..
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `65534`.
 The unit of this value is `s`.
 
@@ -129,14 +132,14 @@ The unit of this value is `s`.
 Sensitivity of the occupancy sensor.
 Value can be found in the published state on the `occupancy_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": "VALUE"}`.
 The possible values are: `Low`, `Medium`, `High`.
 
 ### Ambience light threshold (numeric)
 Threshold above which occupancy will not trigger the light switch..
 Value can be found in the published state on the `ambience_light_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ambience_light_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ambience_light_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ambience_light_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `2000`.
 The unit of this value is `lx`.
 
@@ -144,6 +147,6 @@ The unit of this value is `lx`.
 Auto detects the correct mode for the ballast. RL-LED may have improved dimming quality for LEDs..
 Value can be found in the published state on the `dimmer_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimmer_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_mode": "VALUE"}`.
 The possible values are: `Auto`, `RL-LED`.
 

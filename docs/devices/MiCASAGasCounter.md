@@ -71,6 +71,6 @@ If value equals `true` battery low is ON, if `false` OFF.
 Write absolute gas meter value.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_counter_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_counter_set": VALUE}`.
 The minimal value is `0` and the maximum value is `281474976710655`.
 

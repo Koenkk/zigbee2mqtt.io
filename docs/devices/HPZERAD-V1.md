@@ -57,7 +57,7 @@ The unit of this value is `°C`.
 Temperature sensor offset.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-5` and the maximum value is `5`.
 The unit of this value is `°C`.
 
@@ -71,7 +71,7 @@ The unit of this value is `%`.
 Humidity sensor offset.
 Value can be found in the published state on the `humidity_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": VALUE}`.
 The minimal value is `-20` and the maximum value is `20`.
 The unit of this value is `%`.
 
@@ -85,7 +85,7 @@ The unit of this value is `ppm`.
 CO2 sensor offset.
 Value can be found in the published state on the `co2_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_offset": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `ppm`.
 
@@ -93,56 +93,56 @@ The unit of this value is `ppm`.
 Stock display brightness.
 Value can be found in the published state on the `display_brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_brightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Language (enum)
 Language used by the stock display.
 Value can be found in the published state on the `language` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"language": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"language": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"language": "VALUE"}`.
 The possible values are: `french`, `english`.
 
 ### Temperature unit (enum)
 Temperature unit used by the stock display.
 Value can be found in the published state on the `temperature_unit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_unit": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Humidity display (enum)
 Whether humidity is shown on the stock display.
 Value can be found in the published state on the `humidity_display` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_display": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_display": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_display": "VALUE"}`.
 The possible values are: `hidden`, `shown`.
 
 ### Co2 display (enum)
 Whether CO2 is shown on the stock display.
 Value can be found in the published state on the `co2_display` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_display": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_display": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_display": "VALUE"}`.
 The possible values are: `hidden`, `shown`.
 
 ### Display temperature source (enum)
 Temperature source used by the stock display.
 Value can be found in the published state on the `display_temperature_source` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_temperature_source": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_temperature_source": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_temperature_source": "VALUE"}`.
 The possible values are: `temperature_1`, `temperature_2`.
 
 ### Setpoint only ui (binary)
 Hide the local M/profile menu while keeping the setpoint arrows.
 Value can be found in the published state on the `setpoint_only_ui` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"setpoint_only_ui": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_only_ui": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_only_ui": "VALUE"}`.
 If value equals `ON` setpoint only ui is ON, if `OFF` OFF.
 
 ### Setpoint central (numeric)
 Central setpoint.
 Value can be found in the published state on the `setpoint_central` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"setpoint_central": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_central": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_central": VALUE}`.
 The minimal value is `18` and the maximum value is `27`.
 The unit of this value is `°C`.
 
@@ -150,7 +150,7 @@ The unit of this value is `°C`.
 Minimum local setpoint.
 Value can be found in the published state on the `setpoint_minimum` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"setpoint_minimum": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_minimum": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_minimum": VALUE}`.
 The minimal value is `18` and the maximum value is `27`.
 The unit of this value is `°C`.
 
@@ -158,7 +158,7 @@ The unit of this value is `°C`.
 Maximum local setpoint.
 Value can be found in the published state on the `setpoint_maximum` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"setpoint_maximum": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_maximum": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_maximum": VALUE}`.
 The minimal value is `18` and the maximum value is `27`.
 The unit of this value is `°C`.
 
@@ -166,7 +166,7 @@ The unit of this value is `°C`.
 Local setpoint increment.
 Value can be found in the published state on the `setpoint_step` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"setpoint_step": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_step": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_step": VALUE}`.
 The minimal value is `0.5` and the maximum value is `1`.
 The unit of this value is `°C`.
 
@@ -174,13 +174,13 @@ The unit of this value is `°C`.
 Room name shown by the stock UI; maximum 16 characters.
 Value can be found in the published state on the `room_name` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"room_name": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"room_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"room_name": "VALUE"}`.
 
 ### Profile (enum)
 Request a stock thermostat profile.
 Value can be found in the published state on the `profile` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"profile": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"profile": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"profile": "VALUE"}`.
 The possible values are: `off`, `eco`, `reduced`, `comfort`.
 
 ### Active profile (enum)
@@ -197,7 +197,7 @@ If value equals `ON` remote power is ON, if `OFF` OFF.
 ### Zone demand icon (enum)
 Value can be found in the published state on the `zone_demand_icon` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_demand_icon": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_demand_icon": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_demand_icon": "VALUE"}`.
 The possible values are: `none`, `heating`, `cooling`.
 
 ### Battery (numeric)
@@ -217,6 +217,6 @@ The unit of this value is `V`.
 ### Refresh (enum)
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh": "VALUE"}`.
 The possible values are: `press`.
 

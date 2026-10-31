@@ -74,14 +74,14 @@ If value equals `false` contact is ON, if `true` OFF.
 Activate the break function by pressing the operating button on the door/window contact twice. This means that the device temporarily stops reading the sensors..
 Value can be found in the published state on the `break_function_enabled` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"break_function_enabled": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"break_function_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"break_function_enabled": "VALUE"}`.
 If value equals `ON` break function is ON, if `OFF` OFF.
 
 ### Automatic time limit for breaks (numeric)
 Here you can define how long the break function is activated for the door/window contact. Once the time limit has expired, the break ends automatically. The LED on the device will flash orange as long as the break is activated when this setting is being used..
 Value can be found in the published state on the `break_function_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"break_function_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"break_function_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"break_function_timeout": VALUE}`.
 The minimal value is `1` and the maximum value is `15`.
 The unit of this value is `minutes`.
 Besides the numeric values the following values are accepted: `disable`.

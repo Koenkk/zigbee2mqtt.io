@@ -55,14 +55,14 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Turn the blue network status indicator on or off..
 Value can be found in the published state on the `network_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"network_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": VALUE}`.
 If value equals `true` network indicator is ON, if `false` OFF.
 
 ### Turbo mode (binary)
 Boost Zigbee radio transmit power to improve range..
 Value can be found in the published state on the `turbo_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"turbo_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo_mode": VALUE}`.
 If value equals `true` turbo mode is ON, if `false` OFF.
 
 ### Power (numeric)

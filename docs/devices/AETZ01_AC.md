@@ -50,34 +50,34 @@ pageClass: device-page
 Turn AC ON/OFF.
 Value can be found in the published state on the `state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "VALUE"}`.
 If value equals `ON` state is ON, if `OFF` OFF.
 
 ### Climate 
 This climate device supports the following features: `local_temperature`, `current_heating_setpoint`, `system_mode`, `fan_mode`, `swing_mode`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `16` and `30`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `cool`, `dry`, `fan_only`. Reading (`/get`) this attribute is not possible.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}` where `VALUE` is one of: `cool`, `dry`, `fan_only`. Reading (`/get`) this attribute is not possible.
 
 ### Sleep (binary)
 Sleep Mode.
 Value can be found in the published state on the `sleep` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sleep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sleep": "VALUE"}`.
 If value equals `ON` sleep is ON, if `OFF` OFF.
 
 ### Turbo (binary)
 Turbo Mode.
 Value can be found in the published state on the `turbo` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo": "VALUE"}`.
 If value equals `ON` turbo is ON, if `OFF` OFF.
 
 ### Quiet (binary)
 Quiet Mode.
 Value can be found in the published state on the `quiet` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quiet": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quiet": "VALUE"}`.
 If value equals `ON` quiet is ON, if `OFF` OFF.
 
 ### Power (numeric)

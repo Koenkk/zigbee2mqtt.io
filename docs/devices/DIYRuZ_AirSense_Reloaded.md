@@ -56,7 +56,7 @@ pageClass: device-page
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### CO2 (numeric)
@@ -98,28 +98,28 @@ The unit of this value is `%`.
 Enable/disable accurate CO2 measurement mode.
 Value can be found in the published state on the `co2_accurate_measurement` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_accurate_measurement": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_accurate_measurement": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_accurate_measurement": "VALUE"}`.
 If value equals `ON` co2 accurate measurement is ON, if `OFF` OFF.
 
 ### Co2 automatic calibration (binary)
 Enable/disable automatic calibration of CO2 sensor.
 Value can be found in the published state on the `co2_automatic_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_automatic_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_automatic_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_automatic_calibration": "VALUE"}`.
 If value equals `ON` co2 automatic calibration is ON, if `OFF` OFF.
 
 ### Led indication (binary)
 Enable/disable LED indication.
 Value can be found in the published state on the `led_indication` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_indication": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indication": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indication": "VALUE"}`.
 If value equals `ON` led indication is ON, if `OFF` OFF.
 
 ### Co2 moderate threshold (numeric)
 Threshold for moderate CO2 level.
 Value can be found in the published state on the `co2_moderate_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_moderate_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_moderate_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_moderate_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `ppm`.
 
@@ -127,7 +127,7 @@ The unit of this value is `ppm`.
 Threshold for hazardous CO2 level.
 Value can be found in the published state on the `co2_hazardous_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_hazardous_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_hazardous_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_hazardous_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `ppm`.
 
@@ -135,7 +135,7 @@ The unit of this value is `ppm`.
 Threshold for moderate formaldehyde (CH2O) level.
 Value can be found in the published state on the `formaldehyde_moderate_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"formaldehyde_moderate_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"formaldehyde_moderate_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"formaldehyde_moderate_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `ppb`.
 
@@ -143,7 +143,7 @@ The unit of this value is `ppb`.
 Threshold for hazardous formaldehyde (CH2O) level.
 Value can be found in the published state on the `formaldehyde_hazardous_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"formaldehyde_hazardous_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"formaldehyde_hazardous_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"formaldehyde_hazardous_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `ppb`.
 
@@ -151,7 +151,7 @@ The unit of this value is `ppb`.
 Temperature calibration offset.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-20` and the maximum value is `20`.
 The unit of this value is `°C`.
 
@@ -159,7 +159,7 @@ The unit of this value is `°C`.
 Humidity calibration offset.
 Value can be found in the published state on the `humidity_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
@@ -167,7 +167,7 @@ The unit of this value is `%`.
 Pressure calibration offset.
 Value can be found in the published state on the `pressure_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `hPa`.
 
@@ -175,7 +175,7 @@ The unit of this value is `hPa`.
 Formaldehyde ADC range calibration offset.
 Value can be found in the published state on the `formaldehyde_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"formaldehyde_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"formaldehyde_offset": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 The unit of this value is `adc`.
 

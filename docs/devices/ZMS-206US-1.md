@@ -42,7 +42,7 @@ pageClass: device-page
 Mode of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": "VALUE"}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Switch 
@@ -54,7 +54,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Brightness of the light.
 Value can be found in the published state on the `backlight_brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -62,62 +62,62 @@ The unit of this value is `%`.
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Radar config (enum)
 Radar Config.
 Value can be found in the published state on the `radar_config` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_config": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_config": "VALUE"}`.
 The possible values are: `none`, `10s`, `20s`, `30s`, `45s`, `60s`.
 
 ### Switch color on (enum)
 Switch lightcolor when on.
 Value can be found in the published state on the `switch_color_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_color_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_color_on": "VALUE"}`.
 The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`, `warm_white`, `warm_yellow`.
 
 ### Switch color off (enum)
 Switch lightcolor when off.
 Value can be found in the published state on the `switch_color_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_color_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_color_off": "VALUE"}`.
 The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`, `warm_white`, `warm_yellow`.
 
 ### Indicator status (enum)
 Indicator Light Status.
 Value can be found in the published state on the `indicator_status` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_status": "VALUE"}`.
 The possible values are: `off`, `on_off_status`, `switch_position`.
 
 ### Delay off schedule (enum)
 Switch lightcolor while delayed.
 Value can be found in the published state on the `delay_off_schedule` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_off_schedule": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_off_schedule": "VALUE"}`.
 The possible values are: `red`, `blue`, `green`, `white`, `yellow`, `magenta`, `cyan`, `warm_white`, `warm_yellow`.
 
 ### Name (text)
 Name for switch.
 Value can be found in the published state on the `name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"name": "VALUE"}`.
 
 ### Relay status (enum)
 Relay status for switch.
 Value can be found in the published state on the `relay_status` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_status": "VALUE"}`.
 The possible values are: `power_on`, `power_off`, `restart_memory`.
 
 ### Countdown (numeric)
 Countdown for switch 1.
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 

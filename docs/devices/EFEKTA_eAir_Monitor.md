@@ -68,28 +68,28 @@ The unit of this value is `Hours`.
 Set power mode.
 Value can be found in the published state on the `power_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_mode": "VALUE"}`.
 The possible values are: `Fast`, `Medium`, `Slow`.
 
 ### Invert color (enum)
 Set color mode.
 Value can be found in the published state on the `invert_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_color": "VALUE"}`.
 The possible values are: `BW`, `WB`.
 
 ### Forced recalibration (binary)
 Start FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `forced_recalibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"forced_recalibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"forced_recalibration": "VALUE"}`.
 If value equals `ON` forced recalibration is ON, if `OFF` OFF.
 
 ### Manual forced recalibration (numeric)
 Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `manual_forced_recalibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_forced_recalibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_forced_recalibration": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `ppm`.
 
@@ -97,13 +97,13 @@ The unit of this value is `ppm`.
 Automatic self calibration.
 Value can be found in the published state on the `automatic_self_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"automatic_self_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"automatic_self_calibration": "VALUE"}`.
 If value equals `ON` automatic self calibration is ON, if `OFF` OFF.
 
 ### Factory reset co2 (binary)
 Factory Reset CO2 sensor.
 Value can be found in the published state on the `factory_reset_co2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset_co2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset_co2": "VALUE"}`.
 If value equals `ON` factory reset co2 is ON, if `OFF` OFF.
 

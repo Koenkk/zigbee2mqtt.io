@@ -47,28 +47,28 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Channel 1 brightness.
 Value can be found in the published state on the `brightness_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_1": VALUE}`.
 The minimal value is `10` and the maximum value is `1000`.
 
 ### Brightness min 1 (numeric)
 Channel 1 minimum brightness.
 Value can be found in the published state on the `brightness_min_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_min_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_min_1": VALUE}`.
 The minimal value is `10` and the maximum value is `1000`.
 
 ### Brightness max 1 (numeric)
 Channel 1 maximum brightness.
 Value can be found in the published state on the `brightness_max_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_max_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_max_1": VALUE}`.
 The minimal value is `10` and the maximum value is `1000`.
 
 ### Countdown 1 (numeric)
 Channel 1 countdown.
 Value can be found in the published state on the `countdown_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_1": VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
@@ -81,28 +81,28 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Channel 2 brightness.
 Value can be found in the published state on the `brightness_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_2": VALUE}`.
 The minimal value is `10` and the maximum value is `1000`.
 
 ### Brightness min 2 (numeric)
 Channel 2 minimum brightness.
 Value can be found in the published state on the `brightness_min_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_min_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_min_2": VALUE}`.
 The minimal value is `10` and the maximum value is `1000`.
 
 ### Brightness max 2 (numeric)
 Channel 2 maximum brightness.
 Value can be found in the published state on the `brightness_max_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_max_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_max_2": VALUE}`.
 The minimal value is `10` and the maximum value is `1000`.
 
 ### Countdown 2 (numeric)
 Channel 2 countdown.
 Value can be found in the published state on the `countdown_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_2": VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
@@ -110,20 +110,20 @@ The unit of this value is `s`.
 Relay mode after power restoration.
 Value can be found in the published state on the `relay_status` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_status": "VALUE"}`.
 The possible values are: `off`, `on`, `memory`.
 
 ### Light mode (enum)
 Indicator light mode.
 Value can be found in the published state on the `light_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": "VALUE"}`.
 The possible values are: `none`, `relay`, `pos`.
 
 ### Switch backlight (binary)
 Backlight switch.
 Value can be found in the published state on the `switch_backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_backlight": "VALUE"}`.
 If value equals `ON` switch backlight is ON, if `OFF` OFF.
 

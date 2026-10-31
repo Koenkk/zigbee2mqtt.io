@@ -69,7 +69,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Warning (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe_level": VALUE, "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": "VALUE", "level": "VALUE", "strobe_level": "VALUE", "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
 - `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
 - `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
 - `strobe_level` (enum): Intensity of the strobe allowed values: `low`, `medium`, `high`, `very_high`
