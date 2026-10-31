@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eFlora_Pro  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Plant Wattering Sensor with e-ink display 2.13 |
-| Exposes | soil_moisture, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, invert, fastmode, lower_level, upper_level, temperature_compensation |
+| Description | Plant Watering Sensor with e-ink display 2.13 |
+| Exposes | soil_moisture, vpd, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, invert, fastmode, lower_level, upper_level, temperature_compensation |
 | Picture | ![EFEKTA EFEKTA_eFlora_Pro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlora_Pro.png) |
 
 
@@ -58,6 +58,12 @@ Value can be found in the published state on the `soil_moisture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
+### Vpd (numeric)
+Vapor Pressure Deficit (VPD) from built-in sensor.
+Value can be found in the published state on the `vpd` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kPa`.
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
@@ -92,7 +98,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.

@@ -18,10 +18,13 @@ The following tags are available:
 > [!WARNING]
 > For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
 > Before running the container pull the correct image with `docker pull ghcr.io/koenkk/zigbee2mqtt --platform linux/arm/v6`.
+>
+> Starting with 2.7.2 zigbee2mqtt switched to node v24.11.1 which is not supporting arm6 anymore.
+> The latest stable docker image for arm6 is 2.7.1
 
 ## Running the container
 
-Start by figuring out the location of your adapter as explained [here](../configuration/adapter-settings.md#determine-location-of-the-adapter).
+Start by figuring out the location of your adapter as explained [here](../configuration/adapter-settings.md#basic-configuration).
 
 Execute the following command, update the `--device` parameter to match the location of your adapter.
 

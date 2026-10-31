@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | UT-A01E  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Floor heating thermostat W500 |
-| Exposes | power, energy, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, preset, state, humidity, sensor, ntc_sensor_type, window_detection, power_outage_memory, child_lock, hysteresis, identify |
+| Exposes | power, energy, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, max_heat_setpoint_limit, min_heat_setpoint_limit, preset, state, humidity, sensor, ntc_sensor_type, ntc_r25, ntc_beta, window_detection, power_outage_memory, child_lock, hysteresis, identify |
 | Picture | ![Aqara UT-A01E](https://www.zigbee2mqtt.io/images/devices/UT-A01E.png) |
 
 
@@ -136,11 +136,27 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `internal`, `external`, `ntc`.
 
 ### Ntc sensor type (enum)
-NTC sensor type (k - KOhm).
+NTC sensor type (k - kOhm), the presets use a beta of 3950. For other sensors set 'ntc_r25' and 'ntc_beta', the type then becomes custom.
 Value can be found in the published state on the `ntc_sensor_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ntc_sensor_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_sensor_type": NEW_VALUE}`.
-The possible values are: `ntc_10k`, `ntc_50k`, `ntc_100k`, `unknown`.
+The possible values are: `ntc_10k`, `ntc_50k`, `ntc_100k`, `custom`.
+
+### Ntc r25 (numeric)
+Resistance of the NTC sensor at 25 °C (R25) as a whole number of kOhm, e.g. 2 for a 2 kOhm sensor.
+Value can be found in the published state on the `ntc_r25` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ntc_r25": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_r25": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `999`.
+The unit of this value is `kΩ`.
+
+### Ntc beta (numeric)
+Beta (B) value of the NTC sensor as stated in its datasheet, e.g. 3950.
+Value can be found in the published state on the `ntc_beta` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ntc_beta": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_beta": NEW_VALUE}`.
+The minimal value is `1000` and the maximum value is `9999`.
+The unit of this value is `K`.
 
 ### Window detection (binary)
 Enables/disables window detection on the device.

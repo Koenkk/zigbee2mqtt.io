@@ -37,7 +37,7 @@ The `configuration.yaml` file contains sensitive information such as MQTT creden
     ```
 
 - **Use a secrets file**: avoid storing credentials in plain text in `configuration.yaml`.
-  Instead, use a separate `secret.yaml` file referenced with the `!secret.yaml` syntax. See [Specifying in a different file](../configuration/mqtt.md#specifying-mqtt-serveruserpassword-and-network_key-in-a-different-file).
+  Instead, use a separate `secret.yaml` file referenced with the `!secret.yaml` syntax. See [Specifying in a different file](../configuration/mqtt.md#specifying-mqtt-server-user-password-and-network-key-in-a-different-file).
 
     Apply the same permission restriction to `secret.yaml`:
 
@@ -157,7 +157,7 @@ The code allows to encrypt the initial network key transport from the Trust Cent
 
 Ask the vendor or refer to each device's documentation to check if an install code is available (usually printed on the device, plainly or as a QR code).
 Codes can be added through the frontend.
-See also [Add install code via MQTT](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd).
+See also [Add install code via MQTT](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-install-code-add).
 
 ### Device passlist and blocklist
 

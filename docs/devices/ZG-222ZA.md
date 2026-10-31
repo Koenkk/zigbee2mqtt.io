@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-222ZA  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Water leak sensor |
-| Exposes | water_leak, battery_low, battery, tamper |
+| Exposes | water_leak, battery_low, battery |
 | Picture | ![HOBEIAN ZG-222ZA](https://www.zigbee2mqtt.io/images/devices/ZG-222ZA.png) |
 
 

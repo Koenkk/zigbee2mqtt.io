@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ID200W-ZIGB  |
 | Vendor  | [ION Industries](/supported-devices/#v=ION%20Industries)  |
 | Description | LED Zigbee Dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, light_type, backlight_mode |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior |
 | Picture | ![ION Industries ID200W-ZIGB](https://www.zigbee2mqtt.io/images/devices/ID200W-ZIGB.png) |
 
 

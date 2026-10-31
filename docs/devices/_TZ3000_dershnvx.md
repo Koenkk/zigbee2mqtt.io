@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | _TZ3000_dershnvx  |
 | Vendor  | [Rely Electronics](/supported-devices/#v=Rely%20Electronics)  |
 | Description | 2 gang, no neutral, switch with backlight |
-| Exposes | switch (state), countdown, switch_type, backlight_mode, indicator_mode |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode |
 | Picture | ![Rely Electronics _TZ3000_dershnvx](https://www.zigbee2mqtt.io/images/devices/_TZ3000_dershnvx.png) |
 
 

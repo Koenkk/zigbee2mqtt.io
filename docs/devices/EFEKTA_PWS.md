@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_PWS  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | [Plant Wattering Sensor, CR2450, CR2477 batteries, temperature ] |
+| Description | [Plant Watering Sensor, CR2450, CR2477 batteries, temperature ] |
 | Exposes | soil_moisture, battery, voltage, temperature, report_delay |
 | Picture | ![EFEKTA EFEKTA_PWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS.png) |
 

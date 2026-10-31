@@ -1,6 +1,6 @@
 ---
-title: "Moes ZG-101ZD control via MQTT"
-description: "Integrate your Moes ZG-101ZD via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-101ZD control via MQTT"
+description: "Integrate your HOBEIAN ZG-101ZD via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-08-01T15:19:08
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Moes ZG-101ZD
+# HOBEIAN ZG-101ZD
 
 |     |     |
 |-----|-----|
 | Model | ZG-101ZD  |
-| Vendor  | [Moes](/supported-devices/#v=Moes)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Smart knob |
 | Exposes | action_brightness_delta, action_step_size, action_color_temperature_delta, action_transition_time, action_rate, battery, operation_mode, action |
-| Picture | ![Moes ZG-101ZD](https://www.zigbee2mqtt.io/images/devices/ZG-101ZD.png) |
+| Picture | ![HOBEIAN ZG-101ZD](https://www.zigbee2mqtt.io/images/devices/ZG-101ZD.png) |
 
 
 

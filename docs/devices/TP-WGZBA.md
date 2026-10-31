@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TP-WGZBA  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee thermostat panel |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), child_lock, open_window, open_window_detected, frost_protection_temperature, schedule_active_group, schedule_group_to_edit, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, temporary_mode, temperature_sensor_select, external_temperature_input, hysteresis_low, hysteresis_high, hydronic_underfloor_heating_relay_output, boiler_dry_contact_output, ntc_temperature, ntc_overheat_protection, ntc_overheat_protection_temperature, radar_detection, radar_sensitivity, radar_do_not_disturb, radar_do_not_disturb_period, standby_brightness, active_brightness, night_mode, night_mode_period, night_brightness, bluetooth_pairing, read_temperature_control_history, temperature_control_history, factory_reset |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), child_lock, open_window, open_window_detected, frost_protection_temperature, schedule_active_group, schedule_group_to_edit, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, temporary_mode_mode, temporary_mode_duration, temporary_mode_target_temperature, temperature_sensor_select, external_temperature_input, hysteresis_low, hysteresis_high, hydronic_underfloor_heating_relay_output, boiler_dry_contact_output, ntc_temperature, ntc_overheat_protection, ntc_overheat_protection_temperature, radar_detection, radar_sensitivity, radar_do_not_disturb, radar_do_not_disturb_period, standby_brightness, active_brightness, night_mode, night_mode_period, night_brightness, bluetooth_pairing, read_temperature_control_history, temperature_control_history, factory_reset |
 | Picture | ![SONOFF TP-WGZBA](https://www.zigbee2mqtt.io/images/devices/TP-WGZBA.png) |
 
 
@@ -133,20 +133,35 @@ Value can be found in the published state on the `weekly_schedule_saturday` prop
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_saturday": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weekly_schedule_saturday": NEW_VALUE}`.
 
-### Temporary mode (composite)
-Temporary temperature mode settings..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode": {"mode": VALUE, "duration": VALUE, "target_temperature": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode": ""}`.
-- `mode` (enum): Boost Mode: Runs the heating at the maximum set temperature for a user-defined duration to quickly warm the room.Timer Mode: Runs the heating at a user-defined temperature for a specified duration. When the timer ends, the thermostat returns to its previous mode and set temperature. allowed values: `boost`, `timer`
-- `duration` (numeric): Boost Mode: Runs the heating at the maximum set temperature for up to 180 minutes.Timer Mode: Runs the heating at a custom temperature for a specified duration of up to 24 hours. max value is 1440, unit is minutes
-- `target_temperature` (numeric): In timer mode,the temperature can be set to 5-30°C. min value is 5, max value is 30, unit is °C
+### Temporary mode mode (enum)
+Disabled exits temporary mode. Boost runs the heating at 30°C. Timer runs the heating at a custom temperature and duration..
+Value can be found in the published state on the `temporary_mode_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_mode": NEW_VALUE}`.
+The possible values are: `disabled`, `timer`, `boost`.
+
+### Temporary mode duration (numeric)
+Boost Mode: Runs for up to 180 minutes. Timer Mode: Runs at a custom temperature for up to 24 hours..
+Value can be found in the published state on the `temporary_mode_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_duration": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `1440`.
+The unit of this value is `minutes`.
+
+### Temporary mode target temperature (numeric)
+In timer mode, the temperature can be set to 5-30°C..
+Value can be found in the published state on the `temporary_mode_target_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temporary_mode_target_temperature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temporary_mode_target_temperature": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `30`.
+The unit of this value is `°C`.
 
 ### Temperature sensor (enum)
-Whether to use the value of the internal temperature sensor or an external temperature sensor for the perceived local temperature. Using an external sensor does not require local temperature calibration..
+Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor.When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor..
 Value can be found in the published state on the `temperature_sensor_select` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
-The possible values are: `internal`, `external`, `external_2`, `external_3`.
+The possible values are: `local_temperature`, `remote_temperature`, `remote_source_offline`.
 
 ### External temperature (numeric)
 The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Zigbee2MQTT..

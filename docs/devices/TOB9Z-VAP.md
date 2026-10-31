@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TOB9Z-VAP  |
 | Vendor  | [Tomzn](/supported-devices/#v=Tomzn)  |
 | Description | Smart circuit breaker |
-| Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock, identify |
+| Exposes | power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock, identify |
 | Picture | ![Tomzn TOB9Z-VAP](https://www.zigbee2mqtt.io/images/devices/TOB9Z-VAP.png) |
 
 

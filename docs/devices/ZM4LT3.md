@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM4LT3  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | 3-gang switch module |
-| Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type, indicator_mode, inching_control_set |
 | Picture | ![Moes ZM4LT3](https://www.zigbee2mqtt.io/images/devices/ZM4LT3.png) |
 
 

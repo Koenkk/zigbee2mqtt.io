@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EKAC-T3092Z  |
 | Vendor  | [EKAZA](/supported-devices/#v=EKAZA)  |
 | Description | 2 gang switch |
-| Exposes | switch (state), power_outage_memory, switch_type |
+| Exposes | switch (state), countdown, power_outage_memory, switch_type |
 | Picture | ![EKAZA EKAC-T3092Z](https://www.zigbee2mqtt.io/images/devices/EKAC-T3092Z.png) |
 
 

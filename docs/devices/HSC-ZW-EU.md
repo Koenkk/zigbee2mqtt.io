@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HSC-ZW-EU  |
 | Vendor  | [GreenSun](/supported-devices/#v=GreenSun)  |
 | Description | Outdoor Smart Plug (with power monitoring) |
-| Exposes | switch (state), countdown, power_outage_memory, switch_type_button, indicator_mode, power, current, voltage, energy, child_lock, identify |
+| Exposes | switch (state), switch_type_button, indicator_mode, power, current, voltage, energy, identify |
 | Picture | ![GreenSun HSC-ZW-EU](https://www.zigbee2mqtt.io/images/devices/HSC-ZW-EU.png) |
 
 

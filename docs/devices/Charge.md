@@ -18,14 +18,22 @@ pageClass: device-page
 | Model | Charge  |
 | Vendor  | [Futurehome](/supported-devices/#v=Futurehome)  |
 | Description | Futurehome Charge (EV Charger) |
-| Exposes | status, charging_start, charging_stop, charging_pause, setpoint_charging_current, auto_charge, cable_locked, state, charging_current_limit, session_energy, energy_meter_start, energy_meter_now, charging_duration, power, voltage, current, energy, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, is_charging, charging_start_datetime, charging_end_datetime, is_plug_connected, connected_start_datetime, connected_end_datetime |
+| Exposes | status, charging_start, charging_stop, charging_pause, setpoint_charging_current, auto_charge, plug_locked_permanently, state, charging_current_limit, session_energy, energy_meter_start, energy_meter_now, charging_duration, power, voltage, current, energy, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, is_charging, charging_start_datetime, charging_end_datetime, is_plug_connected, connected_start_datetime, connected_end_datetime, plug_lock_state |
 | Picture | ![Futurehome Charge](https://www.zigbee2mqtt.io/images/devices/Charge.png) |
 
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+### Pairing
 
+You can initiate pairing mode using *one* of the following methods:
 
+* **Futurehome Hub:** Use the hub to put the charger into pairing mode, and then press "Permit join" in the Zigbee2MQTT UI.
+* **Home Assistant:** Ensure the Bluetooth integration is enabled. Install [Futurehome Charge – Trigger Zigbee Pairing](https://github.com/svhelge/homeassistant-fh-charge_trigger_zigbee_pairing) via HACS, review the documentation, and run the required action to activate pairing mode.
+* **Python Script:** Execute the code from the [Futurehome Charge Zigbee repository](https://github.com/tobijanto/Futurehome-charge-zigbee).
+
+A successful Bluetooth connection is indicated by a clockwise-rotating orange light with a solid blue light at the bottom.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -111,12 +119,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_charge": NEW_VALUE}`.
 If value equals `ON` auto charge is ON, if `OFF` OFF.
 
-### Cable locked (binary)
-Permanently lock cable when not charging..
-Value can be found in the published state on the `cable_locked` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cable_locked": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cable_locked": NEW_VALUE}`.
-If value equals `LOCK` cable locked is ON, if `UNLOCK` OFF.
+### Plug locked when not charging (binary)
+Permanently lock plug (cable) when not charging..
+Value can be found in the published state on the `plug_locked_permanently` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"plug_locked_permanently": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"plug_locked_permanently": NEW_VALUE}`.
+If value equals `LOCK` plug locked when not charging is ON, if `UNLOCK` OFF.
 
 ### Force plug to unlock (enum)
 Try this if the plug is locked in the charger after charging is completed..
@@ -244,4 +252,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Date and time when charger was disconnected..
 Value can be found in the published state on the `connected_end_datetime` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Plug lock state (binary)
+Plug (cable) lock state.
+Value can be found in the published state on the `plug_lock_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"plug_lock_state": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `false` plug lock state is ON, if `true` OFF.
 

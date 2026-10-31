@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | eMotion Air  |
 | Vendor  | [LinknLink](/supported-devices/#v=LinknLink)  |
-| Description | Battery-Powered mmWave Presence Multi-Sensor |
-| Exposes | temperature, humidity, illuminance, occupancy, battery, action |
+| Description | Battery-powered mmWave presence multi-sensor |
+| Exposes | freq, trith, absence_timeout, radar_enable, lx_interval, sht_interval, lx_thread1, lx_thread2, temperature, humidity, illuminance, occupancy, battery, action |
 | Picture | ![LinknLink eMotion Air](https://www.zigbee2mqtt.io/images/devices/eMotion-Air.png) |
 
 
@@ -49,15 +49,67 @@ Press and hold button of the device for 15 seconds until the LED starts blinking
 
 * `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be sent after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of numbers.
 
-* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
-```yaml
-simulated_brightness:
-  delta: 20 # delta per interval, default = 20
-  interval: 200 # interval in milliseconds, default = 200
-```
-
 
 ## Exposes
+
+### Freq (numeric)
+Radar frequency band index (0..4).
+Value can be found in the published state on the `freq` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"freq": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"freq": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `4`.
+
+### Trith (numeric)
+Radar trigger threshold (1..10).
+Value can be found in the published state on the `trith` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"trith": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trith": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10`.
+
+### Absence timeout (numeric)
+Absence timeout / HOLD time in seconds (0..510, 2s steps).
+Value can be found in the published state on the `absence_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"absence_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"absence_timeout": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `510`.
+The unit of this value is `s`.
+
+### Radar enable (binary)
+Enable mmWave radar sensing.
+Value can be found in the published state on the `radar_enable` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_enable": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_enable": NEW_VALUE}`.
+If value equals `true` radar enable is ON, if `false` OFF.
+
+### Lx interval (numeric)
+Illuminance sample interval.
+Value can be found in the published state on the `lx_interval` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lx_interval": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_interval": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `60000`.
+The unit of this value is `s`.
+
+### Sht interval (numeric)
+Temperature/humidity sample interval.
+Value can be found in the published state on the `sht_interval` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sht_interval": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sht_interval": NEW_VALUE}`.
+The minimal value is `10` and the maximum value is `60000`.
+The unit of this value is `s`.
+
+### Lx thread1 (numeric)
+Illuminance threshold 1 (must be < lx_thread2).
+Value can be found in the published state on the `lx_thread1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lx_thread1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_thread1": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65535`.
+
+### Lx thread2 (numeric)
+Illuminance threshold 2 (must be > lx_thread1).
+Value can be found in the published state on the `lx_thread2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lx_thread2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lx_thread2": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65535`.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -74,7 +126,7 @@ It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
@@ -99,5 +151,5 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `toggle`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`.
+The possible values are: `single`, `double`, `triple`, `hold`, `release`.
 

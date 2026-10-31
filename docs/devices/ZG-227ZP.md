@@ -47,7 +47,7 @@ pageClass: device-page
 ## Exposes
 
 ### Ntc temperature (numeric)
-External NTC temperature.
+External NTC temperature,if <-40°C,no installed sensor.
 Value can be found in the published state on the `ntc_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
@@ -114,7 +114,7 @@ NTC high temp alarm threshold.
 Value can be found in the published state on the `ntc_high_temp_alarm_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_high_temp_alarm_threshold": NEW_VALUE}`.
-The minimal value is `-20` and the maximum value is `130`.
+The minimal value is `-40` and the maximum value is `130`.
 The unit of this value is `°C`.
 
 ### Ntc low temp alarm threshold (numeric)
@@ -122,7 +122,7 @@ NTC high temp alarm threshold.
 Value can be found in the published state on the `ntc_low_temp_alarm_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_low_temp_alarm_threshold": NEW_VALUE}`.
-The minimal value is `-20` and the maximum value is `130`.
+The minimal value is `-40` and the maximum value is `130`.
 The unit of this value is `°C`.
 
 ### Battery (numeric)

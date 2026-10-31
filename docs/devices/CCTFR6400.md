@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CCTFR6400  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Temperature/Humidity measurement with thermostat interface |
-| Exposes | keypad_lockout, humidity, battery, voltage, climate (occupied_heating_setpoint, local_temperature, pi_heating_demand), action |
+| Exposes | keypad_lockout, humidity, battery, voltage, boost_duration, boost_temperature, climate (occupied_heating_setpoint, local_temperature, pi_heating_demand), action |
 | Picture | ![Schneider Electric CCTFR6400](https://www.zigbee2mqtt.io/images/devices/CCTFR6400.png) |
 
 
@@ -95,6 +95,8 @@ Further notes:
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
+* `boost_auto_honor`: Handle a boost started from the device's center button by temporarily applying the boost temperature as the setpoint and restoring the previous setpoint when the boost duration ends or the boost is cancelled on the device (default true). Disable this when an external automation implements its own boost policy based on the boost_set/boost_cancel actions. The value must be `true` or `false`
+
 
 ## Exposes
 
@@ -124,6 +126,18 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
+### Boost duration (numeric)
+Duration in minutes of the last boost committed on the device (0 when cancelled).
+Value can be found in the published state on the `boost_duration` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `min`.
+
+### Boost temperature (numeric)
+Target temperature of the last boost committed on the device.
+Value can be found in the published state on the `boost_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
 ### Climate 
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `pi_heating_demand`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `4` and `30`. Reading (`/get`) this attribute is not possible.
@@ -134,5 +148,5 @@ This climate device supports the following features: `occupied_heating_setpoint`
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `screen_sleep`, `screen_wake`, `button_press_plus_down`, `button_press_center_down`, `button_press_minus_down`.
+The possible values are: `screen_sleep`, `screen_wake`, `button_press_plus_down`, `button_press_center_down`, `button_press_minus_down`, `boost_set`, `boost_cancel`.
 

@@ -29,6 +29,8 @@ pageClass: device-page
 ### Pairing
 This device needs to be paired using the installation code, which can be obtained by scanning the QR-code on the device with your smartphone (95 digits, alphanumerical). The device will activate pairing mode for 3 minutes after power on or factory reset. To re-activate pairing mode, press any button while the device is not yet paired. In zigbee2mqtt, navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
 
+If the label is present but no normal scanner can read it, [qrsalvage](https://shadesmaverick.github.io/qrsalvage/) can try to recover a faded, curved, or damaged code locally in the browser. The photo and recovered install code are not uploaded. Do not post the recovered value publicly because it is a pairing secret.
+
 #### Failed pairing after device removal
 When the device re-joins the network after being removed, pairing may fail. In this case, the device will be listed in zigbee2mqtt, but discovery fails, and an error message occurs. To fix this issue, just add the installation code again. The device should be correctly rediscovered automatically.
 
@@ -55,7 +57,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
-* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the reported cover position and the state derived from it, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 

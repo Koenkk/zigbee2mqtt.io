@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_cover_switch_2  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang switch and cover control touch panel with backlight and child lock |
-| Exposes | cover (state, position), switch (state), backlight_mode, motor_steering, calibration, child_lock |
+| Exposes | cover (state, position), switch (state), backlight_mode, motor_direction, calibration, child_lock |
 | Picture | ![Tuya TS0601_cover_switch_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_switch_2.png) |
 
 
@@ -61,12 +61,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
-### Motor steering (enum)
-Motor Steering.
-Value can be found in the published state on the `motor_steering` property.
+### Motor direction (enum)
+Motor rotation direction.
+Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_steering": NEW_VALUE}`.
-The possible values are: `FORWARD`, `BACKWARD`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+The possible values are: `normal`, `reversed`.
 
 ### Calibration (enum)
 Calibration.

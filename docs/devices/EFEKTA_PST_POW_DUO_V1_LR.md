@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_PST_POW_DUO_V1_LR  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Water, gas smart pressure monitor with two sensors, two power supply |
-| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, range, mains_voltage, battery, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
+| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, range, mains_voltage, battery, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data, overheating |
 | Picture | ![EFEKTA EFEKTA_PST_POW_DUO_V1_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_POW_DUO_V1_LR.png) |
 
 
@@ -74,7 +74,7 @@ Value can be found in the published state on the `pressure_offset_1` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset_1": NEW_VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Raw temperature calibration (numeric, 1 endpoint)
 Adjust first temperature sensor.
@@ -121,7 +121,7 @@ Value can be found in the published state on the `pressure_offset_2` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset_2": NEW_VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Raw temperature calibration (numeric, 2 endpoint)
 Adjust second temperature sensor.
@@ -200,4 +200,16 @@ Value can be found in the published state on the `comparison_previous_data` prop
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
+
+### Overheating (enum, 1 endpoint)
+Sensor overheating detection.
+Value can be found in the published state on the `overheating_1` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `FALSE`, `TRUE`.
+
+### Overheating (enum, 2 endpoint)
+Sensor overheating detection.
+Value can be found in the published state on the `overheating_2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `FALSE`, `TRUE`.
 

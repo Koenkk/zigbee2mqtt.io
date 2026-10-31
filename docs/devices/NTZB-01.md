@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NTZB-01  |
 | Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | 1 switch and 1 socket with backlight |
-| Exposes | switch (state), power_outage_memory, switch_type |
+| Exposes | switch (state), countdown, switch_type, backlight_mode, indicator_mode |
 | Picture | ![Nova Digital NTZB-01](https://www.zigbee2mqtt.io/images/devices/NTZB-01.png) |
 
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_Smart_AQ_Box_R3  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | EFEKTA Smart Air Quality Box, can control the relay, binding on some other devices |
-| Exposes | co2, pm1, pm25, pm4, pm10, pm_size, aqi_25_index, voc_index, pressure, temperature, humidity, reading_delay, alarm, light_indicator, light_indicator_level, temperature_offset, humidity_offset, auto_clean_interval, manual_clean, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2, enable_pm25, high_pm25, low_pm25, enable_co2_gas, high_co2_gas, low_co2_gas, enable_voc, high_voc, low_voc |
+| Exposes | identify, co2, pm1, pm25, pm4, pm10, pm_size, aqi_25_index, voc_index, pressure, temperature, humidity, reading_delay, alarm, light_indicator, light_indicator_level, temperature_offset, humidity_offset, auto_clean_interval, manual_clean, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2, enable_pm25, high_pm25, low_pm25, enable_co2_gas, high_co2_gas, low_co2_gas, enable_voc, high_voc, low_voc |
 | Picture | ![EFEKTA EFEKTA_Smart_AQ_Box_R3](https://www.zigbee2mqtt.io/images/devices/EFEKTA_Smart_AQ_Box_R3.png) |
 
 
@@ -49,8 +49,17 @@ pageClass: device-page
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a maximum value of `3`
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a maximum value of `30`
+
 
 ## Exposes
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### CO2 (numeric)
 Measured value.

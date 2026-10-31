@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eFlower_Pro  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Plant Wattering Sensor with e-ink display 2.13 |
+| Description | Plant Watering Sensor with e-ink display 2.13 |
 | Exposes | soil_moisture, battery, voltage, illuminance, temperature, humidity |
 | Picture | ![EFEKTA EFEKTA_eFlower_Pro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlower_Pro.png) |
 
@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-[Plant Wattering Sensor with e-ink display 2.13](https://efektalab.com/eFlowerPro)
+[Plant Watering Sensor with e-ink display 2.13](https://efektalab.com/eFlowerPro)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -75,7 +75,7 @@ It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.

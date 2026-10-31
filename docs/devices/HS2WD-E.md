@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS2WD-E  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart siren |
-| Exposes | battery, warning, max_duration |
+| Exposes | battery, max_duration, warning |
 | Picture | ![Heiman HS2WD-E](https://www.zigbee2mqtt.io/images/devices/HS2WD-E.png) |
 
 
@@ -46,11 +46,20 @@ Where:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Max duration (numeric)
+Max duration of Siren.
+Value can be found in the published state on the `max_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65534`.
+The unit of this value is `s`.
 
 ### Warning (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE, "mode": VALUE}}`
@@ -58,12 +67,4 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warn
 - `strobe_duty_cycle` (numeric): Length of the flash cycle max value is 10
 - `duration` (numeric): Duration in seconds of the alarm unit is s
 - `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `emergency`
-
-### Max duration (numeric)
-Maximum time that the alarm will be active.
-Value can be found in the published state on the `max_duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `65534`.
-The unit of this value is `s`.
 

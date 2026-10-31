@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-102ZA  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Door/window sensor |
-| Exposes | contact, battery, voltage, tamper, battery_low |
+| Exposes | contact, battery, voltage |
 | Picture | ![HOBEIAN ZG-102ZA](https://www.zigbee2mqtt.io/images/devices/ZG-102ZA.png) |
 
 
@@ -51,16 +51,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
 
