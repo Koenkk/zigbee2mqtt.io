@@ -431,7 +431,7 @@ function getExposeDocs(expose: Expose, definition: Definition) {
             txt = compositeDocs(expose.item_type);
         } else if (expose.item_type.type === 'enum') {
             txt['value'] = expose.item_type.values.map((v) => `"${v}"`).join(', ');
-        } else if (expose.item_type.type === 'text') {
+        } else if (expose.item_type.type === 'text' || expose.item_type.type === 'numeric') {
             // Empty on purpose
         } else {
             throw new Error(`Unsupported list item_type: ${expose.item_type.type}`);

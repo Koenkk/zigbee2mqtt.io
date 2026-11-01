@@ -31,7 +31,7 @@ All officially supported adapters are listed on this page. Note that before an a
 
 Before buying an adapter, please read the notes below!
 
-- Want to migrate to a different adapter? This may require repairing all your devices in some cases, see [FAQ](../faq/README.md#what-does-and-does-not-require-repairing-of-all-devices)
+- Want to migrate to a different adapter? This may require repairing all your devices in some cases, see [FAQ](../faq/README.md#what-does-and-does-not-require-re-pairing-of-all-devices)
 - Network adapters connected via WiFi might have reduced stability as the serial protocol does not have enough fault-tolerance to handle packet loss or latency delays that can normally occur over WiFi connections. If you cannot use a locally connected USB or UART/GPIO adapter then the recommendation is to use remote adapter that connected via Ethernet (wired) to avoid issues.
 - What are the differences between the various CC2652/CC1352 chips?
     - Chips ending with `P` have a power amplifier which support up-to 20dBm vs 5dBm on adapters ending with `R`/`RB`.
@@ -44,7 +44,7 @@ Note that only adapters based on zStack or EmberZNet currently support backing u
 
 #### Flashing an existing adapter
 
-Flashing tools can be used to upgrade the firmware on an existing adapter without needing to repair devices. See the [FAQ](https://www.zigbee2mqtt.io/guide/faq/#what-does-and-does-not-require-repairing-of-all-devices) for information on what does and does not require repairing of devices.
+Flashing tools can be used to upgrade the firmware on an existing adapter without needing to repair devices. See the [FAQ](https://www.zigbee2mqtt.io/guide/faq/#what-does-and-does-not-require-re-pairing-of-all-devices) for information on what does and does not require repairing of devices.
 
 #### Is your OS unable to find your device?
 

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_miniPWS  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Mini plant wattering sensor |
+| Description | Mini plant watering sensor |
 | Exposes | soil_moisture, battery, voltage, report_delay |
 | Picture | ![EFEKTA EFEKTA_miniPWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.png) |
 
@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-[Mini plant wattering sensor](http://efektalab.com/miniPWS)
+[Mini plant watering sensor](http://efektalab.com/miniPWS)
 
 
 ### Build guide
@@ -70,7 +70,7 @@ The unit of this value is `mV`.
 Adjust Report Delay, by default 60 minutes.
 Value can be found in the published state on the `report_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"report_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `180`.
 The unit of this value is `min`.
 

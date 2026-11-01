@@ -61,14 +61,14 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### LED brightness (numeric)
 Here you can adjust the LED brightness.
 Value can be found in the published state on the `led_brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_brightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -76,14 +76,14 @@ The unit of this value is `%`.
 Here you can enable/disable the energy-saving mode.
 Value can be found in the published state on the `energy_saving_mode_enabled` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_saving_mode_enabled": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_saving_mode_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_saving_mode_enabled": "VALUE"}`.
 If value equals `ON` enable energy-saving mode is ON, if `OFF` OFF.
 
 ### Energy-saving threshold (numeric)
 Here you can set the threshold for the energy-saving mode. If the consumption falls below the set value (and the timer has been met), the smart plug will be turned off..
 Value can be found in the published state on the `energy_saving_mode_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_saving_mode_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_saving_mode_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_saving_mode_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `50`.
 The unit of this value is `watt`.
 
@@ -91,7 +91,7 @@ The unit of this value is `watt`.
 Here you can set the time the threshold has to be met before the smart plug is turned off.
 Value can be found in the published state on the `energy_saving_mode_timer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy_saving_mode_timer": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_saving_mode_timer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_saving_mode_timer": VALUE}`.
 The minimal value is `1` and the maximum value is `1800`.
 The unit of this value is `seconds`.
 
@@ -120,6 +120,6 @@ The unit of this value is `kWh`.
 Triggers the reset of all energy meters on the device to 0 kWh.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_energy_meters": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_energy_meters": "VALUE"}`.
 The possible values are: `reset`.
 

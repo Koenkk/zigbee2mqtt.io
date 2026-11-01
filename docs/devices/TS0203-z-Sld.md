@@ -66,14 +66,14 @@ The unit of this value is `mV`.
 Actions switch.
 Value can be found in the published state on the `switch_actions` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`.
 
 ### Delay on (numeric)
 Delay On.
 Value can be found in the published state on the `delay_on` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"delay_on": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_on": VALUE}`.
 The minimal value is `0` and the maximum value is `120`.
 The unit of this value is `sec`.
 
@@ -81,7 +81,7 @@ The unit of this value is `sec`.
 Delay Off.
 Value can be found in the published state on the `delay_off` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"delay_off": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_off": VALUE}`.
 The minimal value is `0` and the maximum value is `120`.
 The unit of this value is `sec`.
 
@@ -89,13 +89,13 @@ The unit of this value is `sec`.
 Disable command 'On'.
 Value can be found in the published state on the `on_command_off` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"on_command_off": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_command_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_command_off": "VALUE"}`.
 If value equals `ON` on command off is ON, if `OFF` OFF.
 
 ### Off command off (binary)
 Disable command 'Off'.
 Value can be found in the published state on the `off_command_off` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"off_command_off": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_command_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_command_off": "VALUE"}`.
 If value equals `ON` off command off is ON, if `OFF` OFF.
 

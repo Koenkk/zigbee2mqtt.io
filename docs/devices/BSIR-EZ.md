@@ -53,14 +53,14 @@ The possible values are: `siren_active_from_external_trigger`, `light_active_fro
 Trigger an alarm on the device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_alarm": "VALUE"}`.
 The possible values are: `trigger`.
 
 ### Stop alarm (enum)
 Stop an active alarm on the device. Please keep in mind that the alarm stops automatically after the configured duration for the light and siren is expired..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"stop_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"stop_alarm": "VALUE"}`.
 The possible values are: `stop`.
 
 ### External trigger state (binary)
@@ -85,21 +85,21 @@ If value equals `outage_detected` power outage state is ON, if `power_ok` OFF.
 Select if you only want a visual warning, an acoustic warning or both.
 Value can be found in the published state on the `alarm_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_mode": "VALUE"}`.
 The possible values are: `only_light`, `only_siren`, `siren_and_light`.
 
 ### Siren volume (enum)
 Volume of the siren.
 Value can be found in the published state on the `siren_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_volume": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_volume": "VALUE"}`.
 The possible values are: `reduced`, `medium`, `loud`.
 
 ### Siren duration (numeric)
 Duration of the alarm siren.
 Value can be found in the published state on the `siren_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_duration": VALUE}`.
 The minimal value is `1` and the maximum value is `15`.
 The unit of this value is `min`.
 
@@ -107,7 +107,7 @@ The unit of this value is `min`.
 Duration of the alarm light.
 Value can be found in the published state on the `light_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_duration": VALUE}`.
 The minimal value is `1` and the maximum value is `15`.
 The unit of this value is `min`.
 
@@ -115,7 +115,7 @@ The unit of this value is `min`.
 Delay of the siren activation after an alarm is being triggered.
 Value can be found in the published state on the `siren_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"siren_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"siren_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `180`.
 The unit of this value is `sec`.
 
@@ -123,7 +123,7 @@ The unit of this value is `sec`.
 Delay of the light activation after an alarm is being triggered.
 Value can be found in the published state on the `light_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `180`.
 The unit of this value is `sec`.
 
@@ -131,7 +131,7 @@ The unit of this value is `sec`.
 Select which power source you want to use. Note: The battery is always being used as backup source..
 Value can be found in the published state on the `primary_power_source` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"primary_power_source": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"primary_power_source": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"primary_power_source": "VALUE"}`.
 The possible values are: `solar_panel`, `ac_power_supply`, `dc_power_supply`.
 
 ### Current power source (enum)

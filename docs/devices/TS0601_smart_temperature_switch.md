@@ -59,7 +59,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Turn on automatic mode to control constant temperature.
 Value can be found in the published state on the `autowork` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"autowork": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"autowork": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"autowork": "VALUE"}`.
 If value equals `ON` autowork is ON, if `OFF` OFF.
 
 ### Work mode (enum)
@@ -69,21 +69,21 @@ If value equals `ON` autowork is ON, if `OFF` OFF.
             .
 Value can be found in the published state on the `work_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"work_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_mode": "VALUE"}`.
 The possible values are: `heating`, `cooling`.
 
 ### Temperature unit (enum)
 Temperature unit.
 Value can be found in the published state on the `temperature_unit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_unit": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Temperature c setpoint (numeric)
 Temperature ℃ set point.
 Value can be found in the published state on the `temperature_c_setpoint` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_c_setpoint": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_c_setpoint": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_c_setpoint": VALUE}`.
 The minimal value is `-20` and the maximum value is `102`.
 The unit of this value is `℃`.
 
@@ -91,7 +91,7 @@ The unit of this value is `℃`.
 Temperature ℉ set point.
 Value can be found in the published state on the `temperature_f_setpoint` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_f_setpoint": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_f_setpoint": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_f_setpoint": VALUE}`.
 The minimal value is `-4` and the maximum value is `221`.
 The unit of this value is `℉`.
 
@@ -99,14 +99,14 @@ The unit of this value is `℉`.
 The delta between temperature setpoint and measured temperature to trigger heating or cooling.
 Value can be found in the published state on the `temperature_range` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_range": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_range": VALUE}`.
 The minimal value is `1` and the maximum value is `9`.
 
 ### Temperature calibration (numeric)
 Temperature calibration always in ℉.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-9` and the maximum value is `9`.
 The unit of this value is `℉`.
 
@@ -114,14 +114,14 @@ The unit of this value is `℉`.
 Turn on cooling mode delay.
 Value can be found in the published state on the `cooling_delay_switch` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cooling_delay_switch": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cooling_delay_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cooling_delay_switch": "VALUE"}`.
 If value equals `ON` cooling delay switch is ON, if `OFF` OFF.
 
 ### Cooling delay (numeric)
 Delay to turn on - only for cooling mode.
 Value can be found in the published state on the `cooling_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cooling_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cooling_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cooling_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `m`.
 
@@ -129,13 +129,13 @@ The unit of this value is `m`.
 Countdown to turn device on/off after a certain time.
 Value can be found in the published state on the `countdown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
 ### Schedules (list)
 Schedules for automatic mode work at certain week day and time.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedules": [{"enabled": VALUE, "work_mode": VALUE, "temperature_f": VALUE, "start": VALUE, "end": VALUE, "week_days": VALUE}]}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedules": [{"enabled": VALUE, "work_mode": "VALUE", "temperature_f": VALUE, "start": VALUE, "end": VALUE, "week_days": VALUE}]}`
 - `enabled` (binary): Enable schedule allowed values: `true` or `false`
 - `work_mode` (enum) allowed values: `heating`, `cooling`
 - `temperature_f` (numeric): Target temperature in ℉ unit is ℉

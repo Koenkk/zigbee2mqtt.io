@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eFlower_Pro  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Plant Wattering Sensor with e-ink display 2.13 |
+| Description | Plant Watering Sensor with e-ink display 2.13 |
 | Exposes | soil_moisture, battery, voltage, illuminance, temperature, humidity |
 | Picture | ![EFEKTA EFEKTA_eFlower_Pro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlower_Pro.png) |
 
@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-[Plant Wattering Sensor with e-ink display 2.13](https://efektalab.com/eFlowerPro)
+[Plant Watering Sensor with e-ink display 2.13](https://efektalab.com/eFlowerPro)
 <!-- Notes END: Do not edit below this line -->
 
 

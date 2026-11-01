@@ -11,7 +11,7 @@ Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can contro
 
 ## Creating a group
 
-Groups can be created via the frontend (easiest), [MQTT](./mqtt_topics_and_messages.md#zigbee2mqttbridgerequestgroupadd) or by adding them to the `configuration.yaml` as shown below.
+Groups can be created via the frontend (easiest), [MQTT](./mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-group-add) or by adding them to the `configuration.yaml` as shown below.
 
 ## Configuration
 

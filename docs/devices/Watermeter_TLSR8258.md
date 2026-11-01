@@ -60,14 +60,14 @@ The unit of this value is `mV`.
 Actions switch 1.
 Value can be found in the published state on the `switch_actions_4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_4": "VALUE"}`.
 The possible values are: `on_off`, `off_on`, `toggle`.
 
 ### Switch actions (enum, 5 endpoint)
 Actions switch 2.
 Value can be found in the published state on the `switch_actions_5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_5": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_5": "VALUE"}`.
 The possible values are: `on_off`, `off_on`, `toggle`.
 
 ### Volume (numeric, 1 endpoint)

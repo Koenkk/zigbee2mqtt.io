@@ -64,7 +64,7 @@ The unit of this value is `cm`.
 Presence delay.
 Value can be found in the published state on the `presence_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `600`.
 The unit of this value is `s`.
 
@@ -72,21 +72,21 @@ The unit of this value is `s`.
 Move sensitivity.
 Value can be found in the published state on the `movesensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movesensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movesensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Breathsensitivity (numeric)
 Breath sensitivity.
 Value can be found in the published state on the `breathsensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breathsensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breathsensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Movedistance max (numeric)
 Move detection max distance.
 Value can be found in the published state on the `movedistance_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movedistance_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movedistance_max": VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -94,7 +94,7 @@ The unit of this value is `cm`.
 Move detection min distance.
 Value can be found in the published state on the `movedistance_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movedistance_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movedistance_min": VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -102,7 +102,7 @@ The unit of this value is `cm`.
 Breath detection max distance.
 Value can be found in the published state on the `breathdistance_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breathdistance_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breathdistance_max": VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -110,7 +110,7 @@ The unit of this value is `cm`.
 Breath detection min distance.
 Value can be found in the published state on the `breathdistance_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breathdistance_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breathdistance_min": VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -118,13 +118,13 @@ The unit of this value is `cm`.
 Self learning mode.
 Value can be found in the published state on the `self_learning` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_learning": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_learning": "VALUE"}`.
 The possible values are: `start`, `stop`.
 
 ### Restore factory setting (binary)
 Factory reset (behavior depends on firmware).
 Value can be found in the published state on the `restore_factory_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restore_factory_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restore_factory_setting": VALUE}`.
 If value equals `true` restore factory setting is ON, if `false` OFF.
 

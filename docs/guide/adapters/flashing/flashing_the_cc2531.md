@@ -6,11 +6,11 @@ redirectFrom: /information/flashing_the_cc2531.md
 
 The firmware can be flashed with multiple devices. The easiest but most expensive option is with the _CC Debugger_ from Texas Instruments or a chinese clone _SmartRF04EB_, which is described on this page. However, you can also use a _Raspberry Pi_ or a MCU like the _Arduino Uno_ or the cheap _ESP8266_/_ESP32_ with four dupont cables and optionally a downloader cable. More information about alternative flashing methods can be found here: [Alternative firmware flashing methods](./alternative_flashing_methods.md). When using Arduino/ESP8266/ESP32, you can use the simple browser-based method with XZG Multi-Tool, as described in the Web based solution section below.
 
-**NOTE 1**: In case you are already running a Zigbee network: reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../../faq/README.md#what-does-and-does-not-require-repairing-of-all-devices)
+**NOTE 1**: In case you are already running a Zigbee network: reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../../faq/README.md#what-does-and-does-not-require-re-pairing-of-all-devices)
 
 **NOTE 2**: In this tutorial we will flash the default firmware. For larger network (20+) or when experiencing stability problems the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) is recommended. This firmware has a limitation of 5 direct children so make sure to have enough routers in your network.
 
-**NOTE 3**: The CC2531 USB dongle can be flashed also with the [CC2530 firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/default) to be operated via the P0.2/P0.3 serial pins (which are the first one and the second one of the IO expansion port). Be careful when using the CC2531 in association with an ESP8266 (as if it were the [CC2530](./connecting_cc2530.md#via-an-esp8266)): the onboard USB power supply may not be able to power an additional ESP8266 without overheating/failing.
+**NOTE 3**: The CC2531 USB dongle can be flashed also with the [CC2530 firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/default) to be operated via the P0.2/P0.3 serial pins (which are the first one and the second one of the IO expansion port). Be careful when using the CC2531 in association with an ESP8266 (as if it were the [CC2530](./connecting_cc2530.md#via-an-esp8266-as-a-serial-to-wifi-bridge)): the onboard USB power supply may not be able to power an additional ESP8266 without overheating/failing.
 
 ## Required hardware
 
