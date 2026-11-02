@@ -57,6 +57,14 @@ simulated_brightness:
   interval: 200 # interval in milliseconds, default = 200
 \`\`\`
 `;
+    } else if (option.type === 'composite' && option.property === 'battery_voltage_range') {
+        extra = `Example:
+\`\`\`yaml
+battery_voltage_range:
+  min: 2850 # 0% voltage threshold in mV
+  max: 3000 # 100% voltage threshold in mV
+\`\`\`
+`;
     } else if (option.type === 'composite' && option.property === 'switch_actions') {
         extra = `Example:
 \`\`\`yaml

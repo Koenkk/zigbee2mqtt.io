@@ -120,21 +120,21 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Pulses per unit. Default 1000 imp/kWh for electricity. Range 0 to 65535.
 Value can be found in the published state on the `pulse_configuration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pulse_configuration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulse_configuration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulse_configuration": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### Interface mode (enum)
 Operating mode/probe.
 Value can be found in the published state on the `interface_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"interface_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interface_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interface_mode": "VALUE"}`.
 The possible values are: `electricity`, `gas`, `water`, `kamstrup-kmp`, `linky`, `IEC62056-21`, `DSMR-2.3`, `DSMR-4.0`.
 
 ### Unit summation (numeric)
 Sets the meter summation in the normalized published unit: kWh for energy meters and m³ for gas/water meters..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unit_summation": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unit_summation": VALUE}`.
 The minimal value is `0` and the maximum value is `9007199254740991`.
 
 ### Check meter (binary)

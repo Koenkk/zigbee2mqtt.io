@@ -49,7 +49,7 @@ The router firmware provides no LED status indication. If your board's LED is li
 Transmit power, supported from firmware 20221102. The max is 20 dBm for CC1352P/CC2652P (default 9 dBm) and 5 dBm for CC2652R/CC2652RB (any higher value is converted to 5 dBm).
 Value can be found in the published state on the `transmit_power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"transmit_power": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transmit_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transmit_power": VALUE}`.
 The minimal value is `-20` and the maximum value is `20`.
 The unit of this value is `dBm`.
 

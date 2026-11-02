@@ -58,7 +58,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Switch 1 Countdown.
 Value can be found in the published state on the `countdown_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_1": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -66,7 +66,7 @@ The unit of this value is `s`.
 Switch 2 Countdown.
 Value can be found in the published state on the `countdown_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_2": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -74,21 +74,21 @@ The unit of this value is `s`.
 Power-on Status.
 Value can be found in the published state on the `relay_status` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_status": "VALUE"}`.
 The possible values are: `off`, `on`, `memory`.
 
 ### Light mode (enum)
 Indicator Light Status.
 Value can be found in the published state on the `light_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": "VALUE"}`.
 The possible values are: `relay`, `none`, `pos`.
 
 ### Delays time (numeric)
 Unoccupied Delay Time.
 Value can be found in the published state on the `delays_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delays_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delays_time": VALUE}`.
 The minimal value is `3` and the maximum value is `3600`.
 The unit of this value is `s`.
 
@@ -96,20 +96,20 @@ The unit of this value is `s`.
 Trigger Sensitivity.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Turn on light for person (enum)
 Turn On Light When Human Detected.
 Value can be found in the published state on the `turn_on_light_for_person` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turn_on_light_for_person": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turn_on_light_for_person": "VALUE"}`.
 The possible values are: `none`, `all`, `on_ch1`, `on_ch2`.
 
 ### Turn off light for person (enum)
 Turn Off Light When Human Not Detected.
 Value can be found in the published state on the `turn_off_light_for_person` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turn_off_light_for_person": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turn_off_light_for_person": "VALUE"}`.
 The possible values are: `none`, `all`, `off_ch1`, `off_ch2`.
 

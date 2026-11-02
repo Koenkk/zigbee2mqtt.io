@@ -49,7 +49,7 @@ The unit of this value is `°C`.
 Temperature measurement period.
 Value can be found in the published state on the `measurment_period` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurment_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurment_period": VALUE}`.
 The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `sec`.
 
@@ -57,7 +57,7 @@ The unit of this value is `sec`.
 Min threshold for alarm binding.
 Value can be found in the published state on the `threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 

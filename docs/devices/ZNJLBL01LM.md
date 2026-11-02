@@ -94,7 +94,7 @@ If value equals `true` charging status is ON, if `false` OFF.
 Whether the curtain direction is inverted.
 Value can be found in the published state on the `reverse_direction` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"reverse_direction": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": VALUE}`.
 If value equals `true` reverse direction is ON, if `false` OFF.
 
 ### Motor state (enum)
@@ -113,6 +113,6 @@ If value equals `true` running is ON, if `false` OFF.
 Controls the motor speed.
 Value can be found in the published state on the `motor_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_speed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_speed": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 

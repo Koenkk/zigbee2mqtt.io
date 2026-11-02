@@ -69,6 +69,6 @@ The unit of this value is `%`.
 Silence the alarm.
 Value can be found in the published state on the `silence` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": VALUE}`.
 If value equals `true` silence is ON, if `false` OFF.
 

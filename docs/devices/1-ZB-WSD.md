@@ -57,7 +57,7 @@ The unit of this value is `°C`.
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `°C`.
 
@@ -65,14 +65,14 @@ The unit of this value is `°C`.
 Auto work mode.
 Value can be found in the published state on the `auto_work` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_work": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_work": "VALUE"}`.
 If value equals `ON` auto work is ON, if `OFF` OFF.
 
 ### Temperature target (numeric)
 Temperature target.
 Value can be found in the published state on the `temperature_target` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_target": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_target": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 The unit of this value is `°C`.
 
@@ -80,7 +80,7 @@ The unit of this value is `°C`.
 Keep the temperature in a range.
 Value can be found in the published state on the `temperature_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_range": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `°C`.
 
@@ -88,21 +88,21 @@ The unit of this value is `°C`.
 Work mode.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "VALUE"}`.
 The possible values are: `heating`, `cooling`.
 
 ### Delay (binary)
 Switch delay time mode.
 Value can be found in the published state on the `delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay": "VALUE"}`.
 If value equals `ON` delay is ON, if `OFF` OFF.
 
 ### Delay time (numeric)
 Switch delay time.
 Value can be found in the published state on the `delay_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `minute`.
 

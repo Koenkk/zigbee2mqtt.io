@@ -63,14 +63,14 @@ The unit of this value is `%LEL`.
 Gas concentration value at which an alarm is triggered ("10%LEL" is more sensitive than "15%LEL").
 Value can be found in the published state on the `gas_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"gas_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_sensitivity": "VALUE"}`.
 The possible values are: `10%LEL`, `15%LEL`.
 
 ### Selftest (enum)
 Starts the self-test process (checking the indicator light and buzzer work properly).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": "VALUE"}`.
 The possible values are: `selftest`.
 
 ### Test (binary)
@@ -83,7 +83,7 @@ If value equals `true` test is ON, if `false` OFF.
 The buzzer can be muted and alarmed manually. During a gas alarm, the buzzer can be manually muted for 10 minutes ("mute"), but cannot be unmuted manually before this timeout expires. The buzzer cannot be pre-muted, as this function only works during a gas alarm. During the absence of a gas alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute"), but for this "linkage_alarm" option must be enabled.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": "VALUE"}`.
 The possible values are: `mute`, `alarm`.
 
 ### Buzzer manual alarm (binary)
@@ -104,7 +104,7 @@ If value equals `true` buzzer manual mute is ON, if `false` OFF.
 When this option is enabled and a gas alarm has occurred, then "linkage_alarm_state"=true, and when the gas alarm has ended or the buzzer has been manually muted, then "linkage_alarm_state"=false.
 Value can be found in the published state on the `linkage_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linkage_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": VALUE}`.
 If value equals `true` linkage alarm is ON, if `false` OFF.
 
 ### Linkage alarm state (binary)

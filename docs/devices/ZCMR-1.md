@@ -48,14 +48,14 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Reverse the motor direction. This resets the upper and lower limits; recalibrate them using border afterwards..
 Value can be found in the published state on the `reverse_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": "VALUE"}`.
 The possible values are: `forward`, `back`.
 
 ### Border (enum)
 Store the current position as the upper or lower limit.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": "VALUE"}`.
 The possible values are: `up`, `down`.
 
 ### Situation set (enum)

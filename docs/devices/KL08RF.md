@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | KL08RF  |
 | Vendor  | [Salus Controls](/supported-devices/#v=Salus%20Controls)  |
 | Description | iT600 8-zone wiring centre |
-| Exposes | zone_1, zone_2, zone_3, zone_4, zone_5, zone_6, zone_7, zone_8, replaced_thermostat |
+| Exposes |  |
 | Picture | ![Salus Controls KL08RF](https://www.zigbee2mqtt.io/images/devices/KL08RF.png) |
 
 
@@ -55,56 +55,5 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Zone 1 (text)
-IEEE address of the thermostat in zone 1, its short address while no device has it, null while the zone is free.
-Value can be found in the published state on the `zone_1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_1": ""}`.
-It's not possible to write (`/set`) this value.
 
-### Zone 2 (text)
-IEEE address of the thermostat in zone 2, its short address while no device has it, null while the zone is free.
-Value can be found in the published state on the `zone_2` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_2": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Zone 3 (text)
-IEEE address of the thermostat in zone 3, its short address while no device has it, null while the zone is free.
-Value can be found in the published state on the `zone_3` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_3": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Zone 4 (text)
-IEEE address of the thermostat in zone 4, its short address while no device has it, null while the zone is free.
-Value can be found in the published state on the `zone_4` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_4": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Zone 5 (text)
-IEEE address of the thermostat in zone 5, its short address while no device has it, null while the zone is free.
-Value can be found in the published state on the `zone_5` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_5": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Zone 6 (text)
-IEEE address of the thermostat in zone 6, its short address while no device has it, null while the zone is free.
-Value can be found in the published state on the `zone_6` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_6": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Zone 7 (text)
-IEEE address of the thermostat in zone 7, its short address while no device has it, null while the zone is free.
-Value can be found in the published state on the `zone_7` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_7": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Zone 8 (text)
-IEEE address of the thermostat in zone 8, its short address while no device has it, null while the zone is free.
-Value can be found in the published state on the `zone_8` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zone_8": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Replaced thermostat (text)
-IEEE address of the thermostat the wiring centre last reported as replaced in a zone, its short address while no device has it.
-Value can be found in the published state on the `replaced_thermostat` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
 

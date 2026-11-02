@@ -136,7 +136,7 @@ It's not possible to write (`/set`) this value.
 If value equals `true` dHCP enabled is ON, if `false` OFF.
 
 ### Wi-Fi Configuration (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_config": {"enabled": VALUE, "ssid": VALUE, "password": VALUE, "static_ip": VALUE, "net_mask": VALUE, "gateway": VALUE, "name_server": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_config": {"enabled": VALUE, "ssid": "VALUE", "password": "VALUE", "static_ip": "VALUE", "net_mask": "VALUE", "gateway": "VALUE", "name_server": "VALUE"}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_config": ""}`.
 - `enabled` (binary): Enable/disable Wi-Fi connectivity allowed values: `true` or `false`
 - `ssid` (text): Name (SSID) of the Wi-Fi network to connect to 
@@ -150,6 +150,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 

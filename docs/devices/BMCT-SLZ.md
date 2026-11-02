@@ -70,7 +70,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Device mode.
 Value can be found in the published state on the `device_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": "VALUE"}`.
 The possible values are: `light`, `shutter`, `disabled`.
 
 ### Power (numeric)
@@ -91,6 +91,6 @@ The unit of this value is `kWh`.
 Triggers the reset of all energy meters on the device to 0 kWh.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_energy_meters": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_energy_meters": "VALUE"}`.
 The possible values are: `reset`.
 

@@ -55,7 +55,7 @@ The unit of this value is `°C`.
 Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"contact": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"contact": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"contact": VALUE}`.
 If value equals `true` contact is ON, if `false` OFF.
 
 ### Battery (numeric)
