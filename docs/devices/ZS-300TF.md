@@ -106,15 +106,15 @@ The unit of this value is `lx`.
 sensor reporting period.
 Value can be found in the published state on the `report_period` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_period": VALUE}`.
 The minimal value is `5` and the maximum value is `1200`.
 The unit of this value is `S`.
 
-### Soil calibration (numeric)
-Soil Humidity calibration.
+### Soil moisture calibration (numeric)
+Offset for measured soil moisture.
 Value can be found in the published state on the `soil_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_calibration": VALUE}`.
 The minimal value is `-30` and the maximum value is `30`.
 The unit of this value is `%`.
 
@@ -122,7 +122,7 @@ The unit of this value is `%`.
 Humidity calibration.
 Value can be found in the published state on the `humidity_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-30` and the maximum value is `30`.
 The unit of this value is `%`.
 
@@ -130,7 +130,7 @@ The unit of this value is `%`.
 Illuminance calibration.
 Value can be found in the published state on the `illuminance_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": VALUE}`.
 The minimal value is `-15` and the maximum value is `1000`.
 The unit of this value is `lux`.
 
@@ -138,7 +138,7 @@ The unit of this value is `lux`.
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
 
@@ -146,7 +146,7 @@ The unit of this value is `°C`.
 Soil water shortage humidity value.
 Value can be found in the published state on the `soil_warning` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_warning": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_warning": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -154,7 +154,7 @@ The unit of this value is `%`.
 Soil Fertility Calibration.
 Value can be found in the published state on the `soil_fertility_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_fertility_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_fertility_calibration": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `μS/cm`.
 
@@ -162,7 +162,7 @@ The unit of this value is `μS/cm`.
 When the soil fertility value is lower than what threshold should a warning be issued.
 Value can be found in the published state on the `soil_fertility_set_v0` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_fertility_set_v0": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_fertility_set_v0": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `μS/cm`.
 
@@ -170,7 +170,7 @@ The unit of this value is `μS/cm`.
 When the soil fertility value is lower than what threshold should a warning be issued.
 Value can be found in the published state on the `soil_fertility_set_v1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_fertility_set_v1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_fertility_set_v1": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `μS/cm`.
 

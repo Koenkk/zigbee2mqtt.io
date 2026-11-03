@@ -54,7 +54,7 @@ It's not possible to read (`/get`) this value.
 Auto off after specific time for manual watering..
 Value can be found in the published state on the `timer` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer": VALUE}`.
 The minimal value is `1` and the maximum value is `599`.
 The unit of this value is `min`.
 
@@ -74,7 +74,7 @@ If value equals `ON` frost lock is ON, if `OFF` OFF.
 Resets frost lock to make the device workable again..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_frost_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_frost_lock": "VALUE"}`.
 The possible values are: `RESET`.
 
 ### Schedule mode (enum)
@@ -87,13 +87,13 @@ The possible values are: `OFF`, `WEEKDAY`, `PERIODIC`.
 Watering by periodic interval: Irrigate every n days.
 Value can be found in the published state on the `schedule_periodic` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_periodic": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_periodic": VALUE}`.
 The minimal value is `0` and the maximum value is `7`.
 The unit of this value is `day`.
 
 ### Schedule weekday (composite)
 Watering by weekday: Irrigate individually for each day..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_weekday": {"monday": VALUE, "tuesday": VALUE, "wednesday": VALUE, "thursday": VALUE, "friday": VALUE, "saturday": VALUE, "sunday": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_weekday": {"monday": "VALUE", "tuesday": "VALUE", "wednesday": "VALUE", "thursday": "VALUE", "friday": "VALUE", "saturday": "VALUE", "sunday": "VALUE"}}`
 - `monday` (binary) allowed values: `ON` or `OFF`
 - `tuesday` (binary) allowed values: `ON` or `OFF`
 - `wednesday` (binary) allowed values: `ON` or `OFF`
@@ -104,7 +104,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 
 ### Schedule slot 1 (composite)
 Watering time slot 1.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_1": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_1": {"state": "VALUE", "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
 - `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
 - `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
 - `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
@@ -114,7 +114,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 
 ### Schedule slot 2 (composite)
 Watering time slot 2.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_2": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_2": {"state": "VALUE", "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
 - `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
 - `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
 - `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
@@ -124,7 +124,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 
 ### Schedule slot 3 (composite)
 Watering time slot 3.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_3": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_3": {"state": "VALUE", "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
 - `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
 - `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
 - `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
@@ -134,7 +134,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 
 ### Schedule slot 4 (composite)
 Watering time slot 4.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_4": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_4": {"state": "VALUE", "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
 - `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
 - `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
 - `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
@@ -144,7 +144,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 
 ### Schedule slot 5 (composite)
 Watering time slot 5.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_5": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_5": {"state": "VALUE", "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
 - `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
 - `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
 - `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
@@ -154,7 +154,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 
 ### Schedule slot 6 (composite)
 Watering time slot 6.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_6": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_6": {"state": "VALUE", "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
 - `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
 - `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
 - `start_minute` (numeric): Starting time (minute) max value is 59, unit is min

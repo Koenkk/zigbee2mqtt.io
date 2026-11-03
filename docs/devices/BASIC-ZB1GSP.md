@@ -68,12 +68,12 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Inching control set (composite)
 Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": VALUE, "inching_time": VALUE, "inching_mode": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": "VALUE", "inching_time": VALUE, "inching_mode": "VALUE"}}`
 - `inching_control` (binary): Enable/disable inching function. allowed values: `ENABLE` or `DISABLE`
 - `inching_time` (numeric): Delay time for executing a inching action. min value is 0.5, max value is 3599.5, unit is seconds
 - `inching_mode` (binary): Set inching off or inching on mode. allowed values: `ON` or `OFF`
@@ -82,7 +82,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inch
 Network indicator settings, turn off/on the blue online status network indicator..
 Value can be found in the published state on the `network_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"network_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": VALUE}`.
 If value equals `true` network indicator is ON, if `false` OFF.
 
 ### Power (numeric)
@@ -159,21 +159,21 @@ The unit of this value is `kWh`.
 Outlet overload protection Settings.
 Value can be found in the published state on the `outlet_control_protect` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"outlet_control_protect": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outlet_control_protect": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outlet_control_protect": VALUE}`.
 If value equals `true` outlet control protect is ON, if `false` OFF.
 
 ### Ac current max overload enable (binary)
 AC current overload protection enable.
 Value can be found in the published state on the `ac_current_max_overload_enable` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ac_current_max_overload_enable": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_current_max_overload_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_current_max_overload_enable": "VALUE"}`.
 If value equals `ON` ac current max overload enable is ON, if `OFF` OFF.
 
 ### Ac current max overload (numeric)
 AC current overload threshold.
 Value can be found in the published state on the `ac_current_max_overload` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ac_current_max_overload": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_current_max_overload": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_current_max_overload": VALUE}`.
 The minimal value is `0.1` and the maximum value is `32`.
 The unit of this value is `A`.
 
@@ -181,14 +181,14 @@ The unit of this value is `A`.
 AC voltage overload protection enable.
 Value can be found in the published state on the `ac_voltage_max_overload_enable` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ac_voltage_max_overload_enable": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_voltage_max_overload_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_voltage_max_overload_enable": "VALUE"}`.
 If value equals `ON` ac voltage max overload enable is ON, if `OFF` OFF.
 
 ### Ac voltage max overload (numeric)
 AC voltage overload threshold (runtime validated by detected supply band).
 Value can be found in the published state on the `ac_voltage_max_overload` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ac_voltage_max_overload": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_voltage_max_overload": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_voltage_max_overload": VALUE}`.
 The minimal value is `85` and the maximum value is `277`.
 The unit of this value is `V`.
 
@@ -196,14 +196,14 @@ The unit of this value is `V`.
 AC power overload protection enable.
 Value can be found in the published state on the `ac_power_max_overload_enable` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ac_power_max_overload_enable": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_power_max_overload_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_power_max_overload_enable": "VALUE"}`.
 If value equals `ON` ac power max overload enable is ON, if `OFF` OFF.
 
 ### Ac power max overload (numeric)
 AC power overload threshold (runtime validated by detected supply band).
 Value can be found in the published state on the `ac_power_max_overload` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ac_power_max_overload": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_power_max_overload": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_power_max_overload": VALUE}`.
 The minimal value is `10` and the maximum value is `7680`.
 The unit of this value is `W`.
 
@@ -217,14 +217,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Read consumption records (composite)
 Read power-consumption history records (24h / monthly days / halfyear months)..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_consumption_records": {"type": VALUE, "index": VALUE, "offset": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_consumption_records": {"type": "VALUE", "index": VALUE, "offset": VALUE}}`
 - `type` (enum): Record type: get24Hours, get30Days or get180Days. allowed values: `get24Hours`, `get30Days`, `get180Days`
 - `index` (numeric): Block index: 24h => 0/1/240(DST), 30d => 0/1, 180d => 0. For 24h/30d, index=0 auto-fetches block 0+1. max value is 240
 - `offset` (numeric): Offset: 24h => 0..6(days), 30d => 0..5(months), 180d => 0. max value is 6
 
 ### Read electricity records (composite)
 Read electricity or power history records from the plug..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_electricity_records": {"type": VALUE, "page": VALUE, "with_energy": VALUE, "with_reverse_energy": VALUE, "with_timestamp": VALUE, "start_time": VALUE, "end_time": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_electricity_records": {"type": "VALUE", "page": VALUE, "with_energy": VALUE, "with_reverse_energy": VALUE, "with_timestamp": VALUE, "start_time": "VALUE", "end_time": "VALUE"}}`
 - `type` (enum): History record type to read. allowed values: `hour`, `day`, `month`, `year`
 - `page` (numeric): History page index. Used only by energy_record_24h reads. max value is 65535
 - `with_energy` (binary): Request consumed energy. Used by hour/day/month/year reads. allowed values: `true` or `false`
@@ -235,7 +235,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read
 
 ### Read all electricity records (composite)
 Read one page of full electricity or reverse energy history records from the plug..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_all_electricity_records": {"type": VALUE, "page": VALUE, "with_energy": VALUE, "with_reverse_energy": VALUE, "with_timestamp": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"read_all_electricity_records": {"type": "VALUE", "page": VALUE, "with_energy": VALUE, "with_reverse_energy": VALUE, "with_timestamp": VALUE}}`
 - `type` (enum): Full history record type to read. allowed values: `hour`, `day`
 - `page` (numeric): History page index to read. max value is 65535
 - `with_energy` (binary): Request consumed energy. allowed values: `true` or `false`
@@ -256,6 +256,6 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Clear historical electricity data..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"clear_history": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"clear_history": "VALUE"}`.
 The possible values are: `clear`.
 

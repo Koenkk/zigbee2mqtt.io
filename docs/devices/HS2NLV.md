@@ -59,7 +59,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Light 
@@ -123,7 +123,7 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Temperature (numeric)
@@ -144,35 +144,35 @@ The unit of this value is `%`.
 Light effect.
 Value can be found in the published state on the `light_effect` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_effect": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_effect": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_effect": "VALUE"}`.
 The possible values are: `solid`, `blink`, `breathe`, `wipe`, `wipe_random`, `random_colors`, `sweep`, `dynamic`, `colorloop`, `rainbow`, `scan`, `dual_scan`, `fade`, `theater`, `theater_rainbow`, `running`, `saw`, `twinkle`, `dissolve`, `dissolve_random`, `sparkle`, `dark_sparkle`, `sparkle_plus`, `strobe`, `strobe_rainbow`, `mega_strobe`, `blink_rainbow`, `android`, `chase`, `chase_random`, `chase_rainbow`, `chase_flash`, `chase_flash_random`, `rainbow_runner`, `colorful`, `traffic_light`, `sweep_random`, `running_2`, `aurora`, `stream`, `scanner`, `comet`, `fireworks`, `rain`, `tetrix`, `fire_flicker`, `gradient`, `loading`, `rolling_balls`, `fairy`, `two_dots`, `fairy_twinkle`, `running_dual`, `image`, `tricolor_chase`, `tricolor_wipe`, `tricolor_fade`, `lightning`, `icu`, `multi_comet`, `dual_scanner`, `random_chase`, `oscillate`, `pride_2015`, `juggle`, `palette`, `fire_2012`, `colorwaves`, `bpm`, `fill_noise`, `noise_1`, `noise_2`, `noise_3`, `noise_4`, `color_twinkle`, `lake`, `meteor`, `copy`, `railway`, `ripple`, `twinklefox`, `twinklecat`, `halloween_eyes`, `static_pattern`, `tri_static_pattern`, `spots`, `spots_fade`, `glitter`, `candle`, `starburst`, `exploding_fireworks`, `bouncing_balls`, `sinelon`, `sinelon_dual`, `sinelon_rainbow`, `popcorn`, `drip`, `plasma`, `percent`, `ripple_rainbow`, `heartbeat`, `pacifica`, `candle_multi`, `solid_glitter`, `sunrise`, `phased`, `twinkleup`, `noisepal`, `sinewave`, `phased_noise`, `flow`, `chunchun`, `dancing_shadows`, `washing_machine`, `2d_plasma_rotozoom`, `blends`, `tv_simulator`, `dynamic_smooth`, `2d_spaceships`, `2d_crazy_bees`, `2d_ghost_rider`, `2d_blobs`, `2d_scroll_text`, `2d_drift_rose`, `2d_distortion_waves`, `2d_soap`, `2d_octopus`, `2d_waving_cell`, `pixels`, `pixelwave`, `juggles`, `matripix`, `gravimeter`, `plasmoid`, `puddles`, `midnoise`, `noisemeter`, `freqwave`, `freqmatrix`, `2d_geq`, `waterfall`, `freqpixels`, `binmap`, `noisefire`, `puddlepeak`, `noisemove`, `2d_noise`, `perlinmove`, `ripplepeak`, `2d_firenoise`, `2d_squared_swirl`, `pacman`, `2d_dna`, `2d_matrix`, `2d_metaballs`, `freqmap`, `gravcenter`, `gravcentric`, `gravfreq`, `dj_light`, `2d_funky_plank`, `shimmer`, `2d_pulser`, `blurz`, `2d_drift`, `2d_waverly`, `2d_sun_radiation`, `2d_colored_bursts`, `2d_julia`, `reserved_169`, `reserved_170`, `reserved_171`, `2d_game_of_life`, `2d_tartan`, `2d_polar_lights`, `2d_swirl`, `2d_lissajous`, `2d_frizzles`, `2d_plasma_ball`, `flow_stripe`, `2d_hiphotic`, `2d_sin_dots`, `2d_dna_spiral`, `2d_black_hole`, `wavesins`, `rocktaves`, `2d_akemi`, `particle_volcano`, `particle_fire`, `particle_fireworks`, `particle_vortex`, `particle_perlin`, `particle_pit`, `particle_box`, `particle_attractor`, `particle_impact`, `particle_waterfall`, `particle_spray`, `particles_geq`, `particle_center_geq`, `particle_ghost_rider`, `particle_blobs`, `ps_drip`, `ps_pinball`, `ps_dancing_shadows`, `ps_fireworks_1d`, `ps_sparkler`, `ps_hourglass`, `ps_1d_spray`, `ps_balance`, `ps_chase`, `ps_starburst`, `ps_1d_geq`, `ps_fire_1d`, `ps_1d_sonic_stream`, `ps_1d_sonic_boom`, `ps_1d_springy`, `particle_galaxy`, `color_clouds`, `slow_transition`.
 
 ### Light speed (numeric)
 Light effect speed.
 Value can be found in the published state on the `light_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_speed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_speed": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Light intensity (numeric)
 Light effect intensity.
 Value can be found in the published state on the `light_intensity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_intensity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_intensity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_intensity": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Light palette (numeric)
 Light effect palette.
 Value can be found in the published state on the `light_palette` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_palette": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_palette": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_palette": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Light options (numeric)
 Light effect options bitmap.
 Value can be found in the published state on the `light_options` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_options": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_options": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_options": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Light effect count (numeric)
@@ -186,56 +186,56 @@ The minimal value is `0` and the maximum value is `200`.
 Number of light pixels.
 Value can be found in the published state on the `light_pixel_count` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_pixel_count": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_pixel_count": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_pixel_count": VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 
 ### Sound volume (numeric)
 Sound volume.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### Language (enum)
 Device language.
 Value can be found in the published state on the `language` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"language": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"language": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"language": "VALUE"}`.
 The possible values are: `english`, `german`, `french`, `italian`, `spanish`.
 
 ### Room (enum)
 Device room location.
 Value can be found in the published state on the `room` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"room": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"room": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"room": "VALUE"}`.
 The possible values are: `no_location`, `attic`, `basement`, `bedroom`, `child_room`, `den`, `dining_room`, `entryway`, `family_room`, `guest_bedroom`, `hallway`, `kitchen`, `living_room`, `master_bedroom`, `office`, `utility_room`, `other_room`.
 
 ### Floor (enum)
 Device floor location.
 Value can be found in the published state on the `floor` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor": "VALUE"}`.
 The possible values are: `no_floor`, `ground_floor`, `first_floor`, `second_floor`, `third_floor`, `fourth_floor`.
 
 ### Voice (enum)
 Play a device voice prompt.
 Value can be found in the published state on the `voice` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voice": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voice": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voice": "VALUE"}`.
 The possible values are: `unset`, `boot_ready`, `test_intro`, `smoke_warning`, `smoke_silenced`, `co_warning`, `co_silenced`, `smoke_cannot_be_silenced`, `co_cannot_be_silenced`, `low_battery`, `smoke_sensor_malfunction`, `co_sensor_open_circuit`, `co_sensor_short_circuit`, `end_of_life`, `room_selection_instructions`, `floor_selection_instructions`, `room_saved`, `floor_saved`, `no_room_saved`, `no_floor_saved`, `language_change`, `selected`, `evacuate`, `count_five`, `count_four`, `count_three`, `count_two`, `count_one`, `communication_mode_matter`, `communication_mode_zigbee`, `network_joined`, `network_join_failed`, `language_set`.
 
 ### Temperature offset (numeric)
 used for temperature offset, unit: ℃.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-15` and the maximum value is `15`.
 
 ### Humidity offset (numeric)
 used for humidity offset, unit: RH%.
 Value can be found in the published state on the `humidity_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": VALUE}`.
 The minimal value is `-15` and the maximum value is `15`.
 
 ### Reported packages (numeric)

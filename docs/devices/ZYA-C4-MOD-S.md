@@ -60,13 +60,13 @@ If value equals `true` battery low is ON, if `false` OFF.
 ### Auto lock time (enum)
 Value can be found in the published state on the `auto_lock_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_lock_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_lock_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_lock_time": "VALUE"}`.
 The possible values are: `off`, `30seconds`, `60seconds`, `2minutes`, `3minutes`.
 
 ### Volume (enum)
 Value can be found in the published state on the `volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"volume": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": "VALUE"}`.
 The possible values are: `silent`, `low`, `high`.
 
 ### Action (enum)

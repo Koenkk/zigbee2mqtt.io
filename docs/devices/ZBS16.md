@@ -97,14 +97,14 @@ The unit of this value is `Hz`.
 Switch on time selection.
 Value can be found in the published state on the `switch_on_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_on_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_on_time": "VALUE"}`.
 The possible values are: `off`, `30 minutes`, `60 minutes`, `90 minutes`, `120 minutes`, `on`.
 
 ### Countdown (numeric)
 Countdown to turn device off after a certain time.
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `7210`.
 The unit of this value is `seconds`.
 

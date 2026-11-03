@@ -76,14 +76,14 @@ The unit of this value is `%`.
 Turns the water-leak detection buzzer on or off..
 Value can be found in the published state on the `water_leak_buzzer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"water_leak_buzzer": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_leak_buzzer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_leak_buzzer": "VALUE"}`.
 If value equals `ON` water leak buzzer is ON, if `OFF` OFF.
 
 ### Water leak buzzer alarm mode (numeric)
 Sets the buzzers beeping mode for water-leak alerts.(0 = continuous;values = beeping duration (minutes).).
 Value can be found in the published state on the `water_leak_buzzer_alarm_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"water_leak_buzzer_alarm_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_leak_buzzer_alarm_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_leak_buzzer_alarm_mode": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `min`.
 
