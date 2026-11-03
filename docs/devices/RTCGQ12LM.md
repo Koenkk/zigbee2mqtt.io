@@ -74,7 +74,7 @@ The unit of this value is `lx`.
 Time interval for detecting actions.
 Value can be found in the published state on the `detection_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_interval": VALUE}`.
 The minimal value is `2` and the maximum value is `65535`.
 The unit of this value is `s`.
 

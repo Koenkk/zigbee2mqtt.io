@@ -68,7 +68,7 @@ The unit of this value is `°C`.
 Target temperature.
 Value can be found in the published state on the `target_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"target_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"target_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"target_temperature": VALUE}`.
 The minimal value is `16` and the maximum value is `32`.
 The unit of this value is `°C`.
 
@@ -76,14 +76,14 @@ The unit of this value is `°C`.
 Active mode.
 Value can be found in the published state on the `system_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}`.
 The possible values are: `off`, `auto`, `cool`, `heat`, `fan_only`, `dry`.
 
 ### Mode (enum)
 Mode.
 Value can be found in the published state on the `mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "VALUE"}`.
 The possible values are: `heat`, `cool`, `auto`, `dry`, `fan_only`.
 
 ### Outdoor air temperature (numeric)
@@ -96,98 +96,98 @@ The unit of this value is `°C`.
 Fan speed modes: Auto(5), Low(1), Medium(2), Maximum(3).
 Value can be found in the published state on the `zb_fan_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"zb_fan_speed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zb_fan_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zb_fan_speed": VALUE}`.
 The minimal value is `1` and the maximum value is `5`.
 
 ### Vertical vanes (numeric)
 Vertical vanes: Stopped(0), Swing(1).
 Value can be found in the published state on the `vertical_vanes` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"vertical_vanes": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vertical_vanes": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vertical_vanes": VALUE}`.
 The minimal value is `0` and the maximum value is `1`.
 
 ### Horizontal vanes (numeric)
 Horizontal vanes: Stopped(0), Swing(1).
 Value can be found in the published state on the `horizontal_vanes` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"horizontal_vanes": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"horizontal_vanes": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"horizontal_vanes": VALUE}`.
 The minimal value is `0` and the maximum value is `1`.
 
 ### Fan speed (numeric)
 Fan speed: Auto(0), First(1) - Maximum(5).
 Value can be found in the published state on the `fan_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fan_speed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_speed": VALUE}`.
 The minimal value is `0` and the maximum value is `5`.
 
 ### Smart fan speed (numeric)
 Smart fan speed: Auto (0), Quiet mode (1), First (2) ... Maximum (6), Turbo(7).
 Value can be found in the published state on the `smart_fan_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smart_fan_speed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_fan_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_fan_speed": VALUE}`.
 The minimal value is `0` and the maximum value is `7`.
 
 ### Vanes swing (numeric)
 Vanes swing: Stopped(0), Horizontal and vertical swing(1), Horizontal swing(2), Vertical swing(3).
 Value can be found in the published state on the `vanes_swing` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"vanes_swing": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vanes_swing": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vanes_swing": VALUE}`.
 The minimal value is `0` and the maximum value is `3`.
 
 ### Status led (enum)
 Status LED.
 Value can be found in the published state on the `status_led` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"status_led": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_led": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_led": "VALUE"}`.
 The possible values are: `normal_mode`, `disabled_if_no_errors`, `disabled_untill_reboot`, `always_disabled`, `green_untill_reboot`, `red_untill_reboot`.
 
 ### Quiet mode (binary)
 Quiet mode.
 Value can be found in the published state on the `quiet_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quiet_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quiet_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quiet_mode": "VALUE"}`.
 If value equals `ON` quiet mode is ON, if `OFF` OFF.
 
 ### Eco mode (binary)
 Eco mode.
 Value can be found in the published state on the `eco_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eco_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_mode": "VALUE"}`.
 If value equals `ON` eco mode is ON, if `OFF` OFF.
 
 ### Turbo mode (binary)
 Turbo mode.
 Value can be found in the published state on the `turbo_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"turbo_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo_mode": "VALUE"}`.
 If value equals `ON` turbo mode is ON, if `OFF` OFF.
 
 ### Ionization (binary)
 Ionization.
 Value can be found in the published state on the `ionization` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ionization": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ionization": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ionization": "VALUE"}`.
 If value equals `ON` ionization is ON, if `OFF` OFF.
 
 ### Screen light (binary)
 Screen light.
 Value can be found in the published state on the `screen_light` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"screen_light": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_light": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_light": "VALUE"}`.
 If value equals `ON` screen light is ON, if `OFF` OFF.
 
 ### Screen low bright (binary)
 Screen low bright.
 Value can be found in the published state on the `screen_low_bright` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"screen_low_bright": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_low_bright": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_low_bright": "VALUE"}`.
 If value equals `ON` screen low bright is ON, if `OFF` OFF.
 
 ### Target fan rpm (numeric)
 Target fan speed.
 Value can be found in the published state on the `target_fan_rpm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"target_fan_rpm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"target_fan_rpm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"target_fan_rpm": VALUE}`.
 The minimal value is `0` and the maximum value is `200`.
 
 ### Current fan rpm (numeric)

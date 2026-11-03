@@ -9,6 +9,9 @@ It is possible to run Zigbee2MQTT in a Docker container using the official [Zigb
 
 This image support the following architectures: `linux/386`, `linux/amd64`, `linux/arm/v6`, `linux/arm/v7`, `linux/arm64` and `linux/riscv64`.
 
+> [!WARNING]
+> **32-bit platforms are deprecated, support ends April 2027.** The 32-bit images (`linux/386`, `linux/arm/v6` and `linux/arm/v7`) will be removed when Node.js 22 reaches end-of-life (April 2027). At that point the minimum supported Node.js version becomes v24, which no longer ships official builds for any 32-bit platform, so this affects every installation method, not only Docker. If you run Zigbee2MQTT on 32-bit hardware or a 32-bit OS (e.g. Raspberry Pi 1/Zero, older Raspberry Pi OS 32-bit installs), plan to move to a 64-bit OS or hardware (`linux/amd64`, `linux/arm64`) before then. See [#33552](https://github.com/Koenkk/zigbee2mqtt/issues/33552).
+
 The following tags are available:
 
 - Latest release version: `latest`

@@ -47,7 +47,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Timer for switch 1.
 Value can be found in the published state on the `countdown_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_1": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -55,28 +55,28 @@ The unit of this value is `s`.
 Child lock.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `ON` child lock is ON, if `OFF` OFF.
 
 ### Backlight switch (binary)
 Backlight switch.
 Value can be found in the published state on the `backlight_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": "VALUE"}`.
 If value equals `ON` backlight switch is ON, if `OFF` OFF.
 
 ### Backlight lightness (numeric)
 Backlight brightness %.
 Value can be found in the published state on the `backlight_lightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_lightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_lightness": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Displayoff delay (numeric)
 Screen off delay.
 Value can be found in the published state on the `displayoff_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"displayoff_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"displayoff_delay": VALUE}`.
 The minimal value is `10` and the maximum value is `180`.
 The unit of this value is `s`.
 
@@ -84,33 +84,33 @@ The unit of this value is `s`.
 Power-on state.
 Value can be found in the published state on the `relay_status` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_status": "VALUE"}`.
 The possible values are: `off`, `on`, `memory`.
 
 ### Light mode (enum)
 Indicator light state.
 Value can be found in the published state on the `light_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": "VALUE"}`.
 The possible values are: `none`, `relay`, `pos`.
 
 ### On color (enum)
 Light-on color.
 Value can be found in the published state on the `on_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_color": "VALUE"}`.
 The possible values are: `red`, `orange`, `green`, `cyan`, `blue`, `purple`, `magenta`, `cold_white`, `warm_yellow`.
 
 ### Off color (enum)
 Light-off color.
 Value can be found in the published state on the `off_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_color": "VALUE"}`.
 The possible values are: `red`, `orange`, `green`, `cyan`, `blue`, `purple`, `magenta`, `cold_white`, `warm_yellow`.
 
 ### Sw1 name (text)
 Set switch 1 name.
 Value can be found in the published state on the `sw1_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sw1_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sw1_name": "VALUE"}`.
 

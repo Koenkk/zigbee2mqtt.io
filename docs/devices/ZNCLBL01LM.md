@@ -66,14 +66,14 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Pulling curtains by hand starts the motor.
 Value can be found in the published state on the `hand_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hand_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hand_open": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hand_open": VALUE}`.
 If value equals `true` hand open is ON, if `false` OFF.
 
 ### Limits calibration (enum)
 Calibrate the position limits.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"limits_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"limits_calibration": "VALUE"}`.
 The possible values are: `start`, `end`, `reset`.
 
 ### Battery (numeric)
@@ -119,7 +119,7 @@ If value equals `true` running is ON, if `false` OFF.
 Lock the curtain driver hooks.
 Value can be found in the published state on the `hooks_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hooks_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hooks_lock": "VALUE"}`.
 The possible values are: `LOCK`, `UNLOCK`.
 
 ### Hooks state (enum)
@@ -153,7 +153,7 @@ If value equals `true` charging is ON, if `false` OFF.
 Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Action (enum)

@@ -192,57 +192,57 @@ The unit of this value is `°C`.
 IN1.
 Value can be found in the published state on the `switch_type_l7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l7": "VALUE"}`.
 The possible values are: `switch`, `single_click`, `multi_click`, `reset_to_defaults`.
 
 ### Switch actions (enum, l7 endpoint)
 Value can be found in the published state on the `switch_actions_l7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l7": "VALUE"}`.
 The possible values are: `on`, `off`, `toggle`.
 
 ### Bind command (enum, l7 endpoint)
 Value can be found in the published state on the `bind_command_l7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"bind_command_l7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_command_l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_command_l7": "VALUE"}`.
 The possible values are: `on/off`, `toggle`, `change_level_up`, `change_level_down`, `change_level_up_with_off`, `change_level_down_with_off`, `recall_scene_0`, `recall_scene_1`, `recall_scene_2`, `recall_scene_3`, `recall_scene_4`, `recall_scene_5`.
 
 ### Switch type (enum, l8 endpoint)
 IN2.
 Value can be found in the published state on the `switch_type_l8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l8": "VALUE"}`.
 The possible values are: `switch`, `single_click`, `multi_click`, `reset_to_defaults`.
 
 ### Switch actions (enum, l8 endpoint)
 Value can be found in the published state on the `switch_actions_l8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l8": "VALUE"}`.
 The possible values are: `on`, `off`, `toggle`.
 
 ### Bind command (enum, l8 endpoint)
 Value can be found in the published state on the `bind_command_l8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"bind_command_l8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_command_l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_command_l8": "VALUE"}`.
 The possible values are: `on/off`, `toggle`, `change_level_up`, `change_level_down`, `change_level_up_with_off`, `change_level_down_with_off`, `recall_scene_0`, `recall_scene_1`, `recall_scene_2`, `recall_scene_3`, `recall_scene_4`, `recall_scene_5`.
 
 ### Switch type (enum, l1 endpoint)
 BTN.
 Value can be found in the published state on the `switch_type_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1": "VALUE"}`.
 The possible values are: `switch`, `single_click`, `multi_click`, `reset_to_defaults`.
 
 ### Switch actions (enum, l1 endpoint)
 Value can be found in the published state on the `switch_actions_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_l1": "VALUE"}`.
 The possible values are: `on`, `off`, `toggle`.
 
 ### Bind command (enum, l1 endpoint)
 Value can be found in the published state on the `bind_command_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"bind_command_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_command_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bind_command_l1": "VALUE"}`.
 The possible values are: `on/off`, `toggle`, `change_level_up`, `change_level_down`, `change_level_up_with_off`, `change_level_down_with_off`, `recall_scene_0`, `recall_scene_1`, `recall_scene_2`, `recall_scene_3`, `recall_scene_4`, `recall_scene_5`.
 
 ### Uptime (numeric)
@@ -255,7 +255,7 @@ The unit of this value is `sec`.
 Reporting interval.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interval": VALUE}`.
 The minimal value is `5` and the maximum value is `600`.
 The unit of this value is `sec`.
 

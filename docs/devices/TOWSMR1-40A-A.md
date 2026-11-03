@@ -103,14 +103,14 @@ The possible values are: `normal`, `over_current_trip`, `over_power_trip`, `high
 Over voltage setting.
 Value can be found in the published state on the `over_voltage_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Over voltage threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `over_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": VALUE}`.
 The minimal value is `240` and the maximum value is `295`.
 The unit of this value is `V`.
 
@@ -118,14 +118,14 @@ The unit of this value is `V`.
 Under voltage setting.
 Value can be found in the published state on the `under_voltage_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Under voltage threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `under_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": VALUE}`.
 The minimal value is `145` and the maximum value is `220`.
 The unit of this value is `V`.
 
@@ -133,14 +133,14 @@ The unit of this value is `V`.
 Temperature setting.
 Value can be found in the published state on the `temperature_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Temperature threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `temperature_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_threshold": VALUE}`.
 The minimal value is `-25` and the maximum value is `100`.
 The unit of this value is `°C`.
 
@@ -148,14 +148,14 @@ The unit of this value is `°C`.
 Over power setting.
 Value can be found in the published state on the `over_power_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Over power threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `over_power_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_threshold": VALUE}`.
 The minimal value is `5` and the maximum value is `25000`.
 The unit of this value is `W`.
 
@@ -163,49 +163,49 @@ The unit of this value is `W`.
 When the circuit breaker trips due to voltage protection, it will automatically close when the circuit voltage returns to normal.
 Value can be found in the published state on the `auto_reclosing` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_reclosing": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_reclosing": "VALUE"}`.
 If value equals `ON` auto reclosing is ON, if `OFF` OFF.
 
 ### Restore default (binary)
 Turn ON to restore default settings.
 Value can be found in the published state on the `restore_default` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restore_default": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restore_default": "VALUE"}`.
 If value equals `ON` restore default is ON, if `OFF` OFF.
 
 ### Overcurrent Recloser (binary)
 When the circuit breaker trips due to overcurrent protection, it will automatically close when the circuit voltage returns to normal.
 Value can be found in the published state on the `overcurrent_recloser` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overcurrent_recloser": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overcurrent_recloser": "VALUE"}`.
 If value equals `ON` overcurrent Recloser is ON, if `OFF` OFF.
 
 ### Leakage Recloser (binary)
 When the circuit breaker trips due to leakage protection, it will automatically close when the circuit voltage returns to normal.
 Value can be found in the published state on the `leakage_recloser` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_recloser": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leakage_recloser": "VALUE"}`.
 If value equals `ON` leakage Recloser is ON, if `OFF` OFF.
 
 ### Overpower Recloser (binary)
 When the circuit breaker trips due to overpower protection, it will automatically close when the circuit voltage returns to normal.
 Value can be found in the published state on the `overpower_recloser` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overpower_recloser": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overpower_recloser": "VALUE"}`.
 If value equals `ON` overpower Recloser is ON, if `OFF` OFF.
 
 ### Over current setting (enum)
 Over current setting.
 Value can be found in the published state on the `over_current_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Over current threshold (numeric)
 Setup the value on the device.
 Value can be found in the published state on the `over_current_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `40`.
 The unit of this value is `A`.
 

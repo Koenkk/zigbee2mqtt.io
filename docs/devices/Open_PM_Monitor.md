@@ -51,7 +51,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Light 
@@ -134,13 +134,13 @@ The unit of this value is `index`.
 Indicator corection.
 Value can be found in the published state on the `indicator_corection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_corection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_corection": VALUE}`.
 The minimal value is `-15` and the maximum value is `15`.
 
 ### Invert color (enum)
 Set color mode.
 Value can be found in the published state on the `invert_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_color": "VALUE"}`.
 The possible values are: `WB`, `BW`.
 

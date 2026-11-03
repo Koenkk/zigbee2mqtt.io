@@ -48,7 +48,7 @@ The possible values are: `open`, `closed`, `tilted`.
 Alarm state.
 Value can be found in the published state on the `alarm` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": VALUE}`.
 If value equals `true` alarm is ON, if `false` OFF.
 
 ### Battery (numeric)

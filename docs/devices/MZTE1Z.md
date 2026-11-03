@@ -57,14 +57,14 @@ You've to open the device and switch the internal switch to choose the radiator 
 Turn the heater on or off.
 Value can be found in the published state on the `state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "VALUE"}`.
 If value equals `ON` state is ON, if `OFF` OFF.
 
 ### Child lock (binary)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Climate 
@@ -72,7 +72,7 @@ This climate device supports the following features: `current_heating_setpoint`,
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. Writing (`/set`) this attribute is not possible. Reading (`/get`) this attribute is not possible.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `comfort`, `eco`, `antifrost`, `off`, `comfort_1`, `comfort_2`, `program`, `manual`. Reading (`/get`) this attribute is not possible.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": "VALUE"}` where `VALUE` is one of: `comfort`, `eco`, `antifrost`, `off`, `comfort_1`, `comfort_2`, `program`, `manual`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-9` and the maximum value is `9` with a step size of `1`.
 
 ### Mode (enum)
@@ -85,14 +85,14 @@ The possible values are: `comfort`, `eco`, `antifrost`, `off`, `comfort_1`, `com
 Enable this for radiator without integrated regulation. OFF if Comfort, Eco and Antifrost temperatures can be defined on the radiator. ON if the radiator has no integrated regulation (i.e define temperatures on the thermostat)..
 Value can be found in the published state on the `radiators_without_integrated_regulation` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radiators_without_integrated_regulation": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radiators_without_integrated_regulation": "VALUE"}`.
 If value equals `ON` radiators without integrated regulation is ON, if `OFF` OFF.
 
 ### Comfort temperature (numeric)
 Set comfort temperature.
 Value can be found in the published state on the `comfort_temperature` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature": VALUE}`.
 The minimal value is `5` and the maximum value is `35`.
 The unit of this value is `  C`.
 
@@ -100,7 +100,7 @@ The unit of this value is `  C`.
 Set ECO temperature.
 Value can be found in the published state on the `eco_temperature` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_temperature": VALUE}`.
 The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `  C`.
 
@@ -108,7 +108,7 @@ The unit of this value is `  C`.
 Set antifrost temperature.
 Value can be found in the published state on the `antifrost_temperature` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"antifrost_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"antifrost_temperature": VALUE}`.
 The minimal value is `5` and the maximum value is `15`.
 The unit of this value is `  C`.
 
@@ -116,7 +116,7 @@ The unit of this value is `  C`.
 Set thermostat sensitivity.
 Value can be found in the published state on the `temperature_sensibility` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensibility": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensibility": VALUE}`.
 The minimal value is `0.5` and the maximum value is `5`.
 The unit of this value is `  C`.
 
@@ -124,14 +124,14 @@ The unit of this value is `  C`.
 Enable antifrost protection feature.
 Value can be found in the published state on the `antifrost` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"antifrost": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"antifrost": "VALUE"}`.
 If value equals `ON` antifrost is ON, if `OFF` OFF.
 
 ### Open window detection (binary)
 Enable / Disable open window detection feature.
 Value can be found in the published state on the `window_detection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "VALUE"}`.
 If value equals `ON` open window detection is ON, if `OFF` OFF.
 
 ### Window (enum)

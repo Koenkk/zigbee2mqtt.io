@@ -49,20 +49,20 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Ultrasonic occupied → unoccupied delay (seconds).
 Value can be found in the published state on the `occupied_to_unoccupied_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_to_unoccupied_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_to_unoccupied_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_to_unoccupied_delay": VALUE}`.
 The minimal value is `60` and the maximum value is `65535`.
 
 ### Unoccupied to occupied delay (numeric)
 Ultrasonic unoccupied → occupied delay (seconds).
 Value can be found in the published state on the `unoccupied_to_occupied_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"unoccupied_to_occupied_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unoccupied_to_occupied_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unoccupied_to_occupied_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 
 ### Occupancy sensitivity (enum)
 Sensitivity of human presence detection.
 Value can be found in the published state on the `occupancy_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 

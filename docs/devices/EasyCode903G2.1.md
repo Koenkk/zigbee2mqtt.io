@@ -51,7 +51,7 @@ The unit of this value is `%`.
 Sound volume of the lock.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": "VALUE"}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
 
 ### Action (enum)
@@ -64,6 +64,6 @@ The possible values are: `zigbee_unlock`, `lock`, `rfid_unlock`, `keypad_unlock`
 Auto relock after 7 seconds..
 Value can be found in the published state on the `auto_relock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": VALUE}`.
 If value equals `true` auto relock is ON, if `false` OFF.
 

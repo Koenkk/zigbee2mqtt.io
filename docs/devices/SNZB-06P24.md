@@ -63,57 +63,57 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Occupied to Unoccupied Delay (30 s+ recommended to reduce missed detection.).
 Value can be found in the published state on the `pir_o_to_u_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_o_to_u_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_o_to_u_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_o_to_u_delay": VALUE}`.
 The minimal value is `15` and the maximum value is `65535`.
 The unit of this value is `s`.
 
 ### Zone 1 (0m-1m) (binary)
 Value can be found in the published state on the `enable_occupancy_zone_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_occupancy_zone_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_1": VALUE}`.
 If value equals `true` zone 1 (0m-1m) is ON, if `false` OFF.
 
 ### Zone 2 (1m-1.5m) (binary)
 Value can be found in the published state on the `enable_occupancy_zone_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_occupancy_zone_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_2": VALUE}`.
 If value equals `true` zone 2 (1m-1.5m) is ON, if `false` OFF.
 
 ### Zone 3 (1.5m-2m) (binary)
 Value can be found in the published state on the `enable_occupancy_zone_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_occupancy_zone_3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_3": VALUE}`.
 If value equals `true` zone 3 (1.5m-2m) is ON, if `false` OFF.
 
 ### Zone 4 (2m-2.5m) (binary)
 Value can be found in the published state on the `enable_occupancy_zone_4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_occupancy_zone_4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_4": VALUE}`.
 If value equals `true` zone 4 (2m-2.5m) is ON, if `false` OFF.
 
 ### Zone 5 (2.5m-3m) (binary)
 Value can be found in the published state on the `enable_occupancy_zone_5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_occupancy_zone_5": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_5": VALUE}`.
 If value equals `true` zone 5 (2.5m-3m) is ON, if `false` OFF.
 
 ### Zone 6 (3m-3.5m) (binary)
 Value can be found in the published state on the `enable_occupancy_zone_6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_occupancy_zone_6": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_6": VALUE}`.
 If value equals `true` zone 6 (3m-3.5m) is ON, if `false` OFF.
 
 ### Zone 7 (3.5m-4m) (binary)
 Value can be found in the published state on the `enable_occupancy_zone_7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_occupancy_zone_7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_occupancy_zone_7": VALUE}`.
 If value equals `true` zone 7 (3.5m-4m) is ON, if `false` OFF.
 
 ### Illuminance calibration (numeric)
 Illuminance compensation offset.
 Value can be found in the published state on the `illuminance_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `lx`.
 
@@ -121,14 +121,14 @@ The unit of this value is `lx`.
 Radar sensitivity level.
 Value can be found in the published state on the `radar_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"radar_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": VALUE}`.
 The minimal value is `-6` and the maximum value is `6`.
 
 ### Spatial learning (enum)
 Start space learning calibration.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"spatial_learning": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"spatial_learning": "VALUE"}`.
 The possible values are: `start_learning`.
 
 ### Spatial learning state (enum)

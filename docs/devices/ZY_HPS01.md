@@ -56,7 +56,7 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Presence timeout.
 Value can be found in the published state on the `presence_timeout` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `180`.
 The unit of this value is `s`.
 
@@ -64,14 +64,14 @@ The unit of this value is `s`.
 sensitivity of the radar.
 Value can be found in the published state on the `move_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Move minimum range (numeric)
 Movement minimum range.
 Value can be found in the published state on the `move_minimum_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_minimum_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_minimum_range": VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -79,7 +79,7 @@ The unit of this value is `cm`.
 Movement maximum range.
 Value can be found in the published state on the `move_maximum_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_maximum_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_maximum_range": VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -87,14 +87,14 @@ The unit of this value is `cm`.
 Breath sensitivity of the radar.
 Value can be found in the published state on the `breath_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breath_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breath_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Breath minimum range (numeric)
 Breath minimum range.
 Value can be found in the published state on the `breath_minimum_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breath_minimum_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breath_minimum_range": VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -102,7 +102,7 @@ The unit of this value is `cm`.
 Breath maximum range.
 Value can be found in the published state on the `breath_maximum_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breath_maximum_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breath_maximum_range": VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 

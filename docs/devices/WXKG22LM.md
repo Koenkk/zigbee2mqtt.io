@@ -50,14 +50,14 @@ The unit of this value is `mV`.
 Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold.
 Value can be found in the published state on the `click_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"click_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_mode": "VALUE"}`.
 The possible values are: `fast`, `multi`.
 
 ### Operation mode (enum)
 Operation mode, select "command" to enable bindings (wake up the device before changing modes!).
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": "VALUE"}`.
 The possible values are: `command`, `event`.
 
 ### Action (enum)

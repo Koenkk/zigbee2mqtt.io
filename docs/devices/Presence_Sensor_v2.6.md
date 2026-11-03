@@ -77,14 +77,14 @@ It's not possible to write (`/set`) this value.
 Led working mode.
 Value can be found in the published state on the `led_mode_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_mode_3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_mode_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_mode_3": "VALUE"}`.
 The possible values are: `Always`, `Never`, `Night`.
 
 ### Illuminance threshold (numeric)
 Illuminance threshold.
 Value can be found in the published state on the `illuminance_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `50000`.
 The unit of this value is `raw`.
 
@@ -92,7 +92,7 @@ The unit of this value is `raw`.
 Illuminance threshold.
 Value can be found in the published state on the `measurement_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"measurement_period": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_period": VALUE}`.
 The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `sec`.
 
@@ -100,19 +100,19 @@ The unit of this value is `sec`.
 Day start.
 Value can be found in the published state on the `min_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_time": "VALUE"}`.
 
 ### Max time (text)
 Day end.
 Value can be found in the published state on the `max_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_time": "VALUE"}`.
 
 ### Sensor (binary, 1 endpoint)
 Enable sensor.
 Value can be found in the published state on the `sensor_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_1": "VALUE"}`.
 If value equals `ON` sensor is ON, if `OFF` OFF.
 
 ### Day output (binary, 2 endpoint)

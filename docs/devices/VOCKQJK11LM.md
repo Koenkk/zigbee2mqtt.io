@@ -108,6 +108,6 @@ The unit of this value is `%`.
 Units to show on the display.
 Value can be found in the published state on the `display_unit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_unit": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_unit": "VALUE"}`.
 The possible values are: `mgm3_celsius`, `ppb_celsius`, `mgm3_fahrenheit`, `ppb_fahrenheit`.
 
