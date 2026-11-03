@@ -46,7 +46,13 @@ In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install cod
 To factory reset the device remove one of the batteries. While pressing and holding the device's main button on the front, insert the battery back. As soon as the device's LED is starting to blink orange while showing "RES", release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart into the calibration process and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
 
 ### Using the manufacturer specific operation mode
-The `system_mode` exposed by the device according to zigbee specification is always 'heat'. To set or read the actual operation mode of the device, use the manufacturer-specific feature 'operating mode' (see below)
+The `system_mode` exposed by the device according to zigbee specification is always 'heat'. To set or read the actual operation mode of the device, use the manufacturer-specific feature 'operating mode' (see below).
+
+### Weekly schedule
+In operating mode `schedule` the thermostat follows its built-in weekly schedule. Set it per day with `weekly_schedule_monday` … `weekly_schedule_sunday`, using 1–10 transitions in the format `HH:MM/temperature`, separated by spaces, e.g. `00:00/17 06:00/21 08:00/17 16:00/21.5 22:00/17`. Temperatures are 5–30 °C in steps of 0.1 °C. The order of the transitions does not matter. Every day needs at least one transition, an empty day is refused. 
+Until a day's first transition, the previous day's last transition applies. For the transition that is currently active, a new temperature may only apply from the next transition on.
+
+The schedule is read when the thermostat is paired. For a thermostat paired earlier, reconfigure it, or publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"weekly_schedule_monday": "", "weekly_schedule_tuesday": "", "weekly_schedule_wednesday": "", "weekly_schedule_thursday": "", "weekly_schedule_friday": "", "weekly_schedule_saturday": "", "weekly_schedule_sunday": ""}`.
 <!-- Notes END: Do not edit below this line -->
 
 
