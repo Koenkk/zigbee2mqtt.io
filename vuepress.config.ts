@@ -116,8 +116,9 @@ const conf = defineUserConfig({
         sidebarDepth: 2,
         contributors: false,
         themePlugins: {
-            // Spawns a full history `git log --follow` per page, which makes the build run out of memory
-            git: false,
+            // These spawn a full history `git log --follow` per page, which makes the build run out of memory.
+            // Don't use `git: false`, the theme needs the plugin: without it all pages render empty.
+            git: {createdTime: false, updatedTime: false, contributors: false, changelog: false},
         },
     }),
 
