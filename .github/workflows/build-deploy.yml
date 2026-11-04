@@ -12,8 +12,6 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v7
-              with:
-                  fetch-depth: 0
 
             - name: Setup pnpm
               uses: pnpm/action-setup@v6
@@ -30,29 +28,9 @@ jobs:
             - name: Lint
               run: pnpm run pretty:check
 
-            # To prevent build from running out of memory
-            - name: Configure swap
-              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
-              run: |
-                  sudo swapoff -a
-                  sudo rm -f /swapfile
-                  sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
-                  sudo chmod 600 /swapfile
-                  sudo mkswap /swapfile
-                  sudo swapon /swapfile
-                  sudo sysctl vm.swappiness=10
-                  df -h /
-
             - name: Build
               if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
-              run: |
-                  # Log memory every 10s
-                  while true; do
-                      echo "[mem] $(free -m | awk '/^Mem:/ {printf "used=%s avail=%s total=%s", $3, $7, $2} /^Swap:/ {printf " swap_used=%s swap_total=%s", $3, $2}') git_procs=$(pgrep -c git)"
-                      sleep 10
-                  done &
-                  trap 'kill $!' EXIT
-                  pnpm run build
+              run: pnpm run build
 
             - name: Run tests
               run: pnpm run test
