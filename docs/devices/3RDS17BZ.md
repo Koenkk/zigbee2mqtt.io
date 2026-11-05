@@ -30,9 +30,11 @@ pageClass: device-page
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
-
-
+This device supports OTA updates, for more information see
+[OTA updates](../guide/usage/ota_updates.md). If the updates fail
+consistently, place the device close to the coordinator and perform a
+hard reset by removing the batteries for 5 minutes and reinserting them.
+Then pair directly to the coordinator and retry the OTA update.
 
 ## Exposes
 
