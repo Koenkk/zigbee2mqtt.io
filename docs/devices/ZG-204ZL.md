@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-204ZL control via MQTT"
-description: "Integrate your Tuya ZG-204ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-204ZL control via MQTT"
+description: "Integrate your HOBEIAN ZG-204ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-05-07T18:17:42
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-204ZL
+# HOBEIAN ZG-204ZL
 
 |     |     |
 |-----|-----|
 | Model | ZG-204ZL  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Luminance motion sensor |
 | Exposes | occupancy, illuminance, battery, sensitivity, keep_time, illuminance_interval |
-| Picture | ![Tuya ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png) |
+| Picture | ![HOBEIAN ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png) |
 
 
 
@@ -75,21 +75,21 @@ The unit of this value is `%`.
 PIR sensor sensitivity (refresh and update only while active).
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Keep time (enum)
 PIR keep time in seconds (refresh and update only while active).
 Value can be found in the published state on the `keep_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keep_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keep_time": "VALUE"}`.
 The possible values are: `10`, `30`, `60`, `120`.
 
 ### Illuminance interval (numeric)
 Brightness acquisition interval (refresh and update only while active).
 Value can be found in the published state on the `illuminance_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": VALUE}`.
 The minimal value is `1` and the maximum value is `720`.
 The unit of this value is `minutes`.
 

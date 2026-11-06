@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SC500ZB-v4  |
 | Vendor  | [LoraTap](/supported-devices/#v=LoraTap)  |
 | Description | Smart curtain/shutter switch |
-| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode, switch_type |
+| Exposes | cover (state, position), moving, motor_reversal, calibration_to_open, calibration_to_close, calibration_time_to_open, calibration_time_to_close, switch_type_curtain, switch_type |
 | Picture | ![LoraTap SC500ZB-v4](https://www.zigbee2mqtt.io/images/devices/SC500ZB-v4.png) |
 
 
@@ -35,7 +35,7 @@ pageClass: device-page
 
 * `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
 
-* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the reported cover position and the state derived from it, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
@@ -56,44 +56,44 @@ The possible values are: `UP`, `STOP`, `DOWN`.
 ### Motor reversal (binary)
 Value can be found in the published state on the `motor_reversal` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": "VALUE"}`.
 If value equals `ON` motor reversal is ON, if `OFF` OFF.
 
 ### Calibration to open (binary)
 Value can be found in the published state on the `calibration_to_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_to_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_open": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_open": "VALUE"}`.
 If value equals `ON` calibration to open is ON, if `OFF` OFF.
 
 ### Calibration to close (binary)
 Value can be found in the published state on the `calibration_to_close` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_to_close": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_close": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_close": "VALUE"}`.
 If value equals `ON` calibration to close is ON, if `OFF` OFF.
 
 ### Calibration time to open (numeric)
 Value can be found in the published state on the `calibration_time_to_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_to_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_open": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_open": VALUE}`.
 The unit of this value is `s`.
 
 ### Calibration time to close (numeric)
 Value can be found in the published state on the `calibration_time_to_close` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_to_close": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_close": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_close": VALUE}`.
 The unit of this value is `s`.
 
 ### Switch type curtain (enum)
 External switch type.
 Value can be found in the published state on the `switch_type_curtain` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_curtain": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_curtain": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_curtain": "VALUE"}`.
 The possible values are: `flip-switch`, `sync-switch`, `button-switch`, `button2-switch`.
 
 ### Switch type (enum)
 Type of the installed switch.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": "VALUE"}`.
 The possible values are: `momentary`, `toggle`.
 

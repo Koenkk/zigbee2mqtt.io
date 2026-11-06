@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | GWRJN5169  |
 | Vendor  | [OpenLumi](/supported-devices/#v=OpenLumi)  |
-| Description | Lumi Router (JN5169) |
+| Description | Lumi Router (outdated firmware, update required) |
 | Exposes | device_temperature |
 | Picture | ![OpenLumi GWRJN5169](https://www.zigbee2mqtt.io/images/devices/GWRJN5169.png) |
 
@@ -25,13 +25,15 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-[Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169)
-
 
 ### Firmware
-Zigbee Router for __Xiaomi DGNWG05LM__ and __Aqara ZHWG11LM__ gateways.
 
-Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
+This legacy firmware used a single build for both the **Xiaomi DGNWG05LM** and **Aqara ZHWG11LM** gateways. It has been replaced by two separate, substantially revised firmware variants, each designed specifically for one gateway model. Update to the appropriate version:
+
+* [LR-DGNWG05LM](LR-DGNWG05LM.md) for the Xiaomi DGNWG05LM
+* [LR-ZHWG11LM](LR-ZHWG11LM.md) for the Aqara ZHWG11LM
+
+Open source firmware and flashing instructions can be found on [GitHub](https://github.com/igorlistopad/Lumi-Router-JN5169).
 <!-- Notes END: Do not edit below this line -->
 
 

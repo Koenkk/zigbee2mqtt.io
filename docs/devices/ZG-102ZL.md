@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-102ZL control via MQTT"
-description: "Integrate your Tuya ZG-102ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-102ZL control via MQTT"
+description: "Integrate your HOBEIAN ZG-102ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-11-9T1:17:42
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-102ZL
+# HOBEIAN ZG-102ZL
 
 |     |     |
 |-----|-----|
 | Model | ZG-102ZL  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Luminance door sensor |
 | Exposes | contact, illuminance, battery, illuminance_interval |
-| Picture | ![Tuya ZG-102ZL](https://www.zigbee2mqtt.io/images/devices/ZG-102ZL.png) |
+| Picture | ![HOBEIAN ZG-102ZL](https://www.zigbee2mqtt.io/images/devices/ZG-102ZL.png) |
 
 
 
@@ -67,7 +67,7 @@ The unit of this value is `%`.
 Brightness acquisition interval (refresh and update only while active).
 Value can be found in the published state on the `illuminance_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": VALUE}`.
 The minimal value is `1` and the maximum value is `720`.
 The unit of this value is `minutes`.
 

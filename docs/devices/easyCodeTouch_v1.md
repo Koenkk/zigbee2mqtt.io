@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | easyCodeTouch_v1  |
 | Vendor  | [Onesti Products AS](/supported-devices/#v=Onesti%20Products%20AS)  |
 | Description | Zigbee module for EasyAccess code touch series |
-| Exposes | lock (state, lock_state), battery, sound_volume, voltage, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, auto_relock_time, max_pin_users, min_pin_length, max_pin_length, pin_code, last_successful_pincode_clear, last_successful_pincode_save |
+| Exposes | lock (state, lock_state), battery, sound_volume, voltage, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, auto_relock_time, num_pin_users, min_pin_length, max_pin_length, pin_code, last_successful_pincode_clear, last_successful_pincode_save |
 | Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.png) |
 
 
@@ -57,7 +57,7 @@ The unit of this value is `%`.
 Sound volume of the lock.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": "VALUE"}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
 
 ### Voltage (numeric)
@@ -70,7 +70,7 @@ The unit of this value is `V`.
 Last unlock source.
 Value can be found in the published state on the `last_unlock_source` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `self`, `unknown`.
+The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `unattributed`, `self`, `unknown`.
 
 ### Last unlock user (text)
 Last unlock user (slot number).
@@ -81,7 +81,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Last lock source.
 Value can be found in the published state on the `last_lock_source` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `self`, `unknown`.
+The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `unattributed`, `self`, `unknown`.
 
 ### Last lock user (text)
 Last lock user (slot number).
@@ -97,7 +97,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Auto relock after 7 seconds..
 Value can be found in the published state on the `auto_relock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": VALUE}`.
 If value equals `true` auto relock is ON, if `false` OFF.
 
 ### Auto relock time (numeric)
@@ -106,9 +106,9 @@ Value can be found in the published state on the `auto_relock_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.
 
-### Max pin users (numeric)
-Maximum number of PIN users supported.
-Value can be found in the published state on the `max_pin_users` property.
+### Num pin users (numeric)
+Number of PIN code users supported.
+Value can be found in the published state on the `num_pin_users` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Min pin length (numeric)
@@ -122,7 +122,7 @@ Value can be found in the published state on the `max_pin_length` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Pin code (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": "VALUE", "user_enabled": VALUE, "pin_code": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID to set or clear the pincode for 
 - `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`

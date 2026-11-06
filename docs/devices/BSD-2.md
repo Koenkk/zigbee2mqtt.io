@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSD-2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Smoke alarm II |
-| Exposes | smoke, smoke_alarm_silenced, button_pushed, manual_smoke_alarm, manual_burglar_alarm, broadcast_alarms, test_mode, test_mode_timeout, battery, battery_low |
+| Exposes | smoke, smoke_alarm_silenced, button_pushed, alarm_control, broadcast_alarms, test_mode, test_mode_timeout, battery, battery_low |
 | Picture | ![Bosch BSD-2](https://www.zigbee2mqtt.io/images/devices/BSD-2.png) |
 
 
@@ -55,39 +55,32 @@ Value can be found in the published state on the `button_pushed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` button pushed is ON, if `false` OFF.
 
-### Manual smoke alarm (binary)
-Indicates whether the smoke alarm siren is being manually activated on the device.
-Value can be found in the published state on the `manual_smoke_alarm` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_smoke_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_smoke_alarm": NEW_VALUE}`.
-If value equals `ON` manual smoke alarm is ON, if `OFF` OFF.
-
-### Manual burglar alarm (binary)
-Indicates whether the burglar alarm siren is being manually activated on the device.
-Value can be found in the published state on the `manual_burglar_alarm` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_burglar_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_burglar_alarm": NEW_VALUE}`.
-If value equals `ON` manual burglar alarm is ON, if `OFF` OFF.
+### Alarm control (enum)
+Manually controls the alarm siren of the device. Set to 'smoke' or 'burglar' to activate the respective alarm, or 'off' to deactivate it..
+Value can be found in the published state on the `alarm_control` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_control": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_control": "VALUE"}`.
+The possible values are: `off`, `smoke`, `burglar`.
 
 ### Broadcast alarms (binary)
 Broadcast manual alarm state changes to all BSD-2 devices on the network. Please keep in mind that a detected smoke alarm is not being transmitted automatically to other devices. To achieve that, you must set up an automation, e.g., in Home Assistant..
 Value can be found in the published state on the `broadcast_alarms` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"broadcast_alarms": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"broadcast_alarms": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"broadcast_alarms": "VALUE"}`.
 If value equals `ON` broadcast alarms is ON, if `OFF` OFF.
 
 ### Test mode (binary)
 Check the function of the smoke alarm. Pay attention to the alarm sound and the flashing of the alarm LED. Please keep in mind that it can take up to 10 seconds for the test mode to be activated..
 Value can be found in the published state on the `test_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"test_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode": "VALUE"}`.
 If value equals `ON` test mode is ON, if `OFF` OFF.
 
 ### Test mode timeout (numeric)
 Determines how long the test mode should be activated. The default length is 5 seconds..
 Value can be found in the published state on the `test_mode_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"test_mode_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"test_mode_timeout": VALUE}`.
 The minimal value is `1` and the maximum value is `255`.
 The unit of this value is `seconds`.
 

@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-205Z/A control via MQTT"
-description: "Integrate your Tuya ZG-205Z/A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-205Z/A control via MQTT"
+description: "Integrate your HOBEIAN ZG-205Z/A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-26T06:45:18
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-205Z/A
+# HOBEIAN ZG-205Z/A
 
 |     |     |
 |-----|-----|
 | Model | ZG-205Z/A  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | 5.8Ghz/24Ghz Human presence sensor |
 | Exposes | presence, motion_state, target_distance, illuminance, large_motion_detection_sensitivity, large_motion_detection_distance, fading_time, medium_motion_detection_distance, medium_motion_detection_sensitivity, indicator, small_detection_distance, small_detection_sensitivity, minimum_range |
-| Picture | ![Tuya ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.png) |
+| Picture | ![HOBEIAN ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.png) |
 
 
 
@@ -72,14 +72,14 @@ The unit of this value is `lx`.
 Motion detection sensitivity.
 Value can be found in the published state on the `large_motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"large_motion_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"large_motion_detection_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Large motion detection distance (numeric)
 Motion detection distance.
 Value can be found in the published state on the `large_motion_detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"large_motion_detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"large_motion_detection_distance": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `m`.
 
@@ -87,7 +87,7 @@ The unit of this value is `m`.
 For how much time presence should stay true after detecting it.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `0` and the maximum value is `28800`.
 The unit of this value is `s`.
 
@@ -95,7 +95,7 @@ The unit of this value is `s`.
 Medium motion detection distance.
 Value can be found in the published state on the `medium_motion_detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"medium_motion_detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"medium_motion_detection_distance": VALUE}`.
 The minimal value is `0` and the maximum value is `6`.
 The unit of this value is `m`.
 
@@ -103,21 +103,21 @@ The unit of this value is `m`.
 Medium motion detection sensitivity.
 Value can be found in the published state on the `medium_motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"medium_motion_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"medium_motion_detection_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Indicator (binary)
 LED Indicator.
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 
 ### Small detection distance (numeric)
 Small detection distance.
 Value can be found in the published state on the `small_detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"small_detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"small_detection_distance": VALUE}`.
 The minimal value is `0` and the maximum value is `6`.
 The unit of this value is `m`.
 
@@ -125,14 +125,14 @@ The unit of this value is `m`.
 Small detection sensitivity.
 Value can be found in the published state on the `small_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"small_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"small_detection_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Minimum range (numeric)
 Minimum range.
 Value can be found in the published state on the `minimum_range` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_range": VALUE}`.
 The minimal value is `0` and the maximum value is `6`.
 The unit of this value is `m`.
 

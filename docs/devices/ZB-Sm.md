@@ -47,7 +47,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 ### Goto positon (enum)
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"goto_positon": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"goto_positon": "VALUE"}`.
 The possible values are: `25`, `50`, `75`, `FAVORITE`.
 
 ### Motor state (enum)
@@ -77,28 +77,28 @@ The unit of this value is `ms`.
 Setup or clear top limit.
 Value can be found in the published state on the `top_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"top_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"top_limit": "VALUE"}`.
 The possible values are: `SET`, `CLEAR`.
 
 ### Bottom limit (enum)
 Setup or clear bottom limit.
 Value can be found in the published state on the `bottom_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bottom_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bottom_limit": "VALUE"}`.
 The possible values are: `SET`, `CLEAR`.
 
 ### Favorite position (numeric)
 Favorite position of this cover.
 Value can be found in the published state on the `favorite_position` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"favorite_position": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"favorite_position": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### Reverse direction (binary)
 Inverts the cover direction.
 Value can be found in the published state on the `reverse_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": VALUE}`.
 If value equals `true` reverse direction is ON, if `false` OFF.
 
 ### Motor type (text)
@@ -108,6 +108,6 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 ### Report (enum)
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report": "VALUE"}`.
 The possible values are: ``.
 

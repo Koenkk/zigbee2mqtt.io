@@ -510,7 +510,8 @@ Format, available and default values are as below:
     "TRANSIENT_DEVICE_TIMEOUT": 10000,
     "END_DEVICE_POLL_TIMEOUT": 8,
     "TRANSIENT_KEY_TIMEOUT_S": 300,
-    "CCA_MODE": null
+    "CCA_MODE": null,
+    "DEFAULT_MANUFACTURER_CODE": 4169
 }
 ```
 
@@ -520,21 +521,25 @@ Documentation on these values and their behavior can be found in [SiLabs UG100 -
 
 The driver further restricts values to the below:
 
-- CONCENTRATOR_RAM_TYPE: "high" or "low"
-- CONCENTRATOR_MIN_TIME: min 1, max 60
-- CONCENTRATOR_MAX_TIME: min 30, max 300
-- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min 1, max 100
-- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
-- CONCENTRATOR_MAX_HOPS: min 0, max 30
-- MAX_END_DEVICE_CHILDREN: min 6, max 64
-- TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
-- END_DEVICE_POLL_TIMEOUT: min 0, max 14
-- TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
-- CCA_MODE: defaults to undefined (i.e. left to firmware default), possible values:
-    - "RSSI": RSSI-based CCA. CCA reports a busy medium upon detecting any energy above -75 (default).
-    - "SIGNAL": Signal Identifier-based CCA. CCA reports a busy medium only upon the detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "SIGNAL_OR_RSSI": RSSI or signal identifier-based CCA. CCA reports a busy medium on either detecting any energy above -75 (default) or detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "SIGNAL_AND_RSSI": RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    - "ALWAYS_TRANSMIT": ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
+- CONCENTRATOR_RAM_TYPE: `"high"` or `"low"`
+- CONCENTRATOR_MIN_TIME: min `1`, max `60`
+- CONCENTRATOR_MAX_TIME: min `30`, max `300`
+- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min `1`, max `100`
+- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min `1`, max `100`
+- CONCENTRATOR_MAX_HOPS: min `0`, max `30`
+- MAX_END_DEVICE_CHILDREN: min `6`, max `64`
+- TRANSIENT_DEVICE_TIMEOUT: min `0`, max `65535`
+- END_DEVICE_POLL_TIMEOUT: min `0`, max `14`
+- TRANSIENT_KEY_TIMEOUT_S: min `0`, max `65535`
+- CCA_MODE: default `undefined` (i.e. left to firmware default), possible values:
+    - `"RSSI"`: RSSI-based CCA. CCA reports a busy medium upon detecting any energy above -75 (default).
+    - `"SIGNAL"`: Signal Identifier-based CCA. CCA reports a busy medium only upon the detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"SIGNAL_OR_RSSI"`: RSSI or signal identifier-based CCA. CCA reports a busy medium on either detecting any energy above -75 (default) or detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"SIGNAL_AND_RSSI"`: RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - `"ALWAYS_TRANSMIT"`: ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
+- DEFAULT_MANUFACTURER_CODE: min `0`, max `65535`
+    - Default of `4169` is `SILICON_LABORATORIES`. See full list [here](https://github.com/Koenkk/zigbee-herdsman/blob/master/src/zspec/zcl/definition/manufacturerCode.ts) (convert value from hexadecimal to decimal before using in JSON).
+    - WARNING: setting this may allow some devices with vendor lock-in to behave better but may break others.
+    - NOTE: may be temporarily overridden during joins for devices with known quirks.
 
 **Note that some values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**

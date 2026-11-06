@@ -10,6 +10,9 @@ next: 14_securing.md
 
 These instructions explain how to run Zigbee2MQTT on Linux.
 
+> [!WARNING]
+> **32-bit platforms are deprecated, support ends April 2027.** When Node.js 22 reaches end-of-life (April 2027), the minimum supported Node.js version becomes v24, which no longer ships official builds for any 32-bit platform. If you run Zigbee2MQTT on 32-bit hardware or a 32-bit OS (e.g. Raspberry Pi 1/Zero, older Raspberry Pi OS 32-bit installs), plan to move to a 64-bit OS or hardware (`amd64`/`x86_64`, `arm64`/`aarch64`) before then. See [#33552](https://github.com/Koenkk/zigbee2mqtt/issues/33552).
+
 For the sake of simplicity this guide assumes running on a Raspberry Pi 4, but it should work on any Linux machine.
 
 Therefore the user `pi` is used the following examples, but the user may differ between distributions e.g. `openhabian` should be used on Openhabian.
@@ -32,7 +35,7 @@ sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
 corepack enable
 
 # Verify that the correct Node.js version has been installed
-node --version  # Should output V20.x, V22.X
+node --version  # Should output v20.x.x or higher
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
 sudo mkdir /opt/zigbee2mqtt

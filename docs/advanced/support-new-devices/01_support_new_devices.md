@@ -31,7 +31,7 @@ Zigbee2MQTT:warn  2019-11-09T12:19:56: Device '0x00158d0001dc126a' with Zigbee m
 When pairing an unsupported device with Zigbee2MQTT, it will attempt to discover features supported by this device. To check what has already been discovered, navigate to the `Exposes` tab of the device in frontend. See if the exposed features work by checking if values are reported and/or states are controllable (in case of e.g. a light).
 Note that feature discovery is still WIP, not all features may be discovered, some may not be discoverable at all due to a non-standard implementation on the device (commonly the case for Tuya devices).
 
-Next generate the external definition by navigating to the `Dev console` tab of the device and press `Generate external definition`.
+To see the code for the discovered features, navigate to the `Dev console` tab of the device and press `Generate external definition`.
 
 <img src="../../images/generate_external_definition.gif" height="300"/>
 
@@ -45,9 +45,15 @@ If not, you will have to extend the external definition.
 
 ### 3. Extending the generated external definition
 
-To extend the generated external definition, you can either save the code in a file manually, and restart Zigbee2MQTT, or you can use the MQTT API to load the converter at runtime. See [external converters](../../advanced/more/external_converters.md) for more details.
+To extend the generated external definition, you can either save the code in a file manually, and restart Zigbee2MQTT, or you can use the MQTT API / frontend to load the converter at runtime. See [external converters](../../advanced/more/external_converters.md) for more details.
 
 Add and/or configure the appropriate modern extends for the device (see previous link).
+
+A minimal definition should contain:
+
+- Exact identifiers, for device detection (`zigbeeModel` or `fingerprint`)
+- Product branding, for the user (`model`, `vendor`, `description`). _The model must be unique, e.g. `ZY-M100-24GV3`_
+- Device features (Use `extend` functions. They bundle `fromZigbee`, `toZigbee`, `exposes` etc.)
 
 > [!TIP]
 > The `Clusters` tab of the device, in frontend, lists supported clusters for further analysis.
@@ -81,11 +87,12 @@ If none of the existing converters fit, you can add custom ones, an example for 
 
 To contribute your new device definition to Zigbee2MQTT such that it will be supported out-of-the-box in the next release, follow these steps:
 
-1. Identify the correct [devices file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) in the zigbee-herdsman-converters repository where your device belongs (usually by brand or vendor).
-1. Click on the file and use the edit (pencil) icon to open it for editing directly on GitHub.
-1. Add your device definition to the file, following the structure and patterns used for similar devices.
-1. Press **Commit changes** -> **Propose changes** -> **Create pull request**.
-1. Fill in the PR template and press **Create pull request**.
+1. Make sure the device was not already added/submitted
+2. Identify the correct [devices file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) in the zigbee-herdsman-converters repository where your device belongs (usually by brand or vendor).
+3. Click on the file and use the edit (pencil) icon to open it for editing directly on GitHub.
+4. Add your device definition to the file, following the structure and patterns used for similar devices.
+5. Press **Commit changes** -> **Propose changes** -> **Create pull request**.
+6. Fill in the PR template and press **Create pull request**.
 
 ### 5. Add device picture to zigbee2mqtt.io documentation
 
@@ -96,8 +103,8 @@ First start by creating a photo you want to provide for the device. Ensure:
 - File format: `PNG`
 - Resolution: `512x512`
 - Background: `transparent`.
-  _If necessary, use the [Adobe Express Remove Background tool](https://new.express.adobe.com/tools/remove-background) to make the background transparent._
-- Filename: unique filename (for instance: `ZY-M100-24GV3.png`)
+  _If necessary, use the [Adobe Express background remover](https://new.express.adobe.com/tools/remove-background)_
+- Filename: exact match to `model` in definition or white-label _(for instance: `ZY-M100-24GV3.png`)_
 
 The easiest way to provide the picture for the device is by uploading it using the GitHub web editor:
 
@@ -126,11 +133,9 @@ The easiest way to provide the picture for the device is by uploading it using t
 
   <img width="746" height="109" alt="New pull request" src="https://github.com/user-attachments/assets/2c8379a5-c45c-4c17-975e-797d9a7218cf" />
 
-8. Select the feature-branch with changes you want to provide to the [zigbee2mqtt.io GitHub repository](https://github.com/Koenkk/zigbee2mqtt.io).
+8. Select the feature-branch with changes you want to provide to the [zigbee2mqtt.io GitHub repository](https://github.com/Koenkk/zigbee2mqtt.io). The **Create pull request** button should appear afterwards.
 
-    The **Create pull request** button should appear afterwards.
-
-       <img width="943" height="264" alt="image" src="https://github.com/user-attachments/assets/e2cd762f-1e85-491b-bd92-9d2f2b82ce64" />
+  <img width="943" height="264" alt="image" src="https://github.com/user-attachments/assets/e2cd762f-1e85-491b-bd92-9d2f2b82ce64" />
 
 9. Provide information for the PR and choose the **Create pull request** button.
 

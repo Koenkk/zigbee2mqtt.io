@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_cover_13  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Curtain motor |
-| Exposes | cover (state, position), motor_direction, motor_state, total_time, situation_set, auto_power, fault |
+| Exposes | cover (state, position), motor_direction, motor_state, total_time, situation_set, fault, auto_power |
 | Picture | ![Tuya TS0601_cover_13](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_13.png) |
 
 
@@ -48,7 +48,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Motor rotation direction.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": "VALUE"}`.
 The possible values are: `normal`, `reversed`.
 
 ### Motor state (enum)
@@ -67,17 +67,17 @@ The unit of this value is `ms`.
 Set fully open or fully close position.
 Value can be found in the published state on the `situation_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"situation_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"situation_set": "VALUE"}`.
 The possible values are: `fully_close`, `fully_open`.
-
-### Auto power (binary)
-Value can be found in the published state on the `auto_power` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_power": NEW_VALUE}`.
-If value equals `true` auto power is ON, if `false` OFF.
 
 ### Fault (text)
 Fault details.
 Value can be found in the published state on the `fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Auto power (binary)
+Value can be found in the published state on the `auto_power` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_power": VALUE}`.
+If value equals `true` auto power is ON, if `false` OFF.
 

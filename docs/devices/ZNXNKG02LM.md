@@ -30,6 +30,11 @@ pageClass: device-page
 
 Press and hold the button on the device until the blue light starts blinking, release it and the pairing should begin.
 If you're having problems pairing, try keeping the device alive (press the button every second) after pairing started, until pairing completed
+
+### Changing `operation_mode` and `sensitivity`
+The device only accepts changes to `operation_mode` and `sensitivity` for about one minute after pairing.
+After that, `/get` and `/set` requests for these settings have no effect.
+To change them later, pair the device again and change the settings shortly afterwards.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -41,7 +46,7 @@ If you're having problems pairing, try keeping the device alive (press the butto
 Command mode is useful for binding. Event mode is useful for processing..
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": "VALUE"}`.
 The possible values are: `event`, `command`.
 
 ### Battery (numeric)
@@ -97,7 +102,7 @@ The possible values are: `released`, `pressed`.
 Rotation sensitivity.
 Value can be found in the published state on the `sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Action (enum)

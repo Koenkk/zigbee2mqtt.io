@@ -1,6 +1,6 @@
 ---
-title: "Tuya ZG-101Z/D control via MQTT"
-description: "Integrate your Tuya ZG-101Z/D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HOBEIAN ZG-101Z/D control via MQTT"
+description: "Integrate your HOBEIAN ZG-101Z/D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-05-01T17:56:32
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya ZG-101Z/D
+# HOBEIAN ZG-101Z/D
 
 |     |     |
 |-----|-----|
 | Model | ZG-101Z/D  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
 | Description | Smart knob |
 | Exposes | operation_mode, battery, action |
-| Picture | ![Tuya ZG-101Z/D](https://www.zigbee2mqtt.io/images/devices/ZG-101Z-D.png) |
+| Picture | ![HOBEIAN ZG-101Z/D](https://www.zigbee2mqtt.io/images/devices/ZG-101Z-D.png) |
 
 
 
@@ -42,7 +42,7 @@ pageClass: device-page
 Operation mode: "command" - for group control, "event" - for clicks.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": "VALUE"}`.
 The possible values are: `command`, `event`.
 
 ### Battery (numeric)

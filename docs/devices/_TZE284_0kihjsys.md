@@ -67,55 +67,55 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Effective with EyZEE Decouplar switch only. Couple/Decouple: Click ON, then DOUBLE-TAP the physical button to activate Decouple mode. Click OFF, then DOUBLE-TAP the physical button to deactivate Decouple mode..
 Value can be found in the published state on the `couple_decouple` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"couple_decouple": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"couple_decouple": "VALUE"}`.
 If value equals `ON` couple decouple is ON, if `OFF` OFF.
 
 ### Indicator mode (enum)
 Indicator Mode: off=Backlight off, on_off_status=Red ON / Blue OFF, switch_position=Pink ON / Off when OFF.
 Value can be found in the published state on the `indicator_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": "VALUE"}`.
 The possible values are: `off`, `on_off_status`, `switch_position`.
 
 ### Restart status 1 (enum)
 Power-on behavior for Switch 1.
 Value can be found in the published state on the `restart_status_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_1": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Restart status 2 (enum)
 Power-on behavior for Switch 2.
 Value can be found in the published state on the `restart_status_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_2": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Restart status 3 (enum)
 Power-on behavior for Switch 3.
 Value can be found in the published state on the `restart_status_3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_3": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Restart status 4 (enum)
 Power-on behavior for Switch 4.
 Value can be found in the published state on the `restart_status_4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_4": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Restart status 5 (enum)
 Power-on behavior for Switch 5.
 Value can be found in the published state on the `restart_status_5` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status_5": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Restart status (binary)
 Global power restoration status.
 Value can be found in the published state on the `restart_status` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_status": "VALUE"}`.
 If value equals `ON` restart status is ON, if `OFF` OFF.
 

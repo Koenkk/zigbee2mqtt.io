@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | zFlora_Pro  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Plant watering sensor zFlora_Pro |
-| Exposes | identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_compensation |
+| Exposes | identify, soil_moisture, vpd, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_compensation |
 | Picture | ![EFEKTA zFlora_Pro](https://www.zigbee2mqtt.io/images/devices/zFlora_Pro.png) |
 
 
@@ -58,7 +58,7 @@ pageClass: device-page
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Soil moisture (numeric)
@@ -66,6 +66,12 @@ Measured soil moisture value.
 Value can be found in the published state on the `soil_moisture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
+
+### Vpd (numeric)
+Vapor Pressure Deficit (VPD) from built-in sensor.
+Value can be found in the published state on the `vpd` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kPa`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -101,7 +107,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Measured illuminance.
+Measured illuminance. 0 = too low to be measured.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -110,14 +116,14 @@ The unit of this value is `lx`.
 Lux factor.
 Value can be found in the published state on the `lux_factor` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_factor": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_factor": VALUE}`.
 The minimal value is `0.1` and the maximum value is `30`.
 
 ### Reading interval (numeric)
 Setting the time in minutes, by default 3 minutes.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": VALUE}`.
 The minimal value is `1` and the maximum value is `360`.
 The unit of this value is `min`.
 
@@ -125,14 +131,14 @@ The unit of this value is `min`.
 Enable Smart Sleep, short wakeup every 7 seconds.
 Value can be found in the published state on the `smart_sleep` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": "VALUE"}`.
 If value equals `ON` smart sleep is ON, if `OFF` OFF.
 
 ### Tx radio power (enum)
 Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": "VALUE"}`.
 The possible values are: `0dbm`, `4dbm`.
 
 ### Uptime (numeric)
@@ -145,7 +151,7 @@ The unit of this value is `Hours`.
 Lower level of soil moisture 0% is:.
 Value can be found in the published state on the `lower_level` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lower_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lower_level": VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.
 
@@ -153,7 +159,7 @@ The unit of this value is `%`.
 Upper level of soil moisture 100% is:.
 Value can be found in the published state on the `upper_level` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper_level": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -161,6 +167,6 @@ The unit of this value is `%`.
 Temperature compensation.
 Value can be found in the published state on the `temperature_compensation` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_compensation": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_compensation": "VALUE"}`.
 If value equals `ON` temperature compensation is ON, if `OFF` OFF.
 

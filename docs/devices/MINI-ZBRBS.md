@@ -45,7 +45,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the reported cover position and the state derived from it, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
@@ -62,7 +62,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Calibrates the motor stroke, or clears the current one..
 Value can be found in the published state on the `motor_travel_calibration_action` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_travel_calibration_action": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_travel_calibration_action": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_travel_calibration_action": "VALUE"}`.
 The possible values are: `none`, `start_automatic`, `start_manual`, `clear`, `manual_2_fully_opened`, `manual_3_fully_closed`.
 
 ### Motor travel calibration status (enum)
@@ -83,6 +83,6 @@ The possible values are: `stop`, `forward`, `reverse`.
 External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..
 Value can be found in the published state on the `external_trigger_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_trigger_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_trigger_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_trigger_mode": "VALUE"}`.
 The possible values are: `edge`, `pulse`, `following(off)`, `following(on)`.
 

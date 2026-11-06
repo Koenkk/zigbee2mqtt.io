@@ -192,7 +192,7 @@ The unit of this value is `%`.
 Update frequency.
 Value can be found in the published state on the `update_frequency` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": VALUE}`.
 The minimal value is `30` and the maximum value is `3600`.
 The unit of this value is `s`.
 Besides the numeric values the following values are accepted: `default`.
@@ -201,6 +201,6 @@ Besides the numeric values the following values are accepted: `default`.
 Locate device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_locating": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_locating": "VALUE"}`.
 If value equals `ON` device locating is ON, if `OFF` OFF.
 

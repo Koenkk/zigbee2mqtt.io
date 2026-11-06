@@ -54,7 +54,7 @@ pageClass: device-page
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Power (numeric)
@@ -82,7 +82,7 @@ The unit of this value is `kWh`.
 Define the device behavior after power failure.
 Value can be found in the published state on the `power_failure_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_failure_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_failure_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_failure_mode": "VALUE"}`.
 The possible values are: `last_state`, `off`, `on`, `blink`.
 
 ### Actual order (enum)
@@ -96,21 +96,21 @@ The possible values are: `stop`, `frost_off`, `eco`, `confort_2`, `confort_1`, `
 Define the “Order” embedded timer duration. This timer is set when the device changes its order (in second). After that duration, the device is set back to its fallback order..
 Value can be found in the published state on the `order_timer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"order_timer": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"order_timer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"order_timer": VALUE}`.
 The minimal value is `0` and the maximum value is `4294967295`.
 
 ### Pre order timer (numeric)
 Define the duration before an order is set. This timer is used when a new order is asked, it corresponds to the time before this order is applied. The duration is set in second..
 Value can be found in the published state on the `pre_order_timer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pre_order_timer": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pre_order_timer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pre_order_timer": VALUE}`.
 The minimal value is `0` and the maximum value is `4294967295`.
 
 ### Timer unit (enum)
 Represent the actual unit used for local command configuration.
 Value can be found in the published state on the `timer_unit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"timer_unit": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer_unit": "VALUE"}`.
 The possible values are: `second`, `minutes`.
 
 ### Led mode (enum)
@@ -119,7 +119,7 @@ Define the product’s LED behavior:
 - 0x01 -> LED is only OFF during few seconds after a mode transition.
 Value can be found in the published state on the `led_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_mode": "VALUE"}`.
 The possible values are: `led_on`, `led_off`.
 
 ### Pilot wire relay mode (enum)
@@ -128,7 +128,7 @@ Define if the product must be set into pilot wire relay mode:
 - 0x01 -> Relay mode is activated.
 Value can be found in the published state on the `pilot_wire_relay_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pilot_wire_relay_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilot_wire_relay_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilot_wire_relay_mode": "VALUE"}`.
 The possible values are: `relay_on`, `relay_off`.
 
 ### Order scrolling mode (enum)
@@ -137,7 +137,7 @@ Define the order scrolling sense:
 - 0x01 -> Backward : Arrêt -> Hors-Gel -> Eco -> Confort – 2 -> Confort – 1 -> Confort.
 Value can be found in the published state on the `order_scrolling_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"order_scrolling_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"order_scrolling_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"order_scrolling_mode": "VALUE"}`.
 The possible values are: `forward`, `backward`.
 
 ### Order number supported (enum)
@@ -146,41 +146,41 @@ Define the number of orders supported by the device:
 - 0x01 -> 6 orders (Confort, Confort – 1, Confort – 2, Eco, Hors-Gel, Arrêt) - (default).
 Value can be found in the published state on the `order_number_supported` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"order_number_supported": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"order_number_supported": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"order_number_supported": "VALUE"}`.
 The possible values are: `four_orders`, `six_orders`.
 
 ### Fallback order (enum)
 Represent the fallback order used by the device after the end of an order timer is reached.
 Value can be found in the published state on the `fallback_order` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fallback_order": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fallback_order": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fallback_order": "VALUE"}`.
 The possible values are: `stop`, `frost_off`, `eco`, `confort_2`, `confort_1`, `confort`.
 
 ### Pilotwire set order (enum)
 Set the device in the specified order..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilotwire_set_order": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilotwire_set_order": "VALUE"}`.
 The possible values are: `stop`, `frost_off`, `eco`, `confort_2`, `confort_1`, `confort`.
 
 ### Pilotwire toggle order (enum)
 Toggle between order by respecting the scrolling order.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilotwire_toggle_order": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilotwire_toggle_order": "VALUE"}`.
 The possible values are: `pilotwire_toggle_order`.
 
 ### Reset to factory settings (enum)
 Reset setting depending on RESET ACTION value.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_to_factory_settings": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_to_factory_settings": "VALUE"}`.
 The possible values are: `factory_reset`, `configuration_reset`, `network_reset`.
 
 ### Relaunch ble advert (enum)
 Relaunch BLE advertising for 15 minutes.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relaunch_ble_advert": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relaunch_ble_advert": "VALUE"}`.
 The possible values are: `relaunch_ble_advert`.
 

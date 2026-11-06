@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_PST_DUO_V1_LR  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Water, gas smart pressure monitor with two sensors and signal amplifier |
-| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_cal, range, raw_temperature_calibration, battery, voltage, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data |
+| Exposes | pressure, bar, psi, temperature, pressure_offset, raw_temperature_cal, range, raw_temperature_calibration, battery, voltage, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data, overheating |
 | Picture | ![EFEKTA EFEKTA_PST_DUO_V1_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_DUO_V1_LR.png) |
 
 
@@ -72,15 +72,15 @@ The unit of this value is `°C`.
 Adjust first pressure sensor.
 Value can be found in the published state on the `pressure_offset_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset_1": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Raw temperature cal (numeric, 1 endpoint)
 Adjust first temperature sensor.
 Value can be found in the published state on the `raw_temperature_cal_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_cal_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_cal_1": VALUE}`.
 The minimal value is `-8192` and the maximum value is `8192`.
 The unit of this value is `raw unit`.
 
@@ -88,7 +88,7 @@ The unit of this value is `raw unit`.
 Measuring range of the first sensor.
 Value can be found in the published state on the `range_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"range_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range_1": "VALUE"}`.
 The possible values are: `0-10 Bar`, `0-16 Bar`.
 
 ### Pressure (numeric, 2 endpoint)
@@ -119,15 +119,15 @@ The unit of this value is `°C`.
 Adjust second pressure sensor.
 Value can be found in the published state on the `pressure_offset_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset_2": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
-The unit of this value is `kPa`.
+The unit of this value is `hPa`.
 
 ### Raw temperature calibration (numeric, 2 endpoint)
 Adjust second temperature sensor.
 Value can be found in the published state on the `raw_temperature_calibration_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_calibration_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"raw_temperature_calibration_2": VALUE}`.
 The minimal value is `-8192` and the maximum value is `8192`.
 The unit of this value is `raw unit`.
 
@@ -135,7 +135,7 @@ The unit of this value is `raw unit`.
 Measuring range of the first sensor.
 Value can be found in the published state on the `range_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"range_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"range_2": "VALUE"}`.
 The possible values are: `0-10 Bar`, `0-16 Bar`.
 
 ### Battery (numeric)
@@ -169,7 +169,7 @@ The unit of this value is `Hours`.
 Setting the sensor reading interval in seconds, by default 40 seconds.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": VALUE}`.
 The minimal value is `10` and the maximum value is `360`.
 The unit of this value is `sec`.
 
@@ -177,27 +177,39 @@ The unit of this value is `sec`.
 Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": "VALUE"}`.
 The possible values are: `4dbm`, `19dbm`.
 
 ### Smart sleep (binary)
 Enable Smart Sleep, short wakeup every 7 seconds.
 Value can be found in the published state on the `smart_sleep` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": "VALUE"}`.
 If value equals `ON` smart sleep is ON, if `OFF` OFF.
 
 ### Config report enable (binary)
 Enable reporting based on reporting configuration.
 Value can be found in the published state on the `config_report_enable` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_report_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_report_enable": "VALUE"}`.
 If value equals `ON` config report enable is ON, if `OFF` OFF.
 
 ### Comparison previous data (binary)
 Enable сontrol of comparison with previous data.
 Value can be found in the published state on the `comparison_previous_data` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": "VALUE"}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
+
+### Overheating (enum, 1 endpoint)
+Sensor overheating detection.
+Value can be found in the published state on the `overheating_1` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `FALSE`, `TRUE`.
+
+### Overheating (enum, 2 endpoint)
+Sensor overheating detection.
+Value can be found in the published state on the `overheating_2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `FALSE`, `TRUE`.
 

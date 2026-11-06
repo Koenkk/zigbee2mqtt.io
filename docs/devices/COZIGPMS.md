@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | COZIGPMS  |
 | Vendor  | [Conecto](/supported-devices/#v=Conecto)  |
 | Description | PIR Motion Sensor |
-| Exposes | occupancy, illuminance, battery |
+| Exposes | occupancy, illuminance |
 | Picture | ![Conecto COZIGPMS](https://www.zigbee2mqtt.io/images/devices/COZIGPMS.png) |
 
 

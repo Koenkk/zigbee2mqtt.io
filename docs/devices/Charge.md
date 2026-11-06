@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Charge  |
 | Vendor  | [Futurehome](/supported-devices/#v=Futurehome)  |
 | Description | Futurehome Charge (EV Charger) |
-| Exposes | status, charging_start, charging_stop, charging_pause, setpoint_charging_current, auto_charge, cable_locked, state, charging_current_limit, session_energy, energy_meter_start, energy_meter_now, charging_duration, power, voltage, current, energy, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, is_charging, charging_start_datetime, charging_end_datetime, is_plug_connected, connected_start_datetime, connected_end_datetime |
+| Exposes | status, charging_start, charging_stop, charging_pause, setpoint_charging_current, auto_charge, plug_locked_permanently, state, charging_current_limit, session_energy, energy_meter_start, energy_meter_now, charging_duration, power, voltage, current, energy, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, is_charging, charging_start_datetime, charging_end_datetime, is_plug_connected, connected_start_datetime, connected_end_datetime, plug_lock_state |
 | Picture | ![Futurehome Charge](https://www.zigbee2mqtt.io/images/devices/Charge.png) |
 
 
@@ -87,28 +87,28 @@ The possible values are: `plugged_out`, `off`, `plugged_in_charging`, `plugged_i
 Press to start charging.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_start": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_start": "VALUE"}`.
 The possible values are: `start`.
 
 ### Stop charging (enum)
 Press to stop charging.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_stop": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_stop": "VALUE"}`.
 The possible values are: `stop`.
 
 ### Pause charging (enum)
 Press to pause charging.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_pause": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_pause": "VALUE"}`.
 The possible values are: `pause`.
 
 ### Setpoint charging current (numeric)
 Setpoint charging current.
 Value can be found in the published state on the `setpoint_charging_current` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"setpoint_charging_current": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_charging_current": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setpoint_charging_current": VALUE}`.
 The minimal value is `6` and the maximum value is `32`.
 The unit of this value is `A`.
 
@@ -116,28 +116,28 @@ The unit of this value is `A`.
 Automatically start charging when a car is connected..
 Value can be found in the published state on the `auto_charge` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_charge": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_charge": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_charge": "VALUE"}`.
 If value equals `ON` auto charge is ON, if `OFF` OFF.
 
-### Cable locked (binary)
-Permanently lock cable when not charging..
-Value can be found in the published state on the `cable_locked` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cable_locked": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cable_locked": NEW_VALUE}`.
-If value equals `LOCK` cable locked is ON, if `UNLOCK` OFF.
+### Plug locked when not charging (binary)
+Permanently lock plug (cable) when not charging..
+Value can be found in the published state on the `plug_locked_permanently` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"plug_locked_permanently": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"plug_locked_permanently": "VALUE"}`.
+If value equals `LOCK` plug locked when not charging is ON, if `UNLOCK` OFF.
 
 ### Force plug to unlock (enum)
 Try this if the plug is locked in the charger after charging is completed..
 Value can be found in the published state on the `state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "VALUE"}`.
 The possible values are: `UNLOCK`.
 
 ### Charging current limit (numeric)
 Maximum charging current..
 Value can be found in the published state on the `charging_current_limit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charging_current_limit": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_current_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_current_limit": VALUE}`.
 The minimal value is `6` and the maximum value is `32`.
 The unit of this value is `A`.
 
@@ -252,4 +252,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Date and time when charger was disconnected..
 Value can be found in the published state on the `connected_end_datetime` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Plug lock state (binary)
+Plug (cable) lock state.
+Value can be found in the published state on the `plug_lock_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"plug_lock_state": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `false` plug lock state is ON, if `true` OFF.
 

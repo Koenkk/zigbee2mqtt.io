@@ -57,7 +57,7 @@ The unit of this value is `ppm`.
 Gas alarm value.
 Value can be found in the published state on the `set_max_gas_alarm` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_max_gas_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_max_gas_alarm": VALUE}`.
 The minimal value is `0.1` and the maximum value is `20`.
 The unit of this value is `%LEL`.
 
@@ -65,7 +65,7 @@ The unit of this value is `%LEL`.
 CO alarm value.
 Value can be found in the published state on the `set_max_co_alarm` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_max_co_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_max_co_alarm": VALUE}`.
 The minimal value is `10` and the maximum value is `1000`.
 The unit of this value is `ppm`.
 
@@ -85,7 +85,7 @@ The possible values are: `normal`, `alarm`.
 self checking.
 Value can be found in the published state on the `self_checking` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_checking": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_checking": "VALUE"}`.
 If value equals `ON` self checking is ON, if `OFF` OFF.
 
 ### Checking result (enum)

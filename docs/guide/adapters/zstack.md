@@ -175,6 +175,7 @@ Note before buying that ITead slightly confusingly now sells both the Dongle Plu
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20250321/CC1352P2_CC2652P_launchpad_coordinator_20250321.zip)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_router_20250403/CC1352P2_CC2652P_launchpad_router_20250403.zip)
+- LED: the red LED is a power indicator and the firmware's LED pin (DIO_7) is not populated on this dongle, so `disable_led` has no visible effect; with router firmware the LED stays on regardless of network state.
 - [Vendor flashing from web](https://dongle.sonoff.tech/sonoff-dongle-flasher/) Plug in dongle, open webpage, connect, select custom, upload hex file from above, flash. No software required.
 - [Vendor flashing instructions](https://sonoff.tech/wp-content/uploads/2021/09/Zigbee-3.0-USB-dongle-plus-firmware-flashing-1-1.docx) ([PDF version](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-firmware_flashing-1-1.pdf) and [required python script](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-uartLog.zip))
 - [Buy](https://itead.cc/product/sonoff-zigbee-3-0-usb-dongle-plus/)
@@ -808,7 +809,7 @@ Serial connected adapter with external antenna optionally with CC2591 or CC2592 
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin)
-- [Flashing instructions](../../advanced/zigbee/05_create_a_cc2530_router.md#2-flashing-the-cc2530)
+- [Flashing instructions](../../advanced/zigbee/05_create_a_cc2530_router.md#flashing-the-cc2530)
 - [Connecting](./flashing/connecting_cc2530.md)
 - Buy: [AliExpress](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530) [GBAN](http://www.gban.cn/en/product_show.asp?id=43) [Tindie](https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/)
 

@@ -36,7 +36,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position and state, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `invert_cover`: Inverts the reported cover position and the state derived from it, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `limits_calibration`: Recalibrate the position limits. The value must be one of `calibrated`, `recalibrate`, `open`, `close`
 
@@ -53,14 +53,14 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Whether the curtain direction is inverted.
 Value can be found in the published state on the `reverse_direction` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"reverse_direction": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": VALUE}`.
 If value equals `true` reverse direction is ON, if `false` OFF.
 
 ### Hand open (binary)
 Pulling curtains by hand starts the motor.
 Value can be found in the published state on the `hand_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hand_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hand_open": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hand_open": VALUE}`.
 If value equals `true` hand open is ON, if `false` OFF.
 
 ### Running (binary)
