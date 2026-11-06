@@ -24,17 +24,19 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+If the OTA updates fail consistently, place the device close to the
+coordinator and perform a hard reset by removing the batteries for 5
+minutes and reinserting them. Then pair directly to the coordinator
+and retry the OTA update.
 <!-- Notes END: Do not edit below this line -->
 
 
 ## OTA updates
-This device supports OTA updates, for more information see
-[OTA updates](../guide/usage/ota_updates.md). If the updates fail
-consistently, place the device close to the coordinator and perform a
-hard reset by removing the batteries for 5 minutes and reinserting them.
-Then pair directly to the coordinator and retry the OTA update.
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
 
 ## Exposes
 
