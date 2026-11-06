@@ -192,5 +192,7 @@ The full OTA file can also be supplied in hex string form: `"hex":{"data":"1EF1E
 ## Troubleshooting
 
 - `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds, then try OTA again, make sure to activate the device by pressing a button on it right before sending the update request
+- Some models are known to block firmware updates for other devices on the network: [SONOFF ZBM5-3C-80/86 v1.0.6](https://www.zigbee2mqtt.io/devices/ZBM5-3C-80_86.html)
+- `INVALID_IMAGE`: If this comes up with the correct image, make sure the `default_maximum_data_size` is on the default value and try again. Also power-cycle the device and check if the update actually completed (but gave a false alarm)
 - For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming. Some devices check for a minimum battery level prior to updating and will refuse to update if too low
 - Make sure your log level is set to `info`. When set to `warning` or `error`, frontend will not report some messages indicating the current OTA status
