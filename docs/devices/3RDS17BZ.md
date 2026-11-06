@@ -24,8 +24,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+If the OTA updates fail consistently, place the device close to the
+coordinator and perform a hard reset by removing the batteries for 5
+minutes and reinserting them. Then pair directly to the coordinator
+and retry the OTA update.
 <!-- Notes END: Do not edit below this line -->
 
 
