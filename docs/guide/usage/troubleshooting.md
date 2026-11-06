@@ -86,3 +86,7 @@ If you use an MQTT broker with version 5 of the MQTT specification, you may get 
 This can happen, for example, when "maximum packet size" is exceeded (large networks).
 
 To remedy that, configure your broker accordingly, and check if Zigbee2MQTT has a corresponding setting to adjust too. See [MQTT configuration](../configuration/mqtt.md#server-connection).
+
+## OTA updates
+
+See the Troubleshooting section on the [OTA updates](./ota_updates.md#troubleshooting) page
