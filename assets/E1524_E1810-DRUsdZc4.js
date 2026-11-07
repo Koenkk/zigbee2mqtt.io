@@ -1,0 +1,96 @@
+import { K as withCtx, P as openBlock, R as resolveComponent, g as createVNode, h as createTextVNode, m as createStaticVNode, s as createBaseVNode, u as createElementBlock } from "./runtime-core.esm-bundler-Benzf_2N.js";
+import { t as _plugin_vue_export_helper_default } from "./app-BXeDPBLt.js";
+// docs/devices/E1524_E1810.md
+var _pageData = JSON.parse("{\"path\":\"/devices/E1524_E1810.html\",\"title\":\"IKEA E1524/E1810 control via MQTT\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"device-page\",\"title\":\"IKEA E1524/E1810 control via MQTT\",\"description\":\"Integrate your IKEA E1524/E1810 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway.\",\"addedAt\":\"2019-09-08T21:16:00.000Z\"},\"filePathRelative\":\"devices/E1524_E1810.md\"}");
+var _sfc_main = { name: "E1524_E1810.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	const _component_RouteLink = resolveComponent("RouteLink");
+	return openBlock(), createElementBlock("div", null, [
+		_cache[24] || (_cache[24] = createBaseVNode("h1", {
+			id: "ikea-e1524-e1810",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#ikea-e1524-e1810"
+		}, [createBaseVNode("span", null, "IKEA E1524/E1810")])], -1)),
+		createBaseVNode("table", null, [_cache[6] || (_cache[6] = createBaseVNode("thead", null, [createBaseVNode("tr", null, [createBaseVNode("th"), createBaseVNode("th")])], -1)), createBaseVNode("tbody", null, [
+			_cache[2] || (_cache[2] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Model"), createBaseVNode("td", null, "E1524/E1810")], -1)),
+			createBaseVNode("tr", null, [_cache[1] || (_cache[1] = createBaseVNode("td", null, "Vendor", -1)), createBaseVNode("td", null, [createVNode(_component_RouteLink, { to: "/supported-devices/#v=IKEA" }, {
+				default: withCtx(() => [..._cache[0] || (_cache[0] = [createTextVNode("IKEA", -1)])]),
+				_: 1
+			})])]),
+			_cache[3] || (_cache[3] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Description"), createBaseVNode("td", null, "TRADFRI remote control")], -1)),
+			_cache[4] || (_cache[4] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Exposes"), createBaseVNode("td", null, "identify, battery, action")], -1)),
+			_cache[5] || (_cache[5] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Picture"), createBaseVNode("td", null, [createBaseVNode("img", {
+				src: "https://www.zigbee2mqtt.io/images/devices/E1524-E1810.png",
+				alt: "IKEA E1524/E1810"
+			})])], -1))
+		])]),
+		_cache[25] || (_cache[25] = createStaticVNode("<h2 id=\"notes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#notes\"><span>Notes</span></a></h2><h3 id=\"pairing\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#pairing\"><span>Pairing</span></a></h3><p>Pair the remote to Zigbee2MQTT by holding it close to the coordinator and pressing the inside button, next to the CR2032 battery, 4 times in 5s. The red light on the (front of the) remote will now flash a few times.</p><h3 id=\"troubleshooting-no-battery-level-or-not-sending-messages-at-all\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#troubleshooting-no-battery-level-or-not-sending-messages-at-all\"><span>Troubleshooting: no battery level OR not sending messages at all</span></a></h3>", 4)),
+		createBaseVNode("p", null, [
+			_cache[8] || (_cache[8] = createTextVNode("It may help to remove the battery for a few seconds and after that reconfigure it via ", -1)),
+			createVNode(_component_RouteLink, { to: "/guide/usage/mqtt_topics_and_messages.html#zigbee2mqttbridgeconfigure" }, {
+				default: withCtx(() => [..._cache[7] || (_cache[7] = [createTextVNode("Configure", -1)])]),
+				_: 1
+			}),
+			_cache[9] || (_cache[9] = createTextVNode(". Right before executing the Configure make sure to wake up the device by pressing a button on it.", -1))
+		]),
+		_cache[26] || (_cache[26] = createStaticVNode("<h3 id=\"troubleshooting-device-didn-t-respond-to-ota-request\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#troubleshooting-device-didn-t-respond-to-ota-request\"><span>Troubleshooting: Device didn&#39;t respond to OTA request</span></a></h3><p>To resolve the <code>Device didn&#39;t respond to OTA request</code> error, you can try to push a button on it, shortly before you start the update, to wake up the Remote.</p><h3 id=\"troubleshooting-automations-triggered-by-button-presses-throw-exceptions\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#troubleshooting-automations-triggered-by-button-presses-throw-exceptions\"><span>Troubleshooting: Automations triggered by button presses throw exceptions</span></a></h3><p>Make sure that automations that are triggered by the &#39;action&#39; attribute of the remote are not configured in the &#39;restart&#39; mode. Since there is an event for the button press (e.g. <code>arrow_left_click</code>) as well as for the release (e.g. <code>arrow_left_release</code>) the trigger will fire two times in rapid succession which may result in the automation being cancelled before it can finish its first run.</p><h3 id=\"binding\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#binding\"><span>Binding</span></a></h3>", 5)),
+		createBaseVNode("p", null, [
+			_cache[11] || (_cache[11] = createTextVNode("The ", -1)),
+			createVNode(_component_RouteLink, { to: "/guide/usage/binding.html" }, {
+				default: withCtx(() => [..._cache[10] || (_cache[10] = [createTextVNode("binding", -1)])]),
+				_: 1
+			}),
+			_cache[12] || (_cache[12] = createTextVNode(" functionality of this remote varies per firmware version:", -1))
+		]),
+		_cache[27] || (_cache[27] = createStaticVNode("<ul><li>&lt; 2.3.014: binding is not supported, OTA update your device to get binding functionality</li><li>2.3.014 - 2.3.074: supports binding to groups only. It can only be bound to 1 group at a time. By default this remote is bound to the default bind group which you first have to unbind it from. This can be done by sending to <code>zigbee2mqtt/bridge/request/device/unbind</code> payload <code>{&quot;from&quot;: &quot;DEVICE_FRIENDLY_NAME&quot;, &quot;to&quot;: &quot;default_bind_group&quot;}</code>. Wake up the device right before sending the commands by pressing a button on it.</li><li>2.3.075 - 2.3.080 : supports binding to devices only</li><li>24.4.5: supports binding to a limited number of devices, <em>or</em> exclusively to a single group. Remove the <em>Coordinator</em> binding <strong>after</strong> binding to the group. Further editing of bindings then requires factory reset (4x button press) while join is enabled.</li></ul><p><strong>Note:</strong> Prior to sending a &#39;bind&#39; command using an MQTT message directly or through the frontend, push a button on the remote to wake it up. Otherwise, the remote will not be in a receiving state and the bind will fail with a general &#39;error&#39;.</p><p>Once bound to a group/bulb you will notice that the toggle and brightness buttons will work, but scenes/color temperature may not work depending on firmware version.</p>", 3)),
+		createBaseVNode("ul", null, [createBaseVNode("li", null, [_cache[18] || (_cache[18] = createTextVNode("< 24.4.5: ", -1)), createBaseVNode("ol", null, [
+			_cache[16] || (_cache[16] = createBaseVNode("li", null, [
+				createTextVNode("Create a group with ID "),
+				createBaseVNode("strong", null, "65289"),
+				createTextVNode(" (name it ie. Trafri_scenes) and add the device(s) you control with the remote.")
+			], -1)),
+			createBaseVNode("li", null, [
+				_cache[14] || (_cache[14] = createTextVNode("Add/store ", -1)),
+				createVNode(_component_RouteLink, { to: "/guide/usage/scenes.html" }, {
+					default: withCtx(() => [..._cache[13] || (_cache[13] = [createTextVNode("scenes", -1)])]),
+					_: 1
+				}),
+				_cache[15] || (_cache[15] = createTextVNode(" for the created group", -1))
+			]),
+			_cache[17] || (_cache[17] = createBaseVNode("li", null, "Once you click left/right on the remote, the scenes will be called sequentially (should there be a device off sync in scenes, hold the toggle button for 3 sec.).", -1))
+		])]), _cache[19] || (_cache[19] = createBaseVNode("li", null, [
+			createTextVNode("24.4.5: Bind the "),
+			createBaseVNode("code", null, "LevelCtrl"),
+			createTextVNode(" and "),
+			createBaseVNode("code", null, "Scenes"),
+			createTextVNode(" clusters to the devices or groups (only "),
+			createBaseVNode("code", null, "LevelCtrl"),
+			createTextVNode(" is supported for groups) to be able to control brightness and scenes/color respectively.")
+		], -1))]),
+		_cache[28] || (_cache[28] = createStaticVNode("<h3 id=\"toggle-button\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#toggle-button\"><span>Toggle button</span></a></h3><p>When clicking the middle (center) button on the remote it will send a <code>{&quot;click&quot;: &quot;toggle&quot;}</code>, when holding it it will <strong>also</strong> send a <code>{&quot;click&quot;: &quot;toggle_hold&quot;}</code>. It is not possible to skip the <code>toggle</code> when the button is hold. Also the remote won&#39;t send anything when the button is released. See <a href=\"https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691885\" target=\"_blank\" rel=\"noopener noreferrer\">link</a> for more details.</p><h3 id=\"ota-updates-troubleshooting\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#ota-updates-troubleshooting\"><span>OTA updates troubleshooting</span></a></h3><p>If you have problems with running firmware update, try following:</p><ol><li>after clicking &quot;Updare firmware&quot; button in Z2M, click every 1-2s any of control buttons on remote</li><li>if remote keeps aborting firmware update, then try with fresh battery and also you can try to reset device (press pair button next to battery 4 times in 5s period)</li></ol><h2 id=\"ota-updates\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#ota-updates\"><span>OTA updates</span></a></h2>", 6)),
+		createBaseVNode("p", null, [
+			_cache[21] || (_cache[21] = createTextVNode("This device supports OTA updates, for more information see ", -1)),
+			createVNode(_component_RouteLink, { to: "/guide/usage/ota_updates.html" }, {
+				default: withCtx(() => [..._cache[20] || (_cache[20] = [createTextVNode("OTA updates", -1)])]),
+				_: 1
+			}),
+			_cache[22] || (_cache[22] = createTextVNode(".", -1))
+		]),
+		_cache[29] || (_cache[29] = createBaseVNode("h2", {
+			id: "options",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#options"
+		}, [createBaseVNode("span", null, "Options")])], -1)),
+		createBaseVNode("p", null, [createBaseVNode("em", null, [createVNode(_component_RouteLink, { to: "/guide/configuration/devices-groups.html#specific-device-options" }, {
+			default: withCtx(() => [..._cache[23] || (_cache[23] = [createTextVNode("How to use device type specific configuration", -1)])]),
+			_: 1
+		})])]),
+		_cache[30] || (_cache[30] = createStaticVNode("<ul><li><code>identify_timeout</code>: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of <code>1</code> and with a maximum value of <code>30</code></li></ul><h2 id=\"exposes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#exposes\"><span>Exposes</span></a></h2><h3 id=\"identify-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#identify-enum\"><span>Identify (enum)</span></a></h3><p>Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command.. Value will <strong>not</strong> be published in the state. It&#39;s not possible to read (<code>/get</code>) this value. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;identify&quot;: &quot;VALUE&quot;}</code>. The possible values are: <code>identify</code>.</p><h3 id=\"battery-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#battery-numeric\"><span>Battery (numeric)</span></a></h3><p>Remaining battery in %. Value can be found in the published state on the <code>battery</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;battery&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The minimal value is <code>0</code> and the maximum value is <code>100</code>. The unit of this value is <code>%</code>.</p><h3 id=\"action-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#action-enum\"><span>Action (enum)</span></a></h3><p>Triggered action (e.g. a button click). Value can be found in the published state on the <code>action</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The possible values are: <code>toggle</code>, <code>brightness_up_click</code>, <code>brightness_down_click</code>, <code>brightness_up_hold</code>, <code>brightness_up_release</code>, <code>brightness_down_hold</code>, <code>brightness_down_release</code>, <code>toggle_hold</code>, <code>arrow_left_click</code>, <code>arrow_left_hold</code>, <code>arrow_left_release</code>, <code>arrow_right_click</code>, <code>arrow_right_hold</code>, <code>arrow_right_release</code>.</p>", 8))
+	]);
+}
+var E1524_E1810_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+export { _pageData, E1524_E1810_default as default };

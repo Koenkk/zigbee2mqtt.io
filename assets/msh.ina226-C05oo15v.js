@@ -1,0 +1,38 @@
+import { K as withCtx, P as openBlock, R as resolveComponent, g as createVNode, h as createTextVNode, m as createStaticVNode, s as createBaseVNode, u as createElementBlock } from "./runtime-core.esm-bundler-Benzf_2N.js";
+import { t as _plugin_vue_export_helper_default } from "./app-BXeDPBLt.js";
+// docs/devices/msh.ina226.md
+var _pageData = JSON.parse("{\"path\":\"/devices/msh.ina226.html\",\"title\":\"MySmartHouse msh.ina226 control via MQTT\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"device-page\",\"title\":\"MySmartHouse msh.ina226 control via MQTT\",\"description\":\"Integrate your MySmartHouse msh.ina226 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway.\",\"addedAt\":\"2026-06-30T19:08:02.000Z\"},\"filePathRelative\":\"devices/msh.ina226.md\"}");
+var _sfc_main = { name: "msh.ina226.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	const _component_RouteLink = resolveComponent("RouteLink");
+	return openBlock(), createElementBlock("div", null, [
+		_cache[8] || (_cache[8] = createBaseVNode("h1", {
+			id: "mysmarthouse-msh-ina226",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#mysmarthouse-msh-ina226"
+		}, [createBaseVNode("span", null, "MySmartHouse msh.ina226")])], -1)),
+		createBaseVNode("table", null, [_cache[6] || (_cache[6] = createBaseVNode("thead", null, [createBaseVNode("tr", null, [createBaseVNode("th"), createBaseVNode("th")])], -1)), createBaseVNode("tbody", null, [
+			_cache[2] || (_cache[2] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Model"), createBaseVNode("td", null, "msh.ina226")], -1)),
+			createBaseVNode("tr", null, [_cache[1] || (_cache[1] = createBaseVNode("td", null, "Vendor", -1)), createBaseVNode("td", null, [createVNode(_component_RouteLink, { to: "/supported-devices/#v=MySmartHouse" }, {
+				default: withCtx(() => [..._cache[0] || (_cache[0] = [createTextVNode("MySmartHouse", -1)])]),
+				_: 1
+			})])]),
+			_cache[3] || (_cache[3] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Description"), createBaseVNode("td", null, "MSH 9-26V, 5A DC Power Meter")], -1)),
+			_cache[4] || (_cache[4] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Exposes"), createBaseVNode("td", null, "power, voltage, current, l4")], -1)),
+			_cache[5] || (_cache[5] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Picture"), createBaseVNode("td", null, [createBaseVNode("img", {
+				src: "https://www.zigbee2mqtt.io/images/devices/msh.ina226.png",
+				alt: "MySmartHouse msh.ina226"
+			})])], -1))
+		])]),
+		_cache[9] || (_cache[9] = createStaticVNode("<h2 id=\"notes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#notes\"><span>Notes</span></a></h2><p><a href=\"https://www.facebook.com/my.smart.house.in.ua\" target=\"_blank\" rel=\"noopener noreferrer\">MSH 9-26V, 5A DC Power Meter</a></p><h2 id=\"options\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#options\"><span>Options</span></a></h2>", 3)),
+		createBaseVNode("p", null, [createBaseVNode("em", null, [createVNode(_component_RouteLink, { to: "/guide/configuration/devices-groups.html#specific-device-options" }, {
+			default: withCtx(() => [..._cache[7] || (_cache[7] = [createTextVNode("How to use device type specific configuration", -1)])]),
+			_: 1
+		})])]),
+		_cache[10] || (_cache[10] = createStaticVNode("<ul><li><p><code>power_calibration</code>: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.</p></li><li><p><code>power_precision</code>: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of <code>0</code> and with a maximum value of <code>3</code></p></li><li><p><code>voltage_calibration</code>: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.</p></li><li><p><code>voltage_precision</code>: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of <code>0</code> and with a maximum value of <code>3</code></p></li><li><p><code>current_calibration</code>: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.</p></li><li><p><code>current_precision</code>: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of <code>0</code> and with a maximum value of <code>3</code></p></li></ul><h2 id=\"exposes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#exposes\"><span>Exposes</span></a></h2><h3 id=\"power-numeric-l2-endpoint\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#power-numeric-l2-endpoint\"><span>Power (numeric, l2 endpoint)</span></a></h3><p>Instantaneous measured power. Value can be found in the published state on the <code>power_l2</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;power_l2&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The unit of this value is <code>W</code>.</p><h3 id=\"voltage-numeric-l2-endpoint\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#voltage-numeric-l2-endpoint\"><span>Voltage (numeric, l2 endpoint)</span></a></h3><p>Measured electrical potential value. Value can be found in the published state on the <code>voltage_l2</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;voltage_l2&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The unit of this value is <code>V</code>.</p><h3 id=\"current-numeric-l2-endpoint\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#current-numeric-l2-endpoint\"><span>Current (numeric, l2 endpoint)</span></a></h3><p>Instantaneous measured electrical current. Value can be found in the published state on the <code>current_l2</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;current_l2&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The unit of this value is <code>A</code>.</p><h3 id=\"uptime-numeric-l4-endpoint\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#uptime-numeric-l4-endpoint\"><span>Uptime (numeric, l4 endpoint)</span></a></h3><p>Uptime (seconds). Value can be found in the published state on the <code>l4_l4</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The unit of this value is <code>s</code>.</p>", 10))
+	]);
+}
+var msh_ina226_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+export { _pageData, msh_ina226_default as default };

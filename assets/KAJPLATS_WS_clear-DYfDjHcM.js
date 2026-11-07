@@ -1,0 +1,134 @@
+import { K as withCtx, P as openBlock, R as resolveComponent, g as createVNode, h as createTextVNode, m as createStaticVNode, s as createBaseVNode, u as createElementBlock } from "./runtime-core.esm-bundler-Benzf_2N.js";
+import { t as _plugin_vue_export_helper_default } from "./app-BXeDPBLt.js";
+// docs/devices/KAJPLATS_WS_clear.md
+var _pageData = JSON.parse("{\"path\":\"/devices/KAJPLATS_WS_clear.html\",\"title\":\"IKEA KAJPLATS_WS_clear control via MQTT\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"device-page\",\"title\":\"IKEA KAJPLATS_WS_clear control via MQTT\",\"description\":\"Integrate your IKEA KAJPLATS_WS_clear via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway.\",\"addedAt\":\"2026-03-31T19:04:38.000Z\"},\"filePathRelative\":\"devices/KAJPLATS_WS_clear.md\"}");
+var _sfc_main = { name: "KAJPLATS_WS_clear.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	const _component_RouteLink = resolveComponent("RouteLink");
+	return openBlock(), createElementBlock("div", null, [
+		_cache[21] || (_cache[21] = createBaseVNode("h1", {
+			id: "ikea-kajplats-ws-clear",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#ikea-kajplats-ws-clear"
+		}, [createBaseVNode("span", null, "IKEA KAJPLATS_WS_clear")])], -1)),
+		createBaseVNode("table", null, [_cache[6] || (_cache[6] = createBaseVNode("thead", null, [createBaseVNode("tr", null, [createBaseVNode("th"), createBaseVNode("th")])], -1)), createBaseVNode("tbody", null, [
+			_cache[2] || (_cache[2] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Model"), createBaseVNode("td", null, "KAJPLATS_WS_clear")], -1)),
+			createBaseVNode("tr", null, [_cache[1] || (_cache[1] = createBaseVNode("td", null, "Vendor", -1)), createBaseVNode("td", null, [createVNode(_component_RouteLink, { to: "/supported-devices/#v=IKEA" }, {
+				default: withCtx(() => [..._cache[0] || (_cache[0] = [createTextVNode("IKEA", -1)])]),
+				_: 1
+			})])]),
+			_cache[3] || (_cache[3] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Description"), createBaseVNode("td", null, "KAJPLATS bulb, white spectrum, clear (Matter)")], -1)),
+			_cache[4] || (_cache[4] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Exposes"), createBaseVNode("td", null, "light (state, brightness, color_temp, color_temp_startup, level_config), effect, power_on_behavior, identify")], -1)),
+			_cache[5] || (_cache[5] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Picture"), createBaseVNode("td", null, [createBaseVNode("img", {
+				src: "https://www.zigbee2mqtt.io/images/devices/KAJPLATS_WS_clear.png",
+				alt: "IKEA KAJPLATS_WS_clear"
+			})])], -1))
+		])]),
+		_cache[22] || (_cache[22] = createBaseVNode("h2", {
+			id: "unofficial-support",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#unofficial-support"
+		}, [createBaseVNode("span", null, "Unofficial support")])], -1)),
+		_cache[23] || (_cache[23] = createBaseVNode("p", null, [
+			createBaseVNode("strong", null, "This device is part of the IKEA Matter/Thread line-up."),
+			createBaseVNode("br"),
+			createTextVNode(" The hidden Zigbee mode is not officially supported by IKEA. It exists mainly to keep backwards compatibility via Touchlink."),
+			createBaseVNode("br"),
+			createTextVNode(" As a result, the Zigbee firmware is stripped-down to the essentials, and could even be removed in OTA updates.")
+		], -1)),
+		_cache[24] || (_cache[24] = createBaseVNode("h2", {
+			id: "related",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#related"
+		}, [createBaseVNode("span", null, "Related")])], -1)),
+		createBaseVNode("ul", null, [
+			createBaseVNode("li", null, [createVNode(_component_RouteLink, { to: "/devices/KAJPLATS_CWS.html" }, {
+				default: withCtx(() => [..._cache[7] || (_cache[7] = [createTextVNode("KAJPLATS color/white spectrum", -1)])]),
+				_: 1
+			})]),
+			createBaseVNode("li", null, [createVNode(_component_RouteLink, { to: "/devices/KAJPLATS_WS.html" }, {
+				default: withCtx(() => [..._cache[8] || (_cache[8] = [createTextVNode("KAJPLATS white spectrum", -1)])]),
+				_: 1
+			})]),
+			createBaseVNode("li", null, [createVNode(_component_RouteLink, { to: "/devices/KAJPLATS_WS_clear.html" }, {
+				default: withCtx(() => [..._cache[9] || (_cache[9] = [createTextVNode("KAJPLATS white spectrum clear", -1)])]),
+				_: 1
+			})]),
+			_cache[10] || (_cache[10] = createBaseVNode("li", null, [createBaseVNode("a", {
+				href: "https://www.zigbee2mqtt.io/supported-devices/#s=KAJPLATS",
+				target: "_blank",
+				rel: "noopener noreferrer"
+			}, "All KAJPLATS models")], -1))
+		]),
+		_cache[25] || (_cache[25] = createStaticVNode("<h2 id=\"pairing\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#pairing\"><span>Pairing</span></a></h2><ol><li><p><strong>Power-cycle the lamp 6 times</strong> to factory reset (<a href=\"https://www.youtube.com/watch?v=npxOrPxVfe0\" target=\"_blank\" rel=\"noopener noreferrer\">video</a>).</p></li><li><p><strong>Power-cycle the lamp 15 times</strong> (or 12, depending on model) to start Zigbee pairing.<br> When successful, the light will flash white. <em>Tip: Use a smart plug</em></p></li></ol><p>The lamp counts a cycle only if power is cut within about 2 s after it comes on. Keep the ON phase at about 1 s: with 2.5 s or 3 s ON the cycles were not counted (measured on a GU10 CWS, firmware 1.1.0).</p><p>If the device flashes, but does not join, this may help:</p><ul><li>Use a default Zigbee channel (11, 15, 20, 25)</li><li>Bring it very close to the coordinator</li><li>Pair another device at the same time</li><li>Fiddle with an IKEA remote: re-insert batteries, press buttons, activate Touchlink</li></ul>", 5)),
+		createBaseVNode("p", null, [createVNode(_component_RouteLink, { to: "/guide/usage/touchlink.html" }, {
+			default: withCtx(() => [..._cache[11] || (_cache[11] = [createTextVNode("Touchlink", -1)])]),
+			_: 1
+		}), _cache[12] || (_cache[12] = createTextVNode(" reset is also possible, but it seems the device only identifies for 15s, without leaving its current network and entering pairing mode.", -1))]),
+		_cache[26] || (_cache[26] = createStaticVNode("<p>Note that Matter pairing (via Bluetooth) is simultaneously active for 15 minutes after power-on, even if the device is already paired to a Zigbee network. That is the Matter SDK default and matches <a href=\"https://www.ikea.com/nl/en/customer-service/product-support/smart-lighting/smart-lighting-support-pubd8491250/\" target=\"_blank\" rel=\"noopener noreferrer\">IKEA&#39;s support page</a>; measured at about 15 minutes on a GU10 CWS with firmware 1.1.0.</p><h2 id=\"firmware\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#firmware\"><span>Firmware</span></a></h2><p>The device does not support OTA updates via Zigbee. Instead, updates are provided over Matter.<br><strong>Move it to any Thread hub to update.</strong><br> View available updates <a href=\"https://webui.dcl.csa-iot.org/models\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> (search <em>KAJPLATS</em> or <em>4476</em>).</p><h2 id=\"issues\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#issues\"><span>Issues</span></a></h2>", 4)),
+		createBaseVNode("ul", null, [
+			_cache[16] || (_cache[16] = createBaseVNode("li", null, [
+				createTextVNode("The device may come with null model and manufacturer attributes. In this case, Zigbee2MQTT will recognize it generically. A firmware update may fix it. Alternatively, edit "),
+				createBaseVNode("code", null, "database.db"),
+				createTextVNode(" manually, as described in "),
+				createBaseVNode("a", {
+					href: "https://github.com/Koenkk/zigbee-herdsman-converters/issues/11939#issuecomment-4239257579",
+					target: "_blank",
+					rel: "noopener noreferrer"
+				}, "this issue")
+			], -1)),
+			createBaseVNode("li", null, [
+				_cache[14] || (_cache[14] = createTextVNode("Power-on behavior may not work, only in Zigbee mode, on some models (at least one variant of ", -1)),
+				createVNode(_component_RouteLink, { to: "/devices/LED2401G5.html" }, {
+					default: withCtx(() => [..._cache[13] || (_cache[13] = [createTextVNode("LED2401G5", -1)])]),
+					_: 1
+				}),
+				_cache[15] || (_cache[15] = createTextVNode(")", -1))
+			]),
+			_cache[17] || (_cache[17] = createBaseVNode("li", null, [
+				createTextVNode("Scenes, groups and the "),
+				createBaseVNode("em", null, "OffWithEffect"),
+				createTextVNode(" command may fail, with the INSUFFICIENT_SPACE error. See more info and workaround in "),
+				createBaseVNode("a", {
+					href: "https://github.com/Koenkk/zigbee2mqtt/issues/30211#issuecomment-4019236515",
+					target: "_blank",
+					rel: "noopener noreferrer"
+				}, "this issue")
+			], -1)),
+			_cache[18] || (_cache[18] = createBaseVNode("li", null, "The scene table holds 12 scenes on the GU10 CWS (firmware 1.1.0); the E27 1521 lm model is reported with 8 in the issue above. A scene stores on/off, brightness and, when the lamp is in XY color mode, the XY color. Color temperature is not stored, and recalling a scene does not switch the lamp out of color temperature mode.", -1)),
+			_cache[19] || (_cache[19] = createBaseVNode("li", null, [createTextVNode("The device may not announce itself on power restore. As a result, it can be unreachable after being powered off for a long time. Discussion in "), createBaseVNode("a", {
+				href: "https://github.com/Koenkk/zigbee2mqtt/issues/32115",
+				target: "_blank",
+				rel: "noopener noreferrer"
+			}, "this issue")], -1))
+		]),
+		_cache[27] || (_cache[27] = createBaseVNode("h2", {
+			id: "transition",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#transition"
+		}, [createBaseVNode("span", null, "Transition")])], -1)),
+		_cache[28] || (_cache[28] = createBaseVNode("p", null, "IKEA lights only support transitions on 1 attribute at a time. If you would for example change the color temperature and brightness in 1 command, the color temperature transition is ignored.", -1)),
+		_cache[29] || (_cache[29] = createBaseVNode("h2", {
+			id: "options",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#options"
+		}, [createBaseVNode("span", null, "Options")])], -1)),
+		createBaseVNode("p", null, [createBaseVNode("em", null, [createVNode(_component_RouteLink, { to: "/guide/configuration/devices-groups.html#specific-device-options" }, {
+			default: withCtx(() => [..._cache[20] || (_cache[20] = [createTextVNode("How to use device type specific configuration", -1)])]),
+			_: 1
+		})])]),
+		_cache[30] || (_cache[30] = createStaticVNode("<ul><li><p><code>transition</code>: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to <code>0</code> (no transition). The value must be a number with a minimum value of <code>0</code></p></li><li><p><code>color_sync</code>: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be <code>true</code> or <code>false</code></p></li><li><p><code>identify_timeout</code>: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of <code>1</code> and with a maximum value of <code>30</code></p></li><li><p><code>state_action</code>: State actions will also be published as &#39;action&#39; when true (default false). The value must be <code>true</code> or <code>false</code></p></li></ul><h2 id=\"exposes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#exposes\"><span>Exposes</span></a></h2><h3 id=\"light\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#light\"><span>Light</span></a></h3><p>This light supports the following features: <code>state</code>, <code>brightness</code>, <code>color_temp</code>, <code>color_temp_startup</code>, <code>level_config</code>.</p><ul><li><p><code>state</code>: To control the state publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;state&quot;: &quot;ON&quot;}</code>, <code>{&quot;state&quot;: &quot;OFF&quot;}</code> or <code>{&quot;state&quot;: &quot;TOGGLE&quot;}</code>. To read the state send a message to <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;state&quot;: &quot;&quot;}</code>.</p></li><li><p><code>brightness</code>: To control the brightness publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;brightness&quot;: VALUE}</code> where <code>VALUE</code> is a number between <code>0</code> and <code>254</code>. To read the brightness send a message to <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;brightness&quot;: &quot;&quot;}</code>.</p></li><li><p><code>color_temp</code>: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;color_temp&quot;: VALUE}</code> where <code>VALUE</code> is a number between <code>153</code> and <code>454</code>, the higher the warmer the color. To read the color temperature send a message to <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;color_temp&quot;: &quot;&quot;}</code>. Besides the numeric values the following values are accepted: <code>coolest</code>, <code>cool</code>, <code>neutral</code>, <code>warm</code>, <code>warmest</code>.</p></li><li><p><code>color_temp_startup</code>: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;color_temp_startup&quot;: VALUE}</code> where <code>VALUE</code> is a number between <code>153</code> and <code>454</code>, the higher the warmer the color. To read the startup color temperature send a message to <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;color_temp_startup&quot;: &quot;&quot;}</code>. Besides the numeric values the following values are accepted: <code>coolest</code>, <code>cool</code>, <code>neutral</code>, <code>warm</code>, <code>warmest</code>, <code>previous</code>.</p></li></ul><h4 id=\"on-with-timed-off\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#on-with-timed-off\"><span>On with timed off</span></a></h4><p>When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property <code>on_time</code> to the payload which is the time in seconds the state should remain on. Additionally an <code>off_wait_time</code> property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands. Support depends on the light firmware. Some devices might require both <code>on_time</code> and <code>off_wait_time</code> to work Examples : <code>{&quot;state&quot; : &quot;ON&quot;, &quot;on_time&quot;: 300}</code>, <code>{&quot;state&quot; : &quot;ON&quot;, &quot;on_time&quot;: 300, &quot;off_wait_time&quot;: 120}</code>.</p><h4 id=\"transition-1\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#transition-1\"><span>Transition</span></a></h4><p>For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property <code>transition</code> to the payload which is the transition time in seconds. Examples: <code>{&quot;brightness&quot;:156,&quot;transition&quot;:3}</code>, <code>{&quot;color_temp&quot;:241,&quot;transition&quot;:1}</code>.</p><h4 id=\"moving-stepping\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#moving-stepping\"><span>Moving/stepping</span></a></h4><p>Instead of setting a value (e.g. brightness) directly it is also possible to:</p><ul><li>move: this will automatically move the value over time, to stop send value <code>stop</code> or <code>0</code>.</li><li>step: this will increment/decrement the current value by the given one.</li></ul><p>The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up. To do this send a payload like below to <code>zigbee2mqtt/FRIENDLY_NAME/set</code></p><p><strong>NOTE</strong>: brightness move/step will stop at the minimum brightness and won&#39;t turn on the light when it&#39;s off. In this case use <code>brightness_move_onoff</code>/<code>brightness_step_onoff</code></p><div class=\"language-javascript line-numbers-mode\" data-highlighter=\"prismjs\" data-ext=\"js\"><pre><code class=\"language-javascript\"><span class=\"line\"><span class=\"token punctuation\">{</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;brightness_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token operator\">-</span><span class=\"token number\">40</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Starts moving brightness down at 40 units per second</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;brightness_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Stop moving brightness</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;brightness_step&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">40</span> <span class=\"token comment\">// Increases brightness by 40</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">60</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Starts moving color temperature up at 60 units per second</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token operator\">-</span><span class=\"token number\">40</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Starts moving color temperature down at 40 units per second</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token string\">&quot;stop&quot;</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Stop moving color temperature</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token string\">&quot;release&quot;</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Stop moving color temperature</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">0</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Stop moving color temperature</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token string\">&quot;up&quot;</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Move to warmer color temperature at default rate</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">1</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Move to warmer color temperature at default rate</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token string\">&quot;down&quot;</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Move to cooler color temperature at default rate</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_move&quot;</span><span class=\"token operator\">:</span> <span class=\"token punctuation\">{</span><span class=\"token string-property property\">&quot;rate&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">30</span><span class=\"token punctuation\">,</span> <span class=\"token string-property property\">&quot;minimum&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">150</span><span class=\"token punctuation\">,</span> <span class=\"token string-property property\">&quot;maximum&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">500</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Move with custom rate and constraints</span></span>\n<span class=\"line\">  <span class=\"token string-property property\">&quot;color_temp_step&quot;</span><span class=\"token operator\">:</span> <span class=\"token number\">99</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// Increase color temperature by 99</span></span>\n<span class=\"line\"><span class=\"token punctuation\">}</span></span>\n<span class=\"line\"></span></code></pre><div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0;\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h3 id=\"effect-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#effect-enum\"><span>Effect (enum)</span></a></h3><p>Triggers an effect on the light (e.g. make light blink for a few seconds). Value will <strong>not</strong> be published in the state. It&#39;s not possible to read (<code>/get</code>) this value. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;effect&quot;: &quot;VALUE&quot;}</code>. The possible values are: <code>blink</code>, <code>breathe</code>, <code>okay</code>, <code>channel_change</code>, <code>finish_effect</code>, <code>stop_effect</code>.</p><h3 id=\"power-on-behavior-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#power-on-behavior-enum\"><span>Power-on behavior (enum)</span></a></h3><p>Controls the behavior when the device is powered on after power loss. Value can be found in the published state on the <code>power_on_behavior</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;power_on_behavior&quot;: &quot;&quot;}</code>. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;power_on_behavior&quot;: &quot;VALUE&quot;}</code>. The possible values are: <code>off</code>, <code>on</code>, <code>toggle</code>, <code>previous</code>.</p><h3 id=\"identify-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#identify-enum\"><span>Identify (enum)</span></a></h3><p>Initiate device identification. Value will <strong>not</strong> be published in the state. It&#39;s not possible to read (<code>/get</code>) this value. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;identify&quot;: &quot;VALUE&quot;}</code>. The possible values are: <code>identify</code>.</p>", 21))
+	]);
+}
+var KAJPLATS_WS_clear_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+export { _pageData, KAJPLATS_WS_clear_default as default };
