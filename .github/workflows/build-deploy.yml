@@ -12,8 +12,6 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v7
-              with:
-                  fetch-depth: 0
 
             - name: Setup pnpm
               uses: pnpm/action-setup@v6
@@ -26,6 +24,15 @@ jobs:
 
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
+
+            # Multiple copies of @vuepress/client make all pages render empty, while the build still succeeds
+            - name: Check for duplicate @vuepress/client
+              run: |
+                  count=$(grep -cE "^  '?@vuepress/client@.*\(" pnpm-lock.yaml || true)
+                  if [ "$count" -gt 1 ]; then
+                      echo "::error file=pnpm-lock.yaml::Found $count copies of @vuepress/client, run 'pnpm dedupe' to fix this"
+                      exit 1
+                  fi
 
             - name: Lint
               run: pnpm run pretty:check

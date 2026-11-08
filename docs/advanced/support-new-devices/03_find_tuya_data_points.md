@@ -79,7 +79,7 @@ Now there are multiple ways of adding devices to the cloud project.
 
 _If the following methods don't work (the device list remains empty), check the project region._
 
-### Real device
+### A. Real device
 
 If you have a Tuya gateway and the physical device:
 
@@ -87,7 +87,7 @@ If you have a Tuya gateway and the physical device:
 2. Set-up the Zigbee gateway and pair the device normally
 3. Refresh the web page
 
-### Virtual device
+### B. Virtual device
 
 Without a Tuya gateway, we can create virtual devices.  
 **We only need the product ID.**
@@ -133,14 +133,22 @@ In **Devices** -> **All Devices**, click on **Debug Device**.
 
 ![08_devices](../../images/how_tos/tuya_dp/08_devices.png)
 
-1. In the **Device Debugging** tab, you will see the _(usually incomplete)_ schema, under **Standard Instruction Set** _(read-write)_ and **Standard Status Set** _(read-only)_. This gives you the type, scale and range of some data, but it's missing the datapoint IDs
+1. In the **Device Debugging** tab, you will see the schema, under **Standard Instruction Set** _(read-write)_ and **Standard Status Set** _(read-only)_. This gives you the type, scale and range of some data, but it's usually incomplete and it's missing the datapoint IDs
 
 2. In the **Device Logs** tab, you will see list of all events the device has sent to the Tuya platform. The source code of this tab includes the datapoints IDs
 
-_Note the exact feature naming usually differs from one tab to the other._  
-_And sometimes it must be translated from Chinese_
+_Note the exact feature naming usually differs from one tab to the other. And sometimes it must be translated from Chinese._
 
-### Export the IDs automatically
+There are multiple methods of exporting the schema:
+
+### A. Command line (recommended)
+
+1. Clone and install [tuya-smart-control-cli](https://github.com/tuya/tuya-smart-control-cli)
+2. Run `tuya init` and input your API key (e.g. from [eu.tuya.ai/apps/keys](https://eu.tuya.ai/apps/keys))
+3. Run `tuya device list` to find your device ID
+4. Run `tuya device model --json device_id > schema.json` to export the schema
+
+### B. Web auto
 
 On the **Device Logs** tab, open the **browser menu** -> **More tools** -> **Dev tools** -> **Console**. Paste the [code below](#automatic-script) and press `Enter`. Next, open the **Select DP ID** drop-down list and hover over each item. The running code will automatically read the datapoint ID for each item. When finished, run `export_codes()` in the console. This will output the feature-ID mapping.
 
@@ -197,7 +205,7 @@ function export_codes() {
 }
 ```
 
-### Find the IDs manually
+### C. Web manual
 
 On the **Device Logs** tab, select a datapoint in the drop-down list, above the events table.  
 Open the **browser menu** -> **More tools** -> **Dev tools** -> **Network**.  
