@@ -181,7 +181,7 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls green activity LED.
 Value can be found in the published state on the `activity_led_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"activity_led_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activity_led_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activity_led_indicator": VALUE}`.
 If value equals `true` activity led is ON, if `false` OFF.
 
 ### Uart connection (binary)
@@ -202,7 +202,7 @@ The unit of this value is `°C`.
 Self-heating compensation. The compensation value is subtracted from the measured temperature (default: 0).
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `°C`.
 
@@ -217,7 +217,7 @@ The unit of this value is `%`.
 Turn on when working in conditions of high humidity (more than 70 %, RH) or condensation, if the sensor shows 0 or 100 %..
 Value can be found in the published state on the `th_heater` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"th_heater": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"th_heater": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"th_heater": VALUE}`.
 If value equals `true` th heater is ON, if `false` OFF.
 
 ### CO2 (numeric)
@@ -245,7 +245,7 @@ If value equals `true` occupancy is ON, if `false` OFF.
 If the sensor is triggered by the slightest movement, reduce the sensitivity, otherwise increase it (default: 50).
 Value can be found in the published state on the `occupancy_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 
 ### Occupancy level (numeric)
@@ -258,7 +258,7 @@ It's not possible to write (`/set`) this value.
 Time in seconds after which occupancy is cleared after detecting it (default: 60).
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
 
@@ -273,7 +273,7 @@ The unit of this value is `dBA`.
 The minimum noise level at which the detector will work (default: 50).
 Value can be found in the published state on the `noise_detect_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_detect_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_detect_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_detect_level": VALUE}`.
 The minimal value is `0` and the maximum value is `150`.
 The unit of this value is `dBA`.
 
@@ -288,7 +288,7 @@ If value equals `true` noise detected is ON, if `false` OFF.
 Time in seconds after which noise is cleared after detecting it (default: 60).
 Value can be found in the published state on the `noise_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
 
@@ -303,6 +303,6 @@ The unit of this value is `µg/m³`.
 UART baud rate.
 Value can be found in the published state on the `uart_baud_rate` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"uart_baud_rate": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uart_baud_rate": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uart_baud_rate": "VALUE"}`.
 The possible values are: `9600`, `19200`, `38400`, `57600`, `115200`.
 

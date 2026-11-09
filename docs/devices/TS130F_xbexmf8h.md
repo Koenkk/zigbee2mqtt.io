@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS130F_xbexmf8h  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Blind/curtain motor controller |
-| Exposes | cover (state, position), calibration_time, motor_reversal, calibration, switch_type, backlight_mode |
+| Exposes | cover (state, position), calibration_time, motor_direction, calibration, switch_type, backlight_mode |
 | Picture | ![Tuya TS130F_xbexmf8h](https://www.zigbee2mqtt.io/images/devices/TS130F_xbexmf8h.png) |
 
 
@@ -64,31 +64,31 @@ Value can be found in the published state on the `calibration_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.
 
-### Motor reversal (binary)
-Reverse motor direction.
-Value can be found in the published state on the `motor_reversal` property.
+### Motor direction (enum)
+Motor rotation direction.
+Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
-If value equals `ON` motor reversal is ON, if `OFF` OFF.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": "VALUE"}`.
+The possible values are: `normal`, `reversed`.
 
 ### Calibration (binary)
 Calibration mode.
 Value can be found in the published state on the `calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": "VALUE"}`.
 If value equals `ON` calibration is ON, if `OFF` OFF.
 
 ### Switch type (enum)
 Type of the installed switch.
 Value can be found in the published state on the `switch_type` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": "VALUE"}`.
 The possible values are: `momentary`, `toggle`.
 
 ### Backlight mode (binary)
 Switch backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": "VALUE"}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
 

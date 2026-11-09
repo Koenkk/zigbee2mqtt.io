@@ -48,28 +48,28 @@ If value equals `true` presence is ON, if `false` OFF.
 Switch1.
 Value can be found in the published state on the `switch1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1": "VALUE"}`.
 If value equals `ON` switch1 is ON, if `OFF` OFF.
 
 ### Switch2 (binary)
 Switch2.
 Value can be found in the published state on the `switch2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2": "VALUE"}`.
 If value equals `ON` switch2 is ON, if `OFF` OFF.
 
 ### Switch3 (binary)
 Switch3.
 Value can be found in the published state on the `switch3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3": "VALUE"}`.
 If value equals `ON` switch3 is ON, if `OFF` OFF.
 
 ### Distance (numeric)
 detection distance.
 Value can be found in the published state on the `distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"distance": VALUE}`.
 The minimal value is `0` and the maximum value is `6`.
 The unit of this value is `m`.
 
@@ -77,21 +77,21 @@ The unit of this value is `m`.
 detection sensitivity.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `19`.
 
 ### Backlight (binary)
 backlight.
 Value can be found in the published state on the `backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": "VALUE"}`.
 If value equals `ON` backlight is ON, if `OFF` OFF.
 
 ### Trigger hold (numeric)
 Trigger hold(second).
 Value can be found in the published state on the `trigger_hold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_hold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_hold": VALUE}`.
 The minimal value is `5` and the maximum value is `28800`.
 The unit of this value is `s`.
 
@@ -99,27 +99,27 @@ The unit of this value is `s`.
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": "VALUE"}`.
 The possible values are: `on`, `off`, `restore`.
 
 ### Auto on (enum)
 Someone turn on the light.
 Value can be found in the published state on the `auto_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_on": "VALUE"}`.
 The possible values are: `off`, `all`, `ch1`, `ch2`, `ch3`, `ch1_2`, `ch2_3`, `ch1_3`.
 
 ### Auto off (enum)
 No one turns off the lights.
 Value can be found in the published state on the `auto_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": "VALUE"}`.
 The possible values are: `off`, `all`, `ch1`, `ch2`, `ch3`, `ch1_2`, `ch2_3`, `ch1_3`.
 
 ### Trigger switch (enum)
 Switch state reversal.
 Value can be found in the published state on the `trigger_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_switch": "VALUE"}`.
 The possible values are: `ch1`, `ch2`, `ch3`.
 

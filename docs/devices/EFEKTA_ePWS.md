@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_ePWS  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | Plant wattering sensor with e-ink display |
+| Description | Plant watering sensor with e-ink display |
 | Exposes | battery, voltage, soil_moisture, temperature |
 | Picture | ![EFEKTA EFEKTA_ePWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_ePWS.png) |
 
@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-[Plant wattering sensor with e-ink display](https://efektalab.com/epws102)
+[Plant watering sensor with e-ink display](https://efektalab.com/epws102)
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -86,7 +86,7 @@ Specifies LED color (rgb) and pattern on short press as hex string.
 Example: ff1493000104010001.
 Value can be found in the published state on the `config_led_top_left_press` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_top_left_press": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_top_left_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_top_left_press": "VALUE"}`.
 
 ### LED config (top right short press) (text)
 Specifies LED color (rgb) and pattern on short press as hex string.
@@ -97,7 +97,7 @@ Specifies LED color (rgb) and pattern on short press as hex string.
 Example: ff1493000104010001.
 Value can be found in the published state on the `config_led_top_right_press` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_top_right_press": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_top_right_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_top_right_press": "VALUE"}`.
 
 ### LED config (bottom left short press) (text)
 Specifies LED color (rgb) and pattern on short press as hex string.
@@ -108,7 +108,7 @@ Specifies LED color (rgb) and pattern on short press as hex string.
 Example: ff1493000104010001.
 Value can be found in the published state on the `config_led_bottom_left_press` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_bottom_left_press": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_left_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_left_press": "VALUE"}`.
 
 ### LED config (bottom right short press) (text)
 Specifies LED color (rgb) and pattern on short press as hex string.
@@ -119,7 +119,7 @@ Specifies LED color (rgb) and pattern on short press as hex string.
 Example: ff1493000104010001.
 Value can be found in the published state on the `config_led_bottom_right_press` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_bottom_right_press": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_right_press": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_right_press": "VALUE"}`.
 
 ### LED config (top left long press) (text)
 Specifies LED color (rgb) and pattern on long press as hex string.
@@ -130,7 +130,7 @@ Specifies LED color (rgb) and pattern on long press as hex string.
 Example: ff4200000502050001.
 Value can be found in the published state on the `config_led_top_left_longpress` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_top_left_longpress": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_top_left_longpress": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_top_left_longpress": "VALUE"}`.
 
 ### LED config (top right long press) (text)
 Specifies LED color (rgb) and pattern on long press as hex string.
@@ -141,7 +141,7 @@ Specifies LED color (rgb) and pattern on long press as hex string.
 Example: ff4200000502050001.
 Value can be found in the published state on the `config_led_top_right_longpress` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_top_right_longpress": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_top_right_longpress": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_top_right_longpress": "VALUE"}`.
 
 ### LED config (bottom left long press) (text)
 Specifies LED color (rgb) and pattern on long press as hex string.
@@ -152,7 +152,7 @@ Specifies LED color (rgb) and pattern on long press as hex string.
 Example: ff4200000502050001.
 Value can be found in the published state on the `config_led_bottom_left_longpress` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_bottom_left_longpress": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_left_longpress": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_left_longpress": "VALUE"}`.
 
 ### LED config (bottom right long press) (text)
 Specifies LED color (rgb) and pattern on long press as hex string.
@@ -163,7 +163,7 @@ Specifies LED color (rgb) and pattern on long press as hex string.
 Example: ff4200000502050001.
 Value can be found in the published state on the `config_led_bottom_right_longpress` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_bottom_right_longpress": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_right_longpress": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_right_longpress": "VALUE"}`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

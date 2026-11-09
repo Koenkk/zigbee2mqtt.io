@@ -50,42 +50,42 @@ pageClass: device-page
 IR Switch1.
 Value can be found in the published state on the `switch1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1": "VALUE"}`.
 If value equals `ON` switch1 is ON, if `OFF` OFF.
 
 ### Switch2 (binary)
 IR Switch2.
 Value can be found in the published state on the `switch2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2": "VALUE"}`.
 If value equals `ON` switch2 is ON, if `OFF` OFF.
 
 ### Switch3 (binary)
 IR Switch3.
 Value can be found in the published state on the `switch3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3": "VALUE"}`.
 If value equals `ON` switch3 is ON, if `OFF` OFF.
 
 ### Switch4 (binary)
 IR Switch4.
 Value can be found in the published state on the `switch4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch4": "VALUE"}`.
 If value equals `ON` switch4 is ON, if `OFF` OFF.
 
 ### Switch5 (binary)
 IR Switch5.
 Value can be found in the published state on the `switch5` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch5": "VALUE"}`.
 If value equals `ON` switch5 is ON, if `OFF` OFF.
 
 ### Switch6 (binary)
 IR Switch6.
 Value can be found in the published state on the `switch6` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch6": "VALUE"}`.
 If value equals `ON` switch6 is ON, if `OFF` OFF.
 
 ### Temperature (numeric)
@@ -104,7 +104,7 @@ The unit of this value is `%`.
 Turn on to learn new IR code .
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": "VALUE"}`.
 If value equals `ON` learn ir code is ON, if `OFF` OFF.
 
 ### Learned ir code (text)
@@ -121,110 +121,110 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The IR code to send by device (Firmware ID must be >01062026,Support SmartIR IR code library https://github.com/smartHomeHub/SmartIR/blob/master/docs/CLIMATE.md).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_code_to_send": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_code_to_send": "VALUE"}`.
 
 ### Ir emitter (text)
 IR emitter feature. IR remote Firmware ID must be Firmware ID>01062026).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_emitter": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_emitter": "VALUE"}`.
 
 ### Switch1 on (enum)
 Switch 1 on IR code Study and Study status.
 Value can be found in the published state on the `switch1_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1_on": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch1 off (enum)
 Switch 1 off IR code Study and Study status.
 Value can be found in the published state on the `switch1_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch1_off": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch2 on (enum)
 Switch 2 on IR code Study and Study status.
 Value can be found in the published state on the `switch2_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2_on": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch2 off (enum)
 Switch 2 off IR code Study and Study status.
 Value can be found in the published state on the `switch2_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch2_off": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch3 on (enum)
 Switch 3 on IR code Study and Study status.
 Value can be found in the published state on the `switch3_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3_on": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch3 off (enum)
 Switch 3 off IR code Study and Study status.
 Value can be found in the published state on the `switch3_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch3_off": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch4 on (enum)
 Switch 4 on IR code Study and Study status.
 Value can be found in the published state on the `switch4_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch4_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch4_on": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch4 off (enum)
 Switch 4 off IR code Study and Study status.
 Value can be found in the published state on the `switch4_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch4_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch4_off": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch5 on (enum)
 Switch 5 on IR code Study and Study status.
 Value can be found in the published state on the `switch5_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch5_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch5_on": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch5 off (enum)
 Switch 5 off IR code Study and Study status.
 Value can be found in the published state on the `switch5_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch5_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch5_off": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch6 on (enum)
 Switch 6 on IR code Study and Study status.
 Value can be found in the published state on the `switch6_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch6_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch6_on": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Switch6 off (enum)
 Switch 6 off IR code Study and Study status.
 Value can be found in the published state on the `switch6_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch6_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch6_off": "VALUE"}`.
 The possible values are: `study`, `registered`, `unregistered`.
 
 ### Temperature unit (enum)
 Temperature unit.
 Value can be found in the published state on the `temperature_unit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Temperature calibration (numeric)
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
 
@@ -232,7 +232,7 @@ The unit of this value is `°C`.
 Humidity calibration.
 Value can be found in the published state on the `humidity_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-30` and the maximum value is `30`.
 The unit of this value is `%`.
 

@@ -53,14 +53,14 @@ The possible values are: `off`, `on_auto`, `button_locked`, `on_manual_app`, `on
 Refresh the device status.
 Value can be found in the published state on the `refresh` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh": "VALUE"}`.
 The possible values are: `refresh`.
 
 ### Countdown (numeric)
 Turn off the sprinkler after set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
 
@@ -68,7 +68,7 @@ The unit of this value is `min`.
 Turn on the sprinkler and start countdown.
 Value can be found in the published state on the `on_with_countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_with_countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_with_countdown": VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
 
@@ -95,7 +95,7 @@ If value equals `true` fault is ON, if `false` OFF.
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Battery (numeric)

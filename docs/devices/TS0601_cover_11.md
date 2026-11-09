@@ -48,28 +48,28 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Dot mode.
 Value can be found in the published state on the `dot_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dot_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dot_mode": "VALUE"}`.
 The possible values are: `single`, `multi`.
 
 ### Direction (enum)
 Motor direction.
 Value can be found in the published state on the `direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"direction": "VALUE"}`.
 The possible values are: `normal`, `reversed`.
 
 ### Cover limit (enum)
 Set current position as the limit position.
 Value can be found in the published state on the `cover_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_limit": "VALUE"}`.
 The possible values are: `set_up`, `set_down`, `delete_up`, `delete_down`, `delete_both`.
 
 ### Speed (numeric)
 Motor speed.
 Value can be found in the published state on the `speed` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"speed": VALUE}`.
 The minimal value is `1` and the maximum value is `5`.
 
 ### Motor state (enum)

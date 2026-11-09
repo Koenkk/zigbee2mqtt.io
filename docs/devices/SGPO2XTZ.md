@@ -73,7 +73,7 @@ It's not possible to read (`/get`) this value.
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l1": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -81,7 +81,7 @@ The unit of this value is `s`.
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l2": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -89,7 +89,7 @@ The unit of this value is `s`.
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l3": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -97,28 +97,28 @@ The unit of this value is `s`.
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l1": "VALUE"}`.
 The possible values are: `off`, `previous`, `on`.
 
 ### Power-on behavior (enum, l2 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": "VALUE"}`.
 The possible values are: `off`, `previous`, `on`.
 
 ### Power-on behavior (enum, l3 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l3": "VALUE"}`.
 The possible values are: `off`, `previous`, `on`.
 
 ### All on off (binary)
 Turn all channels on or off simultaneously.
 Value can be found in the published state on the `all_on_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"all_on_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"all_on_off": "VALUE"}`.
 If value equals `ON` all on off is ON, if `OFF` OFF.
 
 ### Power (numeric)
@@ -149,12 +149,12 @@ The unit of this value is `kWh`.
 Mode of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": "VALUE"}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Backlight color (composite)
 Backlight colour configuration, only meaningful when backlight mode is ON.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_color": {"mode": VALUE, "socket1": VALUE, "socket2": VALUE, "socket3": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_color": {"mode": "VALUE", "socket1": VALUE, "socket2": VALUE, "socket3": VALUE}}`
 - `mode` (enum): single: one colour per channel; multi: separate on and off colours per channel allowed values: `single`, `multi`
 - `socket1` (composite): Socket 1 backlight settings 
 - `socket2` (composite): Socket 2 backlight settings 
@@ -164,6 +164,6 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"back
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 

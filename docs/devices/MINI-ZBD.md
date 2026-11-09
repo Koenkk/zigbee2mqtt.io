@@ -56,35 +56,35 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Network indicator (binary)
 Network indicator Settings, turn off/turn on the online network indicator..
 Value can be found in the published state on the `network_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"network_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": VALUE}`.
 If value equals `true` network indicator is ON, if `false` OFF.
 
 ### Turbo mode (binary)
 Enable/disable Radio power turbo mode.
 Value can be found in the published state on the `turbo_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"turbo_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"turbo_mode": VALUE}`.
 If value equals `true` turbo mode is ON, if `false` OFF.
 
 ### Delayed power on state (binary)
 Delayed Power-on State.
 Value can be found in the published state on the `delayed_power_on_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"delayed_power_on_state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_state": VALUE}`.
 If value equals `true` delayed power on state is ON, if `false` OFF.
 
 ### Delayed power on time (numeric)
 Delayed Power-on time.
 Value can be found in the published state on the `delayed_power_on_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"delayed_power_on_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_time": VALUE}`.
 The minimal value is `0.5` and the maximum value is `3599.5`.
 The unit of this value is `seconds`.
 
@@ -92,19 +92,19 @@ The unit of this value is `seconds`.
 Enable/Disable detach relay mode.
 Value can be found in the published state on the `detach_relay_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detach_relay_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detach_relay_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detach_relay_mode": VALUE}`.
 If value equals `true` detach relay mode is ON, if `false` OFF.
 
 ### External trigger mode (enum)
 External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..
 Value can be found in the published state on the `external_trigger_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_trigger_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_trigger_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_trigger_mode": "VALUE"}`.
 The possible values are: `edge`, `pulse`, `following(off)`, `following(on)`.
 
 ### Inching control set (composite)
 Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": VALUE, "inching_time": VALUE, "inching_mode": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": "VALUE", "inching_time": VALUE, "inching_mode": "VALUE"}}`
 - `inching_control` (binary): Enable/disable inching function. allowed values: `ENABLE` or `DISABLE`
 - `inching_time` (numeric): Delay time for executing a inching action. min value is 0.5, max value is 3599.5, unit is seconds
 - `inching_mode` (binary): Set inching off or inching on mode. allowed values: `ON` or `OFF`
