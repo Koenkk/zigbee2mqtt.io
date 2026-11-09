@@ -28,7 +28,7 @@ pageClass: device-page
 
 ### Firmware
 
-The v1.1.2 update fixes adds new features and fixes previously mentioned issues. See the release notes:
+The v1.1.2 update adds new features and fixes previously mentioned issues. (More info [in this thread](https://github.com/Koenkk/zigbee-OTA/pull/1377))
 
 > 1. Added support for Scenes, Groups, and On with Timed Off.
 > 2. Improved Zigbee Binding functionality, supporting both binding source and target roles.
