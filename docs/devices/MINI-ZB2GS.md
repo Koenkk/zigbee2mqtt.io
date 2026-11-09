@@ -26,13 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Issues
+### Firmware
 
-#### Groups and Scenes partially supported
+The v1.1.2 update fixes adds new features and fixes previously mentioned issues. See the release notes:
 
-This device is missing the Groups and Scenes clusters on endpoint 2.  
-As a result, the respective features can only be used on endpoint 1.  
-Tested on version 1.0.7 (20251231). Discussion in [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/32534)
+> 1. Added support for Scenes, Groups, and On with Timed Off.
+> 2. Improved Zigbee Binding functionality, supporting both binding source and target roles.
+> 3. Added double-click and long-press event reporting in Relay Detach mode, and separate Follow ON/OFF event reporting.
+> 4. Improved dual-channel operation response and external switch reliability.
+> 5. Improved connection stability and external switch pairing mechanism.
 <!-- Notes END: Do not edit below this line -->
 
 
