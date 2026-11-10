@@ -24,8 +24,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Keep-alive
 
+The Hejhome Z26 with Zigbee model `TS0505B` and manufacturer `_TZ3210_cnicaghm` requires periodic Basic-cluster reads to prevent it from leaving the network after approximately 8–10 minutes. The device definition reads `genBasic.appVersion` every 120 seconds automatically. No additional automation is required.
+
+This workaround has been tested on two production lots with application version 66. GOQUAL documents a similar workaround using a 30-second interval in its [official Homey app changelog](https://homey.app/en-us/app/com.hejhome.iot/Hejhome/). The 120-second interval is empirical and has not been established as safe for every firmware version. It does not resolve all possible power or routing interruptions. The [case report](https://github.com/mahlernim/hejhome-z26-zigbee2mqtt) includes the test conditions and limitations.
+
+Keep mains power supplied when controlling the bulb through Zigbee. Switching the light off through Zigbee is different from disconnecting its mains power.
+
+Do not apply this keep-alive requirement to other `TS0505B` manufacturer fingerprints.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -97,20 +106,20 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Triggers an effect on the light (e.g. make light blink for a few seconds).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": "VALUE"}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Do not disturb (binary)
 Controls state after power outage: false = on, true = restore previous state.
 Value can be found in the published state on the `do_not_disturb` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": VALUE}`.
 If value equals `true` do not disturb is ON, if `false` OFF.
 
 ### Color power on behavior (enum)
 Power on behavior state.
 Value can be found in the published state on the `color_power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_power_on_behavior": "VALUE"}`.
 The possible values are: `initial`, `previous`, `customized`.
 

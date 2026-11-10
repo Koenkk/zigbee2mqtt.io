@@ -79,7 +79,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
 ### Warning (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe_level": VALUE, "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": "VALUE", "level": "VALUE", "strobe_level": "VALUE", "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
 - `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
 - `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
 - `strobe_level` (enum): Intensity of the strobe allowed values: `low`, `medium`, `high`, `very_high`
@@ -91,12 +91,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warn
 Max duration in seconds of the alarm.
 Value can be found in the published state on the `max_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": VALUE}`.
 The minimal value is `0` and the maximum value is `900`.
 The unit of this value is `s`.
 
 ### Squawk (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"squawk": {"state": VALUE, "level": VALUE, "strobe": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"squawk": {"state": "VALUE", "level": "VALUE", "strobe": VALUE}}`
 - `state` (enum): Set Squawk state allowed values: `system_is_armed`, `system_is_disarmed`
 - `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
 - `strobe` (binary): Turn on/off the strobe (light) for Squawk allowed values: `true` or `false`

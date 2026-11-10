@@ -42,28 +42,28 @@ pageClass: device-page
 Turn the light of the alarm ON/OFF.
 Value can be found in the published state on the `alarm` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "VALUE"}`.
 If value equals `ON` alarm is ON, if `OFF` OFF.
 
 ### Type (enum)
 Alarm type.
 Value can be found in the published state on the `type` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"type": "VALUE"}`.
 The possible values are: `sound`, `light`, `sound+light`, `normal`.
 
 ### Volume (enum)
 Volume of the alarm.
 Value can be found in the published state on the `volume` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": "VALUE"}`.
 The possible values are: `mute`, `low`, `middle`, `high`.
 
 ### Ringtone (enum)
 Ringtone of the alarm.
 Value can be found in the published state on the `ringtone` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ringtone": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ringtone": "VALUE"}`.
 The possible values are: `melody1`, `melody2`, `melody3`, `melody4`, `melody5`, `melody6`, `melody7`, `melody8`, `door`, `water`, `temperature`, `entered`, `left`.
 
 ### Power type (enum)
@@ -76,7 +76,7 @@ The possible values are: `battery`, `cable`.
 Duration of the alarm.
 Value can be found in the published state on the `duration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": VALUE}`.
 The minimal value is `1` and the maximum value is `60`.
 The unit of this value is `min`.
 

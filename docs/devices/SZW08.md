@@ -48,14 +48,14 @@ The possible values are: `normal`, `alarm`.
 work mode of the alarm.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "VALUE"}`.
 The possible values are: `leakage`, `shortage`.
 
 ### Alarm ringtone (enum)
 Ringtone of the alarm.
 Value can be found in the published state on the `alarm_ringtone` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": "VALUE"}`.
 The possible values are: `mute`, `ring1`, `ring2`, `ring3`.
 
 ### Battery (numeric)

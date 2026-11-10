@@ -61,7 +61,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Select motion sensitivity to use..
 Value can be found in the published state on the `motion_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Presence (binary)
@@ -89,7 +89,7 @@ The unit of this value is `m`.
 The device will monitor presence within the detection range.
 Value can be found in the published state on the `detection_range` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_range": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": VALUE}`.
 The minimal value is `0` and the maximum value is `6`.
 The unit of this value is `m`.
 
@@ -97,34 +97,34 @@ The unit of this value is `m`.
 Initiate AI Spatial Learning..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"spatial_learning": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"spatial_learning": "VALUE"}`.
 The possible values are: `Start Learning`.
 
 ### Restart device (enum)
 Restarts the device..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_device": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"restart_device": "VALUE"}`.
 The possible values are: `Restart Device`.
 
 ### Identify (enum)
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Ai interference source selfidentification (binary)
 AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources.
 Value can be found in the published state on the `ai_interference_source_selfidentification` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ai_interference_source_selfidentification": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_interference_source_selfidentification": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_interference_source_selfidentification": "VALUE"}`.
 If value equals `ON` ai interference source selfidentification is ON, if `OFF` OFF.
 
 ### Ai sensitivity adaptive (binary)
 Adaptive sensitivity switch function..
 Value can be found in the published state on the `ai_sensitivity_adaptive` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ai_sensitivity_adaptive": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_sensitivity_adaptive": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ai_sensitivity_adaptive": "VALUE"}`.
 If value equals `ON` ai sensitivity adaptive is ON, if `OFF` OFF.
 

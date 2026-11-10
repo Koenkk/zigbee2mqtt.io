@@ -71,22 +71,22 @@ The unit of this value is `%`.
 Temperature unit.
 Value can be found in the published state on the `temperature_unit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Temperature calibration (numeric)
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
 
-### Soil calibration (numeric)
-Soil Humidity calibration.
+### Soil moisture calibration (numeric)
+Offset for measured soil moisture.
 Value can be found in the published state on the `soil_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_calibration": VALUE}`.
 The minimal value is `-30` and the maximum value is `30`.
 The unit of this value is `%`.
 
@@ -94,15 +94,15 @@ The unit of this value is `%`.
 Air temperature and humidity sampling.
 Value can be found in the published state on the `temperature_sampling` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sampling": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sampling": VALUE}`.
 The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 
-### Soil sampling (numeric)
-Soil humidity sampling.
+### Soil sampling interval (numeric)
+Time interval between soil samplings.
 Value can be found in the published state on the `soil_sampling` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_sampling": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_sampling": VALUE}`.
 The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 
@@ -110,7 +110,7 @@ The unit of this value is `s`.
 Soil water shortage humidity value.
 Value can be found in the published state on the `soil_warning` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_warning": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"soil_warning": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 

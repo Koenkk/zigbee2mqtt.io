@@ -45,7 +45,7 @@ Support for the shutoff countdown timer is not currently working. This needs fur
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -64,7 +64,7 @@ The possible values are: `rain`, `no_rain`.
 Enable/disable rain sensor.
 Value can be found in the published state on the `rain_sensor_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rain_sensor_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rain_sensor_switch": "VALUE"}`.
 If value equals `ON` rain sensor switch is ON, if `OFF` OFF.
 
 ### Battery state (enum)

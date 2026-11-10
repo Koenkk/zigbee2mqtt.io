@@ -158,7 +158,7 @@ The unit of this value is `lx`.
 Setting the sensor report delay. Setting the time in seconds (6-600), by default 15 seconds.
 Value can be found in the published state on the `report_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": VALUE}`.
 The minimal value is `6` and the maximum value is `600`.
 The unit of this value is `sec`.
 
@@ -166,21 +166,21 @@ The unit of this value is `sec`.
 Enable or Disable Auto Brightness of the Display.
 Value can be found in the published state on the `auto_brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_brightness": "VALUE"}`.
 If value equals `ON` auto brightness is ON, if `OFF` OFF.
 
 ### Night onoff backlight (binary)
 Complete shutdown of the backlight at night mode.
 Value can be found in the published state on the `night_onoff_backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_onoff_backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_onoff_backlight": "VALUE"}`.
 If value equals `ON` night onoff backlight is ON, if `OFF` OFF.
 
 ### Night on backlight (numeric)
 Night mode activation time.
 Value can be found in the published state on the `night_on_backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_on_backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_on_backlight": VALUE}`.
 The minimal value is `0` and the maximum value is `23`.
 The unit of this value is `Hr`.
 
@@ -188,7 +188,7 @@ The unit of this value is `Hr`.
 Night mode deactivation time.
 Value can be found in the published state on the `night_off_backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_off_backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_off_backlight": VALUE}`.
 The minimal value is `0` and the maximum value is `23`.
 The unit of this value is `Hr`.
 
@@ -196,7 +196,7 @@ The unit of this value is `Hr`.
 Adjust temperature.
 Value can be found in the published state on the `temperature_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
@@ -204,7 +204,7 @@ The unit of this value is `°C`.
 Adjust humidity.
 Value can be found in the published state on the `humidity_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
@@ -212,7 +212,7 @@ The unit of this value is `%`.
 Adjust ozone.
 Value can be found in the published state on the `ozone_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ozone_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ozone_offset": VALUE}`.
 The minimal value is `-100` and the maximum value is `100`.
 The unit of this value is `ppb`.
 
@@ -220,7 +220,7 @@ The unit of this value is `ppb`.
 Auto clean interval PM2.5 sensor.
 Value can be found in the published state on the `auto_clean_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_clean_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_clean_interval": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `day`.
 
@@ -228,14 +228,14 @@ The unit of this value is `day`.
 Manual clean PM2.5 sensor.
 Value can be found in the published state on the `manual_clean` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_clean": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_clean": "VALUE"}`.
 If value equals `ON` manual clean is ON, if `OFF` OFF.
 
 ### Set altitude (numeric)
 Setting the altitude above sea level (for high accuracy of the CO2 sensor).
 Value can be found in the published state on the `set_altitude` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_altitude": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_altitude": VALUE}`.
 The minimal value is `0` and the maximum value is `3000`.
 The unit of this value is `meters`.
 
@@ -243,14 +243,14 @@ The unit of this value is `meters`.
 Start FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `forced_recalibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"forced_recalibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"forced_recalibration": "VALUE"}`.
 If value equals `ON` forced recalibration is ON, if `OFF` OFF.
 
 ### Manual forced recalibration (numeric)
 Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `manual_forced_recalibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_forced_recalibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_forced_recalibration": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `ppm`.
 
@@ -258,13 +258,13 @@ The unit of this value is `ppm`.
 Automatic self calibration.
 Value can be found in the published state on the `automatic_self_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"automatic_self_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"automatic_self_calibration": "VALUE"}`.
 If value equals `ON` automatic self calibration is ON, if `OFF` OFF.
 
 ### Factory reset co2 (binary)
 Factory Reset CO2 sensor.
 Value can be found in the published state on the `factory_reset_co2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset_co2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset_co2": "VALUE"}`.
 If value equals `ON` factory reset co2 is ON, if `OFF` OFF.
 

@@ -157,6 +157,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Output state.
 Value can be found in the published state on the `state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "VALUE"}`.
 If value equals `ON` state is ON, if `OFF` OFF.
 

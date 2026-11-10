@@ -83,7 +83,7 @@ The unit of this value is `%`.
 Adjust Report Delay. Setting the time in seconds, by default 6 seconds.
 Value can be found in the published state on the `sensor_reading_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_reading_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_reading_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_reading_interval": VALUE}`.
 The minimal value is `1` and the maximum value is `60`.
 The unit of this value is `sec.`.
 
@@ -91,21 +91,21 @@ The unit of this value is `sec.`.
 Enables/disables Tempearure control.
 Value can be found in the published state on the `enabling_temperature_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_temperature_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_temperature_control": "VALUE"}`.
 If value equals `ON` enabling temperature control is ON, if `OFF` OFF.
 
 ### Temperature actions (enum)
 Heat or cool.
 Value can be found in the published state on the `temperature_actions` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_actions": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_actions": "VALUE"}`.
 The possible values are: `HEAT`, `COOL`.
 
 ### High temperature (numeric)
 Setting High Temperature Border.
 Value can be found in the published state on the `high_temperature` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature": VALUE}`.
 The minimal value is `-40` and the maximum value is `90`.
 The unit of this value is `°C`.
 
@@ -113,7 +113,7 @@ The unit of this value is `°C`.
 Setting Low Temperature Border.
 Value can be found in the published state on the `low_temperature` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_temperature": VALUE}`.
 The minimal value is `-40` and the maximum value is `90`.
 The unit of this value is `°C`.
 
@@ -121,21 +121,21 @@ The unit of this value is `°C`.
 Enables/disables Humidity control.
 Value can be found in the published state on the `enabling_humidity_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_humidity_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enabling_humidity_control": "VALUE"}`.
 If value equals `ON` enabling humidity control is ON, if `OFF` OFF.
 
 ### Humidity actions (enum)
 Wet or dry.
 Value can be found in the published state on the `humidity_actions` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_actions": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_actions": "VALUE"}`.
 The possible values are: `WET`, `DRY`.
 
 ### High humidity (numeric)
 Setting High Humidity Border.
 Value can be found in the published state on the `high_humidity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_humidity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_humidity": VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.
 
@@ -143,7 +143,7 @@ The unit of this value is `%`.
 Setting Low Humidity Border.
 Value can be found in the published state on the `low_humidity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_humidity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_humidity": VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.
 

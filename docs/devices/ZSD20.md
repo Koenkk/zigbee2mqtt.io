@@ -47,7 +47,7 @@ The possible values are: `alarm`, `normal`.
 ### Self checking (binary)
 Value can be found in the published state on the `self_checking` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_checking": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_checking": "VALUE"}`.
 If value equals `ON` self checking is ON, if `OFF` OFF.
 
 ### Fault (text)
@@ -65,6 +65,6 @@ The unit of this value is `%`.
 ### Muffling (binary)
 Value can be found in the published state on the `muffling` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"muffling": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"muffling": "VALUE"}`.
 If value equals `ON` muffling is ON, if `OFF` OFF.
 

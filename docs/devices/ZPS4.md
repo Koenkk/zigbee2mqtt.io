@@ -61,7 +61,7 @@ The unit of this value is `cm`.
 Presence Time.
 Value can be found in the published state on the `presence_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_time": VALUE}`.
 The minimal value is `3` and the maximum value is `600`.
 The unit of this value is `s`.
 
@@ -69,7 +69,7 @@ The unit of this value is `s`.
 Motion Range Detection.
 Value can be found in the published state on the `motion_far_detection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_far_detection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_far_detection": VALUE}`.
 The minimal value is `150` and the maximum value is `600`.
 The unit of this value is `cm`.
 
@@ -77,35 +77,35 @@ The unit of this value is `cm`.
 Motion Detection Sensitivity.
 Value can be found in the published state on the `motion_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `7`.
 
 ### Motionless sensitivity (numeric)
 Motionless Detection Sensitivity.
 Value can be found in the published state on the `motionless_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motionless_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motionless_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `7`.
 
 ### Work mode (enum)
 Work Mode.
 Value can be found in the published state on the `work_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"work_mode": "VALUE"}`.
 The possible values are: `manual`, `auto`.
 
 ### Output switch (binary)
 Output Switch.
 Value can be found in the published state on the `output_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"output_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"output_switch": "VALUE"}`.
 If value equals `ON` output switch is ON, if `OFF` OFF.
 
 ### Output time (numeric)
 Output Times.
 Value can be found in the published state on the `output_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"output_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"output_time": VALUE}`.
 The minimal value is `10` and the maximum value is `1800`.
 The unit of this value is `s`.
 
@@ -113,13 +113,13 @@ The unit of this value is `s`.
 Led Switch.
 Value can be found in the published state on the `led_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch": "VALUE"}`.
 If value equals `ON` led switch is ON, if `OFF` OFF.
 
 ### Lux value (enum)
 Lux Value.
 Value can be found in the published state on the `lux_value` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_value": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_value": "VALUE"}`.
 The possible values are: `10_lux`, `20_lux`, `50_lux`, `24h`.
 

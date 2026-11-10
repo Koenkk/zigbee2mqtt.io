@@ -84,21 +84,21 @@ If value equals `true` battery low is ON, if `false` OFF.
 Set data output on the display.
 Value can be found in the published state on the `basic_data` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"basic_data": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"basic_data": "VALUE"}`.
 The possible values are: `Barometer`, `T&H`.
 
 ### Invert color (enum)
 Set color mode.
 Value can be found in the published state on the `invert_color` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_color": "VALUE"}`.
 The possible values are: `BW`, `WB`.
 
 ### Pressure offset (numeric)
 Adjust pressure.
 Value can be found in the published state on the `pressure_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `hPa`.
 
@@ -106,7 +106,7 @@ The unit of this value is `hPa`.
 Adjust temperature.
 Value can be found in the published state on the `temperature_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
@@ -114,7 +114,7 @@ The unit of this value is `°C`.
 Adjust humidity.
 Value can be found in the published state on the `humidity_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 

@@ -46,7 +46,7 @@ If value equals `True` remote control permission is ON, if `False` OFF.
 Forcibly activating/deactivating smoke alarms. This command is only available when Remote control permission is True..
 Value can be found in the published state on the `force_smoke_alarm` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"force_smoke_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"force_smoke_alarm": "VALUE"}`.
 If value equals `ON` force smoke alarm is ON, if `OFF` OFF.
 
 ### Smoke battery (numeric)

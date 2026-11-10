@@ -104,7 +104,7 @@ The unit of this value is `L/h`.
 Auto clean.
 Value can be found in the published state on the `auto_clean` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_clean": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_clean": "VALUE"}`.
 If value equals `ON` auto clean is ON, if `OFF` OFF.
 
 ### Temperature (numeric)
@@ -133,6 +133,6 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Report period.
 Value can be found in the published state on the `report_period` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_period": "VALUE"}`.
 The possible values are: `1h`, `2h`, `3h`, `4h`, `6h`, `8h`, `12h`, `24h`.
 
