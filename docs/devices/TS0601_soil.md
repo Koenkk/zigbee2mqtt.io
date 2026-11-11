@@ -24,7 +24,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+## Notes
+### Pairing
+Press and hold the back button for ± 5 seconds (until the button starts blinking red).
 
 <!-- Notes END: Do not edit below this line -->
 
