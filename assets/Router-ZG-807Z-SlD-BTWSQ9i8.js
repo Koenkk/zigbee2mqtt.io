@@ -1,0 +1,53 @@
+import { K as withCtx, P as openBlock, R as resolveComponent, g as createVNode, h as createTextVNode, m as createStaticVNode, s as createBaseVNode, u as createElementBlock } from "./runtime-core.esm-bundler-Benzf_2N.js";
+import { t as _plugin_vue_export_helper_default } from "./app-D0Bp0pVK.js";
+// docs/devices/Router-ZG-807Z-SlD.md
+var _pageData = JSON.parse("{\"path\":\"/devices/Router-ZG-807Z-SlD.html\",\"title\":\"Slacky-DIY Router-ZG-807Z-SlD control via MQTT\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"device-page\",\"title\":\"Slacky-DIY Router-ZG-807Z-SlD control via MQTT\",\"description\":\"Integrate your Slacky-DIY Router-ZG-807Z-SlD via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway.\",\"addedAt\":\"2026-07-30T18:55:11.000Z\"},\"filePathRelative\":\"devices/Router-ZG-807Z-SlD.md\"}");
+var _sfc_main = { name: "Router-ZG-807Z-SlD.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	const _component_RouteLink = resolveComponent("RouteLink");
+	return openBlock(), createElementBlock("div", null, [
+		_cache[10] || (_cache[10] = createBaseVNode("h1", {
+			id: "slacky-diy-router-zg-807z-sld",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#slacky-diy-router-zg-807z-sld"
+		}, [createBaseVNode("span", null, "Slacky-DIY Router-ZG-807Z-SlD")])], -1)),
+		createBaseVNode("table", null, [_cache[6] || (_cache[6] = createBaseVNode("thead", null, [createBaseVNode("tr", null, [createBaseVNode("th"), createBaseVNode("th")])], -1)), createBaseVNode("tbody", null, [
+			_cache[2] || (_cache[2] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Model"), createBaseVNode("td", null, "Router-ZG-807Z-SlD")], -1)),
+			createBaseVNode("tr", null, [_cache[1] || (_cache[1] = createBaseVNode("td", null, "Vendor", -1)), createBaseVNode("td", null, [createVNode(_component_RouteLink, { to: "/supported-devices/#v=Slacky-DIY" }, {
+				default: withCtx(() => [..._cache[0] || (_cache[0] = [createTextVNode("Slacky-DIY", -1)])]),
+				_: 1
+			})])]),
+			_cache[3] || (_cache[3] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Description"), createBaseVNode("td", null, "Tuya router with custom firmware")], -1)),
+			_cache[4] || (_cache[4] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Exposes"), createBaseVNode("td", null, "battery, voltage, battery_low, uptime_time, tx_power, switch_actions")], -1)),
+			_cache[5] || (_cache[5] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Picture"), createBaseVNode("td", null, [createBaseVNode("img", {
+				src: "https://www.zigbee2mqtt.io/images/devices/Router-ZG-807Z-SlD.png",
+				alt: "Slacky-DIY Router-ZG-807Z-SlD"
+			})])], -1))
+		])]),
+		_cache[11] || (_cache[11] = createBaseVNode("p", null, [createBaseVNode("a", {
+			href: "https://github.com/slacky1965/router_zg_807z_zrd",
+			target: "_blank",
+			rel: "noopener noreferrer"
+		}, "Original project description")], -1)),
+		_cache[12] || (_cache[12] = createBaseVNode("h2", {
+			id: "ota-updates",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#ota-updates"
+		}, [createBaseVNode("span", null, "OTA updates")])], -1)),
+		createBaseVNode("p", null, [
+			_cache[8] || (_cache[8] = createTextVNode("This device supports OTA updates, for more information see ", -1)),
+			createVNode(_component_RouteLink, { to: "/guide/usage/ota_updates.html" }, {
+				default: withCtx(() => [..._cache[7] || (_cache[7] = [createTextVNode("OTA updates", -1)])]),
+				_: 1
+			}),
+			_cache[9] || (_cache[9] = createTextVNode(".", -1))
+		]),
+		_cache[13] || (_cache[13] = createStaticVNode("<h2 id=\"exposes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#exposes\"><span>Exposes</span></a></h2><h3 id=\"battery-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#battery-numeric\"><span>Battery (numeric)</span></a></h3><p>Remaining battery in %. Value can be found in the published state on the <code>battery</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;battery&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The minimal value is <code>0</code> and the maximum value is <code>100</code>. The unit of this value is <code>%</code>.</p><h3 id=\"voltage-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#voltage-numeric\"><span>Voltage (numeric)</span></a></h3><p>Reported battery voltage in millivolts. Value can be found in the published state on the <code>voltage</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;voltage&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The unit of this value is <code>mV</code>.</p><h3 id=\"battery-low-binary\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#battery-low-binary\"><span>Battery low (binary)</span></a></h3><p>Empty battery indicator. Value can be found in the published state on the <code>battery_low</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. If value equals <code>true</code> battery low is ON, if <code>false</code> OFF.</p><h3 id=\"uptime-time-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#uptime-time-numeric\"><span>Uptime time (numeric)</span></a></h3><p>Uptime of device. Value can be found in the published state on the <code>uptime_time</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;uptime_time&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The unit of this value is <code>sec</code>.</p><h3 id=\"tx-power-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#tx-power-enum\"><span>Tx power (enum)</span></a></h3><p>Rf power config. Value can be found in the published state on the <code>tx_power</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;tx_power&quot;: &quot;&quot;}</code>. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;tx_power&quot;: &quot;VALUE&quot;}</code>. The possible values are: <code>0 dBm</code>, <code>5 dBm</code>, <code>10 dBm</code>.</p><h3 id=\"switch-actions-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#switch-actions-enum\"><span>Switch actions (enum)</span></a></h3><p>Actions switch. Value can be found in the published state on the <code>switch_actions</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;switch_actions&quot;: &quot;&quot;}</code>. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;switch_actions&quot;: &quot;VALUE&quot;}</code>. The possible values are: <code>on_off</code>, <code>off_on</code>, <code>toggle</code>.</p>", 13))
+	]);
+}
+var Router_ZG_807Z_SlD_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+export { _pageData, Router_ZG_807Z_SlD_default as default };

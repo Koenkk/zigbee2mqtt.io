@@ -1,0 +1,33 @@
+import { K as withCtx, P as openBlock, R as resolveComponent, g as createVNode, h as createTextVNode, m as createStaticVNode, s as createBaseVNode, u as createElementBlock } from "./runtime-core.esm-bundler-Benzf_2N.js";
+import { t as _plugin_vue_export_helper_default } from "./app-D0Bp0pVK.js";
+// docs/devices/SMART-SMOKE10.md
+var _pageData = JSON.parse("{\"path\":\"/devices/SMART-SMOKE10.html\",\"title\":\"Alecto SMART-SMOKE10 control via MQTT\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"device-page\",\"title\":\"Alecto SMART-SMOKE10 control via MQTT\",\"description\":\"Integrate your Alecto SMART-SMOKE10 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway.\",\"addedAt\":\"2022-06-14T22:06:16.000Z\"},\"filePathRelative\":\"devices/SMART-SMOKE10.md\"}");
+var _sfc_main = { name: "SMART-SMOKE10.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	const _component_RouteLink = resolveComponent("RouteLink");
+	return openBlock(), createElementBlock("div", null, [
+		_cache[7] || (_cache[7] = createBaseVNode("h1", {
+			id: "alecto-smart-smoke10",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#alecto-smart-smoke10"
+		}, [createBaseVNode("span", null, "Alecto SMART-SMOKE10")])], -1)),
+		createBaseVNode("table", null, [_cache[6] || (_cache[6] = createBaseVNode("thead", null, [createBaseVNode("tr", null, [createBaseVNode("th"), createBaseVNode("th")])], -1)), createBaseVNode("tbody", null, [
+			_cache[2] || (_cache[2] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Model"), createBaseVNode("td", null, "SMART-SMOKE10")], -1)),
+			createBaseVNode("tr", null, [_cache[1] || (_cache[1] = createBaseVNode("td", null, "Vendor", -1)), createBaseVNode("td", null, [createVNode(_component_RouteLink, { to: "/supported-devices/#v=Alecto" }, {
+				default: withCtx(() => [..._cache[0] || (_cache[0] = [createTextVNode("Alecto", -1)])]),
+				_: 1
+			})])]),
+			_cache[3] || (_cache[3] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Description"), createBaseVNode("td", null, "Smoke detector")], -1)),
+			_cache[4] || (_cache[4] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Exposes"), createBaseVNode("td", null, "smoke_state, battery_state, checking_result, smoke_value, battery, lifecycle, self_checking, silence")], -1)),
+			_cache[5] || (_cache[5] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Picture"), createBaseVNode("td", null, [createBaseVNode("img", {
+				src: "https://www.zigbee2mqtt.io/images/devices/SMART-SMOKE10.png",
+				alt: "Alecto SMART-SMOKE10"
+			})])], -1))
+		])]),
+		_cache[8] || (_cache[8] = createStaticVNode("<h2 id=\"notes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#notes\"><span>Notes</span></a></h2><h3 id=\"pairing\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#pairing\"><span>Pairing</span></a></h3><p>Press the test button 3 times (until the red LED stays on). After this the device will reset and try to join a network.</p><h2 id=\"exposes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#exposes\"><span>Exposes</span></a></h2><h3 id=\"smoke-state-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#smoke-state-enum\"><span>Smoke state (enum)</span></a></h3><p>Value can be found in the published state on the <code>smoke_state</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The possible values are: <code>alarm</code>, <code>normal</code>.</p><h3 id=\"battery-state-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#battery-state-enum\"><span>Battery state (enum)</span></a></h3><p>Value can be found in the published state on the <code>battery_state</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The possible values are: <code>low</code>, <code>middle</code>, <code>high</code>.</p><h3 id=\"checking-result-enum\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#checking-result-enum\"><span>Checking result (enum)</span></a></h3><p>Value can be found in the published state on the <code>checking_result</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. The possible values are: <code>checking</code>, <code>check_success</code>, <code>check_failure</code>, <code>others</code>.</p><h3 id=\"smoke-value-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#smoke-value-numeric\"><span>Smoke value (numeric)</span></a></h3><p>Value can be found in the published state on the <code>smoke_value</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value.</p><h3 id=\"battery-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#battery-numeric\"><span>Battery (numeric)</span></a></h3><p>Value can be found in the published state on the <code>battery</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value.</p><h3 id=\"lifecycle-binary\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#lifecycle-binary\"><span>Lifecycle (binary)</span></a></h3><p>Value can be found in the published state on the <code>lifecycle</code> property. It&#39;s not possible to read (<code>/get</code>) or write (<code>/set</code>) this value. If value equals <code>true</code> lifecycle is ON, if <code>false</code> OFF.</p><h3 id=\"self-checking-binary\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#self-checking-binary\"><span>Self checking (binary)</span></a></h3><p>Value can be found in the published state on the <code>self_checking</code> property. It&#39;s not possible to read (<code>/get</code>) this value. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;self_checking&quot;: VALUE}</code>. If value equals <code>true</code> self checking is ON, if <code>false</code> OFF.</p><h3 id=\"silence-binary\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#silence-binary\"><span>Silence (binary)</span></a></h3><p>Value can be found in the published state on the <code>silence</code> property. It&#39;s not possible to read (<code>/get</code>) this value. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;silence&quot;: VALUE}</code>. If value equals <code>true</code> silence is ON, if <code>false</code> OFF.</p>", 20))
+	]);
+}
+var SMART_SMOKE10_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+export { _pageData, SMART_SMOKE10_default as default };

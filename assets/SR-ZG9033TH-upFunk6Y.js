@@ -1,0 +1,44 @@
+import { K as withCtx, P as openBlock, R as resolveComponent, g as createVNode, h as createTextVNode, m as createStaticVNode, s as createBaseVNode, u as createElementBlock } from "./runtime-core.esm-bundler-Benzf_2N.js";
+import { t as _plugin_vue_export_helper_default } from "./app-D0Bp0pVK.js";
+// docs/devices/SR-ZG9033TH.md
+var _pageData = JSON.parse("{\"path\":\"/devices/SR-ZG9033TH.html\",\"title\":\"Sunricher SR-ZG9033TH control via MQTT\",\"lang\":\"en-US\",\"frontmatter\":{\"pageClass\":\"device-page\",\"title\":\"Sunricher SR-ZG9033TH control via MQTT\",\"description\":\"Integrate your Sunricher SR-ZG9033TH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway.\",\"addedAt\":\"2025-01-03T20:11:47.000Z\"},\"filePathRelative\":\"devices/SR-ZG9033TH.md\"}");
+var _sfc_main = { name: "SR-ZG9033TH.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	const _component_RouteLink = resolveComponent("RouteLink");
+	return openBlock(), createElementBlock("div", null, [
+		_cache[8] || (_cache[8] = createBaseVNode("h1", {
+			id: "sunricher-sr-zg9033th",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#sunricher-sr-zg9033th"
+		}, [createBaseVNode("span", null, "Sunricher SR-ZG9033TH")])], -1)),
+		createBaseVNode("table", null, [_cache[6] || (_cache[6] = createBaseVNode("thead", null, [createBaseVNode("tr", null, [createBaseVNode("th"), createBaseVNode("th")])], -1)), createBaseVNode("tbody", null, [
+			_cache[2] || (_cache[2] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Model"), createBaseVNode("td", null, "SR-ZG9033TH")], -1)),
+			createBaseVNode("tr", null, [_cache[1] || (_cache[1] = createBaseVNode("td", null, "Vendor", -1)), createBaseVNode("td", null, [createVNode(_component_RouteLink, { to: "/supported-devices/#v=Sunricher" }, {
+				default: withCtx(() => [..._cache[0] || (_cache[0] = [createTextVNode("Sunricher", -1)])]),
+				_: 1
+			})])]),
+			_cache[3] || (_cache[3] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Description"), createBaseVNode("td", null, "Zigbee temperature and humidity sensor")], -1)),
+			_cache[4] || (_cache[4] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Exposes"), createBaseVNode("td", null, "battery, temperature, humidity, temperature_sensor_compensation, temperature_display_unit, humidity_sensor_compensation")], -1)),
+			_cache[5] || (_cache[5] = createBaseVNode("tr", null, [createBaseVNode("td", null, "Picture"), createBaseVNode("td", null, [createBaseVNode("img", {
+				src: "https://www.zigbee2mqtt.io/images/devices/SR-ZG9033TH.png",
+				alt: "Sunricher SR-ZG9033TH"
+			})])], -1))
+		])]),
+		_cache[9] || (_cache[9] = createBaseVNode("h2", {
+			id: "options",
+			tabindex: "-1"
+		}, [createBaseVNode("a", {
+			class: "header-anchor",
+			href: "#options"
+		}, [createBaseVNode("span", null, "Options")])], -1)),
+		createBaseVNode("p", null, [createBaseVNode("em", null, [createVNode(_component_RouteLink, { to: "/guide/configuration/devices-groups.html#specific-device-options" }, {
+			default: withCtx(() => [..._cache[7] || (_cache[7] = [createTextVNode("How to use device type specific configuration", -1)])]),
+			_: 1
+		})])]),
+		_cache[10] || (_cache[10] = createStaticVNode("<ul><li><p><code>temperature_calibration</code>: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.</p></li><li><p><code>temperature_precision</code>: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of <code>0</code> and with a maximum value of <code>3</code></p></li><li><p><code>humidity_calibration</code>: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.</p></li><li><p><code>humidity_precision</code>: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of <code>0</code> and with a maximum value of <code>3</code></p></li></ul><h2 id=\"exposes\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#exposes\"><span>Exposes</span></a></h2><h3 id=\"battery-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#battery-numeric\"><span>Battery (numeric)</span></a></h3><p>Remaining battery in %. Value can be found in the published state on the <code>battery</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;battery&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The minimal value is <code>0</code> and the maximum value is <code>100</code>. The unit of this value is <code>%</code>.</p><h3 id=\"temperature-numeric\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#temperature-numeric\"><span>Temperature (numeric)</span></a></h3><p>Measured temperature value. Value can be found in the published state on the <code>temperature</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;temperature&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The unit of this value is <code>°C</code>.</p><h3 id=\"humidity-numeric-2-endpoint\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#humidity-numeric-2-endpoint\"><span>Humidity (numeric, 2 endpoint)</span></a></h3><p>Measured relative humidity. Value can be found in the published state on the <code>humidity_2</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;humidity_2&quot;: &quot;&quot;}</code>. It&#39;s not possible to write (<code>/set</code>) this value. The unit of this value is <code>%</code>.</p><h3 id=\"temperature-sensor-compensation-numeric-1-endpoint\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#temperature-sensor-compensation-numeric-1-endpoint\"><span>Temperature sensor compensation (numeric, 1 endpoint)</span></a></h3><p>Temperature sensor compensation (-5~+5°C). Value can be found in the published state on the <code>temperature_sensor_compensation_1</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;temperature_sensor_compensation_1&quot;: &quot;&quot;}</code>. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;temperature_sensor_compensation_1&quot;: VALUE}</code>. The minimal value is <code>-5</code> and the maximum value is <code>5</code>. The unit of this value is <code>°C</code>.</p><h3 id=\"temperature-display-unit-enum-1-endpoint\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#temperature-display-unit-enum-1-endpoint\"><span>Temperature display unit (enum, 1 endpoint)</span></a></h3><p>Temperature display unit. Value can be found in the published state on the <code>temperature_display_unit_1</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;temperature_display_unit_1&quot;: &quot;&quot;}</code>. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;temperature_display_unit_1&quot;: &quot;VALUE&quot;}</code>. The possible values are: <code>celsius</code>, <code>fahrenheit</code>.</p><h3 id=\"humidity-sensor-compensation-numeric-2-endpoint\" tabindex=\"-1\"><a class=\"header-anchor\" href=\"#humidity-sensor-compensation-numeric-2-endpoint\"><span>Humidity sensor compensation (numeric, 2 endpoint)</span></a></h3><p>Humidity sensor compensation (-5~+5%). Value can be found in the published state on the <code>humidity_sensor_compensation_2</code> property. To read (<code>/get</code>) the value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/get</code> with payload <code>{&quot;humidity_sensor_compensation_2&quot;: &quot;&quot;}</code>. To write (<code>/set</code>) a value publish a message to topic <code>zigbee2mqtt/FRIENDLY_NAME/set</code> with payload <code>{&quot;humidity_sensor_compensation_2&quot;: VALUE}</code>. The minimal value is <code>-5</code> and the maximum value is <code>5</code>. The unit of this value is <code>%</code>.</p>", 14))
+	]);
+}
+var SR_ZG9033TH_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["render", _sfc_render]]);
+export { _pageData, SR_ZG9033TH_default as default };
