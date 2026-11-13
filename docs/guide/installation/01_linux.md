@@ -32,7 +32,7 @@ Therefore the user `pi` is used the following examples, but the user may differ 
 sudo apt-get install -y curl
 sudo curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
-corepack enable
+sudo corepack enable
 
 # Verify that the correct Node.js version has been installed
 node --version  # Should output v20.x.x or higher
