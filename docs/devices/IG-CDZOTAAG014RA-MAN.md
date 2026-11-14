@@ -25,9 +25,18 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Pairing
+
+New lights are automatically in pairing mode (switching RED-BLUE-GREEN light).
+Factory resetting the light :
+
+Turn on the light then repeat 6 times
+* Turn off 2 seconds
+* Turn on 0.5 - 2 seconds
+
+The light will be in pairing mode.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Options
