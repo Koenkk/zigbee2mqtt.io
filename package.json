@@ -23,7 +23,7 @@
     "dependencies": {
         "@quasar/extras": "2.1.0",
         "core-js": "3.51.0",
-        "quasar": "2.35.2"
+        "quasar": "2.35.3"
     },
     "devDependencies": {
         "@types/json-schema": "^7.0.15",
@@ -40,19 +40,19 @@
         "async-g-i-s": "1.5.5",
         "cross-env": "10.1.0",
         "easyimage": "3.1.1",
-        "glob": "14.0.3",
+        "glob": "14.0.4",
         "husky": "9.1.7",
-        "image-size": "2.0.4",
+        "image-size": "2.1.0",
         "prettier": "3.9.10",
         "pug": "3.0.4",
         "pug-plain-loader": "1.1.0",
-        "sass": "1.107.1",
+        "sass": "1.108.1",
         "sass-loader": "17.1.0",
         "throat": "6.0.2",
         "ts-node": "10.9.2",
         "typescript": "6.0.3",
-        "vite": "8.3.5",
-        "vue": "3.5.44",
+        "vite": "8.3.7",
+        "vue": "3.5.45",
         "vuepress": "2.0.0-rc.31",
         "zigbee-herdsman-converters": "26.125.0"
     },
