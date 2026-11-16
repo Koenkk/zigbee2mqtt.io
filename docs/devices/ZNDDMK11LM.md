@@ -91,7 +91,7 @@ The unit of this value is `°C`.
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": VALUE}`.
 If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Light (l1 endpoint)
@@ -195,6 +195,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Switch between rgbw mode or dual color temperature mode.
 Value can be found in the published state on the `dimmer_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimmer_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_mode": "VALUE"}`.
 The possible values are: `rgbw`, `dual_ct`.
 

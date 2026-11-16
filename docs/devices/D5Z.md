@@ -65,7 +65,7 @@ It's not possible to read (`/get`) this value.
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
@@ -73,12 +73,12 @@ The unit of this value is `s`.
 State to apply after a power outage (It takes ~35s to check faults before applying).
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Inching (composite)
 Inching configuration.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching": {"state": VALUE, "minutes": VALUE, "seconds": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching": {"state": "VALUE", "minutes": VALUE, "seconds": VALUE}}`
 - `state` (binary): Whenever the device is switched ON, switch it OFF automatically after the configured delay allowed values: `ON` or `OFF`
 - `minutes` (numeric): Minutes component of the delay duration max value is 1440, unit is m
 - `seconds` (numeric): Seconds component of the delay duration max value is 59, unit is s
@@ -139,14 +139,14 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"faul
 Automatically attempt switching ON the circuit after it was turned OFF by a detected fault (WARNING: It seems this happens even when disabled).
 Value can be found in the published state on the `reclosing` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reclosing": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reclosing": "VALUE"}`.
 If value equals `ON` reclosing is ON, if `OFF` OFF.
 
 ### Reclosing delay (numeric)
 Time to wait after the fault is cleared, before attempting reclose.
 Value can be found in the published state on the `reclosing_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reclosing_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reclosing_delay": VALUE}`.
 The minimal value is `1` and the maximum value is `99`.
 The unit of this value is `s`.
 
@@ -154,14 +154,14 @@ The unit of this value is `s`.
 Number of allowed reclosing attempts per fault.
 Value can be found in the published state on the `reclosing_count` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reclosing_count": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reclosing_count": VALUE}`.
 The minimal value is `0` and the maximum value is `30`.
 
 ### Prepayment (binary)
 Automatically switch OFF the circuit when the energy balance reaches zero.
 Value can be found in the published state on the `prepayment` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"prepayment": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"prepayment": "VALUE"}`.
 If value equals `ON` prepayment is ON, if `OFF` OFF.
 
 ### Energy balance (numeric)
@@ -174,7 +174,7 @@ The unit of this value is `kWh`.
 Add an amount of energy to the balance.
 Value can be found in the published state on the `energy_balance_add` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_balance_add": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_balance_add": VALUE}`.
 The minimal value is `0` and the maximum value is `999999`.
 The unit of this value is `kWh`.
 
@@ -182,12 +182,12 @@ The unit of this value is `kWh`.
 Set the energy balance to zero.
 Value can be found in the published state on the `energy_balance_reset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_balance_reset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"energy_balance_reset": "VALUE"}`.
 The possible values are: `RESET`.
 
 ### Alarm set 1 (composite)
 Leakage current and temperature alarms configuration.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_1": {"leakage_current_alarm": VALUE, "leakage_current_threshold": VALUE, "device_temperature_alarm": VALUE, "device_temperature_threshold": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_1": {"leakage_current_alarm": "VALUE", "leakage_current_threshold": VALUE, "device_temperature_alarm": "VALUE", "device_temperature_threshold": VALUE}}`
 - `leakage_current_alarm` (binary): Automatically switch OFF the circuit when the leakage current is above the limit (Default ON) allowed values: `ON` or `OFF`
 - `leakage_current_threshold` (numeric): Leakage current limit (Default 50mA) min value is 1, max value is 99, unit is mA
 - `device_temperature_alarm` (binary): Automatically switch OFF the circuit when the measured temperature exceeds the limit (Default ON) allowed values: `ON` or `OFF`
@@ -197,13 +197,13 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alar
 Time overcurrent is allowed before the circuit is switched OFF (Default 0s).
 Value can be found in the published state on the `over_current_threshold_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold_time": VALUE}`.
 The minimal value is `0` and the maximum value is `999`.
 The unit of this value is `s`.
 
 ### Alarm set 2 (composite)
 Current and voltage alarms configuration.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_2": {"over_current_alarm": VALUE, "over_current_threshold": VALUE, "over_voltage_alarm": VALUE, "over_voltage_threshold": VALUE, "under_voltage_alarm": VALUE, "under_voltage_threshold": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_2": {"over_current_alarm": "VALUE", "over_current_threshold": VALUE, "over_voltage_alarm": "VALUE", "over_voltage_threshold": VALUE, "under_voltage_alarm": "VALUE", "under_voltage_threshold": VALUE}}`
 - `over_current_alarm` (binary): Automatically switch OFF the circuit when the circuit draws more current than the limit (Default ON) allowed values: `ON` or `OFF`
 - `over_current_threshold` (numeric): Current upper limit (Default 63A) min value is 1, max value is 80, unit is A
 - `over_voltage_alarm` (binary): Automatically switch OFF the circuit when the voltage is above the limit (Default ON) allowed values: `ON` or `OFF`
@@ -213,7 +213,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alar
 
 ### Alarm set 3 (composite)
 Lost flow alarm configuration.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_3": {"lost_flow_alarm": VALUE, "lost_flow_threshold": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_set_3": {"lost_flow_alarm": "VALUE", "lost_flow_threshold": VALUE}}`
 - `lost_flow_alarm` (binary): Unknown allowed values: `ON` or `OFF`
 - `lost_flow_threshold` (numeric): Unknown min value is 1, max value is 100, unit is A
 
@@ -221,7 +221,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alar
 Unknown (Default 0s).
 Value can be found in the published state on the `lost_flow_threshold_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lost_flow_threshold_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lost_flow_threshold_time": VALUE}`.
 The minimal value is `0` and the maximum value is `999`.
 The unit of this value is `s`.
 

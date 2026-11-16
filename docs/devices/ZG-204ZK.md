@@ -62,7 +62,7 @@ The unit of this value is `%`.
 Presence keep time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `10` and the maximum value is `28800`.
 The unit of this value is `s`.
 
@@ -70,7 +70,7 @@ The unit of this value is `s`.
 Detection distance.
 Value can be found in the published state on the `detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": VALUE}`.
 The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `m`.
 
@@ -78,27 +78,27 @@ The unit of this value is `m`.
 Static detection sensitivity.
 Value can be found in the published state on the `static_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Motion detection sensitivity (numeric)
 Motion detection sensitivity.
 Value can be found in the published state on the `motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Indicator (binary)
 LED indicator mode.
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 
 ### Anti interference (binary)
 Anti interference function.
 Value can be found in the published state on the `anti_interference` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"anti_interference": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"anti_interference": "VALUE"}`.
 If value equals `ON` anti interference is ON, if `OFF` OFF.
 

@@ -46,7 +46,7 @@ pageClass: device-page
 Pump shutdown delay.
 Value can be found in the published state on the `pump_delay_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pump_delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pump_delay_time": "VALUE"}`.
 The possible values are: `OFF`, `3_min`, `5_min`, `15_min`.
 
 ### Zone 1 (binary)
@@ -149,49 +149,49 @@ If value equals `ON` zone 6 linked is ON, if `OFF` OFF.
 Custom name for wired zone A.
 Value can be found in the published state on the `zone_a_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_a_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_a_name": "VALUE"}`.
 
 ### Zone b name (text)
 Custom name for wired zone B.
 Value can be found in the published state on the `zone_b_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_b_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_b_name": "VALUE"}`.
 
 ### Zone 1 name (text)
 Custom name for zigbee zone 1.
 Value can be found in the published state on the `zone_1_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_1_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_1_name": "VALUE"}`.
 
 ### Zone 2 name (text)
 Custom name for zigbee zone 2.
 Value can be found in the published state on the `zone_2_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_2_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_2_name": "VALUE"}`.
 
 ### Zone 3 name (text)
 Custom name for zigbee zone 3.
 Value can be found in the published state on the `zone_3_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_3_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_3_name": "VALUE"}`.
 
 ### Zone 4 name (text)
 Custom name for zigbee zone 4.
 Value can be found in the published state on the `zone_4_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_4_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_4_name": "VALUE"}`.
 
 ### Zone 5 name (text)
 Custom name for zigbee zone 5.
 Value can be found in the published state on the `zone_5_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_5_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_5_name": "VALUE"}`.
 
 ### Zone 6 name (text)
 Custom name for zigbee zone 6.
 Value can be found in the published state on the `zone_6_name` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_6_name": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_6_name": "VALUE"}`.
 
 ### Voltage (numeric)
 Measured electrical potential value.

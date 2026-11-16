@@ -74,112 +74,112 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_1": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Power-on behavior (enum, 2 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_2": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Switch actions (enum, 1 endpoint)
 Actions switch.
 Value can be found in the published state on the `switch_actions_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_1": "VALUE"}`.
 The possible values are: `off`, `on`.
 
 ### Switch actions (enum, 2 endpoint)
 Actions switch.
 Value can be found in the published state on the `switch_actions_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_2": "VALUE"}`.
 The possible values are: `off`, `on`.
 
 ### Switch type (enum, 1 endpoint)
 Switch type.
 Value can be found in the published state on the `switch_type_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_1": "VALUE"}`.
 The possible values are: `toggle`, `momentary`, `multifunction`, `light_cct_control`, `light_cct_control_up`, `light_cct_control_down`, `light_rgb_control`, `light_rgb_control_up`, `light_rgb_control_down`, `scene`.
 
 ### Switch type (enum, 2 endpoint)
 Switch type.
 Value can be found in the published state on the `switch_type_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_2": "VALUE"}`.
 The possible values are: `toggle`, `momentary`, `multifunction`, `light_cct_control`, `light_cct_control_up`, `light_cct_control_down`, `light_rgb_control`, `light_rgb_control_up`, `light_rgb_control_down`, `scene`.
 
 ### Operation mode (enum, 1 endpoint)
 Relay decoupled.
 Value can be found in the published state on the `operation_mode_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_1": "VALUE"}`.
 The possible values are: `control_relay`, `decoupled`.
 
 ### Operation mode (enum, 2 endpoint)
 Relay decoupled.
 Value can be found in the published state on the `operation_mode_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_2": "VALUE"}`.
 The possible values are: `control_relay`, `decoupled`.
 
 ### Scene id (numeric, 1 endpoint)
 Scene ID.
 Value can be found in the published state on the `scene_id_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"scene_id_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_id_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_id_1": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Scene id (numeric, 2 endpoint)
 Scene ID.
 Value can be found in the published state on the `scene_id_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"scene_id_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_id_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_id_2": VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Group id (numeric, 1 endpoint)
 Group ID for scenes.
 Value can be found in the published state on the `group_id_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"group_id_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_1": VALUE}`.
 The minimal value is `0` and the maximum value is `65527`.
 
 ### Group id (numeric, 2 endpoint)
 Group ID for scenes.
 Value can be found in the published state on the `group_id_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"group_id_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"group_id_2": VALUE}`.
 The minimal value is `0` and the maximum value is `65527`.
 
 ### Min level (numeric, 1 endpoint)
 Minimum level when decreasing.
 Value can be found in the published state on the `min_level_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_level_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_level_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_level_1": VALUE}`.
 The minimal value is `1` and the maximum value is `255`.
 
 ### Min level (numeric, 2 endpoint)
 Minimum level when decreasing.
 Value can be found in the published state on the `min_level_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_level_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_level_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_level_2": VALUE}`.
 The minimal value is `1` and the maximum value is `255`.
 
 ### Max level (numeric, 1 endpoint)
 Maximum level when increasing.
 Value can be found in the published state on the `max_level_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_level_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_level_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_level_1": VALUE}`.
 The minimal value is `1` and the maximum value is `255`.
 
 ### Max level (numeric, 2 endpoint)
 Maximum level when increasing.
 Value can be found in the published state on the `max_level_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_level_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_level_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_level_2": VALUE}`.
 The minimal value is `1` and the maximum value is `255`.
 
 ### Action (enum)

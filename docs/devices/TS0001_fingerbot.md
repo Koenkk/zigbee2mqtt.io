@@ -62,14 +62,14 @@ The unit of this value is `%`.
 Working mode.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "VALUE"}`.
 The possible values are: `click`, `switch`, `program`.
 
 ### Lower (numeric)
 Down movement limit.
 Value can be found in the published state on the `lower` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lower": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lower": VALUE}`.
 The minimal value is `50` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -77,7 +77,7 @@ The unit of this value is `%`.
 Up movement limit.
 Value can be found in the published state on the `upper` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"upper": VALUE}`.
 The minimal value is `0` and the maximum value is `50`.
 The unit of this value is `%`.
 
@@ -85,7 +85,7 @@ The unit of this value is `%`.
 Sustain time.
 Value can be found in the published state on the `delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
@@ -93,13 +93,13 @@ The unit of this value is `s`.
 Reverse.
 Value can be found in the published state on the `reverse` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse": "VALUE"}`.
 If value equals `ON` reverse is ON, if `OFF` OFF.
 
 ### Touch (binary)
 Touch control.
 Value can be found in the published state on the `touch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"touch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"touch": "VALUE"}`.
 If value equals `ON` touch is ON, if `OFF` OFF.
 

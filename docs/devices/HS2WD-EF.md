@@ -48,12 +48,12 @@ The unit of this value is `%`.
 Max duration of Siren.
 Value can be found in the published state on the `max_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": VALUE}`.
 The minimal value is `0` and the maximum value is `1800`.
 The unit of this value is `s`.
 
 ### Warning (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"level": VALUE, "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE, "mode": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"level": "VALUE", "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE, "mode": "VALUE"}}`
 - `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
 - `strobe` (binary): Turn on/off the strobe (light) during warning allowed values: `true` or `false`
 - `strobe_duty_cycle` (numeric): Length of the flash cycle max value is 10

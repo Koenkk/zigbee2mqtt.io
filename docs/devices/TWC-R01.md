@@ -58,7 +58,7 @@ pageClass: device-page
 Controls the target temperature of the heater, with respect to the temperature set on that heater. Possible values: comfort (target temperature = heater set temperature) eco (target temperature = heater set temperature - 3.5°C), frost_protection (target temperature = 7 to 8°C), off (heater stops heating), and the less commonly used comfort_-1 (target temperature = heater set temperature - 1°C), comfort_-2 (target temperature = heater set temperature - 2°C),..
 Value can be found in the published state on the `pilot_wire_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pilot_wire_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilot_wire_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilot_wire_mode": "VALUE"}`.
 The possible values are: `comfort`, `eco`, `antifrost`, `off`, `comfort_1`, `comfort_2`.
 
 ### Local temperature (numeric)
@@ -72,7 +72,7 @@ The unit of this value is `°C`.
 Set temperature calibration.
 Value can be found in the published state on the `local_temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}`.
 The minimal value is `-8` and the maximum value is `8`.
 The unit of this value is `°C`.
 
@@ -80,21 +80,21 @@ The unit of this value is `°C`.
 Enables/disables the weekly program..
 Value can be found in the published state on the `eco_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_mode": "VALUE"}`.
 If value equals `ON` eco mode is ON, if `OFF` OFF.
 
 ### Open window (binary)
 Enables/disables the status on the device.
 Value can be found in the published state on the `open_window` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window": "VALUE"}`.
 If value equals `ON` open window is ON, if `OFF` OFF.
 
 ### Open window temperature (numeric)
 Open window temperature.
 Value can be found in the published state on the `open_window_temperature` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window_temperature": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window_temperature": VALUE}`.
 The minimal value is `0` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -138,6 +138,6 @@ The unit of this value is `kWh`.
 Set pilot wire mode to 6 modes (includes comfort 1 & 2)..
 Value can be found in the published state on the `device_mode_type` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode_type": "VALUE"}`.
 If value equals `ON` device mode type is ON, if `OFF` OFF.
 

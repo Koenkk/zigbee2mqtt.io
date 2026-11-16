@@ -53,7 +53,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l1": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l1": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l1": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l1": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l1": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l1": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l1": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l1 endpoint)
@@ -72,7 +72,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l1": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -80,7 +80,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l1": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -114,7 +114,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l1": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -122,7 +122,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l1": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -144,7 +144,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l2": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l2": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l2": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l2": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l2": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l2": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l2": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l2 endpoint)
@@ -163,7 +163,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l2": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -171,7 +171,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l2": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -205,7 +205,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l2": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -213,7 +213,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l2": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -235,7 +235,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l3": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l3": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l3": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l3": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l3": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l3": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l3": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l3 endpoint)
@@ -254,7 +254,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l3": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -262,7 +262,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l3": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -296,7 +296,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l3": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -304,7 +304,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l3": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -326,7 +326,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l4": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l4": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l4": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l4": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l4": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l4": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l4": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l4 endpoint)
@@ -345,7 +345,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l4": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -353,7 +353,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l4": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -387,7 +387,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l4": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -395,7 +395,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l4": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -417,7 +417,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l5": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l5": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l5": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l5": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l5": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l5": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l5": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l5 endpoint)
@@ -436,7 +436,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l5": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l5": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -444,7 +444,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l5": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l5": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -478,7 +478,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l5": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l5": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -486,7 +486,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l5": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l5": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -508,7 +508,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l6": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l6": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l6": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l6": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l6": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l6": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l6": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l6 endpoint)
@@ -527,7 +527,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l6": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l6": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -535,7 +535,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l6": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l6": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -569,7 +569,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l6": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l6": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -577,7 +577,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l6": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l6": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -599,7 +599,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l7": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l7": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l7": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l7": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l7": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l7": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l7": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l7 endpoint)
@@ -618,7 +618,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l7": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -626,7 +626,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l7": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -660,7 +660,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l7": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -668,7 +668,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l7": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -690,7 +690,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l8": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l8": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l8": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l8": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l8": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l8": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l8": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l8 endpoint)
@@ -709,7 +709,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l8": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -717,7 +717,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l8": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -751,7 +751,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l8": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -759,7 +759,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l8": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -781,7 +781,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l9": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l9": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l9": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l9": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l9": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l9": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l9": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l9 endpoint)
@@ -800,7 +800,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l9": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l9": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l9": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -808,7 +808,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l9": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l9": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l9": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -842,7 +842,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l9": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l9": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l9": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -850,7 +850,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l9": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l9": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l9": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -872,7 +872,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l10": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l10": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l10": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l10": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l10": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l10": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l10": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l10 endpoint)
@@ -891,7 +891,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l10": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l10": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -899,7 +899,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l10": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l10": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -933,7 +933,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l10": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l10": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -941,7 +941,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l10": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l10": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -963,7 +963,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l11": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l11": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l11": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l11": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l11": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l11": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l11": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l11 endpoint)
@@ -982,7 +982,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l11": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l11": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -990,7 +990,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l11": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l11": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1024,7 +1024,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l11": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l11": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1032,7 +1032,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l11": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l11": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1054,7 +1054,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l12": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l12": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l12": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l12": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l12": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l12": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l12": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l12 endpoint)
@@ -1073,7 +1073,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l12": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l12": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l12": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1081,7 +1081,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l12": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l12": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l12": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1115,7 +1115,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l12": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l12": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l12": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1123,7 +1123,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l12": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l12": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l12": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1145,7 +1145,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l13": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l13": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l13": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l13": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l13": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l13": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l13": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l13 endpoint)
@@ -1164,7 +1164,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l13": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l13": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l13": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1172,7 +1172,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l13": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l13": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l13": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1206,7 +1206,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l13": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l13": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l13": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1214,7 +1214,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l13": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l13": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l13": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1236,7 +1236,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l14": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l14": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l14": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l14": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l14": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l14": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l14": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l14 endpoint)
@@ -1255,7 +1255,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l14": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l14": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l14": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1263,7 +1263,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l14": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l14": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l14": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1297,7 +1297,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l14": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l14": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l14": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1305,7 +1305,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l14": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l14": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l14": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1327,7 +1327,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_l15": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_l15": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_l15": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l15": VALUE}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l15": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_l15": "VALUE"}` where `VALUE` is one of: `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_l15": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Abs min heat setpoint limit (numeric, l15 endpoint)
@@ -1346,7 +1346,7 @@ The unit of this value is `°C`.
 Min temperature limit set on the device.
 Value can be found in the published state on the `min_heat_setpoint_limit_l15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_heat_setpoint_limit_l15": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l15": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_heat_setpoint_limit_l15": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1354,7 +1354,7 @@ The unit of this value is `°C`.
 Max temperature limit set on the device.
 Value can be found in the published state on the `max_heat_setpoint_limit_l15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_heat_setpoint_limit_l15": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l15": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_heat_setpoint_limit_l15": VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1388,7 +1388,7 @@ The possible values are: `comfort`, `floor_only`, `dual_mode`.
 Min floor temperature.
 Value can be found in the published state on the `floor_min_setpoint_l15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_min_setpoint_l15": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l15": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_min_setpoint_l15": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 
@@ -1396,7 +1396,7 @@ The unit of this value is `°C`.
 Max floor temperature.
 Value can be found in the published state on the `floor_max_setpoint_l15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_max_setpoint_l15": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l15": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_max_setpoint_l15": VALUE}`.
 The minimal value is `18` and the maximum value is `35`.
 The unit of this value is `°C`.
 

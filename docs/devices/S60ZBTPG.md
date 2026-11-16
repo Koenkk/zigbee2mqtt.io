@@ -78,14 +78,14 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Network indicator (binary)
 Network indicator settings, turn off/on the blue online status network indicator..
 Value can be found in the published state on the `network_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"network_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"network_indicator": VALUE}`.
 If value equals `true` network indicator is ON, if `false` OFF.
 
 ### Current (numeric)
@@ -132,7 +132,7 @@ The unit of this value is `kWh`.
 
 ### Inching control set (composite)
 Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": VALUE, "inching_time": VALUE, "inching_mode": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": "VALUE", "inching_time": VALUE, "inching_mode": "VALUE"}}`
 - `inching_control` (binary): Enable/disable inching function. allowed values: `ENABLE` or `DISABLE`
 - `inching_time` (numeric): Delay time for executing a inching action. min value is 0.5, max value is 3599.5, unit is seconds
 - `inching_mode` (binary): Set inching off or inching on mode. allowed values: `ON` or `OFF`
@@ -141,12 +141,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inch
 Outlet overload protection Settings.
 Value can be found in the published state on the `outlet_control_protect` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"outlet_control_protect": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outlet_control_protect": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outlet_control_protect": VALUE}`.
 If value equals `true` outlet control protect is ON, if `false` OFF.
 
 ### Overload protection (composite)
 Over load protection, max power and max current are required,other is optional.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": {"max_power": VALUE, "enable_min_power": VALUE, "min_power": VALUE, "enable_max_voltage": VALUE, "max_voltage": VALUE, "enable_min_voltage": VALUE, "min_voltage": VALUE, "max_current": VALUE, "enable_min_current": VALUE, "min_current": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": {"max_power": VALUE, "enable_min_power": "VALUE", "min_power": VALUE, "enable_max_voltage": "VALUE", "max_voltage": VALUE, "enable_min_voltage": "VALUE", "min_voltage": VALUE, "max_current": VALUE, "enable_min_current": "VALUE", "min_current": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overload_protection": ""}`.
 - `max_power` (numeric): max power min value is 0.1, max value is 3250, unit is W
 - `enable_min_power` (binary): Enable/disable lower limit of power overload protection. allowed values: `ENABLE` or `DISABLE`

@@ -74,7 +74,7 @@ The possible values are: `loweralarm`, `upperalarm`, `cancel`.
 NTC temperature calibration.
 Value can be found in the published state on the `ntc_temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_temperature_calibration": VALUE}`.
 The minimal value is `-5` and the maximum value is `5`.
 The unit of this value is `°C`.
 
@@ -82,14 +82,14 @@ The unit of this value is `°C`.
 Temperature unit.
 Value can be found in the published state on the `temperature_unit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Temperature calibration (numeric)
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
 
@@ -97,7 +97,7 @@ The unit of this value is `°C`.
 Humidity calibration.
 Value can be found in the published state on the `humidity_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-30` and the maximum value is `30`.
 The unit of this value is `%`.
 
@@ -105,7 +105,7 @@ The unit of this value is `%`.
 Air temperature and humidity sampling.
 Value can be found in the published state on the `temperature_sampling` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sampling": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sampling": VALUE}`.
 The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 
@@ -113,7 +113,7 @@ The unit of this value is `s`.
 NTC high temp alarm threshold.
 Value can be found in the published state on the `ntc_high_temp_alarm_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_high_temp_alarm_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_high_temp_alarm_threshold": VALUE}`.
 The minimal value is `-40` and the maximum value is `130`.
 The unit of this value is `°C`.
 
@@ -121,7 +121,7 @@ The unit of this value is `°C`.
 NTC high temp alarm threshold.
 Value can be found in the published state on the `ntc_low_temp_alarm_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_low_temp_alarm_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ntc_low_temp_alarm_threshold": VALUE}`.
 The minimal value is `-40` and the maximum value is `130`.
 The unit of this value is `°C`.
 

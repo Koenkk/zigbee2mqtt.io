@@ -45,14 +45,14 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Reporting interval for the device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_interval": "VALUE"}`.
 The possible values are: `1s`, `5s`, `10s`.
 
 ### Sensitivity adjustment (enum)
 Sensitivity adjustment for the device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity_adjustment": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity_adjustment": "VALUE"}`.
 The possible values are: `high`, `medium`, `low`.
 
 ### Battery (numeric)

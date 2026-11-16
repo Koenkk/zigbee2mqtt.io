@@ -63,14 +63,14 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": "VALUE"}`.
 The possible values are: `on`, `off`, `restore`.
 
 ### Child lock (binary)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Temperature (numeric)
@@ -89,7 +89,7 @@ The unit of this value is `%`.
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `°C`.
 
@@ -97,7 +97,7 @@ The unit of this value is `°C`.
 Humidity calibration.
 Value can be found in the published state on the `humidity_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `%`.
 
@@ -105,7 +105,7 @@ The unit of this value is `%`.
 Temperature sensitivity.
 Value can be found in the published state on the `temperature_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensitivity": VALUE}`.
 The minimal value is `0.1` and the maximum value is `1`.
 The unit of this value is `°C`.
 
@@ -113,7 +113,7 @@ The unit of this value is `°C`.
 Humidity sensitivity.
 Value can be found in the published state on the `humidity_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `%`.
 
@@ -121,12 +121,12 @@ The unit of this value is `%`.
 Manual mode, ON = auto settings disabled, OFF = auto settings enabled.
 Value can be found in the published state on the `manual_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_mode": "VALUE"}`.
 If value equals `ON` manual mode is ON, if `OFF` OFF.
 
 ### Auto settings (composite)
 Automatically switch ON/OFF, make sure manual mode is turned OFF otherwise auto settings are not applied..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_settings": {"enabled": VALUE, "temp_greater_then": VALUE, "temp_greater_value": VALUE, "temp_lower_then": VALUE, "temp_lower_value": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_settings": {"enabled": VALUE, "temp_greater_then": "VALUE", "temp_greater_value": VALUE, "temp_lower_then": "VALUE", "temp_lower_value": VALUE}}`
 - `enabled` (binary): Enable auto settings allowed values: `true` or `false`
 - `temp_greater_then` (enum): Greater action allowed values: `ON`, `OFF`
 - `temp_greater_value` (numeric): Temperature greater than value min value is -20, max value is 80, unit is °C

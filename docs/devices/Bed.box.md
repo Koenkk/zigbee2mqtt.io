@@ -42,7 +42,7 @@ pageClass: device-page
 Head position (0-100%).
 Value can be found in the published state on the `head_position_head_control` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"head_position_head_control": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"head_position_head_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"head_position_head_control": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -50,7 +50,7 @@ The unit of this value is `%`.
 Foot position (0-100%).
 Value can be found in the published state on the `foot_position_foot_control` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"foot_position_foot_control": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"foot_position_foot_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"foot_position_foot_control": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -72,21 +72,21 @@ The unit of this value is `%`.
 Head massage intensity (0-6).
 Value can be found in the published state on the `head_massage_intensity_head_massage_intensity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"head_massage_intensity_head_massage_intensity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"head_massage_intensity_head_massage_intensity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"head_massage_intensity_head_massage_intensity": "VALUE"}`.
 The possible values are: `off`, `one`, `two`, `three`, `four`, `five`.
 
 ### Foot massage intensity (enum, foot_massage_intensity endpoint)
 Foot massage intensity (0-6).
 Value can be found in the published state on the `foot_massage_intensity_foot_massage_intensity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"foot_massage_intensity_foot_massage_intensity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"foot_massage_intensity_foot_massage_intensity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"foot_massage_intensity_foot_massage_intensity": "VALUE"}`.
 The possible values are: `off`, `one`, `two`, `three`, `four`, `five`.
 
 ### Massage duration (enum, massage_duration endpoint)
 Massage duration (0=off, 1=10min, 2=20min, 3=30min).
 Value can be found in the published state on the `massage_duration_massage_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"massage_duration_massage_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"massage_duration_massage_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"massage_duration_massage_duration": "VALUE"}`.
 The possible values are: `off`, `ten_min`, `twenty_min`, `thirty_min`.
 
 ### Switch (light endpoint)

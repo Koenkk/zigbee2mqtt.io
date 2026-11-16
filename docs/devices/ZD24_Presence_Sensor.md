@@ -75,14 +75,14 @@ The unit of this value is `m`.
 Initialize.
 Value can be found in the published state on the `init` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"init": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"init": "VALUE"}`.
 If value equals `ON` init is ON, if `OFF` OFF.
 
 ### Fading time (numeric)
 Presence keep time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `10` and the maximum value is `3600`.
 The unit of this value is `s`.
 
@@ -90,20 +90,20 @@ The unit of this value is `s`.
 Motion detection sensitivity.
 Value can be found in the published state on the `motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Static detection sensitivity (numeric)
 Static detection sensitivity.
 Value can be found in the published state on the `static_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"static_detection_sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Motion detection mode (enum)
 Motion detection mode.
 Value can be found in the published state on the `motion_detection_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": "VALUE"}`.
 The possible values are: `pir_and_radar`, `only_radar`, `pir_or_radar`.
 

@@ -96,6 +96,6 @@ The unit of this value is `kWh`.
 ### External switch type (enum)
 Value can be found in the published state on the `external_switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_switch_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": "VALUE"}`.
 The possible values are: `push_button`, `normal_on_off`, `three_way`.
 

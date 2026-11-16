@@ -54,21 +54,21 @@ The possible values are: `opening`, `closing`, `stopped`.
 Step control.
 Value can be found in the published state on the `click_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_control": "VALUE"}`.
 The possible values are: `up`, `down`.
 
 ### Slow mode (binary)
 Operate the motor slower and quieter than normal.
 Value can be found in the published state on the `slow_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"slow_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"slow_mode": "VALUE"}`.
 If value equals `ON` slow mode is ON, if `OFF` OFF.
 
 ### Favorite position (numeric)
 Store the preferred cover position.
 Value can be found in the published state on the `favorite_position` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"favorite_position": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"favorite_position": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -76,21 +76,21 @@ The unit of this value is `%`.
 Set current position as the limit position.
 Value can be found in the published state on the `cover_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_limit": "VALUE"}`.
 The possible values are: `set_up`, `set_down`, `delete_up`, `delete_down`, `delete_both`.
 
 ### Motor direction (enum)
 Motor rotation direction.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": "VALUE"}`.
 The possible values are: `normal`, `reversed`.
 
 ### Cover type (enum)
 Type of window covers installed.
 Value can be found in the published state on the `cover_type` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_type": "VALUE"}`.
 The possible values are: `roman_pole`, `roller_blind`, `canopy_curtain`, `roman_blind`, `honeycomb_curtain`.
 
 ### Battery (numeric)

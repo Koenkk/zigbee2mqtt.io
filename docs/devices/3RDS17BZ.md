@@ -24,8 +24,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+If the OTA updates fail consistently, place the device close to the
+coordinator and perform a hard reset by removing the batteries for 5
+minutes and reinserting them. Then pair directly to the coordinator
+and retry the OTA update.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -65,7 +69,7 @@ The unit of this value is `mV`.
 Delay open time.
 Value can be found in the published state on the `delay_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"delay_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_open": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_open": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `s`.
 

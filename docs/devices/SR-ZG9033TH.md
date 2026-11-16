@@ -70,7 +70,7 @@ The unit of this value is `%`.
 Temperature sensor compensation (-5~+5°C).
 Value can be found in the published state on the `temperature_sensor_compensation_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_compensation_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_compensation_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_compensation_1": VALUE}`.
 The minimal value is `-5` and the maximum value is `5`.
 The unit of this value is `°C`.
 
@@ -78,14 +78,14 @@ The unit of this value is `°C`.
 Temperature display unit.
 Value can be found in the published state on the `temperature_display_unit_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_display_unit_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_unit_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_unit_1": "VALUE"}`.
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Humidity sensor compensation (numeric, 2 endpoint)
 Humidity sensor compensation (-5~+5%).
 Value can be found in the published state on the `humidity_sensor_compensation_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_sensor_compensation_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_sensor_compensation_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_sensor_compensation_2": VALUE}`.
 The minimal value is `-5` and the maximum value is `5`.
 The unit of this value is `%`.
 

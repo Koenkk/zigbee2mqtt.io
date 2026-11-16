@@ -47,7 +47,7 @@ It's not possible to read (`/get`) this value.
 Sets the mode of the switch to act as a switch or as a curtain controller.
 Value can be found in the published state on the `switch_mode_l1_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l1_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l1_l2": "VALUE"}`.
 The possible values are: `switch`, `curtain`.
 
 ### Switch (l1 endpoint)
@@ -64,7 +64,7 @@ It's not possible to read (`/get`) this value.
 Sets the mode of the switch to act as a switch or as a curtain controller.
 Value can be found in the published state on the `switch_mode_l3_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l3_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l3_l4": "VALUE"}`.
 The possible values are: `switch`, `curtain`.
 
 ### Switch (l3 endpoint)
@@ -81,7 +81,7 @@ It's not possible to read (`/get`) this value.
 Sets the mode of the switch to act as a switch or as a curtain controller.
 Value can be found in the published state on the `switch_mode_l5_l6` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l5_l6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l5_l6": "VALUE"}`.
 The possible values are: `switch`, `curtain`.
 
 ### Switch (l5 endpoint)
@@ -98,13 +98,13 @@ It's not possible to read (`/get`) this value.
 Type of the switch.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": "VALUE"}`.
 The possible values are: `toggle`, `state`, `momentary`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `previous`.
 

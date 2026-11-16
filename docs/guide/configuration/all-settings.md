@@ -1156,7 +1156,7 @@ homeassistant:
 
 ### legacy_action_sensor
 
-Home Assistant legacy actions sensor, when enabled a action sensor will be discoverd and an empty `action` will be send after every published action.
+When enabled, an action sensor will be discovered, and an empty `action` will be send after every published action. (Deprecated, use MQTT device triggers instead)
 
 ```yaml
 homeassistant:

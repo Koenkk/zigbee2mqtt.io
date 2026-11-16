@@ -156,7 +156,7 @@ If value equals `true` noise is ON, if `false` OFF.
 Noise detection threshold.
 Value can be found in the published state on the `noise_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `150`.
 The unit of this value is `dBA`.
 
@@ -164,7 +164,7 @@ The unit of this value is `dBA`.
 Time in seconds after which noise is cleared.
 Value can be found in the published state on the `noise_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
 
@@ -172,7 +172,7 @@ The unit of this value is `s`.
 Status LED control.
 Value can be found in the published state on the `status_led` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"status_led": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_led": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_led": "VALUE"}`.
 If value equals `ON` status led is ON, if `OFF` OFF.
 
 ### Connectivity (enum)
@@ -228,7 +228,7 @@ It's not possible to write (`/set`) this value.
 Offset subtracted from the raw temperature reading.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `°C`.
 
@@ -242,14 +242,14 @@ It's not possible to write (`/set`) this value.
 Occupancy detection sensitivity.
 Value can be found in the published state on the `occupancy_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 
 ### Occupancy timeout (numeric)
 Time in seconds after which occupancy is cleared.
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
 
@@ -264,13 +264,13 @@ The unit of this value is `µg/m³`.
 Target ROM bank for IR learn/play.
 Value can be found in the published state on the `ir_rom_id_ir` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ir_rom_id_ir": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_rom_id_ir": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_rom_id_ir": VALUE}`.
 The minimal value is `0` and the maximum value is `79`.
 
 ### Ir action (enum, ir endpoint)
 IR transceiver action for the selected ROM bank.
 Value can be found in the published state on the `ir_action_ir` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ir_action_ir": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_action_ir": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_action_ir": "VALUE"}`.
 The possible values are: `stop`, `learn_ram`, `learn_rom`, `play_ram`, `play_rom`, `clear_all_rom`.
 

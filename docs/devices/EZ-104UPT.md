@@ -121,7 +121,7 @@ The unit of this value is `hPa`.
 calibration pressure.
 Value can be found in the published state on the `pressure_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_calibration": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `hPa`.
 
@@ -129,7 +129,7 @@ The unit of this value is `hPa`.
 set v0 pressure.
 Value can be found in the published state on the `pressure_v0_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_v0_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_v0_set": VALUE}`.
 The minimal value is `300` and the maximum value is `1100`.
 The unit of this value is `hPa`.
 
@@ -137,7 +137,7 @@ The unit of this value is `hPa`.
 set v1 pressure.
 Value can be found in the published state on the `pressure_v1_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_v1_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_v1_set": VALUE}`.
 The minimal value is `300` and the maximum value is `1100`.
 The unit of this value is `hPa`.
 
@@ -145,14 +145,14 @@ The unit of this value is `hPa`.
 calibration uv.
 Value can be found in the published state on the `uv_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uv_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uv_calibration": VALUE}`.
 The minimal value is `-1` and the maximum value is `1`.
 
 ### Sampling interval (numeric)
 Sampling interval.
 Value can be found in the published state on the `sampling_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sampling_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sampling_interval": VALUE}`.
 The minimal value is `5` and the maximum value is `1200`.
 The unit of this value is `s`.
 
@@ -160,7 +160,7 @@ The unit of this value is `s`.
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
 
@@ -168,7 +168,7 @@ The unit of this value is `°C`.
 Temperature v0 threshold setting.
 Value can be found in the published state on the `temperature_v0_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v0_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v0_set": VALUE}`.
 The minimal value is `-40` and the maximum value is `85`.
 The unit of this value is `°C`.
 
@@ -176,7 +176,7 @@ The unit of this value is `°C`.
 Temperature v1 threshold setting.
 Value can be found in the published state on the `temperature_v1_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v1_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v1_set": VALUE}`.
 The minimal value is `-40` and the maximum value is `85`.
 The unit of this value is `°C`.
 
@@ -184,7 +184,7 @@ The unit of this value is `°C`.
 Illuminance v0 threshold setting.
 Value can be found in the published state on the `illuminance_v0` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v0": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v0": VALUE}`.
 The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `lux`.
 
@@ -192,7 +192,7 @@ The unit of this value is `lux`.
 Illuminance v1 threshold setting.
 Value can be found in the published state on the `illuminance_v1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v1": VALUE}`.
 The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `lux`.
 
@@ -200,7 +200,7 @@ The unit of this value is `lux`.
 Illuminance calibration.
 Value can be found in the published state on the `illuminance_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `lux`.
 

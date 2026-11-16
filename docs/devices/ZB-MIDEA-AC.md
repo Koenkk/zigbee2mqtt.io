@@ -42,34 +42,34 @@ pageClass: device-page
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `16` and `30`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `cool`, `heat`, `dry`, `fan_only`. Reading (`/get`) this attribute is not possible.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}` where `VALUE` is one of: `off`, `auto`, `cool`, `heat`, `dry`, `fan_only`. Reading (`/get`) this attribute is not possible.
 
 ### Fan mode (enum)
 Fan speed.
 Value can be found in the published state on the `fan_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_mode": "VALUE"}`.
 The possible values are: `auto`, `low`, `medium`, `high`, `quiet`.
 
 ### Swing mode (enum)
 Swing mode.
 Value can be found in the published state on the `swing_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"swing_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"swing_mode": "VALUE"}`.
 The possible values are: `off`, `horizontal`, `vertical`, `both`.
 
 ### Preset (enum)
 Preset mode.
 Value can be found in the published state on the `preset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": "VALUE"}`.
 The possible values are: `none`, `sleep`, `turbo`.
 
 ### Display (binary)
 AC display and beep control.
 Value can be found in the published state on the `display` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display": "VALUE"}`.
 If value equals `ON` display is ON, if `OFF` OFF.
 
 ### Outdoor temperature (numeric)

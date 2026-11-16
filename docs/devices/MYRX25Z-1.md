@@ -68,14 +68,14 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Motor Mode.
 Value can be found in the published state on the `motor_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_mode": "VALUE"}`.
 The possible values are: `inching`, `continuou`.
 
 ### Motor clb position (enum)
 Motor Calibration By Position.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_clb_position": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_clb_position": "VALUE"}`.
 The possible values are: `open`, `close`, `other`, `clear`.
 
 ### Motor clb position result (text)
@@ -92,7 +92,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Set the motor speed.
 Value can be found in the published state on the `motor_speed` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_speed": VALUE}`.
 The minimal value is `1` and the maximum value is `3`.
 
 ### Supported max motor speed (numeric)

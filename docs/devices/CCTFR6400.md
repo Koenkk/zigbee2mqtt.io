@@ -87,6 +87,9 @@ Further notes:
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -104,7 +107,7 @@ Further notes:
 Enables/disables physical input on the device.
 Value can be found in the published state on the `keypad_lockout` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": "VALUE"}`.
 The possible values are: `unlock`, `lock1`, `lock2`.
 
 ### Humidity (numeric)

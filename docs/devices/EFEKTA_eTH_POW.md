@@ -80,7 +80,7 @@ If value equals `true` battery low is ON, if `false` OFF.
 Setting the sensor reading interval in seconds, by default 40 seconds.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": VALUE}`.
 The minimal value is `10` and the maximum value is `300`.
 The unit of this value is `sec`.
 
@@ -88,34 +88,34 @@ The unit of this value is `sec`.
 Activation of the sensor heating service mode, 15 minutes.
 Value can be found in the published state on the `heater` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heater": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heater": "VALUE"}`.
 If value equals `ON` heater is ON, if `OFF` OFF.
 
 ### Tx radio power (enum)
 Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": "VALUE"}`.
 The possible values are: `4dbm`, `19dbm`.
 
 ### Comparison previous data (binary)
 Enable сontrol of comparison with previous data.
 Value can be found in the published state on the `comparison_previous_data` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": "VALUE"}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
 
 ### Invert (enum)
 Invert display color.
 Value can be found in the published state on the `invert` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert": "VALUE"}`.
 The possible values are: `BW`, `WB`.
 
 ### Fastmode (enum)
 Display refresh mode.
 Value can be found in the published state on the `fastmode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fastmode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fastmode": "VALUE"}`.
 The possible values are: `Fast`, `Ultra Fast`.
 

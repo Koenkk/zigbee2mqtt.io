@@ -46,7 +46,7 @@ pageClass: device-page
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Cover 
@@ -60,7 +60,7 @@ To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` wi
 Gently pull to open/close the curtain automatically.
 Value can be found in the published state on the `manual_open_close` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_open_close": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_open_close": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_open_close": "VALUE"}`.
 If value equals `ON` manual open close is ON, if `OFF` OFF.
 
 ### Status (enum)
@@ -102,6 +102,6 @@ If value equals `true` calibrated is ON, if `false` OFF.
 Device will beep for chosen time duration.
 Value can be found in the published state on the `identify_beep` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"identify_beep": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify_beep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify_beep": "VALUE"}`.
 The possible values are: `off`, `short`, `long`.
 

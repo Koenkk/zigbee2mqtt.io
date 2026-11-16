@@ -73,7 +73,7 @@ The unit of this value is `%`.
 Motion keep time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `0` and the maximum value is `28800`.
 The unit of this value is `s`.
 
@@ -81,21 +81,21 @@ The unit of this value is `s`.
 LED indicator mode.
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 
 ### Motion detection sensitivity (numeric)
 The larger the value, the more sensitive it is (refresh and update only while active).
 Value can be found in the published state on the `motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `19`.
 
 ### Illuminance interval (numeric)
 Light sensing sampling(refresh and update only while active).
 Value can be found in the published state on the `illuminance_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": VALUE}`.
 The minimal value is `1` and the maximum value is `720`.
 The unit of this value is `minutes`.
 

@@ -43,16 +43,16 @@ It's not possible to write (`/set`) this value.
 Enter password to unlock door.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unlock_door": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unlock_door": "VALUE"}`.
 
 ### Unlock door with timeout (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unlock_door_with_timeout": {"timeout": VALUE, "pin_code": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unlock_door_with_timeout": {"timeout": VALUE, "pin_code": "VALUE"}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"unlock_door_with_timeout": ""}`.
 - `timeout` (numeric): Number of seconds the PIN code is valid, 0 means lock will be re-locked 
 - `pin_code` (text): Pincode to set, set pincode to null to clear 
 
 ### Ephemeral pin code (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ephemeral_pin_code": {"start_time": VALUE, "end_time": VALUE, "userid": VALUE, "valid_times": VALUE, "pincode": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ephemeral_pin_code": {"start_time": VALUE, "end_time": VALUE, "userid": VALUE, "valid_times": VALUE, "pincode": "VALUE"}}`
 - `start_time` (numeric): Temporary PIN start time (UNIX timestamp in seconds) 
 - `end_time` (numeric): Temporary PIN end time (UNIX timestamp in seconds) 
 - `userid` (numeric): User ID for the temporary PIN (1-20) min value is 1, max value is 20

@@ -37,14 +37,14 @@ pageClass: device-page
 Set indicator luminance Level.
 Value can be found in the published state on the `indicator_luminance_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_luminance_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_luminance_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_luminance_level": "VALUE"}`.
 The possible values are: `0`, `20`, `40`, `60`, `80`, `100`.
 
 ### Indicator color (enum)
 Set indicator color.
 Value can be found in the published state on the `indicator_color` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_color": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_color": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_color": "VALUE"}`.
 The possible values are: `white`, `blue`.
 
 ### Action (enum)

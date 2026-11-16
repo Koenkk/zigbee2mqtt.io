@@ -109,7 +109,6 @@ const conf = defineUserConfig({
         repoLabel: 'GitHub (docs)',
         docsBranch: isDevelop ? 'develop' : 'master',
         editLinkText: 'Help to make the docu better and edit this page on Github ✌',
-        lastUpdatedText: 'Page was last updated on',
         logo: '/logo.png',
         docsDir: 'docs',
         navbar,
@@ -117,7 +116,8 @@ const conf = defineUserConfig({
         sidebarDepth: 2,
         contributors: false,
         themePlugins: {
-            git: true,
+            // `git: true` spawns a full history `git log --follow` per page, which makes the build run out of memory.
+            git: false,
         },
     }),
 

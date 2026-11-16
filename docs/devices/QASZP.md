@@ -84,7 +84,7 @@ The unit of this value is `kWh`.
 Reactive power threshold. Switch turns on when real power exceeds this value.
 Value can be found in the published state on the `reactive_power_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reactive_power_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reactive_power_threshold": VALUE}`.
 The minimal value is `3` and the maximum value is `30`.
 The unit of this value is `W`.
 
@@ -92,7 +92,7 @@ The unit of this value is `W`.
 Maximum effective power supported.
 Value can be found in the published state on the `max_effective_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_effective_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_effective_power": VALUE}`.
 The minimal value is `0` and the maximum value is `4800`.
 The unit of this value is `W`.
 
@@ -100,7 +100,7 @@ The unit of this value is `W`.
 Enable threshold monitoring.
 Value can be found in the published state on the `status_report` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_report": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_report": "VALUE"}`.
 The possible values are: `ON`, `OFF`.
 
 ### Switch status (enum)

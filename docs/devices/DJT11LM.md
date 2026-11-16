@@ -122,7 +122,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Sensitivity, 1 = highest, 21 = lowest.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `21`.
 
 ### Angle x (numeric)

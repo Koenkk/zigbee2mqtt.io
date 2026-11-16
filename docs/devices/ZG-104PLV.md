@@ -90,7 +90,7 @@ The unit of this value is `times`.
 Sampling illuminance interval.
 Value can be found in the published state on the `sampling_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sampling_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sampling_interval": VALUE}`.
 The minimal value is `5` and the maximum value is `1200`.
 The unit of this value is `s`.
 
@@ -98,14 +98,14 @@ The unit of this value is `s`.
 Vibration sensitivity.
 Value can be found in the published state on the `vibration_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `50`.
 
 ### Illuminance v0 (numeric)
 Illuminance v0 threshold setting.
 Value can be found in the published state on the `illuminance_v0` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v0": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v0": VALUE}`.
 The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `lux`.
 
@@ -113,7 +113,7 @@ The unit of this value is `lux`.
 Illuminance v1 threshold setting.
 Value can be found in the published state on the `illuminance_v1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_v1": VALUE}`.
 The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `lux`.
 
@@ -121,7 +121,7 @@ The unit of this value is `lux`.
 Illuminance calibration.
 Value can be found in the published state on the `illuminance_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_calibration": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `lux`.
 

@@ -120,14 +120,14 @@ The unit of this value is `μS/cm`.
 Calibration of cell constant.
 Value can be found in the published state on the `fertility_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fertility_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fertility_calibration": VALUE}`.
 The minimal value is `0.5` and the maximum value is `2`.
 
 ### Sampling interval (numeric)
 Sampling interval.
 Value can be found in the published state on the `sampling_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sampling_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sampling_interval": VALUE}`.
 The minimal value is `5` and the maximum value is `1200`.
 The unit of this value is `s`.
 
@@ -135,7 +135,7 @@ The unit of this value is `s`.
 Probe temperature sensor calibration.
 Value can be found in the published state on the `probe_temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_calibration": VALUE}`.
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
 
@@ -143,7 +143,7 @@ The unit of this value is `°C`.
 Probe temperature sensor v0 threshold setting.
 Value can be found in the published state on the `probe_temperature_v0_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_v0_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_v0_set": VALUE}`.
 The minimal value is `-40` and the maximum value is `125`.
 The unit of this value is `°C`.
 
@@ -151,7 +151,7 @@ The unit of this value is `°C`.
 Probe temperature sensor v1 threshold setting.
 Value can be found in the published state on the `probe_temperature_v1_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_v1_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"probe_temperature_v1_set": VALUE}`.
 The minimal value is `-40` and the maximum value is `125`.
 The unit of this value is `°C`.
 
@@ -159,7 +159,7 @@ The unit of this value is `°C`.
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
 
@@ -167,7 +167,7 @@ The unit of this value is `°C`.
 Temperature v0 threshold setting.
 Value can be found in the published state on the `temperature_v0_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v0_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v0_set": VALUE}`.
 The minimal value is `-40` and the maximum value is `85`.
 The unit of this value is `°C`.
 
@@ -175,7 +175,7 @@ The unit of this value is `°C`.
 Temperature v1 threshold setting.
 Value can be found in the published state on the `temperature_v1_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v1_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_v1_set": VALUE}`.
 The minimal value is `-40` and the maximum value is `85`.
 The unit of this value is `°C`.
 
@@ -183,7 +183,7 @@ The unit of this value is `°C`.
 Humidity calibration.
 Value can be found in the published state on the `humidity_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-10` and the maximum value is `10`.
 The unit of this value is `%`.
 
@@ -191,7 +191,7 @@ The unit of this value is `%`.
 Humidity v0 threshold setting.
 Value can be found in the published state on the `humidity_v0_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_v0_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_v0_set": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -199,7 +199,7 @@ The unit of this value is `%`.
 Humidity v1 threshold setting.
 Value can be found in the published state on the `humidity_v1_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_v1_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_v1_set": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -207,7 +207,7 @@ The unit of this value is `%`.
 Fertility v0 threshold setting.
 Value can be found in the published state on the `fertility_v0_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fertility_v0_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fertility_v0_set": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `μS/cm`.
 
@@ -215,7 +215,7 @@ The unit of this value is `μS/cm`.
 Fertility v1 threshold setting.
 Value can be found in the published state on the `fertility_v1_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fertility_v1_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fertility_v1_set": VALUE}`.
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `μS/cm`.
 
@@ -223,14 +223,14 @@ The unit of this value is `μS/cm`.
 Coefficient 0.2~1.5. Higher for loose‑hard soil, lower for wet soft clay..
 Value can be found in the published state on the `moisture_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"moisture_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"moisture_calibration": VALUE}`.
 The minimal value is `0.2` and the maximum value is `1.5`.
 
 ### Moisture v0 set (numeric)
 Moisture v0 threshold setting.
 Value can be found in the published state on the `moisture_v0_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"moisture_v0_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"moisture_v0_set": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -238,7 +238,7 @@ The unit of this value is `%`.
 Moisture v1 threshold setting.
 Value can be found in the published state on the `moisture_v1_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"moisture_v1_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"moisture_v1_set": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 

@@ -179,21 +179,21 @@ The unit of this value is `kWh`.
 ### Power setting a (numeric)
 Value can be found in the published state on the `power_setting_a` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_setting_a": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_setting_a": VALUE}`.
 The minimal value is `0` and the maximum value is `3680`.
 The unit of this value is `W`.
 
 ### Power setting b (numeric)
 Value can be found in the published state on the `power_setting_b` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_setting_b": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_setting_b": VALUE}`.
 The minimal value is `0` and the maximum value is `3680`.
 The unit of this value is `W`.
 
 ### Power setting c (numeric)
 Value can be found in the published state on the `power_setting_c` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_setting_c": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_setting_c": VALUE}`.
 The minimal value is `0` and the maximum value is `3680`.
 The unit of this value is `W`.
 
@@ -215,49 +215,49 @@ If value equals `true` power alarm c is ON, if `false` OFF.
 ### Voltage calibration (numeric)
 Value can be found in the published state on the `voltage_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_calibration": VALUE}`.
 The minimal value is `0` and the maximum value is `260`.
 The unit of this value is `V`.
 
 ### Current a calibration (numeric)
 Value can be found in the published state on the `current_a_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_a_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_a_calibration": VALUE}`.
 The minimal value is `0` and the maximum value is `100000`.
 The unit of this value is `mA`.
 
 ### Current b calibration (numeric)
 Value can be found in the published state on the `current_b_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_b_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_b_calibration": VALUE}`.
 The minimal value is `0` and the maximum value is `100000`.
 The unit of this value is `mA`.
 
 ### Current c calibration (numeric)
 Value can be found in the published state on the `current_c_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_c_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_c_calibration": VALUE}`.
 The minimal value is `0` and the maximum value is `100000`.
 The unit of this value is `mA`.
 
 ### Power a calibration (numeric)
 Value can be found in the published state on the `power_a_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_a_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_a_calibration": VALUE}`.
 The minimal value is `0` and the maximum value is `3680`.
 The unit of this value is `W`.
 
 ### Power b calibration (numeric)
 Value can be found in the published state on the `power_b_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_b_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_b_calibration": VALUE}`.
 The minimal value is `0` and the maximum value is `3680`.
 The unit of this value is `W`.
 
 ### Power c calibration (numeric)
 Value can be found in the published state on the `power_c_calibration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_c_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_c_calibration": VALUE}`.
 The minimal value is `0` and the maximum value is `3680`.
 The unit of this value is `W`.
 

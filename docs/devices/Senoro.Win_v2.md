@@ -48,28 +48,28 @@ The possible values are: `open`, `closed`, `tilted`.
 Alarm state.
 Value can be found in the published state on the `alarm_state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_state": VALUE}`.
 If value equals `true` alarm state is ON, if `false` OFF.
 
 ### Setup mode (binary)
 Exit Setup Mode.
 Value can be found in the published state on the `setup_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setup_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"setup_mode": VALUE}`.
 If value equals `true` setup mode is ON, if `false` OFF.
 
 ### Alarm siren (binary)
 Alarm siren.
 Value can be found in the published state on the `alarm_siren` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_siren": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_siren": VALUE}`.
 If value equals `true` alarm siren is ON, if `false` OFF.
 
 ### Alarm siren duration (numeric)
 Alarm siren duration.
 Value can be found in the published state on the `alarm_siren_duration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_siren_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_siren_duration": VALUE}`.
 The minimal value is `5` and the maximum value is `180`.
 
 ### Vibration (numeric)
@@ -81,35 +81,35 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Vibration limit.
 Value can be found in the published state on the `vibration_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_limit": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### Vibration siren (binary)
 Vibration siren.
 Value can be found in the published state on the `vibration_siren` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_siren": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_siren": VALUE}`.
 If value equals `true` vibration siren is ON, if `false` OFF.
 
 ### Vibration siren duration (numeric)
 Vibration siren duration.
 Value can be found in the published state on the `vibration_siren_duration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_siren_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_siren_duration": VALUE}`.
 The minimal value is `5` and the maximum value is `180`.
 
 ### Close signal (binary)
 Close signal.
 Value can be found in the published state on the `close_signal` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_signal": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_signal": VALUE}`.
 If value equals `true` close signal is ON, if `false` OFF.
 
 ### Transmission power (numeric)
 Transmission power.
 Value can be found in the published state on the `transmission_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transmission_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transmission_power": VALUE}`.
 The minimal value is `11` and the maximum value is `19`.
 
 ### Magnetic status (binary)

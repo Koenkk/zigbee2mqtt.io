@@ -71,21 +71,21 @@ The possible values are: `normal`, `alarm`.
 Sensitivity level of the sensor.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": "VALUE"}`.
 The possible values are: `low`, `middle`, `high`.
 
 ### Dismiss alarm (enum)
 Stop the buzzer for the current alarm.
 Value can be found in the published state on the `dismiss_alarm` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dismiss_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dismiss_alarm": "VALUE"}`.
 The possible values are: `DISMISS`.
 
 ### Silent mode (binary)
 Mute the buzzer for all alarms.
 Value can be found in the published state on the `silent_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silent_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silent_mode": "VALUE"}`.
 If value equals `ON` silent mode is ON, if `OFF` OFF.
 
 ### Battery state (enum)

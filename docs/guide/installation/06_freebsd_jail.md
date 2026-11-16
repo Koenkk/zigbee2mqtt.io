@@ -20,6 +20,9 @@ sudo iocage console <jail-name>
 
 ## Installing
 
+> [!WARNING]
+> **32-bit platforms are deprecated, support ends April 2027.** When Node.js 22 reaches end-of-life (April 2027), the minimum supported Node.js version becomes v24, which no longer ships official builds for any 32-bit platform. Plan to move to a 64-bit (`amd64`) system before then. See [#33552](https://github.com/Koenkk/zigbee2mqtt/issues/33552).
+
 Enter the following commands inside the jail's shell:
 
 ```bash

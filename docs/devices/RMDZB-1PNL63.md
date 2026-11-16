@@ -90,14 +90,14 @@ The unit of this value is `°C`.
 OFF - alarm only, ON - relay will turn off when threshold reached.
 Value can be found in the published state on the `over_current_breaker` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_breaker": "VALUE"}`.
 If value equals `ON` over current breaker is ON, if `OFF` OFF.
 
 ### Over current threshold (numeric)
 Setup the value on the device.
 Value can be found in the published state on the `over_current_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `63`.
 The unit of this value is `A`.
 
@@ -105,14 +105,14 @@ The unit of this value is `A`.
 OFF - alarm only, ON - relay will turn off when threshold reached.
 Value can be found in the published state on the `over_voltage_breaker` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_breaker": "VALUE"}`.
 If value equals `ON` over voltage breaker is ON, if `OFF` OFF.
 
 ### Over voltage threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `over_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": VALUE}`.
 The minimal value is `250` and the maximum value is `300`.
 The unit of this value is `V`.
 
@@ -120,14 +120,14 @@ The unit of this value is `V`.
 OFF - alarm only, ON - relay will turn off when threshold reached.
 Value can be found in the published state on the `under_voltage_breaker` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_breaker": "VALUE"}`.
 If value equals `ON` under voltage breaker is ON, if `OFF` OFF.
 
 ### Under voltage threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `under_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": VALUE}`.
 The minimal value is `150` and the maximum value is `200`.
 The unit of this value is `V`.
 
@@ -135,14 +135,14 @@ The unit of this value is `V`.
 OFF - alarm only, ON - relay will turn off when threshold reached.
 Value can be found in the published state on the `high_temperature_breaker` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_breaker": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_breaker": "VALUE"}`.
 If value equals `ON` high temperature breaker is ON, if `OFF` OFF.
 
 ### High temperature threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `high_temperature_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_threshold": VALUE}`.
 The minimal value is `40` and the maximum value is `100`.
 The unit of this value is `°C`.
 

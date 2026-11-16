@@ -78,21 +78,21 @@ The unit of this value is `hPa`.
 Enable LEDs feedback.
 Value can be found in the published state on the `led_feedback` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_feedback": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_feedback": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_feedback": "VALUE"}`.
 If value equals `ON` led feedback is ON, if `OFF` OFF.
 
 ### Enable abc (binary)
 Enable ABC (Automatic Baseline Correction).
 Value can be found in the published state on the `enable_abc` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_abc": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_abc": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_abc": "VALUE"}`.
 If value equals `ON` enable abc is ON, if `OFF` OFF.
 
 ### Threshold1 (numeric)
 Warning (LED2) CO2 level.
 Value can be found in the published state on the `threshold1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"threshold1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold1": VALUE}`.
 The minimal value is `0` and the maximum value is `50000`.
 The unit of this value is `ppm`.
 
@@ -100,7 +100,7 @@ The unit of this value is `ppm`.
 Critical (LED3) CO2 level.
 Value can be found in the published state on the `threshold2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"threshold2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold2": VALUE}`.
 The minimal value is `0` and the maximum value is `50000`.
 The unit of this value is `ppm`.
 
@@ -108,7 +108,7 @@ The unit of this value is `ppm`.
 Adjust temperature.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-20` and the maximum value is `20`.
 The unit of this value is `°C`.
 
@@ -116,7 +116,7 @@ The unit of this value is `°C`.
 Adjust humidity.
 Value can be found in the published state on the `humidity_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
@@ -124,7 +124,7 @@ The unit of this value is `%`.
 Adjust pressure.
 Value can be found in the published state on the `pressure_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `hPa`.
 

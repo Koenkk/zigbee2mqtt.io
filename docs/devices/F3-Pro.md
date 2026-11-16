@@ -42,7 +42,7 @@ pageClass: device-page
 Panel screen on/off.
 Value can be found in the published state on the `backlight_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": "VALUE"}`.
 If value equals `ON` backlight switch is ON, if `OFF` OFF.
 
 ### Switch (l1 endpoint)
@@ -69,218 +69,218 @@ It's not possible to read (`/get`) this value.
 Name for Switch 1.
 Value can be found in the published state on the `switch_name_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_name_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_name_l1": "VALUE"}`.
 
 ### Switch name (text, l2 endpoint)
 Name for Switch 2.
 Value can be found in the published state on the `switch_name_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_name_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_name_l2": "VALUE"}`.
 
 ### Switch name (text, l3 endpoint)
 Name for Switch 3.
 Value can be found in the published state on the `switch_name_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_name_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_name_l3": "VALUE"}`.
 
 ### Switch name (text, l4 endpoint)
 Name for Switch 4.
 Value can be found in the published state on the `switch_name_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_name_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_name_l4": "VALUE"}`.
 
 ### Scene name (text, l1 endpoint)
 Name for Scene 1.
 Value can be found in the published state on the `scene_name_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l1": "VALUE"}`.
 
 ### Scene name (text, l2 endpoint)
 Name for Scene 2.
 Value can be found in the published state on the `scene_name_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l2": "VALUE"}`.
 
 ### Scene name (text, l3 endpoint)
 Name for Scene 3.
 Value can be found in the published state on the `scene_name_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l3": "VALUE"}`.
 
 ### Scene name (text, l4 endpoint)
 Name for Scene 4.
 Value can be found in the published state on the `scene_name_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l4": "VALUE"}`.
 
 ### Scene name (text, l5 endpoint)
 Name for Scene 5.
 Value can be found in the published state on the `scene_name_l5` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l5": "VALUE"}`.
 
 ### Scene name (text, l6 endpoint)
 Name for Scene 6.
 Value can be found in the published state on the `scene_name_l6` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l6": "VALUE"}`.
 
 ### Scene name (text, l7 endpoint)
 Name for Scene 7.
 Value can be found in the published state on the `scene_name_l7` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l7": "VALUE"}`.
 
 ### Scene name (text, l8 endpoint)
 Name for Scene 8.
 Value can be found in the published state on the `scene_name_l8` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_name_l8": "VALUE"}`.
 
 ### Cover name (text, l1 endpoint)
 Name for Cover 1.
 Value can be found in the published state on the `cover_name_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_name_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_name_l1": "VALUE"}`.
 
 ### Cover name (text, l2 endpoint)
 Name for Cover 2.
 Value can be found in the published state on the `cover_name_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_name_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_name_l2": "VALUE"}`.
 
 ### Cover name (text, l3 endpoint)
 Name for Cover 3.
 Value can be found in the published state on the `cover_name_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_name_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_name_l3": "VALUE"}`.
 
 ### Cover name (text, l4 endpoint)
 Name for Cover 4.
 Value can be found in the published state on the `cover_name_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_name_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_name_l4": "VALUE"}`.
 
 ### Led switch name (text, l1 endpoint)
 Name for LED Switch 1.
 Value can be found in the published state on the `led_switch_name_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_name_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_name_l1": "VALUE"}`.
 
 ### Led switch name (text, l2 endpoint)
 Name for LED Switch 2.
 Value can be found in the published state on the `led_switch_name_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_name_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_name_l2": "VALUE"}`.
 
 ### Led switch name (text, l3 endpoint)
 Name for LED Switch 3.
 Value can be found in the published state on the `led_switch_name_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_name_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_name_l3": "VALUE"}`.
 
 ### Led switch name (text, l4 endpoint)
 Name for LED Switch 4.
 Value can be found in the published state on the `led_switch_name_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_name_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_name_l4": "VALUE"}`.
 
 ### Led switch (binary, l1 endpoint)
 Switch of LED 1.
 Value can be found in the published state on the `led_switch_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_switch_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_l1": "VALUE"}`.
 If value equals `ON` led switch is ON, if `OFF` OFF.
 
 ### Led warm (numeric, l1 endpoint)
 Color temperature of LED 1.
 Value can be found in the published state on the `led_warm_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_warm_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_warm_l1": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Led bright (numeric, l1 endpoint)
 Brightness of LED 1.
 Value can be found in the published state on the `led_bright_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_bright_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_bright_l1": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Led switch (binary, l2 endpoint)
 Switch of LED 2.
 Value can be found in the published state on the `led_switch_l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_switch_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_l2": "VALUE"}`.
 If value equals `ON` led switch is ON, if `OFF` OFF.
 
 ### Led warm (numeric, l2 endpoint)
 Color temperature of LED 2.
 Value can be found in the published state on the `led_warm_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_warm_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_warm_l2": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Led bright (numeric, l2 endpoint)
 Brightness of LED 2.
 Value can be found in the published state on the `led_bright_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_bright_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_bright_l2": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Led switch (binary, l3 endpoint)
 Switch of LED 3.
 Value can be found in the published state on the `led_switch_l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_switch_l3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_l3": "VALUE"}`.
 If value equals `ON` led switch is ON, if `OFF` OFF.
 
 ### Led warm (numeric, l3 endpoint)
 Color temperature of LED 3.
 Value can be found in the published state on the `led_warm_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_warm_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_warm_l3": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Led bright (numeric, l3 endpoint)
 Brightness of LED 3.
 Value can be found in the published state on the `led_bright_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_bright_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_bright_l3": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Led switch (binary, l4 endpoint)
 Switch of LED 4.
 Value can be found in the published state on the `led_switch_l4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_switch_l4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_switch_l4": "VALUE"}`.
 If value equals `ON` led switch is ON, if `OFF` OFF.
 
 ### Led warm (numeric, l4 endpoint)
 Color temperature of LED 4.
 Value can be found in the published state on the `led_warm_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_warm_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_warm_l4": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Led bright (numeric, l4 endpoint)
 Brightness of LED 4.
 Value can be found in the published state on the `led_bright_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_bright_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_bright_l4": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 
 ### Cover state (enum, l1 endpoint)
 State of Cover 1.
 Value can be found in the published state on the `cover_state_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_state_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_state_l1": "VALUE"}`.
 The possible values are: `open`, `stop`, `close`.
 
 ### Cover position (numeric, l1 endpoint)
 Position of Cover 1.
 Value can be found in the published state on the `cover_position_l1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l1": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -288,14 +288,14 @@ The unit of this value is `%`.
 State of Cover 2.
 Value can be found in the published state on the `cover_state_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_state_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_state_l2": "VALUE"}`.
 The possible values are: `open`, `stop`, `close`.
 
 ### Cover position (numeric, l2 endpoint)
 Position of Cover 2.
 Value can be found in the published state on the `cover_position_l2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l2": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -303,14 +303,14 @@ The unit of this value is `%`.
 State of Cover 3.
 Value can be found in the published state on the `cover_state_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_state_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_state_l3": "VALUE"}`.
 The possible values are: `open`, `stop`, `close`.
 
 ### Cover position (numeric, l3 endpoint)
 Position of Cover 3.
 Value can be found in the published state on the `cover_position_l3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l3": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -318,14 +318,14 @@ The unit of this value is `%`.
 State of Cover 4.
 Value can be found in the published state on the `cover_state_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_state_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_state_l4": "VALUE"}`.
 The possible values are: `open`, `stop`, `close`.
 
 ### Cover position (numeric, l4 endpoint)
 Position of Cover 4.
 Value can be found in the published state on the `cover_position_l4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_position_l4": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -333,14 +333,14 @@ The unit of this value is `%`.
 Temperature.
 Value can be found in the published state on the `temperature_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_1": VALUE}`.
 The minimal value is `-65` and the maximum value is `99`.
 
 ### Condition 1 (enum)
 Weather condition.
 Value can be found in the published state on the `condition_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"condition_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"condition_1": "VALUE"}`.
 The possible values are: `heavy_rain`, `thunderstorm`, `dust_storm`, `light_snow`, `snow`, `freezing_fog`, `shower`, `floating_dust`, `thunder_and_lighting`, `light_shower`, `rain`, `rain_and_snow`, `dust_bowl`, `ice_pellets`, `strong_dust_storms`, `sandy`, `light_to_moderate_rain`, `mostly_sunny`, `sunny`, `haze`, `heavy_shower`, `heavy_snow`, `very_heavy_rain`, `blizzard`, `ice_pod`, `light_to_moderate_snow`, `few_clouds`, `light_snow_showers`, `moderate_snow`, `cloudy`, `icy_needles`, `thunderstorm_with_ice_pods`, `freezing_rain`, `snow_shower`, `light_rain`, `thunder`, `moderate_rain`, `moderate_to_heavy_rain`.
 
 ### Action (enum)

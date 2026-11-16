@@ -66,14 +66,14 @@ The possible values are: `noise`, `no_noise`, `noise_2min`, `noise_5min`, `no_no
 collect_noise_floor: measures for collect_time, then sets noise_lower_limit to the maximum + 1 dB; realtime: reports every second for collect_time. Both switch back to threshold afterwards.
 Value can be found in the published state on the `report_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_mode": "VALUE"}`.
 The possible values are: `collect_noise_floor`, `realtime`, `threshold`.
 
 ### Noise lower limit (numeric)
 Below this level the status is no_noise.
 Value can be found in the published state on the `noise_lower_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_lower_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_lower_limit": VALUE}`.
 The minimal value is `0` and the maximum value is `60`.
 The unit of this value is `dB`.
 
@@ -81,7 +81,7 @@ The unit of this value is `dB`.
 Above this level the status is noise (labelled 'Min Sound Threshold' in the Tuya app).
 Value can be found in the published state on the `noise_upper_limit` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_upper_limit": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_upper_limit": VALUE}`.
 The minimal value is `10` and the maximum value is `100`.
 The unit of this value is `dB`.
 
@@ -89,7 +89,7 @@ The unit of this value is `dB`.
 Duration of the collect_noise_floor and realtime modes.
 Value can be found in the published state on the `collect_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"collect_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"collect_time": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `s`.
 
@@ -97,7 +97,7 @@ The unit of this value is `s`.
 How long noise is held after the level drops.
 Value can be found in the published state on the `noise_hold_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_hold_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_hold_time": VALUE}`.
 The minimal value is `0` and the maximum value is `300`.
 The unit of this value is `s`.
 
@@ -105,7 +105,7 @@ The unit of this value is `s`.
 How long the level must stay above noise_upper_limit before noise is reported.
 Value can be found in the published state on the `noise_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_delay": VALUE}`.
 The minimal value is `0` and the maximum value is `300`.
 The unit of this value is `s`.
 
@@ -113,13 +113,13 @@ The unit of this value is `s`.
 Report the sound level when it changes by this amount. With no_report (default) it is only sent on query.
 Value can be found in the published state on the `report_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_threshold": "VALUE"}`.
 The possible values are: `1_db`, `3_db`, `5_db`, `10_db`, `20_db`, `no_report`.
 
 ### Indicator (binary)
 LED indicator.
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 

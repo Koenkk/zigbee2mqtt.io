@@ -70,14 +70,14 @@ The unit of this value is `ppm`.
 Ringtone of the alarm.
 Value can be found in the published state on the `alarm_ringtone` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": "VALUE"}`.
 The possible values are: `melody_1`, `melody_2`, `OFF`.
 
 ### Backlight mode (numeric)
 Backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": VALUE}`.
 The minimal value is `1` and the maximum value is `3`.
 
 ### Battery state (enum)

@@ -118,21 +118,21 @@ The unit of this value is `°C`.
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Power on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `on`, `previous`, `off`.
 
 ### Dimming range minimum (numeric)
 Minimum allowed dimming value.
 Value can be found in the published state on the `dimming_range_minimum` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_range_minimum": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_minimum": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_minimum": VALUE}`.
 The minimal value is `1` and the maximum value is `99`.
 The unit of this value is `%`.
 
@@ -140,7 +140,7 @@ The unit of this value is `%`.
 Maximum allowed dimming value.
 Value can be found in the published state on the `dimming_range_maximum` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_range_maximum": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_maximum": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_range_maximum": VALUE}`.
 The minimal value is `2` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -148,7 +148,7 @@ The unit of this value is `%`.
 Duration for light to gradually dim when turning off.
 Value can be found in the published state on the `on_off_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"on_off_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_off_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_off_duration": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
@@ -156,7 +156,7 @@ The unit of this value is `s`.
 Duration for light to gradually brighten when turning on.
 Value can be found in the published state on the `off_on_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"off_on_duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_on_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"off_on_duration": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
@@ -164,7 +164,7 @@ The unit of this value is `s`.
 LED strip length (5 x 20cm segments per meter).
 Value can be found in the published state on the `length` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"length": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"length": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"length": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `m`.
 
@@ -172,35 +172,35 @@ The unit of this value is `m`.
 Audio sync mode.
 Value can be found in the published state on the `audio` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio": "VALUE"}`.
 If value equals `ON` audio is ON, if `OFF` OFF.
 
 ### Audio sensitivity (enum)
 Audio sync sensitivity.
 Value can be found in the published state on the `audio_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio_sensitivity": "VALUE"}`.
 The possible values are: `low`, `high`.
 
 ### Audio effect (enum)
 Audio effect.
 Value can be found in the published state on the `audio_effect` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio_effect": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio_effect": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio_effect": "VALUE"}`.
 The possible values are: `random`, `blink`, `rainbow`, `wave`.
 
 ### Effect (enum)
 RGB dynamic effect type.
 Value can be found in the published state on the `effect` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"effect": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": "VALUE"}`.
 The possible values are: `breathing`, `rainbow1`, `chasing`, `flash`, `hopping`, `rainbow2`, `flicker`, `dash`.
 
 ### Effect speed (numeric)
 RGB dynamic effect speed (0-100%, 0 when no effect is active).
 Value can be found in the published state on the `effect_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"effect_speed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_speed": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -208,7 +208,7 @@ The unit of this value is `%`.
 Segment selection for effects. Formats: '1,2,5' (list), '1-10' (range), '1-5,10-15' (multiple ranges), '1,3,5-8,10' (mixed), 'odd/even/first-half/last-half/first-third/middle-third/last-third' (patterns). Empty = all segments. Each meter = 5 segments (20cm each)..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_segments": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect_segments": "VALUE"}`.
 
 ### Effect colors (list)
 Array of RGB color objects for dynamic effects (1-8 colors)..

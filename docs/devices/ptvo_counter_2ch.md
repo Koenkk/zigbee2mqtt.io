@@ -52,14 +52,14 @@ The unit of this value is `%`.
 Counter 1 value. Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.
 Value can be found in the published state on the `l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l3": VALUE}`.
 The minimal value is `-999999999` and the maximum value is `999999999`.
 
 ### L5 (numeric)
 Counter 2 value. Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.
 Value can be found in the published state on the `l5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l5": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l5": VALUE}`.
 The minimal value is `-999999999` and the maximum value is `999999999`.
 
 ### Switch (l6 endpoint)

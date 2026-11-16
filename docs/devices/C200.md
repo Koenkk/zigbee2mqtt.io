@@ -49,14 +49,14 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Calibrate the position limits.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"limits_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"limits_calibration": "VALUE"}`.
 The possible values are: `start`, `end`, `reset`.
 
 ### Automatic calibration (enum)
 Performs an automatic calibration process similar to Aqara’s method to set curtain limits..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"automatic_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"automatic_calibration": "VALUE"}`.
 The possible values are: `calibrate`.
 
 ### Cover 
@@ -69,7 +69,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Speed of curtain movement.
 Value can be found in the published state on the `curtain_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"curtain_speed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"curtain_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"curtain_speed": VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -77,28 +77,28 @@ The unit of this value is `%`.
 Gently pull to open/close the curtain automatically.
 Value can be found in the published state on the `manual_open_close` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_open_close": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_open_close": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_open_close": "VALUE"}`.
 If value equals `ON` manual open close is ON, if `OFF` OFF.
 
 ### Adaptive pulling speed (binary)
 The faster/slower the curtain is pulled manually, the faster/slower the curtain will move.
 Value can be found in the published state on the `adaptive_pulling_speed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"adaptive_pulling_speed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"adaptive_pulling_speed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"adaptive_pulling_speed": "VALUE"}`.
 If value equals `ON` adaptive pulling speed is ON, if `OFF` OFF.
 
 ### Manual stop (binary)
 Manually pulling the curtain during operation stops the motor.
 Value can be found in the published state on the `manual_stop` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"manual_stop": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_stop": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_stop": "VALUE"}`.
 If value equals `ON` manual stop is ON, if `OFF` OFF.
 
 ### Reverse direction (binary)
 Whether the curtain direction is inverted.
 Value can be found in the published state on the `reverse_direction` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"reverse_direction": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": VALUE}`.
 If value equals `true` reverse direction is ON, if `false` OFF.
 
 ### Status (enum)
@@ -142,13 +142,13 @@ If value equals `true` calibrated is ON, if `false` OFF.
 Device will beep for chosen time duration.
 Value can be found in the published state on the `identify_beep` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"identify_beep": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify_beep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify_beep": "VALUE"}`.
 The possible values are: `short`, `1_sec`, `2_sec`.
 
 ### Identify (enum)
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 

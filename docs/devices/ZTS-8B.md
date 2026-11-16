@@ -1,0 +1,94 @@
+---
+title: "Nova Digital ZTS-8B control via MQTT"
+description: "Integrate your Nova Digital ZTS-8B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2026-10-31T19:31:40.441Z
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Nova Digital ZTS-8B
+
+|     |     |
+|-----|-----|
+| Model | ZTS-8B  |
+| Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
+| Description | 8 gang switch |
+| Exposes | switch (state), power_on_behavior, backlight_switch |
+| Picture | ![Nova Digital ZTS-8B](https://www.zigbee2mqtt.io/images/devices/ZTS-8B.png) |
+
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `time_start`: Reply to Tuya-specific time synchronization requests: "1970" - Reply with seconds since 1970/01/01 (recommended, should stop the device from asking), "2000" - Reply with seconds since 2000/01/01 (use if the weekday is wrong with 1970), "off" - Don't reply (use if replying causes too much traffic). Default for this device: "off". The value must be one of `1970`, `2000`, `off`
+
+
+## Exposes
+
+### Switch (l1 endpoint)
+The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
+It's not possible to read (`/get`) this value.
+
+### Switch (l2 endpoint)
+The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
+It's not possible to read (`/get`) this value.
+
+### Switch (l3 endpoint)
+The current state of this switch is in the published state under the `state_l3` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l3": "ON"}`, `{"state_l3": "OFF"}` or `{"state_l3": "TOGGLE"}`.
+It's not possible to read (`/get`) this value.
+
+### Switch (l4 endpoint)
+The current state of this switch is in the published state under the `state_l4` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l4": "ON"}`, `{"state_l4": "OFF"}` or `{"state_l4": "TOGGLE"}`.
+It's not possible to read (`/get`) this value.
+
+### Switch (l5 endpoint)
+The current state of this switch is in the published state under the `state_l5` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l5": "ON"}`, `{"state_l5": "OFF"}` or `{"state_l5": "TOGGLE"}`.
+It's not possible to read (`/get`) this value.
+
+### Switch (l6 endpoint)
+The current state of this switch is in the published state under the `state_l6` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l6": "ON"}`, `{"state_l6": "OFF"}` or `{"state_l6": "TOGGLE"}`.
+It's not possible to read (`/get`) this value.
+
+### Switch (l7 endpoint)
+The current state of this switch is in the published state under the `state_l7` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l7": "ON"}`, `{"state_l7": "OFF"}` or `{"state_l7": "TOGGLE"}`.
+It's not possible to read (`/get`) this value.
+
+### Switch (l8 endpoint)
+The current state of this switch is in the published state under the `state_l8` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l8": "ON"}`, `{"state_l8": "OFF"}` or `{"state_l8": "TOGGLE"}`.
+It's not possible to read (`/get`) this value.
+
+### Power-on behavior (enum)
+PowerOnBehavior Status.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
+The possible values are: `off`, `on`, `previous`.
+
+### Backlight switch (binary)
+Backlight switch.
+Value can be found in the published state on the `backlight_switch` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_switch": "VALUE"}`.
+If value equals `ON` backlight switch is ON, if `OFF` OFF.
+

@@ -11,6 +11,8 @@ redirectFrom: /information/configuration.md
 Zigbee2MQTT is configured using [YAML](https://en.wikipedia.org/wiki/YAML) based `configuration.yaml` file.
 The file have to be located in the `data` directory within your installation. The `data` directory and the `configuration.yaml` has to be writeable for Zigbee2MQTT process because it can get updated - e.g. if you change the settings in the frontend. It's possible specify a custom data directory by setting the `ZIGBEE2MQTT_DATA` environment variable.
 
+Zigbee2MQTT must be stopped before manually editing `configuration.yaml`, otherwise the changes will get overwritten.
+
 > [!IMPORTANT]
 > The _dot-notation_ of a config-key like `mqtt.server` means `server` property within the `mqtt`
 > section. All _dot-notation_ references are absolute.

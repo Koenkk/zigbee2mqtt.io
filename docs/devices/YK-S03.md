@@ -89,7 +89,7 @@ The unit of this value is `mg/L`.
 pH maximal value.
 Value can be found in the published state on the `ph_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ph_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ph_max": VALUE}`.
 The minimal value is `0` and the maximum value is `140`.
 The unit of this value is `pH`.
 
@@ -97,7 +97,7 @@ The unit of this value is `pH`.
 pH minimal value.
 Value can be found in the published state on the `ph_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ph_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ph_min": VALUE}`.
 The minimal value is `0` and the maximum value is `140`.
 The unit of this value is `pH`.
 
@@ -105,7 +105,7 @@ The unit of this value is `pH`.
 Electrical Conductivity maximal value.
 Value can be found in the published state on the `ec_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ec_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ec_max": VALUE}`.
 The minimal value is `0` and the maximum value is `20000`.
 The unit of this value is `µS/cm`.
 
@@ -113,7 +113,7 @@ The unit of this value is `µS/cm`.
 Electrical Conductivity minimal value.
 Value can be found in the published state on the `ec_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ec_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ec_min": VALUE}`.
 The minimal value is `0` and the maximum value is `20000`.
 The unit of this value is `µS/cm`.
 
@@ -121,7 +121,7 @@ The unit of this value is `µS/cm`.
 Oxidation Reduction Potential maximal value.
 Value can be found in the published state on the `orp_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"orp_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"orp_max": VALUE}`.
 The minimal value is `0` and the maximum value is `1200`.
 The unit of this value is `mV`.
 
@@ -129,7 +129,7 @@ The unit of this value is `mV`.
 Oxidation Reduction Potential minimal value.
 Value can be found in the published state on the `orp_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"orp_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"orp_min": VALUE}`.
 The minimal value is `0` and the maximum value is `1200`.
 The unit of this value is `mV`.
 
@@ -137,7 +137,7 @@ The unit of this value is `mV`.
 Free Chlorine maximal value.
 Value can be found in the published state on the `free_chlorine_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"free_chlorine_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"free_chlorine_max": VALUE}`.
 The minimal value is `0` and the maximum value is `40`.
 The unit of this value is `mg/L`.
 
@@ -145,7 +145,7 @@ The unit of this value is `mg/L`.
 Free Chlorine minimal value.
 Value can be found in the published state on the `free_chlorine_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"free_chlorine_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"free_chlorine_min": VALUE}`.
 The minimal value is `0` and the maximum value is `40`.
 The unit of this value is `mg/L`.
 
@@ -159,7 +159,7 @@ The unit of this value is `ppm`.
 Backlight Value.
 Value can be found in the published state on the `backlightvalue` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlightvalue": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlightvalue": VALUE}`.
 The minimal value is `0` and the maximum value is `1`.
 The unit of this value is `gg`.
 

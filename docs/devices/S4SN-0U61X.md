@@ -130,7 +130,7 @@ The possible values are: `dark`, `twilight`, `bright`.
 Lux threshold below which light level is dark.
 Value can be found in the published state on the `dark_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dark_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dark_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dark_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `lx`.
 
@@ -138,7 +138,7 @@ The unit of this value is `lx`.
 Lux threshold above which light level is bright.
 Value can be found in the published state on the `bright_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"bright_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bright_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bright_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `lx`.
 
@@ -146,7 +146,7 @@ The unit of this value is `lx`.
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Wi-Fi status (text)
@@ -169,7 +169,7 @@ It's not possible to write (`/set`) this value.
 If value equals `true` dHCP enabled is ON, if `false` OFF.
 
 ### Wi-Fi Configuration (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_config": {"enabled": VALUE, "ssid": VALUE, "password": VALUE, "static_ip": VALUE, "net_mask": VALUE, "gateway": VALUE, "name_server": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_config": {"enabled": VALUE, "ssid": "VALUE", "password": "VALUE", "static_ip": "VALUE", "net_mask": "VALUE", "gateway": "VALUE", "name_server": "VALUE"}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_config": ""}`.
 - `enabled` (binary): Enable/disable Wi-Fi connectivity allowed values: `true` or `false`
 - `ssid` (text): Name (SSID) of the Wi-Fi network to connect to 

@@ -63,14 +63,14 @@ The unit of this value is `%`.
 Trigger camera and wifi/server connection test..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"camera_test_trigger": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"camera_test_trigger": "VALUE"}`.
 The possible values are: `test`.
 
 ### Camera active trigger (enum)
 Trigger the camera to take a picture..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"camera_active_trigger": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"camera_active_trigger": "VALUE"}`.
 The possible values are: `active`.
 
 ### Ambient light (numeric)
@@ -84,50 +84,50 @@ The unit of this value is `Lx`.
 Current WiFi SSID.
 Value can be found in the published state on the `wifi_ssid` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_ssid": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_ssid": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_ssid": "VALUE"}`.
 
 ### Wifi password (text)
 Current WiFi Password.
 Value can be found in the published state on the `wifi_password` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_password": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_password": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_password": "VALUE"}`.
 
 ### Wifi ssid candidate (text)
 Candidate WiFi SSID.
 Value can be found in the published state on the `wifi_ssid_candidate` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_ssid_candidate": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_ssid_candidate": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_ssid_candidate": "VALUE"}`.
 
 ### Wifi password candidate (text)
 Candidate WiFi Password.
 Value can be found in the published state on the `wifi_password_candidate` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_password_candidate": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_password_candidate": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_password_candidate": "VALUE"}`.
 
 ### Server url (text)
 Current Server URL.
 Value can be found in the published state on the `server_url` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"server_url": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"server_url": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"server_url": "VALUE"}`.
 
 ### Server url candidate (text)
 Candidate WiFi Server URL.
 Value can be found in the published state on the `server_url_candidate` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"server_url_candidate": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"server_url_candidate": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"server_url_candidate": "VALUE"}`.
 
 ### Picture quantity (numeric)
 picture quantity.
 Value can be found in the published state on the `picture_quantity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"picture_quantity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"picture_quantity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"picture_quantity": VALUE}`.
 The minimal value is `1` and the maximum value is `20`.
 
 ### Picture quality (numeric)
 picture quality.
 Value can be found in the published state on the `picture_quality` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"picture_quality": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"picture_quality": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"picture_quality": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### Mcu software version (numeric)
@@ -141,7 +141,7 @@ The minimal value is `0` and the maximum value is `255`.
 when the illuminance exceeds the threshold, it activates local linkages..
 Value can be found in the published state on the `illuminance_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `Lx`.
 
@@ -149,14 +149,14 @@ The unit of this value is `Lx`.
 armed.
 Value can be found in the published state on the `sensor_armed` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_armed": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_armed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_armed": "VALUE"}`.
 If value equals `Armed` sensor armed is ON, if `Disarmed` OFF.
 
 ### Pir sensitivity level (enum)
 The sensitivity of PIR Sensor.
 Value can be found in the published state on the `pir_sensitivity_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_sensitivity_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_sensitivity_level": "VALUE"}`.
 The possible values are: `disabled`, `low`, `medium`, `high`.
 
 ### Wifi status (enum)
@@ -198,6 +198,6 @@ The possible values are: `unavailable`, `low_power`, `normal`, `advanced`.
 wifi rssi.
 Value can be found in the published state on the `wifi_rssi` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"wifi_rssi": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_rssi": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"wifi_rssi": VALUE}`.
 The minimal value is `-127` and the maximum value is `127`.
 

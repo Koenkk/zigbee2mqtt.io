@@ -52,7 +52,7 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Occupied to unoccupied delay.
 Value can be found in the published state on the `motion_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_timeout": VALUE}`.
 The minimal value is `5` and the maximum value is `60`.
 
 ### Illumination (enum)

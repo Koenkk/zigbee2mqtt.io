@@ -40,7 +40,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Valve state if open or closed.
 Value can be found in the published state on the `gas_valve_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"gas_valve_state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_valve_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_valve_state": "VALUE"}`.
 If value equals `OPEN` gas valve state is ON, if `CLOSE` OFF.
 
 ### Battery (numeric)
@@ -54,7 +54,7 @@ The unit of this value is `%`.
 Set the default closing time when the gas valve is open..
 Value can be found in the published state on the `close_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"close_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_timeout": VALUE}`.
 The minimal value is `1` and the maximum value is `540`.
 The unit of this value is `min`.
 
@@ -62,7 +62,7 @@ The unit of this value is `min`.
 Set the time or remaining time until the gas valve closes..
 Value can be found in the published state on the `close_remain_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"close_remain_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_remain_timeout": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_remain_timeout": VALUE}`.
 The minimal value is `0` and the maximum value is `540`.
 The unit of this value is `min`.
 
@@ -70,7 +70,7 @@ The unit of this value is `min`.
 Values observed are `1` (voice), `2` (high) or `3` (low)..
 Value can be found in the published state on the `volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"volume": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": "VALUE"}`.
 The possible values are: `voice`, `high`, `low`.
 
 ### Overheat mode (enum)

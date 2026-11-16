@@ -47,7 +47,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Arm state — write true to manually confirm arm_away/arm_home to the keypad.
 Value can be found in the published state on the `armed` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"armed": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"armed": VALUE}`.
 If value equals `true` armed is ON, if `false` OFF.
 
 ### Sos alarm (binary)
@@ -88,13 +88,13 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Admin code (change with caution).
 Value can be found in the published state on the `admin_code` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"admin_code": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"admin_code": "VALUE"}`.
 
 ### Arm delay time (numeric)
 Delay before arming (0-180 s).
 Value can be found in the published state on the `arm_delay_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"arm_delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"arm_delay_time": VALUE}`.
 The minimal value is `0` and the maximum value is `180`.
 The unit of this value is `s`.
 
@@ -102,42 +102,42 @@ The unit of this value is `s`.
 Enable keypad beep on key press.
 Value can be found in the published state on the `beep_sound_enabled` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"beep_sound_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"beep_sound_enabled": "VALUE"}`.
 If value equals `ON` beep sound enabled is ON, if `OFF` OFF.
 
 ### Arm delay beep sound (binary)
 Beep during arm delay countdown.
 Value can be found in the published state on the `arm_delay_beep_sound` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"arm_delay_beep_sound": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"arm_delay_beep_sound": "VALUE"}`.
 If value equals `ON` arm delay beep sound is ON, if `OFF` OFF.
 
 ### Quick home enabled (binary)
 Allow arm-home without entering a code.
 Value can be found in the published state on the `quick_home_enabled` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quick_home_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quick_home_enabled": "VALUE"}`.
 If value equals `ON` quick home enabled is ON, if `OFF` OFF.
 
 ### Quick arm enabled (binary)
 Allow arm-away without entering a code.
 Value can be found in the published state on the `quick_arm_enabled` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quick_arm_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quick_arm_enabled": "VALUE"}`.
 If value equals `ON` quick arm enabled is ON, if `OFF` OFF.
 
 ### Quick disarm enabled (binary)
 Allow disarm without entering a code.
 Value can be found in the published state on the `quick_disarm_enabled` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quick_disarm_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quick_disarm_enabled": "VALUE"}`.
 If value equals `ON` quick disarm enabled is ON, if `OFF` OFF.
 
 ### Quick sos enabled (binary)
 Allow SOS without entering a code.
 Value can be found in the published state on the `quick_sos_enabled` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quick_sos_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quick_sos_enabled": "VALUE"}`.
 If value equals `ON` quick sos enabled is ON, if `OFF` OFF.
 
 ### Action (enum)

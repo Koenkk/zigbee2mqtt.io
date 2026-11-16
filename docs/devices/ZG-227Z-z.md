@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG-227Z-z  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Temperature & humidity sensor (pvxx/ZigbeeTLc) |
+| Description | Temperature & humidity sensor (pvvx/ZigbeeTLc) |
 | Exposes | temperature, humidity, temperature_calibration, humidity_calibration, measurement_interval, battery, voltage |
 | Picture | ![Tuya ZG-227Z-z](https://www.zigbee2mqtt.io/images/devices/ZG-227Z-z.png) |
 
@@ -65,7 +65,7 @@ The unit of this value is `%`.
 Offset to add/subtract to the reported temperature (default 0°C)..
 Value can be found in the published state on the `temperature_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
@@ -73,7 +73,7 @@ The unit of this value is `°C`.
 Offset to add/subtract to the reported relative humidity (default 0%)..
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": VALUE}`.
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
@@ -81,7 +81,7 @@ The unit of this value is `%`.
 Configure sensor measurement interval (default 10 seconds)..
 Value can be found in the published state on the `measurement_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"measurement_interval": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_interval": VALUE}`.
 The minimal value is `3` and the maximum value is `255`.
 The unit of this value is `s`.
 

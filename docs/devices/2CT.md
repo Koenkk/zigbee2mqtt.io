@@ -120,7 +120,7 @@ The unit of this value is `kWh`.
 Update frequency.
 Value can be found in the published state on the `update_frequency` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": VALUE}`.
 The minimal value is `3` and the maximum value is `60`.
 The unit of this value is `s`.
 Besides the numeric values the following values are accepted: `default`.
@@ -139,7 +139,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Calibration AC frequency.
 Value can be found in the published state on the `calibration_ac_frequency` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_ac_frequency": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_ac_frequency": VALUE}`.
 The minimal value is `0.5` and the maximum value is `1.5`.
 Besides the numeric values the following values are accepted: `default`.
 
@@ -147,7 +147,7 @@ Besides the numeric values the following values are accepted: `default`.
 Calibration voltage.
 Value can be found in the published state on the `calibration_voltage` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_voltage": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_voltage": VALUE}`.
 The minimal value is `0.5` and the maximum value is `1.5`.
 Besides the numeric values the following values are accepted: `default`.
 
@@ -155,7 +155,7 @@ Besides the numeric values the following values are accepted: `default`.
 Calibration power A.
 Value can be found in the published state on the `calibration_power_a` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_power_a": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_power_a": VALUE}`.
 The minimal value is `0.5` and the maximum value is `1.5`.
 Besides the numeric values the following values are accepted: `default`.
 
@@ -163,7 +163,7 @@ Besides the numeric values the following values are accepted: `default`.
 Calibration current A.
 Value can be found in the published state on the `calibration_current_a` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_current_a": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_current_a": VALUE}`.
 The minimal value is `0.5` and the maximum value is `1.5`.
 Besides the numeric values the following values are accepted: `default`.
 
@@ -171,7 +171,7 @@ Besides the numeric values the following values are accepted: `default`.
 Calibration power B.
 Value can be found in the published state on the `calibration_power_b` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_power_b": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_power_b": VALUE}`.
 The minimal value is `0.5` and the maximum value is `1.5`.
 Besides the numeric values the following values are accepted: `default`.
 
@@ -179,7 +179,7 @@ Besides the numeric values the following values are accepted: `default`.
 Calibration current B.
 Value can be found in the published state on the `calibration_current_b` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_current_b": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_current_b": VALUE}`.
 The minimal value is `0.5` and the maximum value is `1.5`.
 Besides the numeric values the following values are accepted: `default`.
 

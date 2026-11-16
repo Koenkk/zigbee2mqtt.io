@@ -44,7 +44,7 @@ pageClass: device-page
 Set no one environment.
 Value can be found in the published state on the `scan_environment` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scan_environment": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scan_environment": "VALUE"}`.
 The possible values are: `start`.
 
 ### Scan result (enum)
@@ -57,7 +57,7 @@ The possible values are: `normal`, `scanning`, `scan_success`, `scan_failure`, `
 Device mode.
 Value can be found in the published state on the `mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": "VALUE"}`.
 The possible values are: `radar_mode`, `fusion_mode`.
 
 ### Presence (binary)
@@ -76,14 +76,14 @@ The unit of this value is `lx`.
 Radar switch.
 Value can be found in the published state on the `radar_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": "VALUE"}`.
 If value equals `ON` radar switch is ON, if `OFF` OFF.
 
 ### Set detection distance (numeric)
 Detection distance.
 Value can be found in the published state on the `set_detection_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_detection_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_detection_distance": VALUE}`.
 The minimal value is `3` and the maximum value is `9`.
 The unit of this value is `m`.
 
@@ -91,7 +91,7 @@ The unit of this value is `m`.
 Fading time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `10` and the maximum value is `60`.
 The unit of this value is `s`.
 
@@ -105,6 +105,6 @@ The possible values are: `low`, `middle`, `high`, `USB`.
 Night light switch.
 Value can be found in the published state on the `switch_night_light` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_night_light": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_night_light": "VALUE"}`.
 If value equals `ON` switch night light is ON, if `OFF` OFF.
 

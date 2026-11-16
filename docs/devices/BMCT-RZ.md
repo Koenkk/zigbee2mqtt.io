@@ -72,6 +72,6 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 Select the appropriate actuator type so that the connected device can be controlled correctly..
 Value can be found in the published state on the `actuator_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"actuator_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"actuator_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"actuator_type": "VALUE"}`.
 The possible values are: `normally_closed`, `normally_open`.
 

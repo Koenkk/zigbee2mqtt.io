@@ -49,6 +49,6 @@ This light supports the following features: `state`, `brightness`, `color_hs`.
 White brightness of this light.
 Value can be found in the published state on the `white_brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"white_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"white_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `254`.
 

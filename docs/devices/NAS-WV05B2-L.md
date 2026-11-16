@@ -29,6 +29,9 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -53,14 +56,14 @@ The possible values are: `off`, `on_auto`, `button_locked`, `on_manual_app`, `on
 Refresh the device status.
 Value can be found in the published state on the `refresh` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"refresh": "VALUE"}`.
 The possible values are: `refresh`.
 
 ### Countdown (numeric)
 Turn off the sprinkler after set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
 
@@ -68,7 +71,7 @@ The unit of this value is `min`.
 Turn on the sprinkler and start countdown.
 Value can be found in the published state on the `on_with_countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_with_countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"on_with_countdown": VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
 
@@ -89,14 +92,14 @@ The unit of this value is `s`.
 Enables water flow measurement, and automatically turn off the sprinkler when flow is 0 for ~30s.
 Value can be found in the published state on the `flow_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flow_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flow_switch": "VALUE"}`.
 If value equals `ON` flow switch is ON, if `OFF` OFF.
 
 ### Quantitative watering (numeric)
 Turn on the sprinkler with a set amount of water.
 Value can be found in the published state on the `quantitative_watering` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quantitative_watering": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quantitative_watering": VALUE}`.
 The minimal value is `1` and the maximum value is `10000`.
 The unit of this value is `L`.
 
@@ -128,7 +131,7 @@ The unit of this value is `L`.
 Reset the stored watering amount to 0.
 Value can be found in the published state on the `water_total_reset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_total_reset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_total_reset": "VALUE"}`.
 The possible values are: `reset`.
 
 ### Fault (binary)
@@ -141,7 +144,7 @@ If value equals `true` fault is ON, if `false` OFF.
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "VALUE"}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Battery (numeric)

@@ -67,21 +67,21 @@ The unit of this value is `°C`.
 It is necessary to press the link button to update.
 Value can be found in the published state on the `multiplier` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multiplier": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multiplier": VALUE}`.
 The minimal value is `1` and the maximum value is `1000`.
 
 ### Divisor (numeric)
 It is necessary to press the link button to update.
 Value can be found in the published state on the `divisor` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"divisor": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"divisor": VALUE}`.
 The minimal value is `1` and the maximum value is `1000`.
 
 ### UnitOfMeasure (enum)
 It is necessary to press the link button to update.
 Value can be found in the published state on the `unitOfMeasure` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unitOfMeasure": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unitOfMeasure": "VALUE"}`.
 The possible values are: `kWh`, `m3`, `ft3`, `ccf`, `US gl`, `IMP gl`, `BTUs`, `L (litre)`, `kPA (jauge)`, `kPA (absolu)`, `kPA (absolu)`, `sans unité`, `MJ`, `kVar`.
 
 ### Energy (numeric)

@@ -1,6 +1,6 @@
 ---
-title: "NovaDigital MS-DM-ZB control via MQTT"
-description: "Integrate your NovaDigital MS-DM-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Nova Digital MS-DM-ZB control via MQTT"
+description: "Integrate your Nova Digital MS-DM-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2026-09-03T18:55:24
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NovaDigital MS-DM-ZB
+# Nova Digital MS-DM-ZB
 
 |     |     |
 |-----|-----|
 | Model | MS-DM-ZB  |
-| Vendor  | [NovaDigital](/supported-devices/#v=NovaDigital)  |
+| Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | Zigbee Module 1 channel Dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, switch_type, power_on_behavior |
-| Picture | ![NovaDigital MS-DM-ZB](https://www.zigbee2mqtt.io/images/devices/MS-DM-ZB.png) |
+| Picture | ![Nova Digital MS-DM-ZB](https://www.zigbee2mqtt.io/images/devices/MS-DM-ZB.png) |
 
 
 
@@ -49,7 +49,7 @@ This light supports the following features: `state`, `brightness`, `min_brightne
 Toggle the device after a set duration (one time action).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
@@ -57,13 +57,13 @@ The unit of this value is `s`.
 Type of the switch.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": "VALUE"}`.
 The possible values are: `toggle`, `state`, `momentary`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `previous`, `on`.
 

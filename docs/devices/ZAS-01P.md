@@ -42,21 +42,21 @@ pageClass: device-page
 Trigger the alarm (sound, light or both) for the configured duration, or stop it with 'normal'.
 Value can be found in the published state on the `alarm_state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_state": "VALUE"}`.
 The possible values are: `normal`, `alarm_sound`, `alarm_light`, `alarm_sound_light`.
 
 ### Volume (enum)
 Alarm volume.
 Value can be found in the published state on the `volume` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Duration (numeric)
 How long the alarm sounds for when triggered.
 Value can be found in the published state on the `duration` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": VALUE}`.
 The minimal value is `10` and the maximum value is `1800`.
 The unit of this value is `s`.
 
@@ -64,20 +64,20 @@ The unit of this value is `s`.
 Alarm melody.
 Value can be found in the published state on the `melody` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"melody": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"melody": "VALUE"}`.
 The possible values are: `doorbell`, `alarm_1`, `alarm_2`, `alarm_clock`, `notification`, `countdown`, `emergency_button`, `fall_detected`, `equipment_moved`, `carbon_dioxide`, `circuit_breaker`, `door_open`, `window_open`, `air_quality`, `motion_detected`, `person_detected`, `camera`, `vibration`, `ambient_temperature`, `target_temperature_reached`, `heating`, `water_level_alarm`, `valve_closed`, `scheduled_task`, `door_lock_alarm`, `smoke_alarm`, `gas_alarm`, `low_battery`, `water_leak_alarm`, `device_offline`, `alarm_system_disarmed`, `alarm_system_armed`.
 
 ### Night light (binary)
 Night light.
 Value can be found in the published state on the `night_light` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_light": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"night_light": "VALUE"}`.
 If value equals `ON` night light is ON, if `OFF` OFF.
 
 ### Light mode (enum)
 Light mode.
 Value can be found in the published state on the `light_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode": "VALUE"}`.
 The possible values are: `breathing`, `red_flash`, `white`.
 

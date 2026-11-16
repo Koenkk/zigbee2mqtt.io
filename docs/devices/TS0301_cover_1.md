@@ -57,6 +57,6 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Reverse the motor direction.
 Value can be found in the published state on the `reverse_direction` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": "VALUE"}`.
 The possible values are: `forward`, `back`.
 

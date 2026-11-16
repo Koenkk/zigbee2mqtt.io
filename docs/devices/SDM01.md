@@ -137,7 +137,7 @@ The unit of this value is `Hz`.
 ### Data report duration (numeric)
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"data_report_duration": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"data_report_duration": VALUE}`.
 The minimal value is `5` and the maximum value is `3600`.
 
 ### Energy a (numeric)

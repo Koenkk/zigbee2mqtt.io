@@ -56,7 +56,7 @@ The unit of this value is `lx`.
 Maximum range.
 Value can be found in the published state on the `installation_height` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"installation_height": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"installation_height": VALUE}`.
 The minimal value is `3` and the maximum value is `5`.
 The unit of this value is `m`.
 
@@ -64,14 +64,14 @@ The unit of this value is `m`.
 Sensitivity of the radar.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `9`.
 
 ### Fading time (numeric)
 Fading time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": VALUE}`.
 The minimal value is `5` and the maximum value is `300`.
 The unit of this value is `s`.
 
@@ -79,34 +79,34 @@ The unit of this value is `s`.
 Radar switch.
 Value can be found in the published state on the `radar_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_switch": "VALUE"}`.
 If value equals `ON` radar switch is ON, if `OFF` OFF.
 
 ### Indicator (binary)
 LED indicator.
 Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": "VALUE"}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 
 ### Relay switch (binary)
 Relay switch.
 Value can be found in the published state on the `relay_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_switch": "VALUE"}`.
 If value equals `ON` relay switch is ON, if `OFF` OFF.
 
 ### Relay mode (enum)
 control mode of the relay.
 Value can be found in the published state on the `relay_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relay_mode": "VALUE"}`.
 The possible values are: `auto`, `manual`.
 
 ### Radar mode (enum)
 radar mode for the relay controlling.
 Value can be found in the published state on the `radar_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_mode": "VALUE"}`.
 The possible values are: `people_on`, `people_off`.
 

@@ -28,13 +28,7 @@ pageClass: device-page
 ## Notes
 
 ### Adapter firmware
-In order for this device to work, at least the following firmware is required on your adapter:
-- CC2530/CC2531: [`20211115`](https://github.com/Koenkk/Z-Stack-firmware/tree/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin)
-- CC1352/CC2652: [`20211114`](https://github.com/Koenkk/Z-Stack-firmware/tree/7c5a6da0c41855d42b5e6506e5e3b496be097ba3/coordinator/Z-Stack_3.x.0/bin)
-- CC2538: [`20211222`](https://github.com/jethome-ru/zigbee-firmware/tree/master/ti/coordinator/cc2538_cc2592)
-- Conbee II: [`0x26720700`]( http://deconz.dresden-elektronik.de/deconz-firmware/deCONZ_ConBeeII_0x26720700.bin.GCF)
-
-*Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
+This device likely does not work with coordinator firmware older than 2021.
 
 ### Pairing
 Quickly press the button three times in a row.
@@ -69,14 +63,14 @@ The unit of this value is `%LEL`.
 Gas concentration value at which an alarm is triggered ("10%LEL" is more sensitive than "15%LEL").
 Value can be found in the published state on the `gas_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"gas_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gas_sensitivity": "VALUE"}`.
 The possible values are: `10%LEL`, `15%LEL`.
 
 ### Selftest (enum)
 Starts the self-test process (checking the indicator light and buzzer work properly).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": "VALUE"}`.
 The possible values are: `selftest`.
 
 ### Test (binary)
@@ -89,7 +83,7 @@ If value equals `true` test is ON, if `false` OFF.
 The buzzer can be muted and alarmed manually. During a gas alarm, the buzzer can be manually muted for 10 minutes ("mute"), but cannot be unmuted manually before this timeout expires. The buzzer cannot be pre-muted, as this function only works during a gas alarm. During the absence of a gas alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute"), but for this "linkage_alarm" option must be enabled.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": "VALUE"}`.
 The possible values are: `mute`, `alarm`.
 
 ### Buzzer manual alarm (binary)
@@ -110,7 +104,7 @@ If value equals `true` buzzer manual mute is ON, if `false` OFF.
 When this option is enabled and a gas alarm has occurred, then "linkage_alarm_state"=true, and when the gas alarm has ended or the buzzer has been manually muted, then "linkage_alarm_state"=false.
 Value can be found in the published state on the `linkage_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linkage_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": VALUE}`.
 If value equals `true` linkage alarm is ON, if `false` OFF.
 
 ### Linkage alarm state (binary)

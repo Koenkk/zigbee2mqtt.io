@@ -92,7 +92,7 @@ The unit of this value is `m³`.
 Report period.
 Value can be found in the published state on the `report_period` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_period": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_period": "VALUE"}`.
 The possible values are: `1h`, `2h`, `3h`, `4h`, `6h`, `8h`, `12h`, `24h`, `48h`, `72h`.
 
 ### Fault (text)
@@ -104,7 +104,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Cumulative metering switch.
 Value can be found in the published state on the `prepayment_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"prepayment_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"prepayment_switch": "VALUE"}`.
 If value equals `ON` prepayment switch is ON, if `OFF` OFF.
 
 ### Cumulative heat (numeric)

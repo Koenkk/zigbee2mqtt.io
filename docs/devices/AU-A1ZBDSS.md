@@ -85,6 +85,6 @@ The unit of this value is `W`.
 Brightness of this backlight LED.
 Value can be found in the published state on the `brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `254`.
 

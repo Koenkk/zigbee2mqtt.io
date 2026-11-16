@@ -75,28 +75,28 @@ The unit of this value is `mV`.
 Device operating mode.
 Value can be found in the published state on the `device_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": "VALUE"}`.
 The possible values are: `door_window`, `object`.
 
 ### Door/window type (enum)
 Door/window type (applies when device_mode = door_window).
 Value can be found in the published state on the `door_window_type` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"door_window_type": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"door_window_type": "VALUE"}`.
 The possible values are: `casement_window`, `hopper_window`, `composite_window`, `hinged_door`.
 
 ### Sensitivity (numeric)
 Detection sensitivity (1 = low, 10 = high).
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
 ### Report interval (numeric)
 Reporting interval in seconds. Also drives the device's 802.15.4 poll cadence — lower values are more responsive but reduce battery life..
 Value can be found in the published state on the `report_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_interval": VALUE}`.
 The minimal value is `5` and the maximum value is `300`.
 The unit of this value is `s`.
 
@@ -104,35 +104,35 @@ The unit of this value is `s`.
 Enable orientation event detection (object mode, requires device button press).
 Value can be found in the published state on the `orientation_detection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"orientation_detection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"orientation_detection": "VALUE"}`.
 If value equals `ON` orientation detection is ON, if `OFF` OFF.
 
 ### Movement detection (binary)
 Enable movement event detection (object mode, requires device button press).
 Value can be found in the published state on the `movement_detection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movement_detection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"movement_detection": "VALUE"}`.
 If value equals `ON` movement detection is ON, if `OFF` OFF.
 
 ### Fall detection (binary)
 Enable fall event detection (object mode, requires device button press).
 Value can be found in the published state on the `fall_detection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fall_detection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fall_detection": "VALUE"}`.
 If value equals `ON` fall detection is ON, if `OFF` OFF.
 
 ### Vibration detection (binary)
 Enable vibration event detection (object mode, requires device button press).
 Value can be found in the published state on the `vibration_detection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_detection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"vibration_detection": "VALUE"}`.
 If value equals `ON` vibration detection is ON, if `OFF` OFF.
 
 ### Triple tap detection (binary)
 Enable triple-tap event detection (object mode, requires device button press).
 Value can be found in the published state on the `triple_tap_detection` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"triple_tap_detection": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"triple_tap_detection": "VALUE"}`.
 If value equals `ON` triple tap detection is ON, if `OFF` OFF.
 
 ### Orientation (enum)
@@ -157,7 +157,7 @@ The possible values are: `normal`, `abnormal`.
 Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Action (enum)

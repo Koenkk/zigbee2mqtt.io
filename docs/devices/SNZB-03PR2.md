@@ -71,7 +71,7 @@ The unit of this value is `%`.
 Detection Duration.
 Value can be found in the published state on the `pir_occupied_to_unoccupied_delay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pir_occupied_to_unoccupied_delay": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_occupied_to_unoccupied_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pir_occupied_to_unoccupied_delay": VALUE}`.
 The minimal value is `5` and the maximum value is `60`.
 The unit of this value is `s`.
 
@@ -79,7 +79,7 @@ The unit of this value is `s`.
 Light intensity calibration offset.
 Value can be found in the published state on the `illumination_compensation_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illumination_compensation_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illumination_compensation_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illumination_compensation_offset": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `lx`.
 

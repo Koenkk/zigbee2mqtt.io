@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS2VTD  |
 | Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart 4 in 1 door sensor |
-| Exposes | battery, identify, temperature, humidity, contact_alarm_1, contact_alarm_2, battery_low, alarm_indicator, sensitivity_level, temperature_offset, humidity_offset, dew_point, vpd, thi, heat_index, reported_packages, rejoin_count, reboot_count |
+| Exposes | battery, identify, temperature, humidity, contact, battery_low, vibration, alarm_indicator, sensitivity_level, temperature_offset, humidity_offset, reported_packages, rejoin_count, reboot_count |
 | Picture | ![Heiman HS2VTD](https://www.zigbee2mqtt.io/images/devices/HS2VTD.png) |
 
 
@@ -61,7 +61,7 @@ The unit of this value is `%`.
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": "VALUE"}`.
 The possible values are: `identify`.
 
 ### Temperature (numeric)
@@ -78,17 +78,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### Contact alarm 1 (binary)
-Indicates whether the device is opened or closed (alarm_1).
-Value can be found in the published state on the `contact_alarm_1` property.
+### Contact (binary)
+Indicates whether the device is opened or closed.
+Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` contact alarm 1 is ON, if `false` OFF.
-
-### Contact alarm 2 (binary)
-Indicates whether the device is opened or closed (alarm_2).
-Value can be found in the published state on the `contact_alarm_2` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` contact alarm 2 is ON, if `false` OFF.
+If value equals `false` contact is ON, if `true` OFF.
 
 ### Battery low (binary)
 Indicates whether the battery of the device is almost empty.
@@ -96,57 +90,39 @@ Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
+### Vibration (binary)
+Indicates whether the device detected vibration.
+Value can be found in the published state on the `vibration` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` vibration is ON, if `false` OFF.
+
 ### Alarm indicator (binary)
 Enable/disable the indicator on product.
 Value can be found in the published state on the `alarm_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_indicator": VALUE}`.
 If value equals `true` alarm indicator is ON, if `false` OFF.
 
 ### Sensitivity level (enum)
 The sensitivity of Sensor.
 Value can be found in the published state on the `sensitivity_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity_level": "VALUE"}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Temperature offset (numeric)
 used for temperature offset, unit: ℃.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": VALUE}`.
 The minimal value is `-15` and the maximum value is `15`.
 
 ### Humidity offset (numeric)
 used for humidity offset, unit: RH%.
 Value can be found in the published state on the `humidity_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_offset": VALUE}`.
 The minimal value is `-15` and the maximum value is `15`.
-
-### Dew point (numeric)
-Dew point.
-Value can be found in the published state on the `dew_point` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dew_point": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Vpd (numeric)
-Saturated vapor pressure.
-Value can be found in the published state on the `vpd` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"vpd": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Thi (numeric)
-Temperature humidity index.
-Value can be found in the published state on the `thi` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"thi": ""}`.
-It's not possible to write (`/set`) this value.
-
-### Heat index (numeric)
-Heat index.
-Value can be found in the published state on the `heat_index` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"heat_index": ""}`.
-It's not possible to write (`/set`) this value.
 
 ### Reported packages (numeric)
 for diagnostic purpose, how many zigbee packages has the reported in a day..

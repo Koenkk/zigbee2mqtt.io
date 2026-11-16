@@ -47,7 +47,7 @@ It's not possible to read (`/get`) this value.
 Target valve opening percentage.
 Value can be found in the published state on the `threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -61,21 +61,21 @@ The unit of this value is `%`.
 Power-off status behavior.
 Value can be found in the published state on the `power_off_state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_off_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_off_state": "VALUE"}`.
 The possible values are: `off`, `on`, `maintain`.
 
 ### Weather delay (enum)
 Weather delay.
 Value can be found in the published state on the `weather_delay` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_delay": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_delay": "VALUE"}`.
 The possible values are: `cancel`, `24h`, `48h`, `72h`.
 
 ### Countdown (numeric)
 Irrigation Duration (countdown in seconds).
 Value can be found in the published state on the `countdown` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
@@ -108,14 +108,14 @@ The possible values are: `water_leakage_yes`, `water_leakage_no`.
 Enable single irrigation volume limit.
 Value can be found in the published state on the `single_irrigation_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"single_irrigation_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"single_irrigation_switch": "VALUE"}`.
 If value equals `ON` single irrigation switch is ON, if `OFF` OFF.
 
 ### Single irrigation set (numeric)
 Single irrigation water volume setting.
 Value can be found in the published state on the `single_irrigation_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"single_irrigation_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"single_irrigation_set": VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `L`.
 
@@ -123,14 +123,14 @@ The unit of this value is `L`.
 Enable daily irrigation volume limit.
 Value can be found in the published state on the `day_irrigation_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"day_irrigation_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"day_irrigation_switch": "VALUE"}`.
 If value equals `ON` day irrigation switch is ON, if `OFF` OFF.
 
 ### Day irrigation set (numeric)
 Daily irrigation water volume setting.
 Value can be found in the published state on the `day_irrigation_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"day_irrigation_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"day_irrigation_set": VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `L`.
 
@@ -138,14 +138,14 @@ The unit of this value is `L`.
 Water volume alarm switch.
 Value can be found in the published state on the `water_volume_alarm_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_volume_alarm_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_volume_alarm_switch": "VALUE"}`.
 If value equals `ON` water volume alarm switch is ON, if `OFF` OFF.
 
 ### Water volume alarm set (numeric)
 Alarm water volume setting value.
 Value can be found in the published state on the `water_volume_alarm_set` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_volume_alarm_set": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_volume_alarm_set": VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `L`.
 
@@ -153,14 +153,14 @@ The unit of this value is `L`.
 Water temperature alarm switch.
 Value can be found in the published state on the `water_temp_alarm_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_temp_alarm_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_temp_alarm_switch": "VALUE"}`.
 If value equals `ON` water temp alarm switch is ON, if `OFF` OFF.
 
 ### Water temp alarm max (numeric)
 Alarm water temperature maximum setting.
 Value can be found in the published state on the `water_temp_alarm_max` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_temp_alarm_max": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_temp_alarm_max": VALUE}`.
 The minimal value is `0` and the maximum value is `120`.
 The unit of this value is `°C`.
 
@@ -168,7 +168,7 @@ The unit of this value is `°C`.
 Alarm water temperature minimum setting.
 Value can be found in the published state on the `water_temp_alarm_min` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_temp_alarm_min": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"water_temp_alarm_min": VALUE}`.
 The minimal value is `0` and the maximum value is `120`.
 The unit of this value is `°C`.
 
@@ -188,7 +188,7 @@ If value equals `true` water temp alarm is ON, if `false` OFF.
 Peristaltic function switch (Auto cycle anti-calc) - KEEP OFF for normal use.
 Value can be found in the published state on the `creep_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"creep_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"creep_switch": "VALUE"}`.
 If value equals `ON` creep switch is ON, if `OFF` OFF.
 
 ### Fault (binary)

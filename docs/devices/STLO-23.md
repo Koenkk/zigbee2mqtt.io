@@ -50,7 +50,7 @@ pageClass: device-page
 Set peak demand event icon for the specified number of hours.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"peak_demand_icon": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"peak_demand_icon": VALUE}`.
 The minimal value is `0` and the maximum value is `18`.
 The unit of this value is `hours`.
 

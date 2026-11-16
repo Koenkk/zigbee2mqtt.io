@@ -119,21 +119,21 @@ The possible values are: `normal`, `over_current_trip`, `over_power_trip`, `high
 Device control mode.
 Value can be found in the published state on the `control_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"control_mode": "VALUE"}`.
 The possible values are: `local_lock`, `local_mode`, `remote_mode`, `full_control`.
 
 ### Over current setting (enum)
 Over current setting.
 Value can be found in the published state on the `over_current_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Over current threshold (numeric)
 Setup the value on the device.
 Value can be found in the published state on the `over_current_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `50`.
 The unit of this value is `A`.
 
@@ -141,14 +141,14 @@ The unit of this value is `A`.
 Over voltage setting.
 Value can be found in the published state on the `over_voltage_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Over voltage threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `over_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": VALUE}`.
 The minimal value is `240` and the maximum value is `295`.
 The unit of this value is `V`.
 
@@ -156,14 +156,14 @@ The unit of this value is `V`.
 Under voltage setting.
 Value can be found in the published state on the `under_voltage_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Under voltage threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `under_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_threshold": VALUE}`.
 The minimal value is `90` and the maximum value is `220`.
 The unit of this value is `V`.
 
@@ -171,14 +171,14 @@ The unit of this value is `V`.
 Temperature setting.
 Value can be found in the published state on the `temperature_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Temperature threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `temperature_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_threshold": VALUE}`.
 The minimal value is `-25` and the maximum value is `80`.
 The unit of this value is `°C`.
 
@@ -186,14 +186,14 @@ The unit of this value is `°C`.
 Over power setting.
 Value can be found in the published state on the `over_power_setting` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_setting": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_setting": "VALUE"}`.
 The possible values are: `Ignore`, `Alarm`, `Trip`.
 
 ### Over power threshold (numeric)
 Setup value on the device.
 Value can be found in the published state on the `over_power_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_power_threshold": VALUE}`.
 The minimal value is `1000` and the maximum value is `26000`.
 The unit of this value is `W`.
 
@@ -201,35 +201,35 @@ The unit of this value is `W`.
 Current recloser.
 Value can be found in the published state on the `current_recloser` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_recloser": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_recloser": "VALUE"}`.
 If value equals `ON` current recloser is ON, if `OFF` OFF.
 
 ### Power recloser (binary)
 Power recloser.
 Value can be found in the published state on the `power_recloser` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_recloser": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_recloser": "VALUE"}`.
 If value equals `ON` power recloser is ON, if `OFF` OFF.
 
 ### Voltage recloser (binary)
 Voltage recloser.
 Value can be found in the published state on the `voltage_recloser` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_recloser": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"voltage_recloser": "VALUE"}`.
 If value equals `ON` voltage recloser is ON, if `OFF` OFF.
 
 ### Lcd backlight off (binary)
 LCD Backlight OFF.
 Value can be found in the published state on the `lcd_backlight_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_backlight_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_backlight_off": "VALUE"}`.
 If value equals `ON` lcd backlight off is ON, if `OFF` OFF.
 
 ### Lcd brightness (numeric)
 LCD brightness.
 Value can be found in the published state on the `lcd_brightness` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_brightness": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_brightness": VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -237,6 +237,6 @@ The unit of this value is `%`.
 LCD Rotation.
 Value can be found in the published state on the `lcd_rotation` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_rotation": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_rotation": "VALUE"}`.
 The possible values are: `FWD`, `REV`.
 

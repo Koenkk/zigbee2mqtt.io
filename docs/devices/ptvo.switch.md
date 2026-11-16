@@ -59,7 +59,7 @@ devices:
 State or sensor value.
 Value can be found in the published state on the `l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l1": "VALUE"}`.
 
 ### Switch (l1 endpoint)
 The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
@@ -70,7 +70,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 State or sensor value.
 Value can be found in the published state on the `l2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l2": "VALUE"}`.
 
 ### Switch (l2 endpoint)
 The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
@@ -81,7 +81,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 State or sensor value.
 Value can be found in the published state on the `l3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l3": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l3": "VALUE"}`.
 
 ### Switch (l3 endpoint)
 The current state of this switch is in the published state under the `state_l3` property (value is `ON` or `OFF`).
@@ -92,7 +92,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 State or sensor value.
 Value can be found in the published state on the `l4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l4": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l4": "VALUE"}`.
 
 ### Switch (l4 endpoint)
 The current state of this switch is in the published state under the `state_l4` property (value is `ON` or `OFF`).
@@ -103,7 +103,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 State or sensor value.
 Value can be found in the published state on the `l5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l5": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l5": "VALUE"}`.
 
 ### Switch (l5 endpoint)
 The current state of this switch is in the published state under the `state_l5` property (value is `ON` or `OFF`).
@@ -114,7 +114,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 State or sensor value.
 Value can be found in the published state on the `l6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l6": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l6": "VALUE"}`.
 
 ### Switch (l6 endpoint)
 The current state of this switch is in the published state under the `state_l6` property (value is `ON` or `OFF`).
@@ -125,7 +125,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 State or sensor value.
 Value can be found in the published state on the `l7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l7": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l7": "VALUE"}`.
 
 ### Switch (l7 endpoint)
 The current state of this switch is in the published state under the `state_l7` property (value is `ON` or `OFF`).
@@ -136,7 +136,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 State or sensor value.
 Value can be found in the published state on the `l8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l8": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l8": "VALUE"}`.
 
 ### Switch (l8 endpoint)
 The current state of this switch is in the published state under the `state_l8` property (value is `ON` or `OFF`).

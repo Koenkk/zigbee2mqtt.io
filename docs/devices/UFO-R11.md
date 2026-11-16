@@ -65,7 +65,7 @@ Open the back and press the reset button until the LED on the front start blinki
 Turn on to learn a new IR code, turn off to stop learning.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": "VALUE"}`.
 If value equals `ON` learn ir code is ON, if `OFF` OFF.
 
 ### Learned ir code (text)
@@ -82,13 +82,13 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The IR code or timings to send by device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_code_to_send": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_code_to_send": "VALUE"}`.
 
 ### Ir emitter (text)
 The IR code or timings to send by device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_emitter": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_emitter": "VALUE"}`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.

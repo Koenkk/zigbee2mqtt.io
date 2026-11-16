@@ -59,28 +59,28 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Turn the device on or off.
 Value can be found in the published state on the `device_enabled` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_enabled": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_enabled": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_enabled": "VALUE"}`.
 If value equals `ON` device enabled is ON, if `OFF` OFF.
 
 ### Ballast minimum level (numeric)
 Specifies the minimum brightness value.
 Value can be found in the published state on the `ballast_minimum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_minimum_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_minimum_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_minimum_level": VALUE}`.
 The minimal value is `10` and the maximum value is `97`.
 
 ### Ballast maximum level (numeric)
 Specifies the maximum brightness value.
 Value can be found in the published state on the `ballast_maximum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_maximum_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": VALUE}`.
 The minimal value is `10` and the maximum value is `97`.
 
 ### Ballast power on level (numeric)
 Specifies the initialisation light level. Can not be set lower than "ballast_minimum_level".
 Value can be found in the published state on the `ballast_power_on_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_power_on_level": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_power_on_level": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_power_on_level": VALUE}`.
 The minimal value is `10` and the maximum value is `97`.
 
 ### Illuminance (numeric)

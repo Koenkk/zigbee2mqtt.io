@@ -77,7 +77,7 @@ The unit of this value is `dB/m`.
 Starts the self-test process (checking the indicator light and buzzer work properly).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": "VALUE"}`.
 The possible values are: `selftest`.
 
 ### Test (binary)
@@ -90,7 +90,7 @@ If value equals `true` test is ON, if `false` OFF.
 The buzzer can be muted and alarmed manually. During a smoke alarm, the buzzer can be manually muted for 80 seconds ("mute") and unmuted ("alarm"). The buzzer cannot be pre-muted, as this function only works during a smoke alarm. During the absence of a smoke alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute"), but for this "linkage_alarm" option must be enabled.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": "VALUE"}`.
 The possible values are: `mute`, `alarm`.
 
 ### Buzzer manual alarm (binary)
@@ -111,14 +111,14 @@ If value equals `true` buzzer manual mute is ON, if `false` OFF.
 When this option is enabled then in the normal monitoring state, the green indicator light flashes every 60 seconds.
 Value can be found in the published state on the `heartbeat_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"heartbeat_indicator": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heartbeat_indicator": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heartbeat_indicator": VALUE}`.
 If value equals `true` heartbeat indicator is ON, if `false` OFF.
 
 ### Linkage alarm (binary)
 When this option is enabled and a smoke alarm has occurred, then "linkage_alarm_state"=true, and when the smoke alarm has ended or the buzzer has been manually muted, then "linkage_alarm_state"=false.
 Value can be found in the published state on the `linkage_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linkage_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": VALUE}`.
 If value equals `true` linkage alarm is ON, if `false` OFF.
 
 ### Linkage alarm state (binary)

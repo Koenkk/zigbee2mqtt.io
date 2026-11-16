@@ -48,42 +48,42 @@ If value equals `true` presence is ON, if `false` OFF.
 Switch2.
 Value can be found in the published state on the `switch_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1": "VALUE"}`.
 If value equals `ON` switch 1 is ON, if `OFF` OFF.
 
 ### Switch 2 (binary)
 Switch2.
 Value can be found in the published state on the `switch_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2": "VALUE"}`.
 If value equals `ON` switch 2 is ON, if `OFF` OFF.
 
 ### Switch 3 (binary)
 Switch3.
 Value can be found in the published state on the `switch_3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3": "VALUE"}`.
 If value equals `ON` switch 3 is ON, if `OFF` OFF.
 
 ### Sensitivity (numeric)
 detection sensitivity.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": VALUE}`.
 The minimal value is `0` and the maximum value is `19`.
 
 ### Backlight (binary)
 backlight.
 Value can be found in the published state on the `backlight` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight": "VALUE"}`.
 If value equals `ON` backlight is ON, if `OFF` OFF.
 
 ### Trigger hold (numeric)
 Trigger hold(second).
 Value can be found in the published state on the `trigger_hold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_hold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_hold": VALUE}`.
 The minimal value is `5` and the maximum value is `28800`.
 The unit of this value is `s`.
 
@@ -91,20 +91,20 @@ The unit of this value is `s`.
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": "VALUE"}`.
 The possible values are: `on`, `off`, `restore`.
 
 ### Auto on (enum)
 When somebody passes in front of their sensors, the lights turn.
 Value can be found in the published state on the `auto_on` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_on": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_on": "VALUE"}`.
 The possible values are: `off`, `all`, `ch1`, `ch2`, `ch3`, `ch1_and_ch2`, `ch2_and_ch3`, `ch1_and_ch3`.
 
 ### Auto off (enum)
 No one turns off the lights.
 Value can be found in the published state on the `auto_off` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": "VALUE"}`.
 The possible values are: `off`, `all`, `ch1`, `ch2`, `ch3`, `ch1_and_ch2`, `ch2_and_ch3`, `ch1_and_ch3`.
 

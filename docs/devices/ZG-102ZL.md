@@ -67,7 +67,7 @@ The unit of this value is `%`.
 Brightness acquisition interval (refresh and update only while active).
 Value can be found in the published state on the `illuminance_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": VALUE}`.
 The minimal value is `1` and the maximum value is `720`.
 The unit of this value is `minutes`.
 

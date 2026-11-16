@@ -63,7 +63,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 
 ### Options (composite)
 Motor options.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE, "motor_direction": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE, "motor_direction": "VALUE"}}`
 - `motor_speed` (numeric): Motor speed min value is 20, max value is 40, unit is rpm
 - `motor_direction` (enum): Motor direction allowed values: `FORWARD`, `REVERSE`
 

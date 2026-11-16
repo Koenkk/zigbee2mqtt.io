@@ -56,7 +56,7 @@ The unit of this value is `bar`.
 Adjust pressure sensor in hPa.
 Value can be found in the published state on the `pressure_offset` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pressure_offset": VALUE}`.
 The minimal value is `-1000` and the maximum value is `1000`.
 The unit of this value is `hPa`.
 
@@ -91,7 +91,7 @@ The unit of this value is `Hours`.
 Setting the sensor reading interval in seconds, by default 10 seconds.
 Value can be found in the published state on the `reading_interval` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": VALUE}`.
 The minimal value is `10` and the maximum value is `360`.
 The unit of this value is `sec`.
 
@@ -99,27 +99,27 @@ The unit of this value is `sec`.
 Set TX Radio Power, dbm.
 Value can be found in the published state on the `tx_radio_power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tx_radio_power": "VALUE"}`.
 The possible values are: `4dbm`, `19dbm`.
 
 ### Smart sleep (binary)
 Enable Smart Sleep, short wakeup every 2-7 seconds.
 Value can be found in the published state on the `smart_sleep` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": "VALUE"}`.
 If value equals `ON` smart sleep is ON, if `OFF` OFF.
 
 ### Config report enable (binary)
 Enable reporting based on reporting configuration.
 Value can be found in the published state on the `config_report_enable` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_report_enable": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_report_enable": "VALUE"}`.
 If value equals `ON` config report enable is ON, if `OFF` OFF.
 
 ### Comparison previous data (binary)
 Enable сontrol of comparison with previous data.
 Value can be found in the published state on the `comparison_previous_data` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comparison_previous_data": "VALUE"}`.
 If value equals `ON` comparison previous data is ON, if `OFF` OFF.
 

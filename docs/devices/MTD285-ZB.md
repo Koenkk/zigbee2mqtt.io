@@ -62,7 +62,7 @@ The unit of this value is `lx`.
 Minimum detection distance.
 Value can be found in the published state on the `min_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_distance": VALUE}`.
 The minimal value is `0` and the maximum value is `8.4`.
 The unit of this value is `m`.
 
@@ -70,7 +70,7 @@ The unit of this value is `m`.
 Maximum detection distance.
 Value can be found in the published state on the `max_distance` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_distance": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_distance": VALUE}`.
 The minimal value is `0` and the maximum value is `8.4`.
 The unit of this value is `m`.
 
@@ -85,98 +85,98 @@ The unit of this value is `m`.
 Distance gate 1 enable.
 Value can be found in the published state on the `gate_enable_01` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_01": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_01": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 02 (enum)
 Distance gate 2 enable.
 Value can be found in the published state on the `gate_enable_02` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_02": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_02": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 03 (enum)
 Distance gate 3 enable.
 Value can be found in the published state on the `gate_enable_03` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_03": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_03": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 04 (enum)
 Distance gate 4 enable.
 Value can be found in the published state on the `gate_enable_04` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_04": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_04": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 05 (enum)
 Distance gate 5 enable.
 Value can be found in the published state on the `gate_enable_05` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_05": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_05": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 06 (enum)
 Distance gate 6 enable.
 Value can be found in the published state on the `gate_enable_06` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_06": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_06": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 07 (enum)
 Distance gate 7 enable.
 Value can be found in the published state on the `gate_enable_07` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_07": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_07": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 08 (enum)
 Distance gate 8 enable.
 Value can be found in the published state on the `gate_enable_08` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_08": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_08": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 09 (enum)
 Distance gate 9 enable.
 Value can be found in the published state on the `gate_enable_09` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_09": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_09": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 10 (enum)
 Distance gate 10 enable.
 Value can be found in the published state on the `gate_enable_10` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_10": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_10": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Gate enable 11 (enum)
 Distance gate 11 enable.
 Value can be found in the published state on the `gate_enable_11` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_11": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"gate_enable_11": "VALUE"}`.
 The possible values are: `disable`, `enable`.
 
 ### Configuration gate (numeric)
 Select gate for threshold config.
 Value can be found in the published state on the `configuration_gate` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"configuration_gate": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"configuration_gate": VALUE}`.
 The minimal value is `1` and the maximum value is `11`.
 
 ### Move threshold (numeric)
 Configure motion detection threshold.
 Value can be found in the published state on the `move_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 
 ### Presence threshold (numeric)
 Configure presence detection threshold.
 Value can be found in the published state on the `presence_threshold` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_threshold": VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
 
 ### Nearest target gate (numeric)
@@ -203,21 +203,21 @@ The unit of this value is `m/s`.
 Debug mode toggle.
 Value can be found in the published state on the `debug_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"debug_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"debug_switch": "VALUE"}`.
 If value equals `on` debug switch is ON, if `off` OFF.
 
 ### Led mode (enum)
 LED indicator mode.
 Value can be found in the published state on the `led_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_mode": "VALUE"}`.
 The possible values are: `silence`, `status`.
 
 ### Delay time (numeric)
 Departure delay time.
 Value can be found in the published state on the `delay_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay_time": VALUE}`.
 The minimal value is `5` and the maximum value is `3600`.
 The unit of this value is `s`.
 
@@ -225,7 +225,7 @@ The unit of this value is `s`.
 Block time after unoccupancy.
 Value can be found in the published state on the `block_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"block_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"block_time": VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
@@ -233,14 +233,14 @@ The unit of this value is `s`.
 Presence detection algorithm.
 Value can be found in the published state on the `judge_logic` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"judge_logic": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"judge_logic": "VALUE"}`.
 The possible values are: `large_move`, `small_move`, `custom_move`.
 
 ### Start noise collect (enum)
 Start environmental background noise collection and auto adjust thresholds.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"start_noise_collect": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"start_noise_collect": "VALUE"}`.
 The possible values are: `start`.
 
 ### Noise collect status (enum)
@@ -253,55 +253,55 @@ The possible values are: `start`, `ongoing`, `complete`.
 Device control commands.
 Value can be found in the published state on the `device_control` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_control": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_control": "VALUE"}`.
 The possible values are: `no_action`, `restart`, `reset_param`.
 
 ### Presence sensitivity (enum)
 Presence sensitivity.
 Value can be found in the published state on the `presence_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"presence_sensitivity": "VALUE"}`.
 The possible values are: `high`, `medium`, `low`, `custom`.
 
 ### Move sensitivity (enum)
 Motion sensitivity.
 Value can be found in the published state on the `move_sensitivity` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_sensitivity": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_sensitivity": "VALUE"}`.
 The possible values are: `high`, `medium`, `low`, `custom`.
 
 ### Scene mode (enum)
 Scene mode preset.
 Value can be found in the published state on the `scene_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene_mode": "VALUE"}`.
 The possible values are: `custom`, `toilet`, `kitchen`, `corridor`, `bedroom`, `living_room`, `meeting_room`.
 
 ### Illuminance report (binary)
 Illuminance reporting toggle.
 Value can be found in the published state on the `illuminance_report` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_report": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_report": "VALUE"}`.
 If value equals `on` illuminance report is ON, if `off` OFF.
 
 ### Move detect (binary)
 Motion detection toggle.
 Value can be found in the published state on the `move_detect` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_detect": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move_detect": "VALUE"}`.
 If value equals `on` move detect is ON, if `off` OFF.
 
 ### Distance report (binary)
 Distance reporting toggle.
 Value can be found in the published state on the `distance_report` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"distance_report": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"distance_report": "VALUE"}`.
 If value equals `on` distance report is ON, if `off` OFF.
 
 ### Speed report (binary)
 Speed reporting toggle.
 Value can be found in the published state on the `speed_report` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"speed_report": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"speed_report": "VALUE"}`.
 If value equals `on` speed report is ON, if `off` OFF.
 

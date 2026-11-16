@@ -105,7 +105,7 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": "VALUE"}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Current (numeric)
@@ -133,20 +133,20 @@ The unit of this value is `W`.
 Delayed Power-on State.
 Value can be found in the published state on the `delayed_power_on_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"delayed_power_on_state": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_state": VALUE}`.
 If value equals `true` delayed power on state is ON, if `false` OFF.
 
 ### Delayed power on time (numeric)
 Delayed Power-on time.
 Value can be found in the published state on the `delayed_power_on_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"delayed_power_on_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delayed_power_on_time": VALUE}`.
 The minimal value is `0.5` and the maximum value is `3599.5`.
 The unit of this value is `seconds`.
 
 ### Inching control set (composite)
 Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": VALUE, "inching_time": VALUE, "inching_mode": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inching_control_set": {"inching_control": "VALUE", "inching_time": VALUE, "inching_mode": "VALUE"}}`
 - `inching_control` (binary): Enable/disable inching function. allowed values: `ENABLE` or `DISABLE`
 - `inching_time` (numeric): Delay time for executing a inching action. min value is 0.5, max value is 86399.5, unit is seconds
 - `inching_mode` (binary): Set inching off or inching on mode. allowed values: `ON` or `OFF`
@@ -155,14 +155,14 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inch
 External trigger mode, which can be one of edge, pulse,double pulse,triple pulse.The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..
 Value can be found in the published state on the `external_trigger_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_trigger_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_trigger_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_trigger_mode": "VALUE"}`.
 The possible values are: `edge`, `pulse`, `double pulse`, `triple pulse`.
 
 ### Set calibration action (enum)
 After calibration, the light adjustment becomes smooth and consistent.. Takes about 2 minutes; device unavailable during calibration..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_calibration_action": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_calibration_action": "VALUE"}`.
 The possible values are: `start`, `stop`.
 
 ### Calibration status (enum)
@@ -184,7 +184,7 @@ The unit of this value is `%`.
 Lowest brightness level mapped to 1 % on the dimmer slider..
 Value can be found in the published state on the `min_brightness_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_brightness_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness_threshold": VALUE}`.
 The minimal value is `1` and the maximum value is `99`.
 The unit of this value is `%`.
 
@@ -192,7 +192,7 @@ The unit of this value is `%`.
 highest brightness level mapped to 100 % on the dimmer slider..
 Value can be found in the published state on the `max_brightness_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_brightness_threshold": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness_threshold": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness_threshold": VALUE}`.
 The minimal value is `2` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -208,7 +208,7 @@ The unit of this value is `%`.
 Transition time.
 Value can be found in the published state on the `dimmer_transition_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimmer_transition_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_transition_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_transition_time": VALUE}`.
 The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `s`.
 
@@ -216,6 +216,6 @@ The unit of this value is `s`.
 Speed of brightness change via external switch..
 Value can be found in the published state on the `dimming_light_rate` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimming_light_rate": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_light_rate": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimming_light_rate": "VALUE"}`.
 The possible values are: `1x`, `2x`, `3x`, `4x`, `5x`.
 

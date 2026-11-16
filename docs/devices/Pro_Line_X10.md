@@ -42,70 +42,70 @@ pageClass: device-page
 Main power, OFF switches all zones off.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power": "VALUE"}`.
 If value equals `ON` power is ON, if `OFF` OFF.
 
 ### System mode (enum)
 Heating or cooling mode.
 Value can be found in the published state on the `system_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": "VALUE"}`.
 The possible values are: `heat`, `cool`.
 
 ### Zone 1 (binary)
 Zone 1 actuator.
 Value can be found in the published state on the `zone_1` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_1": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_1": "VALUE"}`.
 If value equals `ON` zone 1 is ON, if `OFF` OFF.
 
 ### Zone 2 (binary)
 Zone 2 actuator.
 Value can be found in the published state on the `zone_2` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_2": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_2": "VALUE"}`.
 If value equals `ON` zone 2 is ON, if `OFF` OFF.
 
 ### Zone 3 (binary)
 Zone 3 actuator.
 Value can be found in the published state on the `zone_3` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_3": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_3": "VALUE"}`.
 If value equals `ON` zone 3 is ON, if `OFF` OFF.
 
 ### Zone 4 (binary)
 Zone 4 actuator.
 Value can be found in the published state on the `zone_4` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_4": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_4": "VALUE"}`.
 If value equals `ON` zone 4 is ON, if `OFF` OFF.
 
 ### Zone 5 (binary)
 Zone 5 actuator.
 Value can be found in the published state on the `zone_5` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_5": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_5": "VALUE"}`.
 If value equals `ON` zone 5 is ON, if `OFF` OFF.
 
 ### Zone 6 (binary)
 Zone 6 actuator.
 Value can be found in the published state on the `zone_6` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_6": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_6": "VALUE"}`.
 If value equals `ON` zone 6 is ON, if `OFF` OFF.
 
 ### Zone 7 (binary)
 Zone 7 actuator.
 Value can be found in the published state on the `zone_7` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_7": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_7": "VALUE"}`.
 If value equals `ON` zone 7 is ON, if `OFF` OFF.
 
 ### Zone 8 (binary)
 Zone 8 actuator.
 Value can be found in the published state on the `zone_8` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_8": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"zone_8": "VALUE"}`.
 If value equals `ON` zone 8 is ON, if `OFF` OFF.
 
 ### Pump (binary)

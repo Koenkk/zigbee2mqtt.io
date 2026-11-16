@@ -134,6 +134,16 @@ Reboot your device and now your user should have access to the device.
 This error occurs when another program is already using (and thus locking) the adapter. You can find out which via the
 following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your adapter port).
 
+## Error: `Received unexpected reset from adapter, with reason=RESET_SOFTWARE`
+
+```
+error: zh:ember:uart:ash: Received unexpected reset from adapter, with reason=RESET_SOFTWARE.
+error: zh:ember:uart:ash: ASH disconnected: ASH_ERROR_NCP_RESET | Adapter status: ASH_NCP_FATAL_ERROR
+```
+
+The most likely reason is that another program is trying to use the adapter.  
+If using Home Assistant, make sure the Zigbee Home Automation (ZHA) integration is disabled.
+
 ## Raspberry Pi users
 
 ## Raspberry Pi OS

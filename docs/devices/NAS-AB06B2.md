@@ -48,14 +48,14 @@ The possible values are: `alarm_sound`, `alarm_light`, `alarm_sound_light`, `no_
 Enable alarm.
 Value can be found in the published state on the `alarm_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_switch": "VALUE"}`.
 If value equals `ON` alarm switch is ON, if `OFF` OFF.
 
 ### Tamper alarm switch (binary)
 Enable tamper alarm.
 Value can be found in the published state on the `tamper_alarm_switch` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tamper_alarm_switch": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tamper_alarm_switch": "VALUE"}`.
 If value equals `ON` tamper alarm switch is ON, if `OFF` OFF.
 
 ### Tamper alarm (binary)
@@ -68,21 +68,21 @@ If value equals `ON` tamper alarm is ON, if `OFF` OFF.
 Alarm sound effect.
 Value can be found in the published state on the `alarm_melody` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_melody": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_melody": "VALUE"}`.
 The possible values are: `melody_1`, `melody_2`, `melody_3`.
 
 ### Alarm mode (enum)
 Alarm mode.
 Value can be found in the published state on the `alarm_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_mode": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_mode": "VALUE"}`.
 The possible values are: `alarm_sound`, `alarm_light`, `alarm_sound_light`.
 
 ### Alarm time (numeric)
 Alarm duration in minutes.
 Value can be found in the published state on the `alarm_time` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_time": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_time": VALUE}`.
 The minimal value is `1` and the maximum value is `60`.
 The unit of this value is `min`.
 
