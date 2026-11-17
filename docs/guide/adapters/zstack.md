@@ -367,6 +367,24 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 
 ### Hybrid (USB + Network)
 
+<!-- #region SONOFF Dongle-MP10 with CC2674P10 -->
+
+::: details SONOFF Dongle-MP10
+
+Chip: [CC2674P10](https://www.ti.com/product/CC2674P10#features)
+
+The Dongle-MP10 includes two chips: ESP32-S3R8 and TI CC2674P10. It comes with two 5dBi external antennas, supports PoE power supply, has a built-in web console (http://Dongle-MP10.local), and can connect to Zigbee2MQTT via Ethernet/Wi-Fi/USB. Additionally, the new USB Passthrough feature of Dongle-MP10 enables USB adapters (e.g., Z-Wave adapter) to connect to Zigbee2MQTT and other open-source platforms over TCP/IP.
+
+- [Product Page](https://sonoff.tech/products/sonoff-dongle-max-cc2674p10-zigbee-thread-poe-dongle-dongle-mp10)
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-flasher/)
+- [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-mp10/hardware-specification-mp10/)
+- [Buy](https://sonoff.tech/products/sonoff-dongle-max-cc2674p10-zigbee-thread-poe-dongle-dongle-mp10)
+
+<img src="../../images/Dongle-MP10_600_600.png" width="200" />
+:::
+
+<!-- #endregion SONOFF Dongle-MP10 with CC2674P10 -->
+
 <!-- #region Gio-dot Z-Bee Duo with CC2652P -->
 
 ::: details Gio-dot Z-Bee Duo with CC2652P
