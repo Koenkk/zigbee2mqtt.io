@@ -24,8 +24,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+The radiator must join in **Intuis 3.0** mode. With another choice the interview still succeeds, but `local_temperature` stays at 0, `running_state` stays `idle`, `energy` stays at 0 and `occupancy` stays `true` ([#33183](https://github.com/Koenkk/zigbee2mqtt/issues/33183)).
 
+1. Make sure the radiator is not paired to any network, and that permit join is **disabled** in Zigbee2MQTT.
+2. On the radiator, open the **Settings** menu and start connecting to a network. The radiator searches, finds no network and asks you to select one.
+3. Select **Intuis 3.0**, and only then enable permit join in Zigbee2MQTT. The radiator joins in Intuis 3.0 mode.
+
+If a radiator was already paired the other way, remove it from Zigbee2MQTT, make it leave its network, then pair it again with the steps above.
 <!-- Notes END: Do not edit below this line -->
 
 
