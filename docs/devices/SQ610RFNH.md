@@ -38,6 +38,16 @@ The thermostat only finishes pairing when the coordinator answers a Salus specif
 ### "Go to the Smart Home app"
 After pairing, the display shows "go to the Smart Home app" and the buttons do nothing until the thermostat is paired with a receiver, such as a wiring centre zone. The Salus gateway behaves the same way. Readings and writes from Zigbee2MQTT work in that state.
 
+#### Standalone / Direct Relay Workaround
+If using the thermostat standalone (controlling heating directly via onboard relays, or without a Salus KL08RF wiring centre), you can bypass this lock screen:
+1. In the initial first-boot setup wizard, select **NO** when prompted to connect to a network.
+2. Complete the initial offline setup (language, system type, time, etc.) until the thermostat reaches the standard temperature home screen.
+3. Hold the **✓** button for 3–5 seconds to enter the **Admin Settings** menu.
+4. Select **Join Network** (or navigate to network settings to initiate pairing).
+5. Enable `permit_join` in Zigbee2MQTT.
+
+The thermostat will pair cleanly to Zigbee2MQTT while retaining the standard home screen and fully functioning physical buttons, avoiding the "go to the Smart Home app" lock.
+
 ### Wiring centre zones
 `wiring_centre_zones` pairs the thermostat with zones of a wiring centre (KL08RF / it600WC) on the same Zigbee2MQTT network: the zone numbers 1 to 8 separated by commas, for example `1,4`, and `replace` in front, for example `replace 1,4`, to take over a zone that another thermostat holds. It is done when the wiring centre's zone table shows the thermostat in all the zones, and it fails if the table does not within 20 s per zone. There is no unpairing yet. Adding the wiring centre itself is on the [KL08RF](./KL08RF.md) page.
 
