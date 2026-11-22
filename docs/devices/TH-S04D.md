@@ -32,6 +32,32 @@ To do this you must download the Aqara Home app and sign up.   The device should
 The device page will state that the current protocol is Thread but ignore the button at the bottom and instead click the link to switch to Zigbee Protocol.
 
 Once updated the device should be in pairing mode and can be added.   If it fails to add hold the reset button on the back until the signal strength bar starts flashing and the device will re-enter pairing mode.
+
+### Thermostat mode
+The W100 can act as the remote control of a thermostat managed by your home automation system: it does not control any heater by itself.
+
+- `thermostat_mode: ON` shows the thermostat line on the display, the buttons change the mode, setpoint and fan speed, and the changes are published as `system_mode`, `occupied_heating_setpoint` and `fan_mode`.
+- `thermostat_mode: OFF` hides it, and the buttons send `action` events.
+- Pairing or reconfiguring the device turns the thermostat mode OFF.
+
+Set `system_mode`, `occupied_heating_setpoint` and `fan_mode` to update the display when your thermostat changes. The `system_mode` values are `off`, `heat`, `cool` and `auto`, and the `fan_mode` values are `auto`, `low`, `medium` and `high`.
+
+### Thermostat protocol
+Zigbee2MQTT supports two protocols, and detects the right one when the device is paired or rejoins:
+
+- **Firmware 0.0.0_1641 and older**: the setpoint is in whole degrees.
+- **Newer firmware**: the device keeps one setpoint per mode, and the setpoint step can be set with the `setpoint_step` option (0.1 to 1 °C, default 0.5 °C). The `min_target_temp` / `max_target_temp` options are also sent to the device and limit the setpoint on the display.
+
+The `system_modes` option restricts the modes offered by the thermostat, e.g. `off` and `heat` with radiators only. A mode not listed that is selected with the W100 buttons is shown briefly, then reverted to the previous mode.
+
+The `thermostat_protocol` option (`auto`, `legacy`, `ha`) forces a protocol, it should not be needed.
+
+### External sensor
+Set `sensor` to `external` to show the values of another sensor, sent with `external_temperature` and `external_humidity`.
+The W100 is a sleepy end device: a value sent while it sleeps is delivered when it wakes up (only the latest value of each).
+
+### Battery
+Some W100 never report their battery by themselves. Zigbee2MQTT reads it when it was not received for 4 hours.
 <!-- Notes END: Do not edit below this line -->
 
 
