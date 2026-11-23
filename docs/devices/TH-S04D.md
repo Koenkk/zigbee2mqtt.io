@@ -33,6 +33,10 @@ The device page will state that the current protocol is Thread but ignore the bu
 
 Once updated the device should be in pairing mode and can be added.   If it fails to add hold the reset button on the back until the signal strength bar starts flashing and the device will re-enter pairing mode.
 
+### Firmware upgrade
+Some firmware versions are available as OTA updates in Zigbee2MQTT. The latest builds are only available through the Aqara Home app: reset the device to pairing mode, add a device in the Aqara Home app, select the W100, and select Matter to flash it to Matter.
+Then do the process again to switch back to the Zigbee firmware. It will flash the latest build.
+
 ### Thermostat mode
 The W100 can act as the remote control of a thermostat managed by your home automation system: it does not control any heater by itself.
 
@@ -48,12 +52,12 @@ Zigbee2MQTT supports two protocols, and detects the right one when the device is
 - **Firmware 0.0.0_1641 and older**: the setpoint is in whole degrees.
 - **Newer firmware**: the device keeps one setpoint per mode, and the setpoint step can be set with the `setpoint_step` option (0.1 to 1 °C, default 0.5 °C). The `min_target_temp` / `max_target_temp` options are also sent to the device and limit the setpoint on the display.
 
+The `thermostat_protocol` option (`auto`, `legacy`, `ha`) forces a protocol, it should not be needed.
+
 ### Allowed modes and fan modes
 The `system_modes` and `fan_modes` options restrict the modes and fan modes offered by the thermostat, e.g. `off` and `heat` with radiators only. Leave them empty to allow everything. Use `none` in `fan_modes` when there is no fan: the fan mode is then removed.
 
 With firmware 0.0.0_1643 and newer, the W100 only offers the allowed modes and fan modes on its display. With older firmware it still offers all of them: a mode or fan mode that is not allowed is shown briefly, then reverted to the previous one.
-
-The `thermostat_protocol` option (`auto`, `legacy`, `ha`) forces a protocol, it should not be needed.
 
 ### External sensor
 Set `sensor` to `external` to show the values of another sensor, sent with `external_temperature` and `external_humidity`.
