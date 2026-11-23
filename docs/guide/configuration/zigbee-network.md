@@ -39,6 +39,9 @@ Changing the channel of an existing Zigbee network is supported. In Zigbee, this
 > [!WARNING]
 > Some Zigbee devices do not support changing channels. In case a device remains unresponsive several minutes after the change, and after having been triggered/woken up, you may have to re-pair it manually.
 
+> [!NOTE]
+> A weak battery may still allow reporting but prevent pairing or rejoining after a channel change. Removing and reinserting the same battery may not help. A dim status LED or low voltage measured with a multimeter can indicate a weak battery. Try a fresh battery even if the reported battery percentage is high.
+
 > [!WARNING]
 > Changing channels is only supported for the `zstack` and `ember` adapter.
 
