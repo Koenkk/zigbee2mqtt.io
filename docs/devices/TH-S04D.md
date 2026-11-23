@@ -48,7 +48,10 @@ Zigbee2MQTT supports two protocols, and detects the right one when the device is
 - **Firmware 0.0.0_1641 and older**: the setpoint is in whole degrees.
 - **Newer firmware**: the device keeps one setpoint per mode, and the setpoint step can be set with the `setpoint_step` option (0.1 to 1 °C, default 0.5 °C). The `min_target_temp` / `max_target_temp` options are also sent to the device and limit the setpoint on the display.
 
-The `system_modes` option restricts the modes offered by the thermostat, e.g. `off` and `heat` with radiators only. A mode not listed that is selected with the W100 buttons is shown briefly, then reverted to the previous mode.
+### Allowed modes and fan modes
+The `system_modes` and `fan_modes` options restrict the modes and fan modes offered by the thermostat, e.g. `off` and `heat` with radiators only. Leave them empty to allow everything. Use `none` in `fan_modes` when there is no fan: the fan mode is then removed.
+
+With firmware 0.0.0_1643 and newer, the W100 only offers the allowed modes and fan modes on its display. With older firmware it still offers all of them: a mode or fan mode that is not allowed is shown briefly, then reverted to the previous one.
 
 The `thermostat_protocol` option (`auto`, `legacy`, `ha`) forces a protocol, it should not be needed.
 
@@ -58,6 +61,11 @@ The W100 is a sleepy end device: a value sent while it sleeps is delivered when 
 
 ### Battery
 Some W100 never report their battery by themselves. Zigbee2MQTT reads it when it was not received for 4 hours.
+
+### Temperature and humidity reporting
+The W100 reports temperature and humidity according to its own settings: `temp_report_mode`, `temp_period`, `temp_threshold` and the same for humidity. The minimum thresholds are 0.2 °C and 2 %. The reporting configured in the Reporting tab only filters these reports: keep the default configuration (min 1 s, max 3600 s, change 1). With `temp_report_mode: no`, no temperature is reported at all.
+
+If the device rejoins the network or restarts, Zigbee2MQTT sends its bindings and reporting configuration again; without them the W100 stops reporting.
 <!-- Notes END: Do not edit below this line -->
 
 
