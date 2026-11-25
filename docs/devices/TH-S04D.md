@@ -32,6 +32,44 @@ To do this you must download the Aqara Home app and sign up.   The device should
 The device page will state that the current protocol is Thread but ignore the button at the bottom and instead click the link to switch to Zigbee Protocol.
 
 Once updated the device should be in pairing mode and can be added.   If it fails to add hold the reset button on the back until the signal strength bar starts flashing and the device will re-enter pairing mode.
+
+### Firmware upgrade
+Some firmware versions are available as OTA updates in Zigbee2MQTT. The latest builds are only available through the Aqara Home app: reset the device to pairing mode, add a device in the Aqara Home app, select the W100, and select Matter to flash it to Matter.
+Then do the process again to switch back to the Zigbee firmware. It will flash the latest build.
+
+### Thermostat mode
+The W100 can act as the remote control of a thermostat managed by your home automation system: it does not control any heater by itself.
+
+- `thermostat_mode: ON` shows the thermostat line on the display, the buttons change the mode, setpoint and fan speed, and the changes are published as `system_mode`, `occupied_heating_setpoint` and `fan_mode`.
+- `thermostat_mode: OFF` hides it, and the buttons send `action` events.
+- Pairing the device turns the thermostat mode OFF. Once enabled, it stays enabled after a reconfigure, an OTA update or a reboot of the device.
+
+Set `system_mode`, `occupied_heating_setpoint` and `fan_mode` to update the display when your thermostat changes. The `system_mode` values are `off`, `heat`, `cool` and `auto`, and the `fan_mode` values are `auto`, `low`, `medium` and `high`.
+
+### Thermostat protocol
+Zigbee2MQTT supports two protocols, and detects the right one when the device is paired or rejoins:
+
+- **Firmware 0.0.0_1641 and older**: the setpoint is in whole degrees.
+- **Newer firmware**: the device keeps one setpoint per mode, and the setpoint step can be set with the `setpoint_step` option (0.1 to 1 °C, default 0.5 °C). The `min_target_temp` / `max_target_temp` options are also sent to the device and limit the setpoint on the display.
+
+The `thermostat_protocol` option (`auto`, `legacy`, `ha`) forces a protocol, it should not be needed.
+
+### Allowed modes and fan modes
+The `system_modes` and `fan_modes` options restrict the modes and fan modes offered by the thermostat, e.g. `off` and `heat` with radiators only. Leave them empty to allow everything. Use `none` in `fan_modes` when there is no fan: the fan mode is then removed.
+
+With firmware 0.0.0_1643 and newer, the W100 only offers the allowed modes and fan modes on its display. With older firmware it still offers all of them: a mode or fan mode that is not allowed is shown briefly, then reverted to the previous one.
+
+### External sensor
+Set `sensor` to `external` to show the values of another sensor, sent with `external_temperature` and `external_humidity`.
+The W100 is a sleepy end device: a value sent while it sleeps is delivered when it wakes up (only the latest value of each).
+
+### Battery
+Some W100 never report their battery by themselves. Zigbee2MQTT reads it when it was not received for 4 hours.
+
+### Temperature and humidity reporting
+The W100 reports temperature and humidity according to its own settings: `temp_report_mode`, `temp_period`, `temp_threshold` and the same for humidity. The minimum thresholds are 0.2 °C and 2 %. The reporting configured in the Reporting tab only filters these reports: keep the default configuration (min 1 s, max 3600 s, change 1). With `temp_report_mode: no`, no temperature is reported at all.
+
+If the device rejoins the network or restarts, Zigbee2MQTT sends its bindings and reporting configuration again; without them the W100 stops reporting. It also does it when the W100 reported nothing for 2 hours.
 <!-- Notes END: Do not edit below this line -->
 
 
