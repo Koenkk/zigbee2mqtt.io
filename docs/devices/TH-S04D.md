@@ -42,7 +42,7 @@ The W100 can act as the remote control of a thermostat managed by your home auto
 
 - `thermostat_mode: ON` shows the thermostat line on the display, the buttons change the mode, setpoint and fan speed, and the changes are published as `system_mode`, `occupied_heating_setpoint` and `fan_mode`.
 - `thermostat_mode: OFF` hides it, and the buttons send `action` events.
-- Pairing or reconfiguring the device turns the thermostat mode OFF.
+- Pairing the device turns the thermostat mode OFF. Once enabled, it stays enabled after a reconfigure, an OTA update or a reboot of the device.
 
 Set `system_mode`, `occupied_heating_setpoint` and `fan_mode` to update the display when your thermostat changes. The `system_mode` values are `off`, `heat`, `cool` and `auto`, and the `fan_mode` values are `auto`, `low`, `medium` and `high`.
 
@@ -69,7 +69,7 @@ Some W100 never report their battery by themselves. Zigbee2MQTT reads it when it
 ### Temperature and humidity reporting
 The W100 reports temperature and humidity according to its own settings: `temp_report_mode`, `temp_period`, `temp_threshold` and the same for humidity. The minimum thresholds are 0.2 °C and 2 %. The reporting configured in the Reporting tab only filters these reports: keep the default configuration (min 1 s, max 3600 s, change 1). With `temp_report_mode: no`, no temperature is reported at all.
 
-If the device rejoins the network or restarts, Zigbee2MQTT sends its bindings and reporting configuration again; without them the W100 stops reporting.
+If the device rejoins the network or restarts, Zigbee2MQTT sends its bindings and reporting configuration again; without them the W100 stops reporting. It also does it when the W100 reported nothing for 2 hours.
 <!-- Notes END: Do not edit below this line -->
 
 
