@@ -29,11 +29,11 @@ pageClass: device-page
 ### Pairing
 To pair the device you first need to have it powered, attached to the valve and displaying the temperature.
 
-If the device is showing `FS` or `RD` press the button on the top of the unit and it should now show `,,7`
+If the device is showing `FS` or `RD` press the button of the dial (rotatable knob to adjust temperature) on the top of the unit and it should now show `,,7`. Newer devices might show `iN` and `Ad` (when the calibration is performed) and will then show the temperature immediately.
 
 Once this stops flashing hold the top button for about 5 seconds at which point the unit should now show the temperature. (If the temperature does not show, the valve calibration might have failed. this can happen if you did not mount it properly. Then you need to remount the thermostat and start with the previous step.)
 
-Keep turning the dial counter-clockwise unil the display shows `OF` and finally hold down the top button for 3 seconds.
+Keep turning the dial counter-clockwise until the display shows `OF` and finally hold down the dial (top button) for 3 seconds.
 
 You should now see a flashing signal icon and it will try and pair.
 <!-- Notes END: Do not edit below this line -->
@@ -46,7 +46,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
+* `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`.
 
 
 ## Exposes
